@@ -25,6 +25,8 @@ Scores cover preselected target facts, not every claim in an answer.
 
 [All company results](runs/comparison-abcd/results.md) · [Scores and sources](runs/comparison-abcd/judgments.json) · [Retrieval audit](evidence/retrieval-audit.json) · [Case findings and remaining errors](docs/methodology.md#result-interpretation)
 
+This needs testing on more examples and tasks.
+
 ## How to run
 
 Use Docker with Compose. Python and the official Clay CLI are pinned in the image.
