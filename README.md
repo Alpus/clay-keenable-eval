@@ -14,8 +14,6 @@ The hypothesis comes from [user reports available online](docs/evidence.md).
 
 **Keenable with explicit verification prompting may improve results.**
 
-All 200 answers completed and were reviewed against sources on September 30, 2026.
-
 | | A: native | B: optional Keenable | C: Keenable verification | D: native verification |
 | --- | ---: | ---: | ---: | ---: |
 | Companies with all target facts correct and supported | **38/47** | **39/47** | **42/47** | **38/47** |
