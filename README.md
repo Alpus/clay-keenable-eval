@@ -1,6 +1,8 @@
 # Keenable Eval for Claygent
 
-[Claygent](https://university.clay.com/docs/claygent-builder) researches companies using web search. This experiment tests whether adding [Keenable](https://keenable.ai/) improves its answers about the latest funding and current ownership status.
+[Clay](https://www.clay.com/) enriches customer data. [Claygent](https://university.clay.com/docs/claygent-builder) researches companies using web search.
+
+This experiment tests whether [Keenable](https://keenable.ai/) improves answers about the latest funding and current ownership status.
 
 50 companies, three conditions, GPT-5.4. The task comes from [dated user reports](docs/evidence.md).
 
