@@ -22,7 +22,7 @@ The hypothesis comes from [user reports available online](docs/evidence.md).
 
 Scores cover preselected target facts, not every claim in an answer.
 
-**Concrete benefit:** C used Keenable to retrieve a [Lessn disclosure](https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/sydney-au-mar-3-2026-acn-newswire-accounts-payable-automation/68628893) of a $300,000 investment in November 2025. A/B stopped at the earlier August round.
+**Successful search example:** C used Keenable to retrieve a [Lessn disclosure](https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/sydney-au-mar-3-2026-acn-newswire-accounts-payable-automation/68628893) of a $300,000 investment in November 2025. A/B stopped at the earlier August round.
 
 **Limits:** all conditions missed later extensions for ElevenLabs and Harvey. All four B field-score wins occurred without using Keenable. D repeated C’s verification prompt using native tools instead of Keenable and scored 38/47. This later, single-run control supports the prompted Keenable result, but does not establish a repeatable provider advantage. [Case findings and remaining errors](docs/methodology.md#result-interpretation).
 
