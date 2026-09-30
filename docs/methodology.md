@@ -121,4 +121,4 @@ D completed all 50 companies using GPT-5.4, the same inputs, cutoff, output sche
 
 This control was added after inspecting C, with visible condition labels during source adjudication. It tests the same verification strategy with native tools in one later run; it does not establish a repeatable causal effect. Replit’s later Visa investment has undisclosed terms, so existing positive-anchor targets remain consistent across arms rather than claiming exhaustive latest-event verification.
 
-The eight-call limit remained a prompt instruction: 22/50 D traces exceeded it. Actual tool counts are preserved in the [combined report](../runs/comparison-abcd/report.md). Twelve offline runner tests passed, including D isolation, resume, four-condition comparison and replay.
+The eight-call limit remained a prompt instruction: 22/50 D traces exceeded it. Actual tool counts are preserved in the [combined evidence](../runs/comparison-abcd/summary.json). Twelve offline runner tests passed, including D isolation, resume, four-condition comparison and replay.
