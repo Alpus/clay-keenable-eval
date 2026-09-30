@@ -16,7 +16,7 @@ Open the device link, choose your workspace and authorize the CLI. Website sign-
 
 For every native `./eval` command below, the Docker equivalent is `docker compose run --rm eval`. Use `/results/my-run` as the output path inside Docker. It maps to `runs/my-run` on the host. The repository is mounted read-only. Credentials and workflow state use separate persistent Docker volumes. Preserve those volumes to resume; `docker compose down --volumes` deletes them. Docker does not reuse a native installation's credentials or workflow bindings.
 
-Python 3.13.15 and Clay CLI 1.4.0 are pinned with an image digest and binary checksums. The container was built and tested on Linux ARM64. An official AMD64 binary is configured but was not executed in this verification. Fresh-checkout setup and offline replay were tested. The paid comparison was executed natively with the same runner and CLI version; authenticated container research was not separately replayed.
+Python 3.13.15 and Clay CLI 1.4.0 are pinned with an image digest and binary checksums. The container was built and tested on Linux ARM64. An official AMD64 binary is configured but was not executed in this verification. Fresh-checkout setup, eleven offline tests and exact replay of the final 150-answer metrics were tested without network access. The paid comparison was executed natively with the same runner and CLI version; authenticated container research was not separately replayed.
 
 After building the image, disable networking for saved-result reproduction:
 
@@ -34,14 +34,16 @@ CLAY_NETWORK_MODE=none docker compose run --rm eval reproduce --output /results/
 
 ## Connect Keenable once
 
-Open **Funding lifecycle evaluation B** in Claygent Builder, using the agent ID printed by setup to distinguish it from any older experiment.
+Open **Funding lifecycle evaluation B** and **Funding lifecycle evaluation C** in Claygent Builder, using the agent IDs printed by each setup command to distinguish them from older experiments.
 
 1. Under Tools, keep **Web search** enabled.
 2. Add a custom MCP server named **Keenable public evaluation** with URL `https://api.keenable.ai/mcp`. Leave the API key empty for the public tier.
-3. Enable that connection and save the agent.
+3. Enable that connection in B and C, then save each agent. Reuse the same server definition.
 4. Verify A has Web search enabled and Keenable disabled. Keep other private connectors, account context and business context disabled on both.
 
-This setting is not exposed by the inspected official CLI node schema. The runner therefore uses one manual Builder step, then the official CLI for all runs. It never replays private browser endpoints or stores browser credentials. [A configuration](../evidence/variant-a-settings.png) · [B configuration](../evidence/variant-b-settings.png).
+Run `./eval bind-refresh` for B and `./eval bind-refresh --strategy verify` for C.
+
+This setting is not exposed by the inspected official CLI node schema. The runner therefore uses one manual Builder step, then the official CLI for all runs. It never replays private browser endpoints or stores browser credentials. [A configuration](../evidence/variant-a-settings.png) · [B configuration](../evidence/variant-b-settings.png) · [C configuration](../evidence/variant-c-settings.png).
 
 The [public Keenable tier](https://docs.keenable.ai/rate-limits) is unbilled and allows 1,000 requests per hour, at most 10 per second, shared per IP. Clay may use shared egress. A rate-limit failure must be recorded, not bypassed. Authenticated Keenable setup was not tested here.
 
@@ -50,20 +52,21 @@ The [public Keenable tier](https://docs.keenable.ai/rate-limits) is unbilled and
 Start with the first pair while keeping the full 50-company plan:
 
 ```sh
-./eval run --output runs/my-run --concurrency 4 --stop-after-pairs 1 --allow-credit-use
+./eval run --output runs/my-run --concurrency 30 --stop-after-pairs 1 --allow-credit-use
 ```
 
 Inspect the saved answers and tool traces. Continue all remaining pairs:
 
 ```sh
-./eval run --output runs/my-run --concurrency 4 --timeout 1200 --allow-credit-use
+./eval run --output runs/my-run --concurrency 30 --timeout 1200 --allow-credit-use
 ```
 
-The script automatically submits up to four runs concurrently. A/B submission order alternates across companies. It saves each returned run ID before polling. Terminal runs are not repeated. A polling timeout leaves the original run available for resume.
+The script automatically submits up to 30 runs concurrently. A/B submission order alternates across companies. It saves each returned run ID before polling. Terminal runs are not repeated. A polling timeout leaves the original run available for resume.
 
 - `--limit N` freezes a smaller plan at the first invocation. Keep that limit when resuming.
 - `--stop-after-pairs N` is an operational checkpoint, not a new dataset.
-- `--concurrency 1..4` changes in-flight capacity. Each invocation is recorded; it does not change prompts or answers.
+- `--concurrency 1..30` changes in-flight capacity (default 30). Each invocation is recorded; it does not change prompts or answers.
+- `--start-interval SECONDS` spaces submissions (default 2 seconds). It preserves concurrency while reducing initialization bursts.
 - `--timeout SECONDS` controls polling time per run (default 600). It never resubmits a timed-out run.
 - `--allow-credit-use` permits spending existing Clay credits. No command purchases credits or changes a plan.
 
@@ -71,13 +74,44 @@ Keep one runner process per checkout. To resume, preserve `.local/` and the run 
 
 If setup reports an ambiguous mutation, inspect the saved `.local/` journal and actual workflow before recovery. The runner will not blindly duplicate it.
 
+## Initialization rate limits
+
+Keenable's public MCP endpoint limits request rate, including connection initialization. Thirty immediate starts caused seven pre-research failures in this experiment. The default two-second spacing reduces these bursts but cannot guarantee capacity on Clay's shared egress.
+
+The runner preserves failed runs and does not retry automatically. For a confirmed Keenable MCP initialization rate limit that consumed zero data credits and returned no research outputs, allow one explicit retry:
+
+```sh
+./eval run --strategy verify --output runs/my-c --timeout 1200 --allow-credit-use --retry-initialization-failures
+```
+
+This archives the prior result, submission and run ID under the case's `attempts/` directory. It permits at most one retry of that specific initialization failure. Completed answers, research failures, paid inference and ambiguous submissions are ineligible. All attempt charges remain in summary accounting. Later resumes use the recorded retry ID rather than submitting it again. Increase `--start-interval` if the public endpoint remains busy.
+
+## Separate verification condition C
+
+The default strategy creates and runs A/B. The `verify` strategy creates and runs only C. It keeps separate workflow state under `.local/verify/` (or the Docker state volume's `verify/` directory). Its prompt must preserve the original prompt as an exact prefix. Existing A/B state and recorded answers are not changed.
+
+```sh
+./eval setup --strategy verify
+# Enable the same Keenable connection in C through Builder.
+./eval bind-refresh --strategy verify
+./eval run --strategy verify --output runs/my-c --timeout 1200 --allow-credit-use
+```
+
+After both studies finish, combine them offline:
+
+```sh
+./eval compare --baseline runs/my-ab --variant runs/my-c --output runs/my-comparison
+```
+
+Comparison checks the input identities, cutoff, model, schema and original prompt. It copies the saved outputs into a portable snapshot, records source hashes and provenance, and calculates A/B, A/C and B/C paired outcomes when judgments exist. It makes no provider calls. Cost accounting separates reused A/B charges from new C charges. Use an empty comparison directory; subsequent `reproduce` calls recalculate that snapshot.
+
 ## Reproduce and grade
 
 ```sh
 ./eval reproduce --output runs/exploratory-001
 ```
 
-This reads saved files only and rebuilds `summary.json` and the per-company `results.md` table. It does not need Clay authentication, credits or the reference file. Saved judgments are the factual scoring input; reproduction recomputes their aggregates, not a new independent judgment of the sources.
+This reads saved files only and rebuilds `summary.json` and the per-company `results.md` table. It does not need Clay authentication, credits or the reference file. Saved judgments are the factual scoring input; reproduction recomputes their aggregates, not a new independent judgment of the sources. Review each original run before combining it, so its judgments enter the comparison snapshot.
 
 For a fresh run, review every answer against the [scoring rules](methodology.md), then save `judgments.json` in its run directory. Without judgments, reproduction reports execution, tool use, time and credits only. Partial judgment coverage is explicitly labeled.
 

@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6c19oasM7zrGxZnE",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:03:09.805Z",
+  "duration": "1m 17s",
+  "dataCreditsUsed": 3.8,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6c19fnYebrTG4UYd",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:03:09.814Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "cyera.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Cyera"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6c19JsyqQdaEnt3V",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:03:09.832Z",
+      "completedAt": "2026-09-30T11:04:27.608Z",
+      "duration": "1m 17s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "cyera.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Cyera"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Cyera is an AI and data security company that helps organizations discover, secure, and govern data across environments.\",\"url\":\"https://www.cyera.com/press-releases/cyera-raises-400m-to-meet-rapidly-growing-demand-for-ai-security-among-enterprises\",\"publication_date\":\"2026-01-08\",\"event_date\":\"2026-01-08\",\"excerpt\":\"Cyera is described as the industry’s leading AI and data security company... its unified platform helps businesses discover, secure, and leverage data, eliminate blind spots, cut alert noise, and protect sensitive information across every environment.\"},{\"claim\":\"Cyera announced a $600 million late-stage financing round on 2026-06-10 at a $12 billion valuation.\",\"url\":\"https://www.reuters.com/legal/transactional/data-security-firm-cyera-raises-600-million-12-billion-valuation-2026-06-10/\",\"publication_date\":\"2026-06-10\",\"event_date\":\"2026-06-10\",\"excerpt\":\"Reuters reported that Cyera said it raised $600 million at a $12 billion valuation in a late-stage funding round.\"},{\"claim\":\"The June 2026 round was led by Evolution Equity Partners, with participation from Temasek and Cyberstarts; existing investors also participated.\",\"url\":\"https://www.reuters.com/legal/transactional/data-security-firm-cyera-raises-600-million-12-billion-valuation-2026-06-10/\",\"publication_date\":\"2026-06-10\",\"event_date\":\"2026-06-10\",\"excerpt\":\"Reuters said the funding round was led by Evolution Equity Partners, with participation from Temasek and Cyberstarts; Accel, AT&T Ventures, Blackstone and Coatue also took part.\"},{\"claim\":\"On 2026-09-22, Cyera announced a $400 million extension to its Series G from Growth Equity at Goldman Sachs Alternatives, at a valuation of over $12 billion.\",\"url\":\"https://finance.yahoo.com/technology/ai/articles/cyera-announces-400-million-investment-111500622.html\",\"publication_date\":\"2026-09-22\",\"event_date\":\"2026-09-22\",\"excerpt\":\"The Business Wire article states: Cyera today announced a $400 million extension from Growth Equity at Goldman Sachs Alternatives to its Series G, led by Evolution Equity... Valued at over $12 billion.\"},{\"claim\":\"As of 2026-09-22, public evidence shows Cyera was still raising private venture financing rather than having completed an IPO or sale.\",\"url\":\"https://finance.yahoo.com/technology/ai/articles/cyera-announces-400-million-investment-111500622.html\",\"publication_date\":\"2026-09-22\",\"event_date\":\"2026-09-22\",\"excerpt\":\"A Series G extension announced by the company is affirmative evidence of ongoing private-company financing; the retrieved sources did not report Cyera itself being acquired or going public by the cutoff.\"}]",
+          "latest_round": "Series G extension",
+          "round_amount": "400 million",
+          "uncertainties": "The strongest post-cutoff-nearest evidence for the latest financing is a Business Wire release surfaced via Yahoo Finance rather than a directly visited Cyera or Business Wire page. The September 2026 announcement describes the financing as a $400 million extension to Series G from Goldman Sachs Alternatives, while also noting Series G was led by Evolution Equity; because it is an extension, lead-investor semantics are mixed. Lifecycle status is inferred from the September 2026 private financing announcement and absence of contrary evidence in retrieved sources, not from an explicit 'still private' company statement.",
+          "lead_investors": "Growth Equity at Goldman Sachs Alternatives; original Series G led by Evolution Equity",
+          "round_currency": "USD",
+          "company_identity": "Cyera, at cyera.com, sells an AI and data security platform for discovering, securing, and governing enterprise data.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-09-22"
+        },
+        "reasoning": "I resolved the company at cyera.com and checked for newer financing and lifecycle events through the cutoff. The latest evidenced venture equity event I found is the 2026-09-22 $400 million Series G extension from Goldman Sachs Alternatives. Earlier 2026 Reuters coverage confirms the underlying Series G and its lead investor. No retrieved public evidence showed a completed acquisition, IPO, or closure of Cyera itself by 2026-09-30, so the best-supported lifecycle classification is private_independent.",
+        "stepsTaken": [
+          "Searched Google with query \"Cyera cyera.com funding acquisition IPO 2025 2026\". The results are: \n {\"search_results\":[{\"title\":\"Cyera Raises $400M to Meet Rapidly Growing Demand for ...\",\"link\":\"https://www.cyera.com/press-releases/cyera-raises-400m-to-meet-rapidly-growing-demand-for-ai-security-among-enterprises\",\"snippet\":\"Raised 3 funding rounds totalling $1.24 billion and tripling its valuation to $9 billion; Become one of the top 10 fastest-growing companies. “ ...\",\"date\":\"Jan 8, 2026\",\"position\":1},{\"title\":\"Cyera IPO Timeline and Financing Details\",\"link\":\"https://forgeglobal.com/cyer...",
+          "Used visitWebpage {\"url\":\"https://www.cyera.com/press-releases/cyera-raises-400m-to-meet-rapidly-growing-demand-for-ai-security-among-enterprises\",\"question\":\"Find the announcement date, round amount, round type if stated, lead investors, valuation if mentioned, total funding if mentioned, and any company description.\"}. The results are: \n \"Announcement date: January 8, 2026.\\nRound amount: $400 million.\\nRound type: Series F.\\nLead investors: funds managed by Blackstone.\\nOther investors mentioned: Accel, Coatue, Cyberstarts, Georgian, Greenoaks, Lightspeed Venture Partners, Redpoint, Sapphire, Sequoia Capital, Spark.\\nValuation: $9 billion.\\nTotal funding: brought total funding to over $1.7 billion; also says more than $1.2 billion in funding over the past year.\\nCompany description: Cyera is described as the industry’s leading ...",
+          "Searched Google with query \"Cyera IPO acquisition completed 2026 Reuters\". The results are: \n {\"search_results\":[{\"title\":\"Cyera valued at $9 billion as data security firm raises $400 ...\",\"link\":\"https://www.reuters.com/sustainability/boards-policy-regulation/cyera-valued-9-billion-data-security-firm-raises-400-million-2026-01-08/\",\"snippet\":\"Cyera said on Thursday it raised $400 million in a late-stage funding round, with its valuation tripling in little over a year to $9 billion,\",\"date\":\"Jan 8, 2026\",\"position\":1},{\"title\":\"Data security firm Cyera raises $600 million at $12 billion ...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/legal/transactional/data-security-firm-cyera-raises-600-million-12-billion-valuation-2026-06-10/\",\"question\":\"What does this article say about Cyera's financing round amount, round type if any, date, lead investors, current status as private or IPO/acquisition, and any mentions of recent acquisitions?\"}. The results are: \n \"Reuters article: “Data security firm Cyera raises $600 million at $12 billion valuation” (June 10, 2026; updated June 10, 2026).\\n\\nRelevant excerpts:\\n- “Cyera said on Wednesday it has raised $600 million at a $12 billion valuation in a late-stage funding round”\\n- “The funding round was led by Evolution Equity Partners, with participation from Singapore state investor Temasek and Israeli venture capital fund Cyberstarts”\\n- “Existing investors including Accel, AT&T Ventures, Blackstone and Co...",
+          "Searched Google with query \"site:reuters.com Cyera September 2026 IPO acquisition\". The results are: \n {\"search_results\":[{\"title\":\"Data security firm Cyera raises $600 million at $12 billion ...\",\"link\":\"https://www.reuters.com/legal/transactional/data-security-firm-cyera-raises-600-million-12-billion-valuation-2026-06-10/\",\"snippet\":\"Data security firm Cyera said on Wednesday it has raised $600 million at a $12 billion ​valuation in a late-stage funding round, ...\",\"date\":\"Jun 10, 2026\",\"position\":1},{\"title\":\"Sitemap - 10 June 2026\",\"link\":\"https://www.reuters.com/sitemap/2026-06/10/1/\",\"snipp...",
+          "Searched Google with query \"Cyera filed for IPO acquired by 2026\". The results are: \n {\"search_results\":[{\"title\":\"Cyera has already raised more than Wiz. Where does its road ...\",\"link\":\"https://www.calcalistech.com/ctechnews/article/h1dbxzb5gg\",\"snippet\":\"The latest financing brings Cyera's total capital raised to more than $2 billion and its funding in 2026 alone to $1.4 billion.\",\"date\":\"7 days ago\",\"position\":1},{\"title\":\"Why Cyera's Latest Funding Haul Raises IPO-or-Sale ...\",\"link\":\"https://www.bankinfosecurity.com/blogs/cyeras-latest-funding-haul-raises-ipo-or-sale-questi...",
+          "Searched Google with query \"BusinessWire Cyera Announces $400 Million Investment from Goldman Sachs September 22 2026\". The results are: \n {\"search_results\":[{\"title\":\"Cyera Announces $400 Million Investment from Goldman ...\",\"link\":\"https://finance.yahoo.com/technology/ai/articles/cyera-announces-400-million-investment-111500622.html\",\"snippet\":\"Cyera today announced a $400 million extension from Growth Equity at Goldman Sachs Alternatives to its Series G, led by Evolution Equity,\",\"date\":\"Sep 22, 2026\",\"position\":1},{\"title\":\"Cyera Announces $400 Million Investment from Goldman ...\",\"link\":\"https://cioinfluence.com/security/cyera...",
+          "Used visitWebpage {\"url\":\"https://finance.yahoo.com/technology/ai/articles/cyera-announces-400-million-investment-111500622.html\",\"question\":\"What does this article say about the September 2026 Cyera financing: amount, whether it is a new round or extension, which round it extends, lead investor, valuation, and total raised in 2026?\"}. The results are: \n \"Article: “Cyera Announces $400 Million Investment from Goldman Sachs to Build the Trust Layer for the Agentic Enterprise” (Business Wire, September 22, 2026)\\nSource: https://www.businesswire.com/news/home/20260922497312/en/\\n\\nRelevant excerpts:\\n- “Cyera today announced a $400 million extension from Growth Equity at Goldman Sachs Alternatives to its Series G, led by Evolution Equity...”\\n- “Series G extension accelerates Cyera's vision...”\\n- “Valued at over $12 billion, Cyera is backed by le..."
+        ]
+      }
+    }
+  ]
+}

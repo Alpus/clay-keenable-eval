@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6bbhwKadHey7cJyx",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:47:41.689Z",
+  "duration": "2m 15s",
+  "dataCreditsUsed": 4.199999999999999,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6bbhER6DnwX2MBbJ",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:47:41.698Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "figma.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Figma"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6bbhrTrpfMVUtGUy",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:47:41.718Z",
+      "completedAt": "2026-09-30T10:49:57.036Z",
+      "duration": "2m 15s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "figma.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Figma"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Figma is a design and product development platform at figma.com.\",\"url\":\"https://investor.figma.com/overview/default.aspx\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Figma is where teams design and build the world’s best digital products... Founded in 2012, Figma’s intelligent canvas brings teams, agents, code and design together to go from idea to shipped product.\"},{\"claim\":\"Figma describes itself as a design and product development platform where teams turn ideas into digital products and experiences.\",\"url\":\"https://www.figma.com/blog/ipo-pricing/\",\"publication_date\":\"2025-07-30\",\"event_date\":\"2025-07-30\",\"excerpt\":\"Figma is a design and product development platform—where teams come together to turn ideas into the world’s best digital products and experiences.\"},{\"claim\":\"Figma's most recent evidenced private venture equity round before its IPO was a Series E preferred stock financing of $200 million, publicly announced in June 2021, led by Durable Capital Partners and Morgan Stanley Tactical Value.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1579878/000162828025033742/figma-sx1.htm\",\"publication_date\":\"2025-07-01\",\"event_date\":\"2021-06\",\"excerpt\":\"The S-1 identifies the latest financing round before the IPO/public filing as Series E preferred stock financing; amount raised $200 million; publicly announced in June 2021; lead investors Durable Capital Partners and Morgan Stanley Tactical Value.\"},{\"claim\":\"Figma priced its IPO on July 30, 2025, and said its shares were expected to begin trading on the NYSE on July 31, 2025 under ticker FIG.\",\"url\":\"https://www.figma.com/blog/ipo-pricing/\",\"publication_date\":\"2025-07-30\",\"event_date\":\"2025-07-31\",\"excerpt\":\"The shares are expected to begin trading on the New York Stock Exchange on July 31, 2025 under the ticker symbol ‘FIG.’\"},{\"claim\":\"By 2026, Figma maintained an investor relations site with stock and SEC filing sections, supporting that it was operating as a public company by the cutoff date.\",\"url\":\"https://investor.figma.com/overview/default.aspx\",\"publication_date\":\"unknown\",\"event_date\":\"2026\",\"excerpt\":\"Navigation includes Stock Info, SEC Filings, Quarterly Results, News, Events & Presentations, and Investor FAQs; page footer shows © 2026 Figma Inc.\"},{\"claim\":\"Adobe's planned acquisition of Figma was terminated, not completed, on December 18, 2023.\",\"url\":\"https://news.adobe.com/news/news-details/2023/adobe-and-figma-mutually-agree-to-terminate-merger-agreement\",\"publication_date\":\"2023-12-18\",\"event_date\":\"2023-12-18\",\"excerpt\":\"Adobe and Figma announced that they have entered into a mutual agreement to terminate their previously announced merger agreement... under which Adobe would have acquired Figma.\"}]",
+          "latest_round": "Series E",
+          "round_amount": "200000000",
+          "uncertainties": "The SEC S-1 evidence retrieved identifies Series E ($200M, announced June 2021) as the latest private venture equity round. Search results referenced later secondary-market activity in 2024 and the 2025 IPO; those are not treated as venture equity rounds here. The IPO-pricing post says shares were expected to begin trading on 2025-07-31, and Figma's 2026 investor-relations site supports ongoing public-company status by the cutoff, but I did not retrieve a separate exchange confirmation page. The exact day in June 2021 for the Series E announcement was not established from the retrieved primary source.",
+          "lead_investors": "Durable Capital Partners; Morgan Stanley Tactical Value",
+          "round_currency": "USD",
+          "company_identity": "Figma operates figma.com and sells collaborative design and product development software for teams building digital products.",
+          "lifecycle_status": "public",
+          "lifecycle_event_date": "2025-07-31",
+          "round_announcement_date": "2021-06"
+        },
+        "reasoning": "I identified the company from Figma's own investor and company materials, used Figma's SEC S-1 for the latest evidenced private venture equity round, used Figma's IPO pricing post for the public-listing transition, and used Adobe's press release to confirm the earlier announced acquisition was terminated rather than completed. The result reflects evidence available on or before 2026-09-30 and separates the private round from the later IPO.",
+        "stepsTaken": [
+          "Searched Google with query \"Figma figma.com funding latest round IPO acquisition status 2025 2026\". The results are: \n {\"search_results\":[{\"title\":\"Figma IPO Timeline and Financing Details\",\"link\":\"https://forgeglobal.com/figma_ipo/\",\"snippet\":\"Per Forge data, Figma has raised a total of $748.6 million over eight funding rounds. Their latest funding round was July 17, 2024, in a Secondary Market round.\",\"position\":1},{\"title\":\"Investor Relations | Figma, Inc.\",\"link\":\"https://investor.figma.com/overview/default.aspx\",\"snippet\":\"August 5, 2026. Figma Announces Second Quarter 2026 Financial Results. July 15, 2026....",
+          "Used visitWebpage {\"url\":\"https://investor.figma.com/overview/default.aspx\",\"question\":\"Find evidence of Figma's current public listing status, ticker/exchange, company description, and links or references to its IPO or corporate history as of 2026-09-30.\"}. The results are: \n \"- Investor Relations site: http://investor.figma.com\\n- Overview page: https://investor.figma.com/overview/default.aspx\\n- Stock Info page: https://investor.figma.com/stock-info/default.aspx\\n- SEC Filings page: https://investor.figma.com/financials/sec-filings/default.aspx\\n- News page: https://investor.figma.com/news-events/news/default.aspx\\n- News & Events page: https://investor.figma.com/news-events/default.aspx\\n- Governance / IR home: https://investor.figma.com/default.aspx\\n\\nRelevant w...",
+          "Searched Google with query \"site:investor.figma.com Figma IPO July 2025 press release Adobe terminated acquisition December 2023 latest funding round May 2024 Series F\". The results are: \n {\"message\":\"No data returned from search query\"}",
+          "Searched Google with query \"Figma S-1 SEC 2025 latest funding round 2024 Series F Adobe terminated acquisition press release\". The results are: \n {\"search_results\":[{\"title\":\"Figma-S-1\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1579878/000162828025033742/figma-sx1.htm\",\"snippet\":\"Expands to 144 Million by 2029,” DOC#US53309325, May 2025 (Figma commissioned). •IDC, 1 Billion New Logical Applications: More Background, April 2024.\",\"position\":1},{\"title\":\"Figma confidentially files for IPO a year after ditching ...\",\"link\":\"https://www.cnbc.com/2025/04/15/figma-confidentially-files-for-ipo-a-year-after-ditching-adobe-deal.html\",\"snippe...",
+          "Used visitWebpage {\"url\":\"https://www.sec.gov/Archives/edgar/data/1579878/000162828025033742/figma-sx1.htm\",\"question\":\"Find the latest venture equity financing round before IPO, including round name, amount raised, announcement date if stated, lead investors if stated, and any evidence of IPO/public listing status.\"}. The results are: \n \"- IPO/public listing status evidence:\\n  - Figma filed a registration statement on Form S-1 with the SEC, indicating a planned initial public offering/public listing: https://sec.gov/Archives/edgar/data/1579878/000162828025033742/figma-sx1.htm#i8dccdb6f4d824d4aba81e7c665eaa62d_10\\n  - Related capitalization and incorporation sections tied to the offering/public company conversion: \\n    - https://sec.gov/Archives/edgar/data/1579878/000162828025033742/figma-sx1.htm#i8dccdb6f4d824d4aba81e7c665eaa...",
+          "Searched Google with query \"Figma IPO completed July 2025 press release NYSE FIG pricing\". The results are: \n {\"search_results\":[{\"title\":\"Figma Announces Pricing of Initial Public Offering\",\"link\":\"https://www.figma.com/blog/ipo-pricing/\",\"snippet\":\"Figma's initial public offering of 36,937,080 shares of Class A common stock at a public offering price of $33.00 per share. on July 31, 2025 … ...\",\"date\":\"Jul 30, 2025\",\"position\":1},{\"title\":\"Figma, Inc. (FIG)\",\"link\":\"https://finance.yahoo.com/quote/FIG/\",\"snippet\":\"Figma is headquartered in San Francisco, California, and completed its IPO in July 2025....",
+          "Used visitWebpage {\"url\":\"https://www.figma.com/blog/ipo-pricing/\",\"question\":\"Find the IPO pricing date, exchange/ticker, when trading began, and a short description of what Figma does from this company post.\"}. The results are: \n \"Post: “Figma Announces Pricing of Initial Public Offering” (July 30, 2025).\\n\\nRelevant details:\\n- IPO pricing date: July 30, 2025.\\n- Pricing details from post: “Today, we’re announcing the pricing of Figma’s initial public offering...”\\n- Exchange/ticker: “The shares are expected to begin trading on the New York Stock Exchange on July 31, 2025 under the ticker symbol ‘FIG.’”\\n- When trading began / expected to begin: July 31, 2025.\\n- What Figma does:\\n  - “Figma is a design and product deve...",
+          "Searched Google with query \"Adobe Figma terminate merger December 18 2023 press release\". The results are: \n {\"search_results\":[{\"title\":\"Adobe and Figma Mutually Agree to Terminate Merger ...\",\"link\":\"https://news.adobe.com/news/news-details/2023/adobe-and-figma-mutually-agree-to-terminate-merger-agreement\",\"snippet\":\"Adobe and Figma announced that they have entered into a mutual agreement to terminate their previously announced merger agreement, ...\",\"position\":1},{\"title\":\"Adobe and Figma call off $20 billion acquisition after scrutiny\",\"link\":\"https://www.cnbc.com/2023/12/18/adobe-and-figma-call-of...",
+          "Used visitWebpage {\"url\":\"https://news.adobe.com/news/news-details/2023/adobe-and-figma-mutually-agree-to-terminate-merger-agreement\",\"question\":\"Find the statement confirming whether Adobe's acquisition of Figma was completed or terminated, and the date of that lifecycle event.\"}. The results are: \n \"Adobe and Figma Mutually Agree to Terminate Merger Agreement\\nDate: Monday, December 18, 2023 08:00 AM\\nCardDate: 2023-12-18\\n\\n“Today, Adobe (Nasdaq:ADBE) and Figma announced that they have entered into a mutual agreement to terminate their previously announced merger agreement, originally announced on September 15, 2022, under which Adobe would have acquired Figma for a mix of cash and stock consideration.”\\n\\n“The companies have signed a termination agreement that resolves all outstanding ma..."
+        ]
+      }
+    }
+  ]
+}

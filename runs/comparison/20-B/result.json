@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6btgxPp7qFVzYsz7",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:58:28.763Z",
+  "duration": "1m 17s",
+  "dataCreditsUsed": 4.199999999999999,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6btgD4unry77cgkZ",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:58:28.769Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "pennylane.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Pennylane"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6btgV68QjKMJvm9C",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:58:28.787Z",
+      "completedAt": "2026-09-30T10:59:46.412Z",
+      "duration": "1m 17s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "pennylane.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Pennylane"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Pennylane at pennylane.com is a French financial/accounting software company for SMEs and accountants.\",\"url\":\"https://www.pennylane.com/fr/investisseurs\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Pennylane says it is developing 'un produit innovant qui couvre à la fois les besoins des experts-comptables et de leurs clients'; the site footer links to accounting production software, business account, and e-invoicing products.\"},{\"claim\":\"As of the company investors page, Pennylane says founders still hold majority voting rights, with nine VC funds and employees also owning shares, supporting that it remains privately held and independent rather than acquired or public.\",\"url\":\"https://www.pennylane.com/fr/investisseurs\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"'Les droits de vote sont majoritairement détenus par les fondateurs de Pennylane. Neuf fonds de capital-risque sont également investisseurs. Les salariés détiennent également des parts...'\"},{\"claim\":\"Pennylane's latest evidenced equity financing by the cutoff was €175 million announced in January 2026.\",\"url\":\"https://www.pennylane.com/fr/investisseurs\",\"publication_date\":\"unknown\",\"event_date\":\"2026-01\",\"excerpt\":\"The investors page lists six financings totaling €359 million, ending with '175 M€ en janvier 2026.'\"},{\"claim\":\"The January 2026 financing was reported as a Series F round co-led by TCV and Blackstone Growth.\",\"url\":\"https://www.willkie.com/news/2026/01/willkie-advises-blackstone-growth-on-investment-in-pennylane\",\"publication_date\":\"2026-01-23\",\"event_date\":\"2026-01\",\"excerpt\":\"Google result snippet for Willkie states: 'Willkie advised Blackstone Growth as co-lead investor in a €175 million Series F funding round for Pennylane...'\"},{\"claim\":\"Additional contemporaneous reporting says TCV led the €175 million round and Blackstone participated, with Pennylane still described as a startup/company raising venture funding rather than being acquired or listed.\",\"url\":\"https://www.bloomberg.com/news/articles/2026-01-20/tcv-blackstone-back-startup-pennylane-at-4-25-billion-value\",\"publication_date\":\"2026-01-19\",\"event_date\":\"2026-01\",\"excerpt\":\"Google result snippet says Pennylane 'has raised €175 million ($204 million) in a funding round led by growth equity...' and Blackstone is participating.\"}]",
+          "latest_round": "Series F",
+          "round_amount": "175000000",
+          "uncertainties": "The company investors page is strong for amount/history and ownership but does not provide a publication date, exact announcement day, or the names of investors in the January 2026 round. Lead-investor and Series F labeling come from search-result snippets for Willkie and Bloomberg rather than a fully read primary Pennylane press release, so those details should be treated as somewhat less certain. I found no affirmative evidence of an IPO or sale of Pennylane itself before the 2026-09-30 cutoff; however, absence of such results is not the same as a formal company statement denying them. Search results also show Pennylane acquired Billy in 2025, which is an acquisition by Pennylane and does not change Pennylane's own lifecycle status.",
+          "lead_investors": "TCV; Blackstone Growth",
+          "round_currency": "EUR",
+          "company_identity": "Pennylane is a French financial and accounting software platform for SMEs and accountants.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-01"
+        },
+        "reasoning": "I used public web search and page-reading tools to identify Pennylane at pennylane.com, verify its business from the company site, and determine the latest evidenced funding and ownership status before 2026-09-30. The strongest primary evidence was Pennylane's own investors page, which states founders retain majority voting rights and lists the funding history through a €175 million round in January 2026. Because that page did not name round leads or stage, I supplemented it with contemporaneous search-result snippets from Willkie and Bloomberg indicating a Series F round led/co-led by TCV and Blackstone Growth. No evidence found showed Pennylane itself had been acquired, gone public, or shut down by the cutoff.",
+        "stepsTaken": [
+          "Searched Google with query \"Pennylane pennylane.com funding acquisition IPO latest round site:pennylane.com OR techcrunch.com OR sifted.eu OR crunchbase.com\". The results are: \n {\"search_results\":[{\"title\":\"Pennylane - Crunchbase Company Profile & Funding\",\"link\":\"https://www.crunchbase.com/organization/pennylane\",\"snippet\":\"Pennylane closed its last funding round on obfuscated obfuscation from a Series E round.\",\"position\":1},{\"title\":\"Financial Details - Pennylane\",\"link\":\"https://www.crunchbase.com/organization/pennylane/financial_details\",\"snippet\":\"Their latest funding was raised on obfuscated obfuscation from a Series E round. Pennylane is funded by 13 investors. ...",
+          "Searched Google with query \"Pennylane latest funding 2025 2026 TCV Blackstone acquisition IPO pennylane.com\". The results are: \n {\"search_results\":[{\"title\":\"TCV, Blackstone Back Startup Pennylane at $4.25 Billion ...\",\"link\":\"https://www.bloomberg.com/news/articles/2026-01-20/tcv-blackstone-back-startup-pennylane-at-4-25-billion-value\",\"snippet\":\"Pennylane, a French startup that sells accounting software, has raised €175 million ($204 million) in a funding round led by growth equity ...\",\"date\":\"Jan 19, 2026\",\"position\":1},{\"title\":\"Pennylane Raises €175 Million in Funding\",\"link\":\"https://www.thesaasnews.com/news/pennyl...",
+          "Searched Google with query \"site:pennylane.com Pennylane 175 million TCV Blackstone January 2026 press release\". The results are: \n {\"message\":\"No data returned from search query\"}",
+          "Searched Google with query \"Pennylane January 2026 funding official announcement TCV Blackstone press release\". The results are: \n {\"search_results\":[{\"title\":\"TCV, Blackstone Back Startup Pennylane at $4.25 Billion ...\",\"link\":\"https://www.bloomberg.com/news/articles/2026-01-20/tcv-blackstone-back-startup-pennylane-at-4-25-billion-value\",\"snippet\":\"Pennylane, a French startup that sells accounting software, has raised €175 million ($204 million) in a funding round led by growth equity ...\",\"date\":\"Jan 19, 2026\",\"position\":1},{\"title\":\"Willkie Advises Blackstone Growth on Investment in ...\",\"link\":\"https://www.willkie.com/n...",
+          "Searched Google with query \"Pennylane acquisition IPO announced public company site:pennylane.com OR site:reuters.com OR site:bloomberg.com\". The results are: \n {\"search_results\":[{\"title\":\"TCV, Blackstone Back Startup Pennylane at $4.25 Billion ...\",\"link\":\"https://www.bloomberg.com/news/articles/2026-01-20/tcv-blackstone-back-startup-pennylane-at-4-25-billion-value\",\"snippet\":\"Blackstone Inc. is also participating in the round, alongside existing investors Sequoia Capital, DST Global, CapitalG and Meritech, Pennylane ...\",\"date\":\"Jan 19, 2026\",\"position\":1},{\"title\":\"Pennylane acquiert Billy pour booster ses intégrations\",\"link\":\"https://www.pennylane...",
+          "Used visitWebpage {\"url\":\"https://www.pennylane.com/fr/investisseurs\",\"question\":\"What does this page say about Pennylane's funding history, latest round amount/date/investors, and what the company does?\"}. The results are: \n \"Pennylane page states:\\n- Company/control: “Les droits de vote sont majoritairement détenus par les fondateurs de Pennylane. Neuf fonds de capital-risque sont également investisseurs. Les salariés détiennent également des parts grâce aux BSPCE.”\\n- Funding history: “Depuis sa création, Pennylane a levé un total de 359 millions d'euros en six tours de financement successifs : 4 M€ en seed (mai 2020), 15 M€ en Série A (janvier 2021), 50 M€ en Série B (janvier 2022), 40 M€ en Série C (février 2024...",
+          "Used visitWebpage {\"url\":\"https://www.tcv.com/news/pennylane-building-the-financial-operating-system-for-european-smes\",\"question\":\"What funding round and amount did TCV announce for Pennylane, who led and participated, what date is on the page, and what does it say Pennylane does?\"}. The results are: \n \"no relevant data\"",
+          "Used keenable-public-evaluation-fetch_page_content {\"url\":\"https://www.tcv.com/news/pennylane-building-the-financial-operating-system-for-european-smes\",\"max_chars\":6000,\"live\":false,\"prompt\":\"Extract the publication date, the announced funding amount and round/stage for Pennylane, the lead and participating investors, and a one-sentence description of what Pennylane does.\",\"session_id\":\"sess-pennylane-20260930\",\"output_format\":\"text\"}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Pennylane: Building the Financial Operating System for European SMEs | TCV\\nURL: https://www.tcv.com/news/pennylane-building-the-financial-operating-system-for-european-smes\\n\\nThe provided page content does not contain the publication date, funding amount, round/stage, investors, or description for Pennylane.\"}]}",
+          "Searched Google with query \"Pennylane 175 million TCV Blackstone official site lead investor January 2026\". The results are: \n {\"search_results\":[{\"title\":\"Willkie Advises Blackstone Growth on Investment in ...\",\"link\":\"https://www.willkie.com/news/2026/01/willkie-advises-blackstone-growth-on-investment-in-pennylane\",\"snippet\":\"January 23, 2026. Willkie advised Blackstone Growth as co-lead investor in a €175 million Series F funding round for Pennylane, a France ...\",\"date\":\"Jan 23, 2026\",\"position\":1},{\"title\":\"TCV, Blackstone Back Startup Pennylane at $4.25 Billion ...\",\"link\":\"https://www.bloomberg.com/news/articles/..."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "key": "11-C",
+  "case_id": "elevenlabs",
+  "arm": "C",
+  "inputs": {
+    "company_name": "ElevenLabs",
+    "domain": "elevenlabs.io",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  "workflow_id": "wf_0tm6d21AuFsz5iFGM8e",
+  "node_id": "wfn_0tm6d4f6jZzvkGe2wpS",
+  "status": "failed",
+  "submitted_at": "2026-09-30T11:27:34.834738+00:00",
+  "run_id": "wfr_0tm6d5zQsP37s3GUdw7",
+  "terminal_observed_at": "2026-09-30T11:28:41.350822+00:00",
+  "directory": "11-C/attempts/1",
+  "archived_at": "2026-09-30T11:34:27.092960+00:00"
+}

@@ -1,0 +1,89 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6b8bNVXDDmsXoQod",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:45:47.253Z",
+  "duration": "1m 26s",
+  "dataCreditsUsed": 4.699999999999999,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6b8b8tCaDm9kq75N",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:45:47.263Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "wiz.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Wiz"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6b8b32KjTthTJ89K",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:45:47.275Z",
+      "completedAt": "2026-09-30T10:47:13.517Z",
+      "duration": "1m 26s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "wiz.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Wiz"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "Google LLC",
+          "evidence": "[{\"claim\":\"Wiz is a cloud and AI security company/platform selling code-to-cloud and runtime security products.\",\"url\":\"https://www.wiz.io/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Wiz homepage: 'Protect Everything You Build and Run' and 'Wiz connects code, cloud, and runtime into a single security graph...' with product areas including Wiz Code, Wiz Cloud, and Wiz Defend.\"},{\"claim\":\"Wiz announced a $1 billion venture funding round led by Andreessen Horowitz, Lightspeed Venture Partners, and Thrive Capital.\",\"url\":\"https://www.wiz.io/blog/celebrating-our-1-billion-funding-round-and-12-billion-valuation\",\"publication_date\":\"2024-05-07\",\"event_date\":\"2024-05-07\",\"excerpt\":\"Wiz blog post by Assaf Rappaport states: 'Wiz has raised $1 billion at a $12 billion valuation, led by Andreessen Horowitz, Lightspeed Venture Partners, and Thrive Capital.'\"},{\"claim\":\"Google announced only a signed definitive agreement to acquire Wiz for $32 billion in cash on March 18, 2025; the deal had not yet closed then and remained subject to closing conditions including regulatory approvals.\",\"url\":\"https://blog.google/company-news/inside-google/company-announcements/google-agreement-acquire-wiz/\",\"publication_date\":\"2025-03-18\",\"event_date\":\"2025-03-18\",\"excerpt\":\"Google said it 'has signed a definitive agreement to acquire Wiz, Inc.' for '$32 billion... in an all-cash transaction' and that 'Once closed, Wiz will join Google Cloud'; the deal was 'subject to customary closing conditions including regulatory approvals.'\"},{\"claim\":\"Google later completed the acquisition of Wiz on March 11, 2026.\",\"url\":\"https://abc.xyz/investor/news/news-details/2026/Google-Completes-Acquisition-of-Wiz-2026-ta7OaU2uA0/default.aspx\",\"publication_date\":\"2026-03-11\",\"event_date\":\"2026-03-11\",\"excerpt\":\"Alphabet investor relations announced: 'Google LLC today announced the completion of its acquisition of Wiz, a leading cloud and AI security platform headquartered in New York.'\"}]",
+          "latest_round": "Series E",
+          "round_amount": "1000000000",
+          "uncertainties": "The May 7, 2024 Wiz post explicitly states the amount raised and lead investors but does not label the round by letter in the extracted text; outside reporting commonly refers to it as the Series E round. The acquisition has two distinct dates: announcement/signing on 2025-03-18 and completion on 2026-03-11. No later venture equity round before the 2026-03-11 acquisition completion was established from the sources reviewed.",
+          "lead_investors": "Andreessen Horowitz, Lightspeed Venture Partners, Thrive Capital",
+          "round_currency": "USD",
+          "company_identity": "Wiz at wiz.io is a cloud and AI security company that sells a code-to-cloud cybersecurity platform, including cloud risk prevention, secure development, and runtime protection products.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2026-03-11",
+          "round_announcement_date": "2024-05-07"
+        },
+        "reasoning": "I resolved the entity from the official wiz.io homepage, identified the latest evidenced venture equity financing from Wiz's own funding announcement, and determined lifecycle status from official Google/Alphabet announcements distinguishing the 2025 signed agreement from the 2026 completed acquisition. I found no public evidence in the reviewed sources of a later equity round before the acquisition closed.",
+        "stepsTaken": [
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Wiz wiz.io latest funding round announcement acquisition status 2025 2026 official source press release company blog SEC or acquirer source\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":400,\"max_results\":5,\"session_id\":\"sess-wiz-20260930\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Wiz, Inc.\\nURL: https://grokipedia.com/page/wiz_inc\\nPublished: 2026-03-27\\nAcquired: 2026-09-20\\nSnippets:\\nStanley.[8] In May 2024, the company raised $1 billion in a Series E funding round led by Andreessen Horowitz, Lightspeed Venture Partners, and Thrive Capital, attaining a $12 billion post-money valuation.[5][11] Business focus and mission Wiz, Inc.\\n\\n---\\n\\nTitle: Wiz Statistics By Growth, Funding, Integration, Customer ROI, Cloud Security, Pate...",
+          "Searched Google with query \"site:blog.google March 2025 Wiz acquisition definitive agreement\". The results are: \n {\"search_results\":[{\"title\":\"Google announces agreement to acquire Wiz\",\"link\":\"https://blog.google/company-news/inside-google/company-announcements/google-agreement-acquire-wiz/\",\"snippet\":\"Google signed a definitive agreement to acquire Wiz. This deal will make it easier for companies to protect themselves across major clouds.\",\"date\":\"Mar 18, 2025\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3Ablog.google%20...",
+          "Used visitWebpage {\"url\":\"https://blog.google/company-news/inside-google/company-announcements/google-agreement-acquire-wiz/\",\"question\":\"What does this page say about Google's agreement to acquire Wiz, the announcement date, whether the deal is signed or completed, the transaction value, and any statements about pending approvals or closing?\"}. The results are: \n \"- Page title/headline: “Google announces agreement to acquire Wiz”\\n- Announcement date: “Mar 18, 2025” and “MOUNTAIN VIEW, Calif. and NEW YORK, N.Y. (March 18, 2025)”\\n- Deal status: “Google LLC today announced it has signed a definitive agreement to acquire Wiz, Inc.”\\n- Transaction value: “for $32 billion, subject to closing adjustments, in an all-cash transaction”\\n- Completion/closing status: “Once closed, Wiz will join Google Cloud.”\\n- Pending approvals/closing: “The deal is subject to c...",
+          "Searched Google with query \"site:wiz.io/blog May 2024 Wiz Series E funding Andreessen Lightspeed Thrive\". The results are: \n {\"search_results\":[{\"title\":\"Celebrating Our $1 Billion Funding Round and $12 ...\",\"link\":\"https://www.wiz.io/blog/celebrating-our-1-billion-funding-round-and-12-billion-valuation\",\"snippet\":\"Wiz has raised $1 billion at a $12 billion valuation, led by Andreessen Horowitz, Lightspeed Venture Partners, and Thrive Capital. ... May 6, 2024.\",\"date\":\"May 7, 2024\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3Awiz.io...",
+          "Used visitWebpage {\"url\":\"https://www.wiz.io/blog/celebrating-our-1-billion-funding-round-and-12-billion-valuation\",\"question\":\"What round does this page announce for Wiz, what amount was raised, who led the round, and what is the announcement date?\"}. The results are: \n \"Title: “Celebrating Our $1 Billion Funding Round and $12 Billion Valuation”\\nAuthor/date: Assaf Rappaport — May 7, 2024\\nRelevant text: “Wiz has raised $1 billion at a $12 billion valuation, led by Andreessen Horowitz, Lightspeed Venture Partners, and Thrive Capital.”\"",
+          "Searched Google with query \"site:wiz.io Wiz homepage cloud security platform official\". The results are: \n {\"search_results\":[{\"title\":\"Wiz: AI Cybersecurity for All Your Cloud and AI Applications\",\"link\":\"https://www.wiz.io/\",\"snippet\":\"Wiz connects code, cloud, and runtime into one agentic cybersecurity platform. Prevent risk, detect threats, and start secure – across every cloud and AI ...\",\"position\":1},{\"title\":\"Wiz Cloud and AI Security Platform\",\"link\":\"https://www.wiz.io/platform\",\"snippet\":\"The Wiz AI-Application Protection Platform provides end-to-end visibility and protection for cloud and...",
+          "Used visitWebpage {\"url\":\"https://www.wiz.io/\",\"question\":\"How does Wiz describe itself and what does it sell on its homepage?\"}. The results are: \n \"Homepage headline: “Protect Everything You Build and Run.”\\n\\nHow Wiz describes itself on the homepage:\\n- “Wiz connects code, cloud, and runtime into a single security graph that provides the end-to-end context required to automate risk reduction and threat response, enabling security teams to operate at AI speed.”\\n- “Security at AI speed, powered by context.”\\n- “Wiz connects code, cloud, and runtime into a unified context graph.”\\n- “AI-Powered Code-to-Cloud Defense”\\n\\nWhat Wiz sells / pro...",
+          "Searched Google with query \"site:blog.google Wiz acquisition closed March 2026 official\". The results are: \n {\"search_results\":[{\"title\":\"Google completes acquisition of Wiz\",\"link\":\"https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/wiz-acquisition/\",\"snippet\":\"Today, we announced we've closed the acquisition of Wiz. As a reminder, this deal was initially announced in March 2025.\",\"date\":\"Mar 11, 2026\",\"position\":1},{\"title\":\"Google announces agreement to acquire Wiz\",\"link\":\"https://blog.google/company-news/inside-google/company-announcements/google-agreement-acquire-wiz/\",\"s...",
+          "Searched Google with query \"site:abc.xyz March 2026 Wiz acquisition closed official Alphabet\". The results are: \n {\"search_results\":[{\"title\":\"Google Completes Acquisition of Wiz\",\"link\":\"https://abc.xyz/investor/news/news-details/2026/Google-Completes-Acquisition-of-Wiz-2026-ta7OaU2uA0/default.aspx\",\"snippet\":\"MOUNTAIN VIEW, Calif. NEW YORK, N.Y. March 11, 2026 Google LLC today announced the completion of its acquisition of Wiz, a leading cloud and AI\",\"date\":\"Mar 11, 2026\",\"position\":1},{\"title\":\"Alphabet Investor Relations\",\"link\":\"https://abc.xyz/investor/\",\"snippet\":\"April 7, 2026. Alphabet Announces D...",
+          "Used visitWebpage {\"url\":\"https://abc.xyz/investor/news/news-details/2026/Google-Completes-Acquisition-of-Wiz-2026-ta7OaU2uA0/default.aspx\",\"question\":\"What does this page say about the completion of Google's acquisition of Wiz and on what date was it completed?\"}. The results are: \n \"Title: Google Completes Acquisition of Wiz\\nDate: March 11, 2026\\nKey text: “Google LLC today announced the completion of its acquisition of Wiz, a leading cloud and AI security platform headquartered in New York.”\\nRelevant links: https://cloud.google.com/blog/products/identity-security/google-completes-acquisition-of-wiz, http://wiz.io/blog/google-closes-deal-to-acquire-wiz\\nRelevant emails: investor-relations@abc.xyz, press@google.com\"",
+          "Searched Google with query \"Wiz funding round 2025 2026 after Series E before acquisition latest funding official or Reuters\". The results are: \n {\"search_results\":[{\"title\":\"Eyeing more buyouts, cyber startup Wiz raises $1 bln in ...\",\"link\":\"https://www.reuters.com/technology/cyber-startup-wiz-raises-1-bln-private-funds-valued-12-billion-2024-05-07/\",\"snippet\":\"Wiz raised $1 billion in a private funding round that values the four-year old cloud cyber security company at $12 billion, as it seeks to do ...\",\"date\":\"May 7, 2024\",\"position\":1},{\"title\":\"Wiz Stock: Acquisition and Valuation History\",\"link\":\"https://www.upmarket.co/private-ma..."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6coeRqjwRd2n9Epz",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:17:02.916Z",
+  "duration": "1m 41s",
+  "dataCreditsUsed": 6.199999999999999,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6coe7E6yHT5sfno9",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:17:02.928Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "veronapharma.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Verona Pharma"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6coeAMwQdBCbqV56",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:17:02.947Z",
+      "completedAt": "2026-09-30T11:18:44.495Z",
+      "duration": "1m 41s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "veronapharma.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Verona Pharma"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "Merck & Co., Inc. (through Merck Sharp & Dohme LLC)",
+          "evidence": "[{\"claim\":\"Verona Pharma plc is a biopharmaceutical company developing/commercializing therapies for respiratory disease.\",\"url\":\"https://www.veronapharma.com/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Homepage says Verona Pharma is 'developing novel treatments to enhance the lives of those affected by chronic lung conditions' and 'developing novel therapeutics for respiratory diseases.'\"},{\"claim\":\"As of the Q2 2025 Form 10-Q, Verona Pharma's ADSs were listed on the Nasdaq Global Market and traded under symbol VRNA.\",\"url\":\"https://www.stocktitan.net/sec-filings/VRNA/10-q-verona-pharma-plc-quarterly-earnings-report-b73f65acb32f.html\",\"publication_date\":\"2025-08-06\",\"event_date\":\"2025-06-30\",\"excerpt\":\"The filing states: 'The Company’s American Depositary Shares (ADSs) are listed on the Nasdaq Global Market (Nasdaq) and trade under the symbol VRNA.' It also lists securities registered on 'The Nasdaq Stock Market LLC (Nasdaq Global Market).'\"},{\"claim\":\"On July 8, 2025 Verona Pharma entered into a transaction agreement with Merck for Merck to acquire the company, meaning the deal was announced but not yet completed as of the 10-Q.\",\"url\":\"https://www.stocktitan.net/sec-filings/VRNA/10-q-verona-pharma-plc-quarterly-earnings-report-b73f65acb32f.html\",\"publication_date\":\"2025-08-06\",\"event_date\":\"2025-07-08\",\"excerpt\":\"The 10-Q says Verona 'entered into a Transaction Agreement' with Merck Sharp & Dohme LLC and Vol Holdings LLC on July 8, 2025, under which Merck would acquire the entire issued share capital; it also warns the 'pending acquisition by Merck may not be completed within the expected timeframe, or at all.'\"},{\"claim\":\"Verona Pharma announced pricing of an upsized underwritten public offering on August 10, 2022 for gross proceeds of $130.2 million.\",\"url\":\"https://www.globenewswire.com/news-release/2022/08/11/2496295/0/en/verona-pharma-plc-announces-pricing-of-upsized-underwritten-public-offering.html?pdf=1\",\"publication_date\":\"2022-08-11\",\"event_date\":\"2022-08-10\",\"excerpt\":\"The release says Verona priced 12,400,000 ADSs at $10.50 per ADS 'for aggregate gross proceeds of $130.2 million before deducting underwriting discounts and commissions.'\"},{\"claim\":\"The offering above was expected to close on August 15, 2022, and Jefferies, Piper Sandler and Truist were book-running managers.\",\"url\":\"https://www.globenewswire.com/news-release/2022/08/11/2496295/0/en/verona-pharma-plc-announces-pricing-of-upsized-underwritten-public-offering.html?pdf=1\",\"publication_date\":\"2022-08-11\",\"event_date\":\"2022-08-15\",\"excerpt\":\"The same release says 'The Offering is expected to close on August 15, 2022' and names 'Jefferies, Piper Sandler & Co. and Truist Securities' as book-running managers.\"},{\"claim\":\"Merck completed its acquisition of Verona Pharma on October 7, 2025 and Verona became a wholly owned subsidiary; the ADSs no longer traded on Nasdaq.\",\"url\":\"https://www.merck.com/news/merck-completes-acquisition-of-verona-pharma/\",\"publication_date\":\"2025-10-07\",\"event_date\":\"2025-10-07\",\"excerpt\":\"Search-result snippet for Merck's official press release states Merck completed the acquisition on October 7, 2025, Verona became a wholly owned subsidiary, and Verona ADSs would no longer be listed or traded on Nasdaq. Verona's homepage also currently notes: 'Effective October 7th, 2025, Verona Pharma Plc and its subsidiaries are subsidiaries of Merck & Co., Inc.'\"}]",
+          "latest_round": "Upsized underwritten public offering of ADSs",
+          "round_amount": "130.2 million",
+          "uncertainties": "The latest evidenced equity financing I found is the August 2022 public offering. Verona later disclosed ATM proceeds and significant debt/revenue-interest financings in 2024-2025, but those are not venture equity rounds and I did not find a later discrete equity round within the research limit. Lead investors in the 2022 offering were not identified; the source names underwriters/book-runners instead. Acquisition completion on 2025-10-07 is supported by the official Merck press-release URL/snippet from search results and by a current note on Verona's homepage; I did not directly open the Merck page, and Verona's current site is post-acquisition rather than a contemporaneous pre-close page.",
+          "lead_investors": "unknown",
+          "round_currency": "USD",
+          "company_identity": "Verona Pharma plc is a biopharmaceutical company focused on respiratory diseases and maker/developer of Ohtuvayre (ensifentrine).",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2025-10-07",
+          "round_announcement_date": "2022-08-10"
+        },
+        "reasoning": "I resolved the entity from veronapharma.com, then checked a 2025 10-Q for listing status and acquisition announcement, and a 2022 GlobeNewswire release for the latest evidenced equity financing round found within the search limit. The 10-Q showed Verona was still Nasdaq-listed in August 2025 and had only announced a Merck transaction on July 8, 2025. I then used official/primary-source search-result evidence plus the company homepage's current note to establish that Merck completed the acquisition on October 7, 2025, which is before the 2026-09-30 cutoff. No later equity round than the August 2022 public offering was evidenced; later financing visible in snippets was debt/royalty or ATM proceeds rather than a discrete venture equity round.",
+        "stepsTaken": [
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"official Verona Pharma investor relations press release acquisition Merck completed or announced 2024 2025 site:veronapharma.com OR sec filing latest financing IPO NASDAQ\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":400,\"max_results\":5,\"session_id\":\"veronapharma_research\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Merck Completes Acquisition of Verona Pharma | Nasdaq\\nURL: https://nasdaq.com/press-release/merck-completes-acquisition-verona-pharma-2025-10-07\\nPublished: 2025-10-07\\nAcquired: 2026-08-14\\nSnippets:\\nMerck, through a subsidiary, has acquired all outstanding shares of Verona Pharma for $107 per ADS, each of which represents eight Verona Pharma ordinary shares, for a total transaction value of approximately $10 billion. As previously disclosed, the acqu...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Verona Pharma investor relations press release financing private placement follow-on offering IPO Nasdaq latest round before 2026 site:veronapharma.com or sec filing\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":500,\"max_results\":8,\"session_id\":\"veronapharma_research\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Developing innovative therapies for the treatment of respiratory diseases\\nURL: https://www.veronapharma.com/wp-content/uploads/2025/01/VRNA-Presentation-January-2025.pdf\\nPublished: 2025-01-07\\nAcquired: 2026-05-23\\nSnippets:\\nof gross ATM proceeds received in Q4 2024. 4 - Approximately 84.6M ADSs outstanding as of as of December 31, 2024 (equivalent to ~ 667M ordinary shares). 5 - Repayment capped at 1.75x of the amount funded. • $275M under $400M debt...",
+          "Used visitWebpage {\"url\":\"https://www.veronapharma.com/\",\"question\":\"What does the company say it is and what products or therapies does it develop or sell?\"}. The results are: \n \"- Verona Pharma says it is: “developing novel treatments to enhance the lives of those affected by chronic lung conditions” and “developing novel therapeutics for respiratory diseases.”\\n- Homepage tagline: “Breathing life into the treatment of respiratory disease.”\\n- Product/trademarks mentioned: “Verona Pharma, Ohtuvayre, and the associated logos are registered trademarks of Verona Pharma plc.”\\n- Relevant links:\\n  - https://veronapharma.com\\n  - Product: https://veronapharma.com/product\\n ...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"SEC Verona Pharma 10-Q August 2025 listed on Nasdaq and prospectus August 2022 public offering Verona Pharma SEC\",\"site\":\"sec.gov\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":500,\"max_results\":6,\"session_id\":\"veronapharma_research\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Remote Desktop Redirected Printer Doc\\nURL: https://sec.gov/Archives/edgar/data/0001819133/000119312526160323/d145279dars.pdf\\nPublished: 2026-04-17\\nAcquired: 2026-05-26\\nSnippets:\\nSecurities registered pursuant to Section 12(b) of the Act: Title of each class Trading Symbol(s) Name of each exchange on which registered Common stock, par value $0.001 per share TNGX Nasdaq Global Market\\n\\n---\\n\\nTitle: sava20251231_10k.htm\\nURL: https://sec.gov/Archives...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Verona Pharma 10-Q June 30 2025 SEC filing Nasdaq VRNA listed on Nasdaq Global Market site:sec.gov/Archives/edgar/data/1819576\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":500,\"max_results\":10,\"session_id\":\"veronapharma_research\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Microsoft Word - lqda_Current_Folio_10K_TMBSF_v1.docx\\nURL: https://sec.gov/Archives/edgar/data/1819576/000110465925039463/tm258032d2_ars.pdf\\nPublished: 2025-04-24\\nAcquired: 2026-05-27\\nSnippets:\\nThe aggregate market value of common stock held by non-affiliates of the registrant on June 30, 2024 which was the last business day of the registrant’s most recently completed second fiscal quarter, was $685,662,096 based on a $12.00 closing price per share ...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Verona Pharma Aug. 10 2022 pricing upsized public offering 12,400,000 ADSs lead managers Barclays Piper Sandler Stifel press release\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":500,\"max_results\":5,\"session_id\":\"veronapharma_research\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Verona Pharma plc Announces Pricing of Upsized Underwritten Public Offering\\nURL: https://globenewswire.com/news-release/2022/08/11/2496295/0/en/Verona-Pharma-plc-Announces-Pricing-of-Upsized-Underwritten-Public-Offering.html\\nPublished: 2022-08-11\\nAcquired: 2026-05-28\\nSnippets:\\nProspectus_Department@Jefferies.com; Piper Sandler & Co., 800 Nicollet Mall, J12S03, Minneapolis, MN 55402, Attention: Prospectus Department, by telephone at (800) 747-3924, o...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Verona Pharma Merck acquisition announced July 2025 pending completion before October 2025 official press release\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":500,\"max_results\":6,\"session_id\":\"veronapharma_research\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Verona Pharma plc (VRNA): Running Thesis & Finn Scorecard\\nURL: https://getfinvest.com/companies/vrna\\nPublished: 2026-06-14\\nAcquired: 2026-08-11\\nSnippets:\\nPublic sources after Verona’s Q2 2025 filing say the deal closed on October 7, 2025. That means the old bull case, closing the Merck deal, has largely played out.\\n[...]\\nOct 2025▲Merck said it completed the acquisition of Verona. That changed the page from a merger-arbitrage story into a completed...",
+          "Used visitWebpage {\"url\":\"https://www.globenewswire.com/news-release/2022/08/11/2496295/0/en/Verona-Pharma-plc-Announces-Pricing-of-Upsized-Underwritten-Public-Offering.html\",\"question\":\"What was the amount raised, announcement date, expected closing date, and who were the book-running managers or lead investors in the offering?\"}. The results are: \n \"Announcement date: August 10, 2022.\\n\\nRelevant offering details from the page:\\n- “announced today the pricing of its upsized public offering of 12,400,000 American Depositary Shares … at a price of $10.50 per ADS, for aggregate gross proceeds of $130.2 million before deducting underwriting discounts and commissions”\\n- “The Offering is expected to close on August 15, 2022”\\n- “Jefferies, Piper Sandler & Co. and Truist Securities are acting as the book-running managers for the Offering.”\\n- “B...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Verona Pharma 2025 10-Q SEC listed on Nasdaq Global Market ADS trade under symbol VRNA\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":500,\"max_results\":8,\"session_id\":\"veronapharma_research\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: 20250630 Verona Pharma 10-Q\\nURL: https://veronapharma.com/wp-content/uploads/2025/08/Verona-Pharma-Q2-2025-Results-Final.pdf\\nPublished: 2025-08-06\\nAcquired: 2026-05-06\\nSnippets:\\nThe Company is a biopharmaceutical group focused on developing and commercializing innovative therapeutics for the treatment of respiratory diseases with significant unmet medical needs. The Company’s American Depositary Shares (“ADSs”) are listed on the Nasdaq Global Market...",
+          "Used visitWebpage {\"url\":\"https://www.stocktitan.net/sec-filings/VRNA/10-q-verona-pharma-plc-quarterly-earnings-report-b73f65acb32f.html\",\"question\":\"What does the filing say about Verona Pharma's business, exchange listing, trading symbol, and any definitive agreement to be acquired as of the filing date?\"}. The results are: \n \"From the Form 10-Q for the quarterly period ended June 30, 2025:\\n\\n- “The Company is a biopharmaceutical group focused on developing and commercializing innovative therapeutics for the treatment of respiratory diseases with significant unmet medical needs.”\\n- “The Company’s American Depositary Shares (“ADSs”) are listed on the Nasdaq Global Market (“Nasdaq”) and trade under the symbol “VRNA”.”\\n- Securities registered pursuant to Section 12(b): “Ordinary shares, nominal value £0.05 per share*..."
+        ]
+      }
+    }
+  ]
+}

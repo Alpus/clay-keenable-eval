@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6cx1MPMBeRBW4KK3",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:22:13.268Z",
+  "duration": "1m 20s",
+  "dataCreditsUsed": 3.6,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6cx1eg2ZTtZGQff3",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:22:13.309Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "hingehealth.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Hinge Health"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6cx1YppYDs6fWneu",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:22:13.370Z",
+      "completedAt": "2026-09-30T11:23:33.598Z",
+      "duration": "1m 20s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "hingehealth.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Hinge Health"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"hingehealth.com is Hinge Health, a care company offering virtual and in-person physical therapy, orthopedic care, and related musculoskeletal, pelvic health, migraine, and balance services through an app.\",\"url\":\"https://www.hingehealth.com/\",\"publication_date\":\"unknown\",\"event_date\":\"not_applicable\",\"excerpt\":\"Homepage text includes: 'Personalized care for a life in motion' and 'Virtual and in-person physical therapy, orthopedic care, and more — all accessible through a single app.' It also lists joint & muscle pain, pelvic floor symptoms, migraine, and balance & mobility offerings.\"},{\"claim\":\"Hinge Health announced its latest evidenced venture equity round as a $400 million Series E financing led by Coatue and Tiger Global.\",\"url\":\"https://www.hingehealth.com/resources/press-releases/hinge-health-announces-600-million-investment-coatue-tiger-global/\",\"publication_date\":\"2021-10-28\",\"event_date\":\"2021-10-28\",\"excerpt\":\"Google result for the company press release states: 'Hinge Health announces $600 million investment led by Coatue and Tiger Global' and the snippet says the company 'announced $400 million Series E financing to meet the growing demand ...' The title attributes the investment leadership to Coatue and Tiger Global.\"},{\"claim\":\"An earlier company financing was a $300 million Series D round.\",\"url\":\"https://www.hingehealth.com/resources/press-releases/hinge-health-raises-series-d/\",\"publication_date\":\"2021-01-06\",\"event_date\":\"2021-01-06\",\"excerpt\":\"Company press-release snippet says: 'Hinge Health raises $300M Series D at $3B valuation.' This supports that Series E, not Series D, is the later venture round.\"},{\"claim\":\"Hinge Health priced its IPO at $32.00 per share for 13,666,000 Class A shares, with trading expected on the NYSE under ticker HNGE on 2025-05-22 and closing expected on 2025-05-23.\",\"url\":\"https://ir.hingehealth.com/news/news-details/2025/Hinge-Health-Announces-Pricing-of-Initial-Public-Offering/default.aspx\",\"publication_date\":\"2025-05-21\",\"event_date\":\"2025-05-22\",\"excerpt\":\"Company investor-relations press release says: 'pricing of its initial public offering ... 13,666,000 shares ... at a public offering price of $32.00 per share.' It further states: 'The shares are expected to begin trading on the New York Stock Exchange on May 22, 2025, under the ticker symbol “HNGE.” The offering is expected to close on May 23, 2025.'\"},{\"claim\":\"By 2026, Hinge Health was operating as a public company trading on the NYSE under HNGE.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1673743/000162828026030499/hnge-q1202655xex991.htm\",\"publication_date\":\"2026-05-05\",\"event_date\":\"2026-05-05\",\"excerpt\":\"Google result snippet for the SEC-filed Q1 2026 earnings exhibit states: '(NYSE: HNGE) today announced financial results for the first quarter ended March 31, 2026.' This corroborates that the IPO completed and the company was public by the cutoff.\"}]",
+          "latest_round": "Series E",
+          "round_amount": "400000000",
+          "uncertainties": "The strongest direct evidence for the Series E round amount/date came from a Google result snippet pointing to the company press release, rather than a separately opened page; the snippet clearly states '$400 million Series E financing' and the title says it was led by Coatue and Tiger Global. For the IPO lifecycle event, the May 21, 2025 pricing release uses forward-looking language ('expected to begin trading' and 'expected to close'). A 2026 SEC-result snippet identifying Hinge Health as '(NYSE: HNGE)' corroborates that the company was public after that offering. Lifecycle event date is recorded as 2025-05-22 for first trading/listing; legal closing was expected on 2025-05-23.",
+          "lead_investors": "Coatue, Tiger Global",
+          "round_currency": "USD",
+          "company_identity": "Hinge Health sells app-based virtual and in-person physical therapy, orthopedic, and related care programs for musculoskeletal and other movement-related conditions.",
+          "lifecycle_status": "public",
+          "lifecycle_event_date": "2025-05-22",
+          "round_announcement_date": "2021-10-28"
+        },
+        "reasoning": "I resolved the entity from the company website, identified the latest evidenced venture equity round from the company's own October 2021 Series E press-release result, and independently established current lifecycle status from the company's May 2025 IPO pricing release plus a 2026 SEC-result snippet showing it as NYSE: HNGE. No evidence found of a later private venture round, acquisition completion, or closure before the 2026-09-30 cutoff.",
+        "stepsTaken": [
+          "Searched Google with query \"Hinge Health hingehealth.com IPO funding latest round site:hingehealth.com OR site:newsroom.hingehealth.com OR site:investors.hingehealth.com\". The results are: \n {\"search_results\":[{\"title\":\"Hinge Health raises $300M Series D at $3B valuation\",\"link\":\"https://www.hingehealth.com/resources/press-releases/hinge-health-raises-series-d/\",\"snippet\":\"San Francisco, CA (January 6, 2021) - Hinge Health is announcing a $300M Series D round to expand clinical capabilities as an end-to-end Digital MSK Clinic ...\",\"position\":1},{\"title\":\"Hinge Health Announces Launch of Initial Public Offering\",\"link\":\"https://www.hingehealth.com/resources/press-releases/hinge-healt...",
+          "Searched Google with query \"Hinge Health latest funding round Series E 2022 2023 site:hingehealth.com OR site:techcrunch.com OR site:pitchbook.com\". The results are: \n {\"search_results\":[{\"title\":\"Hinge Health Appoints James Budge as Chief Financial ...\",\"link\":\"https://www.hingehealth.com/resources/press-releases/james-budge-chief-financial-officer/\",\"snippet\":\"Following the company's strong Series E funding, Hinge Health published the largest medical claims analysis ever performed for a digital ...\",\"date\":\"Mar 20, 2023\",\"position\":1},{\"title\":\"Hinge Health, a virtual physical therapist, lays off 10% of its ...\",\"link\":\"https://techcrunch.com/2024/04/11/virt...",
+          "Used visitWebpage {\"url\":\"https://www.hingehealth.com/\",\"question\":\"What does Hinge Health say on its website that identifies the company and what it sells?\"}. The results are: \n \"Hinge Health website context identifying the company and what it sells:\\n\\n- “Hinge Health”\\n- “Personalized care for a life in motion”\\n- “Virtual and in-person physical therapy, orthopedic care, and more — all accessible through a single app.”\\n- “Your care team, your appointments, your progress — all in one app, all covered by employers and health plans.”\\n- Offerings listed:\\n  - “Joint & muscle pain” / “Reduce joint and muscle pain”\\n  - “Pelvic floor symptoms” / “Treat pelvic floor sympto...",
+          "Searched Google with query \"site:hingehealth.com/resources/press-releases Hinge Health Series E October 2021 press release\". The results are: \n {\"search_results\":[{\"title\":\"Hinge Health announces $600 million investment led by ...\",\"link\":\"https://www.hingehealth.com/resources/press-releases/hinge-health-announces-600-million-investment-coatue-tiger-global/\",\"snippet\":\"Hinge Health, the world's #1 Digital Musculoskeletal Clinic™, today announced $400 million Series E financing to meet the growing demand ...\",\"date\":\"— Oct. 28, 2021\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www....",
+          "Searched Google with query \"Hinge Health pricing of initial public offering NYSE HNGE May 2025 SEC\". The results are: \n {\"search_results\":[{\"title\":\"Hinge Health Announces Pricing of Initial Public Offering\",\"link\":\"https://www.hingehealth.com/resources/press-releases/hinge-health-announces-pricing-of-initial-public-offering/\",\"snippet\":\"Press release announcing the pricing of Hinge Health's Initial Public Offering.\",\"date\":\"May 21, 2025\",\"position\":1},{\"title\":\"Hinge Health Announces Pricing of Initial Public Offering\",\"link\":\"https://ir.hingehealth.com/news/news-details/2025/Hinge-Health-Announces-Pricing-of-In...",
+          "Searched Google with query \"Hinge Health NYSE HNGE 2026 financial results site:hingehealth.com OR site:ir.hingehealth.com OR site:sec.gov\". The results are: \n {\"search_results\":[{\"title\":\"Hinge Health reports record second quarter 2026 financial ...\",\"link\":\"https://ir.hingehealth.com/news/news-details/2026/Hinge-Health-reports-record-second-quarter-2026-financial-results-signs-definitive-agreement-to-acquire-Cylinder-Health/default.aspx\",\"snippet\":\"Q3 2026: We expect revenue to be between $223 million and $225 million, reflecting year-over-year growth of 45% at the midpoint. · Full Year 2026 ...\",\"date\":\"Aug 4, 2026\",\"position\":1},{\"title\":\"Hinge Hea...",
+          "Used visitWebpage {\"url\":\"https://ir.hingehealth.com/news/news-details/2025/Hinge-Health-Announces-Pricing-of-Initial-Public-Offering/default.aspx\",\"question\":\"What does this press release say about the IPO price, number of shares, exchange ticker, trading date, and closing date?\"}. The results are: \n \"Press release: “Hinge Health Announces Pricing of Initial Public Offering” (May 21, 2025) — https://s205.q4cdn.com/978984498/files/doc_news/Hinge-Health-Announces-Pricing-of-Initial-Public-Offering-2025.pdf\\n\\nRelevant text:\\n“Hinge Health today announced the pricing of its initial public offering of an aggregate 13,666,000 shares of its Class A common stock ... at a public offering price of $32.00 per share.”\\n“The shares are expected to begin trading on the New York Stock Exchange on May 22, ..."
+        ]
+      }
+    }
+  ]
+}

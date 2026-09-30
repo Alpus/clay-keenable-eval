@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6b4yXvxzZJeqUrzB",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:43:46.885Z",
+  "duration": "1m 51s",
+  "dataCreditsUsed": 4.3,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6b4yyQhWaunwr8Ug",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:43:46.894Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "wayve.ai",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Wayve"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6b4yHXdEMso22NuX",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:43:46.908Z",
+      "completedAt": "2026-09-30T10:45:38.249Z",
+      "duration": "1m 51s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "wayve.ai",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Wayve"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Wayve at wayve.ai is a London-based autonomous-driving company building an embodied AI / end-to-end AI platform for self-driving vehicles.\",\"url\":\"https://wayve.ai/press/series-d/\",\"publication_date\":\"2026-02-25\",\"event_date\":\"2026-02-25\",\"excerpt\":\"Wayve, the leader in embodied AI for autonomous driving ... announced it has raised $1.2 billion in a Series D investment round.\"},{\"claim\":\"The latest evidenced venture equity financing by the cutoff is a Series D announced on 2026-02-25 for $1.2 billion, not the full $1.5 billion headline amount.\",\"url\":\"https://wayve.ai/press/series-d/\",\"publication_date\":\"2026-02-25\",\"event_date\":\"2026-02-25\",\"excerpt\":\"Wayve ... announced it has raised $1.2 billion in a Series D investment round ... Uber will invest additional milestone-based capital ... within the broader $1.5B of capital secured to support commercial rollout.\"},{\"claim\":\"Lead investors in the Series D were Eclipse, Balderton and SoftBank Vision Fund 2; Microsoft, NVIDIA, Uber, Mercedes-Benz, Nissan and Stellantis participated.\",\"url\":\"https://wayve.ai/press/series-d/\",\"publication_date\":\"2026-02-25\",\"event_date\":\"2026-02-25\",\"excerpt\":\"The round was led by Eclipse, Balderton and SoftBank Vision Fund 2 ... Microsoft, NVIDIA and Uber participated ... Mercedes-Benz, Nissan and Stellantis also invested.\"},{\"claim\":\"As of 2026-07-08, Wayve remained a private company rather than a public issuer; LSEG said its transaction occurred on the Private Securities Market, which lets companies remain private.\",\"url\":\"https://www.lseg.com/en/media-centre/press-releases/2026/london-stock-exchange-private-securities-market\",\"publication_date\":\"2026-07-08\",\"event_date\":\"2026-07-08\",\"excerpt\":\"Wayve has provided liquidity ... on its Private Securities Market ... while remaining a private company and retaining control over trading frequency, investor access, and price formation.\"},{\"claim\":\"Reuters still described Wayve as an autonomous-driving startup/company in mid-2026 and discussed investors, with no indication of an IPO or completed acquisition by that date.\",\"url\":\"https://www.reuters.com/technology/wayve-courts-automakers-with-ai-driving-system-that-learns-like-humans-2026-07-01/\",\"publication_date\":\"2026-07-01\",\"event_date\":\"2026-07-01\",\"excerpt\":\"Reuters describes Wayve as an autonomous-driving startup / the London-based company and says it has raised $2.8 billion from investors including Nvidia, Mercedes-Benz and Nissan.\"},{\"claim\":\"A reported 2025 Nvidia transaction was only a possible future investment via letter of intent, not a completed funding round.\",\"url\":\"https://www.reuters.com/business/autos-transportation/nvidia-explores-500-million-investment-uk-self-driving-startup-wayve-2025-09-19/\",\"publication_date\":\"2025-09-19\",\"event_date\":\"2025-09-19\",\"excerpt\":\"Nvidia has signed a letter of intent for a possible $500 million investment in the next funding round at Britain's Wayve.\"}]",
+          "latest_round": "Series D",
+          "round_amount": "1200000000",
+          "uncertainties": "Wayve's own 2026-02-25 announcement headlines '$1.5B' secured, but the same release states the equity round itself was '$1.2 billion in a Series D'; the balance is described as Uber milestone-based capital tied to deployments, so I treat $1.2B as the round amount. Reuters reported in 2025 that Nvidia signed a letter of intent for a possible $500M investment in a future round; this was not itself a closed round. I found no affirmative public evidence before the 2026-09-30 cutoff of a completed acquisition, IPO, or shutdown, so lifecycle is based on evidence that Wayve remained private as of 2026-07-08 rather than on a direct 'independent' corporate registry filing.",
+          "lead_investors": "Eclipse; Balderton; SoftBank Vision Fund 2",
+          "round_currency": "USD",
+          "company_identity": "Wayve (wayve.ai) is a London-based autonomous-driving software company developing embodied AI / end-to-end AI for self-driving vehicles.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-02-25"
+        },
+        "reasoning": "I resolved the entity using Wayve's own site, identified the latest evidenced venture equity round from the company's 2026 Series D announcement, distinguished the $1.2B Series D from the broader $1.5B capital headline, checked Reuters for potentially conflicting later-round context, and used LSEG's 2026 Private Securities Market press release as affirmative evidence that Wayve remained private rather than publicly listed by the cutoff. I found no evidence of a completed acquisition, IPO, closure, or newer completed equity round before 2026-09-30.",
+        "stepsTaken": [
+          "Searched Google with query \"Wayve wayve.ai funding 2024 2025 acquisition IPO site:wayve.ai OR site:techcrunch.com OR site:reuters.com\". The results are: \n {\"search_results\":[{\"title\":\"Investors | Backed by the world's leading mobility innovators\",\"link\":\"https://wayve.ai/company/investors/\",\"snippet\":\"In 2026, Wayve secured $1.5 billion to accelerate commercial deployment of its global autonomy platform. The investment brought together leaders across AI ...\",\"position\":1},{\"title\":\"Wayve secures $1.5B to deploy its global autonomy platform\",\"link\":\"https://wayve.ai/press/series-d/\",\"snippet\":\"London, UK, 25 Feb 2026 – Wayve, the leader in embodied...",
+          "Used visitWebpage {\"url\":\"https://wayve.ai/press/series-d/\",\"question\":\"What is the announced funding round amount, date, type, lead or participating investors, and does the page say anything about commercial deployment or company status?\"}. The results are: \n \"25 February 2026 | Investors — “Wayve secures $1.5B to deploy its global autonomy platform”\\n\\nRelevant funding details:\\n- “Closed a $1.2B Series D led by financial investors, with participation from Microsoft, NVIDIA and Uber, alongside investment from global automakers Mercedes-Benz, Nissan and Stellantis.”\\n- “Uber will invest additional milestone-based capital to scale Wayve-powered robotaxi deployments globally, within the broader $1.5B of capital secured to support commercial rollout.”\\n...",
+          "Searched Google with query \"Wayve Reuters February 2026 Series D IPO acquisition Wayve\". The results are: \n {\"search_results\":[{\"title\":\"UK self-driving startup Wayve raises $1.2 billion from ...\",\"link\":\"https://www.reuters.com/business/uk-self-driving-startup-wayve-raises-12-billion-investors-including-mercedes-2026-02-25/\",\"snippet\":\"British self-driving startup Wayve said on Wednesday it has raised $1.2 billion from investors including Mercedes-Benz, Stellantis, ...\",\"date\":\"Feb 24, 2026\",\"position\":1},{\"title\":\"Wayve secures $1.5B to deploy its global autonomy platform\",\"link\":\"https://wayve.ai/p...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/technology/wayve-courts-automakers-with-ai-driving-system-that-learns-like-humans-2026-07-01/\",\"question\":\"What does Reuters say about Wayve's ownership/listing status and fundraising as of July 1 2026? Note whether it is a startup/private company and summarize prior funding amounts and investors.\"}. The results are: \n \"Reuters, July 1, 2026, “Wayve courts automakers with AI driving system that learns like humans” (https://reuters.com/business/autos-transportation/adas-av-safety):\\n- Reuters describes Wayve as an “autonomous-driving startup” and “the London-based company.”\\n- Fundraising/ownership context as of July 1, 2026:\\n  - “Wayve has raised $2.8 billion from investors including Nvidia, Mercedes-Benz and Nissan.”\\n  - “The London-based company has pulled in $2.8 billion from a roster of investors and str...",
+          "Searched Google with query \"Wayve acquisition IPO September 2026 Reuters Wayve public listed acquired\". The results are: \n {\"search_results\":[{\"title\":\"Nvidia explores $500 million investment in UK self-driving ...\",\"link\":\"https://www.reuters.com/business/autos-transportation/nvidia-explores-500-million-investment-uk-self-driving-startup-wayve-2025-09-19/\",\"snippet\":\"U.S. chip designer Nvidia has signed a letter of intent for a possible $500 million investment in the next funding round at Britain's Wayve, ...\",\"date\":\"Sep 19, 2025\",\"position\":1},{\"title\":\"Wayve secures $1.5B to deploy its global autonomy platform\",...",
+          "Used visitWebpage {\"url\":\"https://www.lseg.com/en/media-centre/press-releases/2026/london-stock-exchange-private-securities-market\",\"question\":\"What does this July 8 2026 LSEG press release say about Wayve and whether its securities traded on a private market rather than a public listing?\"}. The results are: \n \"Press release: “Wayve completes its first transaction on the Private Securities Market, offering liquidity to employees” (July 08, 2026) — https://lseg.com/en/media-centre/press-releases\\n\\nRelevant excerpts:\\n- “The London Stock Exchange has welcomed the first transaction by Wayve on its Private Securities Market.”\\n- “Wayve has provided liquidity to current employees with vested equity through a permissioned auction, marking a first for the Private Securities Market.”\\n- “Built on the UK Gove...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/business/autos-transportation/nvidia-explores-500-million-investment-uk-self-driving-startup-wayve-2025-09-19/\",\"question\":\"What does Reuters report on Sep 19 2025 about Nvidia and Wayve, specifically whether it was a signed letter of intent, not a completed round?\"}. The results are: \n \"Reuters, Sep 19, 2025, article: “Nvidia explores $500 million investment in UK self-driving startup Wayve.” Relevant text: “U.S. chip designer Nvidia ... has signed ... a letter of intent for a possible $500 million investment in the next funding round at Britain's Wayve, the autonomous driving technology group said on Thursday.”\\n\\nAlso relevant: “Founded in 2017, Wayve raised over $1 billion last year, led by SoftBank Group and supported by Nvidia.”\\n\\nUseful link from page: Wayve press link ..."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6crcK45J9zbNBXnh",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:18:48.863Z",
+  "duration": "1m 13s",
+  "dataCreditsUsed": 2.9,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6crcUkSaZVRas5in",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:18:48.878Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "armis.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Armis"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6crcBkDvf47qh7UY",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:18:48.898Z",
+      "completedAt": "2026-09-30T11:20:01.877Z",
+      "duration": "1m 12s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "armis.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Armis"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "ServiceNow",
+          "evidence": "[{\"claim\":\"Armis at armis.com is a cyber exposure management and security company selling the Armis Centrix platform and related products for asset management/security, OT/IoT security, medical device security, vulnerability prioritization, application security, and related capabilities.\",\"url\":\"https://www.armis.com/\",\"publication_date\":\"unknown\",\"event_date\":\"2026-09-30\",\"excerpt\":\"The homepage lists Armis Centrix modules including Asset Management and Security, OT/IoT Security, Medical Device Security, Vulnerability Prioritization and Remediation, Vulnerability Management Detection and Response, and Application Security.\"},{\"claim\":\"Armis announced/closed a pre-IPO funding round of $435 million at a $6.1 billion valuation on 2025-11-05.\",\"url\":\"https://www.armis.com/newsroom/press/cybersecurity-leader-armis-closes-435-million-round-at-6-1-billion-valuation/\",\"publication_date\":\"2025-11-05\",\"event_date\":\"2025-11-05\",\"excerpt\":\"Armis ... today announced a pre-IPO funding round of $435 million, bringing the company’s valuation to $6.1 billion.\"},{\"claim\":\"The 2025 pre-IPO round was led by Growth Equity at Goldman Sachs Alternatives, with major participation from CapitalG; Evolution Equity Partners also joined as a new investor.\",\"url\":\"https://www.armis.com/newsroom/press/cybersecurity-leader-armis-closes-435-million-round-at-6-1-billion-valuation/\",\"publication_date\":\"2025-11-05\",\"event_date\":\"2025-11-05\",\"excerpt\":\"The round was led by Growth Equity at Goldman Sachs Alternatives with major participation from CapitalG, and was joined by new investor Evolution Equity Partners, alongside several existing investors.\"},{\"claim\":\"ServiceNow completed its acquisition of Armis on 2026-04-20 for approximately $7.75 billion in cash.\",\"url\":\"https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-completes-Armis-acquisition-closing-the-gap-between-asset-visibility-and-cyber-risk/default.aspx\",\"publication_date\":\"2026-04-20\",\"event_date\":\"2026-04-20\",\"excerpt\":\"ServiceNow ... today completed its acquisition of Armis ... ServiceNow completed the acquisition of Armis for approximately $7.75 billion in cash.\"}]",
+          "latest_round": "pre-IPO funding round",
+          "round_amount": "435000000",
+          "uncertainties": "The funding press release is dated 2025-11-05 and says Armis 'closes'/'announced' the round on that date; no separate earlier signing date was established. Acquisition chronology differs by announcement vs completion: ServiceNow announced the deal on 2025-12-23, but the evidenced closing date is 2026-04-20. CapitalG is described as having 'major participation' rather than as a co-lead, so the only clearly established lead investor is Growth Equity at Goldman Sachs Alternatives.",
+          "lead_investors": "Growth Equity at Goldman Sachs Alternatives",
+          "round_currency": "USD",
+          "company_identity": "Armis at armis.com is a cyber exposure management and security company offering the Armis Centrix platform and related products for securing connected assets across IT, OT, IoT, medical devices, applications, code, and cloud.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2026-04-20",
+          "round_announcement_date": "2025-11-05"
+        },
+        "reasoning": "Using company and acquirer primary sources, I resolved armis.com to Armis, a cybersecurity/cyber-exposure-management company. The latest evidenced venture equity financing before the 2026-09-30 cutoff is the 2025-11-05 pre-IPO funding round of $435 million, led by Growth Equity at Goldman Sachs Alternatives. Separately, the company was no longer independent by the cutoff because ServiceNow publicly states it completed the acquisition on 2026-04-20.",
+        "stepsTaken": [
+          "Searched Google with query \"Armis armis.com funding acquisition IPO latest round 2026 site:armis.com OR site:techcrunch.com OR site:businesswire.com\". The results are: \n {\"search_results\":[{\"title\":\"Cybersecurity Leader Armis Closes $435 Million Round at ...\",\"link\":\"https://www.armis.com/newsroom/press/cybersecurity-leader-armis-closes-435-million-round-at-6-1-billion-valuation/\",\"snippet\":\"... IPO funding round of $435 million, bringing the company's valuation to $6.1 billion. The round was led by Growth Equity at Goldman Sachs ...\",\"date\":\"Nov 5, 2025\",\"position\":1},{\"title\":\"Armis Raises $200M at $4.2B Valuation as Growth Soars ...\",\"link\":\"https://www.armis...",
+          "Searched Google with query \"ServiceNow Armis acquisition closed 2026 site:servicenow.com OR site:armis.com OR site:sec.gov OR site:newsroom.servicenow.com\". The results are: \n {\"search_results\":[{\"title\":\"ServiceNow completes Armis acquisition, closing the gap ...\",\"link\":\"https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-completes-Armis-acquisition-closing-the-gap-between-asset-visibility-and-cyber-risk/default.aspx\",\"snippet\":\"ServiceNow completes Armis acquisition, closing the gap between asset visibility and cyber risk 04/20/2026 … $7.75 billion in cash,\",\"date\":\"Apr 20, 2026\",\"position\":1},{\"title\":\"Welcoming the Next Chapter: ServiceNow Comp...",
+          "Used visitWebpage {\"url\":\"https://www.armis.com/newsroom/press/cybersecurity-leader-armis-closes-435-million-round-at-6-1-billion-valuation/\",\"question\":\"What amount was raised, what round or financing is described, what date was it announced or closed, and who led the investment round?\"}. The results are: \n \"Source: https://armis.com/about/newsroom\\nPress release title: “Cybersecurity Leader Armis Closes $435 Million Round at $6.1 Billion Valuation”\\nDate: November 5, 2025\\nRelevant text:\\n- “Armis, the cyber exposure management and security company, today announced a pre-IPO funding round of $435 million, bringing the company’s valuation to $6.1 billion.”\\n- “The round was led by Growth Equity at Goldman Sachs Alternatives with major participation from CapitalG, and was joined by new investor Evol...",
+          "Used visitWebpage {\"url\":\"https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-completes-Armis-acquisition-closing-the-gap-between-asset-visibility-and-cyber-risk/default.aspx\",\"question\":\"What does this page say about completion of the Armis acquisition, the closing date, purchase price, and what Armis does?\"}. The results are: \n \"Press release: “ServiceNow completes Armis acquisition, closing the gap between asset visibility and cyber risk” dated 04/20/2026.\\n\\nRelevant text:\\n- “ServiceNow (NYSE: NOW) ... today completed its acquisition of Armis.”\\n- “Armis, a leading cyber exposure management and security company, delivers a comprehensive AI-powered solution that sees, protects, and manages cyber risk across every connected asset — from OT, IoT, medical devices, physical AI to code and cloud — in real time.”\\n- “Armis...",
+          "Used visitWebpage {\"url\":\"https://www.armis.com/\",\"question\":\"How does Armis describe the company and its products on the homepage?\"}. The results are: \n \"Homepage context relevant to how Armis describes the company and its products:\\n\\n- Homepage: https://armis.com\\n- Primary platform/product branding:\\n  - “Platform Overview”\\n  - “Armis Centrix™”\\n  - Product modules listed under Armis Centrix™:\\n    - “Armis Centrix™ for Asset Management and Security - CAASM”\\n    - “Armis Centrix™ for OT/ IoT Security (SaaS)”\\n    - “Armis Centrix™ for OT/IoT Security (On-Prem)”\\n    - “Armis Centrix™ for Medical Device Security”\\n    - “Armis Centrix™ for V..."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6ckh7rm7zz3Ce9XW",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:14:41.862Z",
+  "duration": "1m 9s",
+  "dataCreditsUsed": 2.4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6ckhorMbDtGBxaxA",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:14:41.871Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "cognigy.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Cognigy"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6ckh8NPiukw5MiKk",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:14:41.890Z",
+      "completedAt": "2026-09-30T11:15:51.620Z",
+      "duration": "1m 9s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "cognigy.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Cognigy"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "NiCE",
+          "evidence": "[{\"claim\":\"The business at cognigy.com is NiCE Cognigy, which sells enterprise AI agents and a conversational AI platform for customer service/contact centers.\",\"url\":\"https://www.cognigy.com/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"The site says, 'Easily deploy AI Agents in your contact center...' and describes 'NiCE Cognigy Voice AI Agents' and support across digital and messaging channels.\"},{\"claim\":\"Cognigy announced a $100 million Series C financing round on 2024-06-11.\",\"url\":\"https://www.cognigy.com/news/cognigy-raises-100m-in-series-c-funding\",\"publication_date\":\"2024-06-11\",\"event_date\":\"2024-06-11\",\"excerpt\":\"'Cognigy ... announced today that it has raised $100 million in Series C funding.'\"},{\"claim\":\"Eurazeo Growth led Cognigy's Series C round, with participation from existing investors including Insight Partners, DTCP, and DN Capital.\",\"url\":\"https://www.cognigy.com/news/cognigy-raises-100m-in-series-c-funding\",\"publication_date\":\"2024-06-11\",\"event_date\":\"2024-06-11\",\"excerpt\":\"The release says the round 'was led by Eurazeo Growth, with participation from existing investors Insight Partners, DTCP, DN Capital, and others.'\"},{\"claim\":\"NiCE completed its acquisition of Cognigy on 2025-09-08 after receiving required regulatory approvals.\",\"url\":\"https://www.cognigy.com/news/nice-closes-acquisition-of-cognigy\",\"publication_date\":\"2025-09-08\",\"event_date\":\"2025-09-08\",\"excerpt\":\"'NiCE (Nasdaq: NICE) today announced the successful closing of its acquisition of Cognigy ... following receipt of all required regulatory approvals.'\"}]",
+          "latest_round": "Series C",
+          "round_amount": "100 million",
+          "uncertainties": "The funding evidence used is Cognigy's own 2024 press release; no later venture equity round or extension was found in the research performed before the 2026-09-30 cutoff. The cognigy.com domain had been rebranded to 'NiCE Cognigy' by the time of review, which supports the completed acquisition, but the current website does not by itself distinguish announcement vs. close dates; the cited close date comes from the acquisition-closing press release. No primary source for an IPO, shutdown, or a later post-Series-C equity financing was found in the research performed.",
+          "lead_investors": "Eurazeo Growth",
+          "round_currency": "USD",
+          "company_identity": "Cognigy is an enterprise customer-service AI company whose website markets AI agents and a conversational AI platform for contact centers.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2025-09-08",
+          "round_announcement_date": "2024-06-11"
+        },
+        "reasoning": "I identified the company at cognigy.com from its own website, used Cognigy's own funding announcement to establish the latest evidenced venture equity round, and used Cognigy's own acquisition-closing announcement to establish that NiCE completed the acquisition. No later evidenced venture equity round was found before the cutoff.",
+        "stepsTaken": [
+          "Searched Google with query \"Cognigy cognigy.com funding acquisition IPO latest round site:techcrunch.com OR site:cognigy.com OR site:businesswire.com OR site:crunchbase.com\". The results are: \n {\"search_results\":[{\"title\":\"Cognigy Increases Series B Funding to $59M with new ...\",\"link\":\"https://www.cognigy.com/news/cognigy-increases-series-b-funding-with-new-investor-dtcp\",\"snippet\":\"Cognigy Increases Series B Funding to $59M with new investor DTCP ; has closed an additional $15 million funding round with DTCP. This brings the ...\",\"date\":\"Feb 17, 2022\",\"position\":1},{\"title\":\"Cognigy Raises $100m as Major Enterprise Brands Depend\",\"link\":\"https://www.cognigy.com/news/cognigy-raises-10...",
+          "Searched Google with query \"NICE acquires Cognigy announced July 2025 press release Cognigy acquisition closes\". The results are: \n {\"search_results\":[{\"title\":\"NiCE Closes Acquisition of Cognigy, Transforming Customer\",\"link\":\"https://www.cognigy.com/news/nice-closes-acquisition-of-cognigy\",\"snippet\":\"Dallas | Düsseldorf | London, September 8, 2025 - NiCE (Nasdaq: NICE) today announced the successful closing of its acquisition of Cognigy ...\",\"date\":\"Sep 8, 2025\",\"position\":1},{\"title\":\"NiCE to Acquire Cognigy Advancing the Leading CX AI ...\",\"link\":\"https://www.nice.com/press-releases/nice-to-acquire-cognigy-advancing-the-...",
+          "Used visitWebpage {\"url\":\"https://www.cognigy.com/news/cognigy-raises-100m-in-series-c-funding\",\"question\":\"Find the announcement date, round type, amount raised, currency, lead investors, and a short excerpt proving Cognigy raised funding.\"}. The results are: \n \"Source: https://www.cognigy.com/news/cognigy-raises-100m-in-series-c-funding\\n\\nAnnouncement date: June 11, 2024\\nRound type: Series C\\nAmount raised: $100 million\\nCurrency: USD\\nLead investors: Eurazeo Growth\\nOther participating investors: Insight Partners, DTCP, DN Capital, and others\\n\\nProof excerpt: “Cognigy, a global leader in AI-first customer service automation, announced today that it has raised $100 million in Series C funding. The round was led by Eurazeo Growth, with participation...",
+          "Used visitWebpage {\"url\":\"https://www.cognigy.com/news/nice-closes-acquisition-of-cognigy\",\"question\":\"Find whether the acquisition was completed, the closing date, the acquirer name, and a short excerpt proving lifecycle status.\"}. The results are: \n \"Source: https://www.cognigy.com/news/nice-closes-acquisition-of-cognigy\\n\\n- Headline: \\\"NiCE Closes Acquisition of Cognigy, Transforming Customer Experience with Data-Driven CX AI\\\"\\n- Date shown on page: \\\"September 8, 2025\\\"\\n- Acquirer name: \\\"NiCE (Nasdaq: NICE)\\\"\\n- Key excerpt proving lifecycle status: \\\"NiCE (Nasdaq: NICE) today announced the successful closing of its acquisition of Cognigy, a recognized leader in enterprise-grade conversational and agentic AI, following receipt of all ...",
+          "Used visitWebpage {\"url\":\"https://www.cognigy.com/\",\"question\":\"Identify what the business at this domain sells and provide a short excerpt from the page describing the product or service.\"}. The results are: \n \"Business/product context: NiCE Cognigy sells enterprise AI agents and a conversational AI platform for customer service/contact centers.\\n\\nRelevant excerpts:\\n- “Easily deploy AI Agents in your contact center to deliver fast, personalized, and exceptional service...”\\n- “With NiCE Cognigy Voice AI Agents, deliver empathetic and effortless phone conversations that scale.”\\n- “Make it easy for customers to get effective and personal support – anytime, on all digital and messaging channels.”\\n- “..."
+        ]
+      }
+    }
+  ]
+}

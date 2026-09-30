@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6d659W47ZgTAtNdA",
+  "workflow": {
+    "id": "wf_0tm6d21AuFsz5iFGM8e",
+    "name": "Funding lifecycle evaluation C"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:27:41.838Z",
+  "duration": "2m 1s",
+  "dataCreditsUsed": 3.7,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6d65DDP8FXDE5FEA",
+      "nodeId": "wfn_0tm6d21iRtaxx429Y8Q",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:27:41.844Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "cyera.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Cyera"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6d659UxgHDkvaxih",
+      "nodeId": "wfn_0tm6d4f6jZzvkGe2wpS",
+      "nodeName": "Company research C",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:27:41.854Z",
+      "completedAt": "2026-09-30T11:29:42.948Z",
+      "duration": "2m 1s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "cyera.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Cyera"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Cyera is an AI security and data security platform company offering products including DSPM, Omni DLP, Cyera Identity, Agent Guardian, and managed services.\",\"url\":\"https://www.cyera.com/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Cyera homepage: 'The AI Security Platform' ... 'One platform to secure AI - from data to identity to action' with products/services including DSPM, Omni DLP, Cyera Identity, Agent Guardian, and DataWatcher Managed Services.\"},{\"claim\":\"Cyera announced a $400 million Series G extension on 2026-09-22; the announcement describes it as an extension to its Series G and says the company was valued at over $12 billion.\",\"url\":\"https://finance.yahoo.com/technology/ai/articles/cyera-announces-400-million-investment-111500622.html\",\"publication_date\":\"2026-09-22\",\"event_date\":\"2026-09-22\",\"excerpt\":\"Extracted from the page: Round name: Series G; Amount: $400 million; Extension: Yes (Series G extension); Valuation: Over $12 billion.\"},{\"claim\":\"The September 2026 financing names Growth Equity at Goldman Sachs Alternatives as the investor in the extension and notes the underlying Series G was led by Evolution Equity.\",\"url\":\"https://finance.yahoo.com/technology/ai/articles/cyera-announces-400-million-investment-111500622.html\",\"publication_date\":\"2026-09-22\",\"event_date\":\"2026-09-22\",\"excerpt\":\"Extracted from the page: 'Lead investor(s): Growth Equity at Goldman Sachs Alternatives (to its Series G, led by Evolution Equity).'\"},{\"claim\":\"A separate 2026-09-23 report also describes Cyera as having announced a $400 million extension to its Series G round, backing the September 2026 financing as the newest surfaced event before the 2026-09-30 cutoff.\",\"url\":\"https://finance.yahoo.com/technology/ai/articles/cyera-receives-400m-funding-advance-090157379.html\",\"publication_date\":\"2026-09-23\",\"event_date\":\"2026-09-23\",\"excerpt\":\"Keenable search snippet: 'Cyera ... has announced a $400m extension to its Series G funding round, backed by Growth Equity at Goldman Sachs Alternatives and led by Evolution Equity.'\"}]",
+          "latest_round": "Series G extension",
+          "round_amount": "400 million",
+          "uncertainties": "Lifecycle status is inferred from the latest evidenced private venture financing and the active company website. I did not find affirmative public evidence before the 2026-09-30 cutoff of Cyera being acquired, going public, or shutting down; the required freshness check via Keenable surfaced the 2026-09-22/23 Series G extension and no newer contrary event. The September page says the extension came from Growth Equity at Goldman Sachs Alternatives 'to its Series G, led by Evolution Equity,' so the extension investor and the original round lead are both relevant. I did not independently verify a legal closing date separate from the 2026-09-22 announcement date.",
+          "lead_investors": "Growth Equity at Goldman Sachs Alternatives; underlying Series G led by Evolution Equity",
+          "round_currency": "USD",
+          "company_identity": "Cyera, at cyera.com, sells an AI-native enterprise security platform for discovering, governing, and protecting data, identities, and AI/agent activity.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-09-22"
+        },
+        "reasoning": "I resolved the entity from cyera.com directly, then identified the latest evidenced financing using a September 2026 financing announcement surfaced in search and extracted via Yahoo's syndicated copy. I also performed the requested freshness check with the Keenable search tool for newer financing or lifecycle events before the 2026-09-30 cutoff. The strongest evidenced latest event is a $400 million Series G extension announced on 2026-09-22. No sourced evidence found in the allotted research budget showed Cyera itself had been acquired, gone public, or closed by the cutoff, so the most supported status is private_independent.",
+        "stepsTaken": [
+          "Searched Google with query \"Cyera cyera.com funding acquisition IPO latest round news\". The results are: \n {\"search_results\":[{\"title\":\"Cyera IPO Timeline and Financing Details\",\"link\":\"https://forgeglobal.com/cyera_ipo/\",\"snippet\":\"AI data security startup Cyera confirms $300M raise at a $1.4B valuation ... In a series C funding round, Cyera is now valued at $1.4 billion as it helps ...\",\"position\":1},{\"title\":\"Cyera Raises $300M Series D, Doubles Valuation to $3B\",\"link\":\"https://www.cyera.com/press-releases/data-security-leader-cyera-secures-300-million-in-series-d-funding-reaching-a-3-billion-val...",
+          "Searched Google with query \"site:cyera.com Cyera 2026 funding press release series 2026\". The results are: \n {\"search_results\":[{\"title\":\"Cyera Raises $400M to Meet Rapidly Growing Demand for ...\",\"link\":\"https://www.cyera.com/press-releases/cyera-raises-400m-to-meet-rapidly-growing-demand-for-ai-security-among-enterprises\",\"snippet\":\"Cyera Raises $400M to Meet Rapidly Growing Demand for AI Security Among Enterprises January 8, 2026 … a $400 million Series F funding round, ...\",\"date\":\"Jan 8, 2026\",\"position\":1},{\"title\":\"Cyera Raises $600 Million at $12 Billion Valuation to ...\",\"link\":\"https://www.cy...",
+          "Searched Google with query \"Cyera September 2026 Goldman Sachs extension Series G\". The results are: \n {\"search_results\":[{\"title\":\"Cyera Announces $400 Million Investment from Goldman ...\",\"link\":\"https://www.cyera.com/press-releases/cyera-announces-400-million-investment-from-goldman-sachs-to-build-the-trust-layer-for-the-agentic-enterprise\",\"snippet\":\"Cyera raises $400M Series G extension from Goldman Sachs Alternatives to unify data security and identity management,\",\"position\":1},{\"title\":\"Cyera Raised $400 Million Series G Extension ...\",\"link\":\"https://hedgeco.net/news/09/2026/cyera-raised...",
+          "Used visitWebpage {\"url\":\"https://www.cyera.com/\",\"question\":\"What does Cyera say on its homepage about what the company is and what products or services it provides?\"}. The results are: \n \"- Homepage: “The AI Security Platform” — “Enable AI readiness, reduce data risk in real time, and continuously strengthen compliance in a single unified platform.”\\n- Homepage hero: “Building the Trust Layer for the Agentic Era” and “Trust everything your AI can see and do. Secure your agents from the data layer up.”\\n- Homepage: “One platform to secure AI - from data to identity to action. At rest, in motion, and in use.”\\n- Homepage products/services listed:\\n  - DSPM — “The most intelligent ...",
+          "Used visitWebpage {\"url\":\"https://finance.yahoo.com/technology/ai/articles/cyera-announces-400-million-investment-111500622.html\",\"question\":\"What does this article say about Cyera's September 2026 financing, including round name, amount, lead investor(s), valuation, and whether it is an extension of an earlier round?\"}. The results are: \n {\"status\":\"ERROR\",\"message\":\"Error using the website scrape tool. The tool returned an error.\",\"errorDetails\":\"Unknown error in tool execution\",\"errorType\":\"ToolExecutionResponseError\"}",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Cyera latest financing September 2026 extension acquisition IPO private status site:cyera.com OR site:wsj.com OR site:finance.yahoo.com\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":400,\"max_results\":5,\"session_id\":\"cyera-2026-09-30\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Cyera receives $400m funding to advance agentic enterprise security\\nURL: https://finance.yahoo.com/technology/ai/articles/cyera-receives-400m-funding-advance-090157379.html\\nPublished: 2026-09-23\\nAcquired: 2026-09-24\\nSnippets:\\nCyera, a US-based data security and AI firm, has announced a $400m extension to its Series G funding round, backed by Growth Equity at Goldman Sachs Alternatives and led by Evolution Equity. The company plans to use these resou...",
+          "Used keenable-public-evaluation-fetch_page_content {\"url\":\"https://finance.yahoo.com/technology/ai/articles/cyera-announces-400-million-investment-111500622.html\",\"max_chars\":5000,\"live\":false,\"prompt\":\"Extract the financing details for Cyera's September 2026 announcement: round name, amount, whether it is an extension, valuation if mentioned, lead investor(s), and key wording that identifies Cyera's business.\",\"session_id\":\"cyera-2026-09-30\",\"output_format\":\"text\"}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Cyera Announces $400 Million Investment from Goldman Sachs to Build the Trust Layer for the Agentic Enterprise\\nURL: https://finance.yahoo.com/technology/ai/articles/cyera-announces-400-million-investment-111500622.html\\n\\n- Round name: Series G\\n- Amount: $400 million\\n- Extension: Yes (Series G extension)\\n- Valuation: Over $12 billion\\n- Lead investor(s): Growth Equity at Goldman Sachs Alternatives (to its Series G, led by Evolution Equity)\\n- Key wor..."
+        ]
+      }
+    }
+  ]
+}

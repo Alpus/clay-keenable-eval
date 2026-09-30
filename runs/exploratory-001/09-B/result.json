@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6bdfRsdfHHuk4GF5",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:48:51.937Z",
+  "duration": "2m 26s",
+  "dataCreditsUsed": 3.7,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6bdftrMC8Y7m9Zph",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:48:51.942Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "lovable.dev",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Lovable"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6bdf8FkvUgimYmEB",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:48:51.957Z",
+      "completedAt": "2026-09-30T10:51:18.470Z",
+      "duration": "2m 26s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "lovable.dev",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Lovable"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"lovable.dev is Lovable, a software-creation platform that lets users build apps, websites, internal tools, and broader business software by describing what they want in plain language.\",\"url\":\"https://lovable.dev/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Lovable homepage: 'If you can describe it, you can build it' and 'Lovable builds production-grade software with you in real time'; footer/product labels include 'AI App Builder', 'Website builder', and 'Internal Tools'.\"},{\"claim\":\"On 2026-08-12, Lovable announced a $400 million Series C financing at a $13.3 billion valuation.\",\"url\":\"https://lovable.dev/blog/series-c\",\"publication_date\":\"2026-08-12\",\"event_date\":\"2026-08-12\",\"excerpt\":\"Company blog headline: 'We just raised $400M in Series C funding'; page says 'Lovable has raised $400 million in Series C funding at a $13.3 billion valuation.'\"},{\"claim\":\"The Series C was led by Menlo Ventures and co-led by the Scaleup Europe Fund managed by EQT.\",\"url\":\"https://lovable.dev/blog/series-c\",\"publication_date\":\"2026-08-12\",\"event_date\":\"2026-08-12\",\"excerpt\":\"The company states the round was 'led by Menlo Ventures and co-led by the Scaleup Europe Fund, managed by EQT.'\"},{\"claim\":\"Independent reporting also described Lovable's latest financing as a private Series C round and identified the company as a Swedish startup helping users build software through natural-language prompts.\",\"url\":\"https://www.reuters.com/business/media-telecom/vibe-coding-startup-lovable-raises-400-million-133-billion-valuation-2026-08-12/\",\"publication_date\":\"2026-08-12\",\"event_date\":\"2026-08-12\",\"excerpt\":\"Reuters: 'Lovable raised $400 million in Series C funding' at a '$13.3 billion valuation'; the round was 'co-led' by Menlo Ventures and the EQT-managed Scaleup Europe Fund. Reuters describes Lovable as a 'Swedish vibe-coding startup' that 'helps users build software through natural-language prompts.'\"},{\"claim\":\"As of the 2026-09-30 cutoff, the strongest public evidence found supports Lovable being private and independent rather than public or acquired.\",\"url\":\"https://www.reuters.com/business/media-telecom/vibe-coding-startup-lovable-raises-400-million-133-billion-valuation-2026-08-12/\",\"publication_date\":\"2026-08-12\",\"event_date\":\"2026-08-12\",\"excerpt\":\"Reuters covers Lovable's August 2026 financing as a Series C venture round and does not mention an IPO filing or Lovable being acquired; a search for IPO/S-1 and acquisition evidence did not surface stronger contrary primary evidence before the cutoff.\"}]",
+          "latest_round": "Series C",
+          "round_amount": "400000000",
+          "uncertainties": "No primary-source evidence of an IPO, completed acquisition of Lovable, or closure was found before the 2026-09-30 cutoff. Public search results surfaced database-style references to Lovable acquiring other companies (for example Sutro), but those are outbound acquisitions by Lovable and do not change Lovable's own lifecycle status. Lifecycle status is therefore based on affirmative evidence of a private Series C financing in August 2026 plus the absence of stronger contrary evidence in the searched public sources.",
+          "lead_investors": "Menlo Ventures; Scaleup Europe Fund managed by EQT",
+          "round_currency": "USD",
+          "company_identity": "Lovable at lovable.dev is an AI software-creation platform for building apps, websites, internal tools, and other business software from natural-language prompts.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-08-12"
+        },
+        "reasoning": "I resolved the entity from lovable.dev using the company site, then identified the latest evidenced venture equity round using the company’s August 12, 2026 Series C announcement and Reuters confirmation. I separately assessed lifecycle status and found no stronger public evidence before 2026-09-30 of an IPO, completed acquisition of Lovable, or closure; the latest evidenced state is therefore private and independent.",
+        "stepsTaken": [
+          "Searched Google with query \"Lovable lovable.dev funding round acquisition IPO site:lovable.dev OR news\". The results are: \n {\"search_results\":[{\"title\":\"Lovable raises $330M to power the age of the builder\",\"link\":\"https://lovable.dev/blog/series-b\",\"snippet\":\"Lovable has raised $330 million in Series B funding at a $6.6 billion valuation, led by CapitalG and Menlo Ventures' Anthology fund.\",\"date\":\"Dec 18, 2025\",\"position\":1},{\"title\":\"We just raised $400M in Series C funding to help people ...\",\"link\":\"https://lovable.dev/blog/series-c\",\"snippet\":\"Today, we're announcing that Lovable has raised $400 million in Seri...",
+          "Used visitWebpage {\"url\":\"https://lovable.dev/blog/series-c\",\"question\":\"What company is lovable.dev, what product does it sell, and what does this page say about the funding round amount, round type, announcement date, and lead investors?\"}. The results are: \n \"Source: https://lovable.dev/blog/series-c#top\\n\\n- Page title/headline: “We just raised $400M in Series C funding to help people run their businesses”\\n- Published: August 12, 2026\\n- Funding details: “Lovable has raised $400 million in Series C funding at a $13.3 billion valuation”\\n- Lead investors: “led by Menlo Ventures and co-led by the Scaleup Europe Fund, managed by EQT”\\n- Additional investors mentioned: Balderton Capital, Carmignac, Kaszek Ventures, LTS Growth, Tencent, World Innovatio...",
+          "Searched Google with query \"Lovable lovable.dev acquisition IPO private company August 2026 Menlo Ventures Sutro\". The results are: \n {\"search_results\":[{\"title\":\"We just raised $400M in Series C funding to help people ...\",\"link\":\"https://lovable.dev/blog/series-c\",\"snippet\":\"Lovable has raised $400 million in Series C funding at a $13.3 billion valuation, led by Menlo Ventures and the Scaleup Europe Fund, ...\",\"date\":\"Aug 12, 2026\",\"position\":1},{\"title\":\"Built to Run: Doubling Down for Lovable's $400M Series C\",\"link\":\"https://menlovc.com/perspective/built-to-run-doubling-down-for-lovables-400m-series-c/\",\"snippet\":\"Menlo V...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/business/media-telecom/vibe-coding-startup-lovable-raises-400-million-133-billion-valuation-2026-08-12/\",\"question\":\"What does Reuters report about Lovable's latest funding round, amount, date, lead investors, business description, and whether it is still privately held or pursuing an IPO/acquisition?\"}. The results are: \n \"Reuters article: “Vibe-coding startup Lovable raises $400 million at $13.3 billion valuation” (August 12, 2026; updated August 12, 2026). It says Lovable “raised $400 million in Series C funding” at a “$13.3 billion valuation.” The round was “co-led” by “Menlo Ventures and the EQT-managed Scaleup Europe Fund.” Other participants included “Tencent, Balderton Capital and other new investors from Europe, Latin America and Asia.” Reuters describes Lovable as a “Swedish vibe-coding startup” that “he...",
+          "Searched Google with query \"Lovable acquisition announced completed IPO September 2026 lovable.dev\". The results are: \n {\"search_results\":[{\"title\":\"Lovable raises $330M to power the age of the builder\",\"link\":\"https://lovable.dev/blog/series-b\",\"snippet\":\"Lovable has raised $330 million in Series B funding at a $6.6 billion valuation, led by CapitalG and Menlo Ventures' Anthology fund.\",\"date\":\"Dec 18, 2025\",\"position\":1},{\"title\":\"We just raised $400M in Series C funding to help people ...\",\"link\":\"https://lovable.dev/blog/series-c\",\"snippet\":\"Today, we're announcing that Lovable has raised $400 million in Seri...",
+          "Used visitWebpage {\"url\":\"https://lovable.dev/\",\"question\":\"How does lovable.dev describe the company and product on its homepage?\"}. The results are: \n \"Relevant homepage copy from https://lovable.dev/home:\\n\\n- “Build something Lovable”\\n- “Bring a new product, internal tool, or entire company to life. Build”\\n- “One platform. Endless possibilities.”\\n- “If you can describe it, you can build it. Create, run, and manage entire products and businesses from scratch.”\\n- “You bring the idea. Lovable brings it to life.”\\n- “Describe what you want in plain language. Watch as Lovable builds production-grade software with you in real time.”\\n- “Refine...",
+          "Searched Google with query \"Lovable S-1 IPO sec.gov lovable.dev September 2026\". The results are: \n {\"search_results\":[{\"title\":\"S-1\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1564408/000119312517029199/d270216ds1.htm\",\"snippet\":\"This is an initial public offering of shares of non-voting Class A common stock of Snap Inc. Director of Software Development from September 2010 to September ...\",\"position\":1},{\"title\":\"Lovable Pre-IPO Shares: What Accredited Investors Should ...\",\"link\":\"https://www.hustlefund.vc/post/angel-squad-lovable-pre-ipo-shares-what-accredited-investors-should-know-in..."
+        ]
+      }
+    }
+  ]
+}

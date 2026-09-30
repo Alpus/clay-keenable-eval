@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6bxc4wyVVo8X5h6E",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:00:48.496Z",
+  "duration": "2m 19s",
+  "dataCreditsUsed": 4.5,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6bxcxaNb8jEkci5B",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:00:48.505Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "quince.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Quince"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6bxcJGjcEPogPcV4",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:00:48.522Z",
+      "completedAt": "2026-09-30T11:03:07.581Z",
+      "duration": "2m 19s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "quince.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Quince"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Quince at quince.com is a direct-to-consumer retailer/consumer technology platform selling premium essentials such as clothing, accessories, home goods, travel items, beauty and wellness products at lower prices via a factory-direct/manufacturer-to-consumer model.\",\"url\":\"https://www.quince.com/about-us\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Official About Us page says Quince offers 'High-quality essentials at radical prices,' keeps prices low with a 'factory-direct model,' and shows categories including women, men, bags & accessories, jewelry, home, bedding, cookware, baby & kids, travel, and beauty & wellness.\"},{\"claim\":\"Quince announced a $500 million Series E financing on 2026-03-11 at a $10.1 billion valuation.\",\"url\":\"https://prnewswire.com/news-releases/quince-raises-500m-series-e-resulting-in-10-1b-valuation-to-accelerate-the-manufacturer-to-consumer-platform-302710298.html\",\"publication_date\":\"2026-03-11\",\"event_date\":\"2026-03-11\",\"excerpt\":\"PR Newswire release: 'Quince today announced a $500 million Series E financing led by ICONIQ' and the headline states it resulted in a '$10.1B valuation.'\"},{\"claim\":\"ICONIQ led the Series E round, with participation from Basis Set Ventures, Wellington Management, Wndrco, MarcyPen Capital Partners, Ballie Gifford, Notable Capital and DST Global.\",\"url\":\"https://prnewswire.com/news-releases/quince-raises-500m-series-e-resulting-in-10-1b-valuation-to-accelerate-the-manufacturer-to-consumer-platform-302710298.html\",\"publication_date\":\"2026-03-11\",\"event_date\":\"2026-03-11\",\"excerpt\":\"The company release says the financing was 'led by ICONIQ, with participation from Basis Set Ventures, Wellington Management, Wndrco, MarcyPen Capital Partners, Ballie Gifford, Notable Capital and DST Global.'\"},{\"claim\":\"TechCrunch also reported Quince's 2026 financing as a $500 million Series E led by previous investor Iconiq and described the company as manufacturing products and selling them directly to consumers.\",\"url\":\"https://techcrunch.com/2026/03/11/quince-series-e-10b-valuation-with-500m-round-led-by-iconiq/\",\"publication_date\":\"2026-03-11\",\"event_date\":\"2026-03-11\",\"excerpt\":\"TechCrunch wrote: 'Quince announced on Wednesday that it raised a $500 million Series E round at a $10.1 billion valuation.' It added: 'The round was led by previous investor Iconiq' and described Quince as manufacturing products and selling them directly to consumers.\"},{\"claim\":\"As of evidence retrieved before the 2026-09-30 cutoff, Quince appears to remain privately held and not publicly listed.\",\"url\":\"https://www.nasdaqprivatemarket.com/company/quince/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Google result snippet for Nasdaq Private Market says: 'Quince is a private company and has not had an IPO.'\"}]",
+          "latest_round": "Series E",
+          "round_amount": "500000000",
+          "uncertainties": "Lifecycle status is based on positive evidence of a March 2026 private financing round plus a later search that surfaced no credible acquisition or IPO for the quince.com retailer before 2026-09-30; however, I did not locate a primary-source statement explicitly saying it remained independent on the cutoff date. Search results for 'Quince acquisition' were heavily polluted by unrelated Quince Therapeutics items, so those were excluded. The PR Newswire item is a company announcement and appears as a corrected release; the correction concerned an investor name ('MarcyPen Capital Partners' replacing 'Marcy Venture Partners'), not the round size/date. No separate legal closing date for the Series E was established beyond the 2026-03-11 announcement date.",
+          "lead_investors": "ICONIQ",
+          "round_currency": "USD",
+          "company_identity": "Quince (quince.com) is a private direct-to-consumer retailer/consumer technology platform selling premium apparel, accessories, home goods and other essentials through a factory-direct or manufacturer-to-consumer model.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-03-11"
+        },
+        "reasoning": "I resolved the entity using the official quince.com About Us page, then identified the latest financing using a company announcement corroborated by TechCrunch. I separately checked for IPO/acquisition signals before the 2026-09-30 cutoff and found only evidence consistent with Quince still being private; unrelated Quince Therapeutics acquisition results were excluded. The latest evidenced venture equity round is the 2026-03-11 Series E for $500 million led by ICONIQ.",
+        "stepsTaken": [
+          "Searched Google with query \"Quince quince.com funding latest round acquisition IPO site:techcrunch.com OR site:crunchbase.com OR site:businesswire.com OR site:prnewswire.com OR site:quince.com\". The results are: \n {\"search_results\":[{\"title\":\"Quince, A Bright Spot In Struggling D2C Fashion Space ...\",\"link\":\"https://news.crunchbase.com/e-commerce/iconiq-investment-doubles-quince-valuation/\",\"snippet\":\"Quince's latest round alone matches the $200 million in venture funding that fashion and apparel startups overall have raised so far this year, ...\",\"date\":\"Jul 29, 2025\",\"position\":1},{\"title\":\"Quince hits $10B valuation with giant $500M round led by ...\",\"link\":\"https://techcrunch.com/2026/03/11/quince-ser...",
+          "Searched Google with query \"quince.com Quince acquisition IPO announced completed 2026\". The results are: \n {\"search_results\":[{\"title\":\"Quince Announces Acquisition of Orphai and up to $187 ...\",\"link\":\"https://www.biospace.com/press-releases/quince-announces-acquisition-of-orphai-and-up-to-187-million-private-placement-to-advance-pulmonary-pipeline\",\"snippet\":\"The private placement is expected to close on May 21, 2026. Subject to Quince stockholder approval in accordance with Nasdaq listing rules, each ...\",\"date\":\"May 18, 2026\",\"position\":1},{\"title\":\"Quince Therapeutics Reports Second Quarter 2026...",
+          "Searched Google with query \"site:quince.com Quince Series E March 2026 ICONIQ\". The results are: \n {\"message\":\"No data returned from search query\"}",
+          "Used visitWebpage {\"url\":\"https://techcrunch.com/2026/03/11/quince-series-e-10b-valuation-with-500m-round-led-by-iconiq/\",\"question\":\"What round did Quince at quince.com announce on this page, how much was raised, when was it announced, who led it, and how is the company described?\"}. The results are: \n \"TechCrunch article: “Quince hits $10B valuation with giant $500M round led by Iconiq” — https://techcrunch.com/2026/03/11/quince-series-e-10b-valuation-with-500m-round-led-by-iconiq\\n\\nRelevant text:\\n- “Quince announced on Wednesday that it raised a $500 million Series E round at a $10.1 billion valuation.”\\n- “The round was led by previous investor Iconiq”\\n- Article timestamp: “1:50 PM PDT · March 11, 2026”\\n- “Unlike typical e-commerce retail sites, the company manufactures its products and...",
+          "Used visitWebpage {\"url\":\"https://prnewswire.com/news-releases/quince-raises-500m-series-e-resulting-in-10-1b-valuation-to-accelerate-the-manufacturer-to-consumer-platform-302710298.html\",\"question\":\"What company announced the financing, what was the round, amount, lead investors if named, announcement date, and how does the release describe the business?\"}. The results are: \n \"Release: \\\"/C O R R E C T I O N -- Quince/\\\" — corrected release titled \\\"Quince Raises $500M Series E, Resulting in $10.1B Valuation to Accelerate the Manufacturer-to-Consumer Platform.\\\"\\nAnnouncement date: Mar 11, 2026, 12:49 ET / \\\"SAN FRANCISCO, March 11, 2026\\\"\\nCompany announcing financing: Quince\\nFinancing details: \\\"Quince ... today announced a $500 million Series E financing led by ICONIQ, with participation from Basis Set Ventures, Wellington Management, Wndrco, MarcyPen Capital Par...",
+          "Searched Google with query \"site:quince.com Quince about manufacturer-to-consumer premium goods onequince\". The results are: \n {\"search_results\":[{\"title\":\"About Us\",\"link\":\"https://www.quince.com/about-us\",\"snippet\":\"We value transparency. We're open and honest about the materials in our products, how they're manufactured and how they're priced. Honesty is always our policy.\",\"position\":1},{\"title\":\"Our Factories\",\"link\":\"https://www.quince.com/factories\",\"snippet\":\"We partner only with factories that pay fair wages to their workers and produce goods in a sustainable manner. Many of our factories are also partners in l...",
+          "Used visitWebpage {\"url\":\"https://www.quince.com/about-us\",\"question\":\"How does Quince describe its business and products on this official page?\"}. The results are: \n \"Official page: About Us — https://quince.com/about-us?trafficSource=footer\\n\\nRelevant page text describing Quince’s business and products:\\n- “High-quality essentials at radical prices.”\\n- “We believe quality products can elevate your life — Especially when they’re sustainably made and affordably priced.”\\n- “Quince started when we brought our work home. We built careers working for high-end brands... So, we built our own brand—committed to making exceptionally high-quality essentials at a pr...",
+          "Searched Google with query \"quince.com IPO filed acquisition completed 2026 Quince retail\". The results are: \n {\"search_results\":[{\"title\":\"Invest In Quince Stock | Buy Pre-IPO Shares\",\"link\":\"https://equityzen.com/company/Quince/\",\"snippet\":\"Quince is an affordable luxury brand … 2026 Quince Seeks $1.8M After 'Exceptional' buy pre-IPO stock in companies like Quince through EquityZen funds. event ...\",\"position\":1},{\"title\":\"Quince Stock $281.74 | How to Buy, Valuation, Stock Price, ...\",\"link\":\"https://notice.co/c/onequince\",\"snippet\":\"Quince is an online retailer of clothing, home goods, jewelry, Quinc..."
+        ]
+      }
+    }
+  ]
+}

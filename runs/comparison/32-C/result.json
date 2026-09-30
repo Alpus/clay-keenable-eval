@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6d7sbG696zPoifSR",
+  "workflow": {
+    "id": "wf_0tm6d21AuFsz5iFGM8e",
+    "name": "Funding lifecycle evaluation C"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:28:40.812Z",
+  "duration": "1m 11s",
+  "dataCreditsUsed": 4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6d7sTPezgw4GDF5f",
+      "nodeId": "wfn_0tm6d21iRtaxx429Y8Q",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:28:40.817Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "lessn.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Lessn"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6d7s9nd72n495TZo",
+      "nodeId": "wfn_0tm6d4f6jZzvkGe2wpS",
+      "nodeName": "Company research C",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:28:40.834Z",
+      "completedAt": "2026-09-30T11:29:52.241Z",
+      "duration": "1m 11s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "lessn.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Lessn"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "unknown",
+          "evidence": "[{\"claim\":\"Lessn at lessn.io is an Australian B2B/business-payments platform for accounts payable and related business expenses.\",\"url\":\"https://www.lessn.io\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Lessn says it is 'Australia’s fastest rewards payment platform' and 'turns every business payment into rewards points' with capabilities including paying suppliers, payroll, taxes and other business expenses, plus Xero and MYOB integrations.\"},{\"claim\":\"Lessn announced that its Pre-Series-A raise had closed at over $1 million, naming several backers.\",\"url\":\"https://www.lessn.io/blog/lessn-raises-1m-to-supercharge-growth-could-we-be-australias-next-melio\",\"publication_date\":\"2025-08-13\",\"event_date\":\"2025-08-13\",\"excerpt\":\"Company blog post states: 'our Pre-Series-A raise has closed' and 'We’ve secured over $1 million,' and names backers including Michael Masterman, Dean Swan, Brendon Cook and Ian Lennie.\"},{\"claim\":\"By March 2026, third-party republication of an ACN Newswire announcement said a later small investment round had raised $300,000 in November 2025 at a $30 million valuation, and that $3 million had been invested in Lessn overall.\",\"url\":\"https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/sydney-au-mar-3-2026-acn-newswire-accounts-payable-automation/68628893\",\"publication_date\":\"2026-03-02\",\"event_date\":\"2025-11\",\"excerpt\":\"The article says '$3 million has already been invested' and 'a small investment round having raised $300,000 at a valuation of $30 million in November 2025.' It also says Lessn 'considers a new investment round.'\"},{\"claim\":\"As of March 2026, Lessn was still operating and discussing a future investment round, with no evidenced acquisition closing or public listing found in the research set.\",\"url\":\"https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/sydney-au-mar-3-2026-acn-newswire-accounts-payable-automation/68628893\",\"publication_date\":\"2026-03-02\",\"event_date\":\"2026-03-02\",\"excerpt\":\"The article describes Lessn as an operating accounts-payable automation company that 'exceeded $100 million being transacted on its platform' and was 'considering a new investment round.'\"}]",
+          "latest_round": "small investment round",
+          "round_amount": "300000",
+          "uncertainties": "The latest evidenced round is not fully cleanly documented. Lessn's own blog announced an over-$1 million Pre-Series-A close on 2025-08-13, but a later 2026 ACN/republished article says a 'small investment round' raised $300,000 in 2025-11 at a $30 million valuation and that $3 million total had been invested. It is unclear whether the November 2025 round was an extension, a separate tranche, or a later standalone equity round; the precise announcement day, closing day, lead investor(s), and currency are not established from the evidence reviewed. The 2026 funding-history source was a newswire republication rather than a primary filing. For lifecycle, no explicit registry, acquisition-closing, or stock-exchange source was found; status is inferred from active operations and references to a future funding round, with no contrary evidence before 2026-09-30.",
+          "lead_investors": "unknown",
+          "round_currency": "unknown",
+          "company_identity": "Lessn is an Australian B2B payments and accounts-payable automation platform that lets businesses pay suppliers and other expenses, often by card, with accounting integrations and rewards features.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2025-11"
+        },
+        "reasoning": "I identified the company from lessn.io, gathered direct company-site evidence on its product and August 2025 financing, then performed a freshness check with Keenable. The strongest newer evidence found before the cutoff was a March 2026 ACN Newswire republication stating a November 2025 $300,000 investment round and ongoing operation with a contemplated next round. I found no evidence of acquisition, IPO, or closure before 2026-09-30. Because the November 2025 round is later than the August 2025 Pre-Series-A announcement, I treated it as the latest evidenced venture equity round while explicitly noting source and chronology uncertainties.",
+        "stepsTaken": [
+          "Searched Google with query \"Lessn lessn.io funding acquisition investors site:lessn.io OR site:crunchbase.com OR site:linkedin.com OR site:techcrunch.com\". The results are: \n {\"search_results\":[{\"title\":\"could we be Australia's next Melio?\",\"link\":\"https://www.lessn.io/blog/lessn-raises-1m-to-supercharge-growth-could-we-be-australias-next-melio\",\"snippet\":\"Lessn has raised $1M+ to supercharge growth, expand integrations, and help Australian businesses simplify payments, strengthen controls, ...\",\"date\":\"Aug 13, 2025\",\"position\":1},{\"title\":\"How to Choose the Best Accounts Payable Automation ...\",\"link\":\"https://www.lessn.io/blog/how-to-choose-the-best-accounts-payabl...",
+          "Used visitWebpage {\"url\":\"https://www.lessn.io/blog/lessn-raises-1m-to-supercharge-growth-could-we-be-australias-next-melio\",\"question\":\"What company is Lessn, what does it sell, what funding round or raise amount is announced, when was it announced, and are any investors named?\"}. The results are: \n \"Source: https://lessn.io/blog\\nArticle: “Lessn raises $1M+ to supercharge growth — could we be Australia’s next Melio?”\\nDate: Aug 13, 2025\\n\\nRelevant context:\\n- “It’s official — our Pre-Series-A raise has closed...”\\n- “We’ve secured over $1 million...”\\n- “Backing us in this round, just to name a few: Michael Masterman ... Dean Swan ... Brendon Cook ... Ian Lennie ...”\\n- “At Lessn, we’re... here to make moving money between businesses effortless, intelligent, and rewarding.”\\n- “Lessn is d...",
+          "Searched Google with query \"Lessn lessn.io acquisition IPO shutdown investors 2026\". The results are: \n {\"search_results\":[{\"title\":\"Discover how Cooley helped MapLight Therapeutics and ...\",\"link\":\"https://www.instagram.com/reel/DQr0ICVj-yh/\",\"snippet\":\"Cooley helped MapLight Therapeutics and Navan successfully navigate SEC constraints and regulatory uncertainty to launch their IPOs during a ...\",\"date\":\"10 months ago\",\"position\":1},{\"title\":\"Lessen IPO Timeline and Financing Details\",\"link\":\"https://forgeglobal.com/lessen_ipo/\",\"snippet\":\"Lessen is privately held and not traded on public markets...",
+          "Used visitWebpage {\"url\":\"https://www.lessn.io\",\"question\":\"What does Lessn.io say the company does, and what products or services does it offer?\"}. The results are: \n \"- Lessn describes itself as “Australia’s fastest rewards payment platform — that pays for itself.”\\n- It says: “Lessn turns every business payment into rewards points, automatically, on any credit card. Next business day settlement, every time.”\\n- It offers a platform for business payments: “One platform for every business payment.”\\n- Stated capabilities/services:\\n  - “Pay anything with any payment method”\\n  - “Pay all business expenses with your credit card of choice, even if the supplier ...",
+          "Searched Google with query \"site:lessn.io Lessn acquisition OR \"Lessn\" \"acquired\" OR \"Lessn\" IPO OR \"Lessn\" ASX\". The results are: \n {\"message\":\"No data returned from search query\"}",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Lessn payments Australia funding investors acquisition IPO closure latest 2025 2026 lessn.io\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":1200,\"max_results\":5,\"session_id\":\"sess-lessn-20260930\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Lessn exceeds $100 million turnover on its payments orchestration platform\\nURL: https://ad-hoc-news.de/boerse/news/unternehmensnachrichten/sydney-au-mar-3-2026-acn-newswire-accounts-payable-automation/68628893\\nPublished: 2026-03-02\\nAcquired: 2026-09-14\\nSnippets:\\nDuring recent months, the company has attracted growing interest from both existing and new investors reflecting its strong growth profile, with billionaire property developer Theo Onisforou...",
+          "Used keenable-public-evaluation-fetch_page_content {\"url\":\"https://ad-hoc-news.de/boerse/news/unternehmensnachrichten/sydney-au-mar-3-2026-acn-newswire-accounts-payable-automation/68628893\",\"max_chars\":12000,\"live\":false,\"prompt\":\"Extract the statements about Lessn's funding history, amounts, dates, investors, any future round plans, and whether the company is acquired or public.\",\"session_id\":\"sess-lessn-20260930\",\"output_format\":\"text\"}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Lessn exceeds $100 million turnover on its payments orchestration platform\\nURL: https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/sydney-au-mar-3-2026-acn-newswire-accounts-payable-automation/68628893\\n\\n- **Funding history and amounts:**\\n  - $3 million has already been invested in the company and its technology.\\n  - A small investment round raised $300,000 in November 2025 at a valuation of $30 million.\\n\\n- **Dates:**\\n  - November 2025...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Lessn lessn.io acquisition public listing shutdown current status 2026\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":1000,\"max_results\":5,\"session_id\":\"sess-lessn-20260930\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Lessn exceeds $100 million turnover on its payments orchestration platform\\nURL: https://accessth.com/acn-newswire/lessn-exceeds-100-million-turnover-on-its-payments-orchestration-platform\\nPublished: 2026-03-02\\nAcquired: 2026-08-17\\nSnippets:\\nLessn exceeds $100 million turnover on its payments orchestration platform  SYDNEY, March 3, 2026 – (ACN Newswire via SeaPRwire.com) – Accounts payable automation company Lessn today announced that it exceeded $1..."
+        ]
+      }
+    }
+  ]
+}

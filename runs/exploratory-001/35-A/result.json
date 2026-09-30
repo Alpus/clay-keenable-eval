@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6chcqioBrKrYNb38",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:12:48.774Z",
+  "duration": "1m 45s",
+  "dataCreditsUsed": 4.6,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6chcTSyKnKHwqEsb",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:12:48.780Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "walkme.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "WalkMe"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6chcJEEW9c7FCJPR",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:12:48.794Z",
+      "completedAt": "2026-09-30T11:14:33.976Z",
+      "duration": "1m 45s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "walkme.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "WalkMe"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "SAP SE",
+          "evidence": "[{\"claim\":\"WalkMe at walkme.com is a digital adoption platform company that helps organizations use software effectively and realize value from software investments.\",\"url\":\"https://www.walkme.com/news-releases/sap-completes-acquisition-of-walkme/\",\"publication_date\":\"2024-09-12\",\"event_date\":\"2024-09-12\",\"excerpt\":\"The press release describes WalkMe as a leading digital adoption platform company that helps organizations navigate technology change and realize the full value of software investments.\"},{\"claim\":\"SAP completed its acquisition of WalkMe on September 12, 2024, and WalkMe became an SAP company.\",\"url\":\"https://www.walkme.com/news-releases/sap-completes-acquisition-of-walkme/\",\"publication_date\":\"2024-09-12\",\"event_date\":\"2024-09-12\",\"excerpt\":\"WalkMe announced 'SAP Completes Acquisition of WalkMe' and stated that WalkMe is now an SAP company.\"},{\"claim\":\"Nasdaq stated that WalkMe's merger with SAP closed prior to the market open on September 12, 2024; WKME's last trading date was September 11, 2024 and suspension became effective September 13, 2024.\",\"url\":\"https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2024-417\",\"publication_date\":\"2024-09-05\",\"event_date\":\"2024-09-12\",\"excerpt\":\"Nasdaq's corporate actions notice says the merger closed prior to the market open on September 12, 2024, with revised last trading date September 11, 2024 and suspension effective September 13, 2024.\"},{\"claim\":\"The latest evidenced private financing found for WalkMe was a $90 million funding round led by Vitruvian Partners with participation from Insight Partners.\",\"url\":\"https://www.walkme.com/blog/funding-round/\",\"publication_date\":\"2019-12-04\",\"event_date\":\"2019-12-04\",\"excerpt\":\"WalkMe's company post says it closed its latest funding round with $90M led by Vitruvian Partners, with participation from existing investor Insight Partners.\"},{\"claim\":\"A contemporaneous press release announced that WalkMe had closed a $90 million funding round led by Vitruvian Partners with participation from previous investor Insight Partners.\",\"url\":\"https://www.prnewswire.com/il/news-releases/walkme-raises-90-million-to-empower-organizations-to-realize-the-full-promise-of-their-software-investments-300971311.html\",\"publication_date\":\"2019-12-09\",\"event_date\":\"2019-12-09\",\"excerpt\":\"PR Newswire reports WalkMe announced it had closed a $90M round of funding led by Vitruvian Partners with participation from previous investor Insight Partners.\"}]",
+          "latest_round": "unknown",
+          "round_amount": "90000000",
+          "uncertainties": "Primary evidence supports a latest private funding round of $90M in December 2019 led by Vitruvian Partners, but the primary sources reviewed do not state a formal series name. Secondary sources often label it Series G, and one search result labeled it Series F, so the round name is left unknown. Date semantics also differ: WalkMe's company blog page is dated 2019-12-04, while a contemporaneous PR Newswire release is dated 2019-12-09; this may reflect an earlier company post/update versus the broader press announcement. Acquisition timing is clear on completion (2024-09-12), while Nasdaq suspension/delisting mechanics continued afterward.",
+          "lead_investors": "Vitruvian Partners",
+          "round_currency": "USD",
+          "company_identity": "WalkMe, at walkme.com, sells a digital adoption platform that helps enterprises guide users, automate workflows, and increase software adoption across applications.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2024-09-12",
+          "round_announcement_date": "2019-12-09"
+        },
+        "reasoning": "I identified WalkMe using walkme.com and prioritized company, exchange, and press-release evidence. The strongest lifecycle evidence shows SAP completed the acquisition on 2024-09-12 and Nasdaq confirmed the merger closing and end of WKME trading. For financing, the latest evidenced private equity financing I found was WalkMe's December 2019 $90M round led by Vitruvian Partners with Insight Partners participating. Because the reviewed primary sources did not explicitly name the series, I left latest_round as unknown and documented the conflict.",
+        "stepsTaken": [
+          "Searched Google with query \"WalkMe walkme.com acquisition SAP completed latest funding round IPO investor relations\". The results are: \n {\"search_results\":[{\"title\":\"SAP Completes Acquisition of WalkMe\",\"link\":\"https://www.walkme.com/news-releases/sap-completes-acquisition-of-walkme/\",\"snippet\":\"With an equity value of about US$1.5 billion, this represents an approximate 45% premium to WalkMe's closing share price on June 4, 2024,\",\"position\":1},{\"title\":\"SAP Enters into Agreement to Acquire WalkMe\",\"link\":\"https://news.sap.com/2024/06/sap-enters-agreement-to-acquire-walkme/\",\"snippet\":\"The Executive and Supervisory Boards of SAP...",
+          "Used visitWebpage {\"url\":\"https://www.walkme.com/news-releases/sap-completes-acquisition-of-walkme/\",\"question\":\"Find the acquisition completion date, acquirer, status of WalkMe after the transaction, and a short description of WalkMe's business from this press release.\"}. The results are: \n \"- Press release title: \\\"SAP Completes Acquisition of WalkMe\\\"\\n- Relevant date on press release: \\\"September 12, 2024\\\"\\n- Acquirer: \\\"SAP SE\\\"\\n- Status of WalkMe after the transaction: \\\"WalkMe is now an SAP company.\\\"\\n- WalkMe business description from the press release: \\\"WalkMe is a leading digital adoption platform company\\\" that \\\"helps organizations navigate constant technology change by empowering teams to use technology effectively and realize the full value of software investments....",
+          "Searched Google with query \"WalkMe latest venture equity round Series G press release 2019 2020 WalkMe\". The results are: \n {\"search_results\":[{\"title\":\"WalkMe Raises $90 Million in Latest Funding Round\",\"link\":\"https://www.walkme.com/blog/funding-round/\",\"snippet\":\"WalkMe's valuation has nearly doubled since last year. Learn about our new $90M investment and big plans on the horizon for 2020.\",\"date\":\"Dec 4, 2019\",\"rating\":3.9,\"ratingCount\":7,\"position\":1},{\"title\":\"WalkMe Raises $50 Million From Insight Venture Partners\",\"link\":\"https://www.walkme.com/blog/walkme-raises-50-million-series-e-round/\",\"snippet\":\"WalkMe...",
+          "Used visitWebpage {\"url\":\"https://www.walkme.com/blog/funding-round/\",\"question\":\"Find the date, amount raised, round name if stated, and investors or lead investors in WalkMe's latest funding round from this company page.\"}. The results are: \n \"WalkMe Company News page: “WalkMe Raises $90 Million in Latest Funding Round” — Updated December 4, 2019. Relevant text: “we closed our latest funding round with $90M led by Vitruvian Partners, with participation from existing investor Insight Partners.” Links: https://walkme.com/blog/funding-round, https://vitruvianpartners.com, https://insightpartners.com\"",
+          "Searched Google with query \"WalkMe delisted Nasdaq September 2024 merger closed Form 25\". The results are: \n {\"search_results\":[{\"title\":\"Form 6-K for Walkme LTD filed 09/12/2024\",\"link\":\"https://ir.walkme.com/static-files/c3ce34e2-3f16-46a3-86db-a4820c3266a6\",\"snippet\":\"The Company has requested that Nasdaq file a delisting application on Form 25 with the SEC to report the delisting of the Company Shares from ...\",\"date\":\"Sep 12, 2024\",\"position\":1},{\"title\":\"SAP Completes Acquisition of WalkMe\",\"link\":\"https://www.walkme.com/news-releases/sap-completes-acquisition-of-walkme/\",\"snippet\":\"The completio...",
+          "Used visitWebpage {\"url\":\"https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2024-417\",\"question\":\"Find whether WalkMe's merger closed, the close date, and what happened to WKME trading according to this Nasdaq notice.\"}. The results are: \n \"Nasdaq Equity Corporate Actions Alert #2024-417 dated Thursday, September 5, 2024: “(UPDATE: Merger closed) Information Regarding the Merger of WalkMe Ltd. (WKME).”\\n\\nRelevant notice text:\\n- “At a special meeting held on August 7, 2024, the shareholders of WalkMe Ltd. (WKME) approved the merger with SAP SE (SAP).”\\n- “The merger closed prior to the market open on September 12, 2024.”\\n- “In anticipation of the closing, the stock was halted immediately following the after-hours session at or a...",
+          "Used visitWebpage {\"url\":\"https://www.prnewswire.com/il/news-releases/walkme-raises-90-million-to-empower-organizations-to-realize-the-full-promise-of-their-software-investments-300971311.html\",\"question\":\"Find the announcement date, amount raised, round name if stated, and investor names for WalkMe's $90 million financing from this press release.\"}. The results are: \n \"Press release: “WalkMe™ Raises $90 Million to Empower Organizations to Realize the Full Promise of Their Software Investments”\\nAnnouncement date: 09 Dec, 2019, 16:30 IST\\nDateline/body: “SAN FRANCISCO, Dec. 9, 2019 /PRNewswire/ -- WalkMe™ ... announced today that it has closed a $90M round of funding led by Vitruvian Partners with participation from previous investor Insight Partners.”\\nAmount raised: $90M\\nRound name: “round of funding” (no specific named round stated)\\nInvestors: Vitruvian P...",
+          "Searched Google with query \"WalkMe Series G official December 2019\". The results are: \n {\"search_results\":[{\"title\":\"WalkMe Company News Archives - Page 2 of 11\",\"link\":\"https://www.walkme.com/blog/category/walkme-company-news/page/2/\",\"snippet\":\"December 4, 2019 WalkMe and Deutsche Telekom Ink Partnership to Promote Digital Adoption Digital Transformation, Unveils Exciting New 'Community Meetup' ...\",\"position\":1},{\"title\":\"WalkMe IPO | S-1 Breakdown - by Alex Clayton\",\"link\":\"https://meritech.substack.com/p/walkme-ipo-s-1-breakdown\",\"snippet\":\"The last round was a $90M Series F i...",
+          "Used visitWebpage {\"url\":\"https://www.sec.gov/Archives/edgar/data/1847584/000119312521163950/d143770df1.htm\",\"question\":\"Find evidence in WalkMe's 2021 F-1 about its most recent preferred stock financing, including date, amount, and any series designation if stated.\"}. The results are: \n \"Notes to consolidated Financial Statements: https://sec.gov/Archives/edgar/data/1847584/000119312521163950/d143770df1.htm#fin143770_7\\n\\nNOTE 11 – SUBSEQUENT EVENTS (UNAUDITED):\\n“On March 25, 2021 the Company executed an additional funding request in the total amount of $10,000, for which 455,492 preferred F shares of no par value each were issued.”\""
+        ]
+      }
+    }
+  ]
+}

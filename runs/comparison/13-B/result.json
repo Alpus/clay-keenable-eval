@@ -1,0 +1,82 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6bk5P57qerfyMKdP",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:52:53.970Z",
+  "duration": "58s",
+  "dataCreditsUsed": 2.4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6bk5vnbTXvdVNbpu",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:52:53.978Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "mistral.ai",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Mistral AI"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6bk53Di9V63pQrSM",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:52:53.993Z",
+      "completedAt": "2026-09-30T10:53:52.668Z",
+      "duration": "58s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "mistral.ai",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Mistral AI"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"mistral.ai is Mistral AI, an AI company offering model-building and deployment products including Studio, Forge, Vibe, Vibe for code, and AI Cloud.\",\"url\":\"https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/\",\"publication_date\":\"unknown\",\"event_date\":\"2026-09-08\",\"excerpt\":\"The page identifies the company as Mistral and lists products such as Studio ('Build, test, and run AI agents and apps'), Forge, Vibe, Vibe for code, and AI Cloud.\"},{\"claim\":\"Mistral announced a €3 billion Series D funding round at a post-money valuation of more than €21 billion.\",\"url\":\"https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/\",\"publication_date\":\"unknown\",\"event_date\":\"2026-09-08\",\"excerpt\":\"Mistral today announced that it has raised €3 billion in a Series D funding round at a post-money valuation of more than €21 billion.\"},{\"claim\":\"Reuters reported that France's Mistral raised €3 billion at around a €21 billion valuation, and described it as the biggest equity funding round by a privately owned European technology firm.\",\"url\":\"https://www.reuters.com/world/europe/french-ai-company-mistral-hits-24-billion-valuation-funding-round-2026-09-08/\",\"publication_date\":\"2026-09-07\",\"event_date\":\"2026-09-08\",\"excerpt\":\"France's Mistral has raised €3 billion at a valuation of around €21 billion ($24 billion), in what the three-year-old AI company said on Tuesday was the biggest equity funding round by a privately owned European technology firm.\"},{\"claim\":\"Reuters said the round was jointly led by PSG Equity, Samsung Electronics, and the EU-backed Scaleup Europe Fund.\",\"url\":\"https://www.reuters.com/world/europe/french-ai-company-mistral-hits-24-billion-valuation-funding-round-2026-09-08/\",\"publication_date\":\"2026-09-07\",\"event_date\":\"2026-09-08\",\"excerpt\":\"Mistral said that the round was jointly led by existing investor PSG Equity, along with South Korea's Samsung Electronics and the EU-backed Scaleup Europe Fund.\"},{\"claim\":\"As of the round, Reuters described Mistral as a privately owned/private tech group, supporting a private independent lifecycle status rather than public or acquired.\",\"url\":\"https://www.reuters.com/world/europe/french-ai-company-mistral-hits-24-billion-valuation-funding-round-2026-09-08/\",\"publication_date\":\"2026-09-07\",\"event_date\":\"2026-09-08\",\"excerpt\":\"Reuters describes the financing as the biggest equity funding round by a privately owned European technology firm and says the fundraising makes Mistral Europe's second-highest-valued private tech group.\"}]",
+          "latest_round": "Series D",
+          "round_amount": "3000000000",
+          "uncertainties": "The company page excerpt obtained did not expose a visible publication date, so the announcement date is taken from Reuters' Sept. 8, 2026 reporting that Mistral 'said on Tuesday.' Reuters metadata shows 2026-09-07 PDT while the story dateline/event is Sept. 8 in Paris. No separate legal closing date was found. Within the sources reviewed, no evidence of an acquisition, IPO, or shutdown by the 2026-09-30 cutoff was found; lifecycle status is therefore based on affirmative Reuters language describing Mistral as privately owned/private tech group at the time of the latest round.",
+          "lead_investors": "PSG Equity; Samsung Electronics; Scaleup Europe Fund",
+          "round_currency": "EUR",
+          "company_identity": "Mistral AI is a French AI company at mistral.ai that develops AI models, agent/app tooling, coding agents, and AI cloud infrastructure.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-09-08"
+        },
+        "reasoning": "Using the company site and Reuters, the latest evidenced venture equity financing before the 2026-09-30 cutoff is Mistral AI's €3 billion Series D announced on 2026-09-08. Reuters independently confirms the amount, valuation context, and lead investors, and explicitly describes Mistral as privately owned/private tech group, supporting private_independent status. I found no evidence in the reviewed sources of a completed acquisition, IPO, or closure by the cutoff.",
+        "stepsTaken": [
+          "Searched Google with query \"Mistral AI mistral.ai funding round latest 2025 2026 acquisition IPO company site\". The results are: \n {\"search_results\":[{\"title\":\"Mistral AI raises 1.7B€ to accelerate technological progress ...\",\"link\":\"https://mistral.ai/news/mistral-ai-raises-1-7-b-to-accelerate-technological-progress-with-ai/\",\"snippet\":\"Mistral AI raises 1.7B€ to accelerate technological progress with AI September 9, 2025. We are announcing a Series C funding round of 1.7B€ at ...\",\"date\":\"Sep 9, 2025\",\"position\":1},{\"title\":\"Mistral AI IPO Timeline and Financing Details\",\"link\":\"https://forgeglobal.com/mistral-ai_ipo/\",\"s...",
+          "Used visitWebpage {\"url\":\"https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/\",\"question\":\"What company is this, what does it sell, what round and amount were announced, what date was it announced, what lead investors are named, and how is the company described?\"}. The results are: \n \"Source: https://mistral.ai/news?categories=company\\n\\nRelevant webpage title/headline:\\n- “Mistral raises €3B to make sovereign, open-weight AI the technology frontier”\\n\\nCompany identity / what it sells:\\n- Company: Mistral / Mistral AI\\n- Products/navigation shown on page:\\n  - “Studio — Build, test, and run AI agents and apps.”\\n  - “Forge — Train, align, and evaluate custom AI models.”\\n  - “Vibe — AI agent for long-horizon work.”\\n  - “Vibe for code — Coding agents in the terminal, IDE, a...",
+          "Searched Google with query \"Reuters September 2026 Mistral AI funding round private company acquisition IPO\". The results are: \n {\"search_results\":[{\"title\":\"French AI company Mistral hits $24 billion valuation in ...\",\"link\":\"https://www.reuters.com/world/europe/french-ai-company-mistral-hits-24-billion-valuation-funding-round-2026-09-08/\",\"snippet\":\"French AI company Mistral hits $24 billion valuation in funding round · Funding jointly led by Samsung Electronics, Scaleup Europe Fund and PSG ...\",\"date\":\"Sep 7, 2026\",\"position\":1},{\"title\":\"French AI minnow bags surprisingly high valuation\",\"link\":\"https://www.reuters.co...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/world/europe/french-ai-company-mistral-hits-24-billion-valuation-funding-round-2026-09-08/\",\"question\":\"What funding round and amount did Mistral AI announce, what is the date, who led it, and does Reuters describe Mistral as private, acquired, or public?\"}. The results are: \n \"Reuters article: “French AI company Mistral hits $24 billion valuation in funding round” by Inti Landauro and Elizabeth Howcroft, dated September 7, 2026, 10:02 PM PDT / PARIS, Sept 8 (Reuters). Relevant text: “France's Mistral has raised €3 billion at a valuation of around €21 billion ($24 billion), in what the three-year-old AI company said on Tuesday was the biggest equity funding round by a privately owned European technology firm.” “Mistral said that the round was jointly led by existing i..."
+        ]
+      }
+    }
+  ]
+}

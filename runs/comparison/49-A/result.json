@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6cx3xSxJkovQb3iw",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:22:15.173Z",
+  "duration": "1m 41s",
+  "dataCreditsUsed": 4.6,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6cx3HumbxQUa5GXX",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:22:15.210Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "coreweave.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "CoreWeave"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6cx33CdtXEs2q9sn",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:22:15.319Z",
+      "completedAt": "2026-09-30T11:23:56.925Z",
+      "duration": "1m 41s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "coreweave.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "CoreWeave"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"CoreWeave is an AI cloud infrastructure company selling GPU/CPU compute, storage, networking, managed software, and related platform services for AI workloads.\",\"url\":\"https://www.coreweave.com/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Homepage calls CoreWeave \\\"The world’s #1 AI cloud platform\\\" and says \\\"CoreWeave Cloud is an AI-native platform\\\" with products including GPU compute, CPU compute, storage, networking, managed Kubernetes, and inference services.\"},{\"claim\":\"CoreWeave became a public company listed on Nasdaq under ticker CRWV in March 2025.\",\"url\":\"https://investors.coreweave.com/overview/default.aspx\",\"publication_date\":\"unknown\",\"event_date\":\"2025-03\",\"excerpt\":\"Investor relations overview states: \\\"CoreWeave completed its public listing on Nasdaq (CRWV) in March 2025.\\\"\"},{\"claim\":\"CoreWeave priced its IPO on March 27, 2025; trading was expected to begin on Nasdaq on March 28, 2025 and the offering was expected to close on March 31, 2025.\",\"url\":\"https://www.coreweave.com/news/coreweave-announces-pricing-of-initial-public-offering\",\"publication_date\":\"2025-03-27\",\"event_date\":\"2025-03-28\",\"excerpt\":\"Press release says the IPO was priced at $40.00 per share, shares were expected to begin trading on Nasdaq on March 28, 2025 under ticker CRWV, and the offering was expected to close on March 31, 2025.\"},{\"claim\":\"The latest evidenced venture equity round found was a $1.1 billion Series C announced on May 1, 2024, led by Coatue.\",\"url\":\"https://investors.coreweave.com/news/news-details/2024/CoreWeave-Secures-1-1-Billion-in-Series-C-Funding-to-Drive-the-Next-Generation-of-Cloud-Computing-for-the-Future-of-AI/default.aspx\",\"publication_date\":\"2024-05-01\",\"event_date\":\"2024-05-01\",\"excerpt\":\"Company release: \\\"CoreWeave ... announced it has secured $1.1 billion in new funding, led by Coatue, with participation from Magnetar ... Altimeter Capital, Fidelity Management & Research Company, and Lykos Global Management.\\\"\"},{\"claim\":\"CoreWeave announced a proposed acquisition of Core Scientific on July 7, 2025, but it was not completed and was later terminated on October 30, 2025.\",\"url\":\"https://www.coreweave.com/news/coreweave-to-acquire-core-scientific\",\"publication_date\":\"2025-07-07\",\"event_date\":\"2025-07-07\",\"excerpt\":\"Announcement said the companies had \\\"signed a definitive agreement\\\" and that the transaction was \\\"expected to close in the fourth quarter of 2025\\\" subject to approvals.\"},{\"claim\":\"CoreWeave's proposed acquisition of Core Scientific was terminated after the stockholder vote failed.\",\"url\":\"https://investors.coreweave.com/news/news-details/2025/CoreWeave-Comments-on-Core-Scientific-Stockholder-Vote/default.aspx\",\"publication_date\":\"2025-10-30\",\"event_date\":\"2025-10-30\",\"excerpt\":\"CoreWeave release states: \\\"CoreWeave’s Proposed Acquisition of Core Scientific Terminated Due To Results of Stockholder Vote\\\" and \\\"the Agreement has been terminated.\\\"\"}]",
+          "latest_round": "Series C",
+          "round_amount": "1.1 billion",
+          "uncertainties": "CoreWeave is public by the cutoff, so the latest venture equity round is historical rather than current financing activity. I found company evidence for the May 1, 2024 Series C and company evidence for the March 2025 IPO, but no later venture equity round before the IPO in the sources reviewed; absence of evidence is not absolute proof no other private extension existed. The IR overview gives only March 2025 for the public listing, while the IPO pricing release distinguishes pricing on 2025-03-27, trading start on 2025-03-28, and expected offering close on 2025-03-31. The July 7, 2025 Core Scientific deal was only announced, and a later company release shows it was terminated on 2025-10-30, so CoreWeave was not acquired via that transaction.",
+          "lead_investors": "Coatue",
+          "round_currency": "USD",
+          "company_identity": "CoreWeave is an AI cloud infrastructure provider offering GPU/CPU compute, storage, networking, and managed platform services for AI workloads.",
+          "lifecycle_status": "public",
+          "lifecycle_event_date": "2025-03",
+          "round_announcement_date": "2024-05-01"
+        },
+        "reasoning": "I resolved the entity from coreweave.com and prioritized company and investor-relations sources. The strongest current lifecycle evidence shows CoreWeave completed a Nasdaq public listing in March 2025 under ticker CRWV. I independently checked a later announced M&A event and found it was terminated, so it does not change lifecycle status. For funding, I separated the IPO from venture financing and identified the latest evidenced venture equity round as the company-announced $1.1 billion Series C on 2024-05-01, led by Coatue.",
+        "stepsTaken": [
+          "Searched Google with query \"CoreWeave coreweave.com latest funding IPO acquisition 2026 site:coreweave.com OR site:investors.coreweave.com OR site:news.coreweave.com\". The results are: \n {\"search_results\":[{\"title\":\"News and Press Releases\",\"link\":\"https://www.coreweave.com/newsroom\",\"snippet\":\"CoreWeave signed an $11.9B deal to provide AI infrastructure for OpenAI, expanding compute capacity for model training. OpenAI will also invest $350M in ...\",\"position\":1},{\"title\":\"CoreWeave to Acquire Core Scientific\",\"link\":\"https://www.coreweave.com/news/coreweave-to-acquire-core-scientific\",\"snippet\":\"Following CoreWeave's successful IPO in March 2025, this acquisition will help Core...",
+          "Searched Google with query \"CoreWeave Series C funding 2024 lead investors May 2024 company press release\". The results are: \n {\"search_results\":[{\"title\":\"CoreWeave - CoreWeave Secures $1.1 Billion in Series C ...\",\"link\":\"https://investors.coreweave.com/news/news-details/2024/CoreWeave-Secures-1-1-Billion-in-Series-C-Funding-to-Drive-the-Next-Generation-of-Cloud-Computing-for-the-Future-of-AI/default.aspx\",\"snippet\":\"ROSELAND, N.J., May 1, 2024 /PRNewswire/ -- CoreWeave, the leading specialized cloud provider for AI, today announced it has secured $1.1 billion in new funding, led by Coatue, with participation from Mag...",
+          "Used visitWebpage {\"url\":\"https://www.coreweave.com/\",\"question\":\"What does CoreWeave say on its homepage that identifies the company and what it sells?\"}. The results are: \n \"CoreWeave homepage context identifying the company and what it sells:\\n\\n- “The world’s #1 AI cloud platform, purpose-built for what’s next”\\n- “CoreWeave Cloud is an AI-native platform purpose-built for AI. It combines next-generation infrastructure, intelligent tools, and expert support to power the world’s most complex AI workloads…”\\n- “Get your next big breakthrough to market faster with CoreWeave.”\\n- “CoreWeave, The Essential Cloud for AI™”\\n- “Trusted by leading AI labs, platforms, and ...",
+          "Used visitWebpage {\"url\":\"https://investors.coreweave.com/overview/default.aspx\",\"question\":\"What does this investor relations overview page say about CoreWeave's public listing status and ticker, and does it identify the business?\"}. The results are: \n \"Overview page: “CoreWeave is The Essential Cloud for AI™... Established in 2017, CoreWeave completed its public listing on Nasdaq (CRWV) in March 2025.”\\n\\nTop of page also shows: “NASDAQ: CRWV”\\n\\nThis identifies the business as: “CoreWeave is The Essential Cloud for AI™... delivers a platform of technology, tools, and teams that enables innovators to move at the pace of innovation, building and scaling AI with confidence... Trusted by leading AI labs, startups, and global enterprises...”\\n\\nR...",
+          "Used visitWebpage {\"url\":\"https://www.coreweave.com/news/coreweave-to-acquire-core-scientific\",\"question\":\"What does this page say about the announcement date and whether CoreWeave's acquisition of Core Scientific is completed or expected to close in the future?\"}. The results are: \n \"Source: https://www.coreweave.com/news/coreweave-to-acquire-core-scientific\\n\\nRelevant page data:\\n- Headline: \\\"CoreWeave to Acquire Core Scientific\\\"\\n- Article header: \\\"Published on July 7, 2025\\\"\\n- Dateline/body: \\\"Livingston, NJ and Austin, TX – July 7, 2025 – CoreWeave ... and Core Scientific ... today announced that they have signed a definitive agreement under which CoreWeave will acquire Core Scientific in an all-stock transaction.\\\"\\n- Meta/structured data description: \\\"CoreWeave ...",
+          "Searched Google with query \"CoreWeave Core Scientific acquisition closed 2025 2026 CoreWeave\". The results are: \n {\"search_results\":[{\"title\":\"CoreWeave Reaffirms Strategic Rationale of its Proposed ...\",\"link\":\"https://investors.coreweave.com/news/news-details/2025/CoreWeave-Reaffirms-Strategic-Rationale-of-its-Proposed-Acquisition-and-Financial-Benefits-to-Core-Scientific-Stockholders/default.aspx\",\"snippet\":\"CoreWeave entered into a definitive agreement to acquire Core Scientific in an all-stock transaction on July 7, 2025.\",\"date\":\"Oct 16, 2025\",\"position\":1},{\"title\":\"Core Scientific Announces Terminat...",
+          "Used visitWebpage {\"url\":\"https://investors.coreweave.com/news/news-details/2025/CoreWeave-Comments-on-Core-Scientific-Stockholder-Vote/default.aspx\",\"question\":\"Does this page show that CoreWeave's proposed acquisition of Core Scientific was terminated, and on what date?\"}. The results are: \n \"News Details page: “CoreWeave Comments on Core Scientific Stockholder Vote” — dated October 30, 2025. Subheadline: “CoreWeave’s Proposed Acquisition of Core Scientific Terminated Due To Results of Stockholder Vote.” Body states: “Based on preliminary results, the proposal did not receive the necessary approval from Core Scientific stockholders. As a result, the Agreement has been terminated.” It also says the stockholder meeting was “held to consider the proposal to adopt the Agreement and Plan...",
+          "Searched Google with query \"CoreWeave IPO March 2025 exact date press release Nasdaq CoreWeave\". The results are: \n {\"search_results\":[{\"title\":\"CoreWeave Announces Pricing of Initial Public Offering\",\"link\":\"https://www.coreweave.com/news/coreweave-announces-pricing-of-initial-public-offering\",\"snippet\":\"CoreWeave priced its IPO at $40/share, offering 37.5M shares under ticker \\\"CRWV\\\" on Nasdaq, raising $1.5B to expand its AI cloud platform.\",\"date\":\"Mar 27, 2025\",\"position\":1},{\"title\":\"CoreWeave - Investor Relations\",\"link\":\"https://investors.coreweave.com/overview/default.aspx\",\"snippet\":\"Established in ...",
+          "Used visitWebpage {\"url\":\"https://www.coreweave.com/news/coreweave-announces-pricing-of-initial-public-offering\",\"question\":\"What exact dates does this page give for CoreWeave's IPO pricing and expected trading/listing on Nasdaq under ticker CRWV?\"}. The results are: \n \"CoreWeave press release: “CoreWeave Announces Pricing of Initial Public Offering” (Published on March 27, 2025).\\n\\nRelevant text:\\n- “announced today the pricing of its initial public offering ... at a public offering price of $40.00 per share.”\\n- “The shares are expected to begin trading on the Nasdaq Global Select Market on March 28, 2025 under the ticker symbol ‘CRWV.’”\\n- “The offering is expected to close on March 31, 2025...”\\n- About section: “CoreWeave completed its public listing on ..."
+        ]
+      }
+    }
+  ]
+}

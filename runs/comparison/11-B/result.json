@@ -1,0 +1,88 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6bi05UawPFSSGGiT",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:51:36.404Z",
+  "duration": "2m 9s",
+  "dataCreditsUsed": 6.5,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6bi0as6vNNnk5FcC",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:51:36.413Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "elevenlabs.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "ElevenLabs"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6bi0mdqzQ8MWhTYH",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:51:36.429Z",
+      "completedAt": "2026-09-30T10:53:45.811Z",
+      "duration": "2m 9s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "elevenlabs.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "ElevenLabs"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"The business at elevenlabs.io is ElevenLabs, an AI audio and agent platform offering ultra-realistic speech, voice generation/cloning, music, sound effects, dubbing, transcription, and conversational agents.\",\"url\":\"https://elevenlabs.io/\",\"publication_date\":\"unknown\",\"event_date\":\"2026-09-30\",\"excerpt\":\"Homepage: 'Powering the best enterprises, creators, and developers. From ElevenAgents for customer experience, ElevenCreative for content creation, to the leading AI voice generator.' It also describes products for 'ultra-realistic speech, videos, music, and sound effects' and 'conversational agents.'\"},{\"claim\":\"ElevenLabs announced a $500 million Series D round led by Sequoia Capital at an $11 billion valuation on 2026-02-04.\",\"url\":\"https://elevenlabs.io/blog/series-d\",\"publication_date\":\"2026-02-04\",\"event_date\":\"2026-02-04\",\"excerpt\":\"'ElevenLabs has raised $500 million in a Series D funding round.' 'The round was led by Sequoia Capital...' 'This $500 million funding round values ElevenLabs at $11 billion.'\"},{\"claim\":\"On 2026-05-05, ElevenLabs said new investors were joining in a third close of its Series D fundraise, making this the latest evidenced venture equity extension before the cutoff.\",\"url\":\"https://elevenlabs.io/blog/500m-arr-and-new-investors\",\"publication_date\":\"2026-05-05\",\"event_date\":\"2026-05-05\",\"excerpt\":\"'The investment - the third close in our Series D fundraise - comes as our business is accelerating.' The post names new investors including BlackRock, Wellington, NVentures, Santander and others, but does not state the amount of this third close.\"},{\"claim\":\"Independent reporting on 2026-05-05 described the new investors as part of ElevenLabs' existing $500 million Series D fundraise, without giving a separate amount for the third close.\",\"url\":\"https://techcrunch.com/2026/05/05/elevenlabs-lists-blackrock-jamie-foxx-and-eva-longoria-as-new-investors/\",\"publication_date\":\"2026-05-05\",\"event_date\":\"2026-05-05\",\"excerpt\":\"TechCrunch wrote that ElevenLabs 'revealed new investors that are part of its $500 million Series D fundraise, which was first announced in February.'\"},{\"claim\":\"As of late 2026, ElevenLabs was still discussing a possible future IPO rather than reporting that it was already public or acquired.\",\"url\":\"https://techcrunch.com/2026/09/24/twenty-minutes-with-the-ceo-of-elevenlabs-now-reportedly-valued-at-22-billion/\",\"publication_date\":\"2026-09-24\",\"event_date\":\"2026-09-24\",\"excerpt\":\"When asked about reports that ElevenLabs was looking at 2028 for an IPO, CEO Mati Staniszewski said: 'We are preparing the foundation to be able to do it in the next years. But whether we do it will depend on the time and place.'\"},{\"claim\":\"Reuters reported in July 2026 that ElevenLabs was exploring a secondary share sale for employees, and referenced its February Series D round, which is consistent with the company remaining privately held.\",\"url\":\"https://www.reuters.com/technology/elevenlabs-explores-employee-stock-sale-22-billion-valuation-bloomberg-news-2026-07-02/\",\"publication_date\":\"2026-07-02\",\"event_date\":\"2026-07-02\",\"excerpt\":\"Reuters said ElevenLabs was 'exploring a secondary share sale that would allow employees to sell stock' and noted that 'The company raised $500 million in a Series D round in February that valued the company at $11 billion.'\"}]",
+          "latest_round": "Series D third close (extension)",
+          "round_amount": "unknown",
+          "uncertainties": "The latest evidenced venture equity event before the 2026-09-30 cutoff is ElevenLabs' 2026-05-05 'third close' of its Series D fundraise, but the company page and TechCrunch excerpt retrieved do not state the incremental dollars raised in that close; only the originally announced Series D total of $500 million is explicit. The May 2026 post also mentions a separate $100 million tender offer, which is secondary liquidity and not venture equity. Reuters reported on 2026-07-02 that ElevenLabs was exploring another employee secondary share sale expected by September, but the retrieved evidence does not confirm completion by the cutoff. Lifecycle status is therefore based on evidence of ongoing private financing/secondary activity and discussion of a possible future IPO, not on an explicit 'we are private' statement.",
+          "lead_investors": "unknown",
+          "round_currency": "unknown",
+          "company_identity": "ElevenLabs is an AI audio and conversational-agent company that sells voice generation, dubbing, transcription, music/sound tools, APIs, and enterprise voice/chat agents.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-05-05"
+        },
+        "reasoning": "I resolved the company via its exact domain and used company and independent reporting to identify the most recent evidenced equity financing event before the cutoff. The strongest evidence shows a $500M Series D announced on 2026-02-04, followed by a later 2026-05-05 third close of that same Series D with new investors; however, the incremental amount for that latest close was not established in the retrieved sources. No evidence retrieved showed a completed acquisition, IPO, or closure by 2026-09-30, while late-2026 reporting discussed a possible future IPO and secondary share sales, supporting a private independent status.",
+        "stepsTaken": [
+          "Searched Google with query \"ElevenLabs elevenlabs.io funding acquisition IPO latest round site:elevenlabs.io OR site:techcrunch.com OR site:businesswire.com\". The results are: \n {\"search_results\":[{\"title\":\"ElevenLabs raises $180M Series C to be the voice of ...\",\"link\":\"https://elevenlabs.io/blog/series-c\",\"snippet\":\"ElevenLabs has raised $180 million in a Series C funding round. This latest funding values ElevenLabs at $3.3 billion, brings total funding to ...\",\"date\":\"Jan 30, 2025\",\"position\":1},{\"title\":\"ElevenLabs raises $500M Series D at $11B valuation\",\"link\":\"https://elevenlabs.io/blog/series-d\",\"snippet\":\"4 February 2026 – ElevenLabs has raised $500 million in ...",
+          "Used visitWebpage {\"url\":\"https://elevenlabs.io/blog/series-d\",\"question\":\"What does this page say about ElevenLabs' Series D funding round amount, date, valuation, and investors?\"}. The results are: \n \"Page title/article: “ElevenLabs raises $500M Series D at $11B valuation”\\nPublished: Feb 4, 2026\\n\\nRelevant page text:\\n- “This $500 million funding round values ElevenLabs at $11 billion, more than 3x its valuation one year ago.”\\n- “The round was led by Sequoia Capital, with Andrew Reed joining the board, with A16Z quadrupling down and ICONIQ tripling down”\\n- “4 February 2026 – ElevenLabs has raised $500 million in a Series D funding round… The round is led by Sequoia Capital with Andrew Re...",
+          "Searched Google with query \"ElevenLabs IPO acquisition public company private independent 2026 site:reuters.com OR site:elevenlabs.io OR site:techcrunch.com\". The results are: \n {\"search_results\":[{\"title\":\"ElevenLabs' CEO on margins, IPO timing, and telling ...\",\"link\":\"https://techcrunch.com/2026/09/24/twenty-minutes-with-the-ceo-of-elevenlabs-now-reportedly-valued-at-22-billion/\",\"snippet\":\"The company, which says it's pacing at $600 million in annual recurring revenue, is now reportedly valued at $22 billion by its backers, ...\",\"date\":\"6 days ago\",\"position\":1},{\"title\":\"ElevenLabs raises $500M from Sequoia at an $11 billion ...\",\"link\":\"https://techcrunch.com/2026...",
+          "Used visitWebpage {\"url\":\"https://techcrunch.com/2026/09/24/twenty-minutes-with-the-ceo-of-elevenlabs-now-reportedly-valued-at-22-billion/\",\"question\":\"Does this article indicate whether ElevenLabs is still a private company, mention any IPO or acquisition status, and describe its current valuation or funding context?\"}. The results are: \n \"- Article: TechCrunch, “ElevenLabs’ CEO on margins, IPO timing, and telling customers they’re talking to a bot” (Sept. 24, 2026) — https://techcrunch.com/2026/09/24/twenty-minutes-with-the-ceo-of-elevenlabs-now-reportedly-valued-at-22-billion\\n- The article says ElevenLabs “is now reportedly valued at $22 billion by its backers, despite being just four years old.” It also says the company is “pacing at $600 million in annual recurring revenue.”\\n- On IPO status: “It’s been reported you’re looki...",
+          "Used visitWebpage {\"url\":\"https://elevenlabs.io/blog/500m-arr-and-new-investors\",\"question\":\"What does this page say about new investors, whether ElevenLabs raised a new financing round or tender offer, and any dates or amounts involved?\"}. The results are: \n \"Article: “ElevenLabs crosses $500M ARR as it welcomes new investors including BlackRock, NVIDIA, Jamie Foxx and Eva Longoria” — Published May 5, 2026; Last updated Sep 20, 2026.\\n\\nRelevant excerpts:\\n- “Today, we’re welcoming new investors to ElevenLabs, including institutions like BlackRock and Wellington, large global enterprises like NVIDIA (via NVentures) and Santander, and creative talent like Jamie Foxx and Eva Longoria.”\\n- “The investment - the third close in our Series D fundraise - c...",
+          "Searched Google with query \"TechCrunch Reuters May 5 2026 ElevenLabs BlackRock NVIDIA Wellington third close Series D amount private company\". The results are: \n {\"search_results\":[{\"title\":\"ElevenLabs lists BlackRock, Jamie Foxx, and Eva Longoria ...\",\"link\":\"https://techcrunch.com/2026/05/05/elevenlabs-lists-blackrock-jamie-foxx-and-eva-longoria-as-new-investors/\",\"snippet\":\"ElevenLabs revealed new investors that are part of its $500 million Series D fundraise, The additions include institutions such as BlackRock, ...\",\"date\":\"May 5, 2026\",\"position\":1},{\"title\":\"ElevenLabs crosses $500M ARR and welcomes new ...\",\"link\":\"https://elevenlabs.io/blog/500m...",
+          "Used visitWebpage {\"url\":\"https://techcrunch.com/2026/05/05/elevenlabs-lists-blackrock-jamie-foxx-and-eva-longoria-as-new-investors/\",\"question\":\"What does this article say about the size of ElevenLabs' latest Series D close or extension, total Series D amount, and whether the company is private?\"}. The results are: \n \"Article: https://techcrunch.com/2026/05/05/elevenlabs-lists-blackrock-jamie-foxx-and-eva-longoria-as-new-investors\\n\\nRelevant excerpts:\\n- “Voice AI company ElevenLabs revealed new investors that are part of its $500 million Series D fundraise, which was first announced in February.”\\n- “The company has also accelerated its valuation rapidly, growing from $6.6 billion last September to $11 billion this February.”\\n- “ElevenLabs said that, besides the fundraising, it also closed a $100 million ...",
+          "Searched Google with query \"ElevenLabs acquisition announced completed IPO delisting 2026 site:reuters.com OR site:techcrunch.com OR site:elevenlabs.io\". The results are: \n {\"search_results\":[{\"title\":\"ElevenLabs raises $500M Series D at $11B valuation\",\"link\":\"https://elevenlabs.io/blog/series-d\",\"snippet\":\"ElevenLabs closed 2025 with over $330 million in ARR, driven by rapid enterprise adoption by companies like Deutsche Telekom, Square, ...\",\"date\":\"Feb 4, 2026\",\"position\":1},{\"title\":\"ElevenLabs explores employee stock sale at $22 billion ...\",\"link\":\"https://www.reuters.com/technology/elevenlabs-explores-employee-stock-sale-22-billion-valuation-bloomberg-news-...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/technology/elevenlabs-explores-employee-stock-sale-22-billion-valuation-bloomberg-news-2026-07-02/\",\"question\":\"What does this Reuters article say about ElevenLabs' ownership/listing status and the July 2026 employee stock sale or tender process?\"}. The results are: \n \"Reuters, July 2, 2026: “AI voice generation firm ElevenLabs is exploring a secondary share sale that would allow employees to sell stock,” citing a Bloomberg News report. The “proposed transaction could value the company at about $22 billion and is expected to occur by September.” Reuters describes ElevenLabs as “London-based,” founded in 2022 by Piotr Dabkowski and CEO Mati Staniszewski, and says “The company raised $500 million in a Series D round in February that valued the company at $11 bi...",
+          "Used visitWebpage {\"url\":\"https://elevenlabs.io/\",\"question\":\"How does ElevenLabs describe its business and products on its homepage?\"}. The results are: \n \"Homepage context describing ElevenLabs’ business and products:\\n- Headline: “Bringing technology to life”\\n- Summary statement: “Powering the best enterprises, creators, and developers. From ElevenAgents for customer experience, ElevenCreative for content creation, to the leading AI voice generator.”\\n- Platform framing: “Two platforms built on the same research foundation”\\n\\nProducts/platforms:\\n- ElevenCreative: “Generate ultra-realistic speech, videos, music, and sound effects.”\\n- ElevenCr..."
+        ]
+      }
+    }
+  ]
+}

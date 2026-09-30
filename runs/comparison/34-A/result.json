@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6chbUnxhRwnYKsiP",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:12:47.849Z",
+  "duration": "1m 22s",
+  "dataCreditsUsed": 3.9,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6chbNuTJBwuP3mGU",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:12:47.858Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "hashicorp.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "HashiCorp"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6chb7ZbpGNC2s282",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:12:47.872Z",
+      "completedAt": "2026-09-30T11:14:10.155Z",
+      "duration": "1m 22s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "hashicorp.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "HashiCorp"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "IBM",
+          "evidence": "[{\"claim\":\"HashiCorp is a software company focused on automation for multi-cloud and hybrid cloud infrastructure.\",\"url\":\"https://www.hashicorp.com/en/about/origin-story\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"HashiCorp says organizations adopting multiple clouds need a consistent and reliable set of automation tools to deploy and connect applications across cloud and on-premises environments.\"},{\"claim\":\"HashiCorp's latest evidenced venture equity round was a Series E financing of $175 million.\",\"url\":\"https://www.globenewswire.com/news-release/2020/03/16/2001541/0/en/hashicorp-raises-175-million-in-series-e-funding-to-support-multi-cloud-transformation-for-global-enterprises.html\",\"publication_date\":\"2020-03-16\",\"event_date\":\"2020-03-16\",\"excerpt\":\"HashiCorp announced it has raised $175 million in Series E funding.\"},{\"claim\":\"Franklin Templeton led the Series E round, with participation from T. Rowe Price Associates, Geodesic Capital, and existing investors including GGV Capital, IVP, Mayfield, Redpoint Ventures, and True Ventures.\",\"url\":\"https://www.globenewswire.com/news-release/2020/03/16/2001541/0/en/hashicorp-raises-175-million-in-series-e-funding-to-support-multi-cloud-transformation-for-global-enterprises.html\",\"publication_date\":\"2020-03-16\",\"event_date\":\"2020-03-16\",\"excerpt\":\"The round was led by Franklin Templeton and included participation from funds and accounts advised by T. Rowe Price Associates, Inc., Geodesic Capital, as well as existing HashiCorp investors GGV Capital, IVP, Mayfield, Redpoint Ventures, and True Ventures.\"},{\"claim\":\"HashiCorp later became a public company by closing its IPO on December 13, 2021.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1720671/000119312521355378/d199913dex991.htm\",\"publication_date\":\"2021-12-13\",\"event_date\":\"2021-12-13\",\"excerpt\":\"HashiCorp announced the closing of its initial public offering of 15,300,000 shares of Class A common stock at a public offering price of $80.00 per share.\"},{\"claim\":\"IBM completed its acquisition of HashiCorp on February 27, 2025, so HashiCorp is no longer public/independent as of the cutoff.\",\"url\":\"https://newsroom.ibm.com/2025-02-27-ibm-completes-acquisition-of-hashicorp,-creates-comprehensive,-end-to-end-hybrid-cloud-platform\",\"publication_date\":\"2025-02-27\",\"event_date\":\"2025-02-27\",\"excerpt\":\"IBM today announced it has completed its acquisition of HashiCorp... The closing of IBM's acquisition of HashiCorp includes all of the issued and outstanding common shares of HashiCorp.\"},{\"claim\":\"IBM describes HashiCorp's products as automating and securing infrastructure for hybrid cloud applications and generative AI.\",\"url\":\"https://newsroom.ibm.com/2025-02-27-ibm-completes-acquisition-of-hashicorp,-creates-comprehensive,-end-to-end-hybrid-cloud-platform\",\"publication_date\":\"2025-02-27\",\"event_date\":\"2025-02-27\",\"excerpt\":\"HashiCorp, whose products automate and secure the infrastructure that underpins hybrid cloud applications and generative AI.\"}]",
+          "latest_round": "Series E",
+          "round_amount": "175000000",
+          "uncertainties": "The HashiCorp origin-story page scrape did not return the funding timeline text, although Google snippets for that page indicated Series E as the last private round; the specific round details here therefore rely on the 2020 GlobeNewswire press release. HashiCorp announced an IPO closing on 2021-12-13 and IBM completed the acquisition on 2025-02-27; the IPO is not treated as a venture round. No later private venture round before the IPO was found in the searched evidence.",
+          "lead_investors": "Franklin Templeton",
+          "round_currency": "USD",
+          "company_identity": "HashiCorp develops infrastructure automation and security software for multi-cloud and hybrid cloud environments.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2025-02-27",
+          "round_announcement_date": "2020-03-16"
+        },
+        "reasoning": "I identified HashiCorp at hashicorp.com, found a primary funding press release for its latest private venture round (Series E, $175M, led by Franklin Templeton), confirmed that HashiCorp later closed its IPO in 2021 so the IPO should not be treated as a venture round, and then confirmed via IBM's 2025 announcement that the acquisition was completed, establishing current lifecycle status as acquired.",
+        "stepsTaken": [
+          "Searched Google with query \"HashiCorp latest funding round acquisition completed IPO site:hashicorp.com OR site:investors.hashicorp.com OR site:sec.gov OR site:newsroom.ibm.com\". The results are: \n {\"search_results\":[{\"title\":\"IBM Completes Acquisition of HashiCorp, Creates ...\",\"link\":\"https://newsroom.ibm.com/2025-02-27-ibm-completes-acquisition-of-hashicorp,-creates-comprehensive,-end-to-end-hybrid-cloud-platform\",\"snippet\":\"IBM announced it has completed its acquisition of HashiCorp, for $35 per share in cash,\",\"date\":\"Feb 27, 2025\",\"position\":1},{\"title\":\"S-1/A\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1720671/000119312521342246/d205906ds1a.htm\",\"snippet\":\"Immediately following...",
+          "Searched Google with query \"HashiCorp series funding round press release Series D Series C site:hashicorp.com OR site:techcrunch.com\". The results are: \n {\"search_results\":[{\"title\":\"HashiCorp Origin Story\",\"link\":\"https://www.hashicorp.com/en//about/origin-story\",\"snippet\":\"$40 million Series C funding. 2018. Social Impact Fund initiated. 2018 ... $100 million Series D funding. June 2019. 500 employees. March 2020. $175 million ...\",\"position\":1},{\"title\":\"Newly minted unicorn Tackle plans to use $100 million ...\",\"link\":\"https://techcrunch.com/2021/12/21/newly-minted-unicorn-tackle-plans-to-use-100-million-series-c-to-accelerate-the-future-of-s...",
+          "Used visitWebpage {\"url\":\"https://www.hashicorp.com/en/about/origin-story\",\"question\":\"What does HashiCorp say it is and what funding rounds and dates are listed on this page, especially the latest private round before IPO?\"}. The results are: \n \"Relevant page content:\\n- “The HashiCorp Origin Story”\\n- “Mitchell Hashimoto and Armon Dadgar, HashiCorp’s co-founders, met at the University of Washington in 2008...”\\n- “Mitchell founded HashiCorp, with Armon joining him as a co-founder the next year.”\\n- “As cloud adoption expanded, they recognized that organizations would eventually need to adopt multiple clouds, and would consequently require a consistent and reliable set of automation tools to seamlessly deploy and connect their applicat...",
+          "Searched Google with query \"HashiCorp announces Series D funding June 2019 HashiCorp press release\". The results are: \n {\"search_results\":[{\"title\":\"IBM to Acquire HashiCorp, Inc. Creating a Comprehensive ...\",\"link\":\"https://newsroom.ibm.com/2024-04-24-IBM-to-Acquire-HashiCorp-Inc-Creating-a-Comprehensive-End-to-End-Hybrid-Cloud-Platform\",\"snippet\":\"Under the terms of the agreement, IBM will acquire HashiCorp for $35 per share in cash, or $6.4 billion enterprise value, net of cash. HashiCorp ...\",\"date\":\"Apr 24, 2024\",\"position\":1},{\"title\":\"Press release\",\"link\":\"https://www.hashicorp.com/en/press\",\"snippet\":\"H...",
+          "Searched Google with query \"HashiCorp Series E funding press release March 2020\". The results are: \n {\"search_results\":[{\"title\":\"HashiCorp Raises $175 Million in Series E Funding to\",\"link\":\"https://www.globenewswire.com/news-release/2020/03/16/2001541/0/en/hashicorp-raises-175-million-in-series-e-funding-to-support-multi-cloud-transformation-for-global-enterprises.html\",\"snippet\":\"HashiCorp®, today announced it has raised $175 million in Series E funding, at a company valuation of $5.1 billion.\",\"date\":\"Mar 16, 2020\",\"position\":1},{\"title\":\"HashiCorp Raises $175 Million in Series E Funding .....",
+          "Used visitWebpage {\"url\":\"https://www.globenewswire.com/news-release/2020/03/16/2001541/0/en/hashicorp-raises-175-million-in-series-e-funding-to-support-multi-cloud-transformation-for-global-enterprises.html\",\"question\":\"What round, amount, announcement date, and lead investors are stated in this HashiCorp funding press release?\"}. The results are: \n \"Title: “HashiCorp Raises $175 Million in Series E Funding to Support Multi-Cloud Transformation for Global Enterprises”\\nAnnouncement date: March 16, 2020\\nRelevant excerpt: “HashiCorp ... today announced it has raised $175 million in Series E funding ... The round was led by Franklin Templeton and included participation from funds and accounts advised by T. Rowe Price Associates, Inc., Geodesic Capital, as well as existing HashiCorp investors GGV Capital, IVP, Mayfield, Redpoint Ventures, and ...",
+          "Used visitWebpage {\"url\":\"https://newsroom.ibm.com/2025-02-27-ibm-completes-acquisition-of-hashicorp,-creates-comprehensive,-end-to-end-hybrid-cloud-platform\",\"question\":\"Does this IBM announcement say the HashiCorp acquisition completed, on what date, and what business does HashiCorp provide?\"}. The results are: \n \"- Title: \\\"IBM Completes Acquisition of HashiCorp, Creates Comprehensive, End-to-End Hybrid Cloud Platform\\\"\\n- Date: \\\"Feb 27, 2025\\\"\\n- Body: \\\"IBM today announced it has completed its acquisition of HashiCorp, whose products automate and secure the infrastructure that underpins hybrid cloud applications and generative AI.\\\"\\n- Body: \\\"HashiCorp's capabilities enable enterprises to use automation to deliver lifecycle management for infrastructure and security, providing a system of record for...",
+          "Used visitWebpage {\"url\":\"https://www.sec.gov/Archives/edgar/data/1720671/000119312521355378/d199913dex991.htm\",\"question\":\"What is the date and statement that HashiCorp closed its initial public offering?\"}. The results are: \n \"SAN FRANCISCO, December 13, 2021 – HashiCorp announced the closing of its initial public offering: “today announced the closing of its initial public offering of 15,300,000 shares of Class A common stock at a public offering price of $80.00 per share.”\""
+        ]
+      }
+    }
+  ]
+}

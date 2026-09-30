@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6bw1TZcXQDpNFPZU",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:00:01.402Z",
+  "duration": "1m 57s",
+  "dataCreditsUsed": 5.699999999999999,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6bw1vvgjnJqbBk5b",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:00:01.411Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "alan.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Alan"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6bw1sy4792aPijms",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:00:01.425Z",
+      "completedAt": "2026-09-30T11:01:58.551Z",
+      "duration": "1m 57s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "alan.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Alan"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Alan at alan.com is a health insurance and care company offering integrated prevention, insurance, and healthcare services.\",\"url\":\"https://alan.com/en\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Alan says: 'Where insurance, care, and prevention finally work together' and describes 'full-stack health insurance, instant reimbursements, smart healthcare, and human support at every step.'\"},{\"claim\":\"Alan announced a Series G financing round of €480 million on 2026-06-25.\",\"url\":\"https://www.prnewswire.com/news-releases/alan-announces-a-480-million-financing-round-to-make-prevention-insurance-the-new-global-standard-in-healthcare-302809870.html\",\"publication_date\":\"2026-06-25\",\"event_date\":\"2026-06-25\",\"excerpt\":\"Alan 'announced an agreement for a Series G financing round of €480 million' on June 25, 2026.\"},{\"claim\":\"Prosus led the round, with Teachers' Venture Growth, Index Ventures, and Dara Holdings also participating.\",\"url\":\"https://www.prnewswire.com/news-releases/alan-announces-a-480-million-financing-round-to-make-prevention-insurance-the-new-global-standard-in-healthcare-302809870.html\",\"publication_date\":\"2026-06-25\",\"event_date\":\"2026-06-25\",\"excerpt\":\"The release says the round 'is led by Prosus ... alongside existing shareholders Teachers' Venture Growth (TVG) and Index Ventures as well as new investors Dara Holdings.'\"},{\"claim\":\"As announced, the financing had not yet closed because it remained subject to regulatory approvals.\",\"url\":\"https://www.prnewswire.com/news-releases/alan-announces-a-480-million-financing-round-to-make-prevention-insurance-the-new-global-standard-in-healthcare-302809870.html\",\"publication_date\":\"2026-06-25\",\"event_date\":\"2026-06-25\",\"excerpt\":\"The company said: 'The closing of this financing round is subject to applicable regulatory approvals, including from the relevant French financial authorities.'\"},{\"claim\":\"Prosus separately described the same €480 million round on 2026-06-24 and said its own investment was €400 million.\",\"url\":\"https://www.prosus.com/news-insights/2026/prosus-leads-euros-480-million-funding-round-in-alan-to-shape-the-future-of-ai-powered-healthcare\",\"publication_date\":\"2026-06-24\",\"event_date\":\"2026-06-24\",\"excerpt\":\"Prosus wrote 'Prosus leads €480 million funding round in Alan' and 'Prosus today announces a €400 million investment' into Alan.\"},{\"claim\":\"By 2026-09-02, Alan was operating independently enough to acquire Tanel, indicating it was not itself acquired or public in this evidence set.\",\"url\":\"https://www.zawya.com/en/press-release/companies-news/alan-acquires-tanel-in-first-move-into-africa-475317\",\"publication_date\":\"2026-09-02\",\"event_date\":\"2026-09-02\",\"excerpt\":\"The press release states: 'Alan ... has finalised its acquisition of Tanel,' describing Alan as the acquirer.\"},{\"claim\":\"Alan's own site describes it as a French public limited company (société anonyme), i.e. a corporate form, not evidence of a stock exchange listing.\",\"url\":\"https://alan.com/en\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"The site says 'Alan is a French public limited company (société anonyme) with fully paid-up share capital of €203,000,000.'\"}]",
+          "latest_round": "Series G",
+          "round_amount": "480 million",
+          "uncertainties": "The strongest primary funding source is Alan's 2026-06-25 press release, which says the Series G was announced as an agreement and that closing remained subject to regulatory approvals; I did not find a primary source in the research set confirming final closing by the 2026-09-30 cutoff. 'French public limited company (société anonyme)' is a legal form and should not be confused with being publicly listed. Lifecycle status is based on affirmative evidence that Alan was still operating independently and acting as an acquirer on 2026-09-02, plus no evidenced IPO or sale of Alan itself in the sources reviewed.",
+          "lead_investors": "Prosus",
+          "round_currency": "EUR",
+          "company_identity": "Alan at alan.com is a French health-insurance and healthcare platform combining prevention, insurance, and care for companies, consumers, and public-sector customers.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-06-25"
+        },
+        "reasoning": "I resolved alan.com to the French health-insurance/healthcare company Alan using the company site. For funding, I prioritized Alan's own press-release distribution on PR Newswire and corroborated it with Prosus, the lead investor. Those sources support that the latest evidenced venture equity round by the cutoff was a Series G of €480 million announced on 2026-06-25, led by Prosus, while also showing that closing was still subject to regulatory approvals at announcement. For lifecycle, I looked for evidence of acquisition, IPO, closure, or newer ownership changes and found a 2026-09-02 release showing Alan itself finalized the acquisition of Tanel, which supports that Alan remained a private independent company rather than being acquired or public in the evidence reviewed.",
+        "stepsTaken": [
+          "Searched Google with query \"alan.com company funding acquisition IPO latest round 2026 Alan health insurance\". The results are: \n {\"search_results\":[{\"title\":\"Alan announces a €480 million financing round to make ...\",\"link\":\"https://finance.yahoo.com/healthcare/articles/alan-announces-480-million-financing-101500444.html\",\"snippet\":\"With this new financing, Alan enters a new phase of growth with the ambition to make prevention insurance the preferred model for healthcare.\",\"date\":\"Jun 25, 2026\",\"position\":1},{\"title\":\"Your health partner: prevention, insurance and daily support\",\"link\":\"https://alan.com/en\",\"snippet\":\"Ala...",
+          "Used visitWebpage {\"url\":\"https://alan.com/en\",\"question\":\"What does this company sell, and are there links or text about recent financing, shareholder letters, IPO, acquisition, or company status?\"}. The results are: \n \"Company sells: integrated healthcare/health insurance services. Relevant text: “Alan. Where insurance, care, and prevention finally work together.” “we built the first truly integrated model, making prevention the norm, care accessible, and insurance delightful.” “full-stack health insurance, instant reimbursements, smart healthcare, and human support at every step.” Products/services mentioned: health insurance, prevention and care, Alan Clinic (clinician chats and video consults, 7/7), AI med...",
+          "Used visitWebpage {\"url\":\"https://alan.com/en/tags/finance\",\"question\":\"Find the most recent financing or shareholder update before 2026-09-30, with dates, round amount, investors, and any mention of IPO or acquisition status.\"}. The results are: \n \"Most recent shareholder update shown before 2026-09-30:\\n- Alan - 2026 Q1 Letter to shareholders — “Celebrating Alan's 2026 first quarter”\\n  Link: https://alan.com/en/blog/discover-alan/a/alan-2026-q1-letter-to-shareholders\\n  Image/metadata label: “Alan - 2026 Q1 Letter to shareholders”\\n\\nOther nearby shareholder updates listed:\\n- Alan - 2025 Q3 Letter to Shareholders — “Celebrating Alan's 2025 third quarter”\\n  https://alan.com/en/blog/discover-alan/a/alan-2025-q3-letter-to-shareholders\\n-...",
+          "Searched Google with query \"Alan €480 million financing round Prosus June 2026 Alan press release\". The results are: \n {\"search_results\":[{\"title\":\"Prosus leads €480 million funding round in Alan, to shape ...\",\"link\":\"https://www.prosus.com/news-insights/2026/prosus-leads-euros-480-million-funding-round-in-alan-to-shape-the-future-of-ai-powered-healthcare\",\"snippet\":\"Prosus leads €480 million funding round in Alan, to shape the future of AI-powered healthcare. valuing it at €5.5 billion (US$6.3 billion). The ...\",\"date\":\"Jun 24, 2026\",\"position\":1},{\"title\":\"Alan announces a €480 million financing round to make...",
+          "Used visitWebpage {\"url\":\"https://www.prosus.com/news-insights/2026/prosus-leads-euros-480-million-funding-round-in-alan-to-shape-the-future-of-ai-powered-healthcare\",\"question\":\"What was the round amount, currency, date, type/series if stated, lead investors, and did this page indicate the financing was completed or just announced?\"}. The results are: \n \"24 Jun 2026 — “Prosus leads €480 million funding round in Alan, to shape the future of AI-powered healthcare.”\\n\\nPage states: “Prosus today announces a €400 million (US$460 million) investment into the European health and insurance tech leader, Alan…” and “Prosus is joined in this round by existing investors Teachers' Venture Growth (TVG) and Index Ventures, and new investor Dara Holdings.”\\n\\nRound amount/currency context: headline says “€480 million funding round”; body says Prosus invested ...",
+          "Searched Google with query \"Alan company IPO acquisition completed funding round closed September 2026 alan.com\". The results are: \n {\"search_results\":[{\"title\":\"Alan Stock for Accredited Investors | Pre-IPO Shares\",\"link\":\"https://www.upmarket.co/private-markets/pre-ipo/alan/\",\"snippet\":\"Alan said it reached €785 million in annual recurring revenue in 2025 and completed a €100 million funding round in March 2026. The company said the new capital ...\",\"position\":1},{\"title\":\"Alan IPO Timeline and Financing Details\",\"link\":\"https://forgeglobal.com/alan_ipo/\",\"snippet\":\"Access IPO date, IPO status, valuation, and trade in prove...",
+          "Searched Google with query \"Alan acquired Tanel September 2026 Alan acquisition Tanel\". The results are: \n {\"search_results\":[{\"title\":\"Alan acquires Tanel\",\"link\":\"http://www.atlas-mag.net/en/articles/alan-acquires-tanel\",\"snippet\":\"French health insurance startup Alan is finalizing the acquisition of Tanel, a fully digital health insurance company based in Dakar, ...\",\"date\":\"Sep 3, 2026\",\"position\":1},{\"title\":\"#BackedByVP We are excited to announce the strategic ...\",\"link\":\"https://www.instagram.com/p/DcxruKaCqP4/\",\"snippet\":\"Alan acquired Dakar-based healthtech startup, Tanel for an undisclosed...",
+          "Used visitWebpage {\"url\":\"https://www.zawya.com/en/press-release/companies-news/alan-acquires-tanel-in-first-move-into-africa-475317\",\"question\":\"Does this page say Alan completed an acquisition of Tanel, on what date, and how does it describe Alan?\"}. The results are: \n \"- Headline: “Alan acquires Tanel in first move into Africa”\\n- Published: 2 September 2026, 03:16 (GMT-5)\\n- Body: “Dakar: Alan, the global prevention insurance player, has finalised its acquisition of Tanel...”\\n- About Alan: “Alan is the new standard in prevention insurance, and the first company that integrates insurance, prevention, and care into a single experience.”\\n- Source link referenced on page: https://www.zawya.com/en/press-release/companies-news/alan-acquires-tanel-in-first-move-i...",
+          "Used visitWebpage {\"url\":\"https://www.prnewswire.com/news-releases/alan-announces-a-480-million-financing-round-to-make-prevention-insurance-the-new-global-standard-in-healthcare-302809870.html\",\"question\":\"What round/series did Alan announce, the amount and currency, announcement date, lead investors, and whether closing was still subject to approvals?\"}. The results are: \n \"Source: PR Newswire / Alan press release: https://prnewswire.com/news/alan\\n\\nTitle: \\\"Alan announces a €480 million financing round to make prevention insurance the new global standard in healthcare\\\"\\n\\nAnnouncement date: \\\"Jun 25, 2026, 06:15 ET\\\" and dateline \\\"PARIS, June 25, 2026\\\"\\n\\nRelevant passage: \\\"Alan, the company building the new standard in prevention insurance, today announced an agreement for a Series G financing round of €480 million ($550 million), valuing the company at €5...."
+        ]
+      }
+    }
+  ]
+}

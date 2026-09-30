@@ -1,0 +1,83 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6clv7YvHigAegvZN",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:15:31.376Z",
+  "duration": "57s",
+  "dataCreditsUsed": 2.7,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6clvPvSGRDyoVuKW",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:15:31.381Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "cognigy.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Cognigy"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6clv5ZWGB42As5yu",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:15:31.396Z",
+      "completedAt": "2026-09-30T11:16:29.021Z",
+      "duration": "57s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "cognigy.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Cognigy"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "NiCE Ltd.",
+          "evidence": "[{\"claim\":\"Cognigy is a company that sells enterprise AI agents for contact centers and business automation.\",\"url\":\"https://www.cognigy.com/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Cognigy says it helps businesses 'easily deploy AI Agents in your contact center' and 'create AI Agents for Your Business,' highlighting AI Agents, Phone & Voice, Chat & Messaging, and Agent Copilot.\"},{\"claim\":\"Cognigy announced a $100 million Series C financing round led by Eurazeo Growth.\",\"url\":\"https://www.cognigy.com/news/cognigy-raises-100m-in-series-c-funding\",\"publication_date\":\"2024-06-11\",\"event_date\":\"2024-06-11\",\"excerpt\":\"Cognigy announced it 'has raised $100 million in Series C funding.' The release says the 'Series C Funding Round [was] Led by Eurazeo Growth,' with participation from existing investors including Insight Partners, DTCP, and DN Capital.\"},{\"claim\":\"NiCE completed its acquisition of Cognigy on September 8, 2025.\",\"url\":\"https://www.nice.com/press-releases/nice-closes-acquisition-of-cognigy-transforming-customer-experience-with-best-in-class-data-driven-cx-ai-platform\",\"publication_date\":\"2025-09-08\",\"event_date\":\"2025-09-08\",\"excerpt\":\"NiCE's press release headline says 'NiCE Closes Acquisition of Cognigy,' and the body states that on September 8, 2025 NiCE 'announced the successful closing of its acquisition of Cognigy.'\"}]",
+          "latest_round": "Series C",
+          "round_amount": "100000000",
+          "uncertainties": "The company press release establishes the 2024 Series C announcement date, amount, currency symbol, and lead investor, but the materials reviewed do not provide a separate legal closing date for that financing round. No later public venture equity round or extension before the 2026-09-30 cutoff was found in the sources reviewed. Acquisition evidence confirms completion on 2025-09-08; any earlier announcement/signing date was not necessary to determine current lifecycle status.",
+          "lead_investors": "Eurazeo Growth",
+          "round_currency": "USD",
+          "company_identity": "Cognigy is an enterprise software company that provides AI agents and related voice, chat, messaging, and agent-copilot tools for contact centers.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2025-09-08",
+          "round_announcement_date": "2024-06-11"
+        },
+        "reasoning": "I resolved the entity from cognigy.com, identified the latest evidenced venture equity round from Cognigy's own 2024 financing announcement, and established current lifecycle status from NiCE's 2025 acquisition-closing press release. The evidence supports that the latest verified equity round before the cutoff was the Series C announced on 2024-06-11, and that Cognigy was acquired by NiCE with closing confirmed on 2025-09-08.",
+        "stepsTaken": [
+          "Searched Google with query \"Cognigy funding acquisition IPO site:cognigy.com OR site:tech.eu OR site:crunchbase.com OR site:businesswire.com\". The results are: \n {\"search_results\":[{\"title\":\"Cognigy Raises $100m as Major Enterprise Brands Depend\",\"link\":\"https://www.cognigy.com/news/cognigy-raises-100m-in-series-c-funding\",\"snippet\":\"Cognigy News: Cognigy Raises $100m as Major Enterprise Brands Depend on its AI Agent Workforce, Led by Eurazeo to Accelerate AI Automation ...\",\"date\":\"Jun 11, 2024\",\"position\":1},{\"title\":\"Cognigy Increases Series B Funding to $59M with new ...\",\"link\":\"https://www.cognigy.com/news/cognigy-increases-series-b-funding-with-ne...",
+          "Used visitWebpage {\"url\":\"https://www.cognigy.com/news/cognigy-raises-100m-in-series-c-funding\",\"question\":\"What round was announced, what amount, what currency, what date, and who led the financing?\"}. The results are: \n \"Article: “Cognigy Raises $100m as Major Enterprise Brands Depend on its AI Agent Workforce”\\nDate: June 11, 2024\\nSource link: https://www.cognigy.com/news/cognigy-raises-100m-in-series-c-funding\\nRelevant excerpt: “Series C Funding Round Led by Eurazeo Growth…” and “Cognigy… announced today that it has raised $100 million in Series C funding. The round was led by Eurazeo Growth, with participation from existing investors Insight Partners, DTCP, DN Capital, and others.”\"",
+          "Searched Google with query \"NICE closes acquisition of Cognigy press release September 2025 site:nice.com Cognigy\". The results are: \n {\"search_results\":[{\"title\":\"NiCE Closes Acquisition of Cognigy\",\"link\":\"https://www.nice.com/press-releases/nice-closes-acquisition-of-cognigy-transforming-customer-experience-with-best-in-class-data-driven-cx-ai-platform\",\"snippet\":\"NiCE closes acquisition of Cognigy, transforming customer experience with best-in-class, data-driven CX AI platform.\",\"date\":\"Sep 8, 2025\",\"position\":1},{\"title\":\"NICE LTD.\",\"link\":\"https://resources.nice.com/wp-content/uploads/2025/09/6k-sep-8-2025.pdf\",\"snippet\":...",
+          "Used visitWebpage {\"url\":\"https://www.nice.com/press-releases/nice-closes-acquisition-of-cognigy-transforming-customer-experience-with-best-in-class-data-driven-cx-ai-platform\",\"question\":\"Did NICE complete the acquisition of Cognigy, on what date, and what wording confirms closing?\"}. The results are: \n \"Source: NiCE press release, “NiCE Closes Acquisition of Cognigy, Transforming Customer Experience with Best-in-Class, Data-Driven CX AI Platform” — Sep 8, 2025.\\n\\nRelevant text:\\n- Headline: “NiCE Closes Acquisition of Cognigy...”\\n- “Hoboken, N.J., September 8, 2025 – NiCE (Nasdaq: NICE) today announced the successful closing of its acquisition of Cognigy...”\\n- “Scott Russell, CEO, NiCE, said, ‘With the completion of this acquisition...’”\\n\\nUseful link:\\n- Press Releases: https://nice.com/p...",
+          "Used visitWebpage {\"url\":\"https://www.cognigy.com/\",\"question\":\"What does Cognigy say it provides or sells on its website, in one short sentence?\"}. The results are: \n \"Cognigy says it helps businesses \\\"easily deploy AI Agents in your contact center\\\" and \\\"create AI Agents for Your Business.\\\" It highlights offerings including \\\"AI Agents,\\\" \\\"Phone & Voice,\\\" \\\"Chat & Messaging,\\\" and \\\"Agent Copilot.\\\" Relevant links: https://cognigy.com, https://cognigy.com/solutions/ai-agents, https://cognigy.com/platform/cognigy-ai.\""
+        ]
+      }
+    }
+  ]
+}

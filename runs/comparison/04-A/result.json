@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6b7vCeVqzSgdsqxF",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:45:31.144Z",
+  "duration": "2m 6s",
+  "dataCreditsUsed": 4.6,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6b7vs5PX2WFWz9Vx",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:45:31.152Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "materialdepot.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Material Depot"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6b7v6GV2w8bxH5QV",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:45:31.164Z",
+      "completedAt": "2026-09-30T10:47:38.118Z",
+      "duration": "2m 6s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "materialdepot.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Material Depot"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"materialdepot.com is Material Depot, an online and offline seller of interior and home-building materials in India.\",\"url\":\"https://materialdepot.com/about\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Material Depot calls itself a 'One Stop Shop for All Material Needs' and says its online platform offers Tiles, Plywood, Laminates, Sanitaryware, and Hardware. The footer says it is powered by Mdepot Retail Technologies Private Limited.\"},{\"claim\":\"Material Depot announced a $10 million Series A round on 2026-02-05.\",\"url\":\"https://india.entrepreneur.com/news-and-trends/home-interiors-startup-material-depot-raises-usd-10-mn-in/502468\",\"publication_date\":\"2026-02-05\",\"event_date\":\"2026-02-05\",\"excerpt\":\"Entrepreneur reports: 'Material Depot has raised USD 10 million in a Series A funding round.'\"},{\"claim\":\"Accel and Stellaris Venture Partners co-led that Series A, with participation from Whiteboard Capital, DeVC, Soma Capital, and MyAsiaVC, plus angels.\",\"url\":\"https://india.entrepreneur.com/news-and-trends/home-interiors-startup-material-depot-raises-usd-10-mn-in/502468\",\"publication_date\":\"2026-02-05\",\"event_date\":\"2026-02-05\",\"excerpt\":\"The article says the round was 'co-led by Accel and Stellaris Venture Partners' and also included Whiteboard Capital, DeVC, Soma Capital, and MyAsiaVC.\"},{\"claim\":\"Economic Times independently corroborated the $10 million round and investor syndicate on 2026-02-05.\",\"url\":\"https://m.economictimes.com/tech/funding/interior-decor-startup-material-depot-raises-10-million-from-accel-stellaris-venture-partners/articleshow/127915373.cms\",\"publication_date\":\"2026-02-05\",\"event_date\":\"2026-02-05\",\"excerpt\":\"ET says Material Depot 'has raised $10 million in a funding round co-led by Accel and Stellaris Venture Partners' with participation from Whiteboard Capital, DeVC, Soma Capital, MyAsiaVC, and angels.\"},{\"claim\":\"As of the current company site in 2026, Material Depot presents itself as an active VC-backed company rather than an acquired or public company.\",\"url\":\"https://materialdepot.com/careers\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"The careers page says the company was 'Started in 2022' and is 'backed by Accel, Whiteboard, YCombinator, and other global investors' and is 'a small, well-funded company' with open positions.\"},{\"claim\":\"The company site names Y Combinator and Accel as investors and links to their profile pages.\",\"url\":\"https://materialdepot.com/about\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"The About page has an 'Our Investors' section linking to 'Material Depot @ YCombinator' and 'Material Depot @ Accel India'.\"}]",
+          "latest_round": "Series A",
+          "round_amount": "10 million",
+          "uncertainties": "The strongest round details available were from secondary reporting (Entrepreneur and Economic Times), while Accel's own 2026 post confirms partnership but does not state round amount or name. No primary regulatory filing or company press release with exact legal closing date was found in the allotted search budget, so the round date is treated as the public announcement date (2026-02-05), not a verified closing date. Lifecycle status is inferred from the current active company website and current self-description as VC-backed with open roles; no public evidence of an acquisition completion, IPO, or shutdown was found in the searches run, but absence of such evidence is not the same as a comprehensive legal clearance check.",
+          "lead_investors": "Accel; Stellaris Venture Partners",
+          "round_currency": "USD",
+          "company_identity": "Material Depot is an India-based retailer and marketplace for interior and home-building materials such as tiles, plywood, laminates, sanitaryware, and hardware, operated at materialdepot.com.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-02-05"
+        },
+        "reasoning": "Resolved the entity from the company website, then checked public reporting and investor/company pages for the most recent funding and current status. The best evidenced latest venture equity financing by the cutoff is the $10 million Series A announced on 2026-02-05, co-led by Accel and Stellaris. The current website and careers page show the business operating as a VC-backed private company with open hiring; no evidenced acquisition completion, IPO, or closure was found before the cutoff.",
+        "stepsTaken": [
+          "Searched Google with query \"site:materialdepot.com Material Depot funding acquisition Material Depot materialdepot.com\". The results are: \n {\"search_results\":[{\"title\":\"About Us\",\"link\":\"https://materialdepot.com/about?srsltid=AU7gw4Wc1DBnlPK_XSt9g1ELrb9bYaNA1mL64_H_gzjhiqndukot3H6Q\",\"snippet\":\"Material Depot is a one stop shop for interior design material. We are India's Largest Material Library and deliver materials across 750+ Brands across 5 ...\",\"position\":1},{\"title\":\"FAQs\",\"link\":\"https://materialdepot.com/faq?srsltid=AU7gw4UbDPttwB-JEzGEUtA25oxHo1J_es1D8dCltlOqVUcPjbJnvwB5\",\"snippet\":\"Material Depot specializes in providing ...",
+          "Used visitWebpage {\"url\":\"https://materialdepot.com/about?srsltid=AU7gw4Wc1DBnlPK_XSt9g1ELrb9bYaNA1mL64_H_gzjhiqndukot3H6Q\",\"question\":\"What does Material Depot say about its business, identity, company name, and any funding or investor information on this page?\"}. The results are: \n \"- Business/identity:\\n  - “One Stop Shop for All Material Needs”\\n  - “Welcome to Material Depot, our online platform offers a wide range of products, from Tiles and Plywood to Laminates, Sanitaryware, and Hardware, making it easy and convenient for you to find everything you need in one place.”\\n  - “At Material Depot, we understand the importance of providing high-quality materials at competitive prices. That's why we have established strong connections with distributors and wholesalers acros...",
+          "Searched Google with query \"Material Depot funding Accel Y Combinator acquisition IPO Mdepot Retail Technologies Private Limited\". The results are: \n {\"search_results\":[{\"title\":\"Material Depot: Funding, Team & Investors\",\"link\":\"https://startupintros.com/orgs/material-depot\",\"snippet\":\"Material Depot has raised $10.0M across 1 funding round. Most recently, it raised $10.0M Series A in February 2026. Raised. $10.0M. 1 funding ...\",\"date\":\"Jul 13, 2026\",\"position\":1},{\"title\":\"Material Depot Secures $10M in Series A Funding\",\"link\":\"https://www.linkedin.com/posts/yourstory-com_startupfunding-homeinteriors-materialdepot-activity-742514460465350...",
+          "Used visitWebpage {\"url\":\"https://www.accel.com/news/partnering-with-material-depot-building-design-first-indian-homes\",\"question\":\"What funding round, amount, date, investors, and company description does this Accel page state for Material Depot?\"}. The results are: \n \"Accel portfolio news page: “Partnering With Material Depot: Building Design-First Indian Homes” — published on February 4, 2026. Link context: https://accel.com/news/portfolio\\n\\nRelevant text:\\n- “We first partnered with the company through Accel Atoms when the team was early...”\\n- “By replacing uncertainty with clarity, Material Depot is defining a more design-first future for home building in India, and we are excited to continue our partnership.”\\n\\nCompany description context:\\n- “Materia...",
+          "Used visitWebpage {\"url\":\"https://m.economictimes.com/tech/funding/interior-decor-startup-material-depot-raises-10-million-from-accel-stellaris-venture-partners/articleshow/127915373.cms\",\"question\":\"What round, amount, announcement date, investors, company legal name, and any ownership/status information are stated for Material Depot in this article?\"}. The results are: \n \"Article: “Interior decor startup Material Depot raises $10 million from Accel, Stellaris Venture Partners” — https://m.economictimes.com/tech/funding/interior-decor-startup-material-depot-raises-10-million-from-accel-stellaris-venture-partners/comment/127915373.cms\\n\\nRelevant stated details:\\n- Announcement date: “Last Updated: Feb 05, 2026, 11:02:49 AM IST”\\n- Amount: “Material Depot has raised $10 million” / “The fresh capital...”\\n- Round: “in a funding round co-led by Accel and Stellaris V...",
+          "Used visitWebpage {\"url\":\"https://india.entrepreneur.com/news-and-trends/home-interiors-startup-material-depot-raises-usd-10-mn-in/502468\",\"question\":\"Does this article state the funding round name, amount, date, investors, and any company status information for Material Depot?\"}. The results are: \n \"Article: \\\"Home Interiors Startup Material Depot Raises USD 10 Mn in Series A Round\\\" | Date: Feb 05, 2026\\n\\nRelevant funding details stated:\\n- \\\"Material Depot has raised USD 10 million in a Series A funding round\\\"\\n- \\\"The funding round was co-led by Accel and Stellaris Venture Partners\\\"\\n- \\\"The round also saw participation from Whiteboard Capital, DeVC, Soma Capital, and MyAsiaVC\\\"\\n- Angel investors listed: Ramakant Sharma (Livspace), Ankit Nagori (Curefoods), Shashvat Nakrani (BharatP...",
+          "Searched Google with query \"Material Depot acquisition IPO listed Mdepot Retail Technologies Private Limited 2026\". The results are: \n {\"search_results\":[{\"title\":\"Material Depot - 2026 Company Profile & Team\",\"link\":\"https://tracxn.com/d/companies/material-depot/__h6JPSGPb338kmAQ7cRuYPp2g-pMC-mesb5Sg20N8KTc\",\"snippet\":\"MDEPOT RETAIL TECHNOLOGIES PRIVATE LIMITED. Current Status: Active Date of Incorporation: Feb 14, 2024. Count: 149 (As on May 01, 2026)\",\"date\":\"Sep 18, 2026\",\"position\":1},{\"title\":\"Material Depot - Valuation, Funding & Investors\",\"link\":\"https://pitchbook.com/profiles/company/494864-92\",\"snippet\":\"Information ...",
+          "Used visitWebpage {\"url\":\"https://materialdepot.com/careers?srsltid=AU7gw4WKqq9jOZfnJpEyobfnTprdJzr_xRckohreY8_jfh8roZ0Bvxh1\",\"question\":\"What does the careers page say about Material Depot's investors, current expansion plans, and whether it is an independent private company?\"}. The results are: \n \"Careers page: https://materialdepot.com/careers\\n\\nRelevant text from the careers page:\\n- “Started in 2022 by Manish (ex-BCG) and Sarthak (IITB Alum)...”\\n- “Funded by prominent Global VCs including Accel, Whiteboard, and Y-Combinator among others, they seek to expand their team and hiring across roles.”\\n- “We are backed by Accel, Whiteboard, YCombinator, and other global investors, and are a small, well-funded company.”\\n- “they seek to expand their team and hiring across roles.”\\n- “Join ou..."
+        ]
+      }
+    }
+  ]
+}

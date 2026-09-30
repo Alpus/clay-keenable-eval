@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6ctzx7byXRDbtBtc",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:20:23.686Z",
+  "duration": "2m 20s",
+  "dataCreditsUsed": 3.5,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6ctzgtM43EkHm4f3",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:20:23.690Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "ansys.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Ansys"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6ctzruwEGF94pZWR",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:20:23.759Z",
+      "completedAt": "2026-09-30T11:22:44.104Z",
+      "duration": "2m 20s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "ansys.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Ansys"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "Synopsys",
+          "evidence": "[{\"claim\":\"Ansys is an engineering simulation software business; its site says Ansys, part of Synopsys, helps engineers design smarter products and offers simulation software across fluids, electronics, structures, optics and 3D design.\",\"url\":\"https://www.ansys.com/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"The homepage says 'Ansys, part of Synopsys empowers engineers to design smarter products' and lists engineering simulation software categories including CFD fluids, electronics multiphysics, structures and 3D design.\"},{\"claim\":\"Synopsys announced completion of its acquisition of Ansys on July 17, 2025.\",\"url\":\"https://investors.ansys.com/investor-relations/\",\"publication_date\":\"unknown\",\"event_date\":\"2025-07-17\",\"excerpt\":\"The Ansys Investor Relations page states: 'On July 17, 2025, Synopsys (NASDAQ: SNPS) announced the successful completion of its acquisition of Ansys.'\"},{\"claim\":\"After the acquisition completed, Ansys stock stopped trading on Nasdaq, indicating it is no longer an independently listed public company.\",\"url\":\"https://investors.ansys.com/investor-relations/\",\"publication_date\":\"unknown\",\"event_date\":\"2025-07-17\",\"excerpt\":\"The same page states: 'As a result of the completion of the acquisition, Ansys' stock ceased trading on NASDAQ.'\"},{\"claim\":\"The acquisition was originally announced on January 16, 2024, with consideration of $197.00 in cash plus 0.3450 Synopsys shares per Ansys share.\",\"url\":\"https://news.synopsys.com/2024-01-16-Synopsys-to-Acquire-Ansys,-Creating-a-Leader-in-Silicon-to-Systems-Design-Solutions\",\"publication_date\":\"2024-01-16\",\"event_date\":\"2024-01-16\",\"excerpt\":\"Synopsys' press release says Ansys shareholders will receive '$197.00 in cash and 0.3450 shares of Synopsys common stock for each Ansys share.'\"},{\"claim\":\"Synopsys' completion announcement also references that the transaction had been announced on January 16, 2024.\",\"url\":\"https://news.synopsys.com/2025-07-17-Synopsys-Completes-Acquisition-of-Ansys\",\"publication_date\":\"2025-07-17\",\"event_date\":\"2025-07-17\",\"excerpt\":\"Google's result snippet for Synopsys' July 17, 2025 release says: 'The transaction, which was announced on January 16, 2024...' This supports the distinction between announcement and closing dates, though the snippet is secondary evidence.\"}]",
+          "latest_round": "unknown",
+          "round_amount": "unknown",
+          "uncertainties": "No credible public evidence was found in the research window for a venture equity financing round or extension for Ansys. Ansys was a long-public company and then an acquisition target; merger consideration is not a funding round. The January 16, 2024 date is the acquisition announcement date, while July 17, 2025 is the completion/closing date. One direct scrape of the Ansys acquisition-announcement page failed, so the Jan. 16, 2024 announcement details are supported by Synopsys' press release and a search-result snippet for the completion release.",
+          "lead_investors": "unknown",
+          "round_currency": "unknown",
+          "company_identity": "Ansys is an engineering simulation software company that sells multiphysics, CFD, electronics, structural, optics and 3D design software and related services.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2025-07-17",
+          "round_announcement_date": "unknown"
+        },
+        "reasoning": "I resolved ansys.com to the engineering simulation software company Ansys using its homepage. I found primary evidence on Ansys Investor Relations that Synopsys successfully completed the acquisition on 2025-07-17 and that Ansys stock ceased trading on NASDAQ, which supports lifecycle status 'acquired'. I found Synopsys' primary announcement press release from 2024-01-16 for the merger announcement and consideration terms. I did not find reliable evidence of a later or relevant venture equity round; because Ansys was a public company and then acquired, I report the latest venture round as unknown rather than conflating M&A consideration with financing.",
+        "stepsTaken": [
+          "Searched Google with query \"Ansys ansys.com investor relations acquisition status latest funding round public company site:ansys.com OR site:investors.ansys.com\". The results are: \n {\"search_results\":[{\"title\":\"Investor Relations | ANSYS, Inc.\",\"link\":\"https://investors.ansys.com/investor-relations/\",\"snippet\":\"On July 17, 2025, Synopsys (NASDAQ: SNPS) announced the successful completion of its acquisition of Ansys. Ansys' stock ceased trading on NASDAQ.\",\"position\":1},{\"title\":\"Ansys Announces Q4 and FY 2024 Financial Results\",\"link\":\"https://investors.ansys.com/news-releases/news-release-details/ansys-announces-q4-and-fy-2024-financial-results/\",\"snippet\":\"on January 15, ...",
+          "Used visitWebpage {\"url\":\"https://investors.ansys.com/investor-relations/\",\"question\":\"What does this page say about the acquisition status of Ansys, the date, and whether Ansys stock still trades on Nasdaq?\"}. The results are: \n \"Relevant page text from Ansys Investor Relations:\\n- \\\"Synopsys completes acquisition of Ansys\\\"\\n- \\\"On July 17, 2025, Synopsys (NASDAQ: SNPS) announced the successful completion of its acquisition of Ansys.\\\"\\n- \\\"As a result of the completion of the acquisition, Ansys' stock ceased trading on NASDAQ.\\\"\\n- \\\"For current information on the combined company, please visit Synopsys Investor Relations.\\\"\\n\\nRelevant link:\\n- Synopsys Investor Relations: https://investor.synopsys.com/overview/defau...",
+          "Searched Google with query \"site:ansys.com Ansys company engineering simulation software about Ansys\". The results are: \n {\"search_results\":[{\"title\":\"Ansys | Engineering Simulation Software\",\"link\":\"https://www.ansys.com/\",\"snippet\":\"Ansys engineering simulation and 3D design software delivers product modeling solutions with unmatched scalability and a comprehensive multiphysics ...\",\"position\":1},{\"title\":\"Ansys Products - Engineering Simulation Software - Synopsys\",\"link\":\"https://www.ansys.com/products\",\"snippet\":\"Ansys offers a comprehensive software suite that spans the entire range of physics, providing acce...",
+          "Used visitWebpage {\"url\":\"https://www.ansys.com/\",\"question\":\"How does the company describe itself and its products or services on this page?\"}. The results are: \n \"- “Igniting Innovation From Silicon to Systems: Synopsys and Ansys Are Now United”\\n- “Synopsys and Ansys power the future of innovation—connecting silicon to systems.”\\n- “Ansys, part of Synopsys empowers engineers to design smarter products, reduce physical testing, and accelerate differentiated systems in the era of pervasive intelligence.”\\n- “EMPOWER INNOVATORS TO DRIVE HUMAN ADVANCEMENT”\\n- “50+ YEARS OF TECHNOLOGY INNOVATION”\\n\\nProducts/services descriptions on the page:\\n- “Facing engi...",
+          "Used visitWebpage {\"url\":\"https://investors.ansys.com/news-releases/news-release-details/synopsys-acquire-ansys-creating-leader-silicon-systems-design/\",\"question\":\"What is the announcement date of the Synopsys acquisition of Ansys, and does this page describe the transaction consideration?\"}. The results are: \n {\"status\":\"ERROR\",\"message\":\"Error using the website scrape tool. The tool returned an error.\",\"errorDetails\":\"Unknown error in tool execution\",\"errorType\":\"ToolExecutionResponseError\"}",
+          "Searched Google with query \"Synopsys Ansys acquisition announced January 2024 press release Synopsys\". The results are: \n {\"search_results\":[{\"title\":\"Synopsys Completes Acquisition of Ansys - Jul 17, 2025\",\"link\":\"https://news.synopsys.com/2025-07-17-Synopsys-Completes-Acquisition-of-Ansys\",\"snippet\":\"The transaction, which was announced on January 16, 2024, combines leaders in silicon design, IP and simulation and analysis\",\"date\":\"Jul 17, 2025\",\"position\":1},{\"title\":\"Synopsys and Ansys are Now United\",\"link\":\"https://www.synopsys.com/synopsys-ansys-united.html\",\"snippet\":\"Synopsys acquires Ansys, marking a new ...",
+          "Used visitWebpage {\"url\":\"https://news.synopsys.com/2024-01-16-Synopsys-to-Acquire-Ansys,-Creating-a-Leader-in-Silicon-to-Systems-Design-Solutions\",\"question\":\"What is the announcement date and merger consideration described on this press release?\"}. The results are: \n \"Press release: “Synopsys to Acquire Ansys, Creating a Leader in Silicon to Systems Design Solutions” — announcement date shown in the release URL/title: January 16, 2024. Source: https://news.synopsys.com/2024-01-16-Synopsys-to-Acquire-Ansys,-Creating-a-Leader-in-Silicon-to-Systems-Design-Solutions#assets_117:19206\\n\\nRelevant merger consideration text from the release: “Under the terms of the agreement, Ansys shareholders will receive $197.00 in cash and 0.3450 shares of Synopsys common stock ...",
+          "Searched Google with query \"Ansys funding round venture capital raised Ansys latest funding\". The results are: \n {\"search_results\":[{\"title\":\"Ansys - 2026 Company Profile, Funding, Competitors & ...\",\"link\":\"https://tracxn.com/d/companies/ansys/__fyx8e_Q4H-qXAKixM809yvLfJiZX6HSH3giZKPBZ3oI\",\"snippet\":\"Ansys has raised funding over 20 rounds. Its first funding round was on 1994. Its latest funding round was a Grant (prize money) round on Oct 09 ...\",\"date\":\"Aug 31, 2026\",\"position\":1},{\"title\":\"Ideation & Scaling up Startups - Engineering What's Ahead!\",\"link\":\"https://ansys.synopsys.com/events/startup-webi..."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6d60wsksva5eSdU4",
+  "workflow": {
+    "id": "wf_0tm6d21AuFsz5iFGM8e",
+    "name": "Funding lifecycle evaluation C"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:27:36.833Z",
+  "duration": "1m 21s",
+  "dataCreditsUsed": 4.5,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6d60vWYXmqn7H9wP",
+      "nodeId": "wfn_0tm6d21iRtaxx429Y8Q",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:27:36.839Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "nscale.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Nscale"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6d60ZHavQ5TDRDVZ",
+      "nodeId": "wfn_0tm6d4f6jZzvkGe2wpS",
+      "nodeName": "Company research C",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:27:36.858Z",
+      "completedAt": "2026-09-30T11:28:57.897Z",
+      "duration": "1m 21s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "nscale.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Nscale"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"The company at nscale.com is Nscale, a UK-based AI infrastructure hyperscaler / full-stack AI hyperscaler providing AI cloud infrastructure and services.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm\",\"publication_date\":\"2026-09-18\",\"event_date\":\"2026-09-18\",\"excerpt\":\"Nscale is a full-stack AI hyperscaler... we deliver AI infrastructure and services to some of the most important technology companies globally.\"},{\"claim\":\"Nscale announced a $2.0 billion Series C financing led by Aker ASA and 8090 Industries, valuing the company at $14.6 billion.\",\"url\":\"https://www.nscale.com/press-releases/nscale-series-c\",\"publication_date\":\"2026-03-09\",\"event_date\":\"2026-03-09\",\"excerpt\":\"Nscale today announced its $2 billion in Series C funding, led by Aker ASA and 8090 Industries. This round values Nscale at $14.6 billion.\"},{\"claim\":\"The Series C was supported by Astra Capital Management, Citadel, Dell, Jane Street, Lenovo, Linden Advisors, Nokia, NVIDIA, and Point72, and the company said the raise was inclusive of the Pre-Series C SAFE.\",\"url\":\"https://www.nscale.com/press-releases/nscale-series-c\",\"publication_date\":\"2026-03-09\",\"event_date\":\"2026-03-09\",\"excerpt\":\"The funding round was supported by Astra Capital Management, Citadel, Dell, Jane Street, Lenovo, Linden Advisors, Nokia, NVIDIA, and Point72... inclusive of the Pre-Series C SAFE.\"},{\"claim\":\"As of the cutoff, Nscale had filed for an IPO but was not yet public because the SEC registration statement was not yet effective.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm\",\"publication_date\":\"2026-09-18\",\"event_date\":\"2026-09-18\",\"excerpt\":\"We may not sell these securities until the registration statement filed with the Securities and Exchange Commission is effective... We intend to apply to list our ordinary shares on the New York Stock Exchange under the symbol 'NSCL'.\"},{\"claim\":\"A newer September 2026 financing existed, but it was pre-IPO convertible loan notes rather than a venture equity round, so it does not replace the Series C as latest venture equity financing.\",\"url\":\"https://techfundingnews.com/nscale-raises-3-36b-in-pre-ipo-financing-to-accelerate-full-stack-ai-cloud-expansion/\",\"publication_date\":\"2026-09-28\",\"event_date\":\"2026-09-25\",\"excerpt\":\"Financing type: Convertible loan notes. Amount: $3.36 billion... Lead investors: Third Point... IPO filing date: September 18.\"}]",
+          "latest_round": "Series C",
+          "round_amount": "2000000000",
+          "uncertainties": "The March 9, 2026 company press release clearly announces the Series C, but I did not find separate public evidence for its legal closing date, so the round_announcement_date is used. In late September 2026, Nscale also announced $3.36 billion of pre-IPO convertible loan notes led by Third Point; because this was debt/convertible financing rather than a venture equity round, it is excluded from latest_round. Nscale filed an S-1 on 2026-09-18 for a proposed NYSE listing under NSCL, but the filing states it was not yet effective, so by the 2026-09-30 cutoff the company is evidenced as still private rather than public. No evidence was found of a completed acquisition of Nscale or an IPO completion before the cutoff.",
+          "lead_investors": "Aker ASA; 8090 Industries",
+          "round_currency": "USD",
+          "company_identity": "Nscale is a UK-based full-stack AI hyperscaler that sells AI cloud infrastructure and services.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "2026-09-18",
+          "round_announcement_date": "2026-03-09"
+        },
+        "reasoning": "I resolved the entity using the SEC S-1 and the company press release. The strongest evidence for the latest venture equity financing is Nscale's own 2026-03-09 Series C announcement for $2.0 billion led by Aker ASA and 8090 Industries. I then performed a freshness check and found newer September 2026 financing, but it was explicitly convertible loan notes, not an equity round, so it does not supersede the Series C for this task. For lifecycle, the SEC filing on 2026-09-18 is direct evidence that Nscale had only filed for a proposed IPO and the registration statement was not yet effective by the cutoff, so the company remained private and independent as of 2026-09-30.",
+        "stepsTaken": [
+          "Searched Google with query \"site:nscale.com Nscale funding round investor acquisition IPO nscale.com\". The results are: \n {\"search_results\":[{\"title\":\"Nscale Raises $2 Billion in Series C\",\"link\":\"https://www.nscale.com/press-releases/nscale-series-c\",\"snippet\":\"Nscale today announced its $2 billion in Series C funding, led by Aker ASA and 8090 Industries. This round values Nscale at $14.6 billion. ...\",\"date\":\"Mar 9, 2026\",\"position\":1},{\"title\":\"Nscale Raises the Largest Series B in European History, at ...\",\"link\":\"https://www.nscale.com/press-releases/nscale-series-b\",\"snippet\":\"Nscale raises the largest Series...",
+          "Used visitWebpage {\"url\":\"https://www.nscale.com/press-releases/nscale-series-c\",\"question\":\"What was announced in this press release: round type, amount, date, lead investors, valuation, and any company description?\"}. The results are: \n \"Source: https://nscale.com/press-releases/nscale-series-c\\n\\nPress release title: “Nscale Raises $2 Billion in Series C — the Largest in European History”\\nDate: March 9, 2026\\n\\nRelevant announcement details:\\n- “U.K.- based AI infrastructure hyperscaler Nscale today announced its $2 billion in Series C funding, led by Aker ASA and 8090 Industries.”\\n- “This round values Nscale at $14.6 billion.”\\n- “The funding round was supported by Astra Capital Management, Citadel, Dell, Jane Street, Lenov...",
+          "Searched Google with query \"Nscale IPO acquisition public listing announced completed 2026 site:nscale.com OR site:reuters.com OR site:bloomberg.com\". The results are: \n {\"search_results\":[{\"title\":\"Nvidia-backed UK AI firm Nscale hires banks for IPO, ...\",\"link\":\"https://www.reuters.com/business/nvidia-backed-uk-ai-firm-nscale-hires-banks-ipo-sources-say-2026-02-03/\",\"snippet\":\"Nscale plans an IPO in the back half of 2026. The company said in October it would deploy around 200,000 Nvidia chips for Microsoft across its ...\",\"date\":\"Feb 3, 2026\",\"position\":1},{\"title\":\"Nscale Targets September US IPO With $51 Billion in ...\",\"link\":\"https://www.bloomberg.com/news...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Recent public evidence about Nscale company at nscale.com after March 2026 covering IPO filing, listing status, acquisition completion, or newer financing round by September 30 2026\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"2026-03-10\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":500,\"max_results\":5,\"session_id\":\"nscale-20260930\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Nscale IPO 2026 — S-1 Filed for NYSE: NSCL, $103.4B Backlog, $140.6M H1 Revenue, $1.02B Loss | QuantLogix\\nURL: https://quantlogix.ai/briefing/quantlogix-ipo-brief-nscale-2026-09-19\\nPublished: 2026-09-19\\nAcquired: 2026-09-20\\nSnippets:\\nNscale bought the Monarch site’s owner, AIPCorp, in March 2026 for $792.6M: $99.6M in cash and $693.0M in Series C shares.\\n\\n---\\n\\nTitle: Nscale's $103 Billion Backlog Versus $500 Million in Revenue\\nURL: https://ainv...",
+          "Searched Google with query \"Reuters September 2026 Nscale filed registration statement IPO pre-IPO financing\". The results are: \n {\"search_results\":[{\"title\":\"Nscale Secures $3.36 Billion in Pre-IPO Financing Led by ...\",\"link\":\"https://test.theenergymag.com/news/market-news/nscale-secures-3-36-billion-convertible-debt-ai\",\"snippet\":\"Nscale announced $3.36 billion in convertible financing led by Third Point, adding funding for its artificial-intelligence infrastructure ...\",\"date\":\"5 days ago\",\"position\":1},{\"title\":\"Form 4 Themes ETF Trust For: 24 September\",\"link\":\"https://in.investing.com/news/stock-market-news/form-4-t...",
+          "Searched Google with query \"SEC Nscale registration statement September 2026 NSCL\". The results are: \n {\"search_results\":[{\"title\":\"S-1\",\"link\":\"https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm\",\"snippet\":\"As filed with the Securities and Exchange Commission on September 18, 2026. Registration No. 333‑. UNITED STATES SECURITIES AND EXCHANGE COMMISSION.\",\"position\":1},{\"title\":\"Nscale Files Registration Statement for Proposed Initial ...\",\"link\":\"https://www.nscale.com/press-releases/nscale-files-initial-public-offering\",\"snippet\":\"LONDON, U.K., Septembe...",
+          "Used visitWebpage {\"url\":\"https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm\",\"question\":\"What does this filing say about Nscale's IPO status and company identity? Find filing date, whether the registration statement is effective, ticker, exchange, and a brief description of the business.\"}. The results are: \n \"- Filing date: “As filed with the Securities and Exchange Commission on September 18, 2026.”\\n- Effectiveness / IPO status:\\n  - “The information in this prospectus is not complete and may be changed. We may not sell these securities until the registration statement filed with the Securities and Exchange Commission is effective.”\\n  - “PRELIMINARY PROSPECTUS SUBJECT TO COMPLETION, DATED , 2026”\\n  - “The registrant hereby amends this registration statement on such date or dates as may be necess...",
+          "Used keenable-public-evaluation-fetch_page_content {\"url\":\"https://techfundingnews.com/nscale-raises-3-36b-in-pre-ipo-financing-to-accelerate-full-stack-ai-cloud-expansion\",\"max_chars\":4000,\"live\":false,\"prompt\":\"Extract only the details about the financing type, amount, date announced, any lead investors, and whether this financing is equity or convertible loan notes for Nscale. Include any mention of an IPO filing date.\",\"session_id\":\"nscale-20260930\",\"output_format\":\"text\"}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Nscale raises $3.36B in pre-IPO financing to accelerate full-stack AI cloud expansion\\nURL: https://techfundingnews.com/nscale-raises-3-36b-in-pre-ipo-financing-to-accelerate-full-stack-ai-cloud-expansion/\\n\\nFinancing type: Convertible loan notes\\nAmount: $3.36 billion\\nDate announced: September 25\\nLead investors: Third Point\\nEquity or convertible loan notes: Convertible loan notes\\nIPO filing date: September 18\"}]}"
+        ]
+      }
+    }
+  ]
+}

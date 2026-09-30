@@ -1,0 +1,89 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6c6yi64tDN4UYHNU",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:06:34.452Z",
+  "duration": "2m 11s",
+  "dataCreditsUsed": 6,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6c6yCXyGsmUs9WoQ",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:06:34.464Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "biorce.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Biorce"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6c6yMsCofUdz96MD",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:06:34.480Z",
+      "completedAt": "2026-09-30T11:08:45.613Z",
+      "duration": "2m 11s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "biorce.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Biorce"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Biorce at biorce.com is a Barcelona-based health AI company building Aika, a unified clinical trial infrastructure / operating system for clinical development.\",\"url\":\"https://biorce.com\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Biorce says it is building 'Aika, the first unified clinical trial infrastructure for agile clinical teams' and 'The first operating system for clinical development.'\"},{\"claim\":\"Biorce's latest evidenced venture equity round by the 2026-09-30 cutoff is a Series A of $52.5 million.\",\"url\":\"https://www.einpresswire.com/article/888335966/biorce-closes-52-5mm-series-a-to-accelerate-international-expansion-lead-transformation-of-clinical-trials-through-ai\",\"publication_date\":\"2026-02-02\",\"event_date\":\"2026-02-02\",\"excerpt\":\"The press release states Biorce 'has closed a $52.5 million Series A round.'\"},{\"claim\":\"The 2026 Series A included new investment from DST Global Partners, increased participation from existing investors Norrsken VC and YZR Capital, plus participation from Mustard Seed Maze and Endeavor Catalyst and several angels.\",\"url\":\"https://www.einpresswire.com/article/888335966/biorce-closes-52-5mm-series-a-to-accelerate-international-expansion-lead-transformation-of-clinical-trials-through-ai\",\"publication_date\":\"2026-02-02\",\"event_date\":\"2026-02-02\",\"excerpt\":\"The release says: 'The financing includes new investment from DST Global Partners, existing investors Norrsken VC and YZR Capital increasing their participation, alongside participation from Mustard Seed Maze and Endeavor Catalyst,' plus named angel investors.\"},{\"claim\":\"Before the Series A, Biorce had raised €8.5 million in seed financing: €3.5 million in November 2024 and a €5 million extension from Norrsken VC in summer 2025.\",\"url\":\"https://www.einpresswire.com/article/888335966/biorce-closes-52-5mm-series-a-to-accelerate-international-expansion-lead-transformation-of-clinical-trials-through-ai\",\"publication_date\":\"2026-02-02\",\"event_date\":\"2024-11 / 2025-summer\",\"excerpt\":\"The release says Biorce 'successfully closed €8.5 million in seed investment — €3.5m in November 2024, followed by a €5 million extension from Norrsken VC in summer 2025.'\"},{\"claim\":\"Independent reporting on 2026-02-02 also described the latest round as a $52.5 million Series A and listed participating investors, though with some investor-name discrepancies versus the press release.\",\"url\":\"https://www.clinicaltrialsarena.com/news/biorce-series-a-funding-round-ai-clinical-trials/\",\"publication_date\":\"2026-02-02\",\"event_date\":\"2026-02-02\",\"excerpt\":\"Clinical Trials Arena wrote that Biorce 'has secured $52.5m through a Series A funding round' and named investors including 'TZR Capital, Endeavour Catalyst, Norrsken VC and Mustard Seed Maze' plus angels; it also repeated the prior €8.5m seed + extension history.\"},{\"claim\":\"As of 2026, Biorce appears to be operating independently, with an active product, demo, login, careers, and contact presence on its own site and fresh 2026 media updates; no public evidence found in this research indicated a completed acquisition, IPO, or closure before the cutoff.\",\"url\":\"https://biorce.com/about-us\",\"publication_date\":\"unknown\",\"event_date\":\"2026\",\"excerpt\":\"The company site shows active operations including Aika product pages, demo booking, login, careers, and contact pages; the footer shows '@2026 Biorce'. Its media hub also contains 2026 items such as a 2026-07-23 press release and 2026-08-28 news mention.\"}]",
+          "latest_round": "Series A",
+          "round_amount": "52.5 million",
+          "uncertainties": "No primary source found in this research explicitly names the lead investor(s) for the Series A. The Biorce press release names DST Global Partners as a new investor and Norrsken VC and YZR Capital as existing investors increasing participation, but does not say who led the round. Independent reporting conflicts on one investor name: Clinical Trials Arena lists TZR Capital, while the EIN Presswire release lists YZR Capital. I found no affirmative public evidence of an acquisition, IPO, or closure before 2026-09-30; lifecycle is therefore based on evidence of ongoing independent operations rather than an explicit statement of private ownership.",
+          "lead_investors": "unknown",
+          "round_currency": "USD",
+          "company_identity": "Biorce is a Barcelona-based health AI company that sells Aika, an AI-powered operating system/infrastructure platform for clinical development and clinical trials.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-02-02"
+        },
+        "reasoning": "I resolved the company using biorce.com, then used the company site and media hub to identify the business and confirm active 2026 operations. For financing, the strongest available dated source I found was a 2026-02-02 press release syndicated via EIN Presswire stating Biorce closed a $52.5 million Series A, with named investors and prior seed history. I cross-checked this with Clinical Trials Arena on the same date. I also searched for acquisition/IPO evidence and found none; combined with active 2026 company operations, that supports classifying Biorce as private_independent as of the cutoff, while explicitly noting the absence of affirmative ownership-event evidence and the investor-name discrepancy.",
+        "stepsTaken": [
+          "Searched Google with query \"Biorce biorce.com funding acquisition IPO site:biorce.com OR Crunchbase OR TechCrunch\". The results are: \n {\"search_results\":[{\"title\":\"Biorce 2026 Company Profile: Valuation, Funding & Investors\",\"link\":\"https://pitchbook.com/profiles/company/590860-72\",\"snippet\":\"Information on valuation, funding, cap tables, investors, and executives for Biorce. acquisition, IPO, or no exit event. Biorce has raised $62.8M. are 5 of 17 ...\",\"position\":1},{\"title\":\"List of top Spain Biotechnology Companies\",\"link\":\"https://www.crunchbase.com/hub/spain-biotechnology-companies\",\"snippet\":\"This list of companies and st...",
+          "Used visitWebpage {\"url\":\"https://biorce.com\",\"question\":\"What company is this, what does it sell, and is there any press or news page mentioning funding, investors, acquisition, or IPO?\"}. The results are: \n \"Company: Biorce\\nWebsite: https://biorce.com\\nLinkedIn: https://linkedin.com/company/biorce\\n\\nWhat it sells / product:\\n- “Biorce is building Aika, the first unified clinical trial infrastructure for agile clinical teams.”\\n- “The first operating system for clinical development”\\n- “Aika is the operating system that orchestrates clinical development from end-to-end. Combining domain-specific AI and clinical intelligence across every stage of trial development.”\\n- Product areas mentioned: Prot...",
+          "Used visitWebpage {\"url\":\"https://biorce.com/media-hub\",\"question\":\"Find press releases or news items on this page mentioning funding, financing, investors, acquisition, IPO, or company milestones, with dates and links.\"}. The results are: \n \"- Aug 28, 2026 — In the news — “Biorce Featured by Endeavor CEO on Entrepreneurial Success” — Endeavor CEO Linda Rottenberg features Biorce alongside SpaceX, ElevenLabs and Cashea in this Inc. article. Link: https://inc.com/linda-rottenberg/the-biggest-lesson-from-spacexs-ipo-isnt-about-billion-dollar-opportunities/91371262\\n- Jul 23, 2026 — Press Releases — “Biorce Takes Aika 2.0 to BIO 2026” — Biorce brings Aika 2.0 to BIO 2026 with live demo rides in San Diego. Link: https://biorce.com/media...",
+          "Searched Google with query \"site:biorce.com/media-hub Biorce funding Series A investors\". The results are: \n {\"message\":\"No data returned from search query\"}",
+          "Searched Google with query \"Biorce Series A investors 2026 press release\". The results are: \n {\"search_results\":[{\"title\":\"Biorce secures $52.5m in Series A to expand AI clinical ...\",\"link\":\"https://www.clinicaltrialsarena.com/news/biorce-series-a-funding-round-ai-clinical-trials/\",\"snippet\":\"On top of Biorce's Series A financing, the company raised a further €8.5m ($10m), consisting of a €3.5m raise in November 2024, as well as a €5m ...\",\"date\":\"Feb 2, 2026\",\"position\":1},{\"title\":\"Biorce closes a $52.5 million funding round to accelerate ...\",\"link\":\"https://biotech-spain.com/en/arti...",
+          "Used visitWebpage {\"url\":\"https://www.clinicaltrialsarena.com/news/biorce-series-a-funding-round-ai-clinical-trials/\",\"question\":\"What does this article say about Biorce's latest funding round: round type, amount, announcement date, lead investors, any prior rounds mentioned, and any evidence about company status?\"}. The results are: \n \"Article: “Biorce secures $52.5m in Series A to expand AI clinical trial tech” — Clinical Trials Arena (Copy Link: https://clinicaltrialsarena.com/news/biorce-series-a-funding-round-ai-clinical-trials)\\nAuthor/date: Annabel Kartal Allen, February 2, 2026.\\n\\nRelevant excerpts/data:\\n- “Spanish healthtech company Biorce has secured $52.5m through a Series A funding round…”\\n- “The financing round, which includes investors TZR Capital, Endeavour Catalyst, Norrsken VC and Mustard Seed Maze, as well...",
+          "Searched Google with query \"Biorce closes $52.5 million Series A press release DST Global Partners Endeavour Catalyst Norrsken VC Mustard Seed Maze\". The results are: \n {\"search_results\":[{\"title\":\"Biorce closes $52.5MM Series A to accelerate international ...\",\"link\":\"https://www.clarionledger.com/press-release/story/108821/biorce-closes-52-5mm-series-a-to-accelerate-international-expansion-lead-transformation-of-clinical-trials-through-ai/\",\"snippet\":\"Over a 12 month period, the company has successfully closed €8.5 million in seed investment — €3.5m in November 2024, followed by a €5 million extension from ...\",\"position\":1},{\"title\":\"Biorce closes $52.5MM Se...",
+          "Used visitWebpage {\"url\":\"https://biotech-spain.com/en/articles/biorce-closes-a-52-5-million-funding-round-to-accelerate-the-development-of-its-artificial-intelligence-software-for-clinical-trials/\",\"question\":\"Extract the funding details for Biorce: round type, amount, investors, whether any investors are described as leading, previous rounds, and the publication date. Also note any claim about company status or expansion.\"}. The results are: \n \"Relevant webpage context: article slug/title only — “Biorce-closes-a-52-5-million-funding-round-to-accelerate-the-development-of-its-artificial-intelligence-software-for-clinical-trials” (home/articles path on Biotech-Spain). This implies a funding amount of 52.5 million and a claim that the funding will accelerate development of its AI software for clinical trials. No round type, investors, lead investors, previous rounds, publication date, or explicit company status/expansion details are show...",
+          "Searched Google with query \"Biorce acquisition IPO 2026 Biorce announced acquired public\". The results are: \n {\"search_results\":[{\"title\":\"Biorce 2026 Company Profile: Valuation, Funding & Investors\",\"link\":\"https://pitchbook.com/profiles/company/590860-72\",\"snippet\":\"Biorce's primary industry is Discovery Tools (Healthcare). Is Biorce a private or public company? Biorce is a Private company. What is Biorce's current revenue?\",\"position\":1},{\"title\":\"Biorce closes $52.5MM Series A to accelerate international ...\",\"link\":\"https://www.einpresswire.com/article/888335966/biorce-closes-52-5mm-series-a-to-acc...",
+          "Used visitWebpage {\"url\":\"https://www.einpresswire.com/article/888335966/biorce-closes-52-5mm-series-a-to-accelerate-international-expansion-lead-transformation-of-clinical-trials-through-ai\",\"question\":\"Extract the exact funding details from this press release: round type, amount, announcement date, named investors, any investors explicitly described as leading or new/existing, prior rounds or extensions, and any company identity details.\"}. The results are: \n \"Press release: “Biorce closes $52.5MM Series A to accelerate international expansion, lead transformation of clinical trials through AI”\\nLink: https://einpresswire.com/article/888335966/biorce-closes-52-5mm-series-a-to-accelerate-international-expansion-lead-transformation-of-clinical-trials-through-ai\\nAnnouncement date: February 02, 2026, 14:05 GMT\\n\\nCompany identity details:\\n- Biorce\\n- “a Barcelona-based health AI company specialized in applying artificial intelligence to the design and ...",
+          "Used visitWebpage {\"url\":\"https://www.biorce.com/about-us\",\"question\":\"Summarize who Biorce is from this company page, including what it sells and any dated milestones or operational facts that show it was operating independently in 2026.\"}. The results are: \n \"- Company: **Biorce**\\n- Company page / story: https://biorce.com/about-us#our-story\\n- Main site: https://biorce.com\\n- Product page: https://biorce.com/our-platform\\n- Demo: https://biorce.com/demo-form\\n- Product access link: **Access Aika**: https://aika.biorce.com/login\\n- Careers / hiring page: https://revolutpeople.com/biorce/public/careers\\n- FAQ: https://biorce.com/faq\\n- Headquarters/contact page: https://biorce.com/contact#headquarters\\n\\nRelevant company description:\\n- Tagline/purp..."
+        ]
+      }
+    }
+  ]
+}

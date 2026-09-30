@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6dhj4B4ifuNJRVXd",
+  "workflow": {
+    "id": "wf_0tm6d21AuFsz5iFGM8e",
+    "name": "Funding lifecycle evaluation C"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:34:31.524Z",
+  "duration": "1m 15s",
+  "dataCreditsUsed": 3.2,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6dhjMTvh8mGZjmN3",
+      "nodeId": "wfn_0tm6d21iRtaxx429Y8Q",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:34:31.532Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "isomorphiclabs.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Isomorphic Labs"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6dhjx7Hbd5HehpAP",
+      "nodeId": "wfn_0tm6d4f6jZzvkGe2wpS",
+      "nodeName": "Company research C",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:34:31.551Z",
+      "completedAt": "2026-09-30T11:35:46.790Z",
+      "duration": "1m 15s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "isomorphiclabs.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Isomorphic Labs"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"The company at isomorphiclabs.com is Isomorphic Labs, an AI drug-discovery company using predictive and generative AI models to design medicines.\",\"url\":\"https://www.isomorphiclabs.com/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Company site says Isomorphic Labs is focused on using AI to transform drug discovery and advance human health, building predictive and generative AI models to help design novel molecules and develop medicines.\"},{\"claim\":\"Isomorphic Labs announced a $2.1 billion Series B financing on 2026-05-12.\",\"url\":\"https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-series-b-investment-round\",\"publication_date\":\"2026-05-12\",\"event_date\":\"2026-05-12\",\"excerpt\":\"Official announcement states Isomorphic Labs has raised $2.1 billion in Series B funding.\"},{\"claim\":\"Thrive Capital led the Series B round, with participation from existing backers Alphabet and GV and new investors MGX, Temasek, CapitalG, and the UK Sovereign AI Fund.\",\"url\":\"https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-series-b-investment-round\",\"publication_date\":\"2026-05-12\",\"event_date\":\"2026-05-12\",\"excerpt\":\"Official announcement names Thrive Capital as lead investor and lists Alphabet, GV, MGX, Temasek, CapitalG, and the UK Sovereign AI Fund as participants.\"},{\"claim\":\"Isomorphic Labs was introduced by Alphabet in 2021 as a new Alphabet company.\",\"url\":\"https://www.google.com/search?q=site%3Aisomorphiclabs.com%20Isomorphic%20Labs%20Alphabet%20company%20official\",\"publication_date\":\"2026-09-30\",\"event_date\":\"2021-11-01\",\"excerpt\":\"Google search result snippet for the official Isomorphic Labs article 'Introducing Isomorphic Labs' says: 'today, I'm thrilled to announce the creation of a new Alphabet company – Isomorphic Labs.'\"},{\"claim\":\"An official 2025 company announcement described Isomorphic Labs as a subsidiary of Alphabet.\",\"url\":\"https://www.google.com/search?q=site%3Aisomorphiclabs.com%20Isomorphic%20Labs%20Alphabet%20company%20official\",\"publication_date\":\"2026-09-30\",\"event_date\":\"2025-03-31\",\"excerpt\":\"Google search result snippet for the official article 'Isomorphic Labs announces first phase of management team' says Isomorphic Labs 'is a subsidiary of Alphabet'.\"},{\"claim\":\"Reuters described Isomorphic Labs in 2025 as a startup founded in 2021 as a spin-off from Alphabet's AI research subsidiary Google DeepMind; the Reuters report did not indicate any acquisition completion or IPO filing/status.\",\"url\":\"https://www.reuters.com/technology/artificial-intelligence/google-backed-ai-drug-discovery-startup-raises-600-million-2025-03-31/\",\"publication_date\":\"2025-03-31\",\"event_date\":\"2025-03-31\",\"excerpt\":\"Reuters says Isomorphic Labs was founded in 2021 as a spin-off from Alphabet's AI research subsidiary Google DeepMind, calls it a startup, and does not report that it was acquired or had filed for an IPO.\"},{\"claim\":\"A freshness check for 2026-05-12 through 2026-09-30 did not surface authoritative evidence of a later financing, completed acquisition, IPO, or closure before the cutoff.\",\"url\":\"https://segmara.com/blog/when-will-isomorphic-labs-ipo\",\"publication_date\":\"2026-08-30\",\"event_date\":\"2026-08-30\",\"excerpt\":\"Keenable search surfaced later commentary noting any specific Isomorphic Labs IPO date was speculative and showed no authoritative post-May-2026 source evidencing a later round, acquisition completion, IPO, or closure before 2026-09-30.\"}]",
+          "latest_round": "Series B",
+          "round_amount": "2.1 billion",
+          "uncertainties": "Ownership/current-control evidence is indirect: official search snippets and Reuters support that Isomorphic Labs was created as an Alphabet company and later described as an Alphabet subsidiary/spin-off, but I did not retrieve a dedicated current corporate-ownership filing or company about page explicitly restating the status as of 2026-09-30. The freshness check used Keenable search and did not find authoritative evidence of a later funding round, acquisition completion, IPO, or closure before the cutoff, but absence of such evidence is not absolute proof none exists. The Segmara item is only supportive for the absence of an IPO filing and is not a primary source.",
+          "lead_investors": "Thrive Capital",
+          "round_currency": "USD",
+          "company_identity": "Isomorphic Labs is an AI drug-discovery company using advanced machine learning to design and develop new medicines.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-05-12"
+        },
+        "reasoning": "I identified the company from its official website, established the latest funding from the company's 2026 Series B announcement, used Reuters to support background and lack of evidence for acquisition/IPO, and performed a Keenable freshness check for post-May-2026 changes through the 2026-09-30 cutoff. The strongest evidenced latest round is the $2.1B Series B announced on 2026-05-12. No affirmative evidence of a completed acquisition, IPO, or closure was found before the cutoff; with evidence that it remained an operating company and was historically an Alphabet company/subsidiary, the best-supported lifecycle classification is private_independent, with ownership nuance disclosed in uncertainties.",
+        "stepsTaken": [
+          "Searched Google with query \"Isomorphic Labs isomorphiclabs.com funding acquisition IPO latest round site:isomorphiclabs.com OR site:blog.google OR site:reuters.com\". The results are: \n {\"search_results\":[{\"title\":\"Isomorphic Labs announces Series B investment round\",\"link\":\"https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-series-b-investment-round\",\"snippet\":\"Isomorphic Labs announces it has raised $2.1 Billion in Series B funding. The financing round is led by Thrive Capital,\",\"date\":\"May 12, 2026\",\"position\":1},{\"title\":\"Isomorphic Labs announces $600m external investment ...\",\"link\":\"https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-600m-ext...",
+          "Used visitWebpage {\"url\":\"https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-series-b-investment-round\",\"question\":\"Find the announced amount, round name, lead investors, announcement date, and any ownership or acquisition context.\"}. The results are: \n \"Announcement date: May 12, 2026.\\nRound: Series B.\\nAnnounced amount: $2.1 billion.\\nLead investor: Thrive Capital.\\nOther investors/participants: existing backers Alphabet and GV; new investors MGX, Temasek, CapitalG, and the UK Sovereign AI Fund.\\nOwnership/acquisition context: participation included existing backers Alphabet and GV alongside new investors; described as expanding Isomorphic Labs’ global capital base.\\nRelevant links: https://isomorphiclabs.com/news ; https://storage.googleapi...",
+          "Searched Google with query \"Isomorphic Labs Alphabet subsidiary official site ownership independent company Reuters acquisition IPO\". The results are: \n {\"search_results\":[{\"title\":\"Google-backed AI drug discovery startup raises $600 million\",\"link\":\"https://www.reuters.com/technology/artificial-intelligence/google-backed-ai-drug-discovery-startup-raises-600-million-2025-03-31/\",\"snippet\":\"Isomorphic was founded in 2021 as a spin-off from Alphabet's AI research subsidiary Google Deepmind, which it acquired in 2014.\",\"date\":\"Mar 31, 2025\",\"position\":1},{\"title\":\"How much has Isomorphic Labs raised? - Komo\",\"link\":\"https://komo.ai/directory/isomor...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/technology/artificial-intelligence/google-backed-ai-drug-discovery-startup-raises-600-million-2025-03-31/\",\"question\":\"What does Reuters say about Isomorphic Labs ownership, company status, and any acquisition or IPO status?\"}. The results are: \n \"Reuters says Isomorphic Labs was “founded in 2021 as a spin-off from Alphabet's AI research subsidiary Google Deepmind, which it acquired in 2014.” It also says in the funding round that “Google Ventures and Alphabet, an existing investor, also participated.” The article describes Isomorphic Labs as a “startup” and says it “has raised $600 million in its first ever external funding round.” No Reuters statement in this page says Isomorphic Labs has been acquired or has filed for or is pursuing a...",
+          "Used visitWebpage {\"url\":\"https://www.isomorphiclabs.com/\",\"question\":\"Identify what Isomorphic Labs is and what it does from the company site.\"}. The results are: \n \"- Isomorphic Labs: company focused on using AI to transform drug discovery and advance human health.\\n- Mission/positioning: “solve all disease” / “advance human health by building on and beyond the Nobel-winning AlphaFold system.”\\n- What it does:\\n  - Builds “predictive and generative AI models that accelerate scientific discovery at digital speed.”\\n  - Uses machine learning to model complex biological phenomena.\\n  - Helps design novel molecules, anticipate how drugs will perform, and devel...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Isomorphic Labs funding acquisition IPO closure ownership after May 2026 official or major news latest evidence\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"2026-05-12\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":400,\"max_results\":5,\"session_id\":\"sess-isomorphic-labs\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: When Will Isomorphic Labs IPO? Its CEO Just Stepped Back From Google DeepMind to Spend More Time Here.\\nURL: https://segmara.com/blog/when-will-isomorphic-labs-ipo\\nPublished: 2026-08-30\\nAcquired: 2026-09-13\\nSnippets:\\nNothing here substitutes for a filing, and any specific ‘Isomorphic Labs IPO date’ circulating online remains speculation with no public statement, spin-off announcement, or S-1 behind it.\\n\\n---\\n\\nTitle: Isomorphic Labs\\nURL: https://a...",
+          "Searched Google with query \"site:isomorphiclabs.com Isomorphic Labs Alphabet company official\". The results are: \n {\"search_results\":[{\"title\":\"Isomorphic Labs: Reimagining Drug Discovery Process with AI\",\"link\":\"https://www.isomorphiclabs.com/\",\"snippet\":\"Isomorphic Labs is building a future where frontier AI can help to unlock deeper scientific insights, faster breakthroughs, and life-changing medicines.\",\"position\":1},{\"title\":\"Introducing Isomorphic Labs\",\"link\":\"https://www.isomorphiclabs.com/articles/introducing-isomorphic-labs\",\"snippet\":\"Building on this advance, today, I'm thrilled to announce the c..."
+        ]
+      }
+    }
+  ]
+}

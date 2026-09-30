@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
-"""Bounded Clay A/B runner. Python standard library; never reads reference answers."""
+"""Bounded Clay A/B/C runner. Python standard library; never reads reference answers."""
 import argparse
 import datetime as dt
 import fcntl
 import hashlib
 import json
+import itertools
 import os
 from pathlib import Path
 import re
 import shutil
+import statistics
 import subprocess
 import sys
 import time
@@ -16,6 +18,7 @@ import time
 ROOT = Path(__file__).resolve().parent
 LOCAL = Path(os.environ.get('CLAY_EVAL_STATE_DIR', ROOT / '.local')).expanduser().resolve()
 STATE = LOCAL / 'state.json'
+STRATEGY = 'optional'
 FIELDS = ('company_name', 'domain', 'as_of', 'task_type')
 MODEL = 'gpt-5.4'
 TERMINAL = {'completed', 'failed', 'cancelled'}
@@ -61,8 +64,21 @@ def cli(*args, payload=None, archive=None):
 
 
 def config():
-    return {'prompt': (ROOT / 'prompt.txt').read_text(), 'model': MODEL,
-            'schema': read(ROOT / 'output-schema.json')}
+    cfg = {'prompt': (ROOT / 'prompt.txt').read_text(), 'model': MODEL,
+           'schema': read(ROOT / 'output-schema.json')}
+    if STRATEGY == 'verify':
+        cfg.update(strategy='verify', verification_prompt=(ROOT / 'prompt-verify.txt').read_text())
+        if not cfg['verification_prompt'].startswith(cfg['prompt']):
+            raise RuntimeError('Verification prompt must preserve the original prompt as its exact prefix.')
+    return cfg
+
+
+def configured_arms(cfg):
+    return ('C',) if cfg.get('strategy') == 'verify' else ('A', 'B')
+
+
+def prompt_for(cfg, arm):
+    return cfg['verification_prompt'] if arm == 'C' else cfg['prompt']
 
 
 def schema_clean(schema):
@@ -80,7 +96,7 @@ def node_spec(arm, trigger_node, cfg, claygent_id=None):
     if claygent_id:
         node['agentClaygentId'] = claygent_id
     else:
-        node.update(agentName=f'Funding lifecycle evaluation {arm}', agentPrompt=cfg['prompt'],
+        node.update(agentName=f'Funding lifecycle evaluation {arm}', agentPrompt=prompt_for(cfg, arm),
                     agentModel=cfg['model'], outputSchema=cfg['schema'])
     return node
 
@@ -117,7 +133,7 @@ def setup():
         'workspace_id': who['workspace']['id'], 'configuration_hash': digest(cfg)}
     if state['workspace_id'] != who['workspace']['id'] or state['configuration_hash'] != digest(cfg):
         raise RuntimeError('Workspace/configuration differs from existing setup. Preserve state; review explicitly.')
-    for arm in ('A', 'B'):
+    for arm in configured_arms(cfg):
         entry = state['arms'].setdefault(arm, {})
         if not entry.get('workflow_id'):
             made = mutation(state, f'create {arm} workflow', ['workflows', 'create', '--name',
@@ -147,7 +163,7 @@ def setup():
         entry['validation'] = validate(workflow)
         save(STATE, state)
     preflight(state, cfg)
-    print('Setup validated. Verify native tools on both agents and enable Keenable only on B in the UI.')
+    print('Setup validated. Verify native tools on all agents; enable Keenable on B or C in the UI.')
     print(json.dumps(state['arms'], indent=2))
 
 
@@ -155,46 +171,48 @@ def refresh():
     state, cfg = state_read(), config()
     if state['configuration_hash'] != digest(cfg):
         raise RuntimeError('Setup files changed. Review the configuration before refreshing the binding.')
-    entry = state['arms']['B']
+    arm = 'C' if cfg.get('strategy') == 'verify' else 'B'
+    expected_prompt = prompt_for(cfg, arm)
+    entry = state['arms'][arm]
     workflow = entry['workflow_id']
     graph = cli('workflows', 'graph', 'get', workflow, '--mode', 'full')
     expected_ids = {entry['trigger_node_id'], entry['node_id']}
     if entry.get('replacement_node_id'):
         expected_ids.add(entry['replacement_node_id'])
     if {n['id'] for n in graph['nodes']} != expected_ids:
-        raise RuntimeError('Owned B graph has unexpected nodes; refusing to rewire or delete.')
+        raise RuntimeError(f'Owned {arm} graph has unexpected nodes; refusing to rewire or delete.')
     if not entry.get('replacement_node_id'):
         old = cli('workflows', 'nodes', 'get', workflow, entry['node_id'])['node']
-        spec = node_spec('B', entry['trigger_node_id'], cfg, old['agentClaygentId'])
-        made = mutation(state, 'create B replacement', ['workflows', 'nodes', 'create', workflow,
+        spec = node_spec(arm, entry['trigger_node_id'], cfg, old['agentClaygentId'])
+        made = mutation(state, f'create {arm} replacement', ['workflows', 'nodes', 'create', workflow,
                         '--input', '-'], spec)
         entry['replacement_node_id'] = made['nodeId']
         save(STATE, state)
     replacement = cli('workflows', 'nodes', 'get', workflow, entry['replacement_node_id'])['node']
-    if replacement['agentPrompt'] != cfg['prompt']:
-        if replacement['agentPrompt'].split() != cfg['prompt'].split():
-            raise RuntimeError('B prompt has substantive changes. Review them before refreshing the binding.')
+    if replacement['agentPrompt'] != expected_prompt:
+        if replacement['agentPrompt'].split() != expected_prompt.split():
+            raise RuntimeError(f'{arm} prompt has substantive changes. Review them before refreshing the binding.')
         # Builder reformats Markdown when saving tool settings. Restore the
         # checked-in bytes with a prompt-only update that preserves tool settings.
-        mutation(state, 'restore B prompt formatting', ['workflows', 'nodes', 'update', workflow,
-                 entry['replacement_node_id'], '--input', '-'], {'agentPrompt': cfg['prompt']})
+        mutation(state, f'restore {arm} prompt formatting', ['workflows', 'nodes', 'update', workflow,
+                 entry['replacement_node_id'], '--input', '-'], {'agentPrompt': expected_prompt})
         save(STATE, state)
-    mutation(state, 'disconnect old B node', ['workflows', 'nodes', 'update', workflow,
+    mutation(state, f'disconnect old {arm} node', ['workflows', 'nodes', 'update', workflow,
              entry['node_id'], '--input', '-'], {'incomingEdges': []})
     save(STATE, state)
-    mutation(state, 'connect replacement B node', ['workflows', 'nodes', 'update', workflow,
+    mutation(state, f'connect replacement {arm} node', ['workflows', 'nodes', 'update', workflow,
              entry['replacement_node_id'], '--input', '-'],
              {'incomingEdges': [{'sourceNode': entry['trigger_node_id']}]})
     save(STATE, state)
     rewired = cli('workflows', 'graph', 'get', workflow)['summary']['edges']
     if len(rewired) != 1 or rewired[0]['sourceNodeId'] != entry['trigger_node_id'] or rewired[0]['targetNodeId'] != entry['replacement_node_id']:
-        raise RuntimeError('B replacement edge did not persist. Old node retained for inspection.')
-    mutation(state, 'delete owned old B node', ['workflows', 'nodes', 'delete', workflow, entry['node_id']])
+        raise RuntimeError(f'{arm} replacement edge did not persist. Old node retained for inspection.')
+    mutation(state, f'delete owned old {arm} node', ['workflows', 'nodes', 'delete', workflow, entry['node_id']])
     entry['retired_node_ids'] = entry.get('retired_node_ids', []) + [entry['node_id']]
     entry['node_id'] = entry.pop('replacement_node_id')
     save(STATE, state)
     preflight(state, cfg)
-    print('B binding refreshed and both graphs validated. No model run was started.')
+    print(f'{arm} binding refreshed and configured graphs validated. No model run was started.')
 
 
 def preflight(state, cfg):
@@ -210,7 +228,7 @@ def preflight(state, cfg):
         if set(nodes) != {entry['trigger_node_id'], entry['node_id']}:
             raise RuntimeError(f'{arm}: expected exactly the owned trigger and agent.')
         node = nodes[entry['node_id']]
-        if node['agentPrompt'] != cfg['prompt'] or node['agentModel'] != cfg['model']:
+        if node['agentPrompt'] != prompt_for(cfg, arm) or node['agentModel'] != cfg['model']:
             raise RuntimeError(f'{arm}: actual prompt/model differs from frozen files.')
         if schema_clean(node['outputSchema']) != schema_clean(cfg['schema']):
             raise RuntimeError(f'{arm}: actual output schema differs from frozen file.')
@@ -225,8 +243,8 @@ def preflight(state, cfg):
         snapshots[arm] = {'node': {k: v for k, v in node.items() if k != 'recentOutputPaths'},
                           'trigger': trigger, 'validation': validation}
         snapshots[arm]['node']['outputSchema'] = schema_clean(node['outputSchema'])
-    if set(snapshots) != {'A', 'B'}:
-        raise RuntimeError('Both A and B are required.')
+    if set(snapshots) != set(configured_arms(cfg)):
+        raise RuntimeError('Setup arms do not match the selected strategy.')
     return snapshots
 
 
@@ -267,9 +285,9 @@ def summarize(result, record):
             'error': result.get('error')}
 
 
-def aggregate_judgments(items, planned):
+def aggregate_judgments(items, planned, arms=('A', 'B')):
     groups = {arm: {'fields': {}, 'supported_answer': {'correct': 0, 'total': 0},
-                   'all_target_fields_correct': {'correct': 0, 'total': 0}} for arm in ('A', 'B')}
+                   'all_target_fields_correct': {'correct': 0, 'total': 0}} for arm in arms}
     for key, item in items.items():
         group = groups[key[1]]
         scored = {field: value for field, value in item['fields'].items() if value is not None}
@@ -283,25 +301,30 @@ def aggregate_judgments(items, planned):
         if item['supported_answer'] is not None:
             group['supported_answer']['correct'] += int(item['supported_answer'])
             group['supported_answer']['total'] += 1
-    paired = {'A_wins': 0, 'B_wins': 0, 'ties': 0, 'incomparable': 0, 'cases': []}
-    for case_id in sorted({case_id for case_id, _ in planned}):
-        pair = [items.get((case_id, arm)) for arm in ('A', 'B')]
-        row = {'case_id': case_id}
-        if any(item is None for item in pair):
-            row.update(outcome='incomparable', reason='missing_judgment')
-        else:
-            fields = [{k: v for k, v in item['fields'].items() if v is not None} for item in pair]
-            if not fields[0] or set(fields[0]) != set(fields[1]):
-                row.update(outcome='incomparable', reason='no_matching_nonnull_field_set',
-                           A_fields=sorted(fields[0]), B_fields=sorted(fields[1]))
+    comparisons = {}
+    for left_arm, right_arm in itertools.combinations(arms, 2):
+        paired = {f'{left_arm}_wins': 0, f'{right_arm}_wins': 0, 'ties': 0, 'incomparable': 0, 'cases': []}
+        for case_id in sorted({case_id for case_id, _ in planned}):
+            pair = [items.get((case_id, arm)) for arm in (left_arm, right_arm)]
+            row = {'case_id': case_id}
+            if any(item is None for item in pair):
+                row.update(outcome='incomparable', reason='missing_judgment')
             else:
-                left, right = sum(fields[0].values()), sum(fields[1].values())
-                row.update(outcome='A_wins' if left > right else 'B_wins' if right > left else 'ties',
-                           A_correct=left, B_correct=right, total=len(fields[0]), scored_fields=sorted(fields[0]))
-        paired[row['outcome']] += 1
-        paired['cases'].append(row)
+                fields = [{k: v for k, v in item['fields'].items() if v is not None} for item in pair]
+                if not fields[0] or set(fields[0]) != set(fields[1]):
+                    row.update(outcome='incomparable', reason='no_matching_nonnull_field_set')
+                    row.update({left_arm + '_fields': sorted(fields[0]), right_arm + '_fields': sorted(fields[1])})
+                else:
+                    left, right = sum(fields[0].values()), sum(fields[1].values())
+                    row.update(outcome=f'{left_arm}_wins' if left > right else f'{right_arm}_wins' if right > left else 'ties',
+                               total=len(fields[0]), scored_fields=sorted(fields[0]))
+                    row.update({left_arm + '_correct': left, right_arm + '_correct': right})
+            paired[row['outcome']] += 1
+            paired['cases'].append(row)
+        comparisons[left_arm + right_arm] = paired
     complete = set(items) == planned
-    return {'by_arm': groups, 'paired_cases': paired, 'complete_judgment_coverage': complete,
+    return {'by_arm': groups, 'paired_cases': comparisons.get('AB', {'cases': []}),
+            'paired_comparisons': comparisons, 'complete_judgment_coverage': complete,
             'accuracy_status': 'complete' if complete else 'partial',
             'judged_case_arms': len(items), 'planned_case_arms': len(planned)}
 
@@ -334,10 +357,11 @@ def judge_summary(path, manifest, rows):
                     if record.get('inputs', {}).get('task_type') == task
                     and (not exclude_keenable or key[0] != 'keenable')}
         selected = {key: item for key, item in items.items() if key in relevant}
-        return aggregate_judgments(selected, relevant)
+        return aggregate_judgments(selected, relevant, sorted({arm for _, arm in planned}))
     main = subset('funding_and_lifecycle')
     return {'calculated': True, 'source': path.name, 'main_task_only': True,
             'by_arm': main['by_arm'], 'paired_cases': main['paired_cases'],
+            'paired_comparisons': main['paired_comparisons'],
             'complete_judgment_coverage': set(items) == set(planned),
             'accuracy_status': 'complete' if set(items) == set(planned) else 'partial',
             'judged_case_arms': len(items), 'planned_case_arms': len(planned), 'observed_case_arms': len(rows),
@@ -349,55 +373,141 @@ def judge_summary(path, manifest, rows):
 
 
 def write_results_table(output, manifest, summary):
-    """A compact view of the saved scores, with links to each original answer."""
+    """A compact view of saved scores, with links to each original answer."""
     rows = {(row['case_id'], row['arm']): row for row in summary['runs']}
+    records = {(row['case_id'], row['arm']): row for row in manifest['runs']}
+    arms = sorted({arm for _, arm in records})
     scores = {}
     if (output / 'judgments.json').exists():
         scores = {(item['case_id'], item['arm']): item for item in read(output / 'judgments.json')['cases']}
-    pairs = {}
-    accuracy = summary['accuracy']
-    if accuracy.get('calculated'):
+    pair_names = [''.join(pair) for pair in itertools.combinations(arms, 2)]
+    outcomes = {}
+    if summary['accuracy'].get('calculated'):
         for group in ('main', 'entity_resolution'):
-            pairs.update({row['case_id']: row['outcome'] for row in accuracy[group]['paired_cases']['cases']})
+            for pair, result in summary['accuracy'][group]['paired_comparisons'].items():
+                outcomes.update({(row['case_id'], pair): row['outcome'] for row in result['cases']})
+    columns = ['Company'] + [arm + ' target fields' for arm in arms] + [pair + ' outcome' for pair in pair_names]
+    columns += [arm + ' Keenable calls' for arm in arms if arm != 'A']
     lines = ['# Per-company results', '',
-             'A: native Clay search. B: native search plus Keenable. Scores count correct, supported target fields. '
-             'A tie can include shared errors. Correlated fields are not independent errors. '
-             'The entity probe is excluded from the main aggregate.', '',
-             '| Company | A target fields | B target fields | Pair outcome | B Keenable calls |',
-             '| --- | --- | --- | --- | --- |']
-    for record in manifest['runs']:
-        if record['arm'] != 'A':
-            continue
-        case_id = record['case_id']
-        cells = []
-        for arm in ('A', 'B'):
+             'A: native Clay search. B: native search plus optional Keenable. C: native search plus required Keenable verification. '
+             'Scores count correct, supported target fields. A tie can include shared errors. '
+             'Correlated fields are not independent errors. The entity probe is excluded from the main aggregate.', '',
+             '| ' + ' | '.join(columns) + ' |', '| ' + ' | '.join(['---'] * len(columns)) + ' |']
+    for case_id in dict.fromkeys(record['case_id'] for record in manifest['runs']):
+        record = next(record for record in manifest['runs'] if record['case_id'] == case_id)
+        cells = [record.get('inputs', {}).get('company_name', case_id).replace('|', '\\|')]
+        for arm in arms:
             item = scores.get((case_id, arm))
             fields = [v for v in item['fields'].values() if v is not None] if item else []
-            label = f'{sum(fields)}/{len(fields)}' if fields else 'ungraded'
-            key = record['key'][:-1] + arm
-            cells.append(f'[{label}]({key}/result.json)' if (case_id, arm) in rows else 'pending')
-        name = record.get('inputs', {}).get('company_name', case_id).replace('|', '\\|')
-        outcome = pairs.get(case_id, 'ungraded').replace('_', ' ')
-        calls = rows.get((case_id, 'B'), {}).get('keenable_calls')
-        lines.append(f'| {name} | {cells[0]} | {cells[1]} | {outcome} | {calls if calls is not None else "unknown"} |')
+            label = f'{sum(fields)}/{len(fields)}' if fields else ('unscorable' if item else 'ungraded')
+            saved = records.get((case_id, arm), {})
+            cells.append(f"[{label}]({saved['key']}/result.json)" if (case_id, arm) in rows else 'pending')
+        cells += [outcomes.get((case_id, pair), 'ungraded').replace('_', ' ') for pair in pair_names]
+        for arm in arms:
+            if arm != 'A':
+                calls = rows.get((case_id, arm), {}).get('keenable_calls')
+                cells.append(str(calls) if calls is not None else 'unknown')
+        lines.append('| ' + ' | '.join(cells) + ' |')
+    if manifest.get('provenance'):
+        lines += ['', 'A/B answers and costs are reused from the baseline. Only C incurred new variant costs. '
+                  'See [provenance and source hashes](manifest.json).']
     lines += ['', '[Judgments and source checks](judgments.json) · [Full summary](summary.json)', '']
     (output / 'results.md').write_text('\n'.join(lines))
 
 
+def attempt_folder(output, record):
+    return output / record.get('attempt_directory', record['key'])
+
+
+def eligible_initialization_failure(record, result):
+    error = result.get('error', '')
+    agents = [node for node in result.get('nodes', []) if node.get('nodeId') == record['node_id']]
+    return (record['status'] == result.get('status') == 'failed'
+            and record.get('run_id') == result.get('runId')
+            and not record.get('prior_attempts')
+            and 'Error initializing MCP client' in error and 'Too many requests' in error
+            and result.get('dataCreditsUsed') == 0
+            and len(agents) == 1 and agents[0].get('status') == 'failed'
+            and not any(value for key, value in agents[0].get('outputs', {}).items()
+                        if key not in ('error', 'executedAt')))
+
+
+def prepare_initialization_retries(output, manifest, selected):
+    candidates = []
+    for record in selected:
+        path = attempt_folder(output, record) / 'result.json'
+        if record['status'] == 'failed' and path.exists() and eligible_initialization_failure(record, read(path)):
+            candidates.append(record)
+    if candidates and any(record['status'] not in TERMINAL for record in manifest['runs']):
+        raise RuntimeError('Wait for all original runs to be terminal before retrying initialization failures.')
+    for record in candidates:
+        folder = attempt_folder(output, record)
+        archive = output / record['key'] / 'attempts' / '1'
+        archive.mkdir(parents=True, exist_ok=True)
+        for name in ('result.json', 'start.json', 'start-call.json'):
+            if (folder / name).exists():
+                shutil.copy2(folder / name, archive / name)
+        prior = dict(record, directory=str(archive.relative_to(output)), archived_at=now())
+        save(archive / 'record.json', prior)
+        record['prior_attempts'] = [prior]
+        record['attempt_directory'] = str(Path(record['key']) / 'attempts' / '2')
+        record['retry_reason'] = 'Explicit one-time retry of zero-data-credit MCP initialization rate-limit failure.'
+        for field in ('run_id', 'submitted_at', 'terminal_observed_at'):
+            record.pop(field, None)
+        record['status'] = 'not_started'
+        # New start/result files have a new directory. Interrupted preparation
+        # cannot mistake the archived start.json for the new attempt.
+        save(output / 'manifest.json', manifest)
+
+
 def reproduce(output):
     manifest = read(output / 'manifest.json')
-    rows = []
+    rows, prior_rows = [], []
     for record in manifest['runs']:
-        path = output / record['key'] / 'result.json'
+        for prior in record.get('prior_attempts', []):
+            prior_rows.append(summarize(read(output / prior['directory'] / 'result.json'), prior))
+        path = attempt_folder(output, record) / 'result.json'
         if path.exists():
             rows.append(summarize(read(path), record))
-    summary = {'configuration_hash': manifest['frozen_hash'], 'runs': rows,
+    cost_rows = rows + prior_rows
+    ids = [row['run_id'] for row in cost_rows if row.get('run_id')]
+    if len(ids) != len(set(ids)):
+        raise RuntimeError('Duplicate run ID in current and archived attempts; refusing to double-count costs.')
+    summary = {'prior_attempts': prior_rows, 'provider_attempts_observed': len(cost_rows),
+               'configuration_hash': manifest['frozen_hash'], 'runs': rows,
                'planned_runs': len(manifest['runs']), 'observed_runs': len(rows),
                'completed_runs': sum(row['status'] == 'completed' for row in rows),
-               'data_credits_observed': sum(row['data_credits'] or 0 for row in rows),
-               'action_credits_observed': sum(row['action_credits'] or 0 for row in rows),
-               'missing_cost_observations': sum(row['data_credits'] is None or row['action_credits'] is None for row in rows)}
+               'data_credits_observed': sum(row['data_credits'] or 0 for row in cost_rows),
+               'action_credits_observed': sum(row['action_credits'] or 0 for row in cost_rows),
+               'missing_cost_observations': sum(row['data_credits'] is None or row['action_credits'] is None for row in cost_rows)}
     summary['accuracy'] = judge_summary(output / 'judgments.json', manifest, rows)
+    summary['execution_by_arm'] = {}
+    for arm in sorted({record['arm'] for record in manifest['runs']}):
+        observed = [row for row in rows if row['arm'] == arm]
+        arm_costs = [row for row in cost_rows if row['arm'] == arm]
+        latencies = [row['submission_to_terminal_observed_seconds'] for row in observed
+                     if row['status'] == 'completed' and row['submission_to_terminal_observed_seconds'] is not None]
+        summary['execution_by_arm'][arm] = {
+            'observed_runs': len(observed), 'provider_attempts_observed': len(arm_costs),
+            'archived_initialization_failures': len(arm_costs) - len(observed),
+            'completed_runs': sum(row['status'] == 'completed' for row in observed),
+            'data_credits_observed': round(sum(row['data_credits'] or 0 for row in arm_costs), 4),
+            'action_credits_observed': sum(row['action_credits'] or 0 for row in arm_costs),
+            'traces_available': sum(row['trace_available'] for row in observed),
+            'keenable_used_runs': sum(row['keenable_tool_used'] is True for row in observed),
+            'keenable_calls': sum(row['keenable_calls'] or 0 for row in observed),
+            'runs_exceeding_eight_call_instruction': sum((row['research_tool_call_count'] or 0) > 8 for row in observed),
+            'median_submission_to_terminal_observed_seconds': statistics.median(latencies) if latencies else None}
+    if manifest.get('provenance'):
+        summary['provenance'] = manifest['provenance']
+        summary['comparison_costs'] = {label: {metric: sum(
+            summary['execution_by_arm'][arm][metric] for arm in arms)
+            for metric in ('data_credits_observed', 'action_credits_observed')}
+            for label, arms in (('reused_baseline', ('A', 'B')), ('new_variant', ('C',)))}
+        summary['new_provider_calls_in_comparison'] = 0
+        summary['cost_scope'] = ('Top-level observed credits include historical A/B plus C exactly once. '
+                                 'Only comparison_costs.new_variant is additional C study spend; '
+                                 'offline compare itself consumes no credits.')
     save(output / 'summary.json', summary)
     write_results_table(output, manifest, summary)
     print(json.dumps({k: v for k, v in summary.items() if k != 'runs'}, indent=2))
@@ -406,6 +516,9 @@ def reproduce(output):
 def run(args):
     if not args.allow_credit_use:
         raise RuntimeError('Live submissions require --allow-credit-use; existing Clay credits may be consumed.')
+    start_interval = getattr(args, 'start_interval', 0)
+    if not 0 <= start_interval <= 60:
+        raise RuntimeError('--start-interval must be 0..60 seconds.')
     cases = read(ROOT / 'cases.json')
     limit = len(cases) if args.limit is None else args.limit
     if not 1 <= limit <= len(cases):
@@ -413,8 +526,8 @@ def run(args):
     stop_after_pairs = args.stop_after_pairs
     if stop_after_pairs is not None and not 1 <= stop_after_pairs <= limit:
         raise RuntimeError('--stop-after-pairs must be positive and no larger than --limit.')
-    if not 1 <= args.concurrency <= 4:
-        raise RuntimeError('--concurrency must be 1..4.')
+    if not 1 <= args.concurrency <= 30:
+        raise RuntimeError('--concurrency must be 1..30.')
     if len({case['id'] for case in cases}) != len(cases):
         raise RuntimeError('Duplicate case IDs.')
     for case in cases:
@@ -441,7 +554,7 @@ def run(args):
             raise RuntimeError('New run output directory must be empty.')
         planned = []
         for index, case in enumerate(cases[:limit]):
-            for arm in ('A', 'B') if index % 2 == 0 else ('B', 'A'):
+            for arm in configured_arms(cfg) if index % 2 == 0 else tuple(reversed(configured_arms(cfg))):
                 entry = state['arms'][arm]
                 planned.append({'key': f'{index+1:02d}-{arm}', 'case_id': case['id'], 'arm': arm,
                     'inputs': {field: case[field] for field in FIELDS}, 'workflow_id': entry['workflow_id'],
@@ -449,16 +562,19 @@ def run(args):
         manifest = {'created_at': now(), 'frozen_hash': digest(frozen), 'frozen': frozen, 'runs': planned}
         save(manifest_path, manifest)
     manifest.setdefault('execution_history', []).append({
-        'invoked_at': now(), 'concurrency': args.concurrency, 'polling_timeout_seconds': args.timeout,
-        'stop_after_pairs': stop_after_pairs})
+        'invoked_at': now(), 'concurrency': args.concurrency, 'polling_timeout_seconds': args.timeout, 'poll_wait_seconds': 5,
+        'stop_after_pairs': stop_after_pairs, 'start_interval_seconds': start_interval,
+        'retry_initialization_failures': getattr(args, 'retry_initialization_failures', False)})
     save(manifest_path, manifest)
     # Checkpoints do not change the frozen plan. All mutations happen in this one
     # scheduler under the process lock, including concurrent in-flight jobs.
-    selected = manifest['runs'][:stop_after_pairs * 2] if stop_after_pairs else manifest['runs']
+    selected = manifest['runs'][:stop_after_pairs * len(configured_arms(cfg))] if stop_after_pairs else manifest['runs']
+    if getattr(args, 'retry_initialization_failures', False):
+        prepare_initialization_retries(output, manifest, selected)
     waiting, active = [], []
     deadlines = {}
     for record in selected:
-        folder = output / record['key']
+        folder = attempt_folder(output, record)
         if record['status'] in TERMINAL:
             continue
         if not record.get('run_id') and (folder / 'start.json').exists():
@@ -471,10 +587,17 @@ def run(args):
             raise RuntimeError(f"Ambiguous submission for {record['key']}. Inspect start-call.json; never retry automatically.")
         else:
             waiting.append(record)
+    submitted = [dt.datetime.fromisoformat(record['submitted_at']).timestamp()
+                 for record in manifest['runs'] if record.get('submitted_at')]
+    last_submission = max(submitted, default=0)
     while waiting or active:
         while waiting and len(active) < args.concurrency:
+            delay = min(start_interval, max(0, last_submission + start_interval - time.time()))
+            if delay:
+                time.sleep(delay)
             record = waiting.pop(0)
-            folder = output / record['key']
+            last_submission = time.time()
+            folder = attempt_folder(output, record)
             record.update(status='submitting', submitted_at=now())
             save(manifest_path, manifest)
             started = cli('workflows', 'runs', 'test', record['workflow_id'], '--inputs', '-',
@@ -486,8 +609,10 @@ def run(args):
             deadlines[record['key']] = time.monotonic() + args.timeout
             print(f"{record['key']} {record['case_id']}: {record['run_id']}", flush=True)
         record = active.pop(0)
-        result = cli('workflows', 'runs', 'get', record['workflow_id'], record['run_id'], '--wait', '30', '--verbose')
-        save(output / record['key'] / 'result.json', result)
+        result = cli('workflows', 'runs', 'get', record['workflow_id'], record['run_id'], '--wait', '5', '--verbose')
+        save(attempt_folder(output, record) / 'result.json', result)
+        if record.get('attempt_directory'):
+            save(output / record['key'] / 'result.json', result)
         record['status'] = result['status']
         if result['status'] in TERMINAL:
             record['terminal_observed_at'] = now()
@@ -500,29 +625,128 @@ def run(args):
             active.append(record)
         reproduce(output)
     if stop_after_pairs:
-        print(f'Stopped after {stop_after_pairs} pairs. Resume the same output without --stop-after-pairs.')
+        print(f'Stopped after {stop_after_pairs} cases across configured arms. Resume the same output without --stop-after-pairs.')
+
+
+def compare(baseline, variant, output):
+    """Snapshot saved A/B and C results. This path never invokes Clay."""
+    baseline, variant, output = (path.resolve() for path in (baseline, variant, output))
+    if baseline == variant or output in (baseline, variant):
+        raise RuntimeError('Comparison requires distinct baseline, variant and output directories.')
+    sources = [(baseline, ('A', 'B')), (variant, ('C',))]
+    loaded = []
+    for directory, arms in sources:
+        manifest = read(directory / 'manifest.json')
+        if manifest['frozen_hash'] != digest(manifest['frozen']):
+            raise RuntimeError('Source frozen snapshot does not match its hash.')
+        frozen = manifest['frozen']
+        cfg = frozen['config']
+        if configured_arms(cfg) != arms:
+            raise RuntimeError('Expected optional A/B baseline and verify C variant.')
+        expected = {(case['id'], arm): {field: case[field] for field in FIELDS}
+                    for case in frozen['cases'][:frozen['limit']] for arm in arms}
+        if len(manifest['runs']) != len(expected):
+            raise RuntimeError('Source run plan has missing or duplicate case arms.')
+        payloads, rows, seen = {}, [], set()
+        for record in manifest['runs']:
+            key = (record['case_id'], record['arm'])
+            if key in seen or key not in expected or record['inputs'] != expected[key]:
+                raise RuntimeError('Source run plan differs from its frozen inputs.')
+            seen.add(key)
+            path = attempt_folder(directory, record) / 'result.json'
+            result = read(path)
+            if result.get('status') != 'completed' or record['status'] != 'completed':
+                raise RuntimeError('Complete all source runs before comparison.')
+            if result.get('runId') != record.get('run_id'):
+                raise RuntimeError('Source result run ID differs from manifest.')
+            payloads[record['key']] = result
+            rows.append(summarize(result, record))
+        judge_summary(directory / 'judgments.json', manifest, rows)
+        judgments = read(directory / 'judgments.json') if (directory / 'judgments.json').exists() else None
+        loaded.append((manifest, payloads, judgments))
+    left, right = (item[0]['frozen'] for item in loaded)
+    if left['cases'] != right['cases'] or left['limit'] != right['limit']:
+        raise RuntimeError('Comparison rejected: different inputs or case limit.')
+    a, c = left['config'], right['config']
+    if (a['model'] != c['model'] or a['prompt'] != c['prompt'] or
+            schema_clean(a['schema']) != schema_clean(c['schema'])):
+        raise RuntimeError('Comparison rejected: different model, schema or original prompt.')
+    if not c['verification_prompt'].startswith(a['prompt']):
+        raise RuntimeError('Comparison rejected: C must preserve the original prompt prefix.')
+    if output.exists() and any(output.iterdir()):
+        raise RuntimeError('Comparison output must be empty; use reproduce to refresh an existing snapshot.')
+    provenance = {}
+    records, judgments, payloads = [], [], {}
+    for (directory, arms), (manifest, results, grades) in zip(sources, loaded):
+        label = 'baseline' if arms == ('A', 'B') else 'variant'
+        provenance[label] = {'directory': os.path.relpath(directory, output),
+                             'manifest': os.path.relpath(directory / 'manifest.json', output),
+                             'manifest_sha256': digest(manifest), 'frozen_hash': manifest['frozen_hash'],
+                             'arms': list(arms), 'reused': label == 'baseline',
+                             'hash_format': 'SHA-256 of sorted-key JSON, as used by frozen_hash',
+                             'judgments_sha256': digest(grades) if grades is not None else None}
+        for record in manifest['runs']:
+            result = results[record['key']]
+            copied_record = dict(record)
+            copied_record.pop('attempt_directory', None)
+            records.append(dict(copied_record, provenance={'source_result': os.path.relpath(attempt_folder(directory, record) / 'result.json', output),
+                                                    'result_sha256': digest(result), 'source': label}))
+            payloads[record['key']] = result
+            for prior in record.get('prior_attempts', []):
+                payloads[prior['directory']] = read(directory / prior['directory'] / 'result.json')
+        if grades:
+            judgments.extend(grades['cases'])
+    frozen = {'comparison': True, 'sources': {label: data['frozen_hash'] for label, data in provenance.items()},
+              'cases': left['cases'], 'limit': left['limit'], 'model': a['model'],
+              'schema': a['schema'], 'base_prompt': a['prompt'], 'verification_prompt': c['verification_prompt']}
+    manifest = {'created_at': now(), 'frozen': frozen, 'frozen_hash': digest(frozen),
+                'runs': records, 'provenance': provenance}
+    save(output / 'manifest.json', manifest)
+    for key, result in payloads.items():
+        save(output / key / 'result.json', result)
+    if judgments:
+        save(output / 'judgments.json', {'run_directory': '.', 'cases': judgments})
+    reproduce(output)
 
 
 def main():
+    global LOCAL, STATE, STRATEGY
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='command', required=True)
     for command in ('doctor', 'setup', 'bind-refresh'):
-        sub.add_parser(command)
+        command_parser = sub.add_parser(command)
+        if command != 'doctor':
+            command_parser.add_argument('--strategy', choices=('optional', 'verify'), default='optional')
     live = sub.add_parser('run', help='Run or resume the same --output directory; alternating paired submission order.')
-    live.add_argument('--limit', type=int, default=None, help='Cases in the frozen plan; default all cases. Two runs per case.')
-    live.add_argument('--stop-after-pairs', type=int, help='Stop after the first N terminal pairs; omit on resume to finish the same plan.')
-    live.add_argument('--concurrency', type=int, default=2, help='Maximum in-flight runs, 1..4; recorded per invocation (default 2).')
+    live.add_argument('--strategy', choices=('optional', 'verify'), default='optional',
+                      help='optional runs A/B; verify runs only C in isolated setup state.')
+    live.add_argument('--limit', type=int, default=None, help='Cases in the frozen plan; default all cases. A/B has two runs per case; C has one.')
+    live.add_argument('--stop-after-pairs', type=int, help='Stop after the first N cases across configured arms; omit on resume to finish the same plan.')
+    live.add_argument('--concurrency', type=int, default=30, help='Maximum in-flight runs, 1..30; recorded per invocation (default 30).')
+    live.add_argument('--start-interval', type=float, default=2, help='Minimum seconds between submissions, 0..60 (default 2).')
+    live.add_argument('--retry-initialization-failures', action='store_true',
+                      help='After all runs finish, retry each eligible zero-data-credit MCP initialization rate-limit failure once.')
     live.add_argument('--output', type=Path, required=True)
     live.add_argument('--allow-credit-use', action='store_true')
     live.add_argument('--timeout', type=int, default=600, help='Polling seconds per run; expiry never resubmits.')
     offline = sub.add_parser('reproduce', help='Regenerate summary from saved files without network or reference answers.')
     offline.add_argument('--output', type=Path, required=True)
+    comparison = sub.add_parser('compare', help='Offline snapshot of original A/B and verification C results, with provenance.')
+    for name in ('baseline', 'variant', 'output'):
+        comparison.add_argument('--' + name, type=Path, required=True)
     args = parser.parse_args()
     if args.command == 'run' and args.timeout < 1:
         parser.error('--timeout must be positive.')
     if args.command == 'reproduce':
         reproduce(args.output)
         return
+    if args.command == 'compare':
+        compare(args.baseline, args.variant, args.output)
+        return
+    STRATEGY = getattr(args, 'strategy', 'optional')
+    if STRATEGY == 'verify':
+        LOCAL = LOCAL / 'verify'
+        STATE = LOCAL / 'state.json'
     LOCAL.mkdir(parents=True, exist_ok=True)
     with (LOCAL / 'runner.lock').open('w') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)

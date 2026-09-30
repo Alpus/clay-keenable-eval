@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6bxb33hUoyN5S9QN",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:00:47.583Z",
+  "duration": "2m 12s",
+  "dataCreditsUsed": 3.6,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6bxbWYoeQhTXJ6qF",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:00:47.591Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "quince.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Quince"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6bxbhXtTibVvWpnt",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:00:47.608Z",
+      "completedAt": "2026-09-30T11:02:59.735Z",
+      "duration": "2m 12s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "quince.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Quince"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"quince.com is Quince, an e-commerce brand selling apparel, accessories, home goods, baby/kids items, jewelry, beauty/wellness and related essentials.\",\"url\":\"https://www.quince.com/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"The homepage says 'High-quality essentials at radical prices' and lists categories including Women, Men, Home, Baby & Kids, Travel, Bags & Accessories, Jewelry, and Beauty & Wellness.\"},{\"claim\":\"Quince announced a $500 million Series E financing on 2026-03-11 at a $10.1 billion valuation.\",\"url\":\"https://www.prnewswire.com/news-releases/quince-raises-500m-series-e-resulting-in-10-1b-valuation-to-accelerate-the-manufacturer-to-consumer-platform-302710298.html\",\"publication_date\":\"2026-03-11\",\"event_date\":\"2026-03-11\",\"excerpt\":\"Quince ... today announced a $500 million Series E financing led by ICONIQ ... Headline: 'Quince Raises $500M Series E, Resulting in $10.1B Valuation.'\"},{\"claim\":\"ICONIQ led Quince's Series E round; participants included Basis Set Ventures, Wellington Management, Wndrco, MarcyPen Capital Partners, Baillie Gifford, Notable Capital and DST Global.\",\"url\":\"https://www.prnewswire.com/news-releases/quince-raises-500m-series-e-resulting-in-10-1b-valuation-to-accelerate-the-manufacturer-to-consumer-platform-302710298.html\",\"publication_date\":\"2026-03-11\",\"event_date\":\"2026-03-11\",\"excerpt\":\"'... led by ICONIQ, with participation from Basis Set Ventures, Wellington Management, Wndrco, MarcyPen Capital Partners, Baillie Gifford, Notable Capital and DST Global.'\"},{\"claim\":\"Independent reporting corroborated that the latest round was a $500 million Series E announced on 2026-03-11 and that ICONIQ led it.\",\"url\":\"https://techcrunch.com/2026/03/11/quince-series-e-10b-valuation-with-500m-round-led-by-iconiq/\",\"publication_date\":\"2026-03-11\",\"event_date\":\"2026-03-11\",\"excerpt\":\"TechCrunch reported: 'Quince announced on Wednesday that it raised a $500 million Series E round at a $10.1 billion valuation. The round was led by previous investor Iconiq.'\"},{\"claim\":\"As of the 2026-03-11 financing announcement, Quince described itself as a private company rather than a public company or acquired subsidiary.\",\"url\":\"https://www.prnewswire.com/news-releases/quince-raises-500m-series-e-resulting-in-10-1b-valuation-to-accelerate-the-manufacturer-to-consumer-platform-302710298.html\",\"publication_date\":\"2026-03-11\",\"event_date\":\"2026-03-11\",\"excerpt\":\"The release says: 'With this financing, Quince joins a limited cohort of private consumer companies valued at $10 billion or more.' No acquisition or IPO was stated in the sources reviewed.\"}]",
+          "latest_round": "Series E",
+          "round_amount": "500000000",
+          "uncertainties": "Lifecycle status is evidenced primarily by Quince's 2026-03-11 financing announcement describing itself as a private company; I did not find a separate primary source closer to the 2026-09-30 cutoff confirming no subsequent IPO, acquisition closing, or shutdown. No public evidence of such a later lifecycle event was found in the reviewed sources. Publication date and announcement date align for the Series E; a separate legal closing date was not established.",
+          "lead_investors": "ICONIQ",
+          "round_currency": "USD",
+          "company_identity": "Quince at quince.com is a direct-to-consumer e-commerce retailer selling apparel, accessories, jewelry, home goods, baby/kids products, and beauty/wellness essentials.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-03-11"
+        },
+        "reasoning": "I resolved the entity from quince.com itself, then identified the latest financing from a company-issued PR Newswire release and corroborated it with TechCrunch. The strongest public evidence found before the cutoff is a $500 million Series E announced on 2026-03-11 led by ICONIQ. The same company release explicitly calls Quince one of a small group of 'private consumer companies' valued above $10 billion, supporting private status. I found no reviewed evidence of a completed acquisition, IPO, or closure before 2026-09-30.",
+        "stepsTaken": [
+          "Searched Google with query \"Quince quince.com funding round investor acquisition IPO site:quince.com OR site:techcrunch.com OR site:businesswire.com\". The results are: \n {\"search_results\":[{\"title\":\"Quince hits $10B valuation with giant $500M round led by ...\",\"link\":\"https://techcrunch.com/2026/03/11/quince-series-e-10b-valuation-with-500m-round-led-by-iconiq/\",\"snippet\":\"Quince announced on Wednesday that it raised a $500 million Series E round at a $10.1 billion valuation. The round was led by previous investor ...\",\"date\":\"Mar 11, 2026\",\"position\":1},{\"title\":\"Are buyouts the new IPOs?\",\"link\":\"https://techcrunch.com/2016/06/03/are-buyouts-the-new-ipos/\",\"sn...",
+          "Used visitWebpage {\"url\":\"https://www.quince.com/\",\"question\":\"What does this company sell and how does it describe itself? Find evidence that this is the business at quince.com.\"}. The results are: \n \"- Site identity: “Quince” / “quince.com”\\n- Main description on page: “High-quality essentials at radical prices.”\\n- Additional positioning text: “Free shipping & easy returns for 365 days.”\\n- Product categories shown in navigation: Women, Men, Home, Baby & Kids, Travel, Bags & Accessories, Jewelry, Beauty & Wellness, Gifts.\\n- Specific product types shown: sweaters, jewelry, bedding, bags, cashmere, skirts, dresses, outerwear, furniture, pants, shoes, tops, jeans, rugs, lounge & pajamas, int...",
+          "Searched Google with query \"Quince quince.com acquisition IPO private company 2026\". The results are: \n {\"search_results\":[{\"title\":\"Invest In Quince Stock | Buy Pre-IPO Shares\",\"link\":\"https://equityzen.com/company/Quince/\",\"snippet\":\"Accredited investors can buy pre-IPO stock in companies like Quince through EquityZen funds. These investments are made available by existing Quince ...\",\"position\":1},{\"title\":\"Quince Stock $281.74 | How to Buy, Valuation, Stock Price, ...\",\"link\":\"https://notice.co/c/onequince\",\"snippet\":\"Quince stock does not trade publicly on Nasdaq or NYSE because it is still a...",
+          "Searched Google with query \"site:quince.com Quince Series E 2026 press release\". The results are: \n {\"search_results\":[{\"title\":\"About Us\",\"link\":\"https://www.quince.com/about-us\",\"snippet\":\"We started Quince to challenge the existing idea that nice things have to cost a lot. Our mission was simple—create products of equal or greater quality than ...\",\"position\":1},{\"title\":\"Quince Help Center\",\"link\":\"https://www.quince.com/contact-us\",\"snippet\":\"MORE TOPICS · Order Status and Tracking · Shipping · Returns and Exchanges · Order Issues · Account Information and Shopping Tips · Referrals, Point...",
+          "Used visitWebpage {\"url\":\"https://techcrunch.com/2026/03/11/quince-series-e-10b-valuation-with-500m-round-led-by-iconiq/\",\"question\":\"What round did Quince raise, how much, when announced, who led it, and what does the article say about Quince being private or any acquisition/IPO status?\"}. The results are: \n \"Source: https://techcrunch.com/2026/03/11/quince-series-e-10b-valuation-with-500m-round-led-by-iconiq\\n\\nRelevant article data:\\n- Headline: “Quince hits $10B valuation with giant $500M round led by Iconiq”\\n- Published: March 11, 2026, 1:50 PM PDT\\n- “Quince announced on Wednesday that it raised a $500 million Series E round at a $10.1 billion valuation.”\\n- “The round was led by previous investor Iconiq”\\n- The article also says Iconiq “led Quince’s $200 million Series D in early 2025 at a re...",
+          "Used visitWebpage {\"url\":\"https://www.prnewswire.com/news-releases/quince-raises-500m-series-e-resulting-in-10-1b-valuation-to-accelerate-the-manufacturer-to-consumer-platform-302710298.html\",\"question\":\"Find the details of Quince's latest financing round: round name, amount, announcement date, investors, and any language about the company being private or independent.\"}. The results are: \n \"Source: PR Newswire release: Quince (https://prnewswire.com/news/quince)\\n\\n/C O R R E C T I O N -- Quince/\\nNews provided by Quince\\nMar 11, 2026, 12:49 ET\\n\\nHeadline: “Quince Raises $500M Series E, Resulting in $10.1B Valuation to Accelerate the Manufacturer-to-Consumer Platform”\\n\\nRelevant text:\\n- “Quince ... today announced a $500 million Series E financing led by ICONIQ, with participation from Basis Set Ventures, Wellington Management, Wndrco, MarcyPen Capital Partners, Ballie Gifford,...",
+          "Searched Google with query \"Quince 2026 IPO acquisition filed SEC retailer Quince.com\". The results are: \n {\"search_results\":[{\"title\":\"Quince Stock | Invest or Sell\",\"link\":\"https://www.hiive.com/securities/quince-stock\",\"snippet\":\"Quince remains a privately held company. Accredited investors may be able to invest in private companies like Quince before a potential IPO\",\"position\":1},{\"title\":\"Sell or Invest in Quince Stock | 205.86$ NPM Price\",\"link\":\"http://www.nasdaqprivatemarket.com/company/quince/\",\"snippet\":\"Quince is a private company and has not had an IPO. There is currently no Quince IPO p..."
+        ]
+      }
+    }
+  ]
+}

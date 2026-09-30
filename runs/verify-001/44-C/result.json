@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6d9b8S3JZg9YiD3x",
+  "workflow": {
+    "id": "wf_0tm6d21AuFsz5iFGM8e",
+    "name": "Funding lifecycle evaluation C"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:29:35.960Z",
+  "duration": "1m 22s",
+  "dataCreditsUsed": 3.6,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6d9bq9jgQZZCrv2y",
+      "nodeId": "wfn_0tm6d21iRtaxx429Y8Q",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:29:35.968Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "juniper.net",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Juniper Networks"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6d9b4mvVJu8Nwz3z",
+      "nodeId": "wfn_0tm6d4f6jZzvkGe2wpS",
+      "nodeName": "Company research C",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:29:35.979Z",
+      "completedAt": "2026-09-30T11:30:58.205Z",
+      "duration": "1m 22s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "juniper.net",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Juniper Networks"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "Hewlett Packard Enterprise",
+          "evidence": "[{\"claim\":\"Juniper Networks at juniper.net sells AI-native networking products and solutions and states it is now part of HPE.\",\"url\":\"https://www.juniper.net/us/en.html\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Official site: \\\"Juniper Networks is now part of HPE\\\" and describes \\\"secure, AI-native networks\\\" plus products such as Mist AI, routing, Wi‑Fi, AIOps, and AI-ready infrastructure.\"},{\"claim\":\"HPE announced the agreement to acquire Juniper Networks on January 9, 2024 in an all-cash deal valuing Juniper at about $14 billion.\",\"url\":\"https://www.businesswire.com/news/home/20240109534304/en/HPE-to-Acquire-Juniper-Networks-to-Accelerate-AI-Driven-Innovation\",\"publication_date\":\"2024-01-09\",\"event_date\":\"2024-01-09\",\"excerpt\":\"Search result snippet states HPE would acquire Juniper in an all-cash transaction for $40.00 per share, representing an equity value of approximately $14 billion.\"},{\"claim\":\"HPE completed its acquisition of Juniper Networks on July 2, 2025.\",\"url\":\"https://www.hpe.com/us/en/newsroom/press-release/2025/07/hewlett-packard-enterprise-closes-acquisition-of-juniper-networks-to-offer-industry-leading-comprehensive-cloud-native-ai-driven-portfolio.html\",\"publication_date\":\"2025-07-02\",\"event_date\":\"2025-07-02\",\"excerpt\":\"HPE said it had \\\"successfully completed\\\" its acquisition of Juniper Networks on July 2, 2025.\"},{\"claim\":\"After closing, Juniper ceased trading on the NYSE and became a wholly owned HPE subsidiary.\",\"url\":\"https://www.hpe.com/us/en/newsroom/press-release/2025/07/hewlett-packard-enterprise-closes-acquisition-of-juniper-networks-to-offer-industry-leading-comprehensive-cloud-native-ai-driven-portfolio.html\",\"publication_date\":\"2025-07-02\",\"event_date\":\"2025-07-02\",\"excerpt\":\"HPE stated that effective that day, Juniper common stock ceased trading on the NYSE and Juniper became a wholly owned subsidiary of Hewlett Packard Enterprise.\"},{\"claim\":\"A freshness check for sources published after the closing still returned HPE's July 2, 2025 closing announcement as the strongest evidence of Juniper's current ownership/listing status before the 2026-09-30 cutoff.\",\"url\":\"https://www.hpe.com/us/en/newsroom/press-release/2025/07/hewlett-packard-enterprise-closes-acquisition-of-juniper-networks-to-offer-industry-leading-comprehensive-cloud-native-ai-driven-portfolio.html\",\"publication_date\":\"2025-07-02\",\"event_date\":\"2025-07-02\",\"excerpt\":\"Keenable search over 2025-07-01 to 2026-09-30 returned the HPE closing release and other secondary pages indicating Juniper no longer trades independently and is owned by HPE.\"}]",
+          "latest_round": "unknown",
+          "round_amount": "unknown",
+          "uncertainties": "Latest venture equity round before Juniper's public-company era was not established from the reviewed primary sources. Juniper was already a long-public company before the 2025 acquisition, so recent transaction evidence concerns M&A rather than venture financing. Acquisition timeline differs between announcement (2024-01-09) and legal completion/delisting (2025-07-02).",
+          "lead_investors": "unknown",
+          "round_currency": "unknown",
+          "company_identity": "Juniper Networks is a networking technology company that sells AI-native networking hardware, software, and cloud-based network operations products at juniper.net.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2025-07-02",
+          "round_announcement_date": "unknown"
+        },
+        "reasoning": "I resolved the entity from juniper.net, then used HPE's official closing press release to determine current lifecycle status. A verification search up to the 2026-09-30 cutoff did not surface a newer contrary lifecycle event. I found no sufficiently strong public primary evidence for Juniper's latest pre-IPO venture equity round within the call budget, so those funding-round fields are left unknown rather than guessed.",
+        "stepsTaken": [
+          "Searched Google with query \"Juniper Networks juniper.net acquisition HPE completed press release latest financing public company\". The results are: \n {\"search_results\":[{\"title\":\"Hewlett Packard Enterprise closes acquisition of Juniper ...\",\"link\":\"https://www.hpe.com/us/en/newsroom/press-release/2025/07/hewlett-packard-enterprise-closes-acquisition-of-juniper-networks-to-offer-industry-leading-comprehensive-cloud-native-ai-driven-portfolio.html\",\"snippet\":\"HOUSTON – July 2, 2025 – HPE (NYSE: HPE) today announced the successful completion of its previously announced acquisition of Juniper ...\",\"date\":\"Jul 2, 2025\",\"position\":1},{\"title\":\"HPE ...",
+          "Used visitWebpage {\"url\":\"https://www.hpe.com/us/en/newsroom/press-release/2025/07/hewlett-packard-enterprise-closes-acquisition-of-juniper-networks-to-offer-industry-leading-comprehensive-cloud-native-ai-driven-portfolio.html\",\"question\":\"What does this press release say about the completion date of HPE's acquisition of Juniper Networks and Juniper's status after closing?\"}. The results are: \n \"- Press release title: “Hewlett Packard Enterprise closes acquisition of Juniper Networks to offer industry-leading comprehensive, cloud-native, AI-driven portfolio”\\n- Link: https://hpe.com/us/en/newsroom/press-release/2025/07/hewlett-packard-enterprise-closes-acquisition-of-juniper-networks-to-offer-industry-leading-comprehensive-cloud-native-ai-driven-portfolio.html#content\\n- Relevant context:\\n  - “Hewlett Packard Enterprise (NYSE: HPE) today announced the successful completion of its acqu...",
+          "Searched Google with query \"site:juniper.net Juniper Networks company overview AI-native networking official\". The results are: \n {\"search_results\":[{\"title\":\"Juniper Networks, Now Part of HPE – Leading the ...\",\"link\":\"https://www.juniper.net/us/en.html\",\"snippet\":\"Juniper Networks is now part of HPE. Together, we're building industry-leading, secure, AI-native networks – purpose-built with and for AI.\",\"position\":1},{\"title\":\"Secure AI-Native Edge | HPE Juniper Networking US\",\"link\":\"https://www.juniper.net/us/en/solutions/secure-ai-native-edge.html\",\"snippet\":\"Juniper Secure AI-Native Edge simplifies and integrates secu...",
+          "Used visitWebpage {\"url\":\"https://www.juniper.net/us/en.html\",\"question\":\"How does Juniper Networks describe itself and its products on this official page, and does it mention being part of HPE?\"}. The results are: \n \"Relevant page text:\\n- \\\"HPE + Juniper: Leading the convergence of AI and networking\\\"\\n- \\\"Juniper Networks is now part of HPE. Together, we're building industry-leading, secure, AI-native networks – purpose-built with and for AI. As AI and networking converge, we're driving a bold transformation across enterprises, service providers, and cloud operators.\\\"\\n- \\\"Mist AI — Strengthen every connection with an AI-native, self-driving network that continuously learns, adapts, and resolves issues i...",
+          "Searched Google with query \"Juniper Networks IPO venture funding history official SEC press release latest round\". The results are: \n {\"search_results\":[{\"title\":\"Document\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1043604/000104360424000009/jnpr-20231231ex991.htm\",\"snippet\":\"As announced on January 9, 2024, Hewlett Packard Enterprise (“HPE”) plans to acquire Juniper Networks in an all-cash transaction for $40.00 per share, ...\",\"position\":1},{\"title\":\"Juniper Square Announces Series D Financing Round at ...\",\"link\":\"https://www.prnewswire.com/news-releases/juniper-square-announces-series-d-financing-round-at-1-1-billion...",
+          "Searched Google with query \"Juniper Networks raised venture funding before IPO official history investors amount\". The results are: \n {\"search_results\":[{\"title\":\"Juniper Networks - 2026 Funding Rounds & List of Investors\",\"link\":\"https://tracxn.com/d/companies/juniper-networks/__W43iGAD9sHg9PMQe5BSgbQ3hFOH5aeD49QQjwxjYID0/funding-and-investors\",\"snippet\":\"Juniper Networks has raised an undisclosed amount of funding over 6 funding rounds: 1 Early-Stage and 5 Post IPO rounds.\",\"date\":\"Sep 11, 2026\",\"position\":1},{\"title\":\"Juniper Square raises $130M, becomes Amazon for private ...\",\"link\":\"https://www.linkedin.com/posts/brendan...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Juniper Networks current ownership listing status after HPE acquisition completion and any newer financing or lifecycle events before 2026-09-30\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"2025-07-01\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":400,\"max_results\":5,\"session_id\":\"juniper-networks-2026-09-30\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Who Owns Juniper Networks? The HPE Acquisition Explained - LegalClarity\\nURL: https://legalclarity.org/who-owns-juniper-networks-the-hpe-acquisition-explained\\nPublished: 2026-06-12\\nAcquired: 2026-09-07\\nSnippets:\\nHewlett Packard Enterprise owns Juniper Networks. HPE completed its $14 billion all-cash acquisition on July 2, 2025, making Juniper a wholly owned subsidiary. Before that date, Juniper was an independent, publicly traded company listed on th..."
+        ]
+      }
+    }
+  ]
+}

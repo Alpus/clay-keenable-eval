@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6cjwn57bqn94YiFT",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:14:20.041Z",
+  "duration": "2m 5s",
+  "dataCreditsUsed": 4.699999999999999,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6cjwXWmBbB8WiuXp",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:14:20.048Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "walkme.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "WalkMe"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6cjwPwKyiSY2eqzs",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:14:20.064Z",
+      "completedAt": "2026-09-30T11:16:25.976Z",
+      "duration": "2m 5s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "walkme.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "WalkMe"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "SAP SE",
+          "evidence": "[{\"claim\":\"WalkMe is a digital adoption platform company.\",\"url\":\"https://www.walkme.com/news-releases/sap-completes-acquisition-of-walkme/\",\"publication_date\":\"2024-09-12\",\"event_date\":\"2024-09-12\",\"excerpt\":\"SAP SE ... announced it has successfully completed its acquisition of WalkMe Ltd., a leading digital adoption platform company listed on the Nasdaq Global Select Market.\"},{\"claim\":\"WalkMe's latest evidenced pre-IPO venture equity financing announced on the company site was a $90 million funding round led by Vitruvian Partners with participation from Insight Partners.\",\"url\":\"https://www.walkme.com/blog/funding-round/\",\"publication_date\":\"2019-12-04\",\"event_date\":\"2019-12-04\",\"excerpt\":\"WalkMe Raises $90 Million in Latest Funding Round ... we closed our latest funding round with $90M led by Vitruvian Partners, with participation from existing investor Insight Partners.\"},{\"claim\":\"WalkMe became a public company on Nasdaq under ticker WKME in June 2021.\",\"url\":\"https://ir.walkme.com/news-releases/news-release-details/walkme-announces-pricing-initial-public-offering\",\"publication_date\":\"2021-06-16\",\"event_date\":\"2021-06-16\",\"excerpt\":\"WalkMe Ltd. ... announced the pricing of its initial public offering of 9,250,000 ordinary shares at a price to the public of $31.00 per share. The shares are expected to begin trading on the Nasdaq Global Select Market ... under the ticker symbol 'WKME.'\"},{\"claim\":\"SAP completed the acquisition of WalkMe on September 12, 2024; WalkMe shareholders received $14.00 per share in cash, and the company moved toward delisting and terminating SEC registration.\",\"url\":\"https://ir.walkme.com/static-files/c3ce34e2-3f16-46a3-86db-a4820c3266a6\",\"publication_date\":\"2024-09-12\",\"event_date\":\"2024-09-12\",\"excerpt\":\"On September 12, 2024 ... the merger was completed ... each ordinary share ... was automatically converted into the right to receive cash of $14.00 per share ... Trading of WalkMe ordinary shares on Nasdaq will be suspended ... and the company requested that Nasdaq file a Form 25.\"}]",
+          "latest_round": "2019 venture equity round (series name not established from the company source)",
+          "round_amount": "90",
+          "uncertainties": "The company source for the 2019 financing calls it the \"latest funding round\" and states the amount and investors, but the round's series label is not given there. WalkMe later completed an IPO on 2021-06-16, which is not a venture round. For the 2024 acquisition, announcement and completion are distinct: SAP announced the deal on 2024-06-05, while completion occurred on 2024-09-12. The post-merger filing indicates Nasdaq trading would be suspended on 2024-09-12 and delisting/Exchange Act termination would follow; exact delisting effectiveness may trail the closing date.",
+          "lead_investors": "Vitruvian Partners",
+          "round_currency": "USD",
+          "company_identity": "WalkMe is a digital adoption platform software company that helps organizations drive adoption of digital workflows and applications.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2024-09-12",
+          "round_announcement_date": "2019-12-04"
+        },
+        "reasoning": "I identified WalkMe at walkme.com from the company site and then checked for both financing history and current ownership status. The strongest current lifecycle evidence is the company/SAP announcement and a merger-closing filing showing SAP completed the acquisition on 2024-09-12 and that WalkMe shares were being suspended/delisted. For the latest venture equity round, the most direct company evidence before the IPO is WalkMe's 2019 post announcing a $90M latest funding round led by Vitruvian Partners. I separately confirmed WalkMe's IPO in 2021 so that the funding round is not confused with the later public offering.",
+        "stepsTaken": [
+          "Searched Google with query \"WalkMe walkme.com acquisition completed SAP latest funding IPO investor relations\". The results are: \n {\"search_results\":[{\"title\":\"SAP Completes Acquisition of WalkMe\",\"link\":\"https://www.walkme.com/news-releases/sap-completes-acquisition-of-walkme/\",\"snippet\":\"12, 2024 (GLOBE NEWSWIRE) — SAP SE (NYSE: SAP) today announced it has successfully completed its acquisition of WalkMe Ltd., a leading digital adoption platform ...\",\"position\":1},{\"title\":\"SAP Enters into Agreement to Acquire WalkMe\",\"link\":\"https://news.sap.com/2024/06/sap-enters-agreement-to-acquire-walkme/\",\"snippet\":\"The Executive an...",
+          "Searched Google with query \"WalkMe latest funding round before IPO series venture equity press release\". The results are: \n {\"search_results\":[{\"title\":\"Digital adoption platform WalkMe hikes up Series F funding\",\"link\":\"https://www.venturecapitaljournal.com/digital-adoption-platform-walkme-hikes-up-series-f-funding/\",\"snippet\":\"WalkMe, a digital adoption platform, has increased its Series F funding to $50 million. The latest investor to join the round was EDBI. Source: ...\",\"date\":\"Nov 13, 2018\",\"position\":1},{\"title\":\"WalkMe Secures $40 Million Series F Funding to ...\",\"link\":\"https://www.prnewswire.com/news-releas...",
+          "Used visitWebpage {\"url\":\"https://www.walkme.com/news-releases/sap-completes-acquisition-of-walkme/\",\"question\":\"What does this page say about the acquisition completion date, acquirer, transaction status, and what WalkMe is?\"}. The results are: \n \"Relevant page/link: https://www.walkme.com/news-releases/sap-completes-acquisition-of-walkme\\n\\nKey text from the page metadata/snippets provided:\\n- Title: “SAP Completes Acquisition of WalkMe”\\n- “WALLDORF, Sept. 12, 2024 … SAP SE (NYSE: SAP) today announced it has successfully completed its acquisition of WalkMe Ltd., a leading digital adoption platform company listed on the Nasdaq Global Select Market (NASDAQ: WKME).”\\n- “WalkMe’s innovative technology enables seamless …”\\n\\nUseful supporti...",
+          "Searched Google with query \"WalkMe initial public offering pricing 2021 investor relations Nasdaq WKME\". The results are: \n {\"search_results\":[{\"title\":\"WalkMe Announces Pricing of Initial Public Offering\",\"link\":\"https://ir.walkme.com/news-releases/news-release-details/walkme-announces-pricing-initial-public-offering\",\"snippet\":\"WalkMe Ltd. (NASDAQ: WKME), pricing of its initial public offering of 9,250,000 ordinary shares at a price to the public of $31.00 per share.\",\"date\":\"Jun 16, 2021\",\"position\":1},{\"title\":\"WalkMe Announces Pricing of Initial Public Offering\",\"link\":\"https://www.prnewswire.com/news-releases/w...",
+          "Used visitWebpage {\"url\":\"https://ir.walkme.com/news-releases/news-release-details/walkme-announces-pricing-initial-public-offering\",\"question\":\"What is the publication date and what does this page say about WalkMe's IPO pricing, number of shares, exchange, and ticker?\"}. The results are: \n \"Press release: “WalkMe Announces Pricing of Initial Public Offering” — publication date: June 16, 2021. Source page: https://ir.walkme.com/news-events/news-releases ; PDF: https://ir.walkme.com/node/6416/pdf\\n\\nRelevant text:\\n“SAN FRANCISCO, June 16, 2021 /PRNewswire/ -- WalkMe Ltd. (NASDAQ: WKME) ... announced the pricing of its initial public offering of 9,250,000 ordinary shares at a price to the public of $31.00 per share. ... The shares are expected to begin trading on the Nasdaq Global S...",
+          "Used visitWebpage {\"url\":\"https://www.walkme.com/blog/funding-round/\",\"question\":\"What is the publication date, amount, round name, and lead investors described for WalkMe's latest funding round on this page?\"}. The results are: \n \"Page: “WalkMe Raises $90 Million in Latest Funding Round”\\nUpdated: December 4, 2019\\n\\nRelevant text:\\n- “we closed our latest funding round with $90M led by Vitruvian Partners, with participation from existing investor Insight Partners.”\\n\\nUseful links:\\n- Vitruvian Partners: https://vitruvianpartners.com\\n- Insight Partners: https://insightpartners.com\"",
+          "Searched Google with query \"WalkMe delisted Nasdaq acquisition completed September 2024 SEC 25-NSE SAP\". The results are: \n {\"search_results\":[{\"title\":\"Form 6-K for Walkme LTD filed 09/12/2024\",\"link\":\"https://ir.walkme.com/static-files/c3ce34e2-3f16-46a3-86db-a4820c3266a6\",\"snippet\":\"The completion of the acquisition has been duly reported to the Nasdaq Stock Market, and trading of. WalkMe's ordinary shares is expected to be ...\",\"date\":\"Sep 12, 2024\",\"position\":1},{\"title\":\"SAP Completes Acquisition of WalkMe\",\"link\":\"https://news.sap.com/2024/09/sap-completes-walkme-acquisition/\",\"snippet\":\"SAP has successfully c...",
+          "Used visitWebpage {\"url\":\"https://www.sec.gov/Archives/edgar/data/1847584/000117891324002951/zk2434598.htm\",\"question\":\"What does this SEC filing say about the completion date of the merger, the cash consideration per share, and whether WalkMe shares will cease trading or be delisted?\"}. The results are: \n \"no relevant data\"",
+          "Used visitWebpage {\"url\":\"https://ir.walkme.com/static-files/c3ce34e2-3f16-46a3-86db-a4820c3266a6\",\"question\":\"What does this filing say about the acquisition closing date, merger consideration per share, and delisting or cessation of trading of WalkMe ordinary shares?\"}. The results are: \n \"- Filing date / event: On September 12, 2024, WalkMe Ltd., SAP SE, and Hummingbird Acquisition Corp Ltd. announced the consummation of the acquisition; the merger was completed on September 12, 2024.\\n- Merger consideration: As of the Effective Time, each ordinary share of WalkMe issued and outstanding immediately prior to the Effective Time was automatically converted into the right to receive cash of $14.00 per share, without interest, subject to adjustment under the Merger Agreement and less..."
+        ]
+      }
+    }
+  ]
+}

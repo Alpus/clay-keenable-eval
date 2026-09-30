@@ -20,5 +20,16 @@
   },
   "hash_recorded_at": "2026-09-30T10:40:13.955214+00:00",
   "inputs_written_at": "2026-09-30T10:37:31.775296+00:00",
-  "first_run_submitted_at": "2026-09-30T10:40:05.127621+00:00"
+  "first_run_submitted_at": "2026-09-30T10:40:05.127621+00:00",
+  "verification_strategy_amendment": {
+    "recorded_at": "2026-09-30T11:26:17.228453+00:00",
+    "condition": "C",
+    "trigger": "User requested an explicit Keenable fallback and freshness-check strategy after observing optional tool non-use.",
+    "design": "Complete original A/B first; run C only on the same 50 identities; preserve all original runs. This is a post hoc strategy experiment, not held-out confirmation.",
+    "prompt_sha256": "aa8c572cfb0c21dd8080f20e74abb67041501d479f3275d04a95955478b8f99d",
+    "same_model_schema_and_base_prompt": true,
+    "research_budget": "Same eight-call prompt instruction; reserve up to two for Keenable after at most six native calls.",
+    "default_concurrency": 30,
+    "original_runs_completed_before_C_setup": 100
+  }
 }

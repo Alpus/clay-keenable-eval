@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6c9yivPNfKmRE7sK",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:08:22.750Z",
+  "duration": "2m 9s",
+  "dataCreditsUsed": 3.4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6c9yCZWwdfNN5FWo",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:08:22.756Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "mangoboost.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "MangoBoost"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6c9yBXg9g2omTTJY",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:08:22.771Z",
+      "completedAt": "2026-09-30T11:10:31.956Z",
+      "duration": "2m 9s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "mangoboost.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "MangoBoost"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"MangoBoost at mangoboost.io is an agentic AI infrastructure company selling proprietary DPUs, AI software platforms, turnkey AI server systems, and end-to-end data center solutions.\",\"url\":\"https://www.mangoboost.io/company/about\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"The company About page says MangoBoost \\\"builds Agentic AI infrastructure\\\" and \\\"designs and delivers every layer of Agentic AI infrastructure… From DPUs, through AI software platforms, to full-scale server systems and data centers.\\\"\"},{\"claim\":\"MangoBoost says it has raised more than $100M in total and lists a 2023 Series A and 2022 seed on its company timeline.\",\"url\":\"https://www.mangoboost.io/company/about\",\"publication_date\":\"unknown\",\"event_date\":\"2023\",\"excerpt\":\"The About page states \\\"Investment $100M+ Total funding raised from 20+ global investors\\\" and its timeline includes \\\"2023 Series A closed\\\" and \\\"2022 Seed round closed.\\\"\"},{\"claim\":\"The latest directly evidenced venture equity round found in public sources reviewed was a Series A announced on 2023-11-10 for $55 million, led by IMM Investment and Shinhan Venture Investment.\",\"url\":\"https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward\",\"publication_date\":\"2023-11-10\",\"event_date\":\"2023-11-10\",\"excerpt\":\"MangoBoost announced the \\\"successful closing of its Series A funding round\\\" and said the round, \\\"led by IMM Investment and Shinhan Venture Investment,\\\" \\\"has raised $55 million.\\\"\"},{\"claim\":\"Other investors named in the Series A announcement included Korea Development Bank, KB Investment, IM Capital, Premier Partners, and returning seed investors DSC Investment, Stonebridge Ventures, and Must Ventures.\",\"url\":\"https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward\",\"publication_date\":\"2023-11-10\",\"event_date\":\"2023-11-10\",\"excerpt\":\"The release names Korea Development Bank, KB Investment, IM Capital, and Premier Partners, and says seed investors DSC Investment, Stonebridge Ventures, and Must Ventures also participated.\"},{\"claim\":\"A 2026 Google result from MangoBoost's own site and third-party pages did not surface any newer public funding round, acquisition completion, or IPO announcement before the cutoff in the sources reviewed.\",\"url\":\"https://www.google.com/search?q=MangoBoost%20acquisition%20IPO%20funding%202024%202025%202026&hl=en&gl=us\",\"publication_date\":\"2026-09-30\",\"event_date\":\"2026-09-30\",\"excerpt\":\"Search results reviewed showed MangoBoost's 2023 Series A announcement, current company site, and secondary profile pages, but no clearly identified newer funding press release, acquisition completion, or IPO filing/result in the searched sources.\"},{\"claim\":\"Secondary search evidence is consistent with MangoBoost still being a private company rather than a public company.\",\"url\":\"https://equityzen.com/company/mangoboost/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Google surfaced EquityZen's page titled \\\"Invest In MangoBoost Stock | Buy Pre-IPO Shares,\\\" which is consistent with private/pre-IPO status, though this was not independently scraped successfully and is secondary evidence only.\"}]",
+          "latest_round": "Series A",
+          "round_amount": "55 million",
+          "uncertainties": "The company About page says total funding is $100M+, which is not itself a specific round amount and may include multiple financings not individually evidenced here. Search results also surfaced secondary databases (for example Tracxn/Crunchbase snippets) implying additional total funding, but those were not relied on as primary evidence for the latest round. I did not find a public primary-source announcement of any post-2023 venture equity round, acquisition completion, or IPO before the 2026-09-30 cutoff in the sources reviewed. Because affirmative ownership evidence is limited, lifecycle is assessed as private_independent with medium confidence based on active company operations and lack of contrary evidence, not on a formal ownership statement. The Series A press release uses the phrase \"closing\" on 2023-11-10; no separate earlier announcement date or distinct legal close date was established.",
+          "lead_investors": "IMM Investment; Shinhan Venture Investment",
+          "round_currency": "USD",
+          "company_identity": "MangoBoost is a mangoboost.io company that builds full-stack agentic AI infrastructure, including DPUs, AI software, server systems, and data center solutions.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2023-11-10"
+        },
+        "reasoning": "I resolved the entity from the company website, used MangoBoost's own Series A announcement as the strongest primary funding source, checked the company About page for current company identity and total-funding context, and searched for newer funding or lifecycle-changing events through the cutoff. I did not find a primary-source post-2023 financing, acquisition completion, or IPO announcement in the reviewed public sources. Because current ownership evidence is not explicit, I kept uncertainties detailed and set confidence below high.",
+        "stepsTaken": [
+          "Searched Google with query \"MangoBoost mangoboost.io funding acquisition investor press release\". The results are: \n {\"search_results\":[{\"title\":\"Announcing our closing of Series A funding round and way ...\",\"link\":\"https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward\",\"snippet\":\"MangoBoost has secured more than 60 million US dollars in funding and is rapidly expanding its presence in the United States, Canada and South ...\",\"date\":\"Nov 10, 2023\",\"position\":1},{\"title\":\"MangoBoost Newsroom | Press, Media & AI Events Hub\",\"link\":\"https://www.mangoboost.io/c...",
+          "Used visitWebpage {\"url\":\"https://www.mangoboost.io/company/about\",\"question\":\"What does MangoBoost at this domain sell, and does the page mention funding totals or ownership status?\"}. The results are: \n \"MangoBoost sells “Agentic AI infrastructure” built in-house across multiple layers: DPUs (Data Processing Units), AI software platforms, turnkey AI server systems, and end-to-end data center solutions. The page says: “MangoBoost designs and delivers every layer of Agentic AI infrastructure… From DPUs, through AI software platforms, to full-scale server systems and data centers.” It lists:\\n- Layer 1: DPUs — “Proprietary DPU”\\n- Layer 2: Software — “AI Agent OS & Platform”\\n- Layer 3: Systems — ...",
+          "Used visitWebpage {\"url\":\"https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward\",\"question\":\"What round was announced, how much was raised, on what date, and who were the lead investors?\"}. The results are: \n \"Press Release: “Announcing our closing of Series A funding round and way forward” — Date: November 10, 2023. Relevant text: “MangoBoost, Inc. ... is excited to announce the successful closing of its Series A funding round. The funding round, led by IMM Investment and Shinhan Venture Investment ... has raised $55 million ...” Additional investors mentioned: “Korea Development Bank, KB Investment, IM Capital, and Premier Partners.” Seed investors also participated: “DSC Investment, Stonebridge Ve...",
+          "Searched Google with query \"site:mangoboost.io OR site:businesswire.com MangoBoost funding acquisition IPO 2024 2025 2026\". The results are: \n {\"message\":\"No data returned from search query\"}",
+          "Searched Google with query \"MangoBoost acquisition IPO funding 2024 2025 2026\". The results are: \n {\"search_results\":[{\"title\":\"Announcing our closing of Series A funding round and way ...\",\"link\":\"https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward\",\"snippet\":\"MangoBoost has secured more than 60 million US dollars in funding and is rapidly expanding its presence in the United States, Canada and South ...\",\"date\":\"Nov 10, 2023\",\"position\":1},{\"title\":\"Invest In MangoBoost Stock | Buy Pre-IPO Shares\",\"link\":\"https://equityzen.com/company/...",
+          "Used visitWebpage {\"url\":\"https://www.mangoboost.io/company/newsroom\",\"question\":\"List any press releases or newsroom items after 2023 about fundraising, acquisition, IPO, or ownership changes, with dates.\"}. The results are: \n \"no relevant data\"",
+          "Used visitWebpage {\"url\":\"https://www.businesswire.com/news/home/20260112376373/en/A-Year-of-Innovation-MangoBoost-Showcases-400G-DPU-Applications-and-Expands-AI-Infrastructure-Adoption\",\"question\":\"What does this 2026 Business Wire release say about MangoBoost's business, company status, and any funding or ownership changes?\"}. The results are: \n {\"status\":\"ERROR\",\"message\":\"Error using the website scrape tool. The tool returned an error.\",\"errorDetails\":\"Unknown error in tool execution\",\"errorType\":\"ToolExecutionResponseError\"}",
+          "Used visitWebpage {\"url\":\"https://equityzen.com/company/mangoboost/\",\"question\":\"Does this page identify MangoBoost as private/pre-IPO, and does it mention any funding round details?\"}. The results are: \n {\"message\":\"No content found on the website\"}"
+        ]
+      }
+    }
+  ]
+}

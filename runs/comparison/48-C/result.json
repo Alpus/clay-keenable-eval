@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6d9ffk83gMNb3WkQ",
+  "workflow": {
+    "id": "wf_0tm6d21AuFsz5iFGM8e",
+    "name": "Funding lifecycle evaluation C"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:29:39.557Z",
+  "duration": "1m 47s",
+  "dataCreditsUsed": 6,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6d9fJCutdBTsaXuN",
+      "nodeId": "wfn_0tm6d21iRtaxx429Y8Q",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:29:39.567Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "klarna.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Klarna"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6d9fvRfc9vnbnuD2",
+      "nodeId": "wfn_0tm6d4f6jZzvkGe2wpS",
+      "nodeName": "Company research C",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:29:39.580Z",
+      "completedAt": "2026-09-30T11:31:27.048Z",
+      "duration": "1m 47s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "klarna.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Klarna"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Klarna Group plc is a global digital bank and flexible payments provider, and its investor relations site says it is listed on the New York Stock Exchange under ticker KLAR.\",\"url\":\"https://investors.klarna.com/overview/default.aspx\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Investor Relations / About Klarna: 'Klarna is a global digital bank and flexible payments provider.' It also states: 'Klarna is listed on the New York Stock Exchange (NYSE: KLAR).'\"},{\"claim\":\"Klarna announced an $800 million funding round on 2022-07-11.\",\"url\":\"https://www.reuters.com/business/finance/klarnas-valuation-slumps-67-bln-with-800-mln-raise-2022-07-11/\",\"publication_date\":\"2022-07-11\",\"event_date\":\"2022-07-11\",\"excerpt\":\"Reuters reported that Klarna 'had raised $800 million of funds' and that the report was published on July 11, 2022.\"},{\"claim\":\"Reuters described the 2022-07-11 financing as Klarna's latest funding round as of August 2022, and said it cut Klarna's valuation to $6.7 billion from $46 billion.\",\"url\":\"https://www.reuters.com/business/finance/bruised-by-valuation-freefall-payments-companies-brace-ma-2022-08-12/\",\"publication_date\":\"2022-08-12\",\"event_date\":\"2022-07-11\",\"excerpt\":\"Reuters wrote: 'Klarna, in particular, had its value slashed by more than 85% during its latest funding round announced on July 11, dropping to $6.7 billion from $46 billion.'\"},{\"claim\":\"Klarna completed a U.S. IPO in September 2025, raising $1.37 billion, and Reuters said it would start trading on the NYSE under KLAR.\",\"url\":\"https://www.reuters.com/business/finance/klarna-raises-137-billion-us-ipo-boosting-fintech-hopefuls-2025-09-09/\",\"publication_date\":\"2025-09-10\",\"event_date\":\"2025-09-10\",\"excerpt\":\"Reuters: 'Klarna said on Tuesday it has raised $1.37 billion in its U.S. initial public offering' and 'Klarna will start trading on the New York Stock Exchange under the symbol KLAR on Wednesday.'\"}]",
+          "latest_round": "2022 private funding round",
+          "round_amount": "800000000",
+          "uncertainties": "The strongest evidence found for the latest pre-IPO venture equity round is Reuters on 2022-07-11 and 2022-08-12; no later private venture round before the 2025 IPO was surfaced in the available searches. Reuters named participants in the 2022 round but did not identify formal lead investors, so lead investors are left as unknown. For lifecycle timing, Reuters says Klarna raised the IPO proceeds on Tuesday 2025-09-09 and would start trading on Wednesday 2025-09-10; public status is anchored to the start of trading, while the pricing/raise happened one day earlier.",
+          "lead_investors": "unknown",
+          "round_currency": "USD",
+          "company_identity": "Klarna at klarna.com is a global digital bank and flexible payments provider offering buy-now-pay-later and other payment services.",
+          "lifecycle_status": "public",
+          "lifecycle_event_date": "2025-09-10",
+          "round_announcement_date": "2022-07-11"
+        },
+        "reasoning": "I identified the exact company from Klarna's investor relations site, established current lifecycle status from both Klarna IR and Reuters' IPO coverage, found the latest evidenced venture equity round from Reuters' July 2022 funding report, and used a Keenable freshness check to look for newer financing or lifecycle changes through the 2026-09-30 cutoff.",
+        "stepsTaken": [
+          "Searched Google with query \"Klarna klarna.com latest funding round IPO acquisition 2025 2026 site:klarna.com OR site:news.cision.com OR site:reuters.com\". The results are: \n {\"search_results\":[{\"title\":\"Investor Relations: Klarna Group plc\",\"link\":\"https://investors.klarna.com/overview/default.aspx\",\"snippet\":\"Klarna is a global digital bank and flexible payments provider. Latest Quarter Q2 2026 Earnings Release of Q2 2026, PDF file, Investor Presentation of Q2 2026, ...\",\"position\":1},{\"title\":\"Sweden's Klarna targets up to $14 billion valuation in ...\",\"link\":\"https://www.reuters.com/business/finance/swedens-klarna-targets-up-14-billion-valuation-eagerly-awaited-u...",
+          "Used visitWebpage {\"url\":\"https://investors.klarna.com/overview/default.aspx\",\"question\":\"What does this page say about Klarna's business identity and whether it is publicly listed, including any exchange or ticker mentioned?\"}. The results are: \n \"From the Investor Relations / About Klarna page: “Klarna is a global digital bank and flexible payments provider.” It also states: “Klarna is listed on the New York Stock Exchange (NYSE: KLAR).” Footer/legal entity shown: “© 2026 Klarna Group plc - All rights reserved.” Relevant links: Overview: https://investors.klarna.com/overview/default.aspx ; Stock Info: https://investors.klarna.com/stock-info/default.aspx ; About Klarna: https://klarna.com/international/about-us ; Investor Relations homep...",
+          "Used visitWebpage {\"url\":\"https://www.klarna.com/international/press/\",\"question\":\"Find the press release titled about a $650M funding round and extract the announcement date, amount raised, currency, and any lead investors named.\"}. The results are: \n \"Press release: \\\"Klarna announces $650M funding round to further accelerate global growth\\\"\\nAnnouncement date: September 15, 2020\\nAmount raised: $650M\\nCurrency: $\\nLead investors named in provided content: none\\nLink: https://klarna.com/international/press/klarna-announces-650m-funding-round-to-further-accelerate-global-growth\\nEmail: press@klarna.com\"",
+          "Searched Google with query \"Klarna latest funding round 2022 Reuters March July 2022 lead investors site:reuters.com OR site:klarna.com\". The results are: \n {\"search_results\":[{\"title\":\"Fintech's next big down round may have an upside\",\"link\":\"https://www.reuters.com/breakingviews/fintechs-next-big-down-round-may-have-an-upside-2022-08-24/\",\"snippet\":\"Klarna on July 11 raised money from investors at a valuation of $6.7 billion, after including the new capital raised. That compared with a $45.6 ...\",\"date\":\"Aug 24, 2022\",\"position\":1},{\"title\":\"Klarna's $46 bln price tag endures only in theory\",\"link\":\"https://www.reuters.com/breakingviews/klarnas-46...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/business/finance/bruised-by-valuation-freefall-payments-companies-brace-ma-2022-08-12/\",\"question\":\"What does this Reuters article say about Klarna's latest funding round, including announcement date, amount raised, valuation, and any investors named?\"}. The results are: \n \"Relevant Reuters article details:\\n- Article: “Bruised by a valuation freefall, payments companies brace for M&A” (Reuters, Aug. 12, 2022)\\n- Klarna reference: “Klarna, in particular, had its value slashed by more than 85% during its latest funding round announced on July 11, dropping to $6.7 billion from $46 billion.”\\n- This page does not state the amount raised in Klarna’s latest funding round.\\n- This page does not name any investors in Klarna’s latest funding round.\"",
+          "Searched Google with query \"Klarna July 11 2022 funding round lead investors amount site:klarna.com OR site:reuters.com OR site:techcrunch.com\". The results are: \n {\"search_results\":[{\"title\":\"Klarna raises $800 million as valuation plunges 85% in a ...\",\"link\":\"https://www.reuters.com/business/finance/klarnas-valuation-slumps-67-bln-with-800-mln-raise-2022-07-11/\",\"snippet\":\"Klarna Bank AB said on Monday it had raised $800 million of funds at a valuation of $6.7 billion, down around 85% from the $46 billion price-tag\",\"date\":\"Jul 11, 2022\",\"position\":1},{\"title\":\"Klarna confirms $800M raise as valuation drops 85%\",\"link\":\"https://techcrunch.com/2022/07/11...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/business/finance/klarnas-valuation-slumps-67-bln-with-800-mln-raise-2022-07-11/\",\"question\":\"What amount did Klarna raise, on what date was it announced, and were any lead investors named in this Reuters report?\"}. The results are: \n \"Reuters report: “Klarna raises $800 million as valuation plunges 85% in a year” — announced July 11, 2022. Relevant text: “Swedish payments firm Klarna Bank AB said on Monday it had raised $800 million of funds...” and “Sequoia, the company's founders, Bestseller, Silver Lake, and Commonwealth Bank of Australia were among existing investors to participate in the round. Klarna also got new investors such as Mubadala Investment Company and Canada Pension Plan Investment Board.” Link: https://reut...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Klarna Group plc recent financing round after July 2022 acquisition completion IPO listing status through September 2026 official investor relations or Reuters\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":400,\"max_results\":5,\"session_id\":\"klarna-2026-09-30\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Klarna\\nURL: https://en.wikipedia.org/wiki/Klarna?:~:text=%5B5%5D%20%5B6%5D%20Initially%20offering%20buy_services%20for%20the%20e-commerce%20industry.\\nPublished: 2026-07-19\\nAcquired: 2026-07-20\\nSnippets:\\nIn July 2022, amid falling technology valuations and rising interest rates, Klarna raised $800 million at a valuation of $6.7 billion, about 85 percent below its 2021 valuation.\\n\\n---\\n\\nTitle: Swedish fintech company\\nURL: https://en-wikipedia-org....",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/business/finance/klarna-raises-137-billion-us-ipo-boosting-fintech-hopefuls-2025-09-09/\",\"question\":\"What does this Reuters article say about Klarna's IPO amount raised, date, valuation, and exchange listing?\"}. The results are: \n \"Reuters article: “Klarna raises $1.37 billion in US IPO, boosting fintech hopefuls,” published September 10, 2025, updated September 10, 2025. Relevant text: “Klarna said on Tuesday it has raised $1.37 billion in its U.S. initial public offering.” “Earlier in the day, Reuters had reported, citing two sources, that the IPO values Klarna at $15.11 billion.” “Klarna will start trading on the New York Stock Exchange under the symbol ‘KLAR’ on Wednesday.”\""
+        ]
+      }
+    }
+  ]
+}

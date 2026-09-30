@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6bokwmJnTEjZ8pMD",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:55:32.306Z",
+  "duration": "1m 36s",
+  "dataCreditsUsed": 4.199999999999999,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6bokUb2MKKwv96qz",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:55:32.312Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "replit.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Replit"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6bokFJ28Jm95NQZC",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:55:32.324Z",
+      "completedAt": "2026-09-30T10:57:08.844Z",
+      "duration": "1m 36s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "replit.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Replit"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Replit at replit.com is an AI-powered software creation/development platform that helps users turn ideas into apps, with built-in hosting, database, security, and integrations.\",\"url\":\"https://replit.com\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Homepage: 'Turn ideas into apps in minutes — no coding needed' and lists Apps & Websites, Agents, Databases, Integrations, Security, plus built-in Authentication, Database, Hosting, and Monitoring.\"},{\"claim\":\"Replit announced a $400 million Series D financing at a $9 billion valuation on March 11, 2026.\",\"url\":\"https://techcrunch.com/2026/03/11/replit-snags-9b-valuation-6-months-after-hitting-3b/\",\"publication_date\":\"2026-03-11\",\"event_date\":\"2026-03-11\",\"excerpt\":\"TechCrunch: Replit 'announced Wednesday that it raised a $400 million Series D at a $9 billion valuation.'\"},{\"claim\":\"Georgian led Replit's $400 million Series D, with participation from G Squared, Prysm Capital, Coatue, Andreessen Horowitz, Craft Ventures, Y Combinator, Accenture Ventures, Okta Ventures, and Databricks Ventures, among others.\",\"url\":\"https://www.prnewswire.com/news-releases/georgian-leads-400m-series-d-investment-in-replit-to-support-continued-investment-in-replit-agent-302711218.html\",\"publication_date\":\"2026-03-11\",\"event_date\":\"2026-03-11\",\"excerpt\":\"Press release: 'Georgian led the $400 million Series D investment' and was 'joined in the round by partners including G Squared, Prysm Capital, Coatue, Andreessen Horowitz (a16z), Craft Ventures, Y Combinator, Accenture Ventures, Okta Ventures and Databricks Ventures among others.'\"},{\"claim\":\"Replit itself described the same fundraise as a new $400 million round that took valuation to $9 billion.\",\"url\":\"https://replit.com/news/funding-announcement\",\"publication_date\":\"unknown\",\"event_date\":\"2026-03-11\",\"excerpt\":\"Replit news page says the startup 'announced a new fundraising round of $400 million' and that 'The round vaults Replit's valuation to $9 billion, up from $3 billion just six months ago.'\"},{\"claim\":\"As of the latest located 2026 funding evidence, Replit was operating as a private company rather than a public company or acquired subsidiary.\",\"url\":\"https://techcrunch.com/2026/03/11/replit-snags-9b-valuation-6-months-after-hitting-3b/\",\"publication_date\":\"2026-03-11\",\"event_date\":\"2026-03-11\",\"excerpt\":\"The March 2026 article reports a venture 'Series D' financing for Replit, which is consistent with continued private-company status; no public evidence of an IPO or completed acquisition was found in the searches performed through the 2026-09-30 cutoff.\"}]",
+          "latest_round": "Series D",
+          "round_amount": "400 million",
+          "uncertainties": "No separate legal closing date was established beyond the March 11, 2026 announcement/publication date. Replit's own news page, as retrieved, did not expose a clear publication timestamp, so the exact publication date there is left unknown even though the round is described as occurring on a Wednesday matching 2026-03-11. For lifecycle status, the evidence positively supports private operation via a March 2026 venture round, but I did not locate a primary-source statement explicitly saying 'still private' on the cutoff date; instead, I found no evidence in the searches performed of a completed acquisition, IPO, or closure before 2026-09-30.",
+          "lead_investors": "Georgian",
+          "round_currency": "USD",
+          "company_identity": "Replit is a San Francisco-based AI-powered software development platform that lets users create, deploy, and iterate on applications from the browser.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-03-11"
+        },
+        "reasoning": "I resolved the entity from replit.com and prioritized current public evidence on the latest financing and lifecycle. The strongest financing evidence is the March 11, 2026 TechCrunch report, corroborated by Replit's own news page and a PR Newswire release naming the lead and participating investors. No evidence surfaced in the searches performed of a completed acquisition, IPO, or shutdown before the 2026-09-30 cutoff, so the best-supported lifecycle classification is private_independent.",
+        "stepsTaken": [
+          "Searched Google with query \"Replit funding latest round acquisition IPO site:replit.com OR TechCrunch OR Crunchbase OR SEC as of 2026\". The results are: \n {\"search_results\":[{\"title\":\"Replit Hits $9B Valuation, Bets on Microsoft Fabric [2026]\",\"link\":\"https://tech-insider.org/ie/replit-9-billion-valuation-2026/\",\"snippet\":\"Replit closed a $400 million funding round on March 11, 2026, pushing its valuation to $9 billion. TechCrunch's coverage of the deal\",\"date\":\"Aug 5, 2026\",\"position\":1},{\"title\":\"After nine years of grinding, Replit finally found its market. ...\",\"link\":\"https://techcrunch.com/2025/10/02/after-nine-years-of-grinding-replit-final...",
+          "Used visitWebpage {\"url\":\"https://replit.com\",\"question\":\"What does Replit say it is or sells on its homepage or company site?\"}. The results are: \n \"Replit homepage says:\\n- “Turn ideas into apps in minutes — no coding needed”\\n- “What will you build?”\\n- Product areas listed: “Apps & Websites,” “Slides,” “Agents,” “Databases,” “Integrations,” “Security”\\n- “Describe and publish your project. Replit writes production-ready code, evolves it, and stays out of your way.”\\n- “Build & scale your apps easily.”\\n- Built-in services: “Authentication, Database, Hosting, and Monitoring”\\n- “Enhance your apps with AI and 100+ integrations.”\\n- “Securi...",
+          "Searched Google with query \"Replit acquisition IPO private company 2026 Reuters SEC latest funding March 2026\". The results are: \n {\"search_results\":[{\"title\":\"Insights: How To Invest In Replit Stock Pre-IPO\",\"link\":\"https://forgeglobal.com/insights/how-to-invest-in-replit-stock-pre-ipo/\",\"snippet\":\"As of June 2026, Replit has not announced plans for an IPO. The company raised $400 million in its Series D round in March 2026, bringing its ...\",\"date\":\"Aug 7, 2026\",\"position\":1},{\"title\":\"Replit Hits $9B Valuation, Bets on Microsoft Fabric [2026]\",\"link\":\"https://tech-insider.org/ie/replit-9-billion-valuation-2026/\",\"snippet...",
+          "Used visitWebpage {\"url\":\"https://replit.com/news/funding-announcement\",\"question\":\"What does this Replit funding announcement say about the funding round amount, valuation, lead investors, and announcement date?\"}. The results are: \n \"Relevant webpage context:\\n- Article title: “Meet The $9 Billion AI Company Reimagining Vibe Coding”\\n- The page says: “On Wednesday, the startup announced its new agent...” and later: “on Wednesday announced a new fundraising round of $400 million, led by VC firm Georgian, with participation from Andreessen Horowitz, Coatue, Donald Trump Jr’s 1789, celebrities Shaquille O’Neal and Jared Leto, and sovereign wealth funds including Qatar’s QIA.”\\n- The page also says: “The round vaults Replit’s v...",
+          "Searched Google with query \"Replit $400 million March 2026 Reuters TechCrunch Georgian March 11 2026\". The results are: \n {\"search_results\":[{\"title\":\"Replit snags $9B valuation 6 months after hitting $3B\",\"link\":\"https://techcrunch.com/2026/03/11/replit-snags-9b-valuation-6-months-after-hitting-3b/\",\"snippet\":\"The company announced Wednesday that it raised a $400 million Series D at a $9 billion valuation, led by previous investor Georgian Partners.\",\"date\":\"Mar 11, 2026\",\"position\":1},{\"title\":\"Georgian Leads $400M Series D Investment in Replit to ...\",\"link\":\"https://www.prnewswire.com/news-releases/georgian-lea...",
+          "Used visitWebpage {\"url\":\"https://techcrunch.com/2026/03/11/replit-snags-9b-valuation-6-months-after-hitting-3b/\",\"question\":\"What are the amount, round name, lead investor, valuation, and announcement date in this Replit funding article?\"}. The results are: \n \"Article: https://techcrunch.com/2026/03/11/replit-snags-9b-valuation-6-months-after-hitting-3b\\nPosted: 11:52 AM PDT · March 11, 2026\\n\\nRelevant text:\\n“Replit … announced Wednesday that it raised a $400 million Series D at a $9 billion valuation, led by previous investor Georgian Partners.”\\n\\nSupporting link mentioned in page:\\nhttps://prnewswire.com/news-releases/georgian-leads-400m-series-d-investment-in-replit-to-support-continued-investment-in-replit-agent-302711218.html\"",
+          "Searched Google with query \"Replit acquisition announced IPO filed SEC 2026 site:reuters.com OR site:sec.gov OR site:replit.com\". The results are: \n {\"search_results\":[{\"title\":\"Exhibit 99.2\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1847806/000149315226027417/ex99-2.htm\",\"snippet\":\"In May 2026 our Board approved the launch of our Genius AI Treasury, with a plan to deploy up to US$100 million of initial capital as the first ...\",\"date\":\"Jun 3, 2026\",\"position\":1},{\"title\":\"wix-20251231\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1576789/000162828026015222/wix-20251231.htm\",\"snippet\":\"Pursuant to the Purchase Agreement, on March 5,...",
+          "Used visitWebpage {\"url\":\"https://www.prnewswire.com/news-releases/georgian-leads-400m-series-d-investment-in-replit-to-support-continued-investment-in-replit-agent-302711218.html\",\"question\":\"Which investors participated in Replit's March 11 2026 Series D and what does the press release say about Replit's business?\"}. The results are: \n \"Press release: “Georgian Leads $400M Series D Investment in Replit to support continued investment in Replit Agent” — Mar 11, 2026. Source link: https://prnewswire.com/news/georgian-partners-growth-lp\\n\\nRelevant investor participation:\\n- Georgian led the $400 million Series D investment in Replit.\\n- “Georgian is joined in the round by partners including G Squared, Prysm Capital, Coatue, Andreessen Horowitz (a16z), Craft Ventures, Y Combinator, Accenture Ventures, Okta Ventures and Databricks..."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "key": "15-C",
+  "case_id": "isomorphic_labs",
+  "arm": "C",
+  "inputs": {
+    "company_name": "Isomorphic Labs",
+    "domain": "isomorphiclabs.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  "workflow_id": "wf_0tm6d21AuFsz5iFGM8e",
+  "node_id": "wfn_0tm6d4f6jZzvkGe2wpS",
+  "status": "failed",
+  "submitted_at": "2026-09-30T11:27:36.895953+00:00",
+  "run_id": "wfr_0tm6d61mGJgx9KqjX7m",
+  "terminal_observed_at": "2026-09-30T11:29:01.144991+00:00",
+  "directory": "15-C/attempts/1",
+  "archived_at": "2026-09-30T11:34:27.095209+00:00"
+}

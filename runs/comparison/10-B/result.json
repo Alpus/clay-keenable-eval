@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6bdgM5UU4ACrT2um",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:48:52.817Z",
+  "duration": "1m 45s",
+  "dataCreditsUsed": 4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6bdg8r9qi8XyEh8R",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:48:52.823Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "supabase.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Supabase"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6bdggmZBEoW4VCtx",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:48:52.836Z",
+      "completedAt": "2026-09-30T10:50:37.918Z",
+      "duration": "1m 45s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "supabase.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Supabase"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Supabase is an open-source Postgres development platform / backend platform for developers.\",\"url\":\"https://supabase.com/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Homepage: 'Start your project with a Postgres database. Add Authentication, Data APIs, Edge Functions, Realtime Data, Storage, and Vector embeddings.' It also says Supabase is 'Open source from day one.'\"},{\"claim\":\"Supabase announced a $500M Series F on 2026-06-04.\",\"url\":\"https://supabase.com/blog/supabase-series-f\",\"publication_date\":\"2026-06-04\",\"event_date\":\"2026-06-04\",\"excerpt\":\"'Supabase has raised a $500M Series F at a $10B pre-money valuation.'\"},{\"claim\":\"GIC led the Series F; Georgian and Salesforce Ventures were new investors; existing investors joined and Stripe invested again.\",\"url\":\"https://supabase.com/blog/supabase-series-f\",\"publication_date\":\"2026-06-04\",\"event_date\":\"2026-06-04\",\"excerpt\":\"'It's led by GIC.' 'All existing investors joined the round, Stripe made a second investment.' 'Georgian and Salesforce Ventures joined as new investors.'\"},{\"claim\":\"Reuters reported Supabase's prior round was a $100M Series E announced on 2025-10-03 and led by Accel and Peak XV.\",\"url\":\"https://www.reuters.com/business/database-startup-supabase-notches-5-billion-valuation-funding-round-2025-10-03/\",\"publication_date\":\"2025-10-03\",\"event_date\":\"2025-10-03\",\"excerpt\":\"Reuters reported that Supabase secured a $5 billion valuation in a $100 million Series E funding round led by Accel and Peak XV, with Figma Ventures and others participating.\"},{\"claim\":\"As of the researched sources, Supabase is still private and has not had an IPO.\",\"url\":\"http://www.nasdaqprivatemarket.com/company/supabase/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"FAQ states: 'Supabase is a private company and has not had an IPO.' It also says there is no ticker symbol and its stock does not trade on public exchanges.\"}]",
+          "latest_round": "Series F",
+          "round_amount": "500000000",
+          "uncertainties": "Lifecycle status is evidenced as private rather than public by a secondary market profile, not by a formal company or regulatory filing. I found no public evidence of a completed acquisition, IPO, closure, or newer post-Series-F equity round before the 2026-09-30 cutoff in the sources searched, but absence-of-evidence limits certainty. The Series F source gives an announcement date (2026-06-04) and investor details, but not a separate legal closing date; one secondary result snippet referenced a $10.5B valuation while the company blog states $10B pre-money, so I report only the round amount and note the valuation discrepancy as nonessential to the requested fields.",
+          "lead_investors": "GIC",
+          "round_currency": "USD",
+          "company_identity": "Supabase is an open-source Postgres development platform that provides database, authentication, APIs, edge functions, realtime, storage, and vector features for application developers.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-06-04"
+        },
+        "reasoning": "I identified the company from its domain using the homepage, then used the company’s own 2026 Series F announcement to establish the latest evidenced venture equity round and investor details. Reuters corroborated the prior 2025 Series E, helping confirm Series F is newer. For lifecycle, I found evidence that Supabase remains private and has not had an IPO; I found no evidence of acquisition, closure, or public listing before the 2026-09-30 cutoff. Based on the available public evidence, the best-supported status is private_independent.",
+        "stepsTaken": [
+          "Searched Google with query \"Supabase supabase.com funding round acquisition IPO latest 2025 2026\". The results are: \n {\"search_results\":[{\"title\":\"Supabase IPO Timeline and Financing Details\",\"link\":\"https://forgeglobal.com/supabase_ipo/\",\"snippet\":\"Supabase IPO $10.65B Series F Valuation, Sep 2026 … 02/09/2026 Series E $100.31M. Supabase has raised $100 million in late-stage funding. Supabase is now worth ...\",\"position\":1},{\"title\":\"Supabase Series F\",\"link\":\"https://supabase.com/blog/supabase-series-f\",\"snippet\":\"Supabase has raised a $500M Series F at a $10B pre-money valuation, led by GIC. Georgian and Sal...",
+          "Used visitWebpage {\"url\":\"https://supabase.com/blog/supabase-series-f\",\"question\":\"What amount was raised, what round was it, when was it announced, who led or joined as investors, and what does this page say about Supabase?\"}. The results are: \n \"Source: https://supabase.com/blog/supabase-series-f\\n\\nTitle/date/author:\\n- “Supabase Series F”\\n- Announced: 4 Jun 2026\\n- Author: Paul Copplestone, CEO and Co-Founder\\n\\nFundraising details:\\n- “Supabase has raised a $500M Series F at a $10B pre-money valuation.”\\n- “It’s led by GIC.”\\n- “All existing investors joined the round, Stripe made a second investment.”\\n- “Georgian and Salesforce Ventures joined as new investors.”\\n\\nWhat the page says about Supabase:\\n- “Nearly 10 million develope...",
+          "Searched Google with query \"Supabase acquisition IPO private company Reuters June 2026 Supabase\". The results are: \n {\"search_results\":[{\"title\":\"Supabase IPO Timeline and Financing Details\",\"link\":\"https://forgeglobal.com/supabase_ipo/\",\"snippet\":\"Supabase has not yet filed for an IPO. The Supabase IPO price does not exist at this time, as Supabase is still a private company and has not yet conducted an ...\",\"position\":1},{\"title\":\"Database startup Supabase valued at $5 billion in funding ...\",\"link\":\"https://www.reuters.com/business/database-startup-supabase-notches-5-billion-valuation-funding-round-2025-10-...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/business/database-startup-supabase-notches-5-billion-valuation-funding-round-2025-10-03/\",\"question\":\"What did Reuters report about Supabase's 2025 funding round, investors, total funding, and business description?\"}. The results are: \n \"Reuters reported on Oct. 3, 2025: Supabase said it secured a $5 billion valuation in its latest funding round. The $100 million Series E funding was led by Accel and Peak XV, with Figma Ventures and other investors also participating. Founded in 2020, Supabase has now raised more than $500 million in total funding. Reuters described Supabase as an open-source database startup and a backend platform that helps developers build applications quickly; the platform is built on the PostgreSQL open-so...",
+          "Used visitWebpage {\"url\":\"https://supabase.com/\",\"question\":\"How does Supabase describe the company and its product on the homepage?\"}. The results are: \n \"Homepage: https://supabase.com\\n\\nKey homepage copy describing the company/product:\\n- “Build in a weekend\\nScale to millions”\\n- “Start your project with a Postgres database. Add Authentication, Data APIs, Edge Functions, Realtime Data, Storage, and Vector embeddings.”\\n- “Use one or all. Best of breed products. Integrated as a platform.”\\n- “Trusted by fast-growing companies worldwide”\\n- “Open source from day one”\\n- “Supabase is built in the open because we believe great developer tools sho...",
+          "Searched Google with query \"site:supabase.com OR site:reuters.com Supabase acquisition IPO 2026\". The results are: \n {\"search_results\":[{\"title\":\"Sitemap - 3 October 2025\",\"link\":\"https://www.reuters.com/sitemap/2025-10/03/1/\",\"snippet\":\"Supabase valued at $5 billion in funding led by Accel, Peak XV Open-source database startup Supabase said on Friday it has secured a valuation ...\",\"date\":\"Oct 3, 2025\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3Asupabase.com%20OR%20site%3Areuters.com%20Supabase%20acquisition%20IPO%202026&h...",
+          "Searched Google with query \"Nasdaq Private Market Supabase private company has not had an IPO\". The results are: \n {\"search_results\":[{\"title\":\"Sell or Invest in Supabase Stock | $75.48 NPM Price\",\"link\":\"http://www.nasdaqprivatemarket.com/company/supabase/\",\"snippet\":\"Supabase is a private company and has not had an IPO. There is currently no Supabase IPO price. Get started to begin exploring the Nasdaq Private Market ...\",\"position\":1},{\"title\":\"Investment Platform\",\"link\":\"https://www.nasdaqprivatemarket.com/investment-platform/\",\"snippet\":\"Private companies don't have the same disclosure requirements as ...",
+          "Used visitWebpage {\"url\":\"http://www.nasdaqprivatemarket.com/company/supabase/\",\"question\":\"Does this page state whether Supabase is a private company or has had an IPO?\"}. The results are: \n \"- FAQ: “Supabase stock does not trade on public stock exchanges. Supabase stock is considered a private security...”\\n- FAQ: “Supabase Stock does not trade on public stock exchanges.”\\n- FAQ: “There is no ticker symbol for Supabase stock because it is a private company.”\\n- FAQ: “Supabase is a private company and has not had an IPO. There is currently no Supabase IPO price.”\\n- Page link: www.supabase.com\""
+        ]
+      }
+    }
+  ]
+}

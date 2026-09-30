@@ -1,0 +1,88 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6cb8rNG6U5EvBgVm",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:09:08.688Z",
+  "duration": "1m 44s",
+  "dataCreditsUsed": 5.3,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6cb8r4XNxEfGoMKq",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:09:08.700Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "vizzia.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Vizzia"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6cb8ScHCprF66xjt",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:09:08.721Z",
+      "completedAt": "2026-09-30T11:10:52.679Z",
+      "duration": "1m 43s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "vizzia.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Vizzia"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"vizzia.com is the website of VIZZIA, operated by ALPHAIOTA SAS, a French company registered under number 899 832 901.\",\"url\":\"https://www.vizzia.com/en/legal-notice\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"The website is published by ALPHAIOTA, a simplified joint-stock company (SAS)... registered with the Evry Trade and Companies Register under number 899 832 901.\"},{\"claim\":\"Vizzia sells GDPR-compliant remote tools for local authorities to address illegal dumping, local safety issues and anti-social behaviour.\",\"url\":\"https://www.vizzia.com/en\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Vizzia provides remote, GDPR-compliant tools that help you spot offences faster, gather usable evidence... Product areas: Waste and Safety.\"},{\"claim\":\"Vizzia announced a €3.4 million funding round with SISTAFUND, Made for All and business angels.\",\"url\":\"https://www.vizzia.com/blog/la-cleantech-vizzia-leve-3-4meu-pour-aider-les-collectivites-a-se-debarrasser-des-depots-sauvages-grace-a-lanalyse-dimage\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Vizzia annonce une levée de fonds de 3,4 millions d'euros... Cette levée de fonds réunit SISTAFUND, Made for All et des Business Angels...\"},{\"claim\":\"By 2025, SISTAFUND described Vizzia as having raised a €16M Series A on 2025-09-17.\",\"url\":\"https://sistafund.com/news/backing-the-cleantech-vizzia/\",\"publication_date\":\"2023-05-31\",\"event_date\":\"2025-09-17\",\"excerpt\":\"LinkedIn — 17/09/2025 — 'Vizzia raised their €16M Series A'.\"},{\"claim\":\"The latest evidenced venture equity round before the cutoff is a €30M Series B announced on 2026-02-20, led by Base10 Partners with Headline and Sistafund participating.\",\"url\":\"https://www.finsmes.com/2026/02/vizzia-raises-e30m-in-series-b-funding.html\",\"publication_date\":\"2026-02-20\",\"event_date\":\"2026-02-20\",\"excerpt\":\"Vizzia raised €30M in Series B funding. The round was led by Base10 Partners, alongside Headline... and Sistafund.\"}]",
+          "latest_round": "Series B",
+          "round_amount": "30000000",
+          "uncertainties": "The €30M Series B evidence comes from FinSMEs rather than a primary company or regulatory filing, so the announcement date is the article publication date (2026-02-20) and the legal closing date is unverified. The earlier €16M Series A is supported indirectly via a SISTAFUND page that links to a 2025-09-17 LinkedIn post rather than reproducing full primary details. I found no public evidence before 2026-09-30 that the exact vizzia.com entity had been acquired, gone public, or shut down; search results about an acquisition concern a different company, Vizzia Technologies, not the French ALPHAIOTA/VIZZIA entity at vizzia.com.",
+          "lead_investors": "Base10 Partners",
+          "round_currency": "EUR",
+          "company_identity": "Vizzia is a French company operated by ALPHAIOTA SAS that sells GDPR-compliant remote waste and safety monitoring tools for municipalities and other local authorities.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-02-20"
+        },
+        "reasoning": "I resolved the exact entity using vizzia.com itself: the site is operated by ALPHAIOTA SAS in France and describes municipal waste and safety monitoring products. For funding, company-site evidence shows a €3.4M round, a SISTAFUND page points to a €16M Series A on 2025-09-17, and the most recent evidenced venture equity financing before the 2026-09-30 cutoff is a €30M Series B reported on 2026-02-20 and led by Base10 Partners. I separately checked lifecycle by searching for acquisition/IPO evidence and found only acquisition results for an unrelated company, Vizzia Technologies. With no matching evidence of acquisition, IPO, or closure for the vizzia.com entity, the best supported current status is private_independent.",
+        "stepsTaken": [
+          "Searched Google with query \"site:vizzia.com Vizzia funding acquisition investors Vizzia.com company\". The results are: \n {\"search_results\":[{\"title\":\"The cleanliness and safety partner for local authorities\",\"link\":\"https://www.vizzia.com/en\",\"snippet\":\"Vizzia provides remote, GDPR-compliant tools that help you spot offences faster, gather usable evidence and show residents visible action without intrusive ...\",\"position\":1},{\"title\":\"Your preferred partner for a cleaner city\",\"link\":\"https://www.vizzia.com/en/solutions/waste\",\"snippet\":\"Reduce illegal dumping by up to 80% in just a few months: wireless sensors, r...",
+          "Used visitWebpage {\"url\":\"https://www.vizzia.com/blog/la-cleantech-vizzia-leve-3-4meu-pour-aider-les-collectivites-a-se-debarrasser-des-depots-sauvages-grace-a-lanalyse-dimage\",\"question\":\"What funding round was announced, on what date, for how much, and who were the investors or lead investors? Provide exact wording if possible.\"}. The results are: \n \"Relevant webpage text:\\n- Title/headline: « La cleantech Vizzia lève 3,4M€ pour aider les collectivités à se débarrasser des dépôts sauvages grâce à l’analyse d’image »\\n- « Aujourd’hui, Vizzia annonce une levée de fonds de 3,4 millions d'euros. SISTAFUND et Made for All investissent aux côtés de business angels de premier plan pour le développement de la start-up. »\\n- « Vizzia officialise aujourd’hui une levée de fonds de 3.4 millions d’euros, permettant d’accélérer le déploiement de la solut...",
+          "Searched Google with query \"Vizzia 3.4 million euro funding date SISTAFUND Made for All Vizzia press release\". The results are: \n {\"search_results\":[{\"title\":\"Vizzia: €30 Million Series B Raised For Public Safety ...\",\"link\":\"https://pulse2.com/vizzia-e30-million-series-b-raised-for-public-safety-technology-platform/\",\"snippet\":\"The funding marks a new phase of growth for Vizzia, which has been backed by SISTAFUND since its early days. Founded by Katrin de Proyart and ...\",\"date\":\"Feb 23, 2026\",\"position\":1},{\"title\":\"SISTAFUND's Post\",\"link\":\"https://www.linkedin.com/posts/sistafund_a-major-milestone-for-europes-category-...",
+          "Used visitWebpage {\"url\":\"https://sistafund.com/news/backing-the-cleantech-vizzia/\",\"question\":\"What round in Vizzia does this page describe, on what date, for how much, and who leads or participates? Does it mention previous Vizzia rounds with dates?\"}. The results are: \n \"Relevant items from the webpage:\\n- LinkedIn — 17/09/2025 — “Vizzia raised their €16M Series A” — https://linkedin.com/feed/update/urn:li:activity:7374009611219001345\\n- SISTAFUND — 31/05/2023 — “Unleashing the power of AI to make the world cleaner: backing Vizzia!” — https://sistafund.com/news/backing-the-cleantech-vizzia\\n- Les Echos — 30/05/2023 — “Vizzia, the start-up that wants to end street waste in cities” — https://lesechos.fr/start-up/deals/vizzia-la-start-up-qui-veut-mettre-fin-aux-de...",
+          "Searched Google with query \"site:vizzia.com Vizzia Series B 30M Headline 2026 official\". The results are: \n {\"message\":\"No data returned from search query\"}",
+          "Searched Google with query \"Vizzia 30M Series B Headline official press release Vizzia February 2026\". The results are: \n {\"search_results\":[{\"title\":\"Vizzia Raises €30M in Series B Funding\",\"link\":\"https://www.finsmes.com/2026/02/vizzia-raises-e30m-in-series-b-funding.html\",\"snippet\":\"The round was led by Base10 Partners, alongside Headline, which led the previous round, and Sistafund. The raise brought total funding to nearly ...\",\"date\":\"Feb 20, 2026\",\"position\":1},{\"title\":\"Vizzia: €30 Million Series B Raised For Public Safety ...\",\"link\":\"https://pulse2.com/vizzia-e30-million-series-b-raised-for-public-safety-...",
+          "Used visitWebpage {\"url\":\"https://www.finsmes.com/2026/02/vizzia-raises-e30m-in-series-b-funding.html\",\"question\":\"What round did Vizzia raise, for how much, on what publication date, and who led or participated? Summarize the company identity from this article.\"}. The results are: \n \"- Article: “Vizzia Raises €30M in Series B Funding”\\n- Publication date: February 20, 2026\\n- Company: Vizzia, a Paris, France-based provider of video surveillance solutions for local authorities, focused on public safety and environmental cleanliness / fight against fly-tipping.\\n- Funding details: Vizzia raised €30M in Series B funding.\\n- Investors: The round was led by Base10 Partners, alongside Headline (which led the previous round) and Sistafund.\\n- Additional company context from articl...",
+          "Searched Google with query \"Vizzia acquisition IPO listed acquired 2026 Vizzia\". The results are: \n {\"search_results\":[{\"title\":\"HID Acquires Vizzia Technologies to Expand RTLS Offering ...\",\"link\":\"https://newsroom.hidglobal.com/hid-acquires-vizzia-technologies-expand-rtls-offering-healthcare-including-asset-management-and\",\"snippet\":\"HID, a worldwide leader in trusted identity solutions, today announced it has acquired Vizzia Technologies (Vizzia), a leading provider of hardware-agnostic, ...\",\"position\":1},{\"title\":\"Vizzia Technologies 2026 Company Profile\",\"link\":\"https://pitchbook.com/pro...",
+          "Used visitWebpage {\"url\":\"https://www.vizzia.com/en/legal-notice\",\"question\":\"What legal entity operates vizzia.com, including company name, form, headquarters, registration information, and any description of the business?\"}. The results are: \n \"Legal Notice / Terms context for vizzia.com:\\n- “The website is published by ALPHAIOTA, a simplified joint-stock company (SAS), represented by Katrin Dimitrova, with its registered office located at 3 rue Jules Guesde, 91130 Ris-Orangis, France, and registered with the Evry Trade and Companies Register under number 899 832 901.”\\n- “The VIZZIA website (https://www.vizzia.fr) is operated by ALPHAIOTA, a simplified joint-stock company (SAS) with share capital of €14,086.41, registered with the Ev...",
+          "Used visitWebpage {\"url\":\"https://www.vizzia.com/en\",\"question\":\"How does Vizzia describe its products and customers on its homepage? Give a concise description of what the company sells.\"}. The results are: \n \"Homepage context about products/customers:\\n- “The partner for local authorities.”\\n- “Every day, councils deal with real, frontline challenges: fly-tipping, local safety issues and anti-social behaviour.”\\n- “Vizzia provides remote, GDPR-compliant tools that help you spot offences faster, gather usable evidence and show residents visible action without intrusive surveillance.”\\n- “Our solutions are deployed and trusted by leading public institutions and authorities.”\\n- “Serving local authorit..."
+        ]
+      }
+    }
+  ]
+}

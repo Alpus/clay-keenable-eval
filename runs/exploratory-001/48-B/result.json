@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6cx1tkNZ3NyKRUQm",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:22:13.858Z",
+  "duration": "1m 40s",
+  "dataCreditsUsed": 3.9,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6cx1bhHdKJ7h3hqg",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:22:13.898Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "klarna.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Klarna"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6cx1BBCfN5Wv3yZm",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:22:13.964Z",
+      "completedAt": "2026-09-30T11:23:54.728Z",
+      "duration": "1m 40s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "klarna.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Klarna"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Klarna at klarna.com is a global digital bank and flexible payments provider.\",\"url\":\"https://investors.klarna.com/overview/default.aspx\",\"publication_date\":\"unknown\",\"event_date\":\"2026-09-25\",\"excerpt\":\"Investor Relations overview says: 'Klarna is a global digital bank and flexible payments provider.' The page also notes NYSE: KLAR pricing as of 2026-09-25.\"},{\"claim\":\"Klarna is public by the cutoff and listed on the NYSE under ticker KLAR.\",\"url\":\"https://investors.klarna.com/overview/default.aspx\",\"publication_date\":\"unknown\",\"event_date\":\"2026-09-25\",\"excerpt\":\"The investor overview states: 'Klarna is listed on the New York Stock Exchange (NYSE: KLAR).'\"},{\"claim\":\"Klarna completed its IPO on 2025-09-11; trading began on 2025-09-10.\",\"url\":\"https://investors.klarna.com/News--Events/news/news-details/2025/Klarna-Completes-Initial-Public-Offering-1f8a0a074/default.aspx\",\"publication_date\":\"2025-09-11\",\"event_date\":\"2025-09-11\",\"excerpt\":\"The release says Klarna announced 'the closing of its initial public offering' on September 11, 2025, and that the ordinary shares 'began trading on the New York Stock Exchange on September 10, 2025 under the symbol KLAR.'\"},{\"claim\":\"Klarna announced a $639 million equity funding in June 2021 led by SoftBank's Vision Fund II.\",\"url\":\"https://www.reuters.com/business/payments-firm-klarnas-valuation-rises-46-billion-after-fundraising-2021-06-10/\",\"publication_date\":\"2021-06-10\",\"event_date\":\"2021-06-10\",\"excerpt\":\"Reuters reported on June 10, 2021 that Klarna 'has raised $639 million' and that the round was 'led by SoftBank's Vision Fund II'; the article describes it as fundraising/equity funding.\"},{\"claim\":\"An earlier Klarna equity funding round of $650 million was announced on 2020-09-15 and led by Silver Lake, showing the 2021 round is newer than the 2020 round.\",\"url\":\"https://www.klarna.com/international/press/klarna-announces-650m-funding-round-to-further-accelerate-global-growth/\",\"publication_date\":\"2020-09-15\",\"event_date\":\"2020-09-15\",\"excerpt\":\"Klarna's press release says it 'has raised $650 million in an equity funding round' and that 'The funding round is led by Silver Lake.'\"}]",
+          "latest_round": "equity funding round",
+          "round_amount": "639000000",
+          "uncertainties": "The latest evidenced venture equity round I found is the 2021-06-10 $639 million equity funding reported by Reuters; I did not find a later private venture equity round before the 2025 IPO in the sources reviewed. Reuters is a secondary source for the 2021 round in this research pass, though it provides amount and lead investor detail. For lifecycle timing, shares began trading on 2025-09-10 but the IPO closing/completion was announced on 2025-09-11.",
+          "lead_investors": "SoftBank Vision Fund II",
+          "round_currency": "USD",
+          "company_identity": "Klarna Group plc operates a global digital bank and flexible payments network for consumers and merchants.",
+          "lifecycle_status": "public",
+          "lifecycle_event_date": "2025-09-11",
+          "round_announcement_date": "2021-06-10"
+        },
+        "reasoning": "I resolved the entity using Klarna's investor relations site at the supplied domain family, then checked lifecycle status and the most recent evidenced equity financing before the cutoff. Primary Klarna investor-relations pages show Klarna is listed on NYSE and completed its IPO in September 2025. For the latest venture equity round, the strongest dated evidence found in the research set is Reuters' June 10, 2021 report of a $639 million equity fundraising led by SoftBank's Vision Fund II; an older 2020 Klarna press release confirms that the 2021 round is newer than the 2020 round.",
+        "stepsTaken": [
+          "Searched Google with query \"Klarna funding round latest 2024 2025 2026 site:klarna.com OR site:klarna.com/newsroom OR site:news.cision.com Klarna IPO acquisition funding\". The results are: \n {\"search_results\":[{\"title\":\"Klarna announces $650M funding round to further ...\",\"link\":\"https://www.klarna.com/international/press/klarna-announces-650m-funding-round-to-further-accelerate-global-growth/\",\"snippet\":\"The funding round is led by Silver Lake, the global leader in technology investing, with more than $60 billion in combined assets under ...\",\"date\":\"Sep 15, 2020\",\"position\":1},{\"title\":\"Investor Relations: Klarna Group plc\",\"link\":\"https://investors.klarna.com/overview/default.asp...",
+          "Used visitWebpage {\"url\":\"https://investors.klarna.com/overview/default.aspx\",\"question\":\"Does this page indicate whether Klarna Group plc is publicly listed or has publicly traded securities, and how does it describe the company?\"}. The results are: \n \"- Page title/section: Investor Relations / Overview / About Klarna\\n- Company description on page: “Klarna is a global digital bank and flexible payments provider.” It says Klarna has “over 120 million active users,” “3.8 million transactions per day,” operates in “26 countries,” is trusted by “more than 1.2 million retailers,” and offers “AI-powered payments and commerce network” plus payment/marketing solutions.\\n- Listing/public securities indication: “Klarna is listed on the New York Stock ...",
+          "Searched Google with query \"Klarna NYSE KLAR IPO date 2025 2026 completed site:investors.klarna.com OR site:nyse.com OR site:sec.gov OR site:klarna.com\". The results are: \n {\"search_results\":[{\"title\":\"Klarna Announces Pricing of its Initial Public Offering\",\"link\":\"https://www.klarna.com/international/press/klarna-announces-pricing-of-its-initial-public-offering/\",\"snippet\":\"The ordinary shares are expected to begin trading on the New York Stock Exchange on September 10, 2025 under the symbol “KLAR.”\",\"date\":\"Sep 9, 2025\",\"position\":1},{\"title\":\"Klarna Announces Launch of its Initial Public Offering\",\"link\":\"https://www.klarna.com/international/press/klarna-announ...",
+          "Used visitWebpage {\"url\":\"https://investors.klarna.com/News--Events/news/news-details/2025/Klarna-Completes-Initial-Public-Offering-1f8a0a074/default.aspx\",\"question\":\"What does this page say about the completion date of Klarna's IPO, when trading began, and any details confirming it completed?\"}. The results are: \n \"News Details: “Klarna Completes Initial Public Offering” (September 11, 2025) — https://investors.klarna.com/News--Events/news/default.aspx. Relevant text: “Klarna … announced today the closing of its initial public offering of 34,311,274 ordinary shares … at a public offering price of $40.00 per ordinary share. The ordinary shares began trading on the New York Stock Exchange on September 10, 2025 under the symbol ‘KLAR.’” Also: “A registration statement on Form F-1 relating to the offering has...",
+          "Used visitWebpage {\"url\":\"https://www.klarna.com/international/press/klarna-announces-650m-funding-round-to-further-accelerate-global-growth/\",\"question\":\"What amount did Klarna raise, on what date was it announced, what round type was it, and who led the round?\"}. The results are: \n \"Klarna press release: “Klarna announces $650M funding round to further accelerate global growth” — September 15, 2020. Relevant text: “Klarna ... is pleased to announce it has raised $650 million in an equity funding round ... The funding round is led by Silver Lake ...” Link: https://www.klarna.com/international/press/klarna-announces-650m-funding-round-to-further-accelerate-global-growth\"",
+          "Searched Google with query \"Klarna latest funding round after 2020 acquisition completed 2026 site:klarna.com OR site:investors.klarna.com OR site:sec.gov OR site:reuters.com\". The results are: \n {\"search_results\":[{\"title\":\"Klarna announces $650M funding round to further ...\",\"link\":\"https://www.klarna.com/international/press/klarna-announces-650m-funding-round-to-further-accelerate-global-growth/\",\"snippet\":\"The funding round is led by Silver Lake, the global leader in technology investing, with more than $60 billion in combined assets under ...\",\"date\":\"Sep 15, 2020\",\"position\":1},{\"title\":\"Klarna funding round makes it Europe's most valuable ...\",\"link\":\"https://www.reuters.com/techn...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/business/payments-firm-klarnas-valuation-rises-46-billion-after-fundraising-2021-06-10/\",\"question\":\"What does this Reuters article say about Klarna's 2021 fundraising amount, date, and who led it? Is it described as equity funding?\"}. The results are: \n \"Reuters article: “Payments firm Klarna's valuation rises to $46 billion after fundraising” (June 10, 2021). Relevant text:\\n- “STOCKHOLM, June 10 (Reuters) - Swedish payments firm Klarna has raised $639 million from a group of investors led by SoftBank's Vision Fund II...”\\n- “The current round was led by SoftBank, joined by existing investors such as Adit Ventures, Honeycomb Asset Management and WestCap Group.”\\n- “Klarna ... became Europe's most valuable startup in March when a $1 billion fun..."
+        ]
+      }
+    }
+  ]
+}

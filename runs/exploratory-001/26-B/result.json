@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6c3gEbShgdFgsHzw",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:04:28.696Z",
+  "duration": "1m 24s",
+  "dataCreditsUsed": 3.6,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6c3gobwQzeDCdfJp",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:04:28.704Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "abridge.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Abridge"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6c3giNKsWvZVAtwc",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:04:28.717Z",
+      "completedAt": "2026-09-30T11:05:52.703Z",
+      "duration": "1m 23s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "abridge.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Abridge"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Abridge at abridge.com is a healthcare AI company whose platform turns clinical conversations into documentation and other workflow outputs at the point of care.\",\"url\":\"https://www.abridge.com/blog/series-e\",\"publication_date\":\"2025-06-23\",\"event_date\":\"2025-06-23\",\"excerpt\":\"Abridge describes itself as an enterprise-grade healthcare AI platform that transforms clinical conversations into documentation, billing/revenue cycle, and other actionable next steps at the point of care.\"},{\"claim\":\"Abridge announced a $300 million Series E round on 2025-06-23.\",\"url\":\"https://www.abridge.com/blog/series-e\",\"publication_date\":\"2025-06-23\",\"event_date\":\"2025-06-23\",\"excerpt\":\"Company post states the successful close of its Series E funding round and says 'Abridge Secures $300M Series E.'\"},{\"claim\":\"Andreessen Horowitz (a16z Growth) led the Series E round, with Khosla Ventures also joining.\",\"url\":\"https://www.abridge.com/blog/series-e\",\"publication_date\":\"2025-06-23\",\"event_date\":\"2025-06-23\",\"excerpt\":\"The announcement says the Series E was led by Andreessen Horowitz and notes participation by Khosla Ventures.\"},{\"claim\":\"In 2024 Reuters described Abridge as a startup raising a Series C round and did not report any IPO or acquisition of Abridge.\",\"url\":\"https://www.reuters.com/markets/deals/healthcare-startup-abridge-raises-150-mln-ai-model-clinicians-2024-02-23/\",\"publication_date\":\"2024-02-23\",\"event_date\":\"2024-02-23\",\"excerpt\":\"Reuters called Abridge a startup building AI-powered clinical documentation tools and reported a Series C financing; the article text provided mentions no IPO, sale, or change-of-control transaction.\"},{\"claim\":\"As of a 2026-09-02 private-market profile, Abridge remained a private company and had not had an IPO.\",\"url\":\"http://www.nasdaqprivatemarket.com/company/abridge/\",\"publication_date\":\"2026-09-02\",\"event_date\":\"2026-09-02\",\"excerpt\":\"Nasdaq Private Market page says Abridge stock does not trade on public exchanges, has no ticker because it is a private company, and 'has not had an IPO.'\"}]",
+          "latest_round": "Series E",
+          "round_amount": "300000000",
+          "uncertainties": "Lifecycle status is supported mainly by a 2026-09-02 Nasdaq Private Market profile, which is a secondary-market source rather than a company filing. I found no public evidence before the 2026-09-30 cutoff of an acquisition, IPO, closure, or a newer venture equity round after the 2025 Series E, but absence of such evidence is not the same as a legal proof of independence. The Series E source is a company announcement; no separate closing date distinct from the announcement date was established.",
+          "lead_investors": "Andreessen Horowitz (a16z Growth)",
+          "round_currency": "USD",
+          "company_identity": "Abridge is a healthcare AI company that converts clinician-patient conversations into clinical documentation and related workflow outputs.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "2026-09-02",
+          "round_announcement_date": "2025-06-23"
+        },
+        "reasoning": "I resolved abridge.com to the healthcare AI company Abridge using the company’s own 2025 Series E announcement. That same primary source provided the latest evidenced venture equity round before the 2026-09-30 cutoff: a $300M Series E announced on 2025-06-23, led by Andreessen Horowitz/a16z Growth, with Khosla Ventures also named. For lifecycle, I checked for IPO/acquisition evidence and found none in Reuters coverage, then used a dated Nasdaq Private Market company page (2026-09-02) stating Abridge is private and has not had an IPO. No evidence located showed an acquisition, public listing, or closure before the cutoff.",
+        "stepsTaken": [
+          "Searched Google with query \"Abridge abridge.com funding acquisition IPO site:abridge.com OR TechCrunch OR Crunchbase OR newsroom\". The results are: \n {\"search_results\":[{\"title\":\"Abridge - Crunchbase Company Profile & Funding\",\"link\":\"https://www.crunchbase.com/organization/abridge-d1a4\",\"snippet\":\"Abridge is an AI-driven platform that transforms patient-clinician conversations into structured clinical notes for healthcare industries.\",\"position\":1},{\"title\":\"Abridge Emerges as a Healthcare AI Leader, Raising $150M\",\"link\":\"https://www.abridge.com/press-release/series-c-150\",\"snippet\":\"PITTSBURGH, PA (February 23, 2024) – Abridge, the leader ...",
+          "Used visitWebpage {\"url\":\"https://www.abridge.com/blog/series-e\",\"question\":\"What round, amount, date, lead investors, and company description are stated on this page?\"}. The results are: \n \"Date: June 23, 2025\\n\\nRound/amount: “successful close of our Series E funding round” / “Abridge Secures $300M Series E”\\n\\nLead investors: “led by Andreessen Horowitz,” and quote attributes a16z Growth; also “joined by Khosla Ventures.”\\n\\nCompany description/context: Abridge is described as “powering deeper understanding in healthcare” and as an “enterprise-grade healthcare AI platform” that transforms “clinical conversations” into documentation, billing/revenue cycle, and other actionable ne...",
+          "Searched Google with query \"Abridge acquisition IPO public company 2026 site:abridge.com OR Reuters OR SEC\". The results are: \n {\"search_results\":[{\"title\":\"Healthcare startup Abridge raises $150 mln for AI model ...\",\"link\":\"https://www.reuters.com/markets/deals/healthcare-startup-abridge-raises-150-mln-ai-model-clinicians-2024-02-23/\",\"snippet\":\"Abridge, a startup building artificial intelligence-powered clinical documentation tools, has raised $150 million in a Series C round, ...\",\"date\":\"Feb 22, 2024\",\"position\":1},{\"title\":\"Abridge Stock for Accredited Investors | Pre-IPO Shares\",\"link\":\"https://www.upmarket.co/pri...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/markets/deals/healthcare-startup-abridge-raises-150-mln-ai-model-clinicians-2024-02-23/\",\"question\":\"What does Reuters say about Abridge's ownership status or any IPO/acquisition status, and what company description does it provide?\"}. The results are: \n \"Reuters article context:\\n- “Abridge, a startup building artificial intelligence-powered clinical documentation tools, has raised $150 million in a Series C round...”\\n- “The funding, led by Lightspeed Venture Partners and Redpoint Ventures, valued Abridge at about $850 million.”\\n- “The company last raised funds just four months ago and was then valued at over $200 million, according to PitchBook data.”\\n- “Abridge, founded in 2018, automates clinical notes and medical conversations for doctor...",
+          "Searched Google with query \"Abridge site:sec.gov Abridge IPO acquisition 2025 2026\". The results are: \n {\"search_results\":[{\"title\":\"boost run inc.\",\"link\":\"https://www.sec.gov/Archives/edgar/data/2090646/000149315226031923/forms-1.htm\",\"snippet\":\"In connection with the Business Combination, on September 15, 2025, Boost Run, the Sponsor and the SPV entered into an Earnout Agreement (the “Earnout Agreement ...\",\"position\":1},{\"title\":\"FG MERGER II CORP._December 31, 2025\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1906364/000110465926037797/tmb-20251231x10k.htm\",\"snippet\":\"All activity through...",
+          "Searched Google with query \"Abridge private company no IPO Nasdaq Private Market September 2026\". The results are: \n {\"search_results\":[{\"title\":\"Sell or Invest in Abridge Stock | 182.91$ NPM Price\",\"link\":\"http://www.nasdaqprivatemarket.com/company/abridge/\",\"snippet\":\"Abridge is a private company and has not had an IPO. There is currently no Abridge IPO price. Get started to begin exploring the Nasdaq Private ...\",\"date\":\"Sep 2, 2026\",\"position\":1},{\"title\":\"Buy And Sell Abridge Stock\",\"link\":\"https://forgeglobal.com/abridge_stock/\",\"snippet\":\"Abridge is a private company, meaning it does not have a publicly...",
+          "Used visitWebpage {\"url\":\"http://www.nasdaqprivatemarket.com/company/abridge/\",\"question\":\"Does this page state whether Abridge is private or public, and does it mention any IPO status?\"}. The results are: \n \"Relevant page text about Abridge’s private/public status and IPO status:\\n\\n- “Buy Abridge Stock — Abridge stock does not trade on public stock exchanges. Abridge stock is considered a private security...”\\n- “Sell Abridge Stock — Abridge Stock does not trade on public stock exchanges.”\\n- “Abridge Stock Ticker Symbol — There is no ticker symbol for Abridge stock because it is a private company.”\\n- “Abridge IPO — Abridge is a private company and has not had an IPO. There is currently no Abridg..."
+        ]
+      }
+    }
+  ]
+}

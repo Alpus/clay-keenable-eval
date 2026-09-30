@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6cu1AUuAdPymzzSV",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:20:25.447Z",
+  "duration": "2m 0s",
+  "dataCreditsUsed": 4.4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6cu1meJkwnAY4HmV",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:20:25.453Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "juniper.net",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Juniper Networks"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6cu1JSErZb2iUKkj",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:20:25.495Z",
+      "completedAt": "2026-09-30T11:22:25.741Z",
+      "duration": "2m 0s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "juniper.net",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Juniper Networks"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "Hewlett Packard Enterprise",
+          "evidence": "[{\"claim\":\"juniper.net identifies the business as Juniper Networks and says it provides AI-native networking across enterprise, service provider, and cloud environments.\",\"url\":\"https://www.juniper.net/us/en.html\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Juniper Networks says it is 'now part of HPE' and is building 'industry-leading, secure, AI-native networks' for 'enterprises, service providers, and cloud operators,' with offerings spanning campus/branch, data center, WAN, security, and service provider/cloud operator use cases.\"},{\"claim\":\"Juniper Networks was acquired by Hewlett Packard Enterprise on July 2, 2025.\",\"url\":\"https://www.hpe.com/us/en/newsroom/press-release/2025/07/hewlett-packard-enterprise-closes-acquisition-of-juniper-networks-to-offer-industry-leading-comprehensive-cloud-native-ai-driven-portfolio.html\",\"publication_date\":\"2025-07-02\",\"event_date\":\"2025-07-02\",\"excerpt\":\"HPE's press release is titled 'Hewlett Packard Enterprise closes acquisition of Juniper Networks...' and search-result text states the transaction was originally announced January 9, 2024, approved by Juniper shareholders April 2, 2024, and then completed.\"},{\"claim\":\"The announced merger consideration for Juniper shareholders was $40.00 per share in cash, and Juniper shareholder approval was obtained on April 2, 2024.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1645590/000114036124040890/ny20035638x8_424b2.htm\",\"publication_date\":\"unknown\",\"event_date\":\"2024-04-02\",\"excerpt\":\"SEC filing text states: 'Juniper shareholders will receive $40.00 per share in cash upon the completion of the transaction' and that shareholder approval 'was obtained on April 2, 2024.'\"}]",
+          "latest_round": "unknown",
+          "round_amount": "unknown",
+          "uncertainties": "I did not verify a specific pre-IPO venture equity round or extension from primary public sources within the research budget; Juniper is a long-established networking company that was public before being acquired, so the latest venture equity round remains unknown here. The $40.00 per share / ~$13.3B-$14B merger consideration is an acquisition price, not a funding round. The HPE closing press-release page excerpt retrieved did not itself expose all transactional details in the page-read output, so shareholder-cash terms were supported with an SEC filing.",
+          "lead_investors": "unknown",
+          "round_currency": "unknown",
+          "company_identity": "Juniper Networks is a networking company that sells AI-native networking products and software for enterprise, service provider, and cloud environments.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2025-07-02",
+          "round_announcement_date": "unknown"
+        },
+        "reasoning": "Using public web evidence as of the 2026-09-30 cutoff, juniper.net resolves to Juniper Networks, a networking vendor. Current lifecycle status is acquired: Juniper's own site says it is now part of HPE, and HPE publicly announced the acquisition closed on 2025-07-02. I found no sufficiently verified latest venture equity round from primary sources; because Juniper was a mature public company and then acquired, I leave the round fields as unknown rather than substituting an IPO, total funding, or acquisition value.",
+        "stepsTaken": [
+          "Searched Google with query \"Juniper Networks juniper.net HPE acquisition closed 2025 2026 investor relations latest status\". The results are: \n {\"search_results\":[{\"title\":\"Hewlett Packard Enterprise closes acquisition of Juniper ...\",\"link\":\"https://www.hpe.com/us/en/newsroom/press-release/2025/07/hewlett-packard-enterprise-closes-acquisition-of-juniper-networks-to-offer-industry-leading-comprehensive-cloud-native-ai-driven-portfolio.html\",\"snippet\":\"The acquisition was originally announced on January 9, 2024, and was approved by Juniper shareholders on April 2, 2024. With the completion of ...\",\"date\":\"Jul 2, 2025\",\"position\":1},{\"tit...",
+          "Used visitWebpage {\"url\":\"https://www.juniper.net/us/en.html\",\"question\":\"What does Juniper Networks say on this page about what the company does and whether it is now part of HPE? Provide concise supporting text and any relevant date if shown.\"}. The results are: \n \"- \\\"HPE + Juniper: Leading the convergence of AI and networking\\\"\\n- \\\"Juniper Networks is now part of HPE. Together, we're building industry-leading, secure, AI-native networks – purpose-built with and for AI. As AI and networking converge, we're driving a bold transformation across enterprises, service providers, and cloud operators.\\\"\\n- \\\"Our next era as HPE Networking\\\" / \\\"Juniper is now officially in its next era, as part of HPE. The combination of our companies offers customers an indus...",
+          "Searched Google with query \"Juniper Networks IPO founding funding history latest venture round investor relations S-1 SEC\". The results are: \n {\"search_results\":[{\"title\":\"Document\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1043604/000104360424000009/jnpr-20231231ex991.htm\",\"snippet\":\"As announced on January 9, 2024, Hewlett Packard Enterprise (“HPE”) plans to acquire Juniper Networks in an all-cash transaction for $40.00 per share, ...\",\"position\":1},{\"title\":\"Investor relations - Hewlett Packard Enterprise (HPE)\",\"link\":\"https://investors.hpe.com/\",\"snippet\":\"Record results and demand drive higher outlook for fiscal 2026 and fi...",
+          "Used visitWebpage {\"url\":\"https://www.hpe.com/us/en/newsroom/press-release/2025/07/hewlett-packard-enterprise-closes-acquisition-of-juniper-networks-to-offer-industry-leading-comprehensive-cloud-native-ai-driven-portfolio.html\",\"question\":\"What does this HPE press release say about the closing of the acquisition of Juniper Networks, including the closing date and any details about Juniper shareholders receiving cash?\"}. The results are: \n \"Relevant webpage data provided:\\n- Press release title: \\\"Hewlett Packard Enterprise closes acquisition of Juniper Networks to offer industry-leading comprehensive, cloud-native, AI-driven portfolio\\\"\\n- Link: https://hpe.com/us/en/newsroom/press-release/2025/07/hewlett-packard-enterprise-closes-acquisition-of-juniper-networks-to-offer-industry-leading-comprehensive-cloud-native-ai-driven-portfolio.html#content\\n- The provided content indicates that HPE says it has closed the acquisition of Jun...",
+          "Searched Google with query \"site:juniper.net Juniper Networks founded funding went public 1999 history\". The results are: \n {\"search_results\":[{\"title\":\"Juniper Networks, Now Part of HPE – Leading the ...\",\"link\":\"https://www.juniper.net/us/en.html\",\"snippet\":\"Juniper Networks is now part of HPE. Together, we're building industry-leading, secure, AI-native networks – purpose-built with and for AI.\",\"position\":1},{\"title\":\"Financial Services Solutions | HPE Juniper Networking US\",\"link\":\"https://www.juniper.net/us/en/solutions/industries/financial-services.html\",\"snippet\":\"Juniper Networks assures uninterrupted networ...",
+          "Searched Google with query \"Juniper Networks initial public offering 1999 press release SEC S-1 amount raised\". The results are: \n {\"search_results\":[{\"title\":\"Search Filings - SEC.gov\",\"link\":\"https://www.sec.gov/search-filings\",\"snippet\":\"Find keywords and phrases in more than 20 years of EDGAR filings, and filter by date, company, person, filing category, or location. View a listing of real-time filings as they are submitted into the EDGAR system. Also view daily filings by form type within the past week.\",\"sitelinks\":[{\"title\":\"Edgar Full Text Search\",\"link\":\"https://www.sec.gov/edgar/search/\"},{\"title\":\"Mutual Funds Se...",
+          "Searched Google with query \"HPE closes acquisition of Juniper Networks Juniper common stock ceased trading shareholders entitled receive $40.00 per share\". The results are: \n {\"search_results\":[{\"title\":\"Hewlett Packard Enterprise closes acquisition of Juniper ...\",\"link\":\"https://www.hpe.com/us/en/newsroom/press-release/2025/07/hewlett-packard-enterprise-closes-acquisition-of-juniper-networks-to-offer-industry-leading-comprehensive-cloud-native-ai-driven-portfolio.html\",\"snippet\":\"The acquisition was originally announced on January 9, 2024, and was approved by Juniper shareholders on April 2, 2024. With the completion of ...\",\"date\":\"Jul 2, 2025\",\"position\":1},{\"tit...",
+          "Used visitWebpage {\"url\":\"https://www.sec.gov/Archives/edgar/data/1645590/000114036124040890/ny20035638x8_424b2.htm\",\"question\":\"Find the statement about Juniper shareholders receiving $40.00 per share in cash upon completion of the transaction, and any relevant date of this filing or transaction timing.\"}. The results are: \n \"- “Juniper shareholders will receive $40.00 per share in cash upon the completion of the transaction, representing an equity value of approximately $13.3 billion.”\\n- “Pursuant to the Merger Agreement, on the Merger closing date, all of Juniper’s outstanding common shares will automatically convert into the right to receive $40 per share. The total aggregate consideration for the Merger is approximately $13.3 billion.”\\n- “Under the terms of the Merger Agreement, the completion of the Juniper A..."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6c4c8BGuTaXFH97J",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "running",
+  "createdAt": "2026-09-30T11:05:00.419Z",
+  "updatedAt": "2026-09-30T11:05:00.419Z",
+  "workflowSnapshot": {
+    "id": "wfs_0tm6ahmihVF5gXwm5Ci"
+  },
+  "trigger": {
+    "id": "b06b7777-fa7e-4539-9d22-4a6349b23b02"
+  }
+}

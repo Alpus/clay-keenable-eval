@@ -1,0 +1,83 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6c18Vt58ZsBu6ZT2",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:03:08.917Z",
+  "duration": "1m 4s",
+  "dataCreditsUsed": 2.8,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6c18z4eBsx7sqfwW",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:03:08.927Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "cyera.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Cyera"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6c18pk8dxMCyiZXt",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:03:08.945Z",
+      "completedAt": "2026-09-30T11:04:13.412Z",
+      "duration": "1m 4s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "cyera.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Cyera"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Cyera is an AI-native data security / AI security platform company at cyera.com.\",\"url\":\"https://www.cyera.com/about\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Cyera describes itself as 'The AI Security Platform' and 'a pioneer in the data security space' that helps security leaders discover their data attack surface, control the use of data, monitor, detect, and remediate risk.\"},{\"claim\":\"On 2026-09-22, Cyera announced a $400 million extension to its Series G.\",\"url\":\"https://www.cyera.com/press-releases/cyera-announces-400-million-investment-from-goldman-sachs-to-build-the-trust-layer-for-the-agentic-enterprise\",\"publication_date\":\"2026-09-22\",\"event_date\":\"2026-09-22\",\"excerpt\":\"The company press release says: 'Cyera today announced a $400 million extension from Growth Equity at Goldman Sachs Alternatives to its Series G, led by Evolution Equity.'\"},{\"claim\":\"The lead investor for the extension was Growth Equity at Goldman Sachs Alternatives; the underlying Series G was led by Evolution Equity.\",\"url\":\"https://www.cyera.com/press-releases/cyera-announces-400-million-investment-from-goldman-sachs-to-build-the-trust-layer-for-the-agentic-enterprise\",\"publication_date\":\"2026-09-22\",\"event_date\":\"2026-09-22\",\"excerpt\":\"Cyera states the extension was 'from Growth Equity at Goldman Sachs Alternatives' and that the Series G was 'led by Evolution Equity.'\"},{\"claim\":\"Before the September extension, Cyera had announced a $600 million financing on 2026-06-10 led by Evolution Equity Partners, with participation from Cyberstarts and Temasek.\",\"url\":\"https://www.cyera.com/press-releases/cyera-raises-600-million-at-12-billion-valuation-to-continue-building-the-trust-layer-for-the-ai-era\",\"publication_date\":\"2026-06-10\",\"event_date\":\"2026-06-10\",\"excerpt\":\"The June press release says Cyera announced its 'latest funding round of $600 million' and that 'This round was led by Evolution Equity Partners, with participation from Cyberstarts and Temasek.'\"},{\"claim\":\"As of late September 2026, Cyera appears to remain an operating independent private company rather than an acquired or public company.\",\"url\":\"https://www.cyera.com/press-releases/cyera-announces-400-million-investment-from-goldman-sachs-to-build-the-trust-layer-for-the-agentic-enterprise\",\"publication_date\":\"2026-09-22\",\"event_date\":\"2026-09-22\",\"excerpt\":\"Cyera itself announced a new financing in September 2026 and described its own business in present tense; search results checked for acquisition/IPO did not surface a completed sale of Cyera or SEC public-listing evidence before the cutoff.\"}]",
+          "latest_round": "Series G extension",
+          "round_amount": "400000000",
+          "uncertainties": "The September 22, 2026 company source clearly describes the latest event as a '$400 million extension ... to its Series G'; it does not specify whether this extension legally closed the same day, so the evidenced date is the announcement date. The June 10, 2026 company release announced a $600 million round but, in the extracted text, did not name the series; the September release provides the Series G framing. No affirmative public evidence of Cyera being acquired or publicly listed was found in the limited search set before 2026-09-30, so lifecycle is assessed as private_independent based on contemporaneous company operation and financing evidence rather than a formal ownership registry source.",
+          "lead_investors": "Growth Equity at Goldman Sachs Alternatives; Evolution Equity (underlying Series G)",
+          "round_currency": "USD",
+          "company_identity": "Cyera, at cyera.com, sells an AI-native data security and AI security platform for discovering, classifying, governing, and protecting sensitive enterprise data.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-09-22"
+        },
+        "reasoning": "I resolved the company via its domain and company site, then checked company press releases and search results for newer financing and lifecycle events through the 2026-09-30 cutoff. The strongest current evidence is Cyera's own September 22, 2026 announcement of a $400 million extension to its Series G. No stronger evidence of a completed acquisition, IPO, or closure of Cyera itself was found before the cutoff.",
+        "stepsTaken": [
+          "Searched Google with query \"Cyera cyera.com funding round acquisition IPO latest 2026 site:cyera.com OR site:techcrunch.com OR site:crunchbase.com\". The results are: \n {\"search_results\":[{\"title\":\"Cyera Raises $600 Million at $12 Billion Valuation to ...\",\"link\":\"https://www.cyera.com/press-releases/cyera-raises-600-million-at-12-billion-valuation-to-continue-building-the-trust-layer-for-the-ai-era\",\"snippet\":\"today announced its latest funding round of $600 million, s valuation over the last 18 months to $12 billion. total funding over $2 billion.\",\"date\":\"Jun 10, 2026\",\"position\":1},{\"title\":\"Data Security Startup Cyera Locks Up $300M At $1.4B ...\",\"link\":\"h...",
+          "Used visitWebpage {\"url\":\"https://www.cyera.com/press-releases/cyera-raises-600-million-at-12-billion-valuation-to-continue-building-the-trust-layer-for-the-ai-era\",\"question\":\"What round was announced, how much was raised, what date was it announced, who led the round, and what does the company do?\"}. The results are: \n \"Source: https://cyera.com/newsroom\\n\\nArticle: “Cyera Raises $600 Million at $12 Billion Valuation to Continue Building the Trust Layer for the AI Era”\\nDate: June 10, 2026\\n\\nRelevant excerpts:\\n- “today announced its latest funding round of $600 million”\\n- “This round was led by Evolution Equity Partners, with participation from Cyberstarts and Temasek”\\n- “Cyera is building the trust layer powering enterprise AI transformation.”\\n- “The platform secures data at rest, in motion, and in use, ...",
+          "Searched Google with query \"Cyera acquisition IPO public company 2026 cyera.com site:cyera.com OR site:sec.gov OR site:news.crunchbase.com\". The results are: \n {\"search_results\":[{\"title\":\"Cyera Announces $400 Million Investment from Goldman ...\",\"link\":\"https://www.cyera.com/press-releases/cyera-announces-400-million-investment-from-goldman-sachs-to-build-the-trust-layer-for-the-agentic-enterprise\",\"snippet\":\"Cyera Announces $400 Million Investment from Goldman Sachs to Build the Trust Layer for the Agentic Enterprise September 22, 2026 Share. Valued ...\",\"date\":\"Sep 22, 2026\",\"position\":1},{\"title\":\"Cyera: AI Security Platform | Protect Data & Secure...",
+          "Used visitWebpage {\"url\":\"https://www.cyera.com/press-releases/cyera-announces-400-million-investment-from-goldman-sachs-to-build-the-trust-layer-for-the-agentic-enterprise\",\"question\":\"What financing round or investment was announced, how much was raised, what date was it announced, who led the investment, and was Cyera acquired or still operating independently?\"}. The results are: \n \"- Announcement title: “Cyera Announces $400 Million Investment from Goldman Sachs to Build the Trust Layer for the Agentic Enterprise”\\n- Announcement date: September 22, 2026\\n- Financing/investment: “Cyera today announced a $400 million extension from Growth Equity at Goldman Sachs Alternatives to its Series G, led by Evolution Equity”\\n- Amount raised: $400 million\\n- Lead investor: “Growth Equity at Goldman Sachs Alternatives” for the extension; the Series G is described as “led by Evolutio...",
+          "Used visitWebpage {\"url\":\"https://www.cyera.com/about\",\"question\":\"What does Cyera say it is and what products or services does it provide?\"}. The results are: \n \"- Cyera describes itself as:\\n  - “The AI Security Platform”\\n  - “The AI-powered Data Security Platform”\\n  - “a pioneer in the data security space”\\n- Key company description from About Us:\\n  - “Cyera is a pioneer in the data security space that empowers security leaders … to discover their data attack surface, control the use of data, monitor, detect, and quickly remediate risk.”\\n  - “What makes Cyera unique is its agentless design that deploys in just five minutes across any environment –..."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6d9dh2cZ47pjDfzZ",
+  "workflow": {
+    "id": "wf_0tm6d21AuFsz5iFGM8e",
+    "name": "Funding lifecycle evaluation C"
+  },
+  "status": "failed",
+  "startedAt": "2026-09-30T11:29:37.763Z",
+  "duration": "3s",
+  "error": "AI action task completed with status: ERROR — Error initializing MCP client for custom-mcp-aa_0tm69c8Kw5dGSUqyRQD: Error: Streamable HTTP error: Error POSTing to endpoint: {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32000,\"message\":\"Too many requests — 10 RPS limit on public API. Please try again shortly. More info about authentication & upgrade: curl https://docs.keenable.ai/authentication.md\"},\"id\":null}. The server might be temporarily down, or your account credentials are incorrect.",
+  "dataCreditsUsed": 0,
+  "actionCreditsUsed": 0,
+  "progress": {
+    "completed": 1,
+    "active": 0,
+    "waiting": 0,
+    "failed": 1,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 50
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6d9d8SsH8rSXXzHT",
+      "nodeId": "wfn_0tm6d21iRtaxx429Y8Q",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:29:37.769Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "chime.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Chime"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6d9dasJfBWhYZGAM",
+      "nodeId": "wfn_0tm6d4f6jZzvkGe2wpS",
+      "nodeName": "Company research C",
+      "status": "failed",
+      "startedAt": "2026-09-30T11:29:37.782Z",
+      "completedAt": "2026-09-30T11:29:41.093Z",
+      "duration": "3s",
+      "errors": [
+        "AI action task completed with status: ERROR — Error initializing MCP client for custom-mcp-aa_0tm69c8Kw5dGSUqyRQD: Error: Streamable HTTP error: Error POSTing to endpoint: {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32000,\"message\":\"Too many requests — 10 RPS limit on public API. Please try again shortly. More info about authentication & upgrade: curl https://docs.keenable.ai/authentication.md\"},\"id\":null}. The server might be temporarily down, or your account credentials are incorrect."
+      ],
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "chime.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Chime"
+      },
+      "outputs": {
+        "error": "AI action task completed with status: ERROR — Error initializing MCP client for custom-mcp-aa_0tm69c8Kw5dGSUqyRQD: Error: Streamable HTTP error: Error POSTing to endpoint: {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32000,\"message\":\"Too many requests — 10 RPS limit on public API. Please try again shortly. More info about authentication & upgrade: curl https://docs.keenable.ai/authentication.md\"},\"id\":null}. The server might be temporarily down, or your account credentials are incorrect.",
+        "executedAt": "2026-09-30T11:29:41.076Z"
+      }
+    }
+  ]
+}

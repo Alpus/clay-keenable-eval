@@ -1,0 +1,83 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6c1aHyAsTbrHS3iA",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:03:10.737Z",
+  "duration": "1m 6s",
+  "dataCreditsUsed": 2.6,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6c1abHSwEvkHYWcK",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:03:10.744Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "airwallex.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Airwallex"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6c1aQquJbdHqjAEt",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:03:10.765Z",
+      "completedAt": "2026-09-30T11:04:17.716Z",
+      "duration": "1m 6s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "airwallex.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Airwallex"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Airwallex is a global payments and financial platform for modern businesses, offering business accounts, payments, spend management, and embedded finance.\",\"url\":\"https://www.airwallex.com/global/newsroom/airwallex-raises-usd300-million-at-a-usd6-2-billion-valuation-to-build-the-future-of-global-banking\",\"publication_date\":\"2025-05-21\",\"event_date\":\"2025-05-21\",\"excerpt\":\"Airwallex is described as 'a leading global payments and financial platform for modern businesses' / 'a leading global financial platform for modern businesses.' It offers business accounts, payments, spend management, and embedded finance.\"},{\"claim\":\"On 2025-05-21, Airwallex announced it had completed a $300 million Series F funding round at a $6.2 billion valuation, including $150 million in secondary share transfers.\",\"url\":\"https://www.airwallex.com/global/newsroom/airwallex-raises-usd300-million-at-a-usd6-2-billion-valuation-to-build-the-future-of-global-banking\",\"publication_date\":\"2025-05-21\",\"event_date\":\"2025-05-21\",\"excerpt\":\"The company said it 'has completed a $300 million Series F funding round at a $6.2 billion valuation.' The round 'includes $150 million in secondary share transfers.'\"},{\"claim\":\"Series F investors disclosed by Airwallex included Square Peg, DST Global, Lone Pine Capital, Blackbird, Airtree, Salesforce Ventures, Visa Ventures, and several Australian pension funds.\",\"url\":\"https://www.airwallex.com/global/newsroom/airwallex-raises-usd300-million-at-a-usd6-2-billion-valuation-to-build-the-future-of-global-banking\",\"publication_date\":\"2025-05-21\",\"event_date\":\"2025-05-21\",\"excerpt\":\"Series F investors include: Square Peg, DST Global, Lone Pine Capital, Blackbird, Airtree, Salesforce Ventures, and Visa Ventures with participation from several leading pension funds in Australia.\"},{\"claim\":\"By 2026-06-25/26, Reuters reported Airwallex raised a newer $320 million funding round at an $11 billion valuation, making this the latest evidenced venture round before the 2026-09-30 cutoff.\",\"url\":\"https://www.reuters.com/world/asia-pacific/fintech-airwallex-secures-320-million-new-funding-round-11-billion-valuation-2026-06-26/\",\"publication_date\":\"2026-06-26\",\"event_date\":\"2026-06-25\",\"excerpt\":\"Reuters reported that Airwallex 'said on Friday it raised $320 million at a valuation of $11 billion'.\"},{\"claim\":\"Reuters said the latest 2026 round was anchored by Addition, T. Rowe Price, and Hummingbird, among others.\",\"url\":\"https://www.reuters.com/world/asia-pacific/fintech-airwallex-secures-320-million-new-funding-round-11-billion-valuation-2026-06-26/\",\"publication_date\":\"2026-06-26\",\"event_date\":\"2026-06-25\",\"excerpt\":\"The latest round of funding was anchored by New York-based venture capital firms Addition, T. Rowe Price, and Hummingbird, among others.\"},{\"claim\":\"As of the 2026 Reuters report, Airwallex was still operating independently and making acquisitions itself, supporting a private independent lifecycle status rather than being acquired or public.\",\"url\":\"https://www.reuters.com/world/asia-pacific/fintech-airwallex-secures-320-million-new-funding-round-11-billion-valuation-2026-06-26/\",\"publication_date\":\"2026-06-26\",\"event_date\":\"2026-06-25\",\"excerpt\":\"Reuters described Airwallex as the company that raised the new round, and noted that earlier in the year 'the company acquired South Korea's Paynuri', indicating Airwallex itself remained an independent operating company.\"}]",
+          "latest_round": "Series H",
+          "round_amount": "320 million",
+          "uncertainties": "The Reuters article is secondary reporting, though it references a company statement URL for the Series H round that was not separately read here. Reuters dates the story June 25, 2026 8:30 PM PDT and says the company spoke 'on Friday'; depending on timezone, the public announcement date may be 2026-06-26 rather than 2026-06-25. Reuters did not explicitly label the round as equity in the extracted text, but described it as a 'funding round' at a valuation with venture investors, which strongly indicates venture financing. No post-June-2026 evidence of an IPO, acquisition of Airwallex, or closure was retrieved; lifecycle status is therefore based on the latest available evidence, not an exhaustive corporate registry check.",
+          "lead_investors": "Addition, T. Rowe Price, Hummingbird",
+          "round_currency": "USD",
+          "company_identity": "Airwallex is a financial technology company that provides global payments and financial platform services for businesses, including accounts, payments, spend management, and embedded finance.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-06-25"
+        },
+        "reasoning": "I resolved the entity at airwallex.com using an Airwallex newsroom page that describes the business and its 2025 Series F. I then searched for newer evidence and found a Reuters report from June 2026 stating Airwallex raised a newer $320 million round at an $11 billion valuation, anchored by Addition, T. Rowe Price, and Hummingbird. Because that 2026 round is later than the 2025 Series F, it is the latest evidenced venture round before the 2026-09-30 cutoff. No evidence retrieved showed Airwallex had been acquired, gone public, or closed; instead, the latest Reuters report shows Airwallex itself raising capital and having acquired another company earlier in 2026, supporting a private independent status.",
+        "stepsTaken": [
+          "Searched Google with query \"Airwallex airwallex.com funding latest round IPO acquisition 2025 site:airwallex.com OR site:techcrunch.com OR site:reuters.com\". The results are: \n {\"search_results\":[{\"title\":\"Airwallex raises $300 million at a $6.2 billion valuation to ...\",\"link\":\"https://www.airwallex.com/global/newsroom/airwallex-raises-usd300-million-at-a-usd6-2-billion-valuation-to-build-the-future-of-global-banking\",\"snippet\":\"Airwallex raises $300 million at a $6.2 billion valuation to build the future. On track to hit $1 billion in annualized revenue in 2025, a $6.2 ...\",\"date\":\"May 21, 2025\",\"position\":1},{\"title\":\"Venture capital for startups: definitions, fundi...",
+          "Used visitWebpage {\"url\":\"https://www.airwallex.com/global/newsroom/airwallex-raises-usd300-million-at-a-usd6-2-billion-valuation-to-build-the-future-of-global-banking\",\"question\":\"What company is described on this page, what does it do, what funding round or extension is announced, how much was raised, on what date, and who are the investors or lead investors?\"}. The results are: \n \"Company: Airwallex — described as “a leading global payments and financial platform for modern businesses” / “a leading global financial platform for modern businesses.” It offers business accounts, payments, spend management, and embedded finance; its proprietary infrastructure helps businesses manage global payments and financial operations.\\n\\nAnnouncement page: “Airwallex raises $300 million at a $6.2 billion valuation to build the future of global banking”\\nDate: 21 May 2025\\nLink: https:/...",
+          "Searched Google with query \"Airwallex IPO acquisition Reuters 2026 site:reuters.com OR site:airwallex.com\". The results are: \n {\"search_results\":[{\"title\":\"Fintech Airwallex secures $320 million in new funding ...\",\"link\":\"https://www.reuters.com/world/asia-pacific/fintech-airwallex-secures-320-million-new-funding-round-11-billion-valuation-2026-06-26/\",\"snippet\":\"Fintech Airwallex secures $320 million in new funding round at $11 billion valuation By Reuters June 25, 20268:30\",\"date\":\"Jun 25, 2026\",\"position\":1},{\"title\":\"Australia watchdog orders audit of fintech Airwallex on ...\",\"link\":\"https://www.reuters.com/busine...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/world/asia-pacific/fintech-airwallex-secures-320-million-new-funding-round-11-billion-valuation-2026-06-26/\",\"question\":\"What does this Reuters article say about Airwallex's financing round amount, date, valuation, investors, whether it is equity or debt, and any statements about IPO or acquisition status?\"}. The results are: \n \"Reuters article: “Fintech Airwallex secures $320 million in new funding round at $11 billion valuation.” Dated June 25, 2026 / June 26 (Reuters).\\n\\nRelevant excerpts:\\n- “Payments firm Airwallex … said on Friday it raised $320 million at a valuation of $11 billion …”\\n- “The latest round of funding was anchored by New York-based venture capital firms Addition, T. Rowe Price, and Hummingbird, among others.”\\n- The linked company statement URL is: https://airwallex.com/global/newsroom/airwallex-...",
+          "Searched Google with query \"Airwallex IPO acquired September 2026 Reuters site:reuters.com OR site:bloomberg.com OR site:airwallex.com\". The results are: \n {\"search_results\":[{\"title\":\"Fintech Airwallex secures $320 million in new funding ...\",\"link\":\"https://www.reuters.com/world/asia-pacific/fintech-airwallex-secures-320-million-new-funding-round-11-billion-valuation-2026-06-26/\",\"snippet\":\"Fintech Airwallex secures $320 million in new funding round at $11 billion valuation. By Reuters. June 25, 20268:30 PM PDTUpdated June 25, 2026.\",\"date\":\"Jun 25, 2026\",\"position\":1},{\"title\":\"Australia watchdog orders audit of fintech Airwallex on ...\",\"link\":..."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "command": [
+    "workflows",
+    "runs",
+    "test",
+    "wf_0tm6ahobSnKQGfMMhvx",
+    "--inputs",
+    "-"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"workspace\": {\n    \"id\": \"1403344\",\n    \"name\": \"Aleksandr's Workspace\"\n  },\n  \"runId\": \"wfr_0tm6cdt2Zm4b6fVWd2F\",\n  \"workflow\": {\n    \"id\": \"wf_0tm6ahobSnKQGfMMhvx\",\n    \"name\": \"Funding lifecycle evaluation B\"\n  },\n  \"status\": \"running\",\n  \"createdAt\": \"2026-09-30T11:10:41.672Z\",\n  \"updatedAt\": \"2026-09-30T11:10:41.672Z\",\n  \"workflowSnapshot\": {\n    \"id\": \"wfs_0tm6avsz4gihzFujQJy\"\n  },\n  \"trigger\": {\n    \"id\": \"3ef324d9-bd38-4a3d-bbc6-90fab4c1168a\"\n  }\n}\n",
+  "stderr": "",
+  "observed_at": "2026-09-30T11:10:41.732210+00:00"
+}

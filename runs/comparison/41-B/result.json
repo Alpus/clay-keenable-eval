@@ -1,0 +1,84 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6crbEAkk9SiJW8gH",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:18:47.401Z",
+  "duration": "1m 26s",
+  "dataCreditsUsed": 3.6,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6crbRgpD8KQFemhb",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:18:47.407Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "cyberark.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "CyberArk"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6crbsa9jKoKMgC8T",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:18:47.424Z",
+      "completedAt": "2026-09-30T11:20:14.165Z",
+      "duration": "1m 26s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "cyberark.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "CyberArk"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "Palo Alto Networks",
+          "evidence": "[{\"claim\":\"The exact company at cyberark.com is CyberArk, an identity security company.\",\"url\":\"https://www.cyberark.com/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"CyberArk’s site identifies itself with the phrase ‘Identity Security.’\"},{\"claim\":\"CyberArk pursued an IPO in 2014 and intended to list on Nasdaq under ticker CYBR.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1598110/000119312514247215/d692893df1.htm\",\"publication_date\":\"2014-06-24\",\"event_date\":\"2014-06-24\",\"excerpt\":\"The preliminary prospectus states: ‘This is the initial public offering of Cyber-Ark Software Ltd.’ and ‘We intend to apply to have the ordinary shares listed on the NASDAQ Global Select Market under the symbol “CYBR.”’\"},{\"claim\":\"As of the IPO filing, CyberArk had outstanding preferred shares and warrants that would convert before the IPO, but the filing text retrieved did not disclose dated private round names, amounts, or lead investors.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1598110/000119312514247215/d692893df1.htm\",\"publication_date\":\"2014-06-24\",\"event_date\":\"2014-06-24\",\"excerpt\":\"The filing says the post-offering share count assumes ‘the conversion of all outstanding preferred shares and warrants to purchase Series B3 preferred shares,’ but the retrieved text did not provide specific venture round dates or amounts.\"},{\"claim\":\"Palo Alto Networks completed its acquisition of CyberArk on 2026-02-11, so by the cutoff CyberArk was acquired rather than remaining independently public.\",\"url\":\"https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-cyberark-to-secure-the-ai-era\",\"publication_date\":\"2026-02-11\",\"event_date\":\"2026-02-11\",\"excerpt\":\"Palo Alto Networks said it ‘today announced the completion of its acquisition of CyberArk.’\"}]",
+          "latest_round": "unknown",
+          "round_amount": "unknown",
+          "uncertainties": "The latest pre-IPO venture equity round could not be established from the public primary materials retrieved. The SEC F-1 confirms pre-IPO preferred equity existed, including Series B3 warrants, but the retrieved filing text did not provide a clearly dated latest private round name, announcement date, amount, currency, or lead investors. CyberArk later became public and was then acquired; those events should not be substituted for a venture equity round.",
+          "lead_investors": "unknown",
+          "round_currency": "unknown",
+          "company_identity": "CyberArk is an identity security company selling identity security solutions and platform offerings.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2026-02-11",
+          "round_announcement_date": "unknown"
+        },
+        "reasoning": "I resolved the entity from cyberark.com, used a primary SEC IPO filing to verify its public-listing history and the limits of publicly established pre-IPO round details, and used Palo Alto Networks’ own press release to establish that the acquisition was completed on 2026-02-11. Because I did not find reliable public primary evidence for the latest venture equity round name/amount/leads before the IPO, those funding fields are returned as unknown rather than guessed.",
+        "stepsTaken": [
+          "Searched Google with query \"CyberArk cyberark.com investor relations NASDAQ CYBR funding round SEC prospectus venture financing\". The results are: \n {\"search_results\":[{\"title\":\"Palo Alto Networks Investor Relations\",\"link\":\"https://investors.paloaltonetworks.com/investor-relations/\",\"snippet\":\"The Investor Relations website contains information about Palo Alto Networks's business for stockholders, potential investors, and financial analysts.\",\"position\":1},{\"title\":\"palo alto networks, inc.\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1327567/000119312525169870/d804159d8k.htm\",\"snippet\":\"The registration statement will include a definit...",
+          "Searched Google with query \"CyberArk Palo Alto Networks acquisition closed September 2026 CyberArk Nasdaq CYBR completed\". The results are: \n {\"search_results\":[{\"title\":\"Palo Alto Networks Completes Acquisition of CyberArk to ...\",\"link\":\"https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-cyberark-to-secure-the-ai-era\",\"snippet\":\"In the news release, Palo Alto Networks Completes Acquisition of CyberArk to Secure the AI Era, issued 11-Feb-2026 by Palo Alto Networks, ...\",\"position\":1},{\"title\":\"Palo Alto Networks Completes Acquisition of CyberArk ...\",\"link\":\"https://www.sec.gov/Archives/ed...",
+          "Searched Google with query \"CyberArk latest venture funding round before IPO Series funding announcement\". The results are: \n {\"search_results\":[{\"title\":\"2026 Funding Rounds & List of Investors - CyberArk\",\"link\":\"https://tracxn.com/d/companies/cyberark/__5sNsKeNYYNzjLyrWjGRRQ8E7rSa4cCjKl-bezC-noEQ/funding-and-investors\",\"snippet\":\"CyberArk has raised a total of $59M over 6 funding rounds: 3 Early-Stage, 1 Late-Stage, 1 Debt and 1 Post IPO rounds.\",\"date\":\"Jul 4, 2026\",\"position\":1},{\"title\":\"Financial Details - CyberArk\",\"link\":\"https://www.crunchbase.com/organization/cyber-ark-software/financial_details\",\"snippet\":\"...",
+          "Used visitWebpage {\"url\":\"https://www.sec.gov/Archives/edgar/data/1598110/000119312514247215/d692893df1.htm\",\"question\":\"What venture funding rounds or preferred share sales before the IPO are described, including dates, amounts, and investors? Also identify the IPO filing date and any statement that shares are listed or intended to list on Nasdaq under ticker CYBR.\"}. The results are: \n \"- Preliminary prospectus date / IPO filing context: \\\"Subject to completion, dated June 24, 2014 Preliminary Prospectus.\\\"\\n- IPO / listing statement: \\\"This is the initial public offering of Cyber-Ark Software Ltd.\\\" and \\\"We intend to apply to have the ordinary shares listed on the NASDAQ Global Select Market under the symbol 'CYBR'.\\\" Also in The Offering: \\\"Proposed NASDAQ Global Select Market symbol CYBR.\\\"\\n- Pre-IPO preferred share context provided: \\n  - \\\"The number of ordinary shares ...",
+          "Used visitWebpage {\"url\":\"https://www.cyberark.com/\",\"question\":\"Identify the company at this domain and summarize what it sells or does in one short sentence using wording from the site.\"}. The results are: \n \"Domain/company: CyberArk — https://cyberark.com\\nRelevant site wording: “Identity Security” (https://cyberark.com/blog/identity-security)\\nOther relevant links: Request a Demo (https://cyberark.com/idira/request-demo), Contact Us (https://cyberark.com/company/contact-sales), Resources / What’s New (https://cyberark.com/resources)\\nPhone: +1 928-571-4286\"",
+          "Used visitWebpage {\"url\":\"https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-cyberark-to-secure-the-ai-era\",\"question\":\"What does this press release say about the completion date of Palo Alto Networks' acquisition of CyberArk and the resulting status of CyberArk? Provide the date and a concise supporting excerpt.\"}. The results are: \n \"Press release: “Palo Alto Networks Completes Acquisition of CyberArk to Secure the AI Era” — Feb 11, 2026. Supporting excerpts: “today announced the completion of its acquisition of CyberArk” and “CyberArk's Identity Security solutions will continue to be available as a standalone platform.”\""
+        ]
+      }
+    }
+  ]
+}

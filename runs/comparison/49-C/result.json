@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6d9ghjSrofa7x8AM",
+  "workflow": {
+    "id": "wf_0tm6d21AuFsz5iFGM8e",
+    "name": "Funding lifecycle evaluation C"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:29:40.460Z",
+  "duration": "1m 46s",
+  "dataCreditsUsed": 4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6d9gikaVpato2Au6",
+      "nodeId": "wfn_0tm6d21iRtaxx429Y8Q",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:29:40.469Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "coreweave.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "CoreWeave"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6d9gbMutCrcDekMq",
+      "nodeId": "wfn_0tm6d4f6jZzvkGe2wpS",
+      "nodeName": "Company research C",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:29:40.485Z",
+      "completedAt": "2026-09-30T11:31:26.619Z",
+      "duration": "1m 46s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "coreweave.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "CoreWeave"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"CoreWeave at coreweave.com is an AI cloud infrastructure company.\",\"url\":\"https://investors.coreweave.com/overview/default.aspx\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"CoreWeave describes itself as 'The Essential Cloud for AI' and says it delivers a platform of technology, tools, and teams for building and scaling AI.\"},{\"claim\":\"CoreWeave announced a $1.1 billion Series C round led by Coatue on 2024-05-01.\",\"url\":\"https://investors.coreweave.com/news/news-details/2024/CoreWeave-Secures-1-1-Billion-in-Series-C-Funding-to-Drive-the-Next-Generation-of-Cloud-Computing-for-the-Future-of-AI/default.aspx\",\"publication_date\":\"2024-05-01\",\"event_date\":\"2024-05-01\",\"excerpt\":\"CoreWeave announced it had secured '$1.1 billion in Series C funding' 'led by Coatue' with participation from Magnetar, Altimeter Capital, Fidelity Management & Research Company, and Lykos Global Management.\"},{\"claim\":\"By the IPO prospectus date, OpenAI had agreed to buy $350.0 million of CoreWeave Class A stock in a private placement concurrent with the IPO.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1769628/000119312525067651/d899798d424b4.htm\",\"publication_date\":\"2025-03-27\",\"event_date\":\"2025-03-27\",\"excerpt\":\"The prospectus says OpenAI agreed to purchase Class A common stock in a private placement with an aggregate purchase price of $350.0 million, expected to close concurrently with and contingent upon the IPO.\"},{\"claim\":\"CoreWeave priced its IPO on 2025-03-27 and expected trading to begin on Nasdaq under CRWV on 2025-03-28, with closing expected 2025-03-31.\",\"url\":\"https://www.coreweave.com/news/coreweave-announces-pricing-of-initial-public-offering\",\"publication_date\":\"2025-03-27\",\"event_date\":\"2025-03-27\",\"excerpt\":\"CoreWeave announced the pricing of 37,500,000 Class A shares at $40.00 per share; the shares were expected to begin trading on Nasdaq under 'CRWV' on March 28, 2025, and the offering was expected to close on March 31, 2025.\"},{\"claim\":\"CoreWeave says it completed its public listing on Nasdaq in March 2025 and remains presented as a listed company under ticker CRWV.\",\"url\":\"https://investors.coreweave.com/overview/default.aspx\",\"publication_date\":\"unknown\",\"event_date\":\"2025-03\",\"excerpt\":\"The investor relations overview states: 'Established in 2017, CoreWeave completed its public listing on Nasdaq (CRWV) in March 2025.'\"},{\"claim\":\"A freshness check up to the 2026-09-30 cutoff did not surface evidence that CoreWeave was acquired, delisted, or closed after the IPO.\",\"url\":\"https://forgeglobal.com/coreweave_ipo/\",\"publication_date\":\"2026-08-19\",\"event_date\":\"2026-08-19\",\"excerpt\":\"A later secondary source returned in the freshness check states CoreWeave became a public company on 2025-03-28 and is traded on NASDAQ under CRWV; no newer contrary lifecycle event was surfaced in the check.\"}]",
+          "latest_round": "concurrent private placement with IPO",
+          "round_amount": "350.0 million",
+          "uncertainties": "The latest venture-equity event is somewhat ambiguous. CoreWeave's last named private round found in primary company materials was the $1.1 billion Series C announced 2024-05-01. However, the SEC IPO prospectus evidences a later $350.0 million concurrent private placement to OpenAI tied to the IPO; I treated that as the latest equity financing event/extension because it is later-dated and equity, though it is not labeled as a traditional venture round. For lifecycle timing, the company press release distinguishes pricing (2025-03-27), expected trading start (2025-03-28), and expected closing (2025-03-31), while the IR overview only says the public listing was completed in March 2025. I therefore use public status with date ambiguity noted. Freshness verification used Keenable search results; I did not open an additional post-IPO primary filing within the call budget, so absence of a newer contrary event is supported but not exhaustively proven.",
+          "lead_investors": "OpenAI; Coatue for the prior named Series C",
+          "round_currency": "USD",
+          "company_identity": "CoreWeave operates a cloud infrastructure platform built for AI workloads and sells GPU-accelerated cloud services for training, inference, and related compute-intensive applications.",
+          "lifecycle_status": "public",
+          "lifecycle_event_date": "2025-03-28",
+          "round_announcement_date": "2025-03-27"
+        },
+        "reasoning": "I resolved the company from its domain using CoreWeave's own investor relations site, identified the last named private round from a company press release, and then checked the SEC IPO prospectus for a later equity financing event concurrent with the IPO. I established lifecycle status from the company's IR overview and IPO press release, then used Keenable to check for newer post-IPO lifecycle changes through the 2026-09-30 cutoff. The evidence supports that CoreWeave is public on Nasdaq under CRWV and that the latest evidenced equity financing before/with that transition was the $350 million OpenAI private placement concurrent with the IPO, with noted ambiguity versus the last named Series C round.",
+        "stepsTaken": [
+          "Searched Google with query \"CoreWeave coreweave.com latest funding round IPO press release SEC site:coreweave.com OR site:investors.coreweave.com OR site:sec.gov\". The results are: \n {\"search_results\":[{\"title\":\"CoreWeave Announces Pricing of Initial Public Offering\",\"link\":\"https://www.coreweave.com/news/coreweave-announces-pricing-of-initial-public-offering\",\"snippet\":\"CoreWeave priced its IPO at $40/share, offering 37.5M shares under ticker \\\"CRWV\\\" on Nasdaq, raising $1.5B to expand its AI cloud platform.\",\"date\":\"Mar 27, 2025\",\"position\":1},{\"title\":\"News and Press Releases\",\"link\":\"https://www.coreweave.com/newsroom\",\"snippet\":\"CoreWeave priced its IPO at $40/share, of...",
+          "Used visitWebpage {\"url\":\"https://www.coreweave.com/news/coreweave-announces-pricing-of-initial-public-offering\",\"question\":\"Find the IPO pricing date, exchange/ticker, share count, gross proceeds, and whether the offering closed or was just announced.\"}. The results are: \n \"CoreWeave Announces Pricing of Initial Public Offering\\nPublished on: March 27, 2025\\n\\nRelevant text:\\n- \\\"CoreWeave, Inc. ... announced today the pricing of its initial public offering of 37,500,000 shares of its Class A common stock at a public offering price of $40.00 per share. The offering consists of 36,590,000 shares ... to be sold by CoreWeave and 910,000 shares ... to be sold by existing stockholders.\\\" \\n- \\\"The shares are expected to begin trading on the Nasdaq Global Select Market ...",
+          "Used visitWebpage {\"url\":\"https://investors.coreweave.com/overview/default.aspx\",\"question\":\"Find evidence of CoreWeave's current listing status, exchange and ticker, and company description.\"}. The results are: \n \"Source: Overview — https://investors.coreweave.com/overview/default.aspx\\n\\nRelevant webpage text:\\n- “CoreWeave is The Essential Cloud for AI™.”\\n- “Built for pioneers by pioneers, CoreWeave delivers a platform of technology, tools, and teams that enables innovators to move at the pace of innovation, building and scaling AI with confidence.”\\n- “Trusted by leading AI labs, startups, and global enterprises, CoreWeave serves as a force multiplier by combining superior infrastructure performance ...",
+          "Searched Google with query \"CoreWeave Series C funding May 2024 site:coreweave.com/news OR site:reuters.com OR site:sec.gov CoreWeave\". The results are: \n {\"search_results\":[{\"title\":\"CoreWeave Secures $1.1 Billion in Series C Funding to ...\",\"link\":\"https://investors.coreweave.com/news/news-details/2024/CoreWeave-Secures-1-1-Billion-in-Series-C-Funding-to-Drive-the-Next-Generation-of-Cloud-Computing-for-the-Future-of-AI/default.aspx\",\"snippet\":\"CoreWeave Secures $1.1 Billion in Series C Funding to Drive the Next Generation of Cloud Computing for the Future of AI May 1, 2024\",\"date\":\"May 1, 2024\",\"position\":1},{\"title\":\"CoreWeave Secures $7.5 Bill...",
+          "Used visitWebpage {\"url\":\"https://investors.coreweave.com/news/news-details/2024/CoreWeave-Secures-1-1-Billion-in-Series-C-Funding-to-Drive-the-Next-Generation-of-Cloud-Computing-for-the-Future-of-AI/default.aspx\",\"question\":\"Find the round type, amount, announcement date, lead investors, and any description of the business.\"}. The results are: \n \"- Announcement date: May 1, 2024\\n- Round type: Series C\\n- Amount: $1.1 billion in new funding\\n- Lead investors: led by Coatue; participation from Magnetar, Altimeter Capital, Fidelity Management & Research Company, and Lykos Global Management\\n- Business description: CoreWeave is described as “the leading specialized cloud provider for AI” and “a specialized GPU cloud provider, designed to power the most complex workloads with customized solutions at scale.” It provides cloud infrastructure ...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"CoreWeave latest status after March 2025 IPO any acquisition completion delisting closure or new equity financing by September 30 2026; also evidence of current Nasdaq listing and any subsequent merger or take-private\",\"site\":\"\",\"acquired_after\":\"2025-03-01\",\"acquired_before\":\"2026-09-30\",\"published_after\":\"2025-03-01\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":400,\"max_results\":5,\"session_id\":\"coreweave-2026-09-30\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: CRWV SEC Filings - CoreWeave, Inc. 10-K, 10-Q, 8-K Forms\\nURL: https://www.stocktitan.net/sec-filings/CRWV/\\nPublished: 2026-09-17\\nAcquired: 2026-09-18\\nSnippets:\\nRhea-AI Summary CoreWeave, Inc. (CRWV) reported that CEO, President and director Michael N. Intrator converted 107,692 shares of Class B Common Stock into the same number of Class A shares on September 15, 2026, held indirectly through Omnadora Capital LLC.\\n\\n---\\n\\nTitle: CoreWeave\\nURL: ht...",
+          "Used visitWebpage {\"url\":\"https://www.sec.gov/Archives/edgar/data/1769628/000119312525067651/d899798d424b4.htm\",\"question\":\"Find any private placement or equity investment by OpenAI or others concurrent with the IPO, with amount and closing timing, and confirm the IPO closing date if stated.\"}. The results are: \n \"Relevant excerpts:\\n\\n- “The issuance of the shares in the private placement is contingent upon the completion of this offering.”\\n- “We refer to the private placement of these shares of our Class A common stock as the concurrent share issuance.”\\n- “Class A common stock to be outstanding after this offering and the concurrent share issuance 345,997,406 shares (or 351,622,406 shares if the underwriters exercise their over-allotment option in full).”\\n\\nFrom the prospectus summary / concurrent s..."
+        ]
+      }
+    }
+  ]
+}

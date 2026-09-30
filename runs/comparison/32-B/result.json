@@ -1,0 +1,88 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6ce8ZWCZnT5Wftjp",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:10:56.300Z",
+  "duration": "1m 49s",
+  "dataCreditsUsed": 5,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6ce8nHME96zk7apR",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:10:56.304Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "lessn.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Lessn"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6ce8WE9j4brGnx6i",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:10:56.318Z",
+      "completedAt": "2026-09-30T11:12:46.280Z",
+      "duration": "1m 49s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "lessn.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Lessn"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Lessn at lessn.io is an Australian B2B payments software business focused on accounts payable automation and reconciliation.\",\"url\":\"https://www.lessn.io/blog/lessn-raises-1m-to-supercharge-growth-could-we-be-australias-next-melio\",\"publication_date\":\"2025-08-13\",\"event_date\":\"2025-08-13\",\"excerpt\":\"Lessn says it wraps around accounting systems such as Xero and MYOB and provides automated payments, no ABA files, card payments for suppliers, seamless reconciliation, and real-time control.\"},{\"claim\":\"A partner article describes Lessn as an accounts payables automation and reconciliation solution for SMEs, bookkeepers and finance teams, and states HospoPay Pty Limited rebranded in July 2023 and now trades as Lessn.\",\"url\":\"https://www.fintechaustralia.org.au/community-news/spenda-and-limepay-partners-with-lessn-to-scale-payment-capabilities-and-acelerate-revenue-growth\",\"publication_date\":\"2024-08-20\",\"event_date\":\"2024-08-20\",\"excerpt\":\"The article says Lessn is an Accounts Payables, Automation & Reconciliation solution and that HospoPay Pty Limited rebranded in July 2023 and now trades as Lessn.\"},{\"claim\":\"Lessn announced that its Pre-Series-A raise had closed at over $1 million.\",\"url\":\"https://www.lessn.io/blog/lessn-raises-1m-to-supercharge-growth-could-we-be-australias-next-melio\",\"publication_date\":\"2025-08-13\",\"event_date\":\"2025-08-13\",\"excerpt\":\"The company blog states: 'It's official — our Pre-Series-A raise has closed' and 'We've secured over $1 million.'\"},{\"claim\":\"The August 2025 post names Michael Masterman, Dean Swan, Brendon Cook and Ian Lennie as backers in that round.\",\"url\":\"https://www.lessn.io/blog/lessn-raises-1m-to-supercharge-growth-could-we-be-australias-next-melio\",\"publication_date\":\"2025-08-13\",\"event_date\":\"2025-08-13\",\"excerpt\":\"The post lists Michael Masterman, Dean Swan of monday.com, Brendon Cook of oOh! Media, and Ian Lennie, founder of Zepto Payments, as investors/supporters.\"},{\"claim\":\"ASIC published a notice that HospoPay Pty Limited, the company said to trade as Lessn, was in liquidation from 22 January 2025.\",\"url\":\"https://publishednotices.asic.gov.au/browsesearch-notices/notice-details/HospoPay-Pty-Limited-640610117/4cb5d72a-f6c2-40f8-9919-3c05ce2cf19c\",\"publication_date\":\"2025-01-22\",\"event_date\":\"2025-01-22\",\"excerpt\":\"ASIC's published notice says HospoPay Pty Limited (ACN 640 610 117) status: In Liquidation, and that on 22 January 2025 the company was taken to have passed a special resolution to be wound up voluntarily.\"},{\"claim\":\"The Australian Business Register still showed HospoPay Pty Limited's ABN as active as of a 24 Sep 2025 update, creating tension with the liquidation notice.\",\"url\":\"https://abr.business.gov.au/ABN/View?id=98640610117\",\"publication_date\":\"unknown\",\"event_date\":\"2025-09-24\",\"excerpt\":\"ABR lists HOSPOPAY PTY LIMITED ABN 98 640 610 117 with ABN status 'Active from 01 May 2020' and 'ABN last updated: 24 Sep 2025'.\"},{\"claim\":\"Lessn was still presented publicly as operating in 2026 through a turnover announcement and a partnership announcement, though these do not resolve its legal status.\",\"url\":\"https://www.google.com/search?q=Lessn%20lessn.io%20acquisition%20IPO%20shutdown%20funding%20news\",\"publication_date\":\"2026-03-02 and 2024-08-20\",\"event_date\":\"2026-03-02 and 2024-08-20\",\"excerpt\":\"Search results surfaced a 2 Mar 2026 turnover announcement for Lessn and the FinTech Australia partnership article quotes founder David Grossman about customer growth and payment volumes, indicating ongoing operations/public activity after the January 2025 liquidation notice.\"}]",
+          "latest_round": "Pre-Series-A",
+          "round_amount": "1000000+",
+          "uncertainties": "The strongest funding source is a company blog post, not an independent filing, and it says only 'over $1 million' without a precise figure or round documents. The post names investors/supporters but does not explicitly identify lead investors. Lifecycle is conflicted: ASIC published a winding-up/liquidation notice for HospoPay Pty Limited on 2025-01-22, while the ABR later still showed the ABN as active and later public materials describe Lessn operating and growing. Those later materials do not conclusively prove the liquidation ended, nor do they prove the company closed. No evidence of an acquisition, IPO, or completed shutdown was verified by the cutoff.",
+          "lead_investors": "unknown",
+          "round_currency": "AUD",
+          "company_identity": "Lessn is an Australian B2B payments software company offering accounts payable automation, payment orchestration and reconciliation for businesses using accounting platforms such as Xero and MYOB.",
+          "lifecycle_status": "unknown",
+          "lifecycle_event_date": "2025-01-22",
+          "round_announcement_date": "2025-08-13"
+        },
+        "reasoning": "I identified Lessn via lessn.io and gathered evidence from the company blog, an industry partner article, an ASIC published notice, and the Australian Business Register. The latest evidenced venture equity financing by the cutoff is Lessn's announced Pre-Series-A of over $1 million on 2025-08-13. However, lifecycle status is not safely classifiable as private_independent or closed because an official ASIC liquidation notice for HospoPay Pty Limited conflicts with later evidence of active operations/public activity and an active ABN record. I therefore mark lifecycle_status as unknown and explain the conflict.",
+        "stepsTaken": [
+          "Searched Google with query \"Lessn lessn.io funding acquisition site:lessn.io OR Crunchbase OR LinkedIn\". The results are: \n {\"search_results\":[{\"title\":\"Lessons from a startup's funding failure: Focus on ...\",\"link\":\"https://www.linkedin.com/posts/viswanadh-akella-97812b34_startups-entrepreneurship-activity-7359124459296866306-z5Qs\",\"snippet\":\"a SaaS startup I know was offered a $100 million acquisition. They were doing $20M ARR, growing at 35% YoY, and just starting to see ...\",\"date\":\"1 year ago\",\"position\":1},{\"title\":\"Bootstrapping vs Venture Capital: Lessons from a Founder\",\"link\":\"https://www.linkedin.com/posts...",
+          "Used visitWebpage {\"url\":\"https://www.lessn.io/blog/lessn-raises-1m-to-supercharge-growth-could-we-be-australias-next-melio\",\"question\":\"Find the announced funding round amount, date, investors, and what Lessn at lessn.io does.\"}. The results are: \n \"Source: https://lessn.io/blog — blog post titled “Lessn raises $1M+ to supercharge growth — could we be Australia’s next Melio?” dated Aug 13, 2025.\\n\\nRelevant excerpts:\\n- “It’s official — our Pre-Series-A raise has closed”\\n- “We’ve secured over $1 million”\\n- Investors named: “Michael Masterman,” “Dean Swan — Vice President & GM APJ at monday.com,” “Brendon Cook — founder of oOh! Media,” “Ian Lennie — Zepto Payments founder”\\n- What Lessn does: “Lessn… wrap[s] around [Xero, MYOB] — plugging...",
+          "Searched Google with query \"Lessn lessn.io acquisition IPO shutdown funding news\". The results are: \n {\"search_results\":[{\"title\":\"Lessen CEO Jay McKee One Year After Proptech's Biggest ...\",\"link\":\"https://www.lessen.com/resources/lessen-ceo-jay-mckee-one-year-after-proptechs-biggest-acquisition\",\"snippet\":\"Rapid growth and operational integration followed the property services platform's $950M deal for SMS Assist. When Lessen acquired SMS ...\",\"date\":\"May 31, 2024\",\"position\":1},{\"title\":\"Lessn exceeds $100 million turnover on its payments ...\",\"link\":\"https://www.barchart.com/press-releases/5...",
+          "Used visitWebpage {\"url\":\"https://www.barchart.com/press-releases/519965/lessn-exceeds-100-million-turnover-on-its-payments-orchestration-platform\",\"question\":\"Find the publication date, what Lessn does, and any evidence of ownership status or funding references in this press release.\"}. The results are: \n \"no relevant data\"",
+          "Searched Google with query \"Lessn payments March 2026 private company investors acquisition\". The results are: \n {\"search_results\":[{\"title\":\"FinTech M&A Outlook 2026: Payments & Embedded Finance\",\"link\":\"https://www.feinternational.com/blog/fintech-ma-outlook\",\"snippet\":\"The 2026 fintech M&A outlook: embedded finance, payments, AI, and stablecoins are driving deals. See the data, valuation trends, and what ...\",\"date\":\"Jun 25, 2026\",\"position\":1},{\"title\":\"How Payments Companies Can Regain Investor Confidence\",\"link\":\"https://www.bcg.com/publications/2026/payments-companies-valuation-reset\",\"snippet\":\"Pay...",
+          "Searched Google with query \"site:newswire.com Lessn payments raised private March 2026\". The results are: \n {\"search_results\":[{\"title\":\"Airline Career Pilot Program / ATP Flight School\",\"link\":\"https://www.newswire.com/whitelist-redirect?url=https%3A%2F%2Fatpflightschool.com%2Fairline-career-pilot-program%2F\",\"snippet\":\"At select locations, ATP will pay for your checkrides — up to six checkride fees, one for each certificate and rating (valued at up to $12,000). Schedule your ...\",\"position\":1},{\"title\":\"Atlanta Tech Village | Startup Hub & Coworking in Buckhead + ...\",\"link\":\"https://www.newswire.co...",
+          "Used visitWebpage {\"url\":\"https://www.fintechaustralia.org.au/community-news/spenda-and-limepay-partners-with-lessn-to-scale-payment-capabilities-and-acelerate-revenue-growth\",\"question\":\"Find the publication date, describe Lessn's business, and note any statements indicating it is operating independently or references to funding.\"}. The results are: \n \"Publication date: 20 Aug\\n\\nArticle: “Spenda and Limepay partners with Lessn to scale payment capabilities and accelerate revenue growth”\\n\\nRelevant Lessn business description:\\n- “Lessn, a leading technology innovator in the bill payments industry”\\n- “Lessn integrate the Limepay white labelled payments technology to scale its accounts payable business, expand its capabilities and reach new markets.”\\n- “About Lessn: Faster, Smarter Business Payments”\\n- “Lessn is an Accounts Payables, Automa...",
+          "Searched Google with query \"\"HospoPay Pty Limited\" Lessn acquisition IPO\". The results are: \n {\"search_results\":[{\"title\":\"Current details for ABN 98 640 610 117\",\"link\":\"https://abr.business.gov.au/ABN/View?id=98640610117\",\"snippet\":\"HOSPOPAY PTY LIMITED ABN status: Active from 01 May 2020 Entity type: Australian Private Company Goods. Registered from 01 May 2020 Main business location: NSW ...\",\"position\":1},{\"title\":\"Limepay agreement with Lessn to process all Payments ...\",\"link\":\"https://www.listcorp.com/asx/spx/spenda-limited/news/limepay-agreement-with-lessn-to-process-all-payment...",
+          "Used visitWebpage {\"url\":\"https://publishednotices.asic.gov.au/browsesearch-notices/notice-details/HospoPay-Pty-Limited-640610117/4cb5d72a-f6c2-40f8-9919-3c05ce2cf19c\",\"question\":\"Find the company status, appointment date, and what the notice says about HospoPay Pty Limited / Lessn.\"}. The results are: \n \"Company: HospoPay Pty Limited (ACN 640 610 117)\\nStatus: In Liquidation\\nAppointment Date: 22 January 2025\\nNotice type: NOTICE OF DEEMED SPECIAL RESOLUTION TO WIND UP A COMPANY\\nNotice says: On 22 January 2025, the company is taken, because of paragraph 446A(1)(a), to have passed a special resolution under s491 that the company be wound up voluntarily.\\nDate of resolution: 22 January 2025\\nDate of notice: 22 January 2025\\nJoint liquidators/appointees: Luke Bennett Pittorino; Quentin James Olde...",
+          "Used visitWebpage {\"url\":\"https://abr.business.gov.au/ABN/View?id=98640610117\",\"question\":\"Find the ABN entity name, status, entity type, and dates for HospoPay Pty Limited.\"}. The results are: \n \"Entity name: HOSPOPAY PTY LIMITED\\nABN: 98 640 610 117\\nABN status: Active from 01 May 2020\\nEntity type: Australian Private Company\\nGST: Registered from 01 May 2020\\nABN last updated: 24 Sep 2025\\nRecord extracted: 30 Sep 2026\\nHistorical details: https://abr.business.gov.au/AbnHistory/View?id=98640610117\\nASIC record: https://connectonline.asic.gov.au/RegistrySearch/faces/landing/panelSearch.jspx?searchText=640610117&searchType=OrgAndBusNm\""
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6brbJ385cRZjRgPS",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:57:11.439Z",
+  "duration": "1m 24s",
+  "dataCreditsUsed": 4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6brbJRMQgz3ygG5N",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:57:11.444Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "ramp.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Ramp"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6brbVvX7r4Kk2C2p",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:57:11.456Z",
+      "completedAt": "2026-09-30T10:58:36.266Z",
+      "duration": "1m 24s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "ramp.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Ramp"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Ramp at ramp.com is a business finance / spend-management company offering corporate cards, payment services, and expense management software.\",\"url\":\"https://www.reuters.com/legal/transactional/fintech-firm-ramps-valuation-surges-44-billion-ai-driven-growth-2026-06-04/\",\"publication_date\":\"2026-06-04\",\"event_date\":\"2026-06-04\",\"excerpt\":\"Reuters described Ramp as a financial technology company that offers corporate cards, payment services and expense management applications.\"},{\"claim\":\"Ramp describes itself as financial infrastructure that helps companies save time and money on spend, including cards, invoices, reimbursements, approvals, payments, and close.\",\"url\":\"https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html\",\"publication_date\":\"2026-06-04\",\"event_date\":\"2026-06-04\",\"excerpt\":\"The PR Newswire release's About section says Ramp is how companies save time and money on every dollar they spend and is the smart financial infrastructure behind every card swipe, invoice, and reimbursement.\"},{\"claim\":\"Ramp announced a $750 million Series F financing at a $44 billion valuation on 2026-06-04.\",\"url\":\"https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html\",\"publication_date\":\"2026-06-04\",\"event_date\":\"2026-06-04\",\"excerpt\":\"Headline: 'Ramp Raises Series F at $44 Billion Valuation.' Body: Ramp announced a $750 million primary financing round valuing the company at $44 billion.\"},{\"claim\":\"The Series F round was led by ICONIQ, GIC, and Ontario Teachers' Pension Plan.\",\"url\":\"https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html\",\"publication_date\":\"2026-06-04\",\"event_date\":\"2026-06-04\",\"excerpt\":\"The release says the $750 million primary financing round was led by ICONIQ, GIC, and Ontario Teachers' Pension Plan.\"},{\"claim\":\"Reuters independently reported the same 2026-06-04 financing and named the same round leaders.\",\"url\":\"https://www.reuters.com/legal/transactional/fintech-firm-ramps-valuation-surges-44-billion-ai-driven-growth-2026-06-04/\",\"publication_date\":\"2026-06-04\",\"event_date\":\"2026-06-04\",\"excerpt\":\"Reuters reported that Ramp had raised $750 million in a new funding round at a $44 billion valuation and that the round was led by ICONIQ, GIC, and Ontario Teachers' Pension Plan.\"},{\"claim\":\"As of a secondary market / IPO-tracking source retrieved during this research, Ramp was still private and had not filed for an IPO.\",\"url\":\"https://forgeglobal.com/ramp_ipo/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Forge states that Ramp is a private company and not publicly traded, has not yet filed for an IPO, and has not officially endorsed an IPO plan.\"}]",
+          "latest_round": "Series F",
+          "round_amount": "750 million",
+          "uncertainties": "The strongest funding evidence is a PR Newswire company announcement corroborated by Reuters on 2026-06-04. I could not extract the detailed funding terms directly from Ramp's own blog page because the page scrape did not return those details. Lifecycle status is evidenced indirectly: a June 2026 private financing plus a secondary Forge IPO-status page stating Ramp remained private and had not filed for an IPO. I found no public evidence before the 2026-09-30 cutoff that Ramp itself was acquired, went public, or shut down, but absence-of-event conclusions are inherently less definitive than affirmative filings or company statements.",
+          "lead_investors": "ICONIQ, GIC, Ontario Teachers' Pension Plan",
+          "round_currency": "USD",
+          "company_identity": "Ramp is a fintech company at ramp.com that sells corporate cards and software for spend management, payments, and expense automation for businesses.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-06-04"
+        },
+        "reasoning": "I resolved Ramp at ramp.com as the fintech spend-management company, then checked for its most recent financing and current ownership/listing status. The latest evidenced venture equity event before the 2026-09-30 cutoff is the 2026-06-04 Series F, $750 million, led by ICONIQ, GIC, and Ontario Teachers' Pension Plan, from a company-distributed press release corroborated by Reuters. I found no evidence by the cutoff that Ramp itself had been acquired, gone public, or closed; the best retrieved status evidence is a secondary IPO-status page saying Ramp remained private and had not filed for an IPO.",
+        "stepsTaken": [
+          "Searched Google with query \"site:ramp.com Ramp funding round 2025 2026 valuation investors ramp.com\". The results are: \n {\"search_results\":[{\"title\":\"We raised $500 M to build the future of finance\",\"link\":\"https://ramp.com/blog/ramp-raised-500m-to-build-the-future-of-finance\",\"snippet\":\"Ramp has raised another $500 million at a $22.5 billion valuation to pick up the pace.\",\"date\":\"Jul 30, 2025\",\"position\":1},{\"title\":\"Ramp at $32 billion: Money talks. Now It thinks.\",\"link\":\"https://ramp.com/blog/ramp-november-2025-valuation\",\"snippet\":\"Ramp's underlying profitability is growing 153% year over year, 10x faster ea...",
+          "Used visitWebpage {\"url\":\"https://ramp.com/blog/ramp-at-44-billion-the-third-pillar\",\"question\":\"Find the funding announcement date, amount raised, round type, lead investors, valuation, and any text showing what Ramp does.\"}. The results are: \n \"Text showing what Ramp does: “With Ramp, the purchase, the receipt, and the record stay together from the start.”\\n\\nRelevant links:\\n- Ramp news: https://ramp.com/blog/news\\n- About us: https://ramp.com/about-us\\n- Platform overview: https://ramp.com/platform\\n- Products: https://ramp.com/products\\n- Spend management: https://ramp.com/spend-management\\n- Corporate cards: https://ramp.com/corporate-cards\\n- Banking: https://ramp.com/business-banking\\n- Private equity: https://ramp.com/pe-partne...",
+          "Searched Google with query \"Ramp June 2026 $750 million lead investors announced private company Reuters\". The results are: \n {\"search_results\":[{\"title\":\"Fintech firm Ramp's valuation surges to $44 billion on AI- ...\",\"link\":\"https://www.reuters.com/legal/transactional/fintech-firm-ramps-valuation-surges-44-billion-ai-driven-growth-2026-06-04/\",\"snippet\":\"June 4 (Reuters) - Financial technology company Ramp said on Thursday it had raised $750 million in a new funding ​round at a $44 billion ...\",\"date\":\"Jun 4, 2026\",\"position\":1},{\"title\":\"Ramp Raises $750M at $44B: What the Fintech ...\",\"link\":\"https://angelinvestors...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/legal/transactional/fintech-firm-ramps-valuation-surges-44-billion-ai-driven-growth-2026-06-04/\",\"question\":\"What amount did Ramp raise, on what date, at what valuation, who led the round, and how is the company described?\"}. The results are: \n \"Reuters, June 4, 2026: “Financial technology company Ramp said on Thursday it had raised $750 million in a new funding round at a $44 billion valuation, up from $32 billion in November.” “Ramp's latest funding round was led by ICONIQ, GIC, and Ontario Teachers' Pension Plan…” “Founded in 2019, the company offers corporate cards, payment services and expense management applications.”\"",
+          "Searched Google with query \"Ramp ramp.com IPO acquisition public 2026 Reuters\". The results are: \n {\"search_results\":[{\"title\":\"Fintech startup Ramp sees valuation jump to $13 billion ...\",\"link\":\"https://www.reuters.com/business/finance/corporate-payments-fintech-startup-ramp-valued-13-billion-after-share-sale-deal-2025-03-03/\",\"snippet\":\"Ramp, a fintech startup that offers corporate cards and software for managing employee expenses, was valued at $13 billion in a tender offer ...\",\"date\":\"Mar 3, 2025\",\"position\":1},{\"title\":\"Fintech firm Ramp's valuation surges to $44 billion on AI- ...\",\"l...",
+          "Used visitWebpage {\"url\":\"https://forgeglobal.com/ramp_ipo/\",\"question\":\"Does this page state whether Ramp has filed for an IPO or officially announced IPO plans, and what recent funding event does it cite?\"}. The results are: \n \"- “Ramp is a private company and not publicly traded.”\\n- “Ramp has not yet filed for an IPO.”\\n- “While the company has new funding, Ramp has not officially endorsed a plan to participate in an IPO.”\\n- “These comments should not be interpreted to mean that the company is formally pursuing or foregoing an IPO.”\\n- Recent funding event cited in company details: “In August 2023 Reuters reported that Ramp ‘raised $300 million in its latest funding round to accelerate expansion in new categories.....",
+          "Searched Google with query \"Ramp ramp.com acquired acquisition announced completed 2026\". The results are: \n {\"search_results\":[{\"title\":\"Ramp is coming to Europe\",\"link\":\"https://ramp.com/blog/ramp-is-launching-in-europe\",\"snippet\":\"We completed the acquisition of Billhop, a Stockholm- and London-based payments platform, Ramp news March 13, 2026 Ramp is coming to Europe. ...\",\"date\":\"Mar 13, 2026\",\"position\":1},{\"title\":\"Ramp (company)\",\"link\":\"https://en.wikipedia.org/wiki/Ramp_(company)\",\"snippet\":\"As of June 2026, Ramp was valued at $44 billion with $1 billion in annualized revenue. The company was...",
+          "Used visitWebpage {\"url\":\"https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html\",\"question\":\"What is the announcement date, round type, amount raised, lead investors, company valuation, and how does Ramp describe its business?\"}. The results are: \n \"- Announcement date: \\\"Jun 04, 2026, 08:00 ET\\\" / \\\"NEW YORK, June 4, 2026\\\"\\n- Round type: \\\"Series F\\\" (headline: \\\"Ramp Raises Series F at $44 Billion Valuation\\\"); body: \\\"a $750 million primary financing round\\\"\\n- Amount raised: \\\"$750 million\\\"\\n- Lead investors: \\\"led by ICONIQ, GIC, and Ontario Teachers' Pension Plan\\\"\\n- Company valuation: \\\"$44 billion\\\" / \\\"valuing the company at $44 billion\\\"\\n- Ramp business description (About Ramp): \\\"Ramp is how companies save time and money on ..."
+        ]
+      }
+    }
+  ]
+}

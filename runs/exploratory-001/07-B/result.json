@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6bbivTzQn76PAKQD",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:47:42.809Z",
+  "duration": "1m 7s",
+  "dataCreditsUsed": 4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6bbivteg4a2FR2MT",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:47:42.814Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "figma.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Figma"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6bbipuJP9bctgBDM",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:47:42.829Z",
+      "completedAt": "2026-09-30T10:48:49.870Z",
+      "duration": "1m 7s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "figma.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Figma"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Figma is a software company whose platform helps teams design and build digital products collaboratively.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1579878/000162828025037014/figma424b4.htm\",\"publication_date\":\"2025-07-30\",\"event_date\":\"2025-07-30\",\"excerpt\":\"The prospectus summary says: 'Figma is where teams come together to turn ideas into the world’s best digital products and experiences' and describes a 'single, connected, AI-powered platform' used by designers, developers, product managers and others.\"},{\"claim\":\"Figma completed an IPO and became a public company on the NYSE under ticker FIG.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1579878/000162828025037014/figma424b4.htm\",\"publication_date\":\"2025-07-30\",\"event_date\":\"2025-07-30\",\"excerpt\":\"Figma’s final prospectus states: 'This is the initial public offering of shares of Class A common stock of Figma, Inc.' and 'We have been approved to list our Class A common stock on the New York Stock Exchange (NYSE) under the symbol FIG.' The prospectus also sets the IPO price at $33.00 per share.\"},{\"claim\":\"Figma was trading publicly by 2025-07-31.\",\"url\":\"https://www.nyse.com/quote/XNYS:FIG\",\"publication_date\":\"unknown\",\"event_date\":\"2025-07-31\",\"excerpt\":\"Google’s snippet for the NYSE quote page says: 'Data ranges from 2025-07-31,' consistent with public market trading beginning on that date.\"},{\"claim\":\"Figma’s latest evidenced venture equity round before its IPO was a Series E announced on 2021-06-24 and led by Durable Capital Partners.\",\"url\":\"https://www.figma.com/blog/figmas-series-e/\",\"publication_date\":\"2021-06-24\",\"event_date\":\"2021-06-24\",\"excerpt\":\"Figma’s own blog post says: 'We have closed a new round of funding led by Durable Capital Partners' and labels it 'Figma’s Series E.' It also says Morgan Stanley’s Counterpoint Global and prior investors participated.\"},{\"claim\":\"The Series E round amount was $200 million.\",\"url\":\"https://www.bloomberg.com/news/articles/2021-06-24/software-design-startup-figma-is-now-worth-10-billion\",\"publication_date\":\"2021-06-24\",\"event_date\":\"2021-06-24\",\"excerpt\":\"Google’s snippet for Bloomberg says: 'Figma raised $200 million in the funding round, the company told Bloomberg. Backers included Durable Capital Partners and Morgan Stanley.'\"}]",
+          "latest_round": "Series E",
+          "round_amount": "200000000",
+          "uncertainties": "The Series E amount is supported here by Bloomberg search-result snippet rather than a directly read full article; Figma’s own Series E blog post confirmed the round and lead investor but did not state the amount in the retrieved content. For lifecycle timing, the SEC prospectus dated 2025-07-30 confirms IPO pricing and NYSE approval, while the NYSE quote snippet indicates trading data from 2025-07-31; settlement/delivery in the prospectus is 'on or about August 1, 2025.'",
+          "lead_investors": "Durable Capital Partners",
+          "round_currency": "USD",
+          "company_identity": "Figma is a collaborative software design and product-development platform used by teams to create digital products and experiences.",
+          "lifecycle_status": "public",
+          "lifecycle_event_date": "2025-07-31",
+          "round_announcement_date": "2021-06-24"
+        },
+        "reasoning": "I identified the company at figma.com as Figma, Inc. and used public evidence to determine both its latest evidenced private venture round and its current lifecycle status as of 2026-09-30. The strongest lifecycle evidence is Figma’s SEC final prospectus for its initial public offering, which confirms NYSE listing approval under ticker FIG and the $33 IPO price. A NYSE quote-page search result supports that trading data begins on 2025-07-31, so I treated Figma as public by that date. For funding, Figma’s own 2021 Series E blog post confirms the round name and lead investor, while Bloomberg’s contemporaneous report provides the $200 million amount. No later venture equity round was evidenced before the IPO in the sources reviewed.",
+        "stepsTaken": [
+          "Searched Google with query \"Figma funding IPO acquisition latest round site:figma.com OR site:news.figma.com OR site:sec.gov OR site:techcrunch.com\". The results are: \n {\"search_results\":[{\"title\":\"Figma Announces Second Quarter 2025 Financial Results\",\"link\":\"https://investor.figma.com/news-events/news/news-details/2025/Figma-Announces-Second-Quarter-2025-Financial-Results/default.aspx\",\"snippet\":\"Closed the acquisitions of Modyfi, to support Figma's work around motion, animation, and vector tooling, and Payload, a leading headless ...\",\"date\":\"Sep 3, 2025\",\"position\":1},{\"title\":\"Figma 424B4\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1579878/00016282802...",
+          "Searched Google with query \"Figma latest funding round extension 2024 2023 2022 site:figma.com OR site:techcrunch.com OR site:forbes.com OR site:pitchbook.com\". The results are: \n {\"search_results\":[{\"title\":\"Discover community made resources and plugins\",\"link\":\"https://www.figma.com/community\",\"snippet\":\"Explore, install and use thousands of templates, plugins, and widgets published to the Figma Community by designers and developers.\",\"position\":1},{\"title\":\"Speakers | Config 2026\",\"link\":\"https://config.figma.com/san-francisco/speakers/\",\"snippet\":\"Meet the visionary speakers presenting at Config 2026. With funding from a Thiel fellowship, they began Figma. Figma since...",
+          "Used keenable-public-evaluation-fetch_page_content {\"url\":\"https://www.sec.gov/Archives/edgar/data/1579878/000162828025037014/figma424b4.htm\",\"max_chars\":12000,\"live\":false,\"prompt\":\"Extract evidence for: 1) whether Figma's Class A common stock was approved to list on the NYSE and under what symbol, 2) the IPO pricing date and share price if stated, 3) any statement identifying Figma's most recent preferred stock financing round, including round name, date, amount raised, and lead investors if available.\",\"session_id\":\"sess-figma-20260930\",\"output_format\":\"text\"}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Figma 424B4\\nURL: https://www.sec.gov/Archives/edgar/data/1579878/000162828025037014/figma424b4.htm\\n\\nFiled Pursuant to Rule 424(b)(4)\\n\\nRegistration No. 333-288451\\n\\n![image.jpg](image.jpg)\\n\\n| | |\\n|---|---|\\n| Class A Common Stock | Figma, Inc. |\\n\\n| |\\n|---|\\n| |\\n\\nThis is the initial public offering of shares of Class A common stock of Figma, Inc. We are offering 12,472,657 shares of our Class A common stock\\n\\nand the selling stockholders ide...",
+          "Searched Google with query \"Figma Series latest funding round lead investors announced site:techcrunch.com OR site:figma.com OR site:crunchbase.com OR site:forbes.com\". The results are: \n {\"search_results\":[{\"title\":\"Figma Raises $40MM Series C Round led by Sequoia\",\"link\":\"https://www.figma.com/blog/figma-series-c/\",\"snippet\":\"The lead investor for Figma's Series C is Sequoia Capital. Coatue, Founders Fund, Jeff Weiner (CEO of LinkedIn), Mike Krieger (Co-founder ...\",\"date\":\"Feb 14, 2019\",\"position\":1},{\"title\":\"Figma's Series E\",\"link\":\"https://www.figma.com/blog/figmas-series-e/\",\"snippet\":\"We have closed a new round of funding led by Durable Capital Partners, along with new i...",
+          "Used visitWebpage {\"url\":\"https://www.figma.com/blog/figmas-series-e/\",\"question\":\"What does this page say about the funding round name, amount raised, announcement date, and lead investors?\"}. The results are: \n \"- Announcement date: June 24, 2021\\n- Funding round name: “Figma’s Series E”\\n- Lead investors: “led by Durable Capital Partners”\\n- Additional investor context: “along with new investors like Morgan Stanley's Counterpoint Global” and “previous investors—Index, Greylock, Kleiner Perkins, Sequoia, and a16z—also participated in this Series E round.”\\n- Amount raised: no amount is stated in the provided page content.\\n- Relevant link mentioned on the page: https://bloomberg.com/news/articles/2021-...",
+          "Searched Google with query \"Figma Series E amount Durable Capital Partners Bloomberg June 24 2021\". The results are: \n {\"search_results\":[{\"title\":\"Figma's Series E\",\"link\":\"https://www.figma.com/blog/figmas-series-e/\",\"snippet\":\"We have closed a new round of funding led by Durable Capital Partners. June 24, 2021 Figma's Series E Dylan FieldCo-founder & Chief Executive … ...\",\"date\":\"Jun 24, 2021\",\"position\":1},{\"title\":\"Software Design Startup Figma Is Now Worth $10 Billion\",\"link\":\"https://www.bloomberg.com/news/articles/2021-06-24/software-design-startup-figma-is-now-worth-10-billion\",\"snippet\":\"Figma raised ...",
+          "Searched Google with query \"Figma IPO trading began July 31 2025 press release site:investor.figma.com OR site:nyse.com OR site:businesswire.com\". The results are: \n {\"search_results\":[{\"title\":\"Figma Announces Second Quarter 2025 Financial Results\",\"link\":\"https://investor.figma.com/news-events/news/news-details/2025/Figma-Announces-Second-Quarter-2025-Financial-Results/default.aspx\",\"snippet\":\"Second quarter revenue grew 41% year-over-year to $249.6 million. Doubled product offering with new design and AI-powered features to help ...\",\"date\":\"Sep 3, 2025\",\"position\":1},{\"title\":\"Financials - Quarterly Results | Figma, Inc.\",\"link\":\"https://investor.figma.c..."
+        ]
+      }
+    }
+  ]
+}

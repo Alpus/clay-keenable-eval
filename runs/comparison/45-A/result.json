@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6cwyPdMDBJNJkr7X",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:22:10.130Z",
+  "duration": "1m 39s",
+  "dataCreditsUsed": 3.9,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6cwyeKKSph8cCbeb",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:22:10.151Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "circle.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Circle"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6cwybGWPdJhJjwdZ",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:22:10.195Z",
+      "completedAt": "2026-09-30T11:23:50.036Z",
+      "duration": "1m 39s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "circle.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Circle"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"circle.com is Circle Internet Group, a company providing AI-enabled financial and developer infrastructure and regulated stablecoin products such as USDC and EURC.\",\"url\":\"https://www.circle.com/\",\"publication_date\":\"unknown\",\"event_date\":\"2026-09\",\"excerpt\":\"Homepage says Circle is 'The tech stack for the agentic economy' and offers 'AI-enabled financial and developer infrastructure,' including USDC, EURC, Circle Payments Network, Wallets, Contracts, and other onchain products.\"},{\"claim\":\"The latest evidenced venture equity round located before the cutoff is Circle's $400 million funding round announced on April 12, 2022.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1824301/000110465922044857/tm2124445d11_425.htm\",\"publication_date\":\"2022-04-12\",\"event_date\":\"2022-04-12\",\"excerpt\":\"SEC-filed press release states Circle 'entered into an agreement for a $400M funding round' and dates the announcement 'BOSTON – April 12, 2022.'\"},{\"claim\":\"Investors named for that 2022 round were BlackRock, Fidelity Management and Research, Marshall Wace LLP and Fin Capital; the filing did not clearly identify lead investor(s).\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1824301/000110465922044857/tm2124445d11_425.htm\",\"publication_date\":\"2022-04-12\",\"event_date\":\"2022-04-12\",\"excerpt\":\"The filing says the round was 'with investments from BlackRock, Inc., Fidelity Management and Research, Marshall Wace LLP and Fin Capital' and that BlackRock also entered a broader strategic partnership with Circle.\"},{\"claim\":\"Circle became a public company in June 2025, with shares expected to begin trading on the NYSE under ticker CRCL on June 5, 2025, and with the IPO later described by the company as previously completed.\",\"url\":\"https://investor.circle.com/news/news-details/2025/Circle-Announces-Pricing-of-Upsized-Initial-Public-Offering/default.aspx\",\"publication_date\":\"2025-06-04\",\"event_date\":\"2025-06-05\",\"excerpt\":\"Circle announced pricing of its IPO on June 4, 2025 and said shares were expected to begin trading on the New York Stock Exchange on June 5, 2025 under ticker 'CRCL.'\"},{\"claim\":\"By June 11, 2025, Circle confirmed completion of the IPO in a release about the underwriters' option, establishing public-company status by that date.\",\"url\":\"https://investor.circle.com/news/news-details/2025/Circle-Announces-Closing-of-the-Full-Exercise-of-Greenshoe-Option-Granted-in-the-Initial-Public-Offering/default.aspx\",\"publication_date\":\"2025-06-11\",\"event_date\":\"2025-06-11\",\"excerpt\":\"The release says the additional share issuance 'closed on June 11, 2025' and refers to it as 'its previously completed initial public offering.'\"}]",
+          "latest_round": "Series F / private funding round",
+          "round_amount": "400 million",
+          "uncertainties": "The research found strong evidence for a $400 million private round announced 2022-04-12 and for Circle's completed IPO in June 2025. I did not find public evidence of a newer venture equity round before the IPO or after it within the tool-call limit. The 2022 source names participating investors but does not explicitly label lead investor(s), so lead_investors is left unknown. For lifecycle timing, the company said trading was expected to begin 2025-06-05 and later confirmed the IPO was previously completed by 2025-06-11; this answer uses 2025-06-11 as the firmly evidenced public-status date.",
+          "lead_investors": "unknown",
+          "round_currency": "USD",
+          "company_identity": "Circle Internet Group provides onchain financial infrastructure and regulated stablecoin products such as USDC for businesses and developers.",
+          "lifecycle_status": "public",
+          "lifecycle_event_date": "2025-06-11",
+          "round_announcement_date": "2022-04-12"
+        },
+        "reasoning": "Using public company and SEC-linked sources, I identified circle.com as Circle Internet Group, confirmed the company's completed IPO in June 2025, and found the latest evidenced venture equity financing before that public listing: a $400 million round announced on April 12, 2022. No acquisition or closure evidence was found; public-company evidence supersedes independent/private status.",
+        "stepsTaken": [
+          "Searched Google with query \"Circle circle.com funding IPO acquisition latest round site:circle.com OR site:investor.circle.com OR site:sec.gov Circle Internet Group\". The results are: \n {\"search_results\":[{\"title\":\"Circle Reports Second Quarter 2026 Results\",\"link\":\"https://www.circle.com/pressroom/circle-reports-second-quarter-2026-results\",\"snippet\":\"NEW YORK — AUGUST 5, 2026 — Circle Internet Group, Inc. (NYSE: CRCL) today announced results for the second quarter of fiscal year 2026.\",\"date\":\"Aug 5, 2026\",\"position\":1},{\"title\":\"Circle | The full-stack platform for the internet financial system\",\"link\":\"https://www.circle.com/\",\"snippet\":\"Build onchain with a trusted full-st...",
+          "Searched Google with query \"site:circle.com Circle announced funding round 2022 2023 Series F Circle Internet Group pressroom\". The results are: \n {\"search_results\":[{\"title\":\"The Official Blog of Circle and USDC | All Blog Posts\",\"link\":\"https://www.circle.com/blog-all\",\"snippet\":\"The full list of all blogs on the latest product features, company announcements, and insights from Circle and USDC. Read and subscribe for more info!\",\"position\":1},{\"title\":\"USDC | Powering global finance. Issued by Circle.\",\"link\":\"https://www.circle.com/usdc\",\"snippet\":\"USDC helps businesses turn internet-native dollar infrastructure into broader access, cre...",
+          "Searched Google with query \"Reuters Circle funding round Series F 2022 Circle Internet Financial raised\". The results are: \n {\"search_results\":[{\"title\":\"Circle Internet Group, Inc\",\"link\":\"https://www.reuters.com/company/circle-internet-group-inc/\",\"snippet\":\"The latest international Circle Internet Group, Inc news and views from Reuters - one of the world's largest news agencies.\",\"position\":1},{\"title\":\"Circle IPO Timeline and Financing Details\",\"link\":\"https://forgeglobal.com/circle-internet-financial_ipo/\",\"snippet\":\"Per Forge data, Circle raised $1.1 billion in funding over 14 rounds. The company's most recent f...",
+          "Used visitWebpage {\"url\":\"https://www.circle.com/\",\"question\":\"What company is this at circle.com and what does it sell or provide? Find concise wording from the homepage that identifies the business and products/services.\"}. The results are: \n \"- Homepage: https://circle.com/\\n- “The tech stack for the agentic economy”\\n- “Build on the full-stack platform designed to power trillions in economic activity — built for the AI era with Arc, the Economic OS for the internet.”\\n- “AI-enabled financial and developer infrastructure”\\n- “Circle’s full-stack platform provides the tools developers use to ship AI-powered applications and the financial primitives agents need to hold value, discover services, and transact programmatically.”\\n- “Ente...",
+          "Used visitWebpage {\"url\":\"https://investor.circle.com/news/news-details/2025/Circle-Announces-Pricing-of-Upsized-Initial-Public-Offering/default.aspx\",\"question\":\"Find the IPO announcement date, exchange ticker, offering details, and whether Circle is a public company from this page.\"}. The results are: \n \"News page: “Circle Announces Pricing of Upsized Initial Public Offering” — dated June 4, 2025. Relevant details:\\n- “today announced the pricing of its upsized initial public offering of 34,000,000 shares of its Class A common stock at a public offering price of $31.00 per share.”\\n- “Circle is offering 14,800,000 shares of Class A common stock and the selling stockholders are offering 19,200,000 shares of Class A common stock.”\\n- “Circle has granted the underwriters a 30-day option to purchas...",
+          "Searched Google with query \"SEC prospectus Circle latest funding round April 2022 BlackRock Fidelity 400 million\". The results are: \n {\"search_results\":[{\"title\":\"Filed by Circle Acquisition Public Limited Company\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1824301/000110465922044857/tm2124445d11_425.htm\",\"snippet\":\"Circle Announces $400M Funding Round BlackRock, Fidelity, Marshall Wace. The funding round is expected to close in the second quarter.\",\"position\":1},{\"title\":\"BlackRock, Fidelity join $400mn funding round for ...\",\"link\":\"https://finadium.com/blackrock-fidelity-join-400mn-funding-round-for-stablecoin-issuer-c...",
+          "Used visitWebpage {\"url\":\"https://www.sec.gov/Archives/edgar/data/1824301/000110465922044857/tm2124445d11_425.htm\",\"question\":\"Find details of Circle's 2022 funding round: amount, announcement date, investors or lead investors, and whether/when it was expected to close.\"}. The results are: \n \"Circle press release titled \\\"Circle Announces $400M Funding Round\\\" states:\\n- Announcement date: \\\"BOSTON – April 12, 2022\\\"\\n- Amount: \\\"entered into an agreement for a $400M funding round\\\"\\n- Investors: \\\"with investments from BlackRock, Inc., Fidelity Management and Research, Marshall Wace LLP and Fin Capital\\\"\\n- Additional investor/lead context: \\\"In addition to its corporate strategic investment and role as a primary asset manager of USDC cash reserves, BlackRock has entered into a bro...",
+          "Used visitWebpage {\"url\":\"https://investor.circle.com/news/news-details/2025/Circle-Announces-Closing-of-the-Full-Exercise-of-Greenshoe-Option-Granted-in-the-Initial-Public-Offering/default.aspx\",\"question\":\"Find the closing date of Circle's IPO/greenshoe, gross proceeds, and evidence that the IPO completed.\"}. The results are: \n \"Source: Circle investor relations news release, “Circle Announces Closing of the Full Exercise of Greenshoe Option Granted in the Initial Public Offering” (June 11, 2025) — https://investor.circle.com/news/default.aspx\\n\\nRelevant text:\\n- “the underwriters have fully exercised their option to purchase an additional 5,100,000 shares of Class A common stock from Circle.”\\n- “The issuance of the additional shares closed on June 11, 2025”\\n- “bringing the gross proceeds from the initial public off..."
+        ]
+      }
+    }
+  ]
+}

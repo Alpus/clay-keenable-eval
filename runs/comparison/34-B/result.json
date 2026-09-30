@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6chaEehW93zyaAAj",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:12:46.943Z",
+  "duration": "1m 31s",
+  "dataCreditsUsed": 4.199999999999999,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6chapnhqWCRKpTMo",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:12:46.951Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "hashicorp.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "HashiCorp"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6chafUqBdaW2n3Av",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:12:46.967Z",
+      "completedAt": "2026-09-30T11:14:18.353Z",
+      "duration": "1m 31s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "hashicorp.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "HashiCorp"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "IBM",
+          "evidence": "[{\"claim\":\"HashiCorp at hashicorp.com sells infrastructure and security lifecycle management software for hybrid/multi-cloud environments, including products such as Terraform, Vault, Nomad, Boundary, Consul, and HCP.\",\"url\":\"https://www.hashicorp.com/en\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"The site says HashiCorp helps organizations with 'The Infrastructure Cloud' and describes Infrastructure Lifecycle Management and Security Lifecycle Management, listing products including Terraform, Vault, Nomad, Boundary, Consul, and the HashiCorp Cloud Platform.\"},{\"claim\":\"IBM completed its acquisition of HashiCorp on 2025-02-27.\",\"url\":\"https://newsroom.ibm.com/2025-02-27-ibm-completes-acquisition-of-hashicorp,-creates-comprehensive,-end-to-end-hybrid-cloud-platform\",\"publication_date\":\"2025-02-27\",\"event_date\":\"2025-02-27\",\"excerpt\":\"IBM said on Feb. 27, 2025 that it 'has completed its acquisition of HashiCorp' and that the closing included all outstanding common shares at $35 per share in cash.\"},{\"claim\":\"HashiCorp itself said on 2025-02-27 that it had officially joined IBM and would operate as a division of IBM Software.\",\"url\":\"https://www.hashicorp.com/en/blog/hashicorp-officially-joins-the-ibm-family\",\"publication_date\":\"2025-02-27\",\"event_date\":\"2025-02-27\",\"excerpt\":\"HashiCorp wrote that it 'has officially joined the IBM family as the acquisition announced last year was finalized' and that 'HashiCorp will continue to operate as a division of IBM Software.'\"},{\"claim\":\"The latest evidenced venture equity round located in this research was HashiCorp's Series E financing of $175 million announced on 2020-03-16, led by Franklin Templeton.\",\"url\":\"https://www.globenewswire.com/news-release/2020/03/16/2001541/0/en/hashicorp-raises-175-million-in-series-e-funding-to-support-multi-cloud-transformation-for-global-enterprises.html\",\"publication_date\":\"2020-03-16\",\"event_date\":\"2020-03-16\",\"excerpt\":\"The release headline is 'HashiCorp Raises $175 Million in Series E Funding' and states that HashiCorp 'has raised $175 million in Series E funding' and 'The round was led by Franklin Templeton.'\"}]",
+          "latest_round": "Series E",
+          "round_amount": "175000000",
+          "uncertainties": "The strongest financing evidence found was the company-sourced 2020-03-16 Series E announcement. Search results also surfaced a Crunchbase page snippet indicating a later 'Secondary Market' round, but that is not a venture equity financing round and was not used to replace the latest venture equity round. No primary source for a later venture equity round or extension before the 2025 acquisition was identified in the research performed.",
+          "lead_investors": "Franklin Templeton",
+          "round_currency": "USD",
+          "company_identity": "HashiCorp develops infrastructure and security lifecycle management software for hybrid and multi-cloud environments, including Terraform, Vault, and related products.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2025-02-27",
+          "round_announcement_date": "2020-03-16"
+        },
+        "reasoning": "I resolved the entity from hashicorp.com, then used primary/public evidence for lifecycle and financing. IBM's 2025 newsroom release and HashiCorp's own 2025 blog establish that the acquisition closed on 2025-02-27, so the company is acquired rather than merely pending acquisition or public. For financing, the clearest primary/company-sourced evidence located for a venture equity round was the 2020-03-16 Series E raise of $175 million led by Franklin Templeton. I excluded the acquisition price and any secondary-market references from the funding-round field.",
+        "stepsTaken": [
+          "Searched Google with query \"HashiCorp IBM acquisition completed press release HashiCorp funding series site:hashicorp.com OR site:ibm.com OR site:sec.gov\". The results are: \n {\"search_results\":[{\"title\":\"IBM Completes Acquisition of HashiCorp, Creates ...\",\"link\":\"https://newsroom.ibm.com/2025-02-27-ibm-completes-acquisition-of-hashicorp,-creates-comprehensive,-end-to-end-hybrid-cloud-platform\",\"snippet\":\"IBM announced it has completed its acquisition of HashiCorp, whose products automate and secure the infrastructure that underpins hybrid ...\",\"date\":\"Feb 27, 2025\",\"position\":1},{\"title\":\"IBM to Acquire HashiCorp, Inc. Creating a Comprehensive ...\",\"link\":\"https://n...",
+          "Used visitWebpage {\"url\":\"https://www.hashicorp.com/en\",\"question\":\"What does this company sell or provide, and does the page indicate it is part of IBM? Give the key wording.\"}. The results are: \n \"Company/name context:\\n- “HashiCorp”\\n- “HashiCorp helps organizations do cloud right with The Infrastructure Cloud”\\n- “The Infrastructure Cloud, an integrated platform that turns Infrastructure Lifecycle Management and Security Lifecycle Management into code, automates workflows, and serves as your central system of record.”\\n- “The HashiCorp Cloud Platform (HCP) is a unified suite of SaaS products that automate the lifecycle management of the infrastructure and security supporting your most ...",
+          "Used visitWebpage {\"url\":\"https://newsroom.ibm.com/2025-02-27-ibm-completes-acquisition-of-hashicorp,-creates-comprehensive,-end-to-end-hybrid-cloud-platform\",\"question\":\"What does IBM say about completing the HashiCorp acquisition, and on what date?\"}. The results are: \n \"- Press release title: \\\"IBM Completes Acquisition of HashiCorp, Creates Comprehensive, End-to-End Hybrid Cloud Platform\\\"\\n- Date: \\\"Feb 27, 2025\\\"\\n- Opening statement: \\\"IBM (NYSE: IBM) today announced it has completed its acquisition of HashiCorp...\\\"\\n- Additional relevant line: \\\"The closing of IBM's acquisition of HashiCorp includes all of the issued and outstanding common shares of HashiCorp for $35 per share in cash, representing an enterprise value of $6.4 billion.\\\"\\n- Relevant link:...",
+          "Searched Google with query \"HashiCorp latest funding round series press release site:hashicorp.com OR site:techcrunch.com OR site:crunchbase.com\". The results are: \n {\"search_results\":[{\"title\":\"HashiCorp - Crunchbase Company Profile & Funding\",\"link\":\"https://www.crunchbase.com/organization/hashicorp\",\"snippet\":\"HashiCorp closed its last funding round on obfuscated obfuscation from a Secondary Market round.\",\"position\":1},{\"title\":\"HashiCorp Origin Story\",\"link\":\"https://www.hashicorp.com/en//about/origin-story\",\"snippet\":\"How HashiCorp co-founders Mitchell Hashimoto and Armon Dadgar came together to create the company, plus a timeline of product and compan...",
+          "Searched Google with query \"HashiCorp March 2020 growth round press release Series funding lead investors site:hashicorp.com OR site:globenewswire.com OR site:businesswire.com\". The results are: \n {\"search_results\":[{\"title\":\"HashiCorp Raises $175 Million in Series E Funding to\",\"link\":\"https://www.globenewswire.com/news-release/2020/03/16/2001541/0/en/hashicorp-raises-175-million-in-series-e-funding-to-support-multi-cloud-transformation-for-global-enterprises.html\",\"snippet\":\"The round was led by Franklin Templeton and included participation from funds and accounts advised by T. Rowe Price Associates, Inc., Geodesic ...\",\"date\":\"Mar 16, 2020\",\"position\":1},{\"title\":\"Mayfield Adds New Inv...",
+          "Used visitWebpage {\"url\":\"https://www.globenewswire.com/news-release/2020/03/16/2001541/0/en/hashicorp-raises-175-million-in-series-e-funding-to-support-multi-cloud-transformation-for-global-enterprises.html\",\"question\":\"What round did HashiCorp announce, what amount, on what date, and who led the round?\"}. The results are: \n \"Article: “HashiCorp Raises $175 Million in Series E Funding to Support Multi-Cloud Transformation for Global Enterprises”\\nDate: March 16, 2020 19:56 ET\\nRelevant text: “HashiCorp® … today announced it has raised $175 million in Series E funding … The round was led by Franklin Templeton …”\\nSource: HashiCorp, Inc.\\nLink: https://www.hashicorp.com\\nMedia contact: Kate Lehman — media@hashicorp.com\"",
+          "Used visitWebpage {\"url\":\"https://www.hashicorp.com/en/blog/hashicorp-officially-joins-the-ibm-family\",\"question\":\"What does HashiCorp say about joining IBM and when was this announced?\"}. The results are: \n \"Source: HashiCorp blog — “HashiCorp officially joins the IBM family” (https://hashicorp.com/en/blog)\\n\\nRelevant excerpts:\\n- Title: “HashiCorp officially joins the IBM family”\\n- Subtitle: “HashiCorp joins IBM to accelerate our mission of enabling multi-cloud.”\\n- Author/date: Armon Dadgar — “Feb 27, 2025”\\n- “Today we announced that HashiCorp has officially joined the IBM family as the acquisition announced last year was finalized.”\\n- “This brings us to the future of HashiCorp at IBM.”\\n- “B..."
+        ]
+      }
+    }
+  ]
+}

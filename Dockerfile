@@ -33,7 +33,7 @@ print("Verified Clay", version)
 PY
 
 WORKDIR /app
-COPY eval prompt.txt output-schema.json cases.json ./
+COPY eval prompt.txt prompt-verify.txt output-schema.json cases.json ./
 RUN mkdir -p /var/lib/clay-eval /results /root/.config/clay
 ENTRYPOINT ["./eval"]
 CMD ["--help"]

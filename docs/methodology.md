@@ -11,11 +11,14 @@ The business outcome is avoiding incorrect prospect qualification caused by stal
 | Condition | Model, prompt and schema | Tools |
 | --- | --- | --- |
 | A | Identical fixed configuration | Native Clay web search and page access |
-| B | Identical fixed configuration | Native Clay tools plus Keenable search and fetch |
+| B | Same configuration as A | Native Clay tools plus Keenable search and fetch |
+| C | Same model/schema and original prompt prefix, plus verification instructions | Native first, then Keenable for gaps, conflicts and freshness |
 
 A remains a full research agent. Both A and B explicitly check for newer acquisition, IPO and closure evidence. B is an augmentation test. It does not test replacement of Clay's search. Saved tool-step summaries distinguish availability from actual use.
 
-The main prompt does not force B to use Keenable. Both agents may choose their available tools. A B-run that does not call Keenable remains in the aggregate result, with non-use reported. A forced-tool smoke test verifies wiring separately and does not count toward quality results.
+The original prompt does not force B to use Keenable. Both agents may choose their available tools. A B-run that does not call Keenable remains in the aggregate result, with non-use reported. A forced-tool smoke test verifies wiring separately and does not count toward quality results.
+
+After observing B's optional tool use, the user requested a separate C condition. All original A/B runs finished before C began. C uses every original company and preserves A/B unchanged. It reserves up to two of the same eight requested research calls for Keenable. A latest/current claim explicitly triggers verification. C is a post hoc strategy experiment with a changed prompt, not a held-out or isolated search-engine comparison.
 
 If a tool needs a short explanation of its name, put an equivalent tool-use instruction in both prompts. Do not add special research hints or target URLs only to B.
 
@@ -82,4 +85,18 @@ I checked the protocol for an active native-search baseline, equal prompts and m
 
 An independent model review was attempted through the configured free OpenRouter MCP on September 30, 2026. Both listed connections returned a reauthentication error during the read-only health check. No review generation ran. I did not use a paid fallback or a separate Claude budget. This is a review coverage limitation, not an independent endorsement.
 
-The runner passed seven offline checks covering ambiguous submissions, 50-case scheduling and resume, bounded concurrency, exact prompt restoration after Builder formatting, native and Keenable trace parsing, and complete versus partial judgment aggregation. The initial live pair completed with actual Keenable use in B. The 100-run company evaluation is ongoing; setup and graph validation are not treated as evidence of research accuracy.
+The runner passed eleven offline checks covering ambiguous submissions, 50-case scheduling and resume, bounded concurrency, exact prompt restoration after Builder formatting, native and Keenable trace parsing, and complete versus partial judgment aggregation. The original 100-run A/B comparison completed. C adds 50 research outputs without rerunning A/B. Setup and graph validation are not treated as evidence of research accuracy.
+
+## Execution amendments
+
+The initial A/B pair used concurrency 2, then the remaining plan continued at 4. At the user's request, the limit increased to 30 for the last 15 A/B runs. Each invocation is recorded in its manifest. Concurrency is operational; prompts, model, inputs and saved research answers were unchanged.
+
+C initially used concurrency 30 without submission spacing. Seven runs were rejected while initializing Keenable because the public API limits requests to 10 per second. They produced no research answers and consumed zero reported Clay data or action credits. Their full attempts remain archived. Each received one explicit retry with the same configuration, with starts spaced by two seconds. The runner now defaults to that spacing and concurrency 30. It never automatically retries a research answer or an ambiguous submission. Initialization success is reported separately from factual quality.
+
+Polling and manual inspection pauses affect submission-to-observed-completion time. These timestamps remain available for audit; they should not be read as an isolated measure of search-engine speed. Clay's reported duration is a separate observation. The A/B and C runs also occurred at different times and concurrency settings.
+
+## Final source review
+
+The frozen reference file remains unchanged. Final judgments record newer evidence and corrections discovered during adjudication. The review includes claims from A, B and C, and applies each correction to all conditions. Examples include newer financing disclosures for Cyera, ElevenLabs and Lessn, and ambiguous financing evidence for MangoBoost and Abridge. The latter two remain in the dataset with null latest-event targets while their conflicts remain unresolved.
+
+Lifecycle cases have preselected lifecycle targets; historical funding is not fully scored in those cases. Additional mistakes and unsupported claims remain visible in judgments. Thus a full target score does not certify every statement in an answer. The separate Freeman entity probe is outside the main funding/lifecycle aggregate.

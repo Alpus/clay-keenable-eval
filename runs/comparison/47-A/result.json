@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6cx0GrXqBBFqWZyT",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:22:12.519Z",
+  "duration": "1m 34s",
+  "dataCreditsUsed": 3,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6cx0oxVpr7MutSsF",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:22:12.582Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "hingehealth.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Hinge Health"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6cx0tpGhbgKuXsyk",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:22:12.662Z",
+      "completedAt": "2026-09-30T11:23:46.760Z",
+      "duration": "1m 34s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "hingehealth.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Hinge Health"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"hingehealth.com is Hinge Health, a company that provides AI-powered, personalized musculoskeletal care using software, wearable devices, and clinicians.\",\"url\":\"https://ir.hingehealth.com/overview/default.aspx\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Investor relations overview says Hinge Health aims to transform outcomes, experiences and costs using technology to scale care; it delivers personalized, evidence-based care via an AI-powered care model, wearable devices, and expert clinicians.\"},{\"claim\":\"Hinge Health is a public company with Class A common stock approved for listing on the New York Stock Exchange under ticker HNGE.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1673743/000119312525125262/d829170d424b4.htm\",\"publication_date\":\"2025-05-21\",\"event_date\":\"2025-05-21\",\"excerpt\":\"Final IPO prospectus states: 'We have been approved to list our Class A common stock on the New York Stock Exchange under the symbol “HNGE.”'\"},{\"claim\":\"Hinge Health's IPO was priced at $32.00 per share for 13,666,000 shares, for a total public offering price of $437,312,000; the prospectus states the underwriters expected delivery on May 23, 2025.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1673743/000119312525125262/d829170d424b4.htm\",\"publication_date\":\"2025-05-21\",\"event_date\":\"2025-05-23\",\"excerpt\":\"424B4 prospectus says Hinge Health offered 8,522,528 shares and selling stockholders offered 5,143,472 shares at $32.00 per share; offering table shows total public offering price $437,312,000; expected closing/delivery May 23, 2025.\"},{\"claim\":\"Reuters reported Hinge Health and selling stockholders raised $437.3 million in its U.S. IPO, and Reuters separately reported the shares jumped in the company's New York debut on May 22, 2025, supporting that it became publicly traded then.\",\"url\":\"https://www.reuters.com/business/healthcare-pharmaceuticals/hinge-health-raises-4373-million-us-ipo-2025-05-21/\",\"publication_date\":\"2025-05-22\",\"event_date\":\"2025-05-22\",\"excerpt\":\"Google result snippet for Reuters: 'May 22 (Reuters) - Hinge Health and its selling stockholders raised $437.3 million in its U.S. initial public offering...' A second Reuters result says shares jumped in its New York debut on May 22, 2025.\"},{\"claim\":\"The latest evidenced private venture equity round before the IPO was a Series E announced on 2021-10-28 for $400 million, led by Coatue and Tiger Global; the same announcement also referenced an additional $200 million secondary investment, which is not counted as primary round amount.\",\"url\":\"https://www.hingehealth.com/resources/press-releases/hinge-health-announces-600-million-investment-coatue-tiger-global/\",\"publication_date\":\"2021-10-28\",\"event_date\":\"2021-10-28\",\"excerpt\":\"Google result snippet for the company press release states: 'SAN FRANCISCO — Oct. 28, 2021 — Hinge Health ... announced $400 million Series E financing...' The title says '$600 million investment led by Coatue and Tiger Global,' indicating the announcement bundled $400 million primary financing plus $200 million secondary.\"}]",
+          "latest_round": "Series E",
+          "round_amount": "400000000",
+          "uncertainties": "The company press-release page extraction returned only limited text, so the Series E amount/date rely in part on the Google result snippet for the original Hinge Health press release; that is weaker than a full page extract but still points to the primary source URL. For lifecycle timing, the SEC 424B4 is dated 2025-05-21 (pricing), states expected closing on 2025-05-23, and Reuters snippets indicate the NYSE debut/public trading occurred on 2025-05-22. I therefore treat Hinge Health as public and use 2025-05-22 as the lifecycle event date, while noting the distinct pricing and closing dates.",
+          "lead_investors": "Coatue; Tiger Global",
+          "round_currency": "USD",
+          "company_identity": "Hinge Health sells AI-powered digital musculoskeletal care programs with wearable technology and clinician support for back, joint, and related pain.",
+          "lifecycle_status": "public",
+          "lifecycle_event_date": "2025-05-22",
+          "round_announcement_date": "2021-10-28"
+        },
+        "reasoning": "Using public evidence from Hinge Health's investor materials and SEC IPO prospectus, Hinge Health is identifiable as the digital musculoskeletal care company at hingehealth.com and is now public. The strongest direct evidence of status is the SEC 424B4 showing NYSE approval under ticker HNGE and the IPO pricing/closing details; Reuters search results support that the IPO was completed and shares debuted on May 22, 2025. For the latest private venture equity round, the best located primary-source URL is Hinge Health's 2021 press release announcing a $400 million Series E led by Coatue and Tiger Global; the title references $600 million total investment because it also included a secondary component, which I excluded from round amount.",
+        "stepsTaken": [
+          "Searched Google with query \"Hinge Health hingehealth.com latest funding round IPO acquisition 2025 2026\". The results are: \n {\"search_results\":[{\"title\":\"Hinge Health raises $300M Series D at $3B valuation\",\"link\":\"https://www.hingehealth.com/resources/press-releases/hinge-health-raises-series-d/\",\"snippet\":\"Hinge Health is announcing a $300M Series D round to expand clinical capabilities as an end-to-end Digital MSK Clinic for all back and joint pain care.\",\"position\":1},{\"title\":\"Hinge Health IPO Timeline and Financing Details\",\"link\":\"https://forgeglobal.com/hinge-health_ipo/\",\"snippet\":\"Hinge Health completed thei...",
+          "Used visitWebpage {\"url\":\"https://ir.hingehealth.com/overview/default.aspx\",\"question\":\"What evidence on this page shows Hinge Health's current listing status, ticker, and a short description of what the company does?\"}. The results are: \n \"- The page is Hinge Health’s investor relations site, with navigation including: “Stock info” and “Stock quote,” which is evidence the site presents public-market/listing information.\\n- Relevant links:\\n  - Overview: https://ir.hingehealth.com/overview/default.aspx\\n  - Stock info: https://ir.hingehealth.com/stock-info/default.aspx\\n  - Stock quote: https://ir.hingehealth.com/stock-info/default.aspx#stock-quote\\n- Corporate overview text:\\n  “Our vision is to build a new health system that tra...",
+          "Searched Google with query \"site:sec.gov Hinge Health IPO May 2025 prospectus 424b4 shares 437 million\". The results are: \n {\"search_results\":[{\"title\":\"424B4\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1673743/000119312525125262/d829170d424b4.htm\",\"snippet\":\"Hinge Health, Inc. is offering 8,522,528 shares of its Class A common stock and the selling stockholders identified in this prospectus are offering an ...\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3Asec.gov%20Hinge%20Health%20IPO%20May%202025%20prospectus%20424b4%20shar...",
+          "Used visitWebpage {\"url\":\"https://www.sec.gov/Archives/edgar/data/1673743/000119312525125262/d829170d424b4.htm\",\"question\":\"What are the offering amount, ticker, exchange, pricing date, expected closing date, and company description in this Hinge Health IPO prospectus?\"}. The results are: \n \"- Filing: 424B4 prospectus for Hinge Health, Inc.\\n- Offering amount: “13,666,000 Shares Class A Common Stock”\\n  - “Hinge Health, Inc. is offering 8,522,528 shares of its Class A common stock and the selling stockholders identified in this prospectus are offering an aggregate of 5,143,472 shares of Class A common stock.”\\n  - “The initial public offering price per share of our Class A common stock is $32.00.”\\n  - “Total $437,312,000” (public offering price table).\\n- Ticker / exchange: “We ha...",
+          "Searched Google with query \"Hinge Health latest funding round before IPO press release series E 2021\". The results are: \n {\"search_results\":[{\"title\":\"Hinge Health announces $600 million investment led by Coatue ...\",\"link\":\"https://www.hingehealth.com/resources/press-releases/hinge-health-announces-600-million-investment-coatue-tiger-global/\",\"snippet\":\"SAN FRANCISCO — Oct. 28, 2021 — Hinge Health, the world’s #1 Digital Musculoskeletal Clinic™, today announced $400 million Series E financing to meet the growing demand from millions of Americans seeking accessible care for back and joint pain.\",\"position\":1},{\"tit...",
+          "Used visitWebpage {\"url\":\"https://www.hingehealth.com/resources/press-releases/hinge-health-announces-600-million-investment-coatue-tiger-global/\",\"question\":\"What round, amount, announcement date, and lead investors does this Hinge Health financing press release state?\"}. The results are: \n \"Press release title: “Hinge Health announces $600 million investment led by Coatue and Tiger Global.”\\n\\nRelevant data from webpage:\\n- Amount: $600 million\\n- Lead investors: Coatue and Tiger Global\\n- Link: https://hingehealth.com/about/press\"",
+          "Searched Google with query \"Reuters May 2025 Hinge Health NYSE HNGE debuted public completed IPO\". The results are: \n {\"search_results\":[{\"title\":\"Hinge Health, shareholders raise $437.3 million in US IPO\",\"link\":\"https://www.reuters.com/business/healthcare-pharmaceuticals/hinge-health-raises-4373-million-us-ipo-2025-05-21/\",\"snippet\":\"May 22 (Reuters) - Hinge Health and its selling stockholders raised $437.3 million in its U.S. initial public offering, the digital health ...\",\"date\":\"May 22, 2025\",\"position\":1},{\"title\":\"Insight Partners-backed Hinge Health valued at $3.7 billion ...\",\"link\":\"https://www.reute..."
+        ]
+      }
+    }
+  ]
+}

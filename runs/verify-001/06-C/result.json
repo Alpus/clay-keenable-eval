@@ -1,0 +1,84 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6d5vnnU2uSY26WX2",
+  "workflow": {
+    "id": "wf_0tm6d21AuFsz5iFGM8e",
+    "name": "Funding lifecycle evaluation C"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:27:31.019Z",
+  "duration": "1m 25s",
+  "dataCreditsUsed": 3.6,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6d5vobGT23SH4k2i",
+      "nodeId": "wfn_0tm6d21iRtaxx429Y8Q",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:27:31.026Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "moveworks.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Moveworks"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6d5vsva726RpTqsc",
+      "nodeId": "wfn_0tm6d4f6jZzvkGe2wpS",
+      "nodeName": "Company research C",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:27:31.041Z",
+      "completedAt": "2026-09-30T11:28:56.019Z",
+      "duration": "1m 24s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "moveworks.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Moveworks"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "ServiceNow",
+          "evidence": "[{\"claim\":\"Moveworks is an enterprise AI assistant platform for employees, with enterprise search and a reasoning engine.\",\"url\":\"https://www.moveworks.com/us/en/company/news/press-releases/servicenow-completes-acquisition-of-moveworks\",\"publication_date\":\"2025-12-15\",\"event_date\":\"2025-12-15\",\"excerpt\":\"The company describes Moveworks as an 'AI Assistant platform' with 'enterprise search' and an 'agentic Reasoning Engine' for the workforce.\"},{\"claim\":\"ServiceNow announced a definitive agreement to acquire Moveworks for $2.85 billion on March 10, 2025, with closing expected in the second half of 2025.\",\"url\":\"https://newsroom.servicenow.com/press-releases/details/2025/ServiceNow-to-extend-leading-agentic-AI-to-every-employee-for-every-corner-of-the-business-with-acquisition-of-Moveworks-03-10-2025-traffic/default.aspx\",\"publication_date\":\"2025-03-10\",\"event_date\":\"2025-03-10\",\"excerpt\":\"ServiceNow said it 'has signed a definitive agreement to acquire Moveworks' and that it 'will acquire Moveworks for $2.85 billion' with closing expected in 2H 2025.\"},{\"claim\":\"ServiceNow completed its acquisition of Moveworks on December 15, 2025.\",\"url\":\"https://www.moveworks.com/us/en/company/news/press-releases/servicenow-completes-acquisition-of-moveworks\",\"publication_date\":\"2025-12-15\",\"event_date\":\"2025-12-15\",\"excerpt\":\"The press release states ServiceNow 'today announced it has completed its acquisition of Moveworks.'\"},{\"claim\":\"The latest evidenced venture equity round found for Moveworks was a $200 million Series C announced/closed on June 30, 2021.\",\"url\":\"https://www.prnewswire.com/news-releases/moveworks-raises-200-million-in-series-c-funding-to-support-work-from-anywhere-with-ai-301323114.html\",\"publication_date\":\"2021-06-30\",\"event_date\":\"2021-06-30\",\"excerpt\":\"The release says Moveworks 'announced it closed a $200 million Series C financing round.'\"},{\"claim\":\"Tiger Global and Alkeon Capital led Moveworks' Series C round.\",\"url\":\"https://www.prnewswire.com/news-releases/moveworks-raises-200-million-in-series-c-funding-to-support-work-from-anywhere-with-ai-301323114.html\",\"publication_date\":\"2021-06-30\",\"event_date\":\"2021-06-30\",\"excerpt\":\"The release says, 'Leading the round were Tiger Global and Alkeon Capital.'\"},{\"claim\":\"A freshness check did not surface evidence of a newer funding round, IPO, closure, or a different post-2025 ownership outcome before 2026-09-30.\",\"url\":\"tool:keenable-public-evaluation-search_web_pages\",\"publication_date\":\"2026-09-30\",\"event_date\":\"2026-09-30\",\"excerpt\":\"Independent search results surfaced only secondary summaries consistent with a March 2025 acquisition announcement, December 2025 completion, and the 2021 Series C; no newer primary funding or listing event was identified before the cutoff.\"}]",
+          "latest_round": "Series C",
+          "round_amount": "200000000",
+          "uncertainties": "The latest-round evidence here is from a PR Newswire-hosted release rather than the original Moveworks press page, although Google results indicated the same content on moveworks.com. The freshness check used Keenable and found no newer funding, IPO, closure, or contradictory ownership event before 2026-09-30, but absence of search results is not absolute proof that no unreported event existed.",
+          "lead_investors": "Tiger Global; Alkeon Capital",
+          "round_currency": "USD",
+          "company_identity": "Moveworks is an enterprise software company that sells an AI assistant platform for employees, including enterprise search and an agentic reasoning engine.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2025-12-15",
+          "round_announcement_date": "2021-06-30"
+        },
+        "reasoning": "I resolved the entity at moveworks.com using the company’s own site, established lifecycle status from primary acquisition announcement and completion press releases, identified the most recent evidenced venture equity round from a contemporaneous financing release, and performed the required freshness check with the Keenable search tool for newer funding or lifecycle events before the 2026-09-30 cutoff.",
+        "stepsTaken": [
+          "Searched Google with query \"Moveworks moveworks.com funding acquisition latest round ServiceNow\". The results are: \n {\"search_results\":[{\"title\":\"ServiceNow completes acquisition of Moveworks\",\"link\":\"https://www.moveworks.com/us/en/company/news/press-releases/servicenow-completes-acquisition-of-moveworks\",\"snippet\":\"ServiceNow, the AI control tower for business reinvention, today announced it has completed its acquisition of Moveworks.\",\"date\":\"Dec 15, 2025\",\"position\":1},{\"title\":\"Moveworks Delivers Big Exit For Early VCs\",\"link\":\"https://news.crunchbase.com/ma/servicenow-acquiring-moveworks-ai-unicorn-exit-...",
+          "Used visitWebpage {\"url\":\"https://www.moveworks.com/us/en/company/news/press-releases/servicenow-completes-acquisition-of-moveworks\",\"question\":\"What does this page say about Moveworks, what business it is, and when ServiceNow completed the acquisition of Moveworks?\"}. The results are: \n \"Source: https://moveworks.com/us/en/company/news/press-releases/servicenow-completes-acquisition-of-moveworks\\n\\nRelevant page text:\\n- “ServiceNow completes acquisition of Moveworks”\\n- “SANTA CLARA, CALIF. – Dec. 15, 2025 – ServiceNow ... today announced it has completed its acquisition of Moveworks.”\\n- “Moveworks’ intuitive front-end AI assistant, enterprise search, and agentic Reasoning Engine”\\n- “Moveworks was founded to make work effortless, building a powerful AI assistant platform tha...",
+          "Searched Google with query \"Moveworks Series C lead investors June 2021 Moveworks raises 200 million\". The results are: \n {\"search_results\":[{\"title\":\"Moveworks Raises $200 Million in Series C Funding ...\",\"link\":\"https://www.moveworks.com/us/en/company/news/press-releases/moveworks-raises-200-million-series-c-funding\",\"snippet\":\"Leading the round were Tiger Global and Alkeon Capital, with participation from existing investors Lightspeed Venture Partners, Sapphire ...\",\"date\":\"Jun 30, 2021\",\"position\":1},{\"title\":\"Moveworks Acquisition, Valuation, Funding & Investors\",\"link\":\"https://multiples.vc/private-comps/move...",
+          "Used visitWebpage {\"url\":\"https://newsroom.servicenow.com/press-releases/details/2025/ServiceNow-to-extend-leading-agentic-AI-to-every-employee-for-every-corner-of-the-business-with-acquisition-of-Moveworks-03-10-2025-traffic/default.aspx\",\"question\":\"What does this page say about ServiceNow's acquisition of Moveworks, including the announcement date, transaction value, and expected closing timing?\"}. The results are: \n \"Press release: “ServiceNow to extend leading agentic AI to every employee for every corner of the business with acquisition of Moveworks”\\nDate shown on page: 03/10/2025\\nLead paragraph: “SANTA CLARA, CALIF. – March 10, 2025 – ServiceNow (NYSE: NOW) … today announced it has signed a definitive agreement to acquire Moveworks.”\\nTransaction details: “Under the terms of the agreement, ServiceNow will acquire Moveworks for $2.85 billion, subject to customary purchase price adjustments, payable in a...",
+          "Used visitWebpage {\"url\":\"https://www.prnewswire.com/news-releases/moveworks-raises-200-million-in-series-c-funding-to-support-work-from-anywhere-with-ai-301323114.html\",\"question\":\"What does this page say about Moveworks' Series C round, including round amount, date, and lead investors?\"}. The results are: \n \"Page title: \\\"Moveworks Raises $200 Million in Series C Funding to Support Work-from-Anywhere with AI\\\"\\nDate: \\\"Jun 30, 2021, 09:00 ET\\\"\\nRelevant text: \\\"Moveworks, the AI platform that automates support at work, today announced it closed a $200 million Series C financing round...\\\"\\nRelevant text: \\\"Leading the round were Tiger Global and Alkeon Capital, with participation from existing investors Lightspeed Venture Partners, Sapphire Ventures, Bain Capital, ICONIQ Growth, and Kleiner Perkins...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Moveworks funding round acquisition completion IPO closure after March 2025 before 2026-09-30 latest evidence\",\"site\":\"\",\"acquired_after\":\"2025-01-01\",\"acquired_before\":\"2026-09-30\",\"published_after\":\"2025-01-01\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":300,\"max_results\":5,\"session_id\":\"moveworks-2026-09-30\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Moveworks\\nURL: https://grokipedia.com/page/Moveworks\\nPublished: 2026-03-27\\nAcquired: 2026-08-23\\nSnippets:\\nThe company raised $315 million in funding, reaching a $2.1 billion valuation in 2021, and in December 2025, ServiceNow completed its acquisition of Moveworks for $2.85 billion.\\n\\n---\\n\\nTitle: Moveworks pricing review · Agents·Index\\nURL: https://theagentsindex.com/moveworks\\nPublished: 2026-07-25\\nAcquired: 2026-07-26\\nSnippets:\\nA genuinely ..."
+        ]
+      }
+    }
+  ]
+}

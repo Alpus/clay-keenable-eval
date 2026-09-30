@@ -1,0 +1,19 @@
+{
+  "key": "42-C",
+  "case_id": "armis",
+  "arm": "C",
+  "inputs": {
+    "company_name": "Armis",
+    "domain": "armis.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  "workflow_id": "wf_0tm6d21AuFsz5iFGM8e",
+  "node_id": "wfn_0tm6d4f6jZzvkGe2wpS",
+  "status": "failed",
+  "submitted_at": "2026-09-30T11:29:13.385333+00:00",
+  "run_id": "wfr_0tm6d8pmhDYDkn9RwyF",
+  "terminal_observed_at": "2026-09-30T11:32:04.170740+00:00",
+  "directory": "42-C/attempts/1",
+  "archived_at": "2026-09-30T11:34:27.102582+00:00"
+}

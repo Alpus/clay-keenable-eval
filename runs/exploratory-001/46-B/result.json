@@ -1,0 +1,84 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6cwz3YnUJo8gZ6sG",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:22:11.259Z",
+  "duration": "1m 33s",
+  "dataCreditsUsed": 3.7,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6cwzRK4UAckysgor",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:22:11.280Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "chime.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Chime"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6cwzweuBsxfkZnzF",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:22:11.310Z",
+      "completedAt": "2026-09-30T11:23:45.094Z",
+      "duration": "1m 33s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "chime.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Chime"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Chime is a financial technology company offering consumer banking-related products such as checking-account access, savings, cash back, overdraft protection, early paycheck access, and credit building.\",\"url\":\"https://www.chime.com/newsroom/2025-letter-to-shareholders/\",\"publication_date\":\"2026-04-17\",\"event_date\":\"2026-04-17\",\"excerpt\":\"Chime says it built a financial partner model for members and offers cash back, a high savings rate, overdraft protection, early access to paychecks, credit building, and that it offers access to checking accounts used for everyday banking.\"},{\"claim\":\"Chime had completed its IPO by 2025 and was public by April 2026.\",\"url\":\"https://www.chime.com/newsroom/2025-letter-to-shareholders/\",\"publication_date\":\"2026-04-17\",\"event_date\":\"2025\",\"excerpt\":\"The shareholder letter states: '2025 was a remarkable year by any measure. We completed our IPO.'\"},{\"claim\":\"Chime completed its Nasdaq IPO debut on June 12, 2025 under ticker CHYM.\",\"url\":\"https://www.reuters.com/business/finance/chime-set-long-awaited-market-debut-after-864-million-us-ipo-2025-06-12/\",\"publication_date\":\"2025-06-12\",\"event_date\":\"2025-06-12\",\"excerpt\":\"Reuters reported that Chime Financial's shares surged in their Nasdaq debut on Thursday, June 12, 2025, and identified the company as CHYM.O.\"},{\"claim\":\"Before the IPO, Chime's latest evidenced venture equity round was a $750 million Series G announced on August 13, 2021.\",\"url\":\"https://www.reuters.com/technology/fintech-firm-chime-valued-25-bln-after-750-mln-funding-2021-08-13/\",\"publication_date\":\"2021-08-13\",\"event_date\":\"2021-08-13\",\"excerpt\":\"Reuters wrote that Chime Financial had raised $750 million in its latest funding round and identified it as the Series G round.\"},{\"claim\":\"Reuters later referred to that same 2021 raise as Chime's most recent private funding round before its IPO.\",\"url\":\"https://www.reuters.com/business/finance/digital-banking-startup-chime-targets-95-billion-valuation-us-ipo-2025-06-02/\",\"publication_date\":\"2025-06-02\",\"event_date\":\"2021\",\"excerpt\":\"Reuters said Chime raised $750 million in a 2021 funding round at a $25 billion valuation, indicating that was the latest private round before the 2025 IPO.\"},{\"claim\":\"Lead investors named for the 2021 round included Sequoia Capital Global Equities, with other major investors SoftBank Vision Fund 2, General Atlantic, Tiger Global, and Dragoneer.\",\"url\":\"https://www.reuters.com/technology/fintech-firm-chime-valued-25-bln-after-750-mln-funding-2021-08-13/\",\"publication_date\":\"2021-08-13\",\"event_date\":\"2021-08-13\",\"excerpt\":\"Reuters said the round was led by Sequoia Capital Global Equities; other major investors included SoftBank Vision Fund 2, General Atlantic, Tiger Global and Dragoneer Investment Group.\"}]",
+          "latest_round": "Series G",
+          "round_amount": "750000000",
+          "uncertainties": "The funding-round details are supported here by Reuters rather than a primary company press release. Reuters clearly identifies the $750 million Series G on 2021-08-13 and later describes it as Chime's most recent private funding round before the June 2025 IPO, but the evidence collected did not include a primary issuer announcement for the round. The shareholder letter confirms the IPO was completed in 2025, while Reuters provides the specific market-debut date of 2025-06-12.",
+          "lead_investors": "Sequoia Capital Global Equities",
+          "round_currency": "USD",
+          "company_identity": "Chime at chime.com is a U.S. financial technology company that offers consumer banking-related products, including checking-account access, savings, cash back, early pay access, overdraft features, and credit-building tools.",
+          "lifecycle_status": "public",
+          "lifecycle_event_date": "2025-06-12",
+          "round_announcement_date": "2021-08-13"
+        },
+        "reasoning": "I resolved the entity using Chime's own site and established lifecycle status from Chime's shareholder letter plus Reuters' report of the Nasdaq debut. For funding, I identified the latest evidenced venture equity round before the IPO as the $750 million Series G announced on 2021-08-13, with Reuters both reporting the round contemporaneously and later describing it as the latest private funding round before the IPO. No evidence retrieved showed a later private venture round, acquisition, or closure before the 2026-09-30 cutoff.",
+        "stepsTaken": [
+          "Searched Google with query \"Chime chime.com funding latest round IPO acquisition site:chime.com OR site:newsroom.chime.com OR site:techcrunch.com OR site:reuters.com\". The results are: \n {\"search_results\":[{\"title\":\"Chime Reports Second Quarter 2026 Financial Results\",\"link\":\"https://investors.chime.com/news-releases/news-release-details/chime-reports-second-quarter-2026-financial-results\",\"snippet\":\"27% year-over-year revenue growth exceeds guidance. Chime Prime™ launch fuels accelerating growth in Active Members, Purchase Volume, and ARPAM.\",\"position\":1},{\"title\":\"Chime Fee-Free Banking - Checking, Savings, Credit & Cash ...\",\"link\":\"https://www.chime.com/\",\"snippet\":\"America...",
+          "Used visitWebpage {\"url\":\"https://www.chime.com/newsroom/2025-letter-to-shareholders/\",\"question\":\"Find what Chime says about what the company offers and whether it completed an IPO, including dates or statements relevant to lifecycle status.\"}. The results are: \n \"Source: “2025 Letter to Shareholders” (April 17, 2026) — https://investors.chime.com and https://chime.com/newsroom/investors\\n\\nRelevant statements about what Chime offers:\\n- “We started Chime because we believe your financial partner should help you make progress, not create friction. So we built a model that profits with our members, not from them.”\\n- “When they make Chime their primary financial partner, we give them an even more rewarding bank relationship. Cash back on everyday spending...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/business/finance/digital-banking-startup-chime-targets-95-billion-valuation-us-ipo-2025-06-02/\",\"question\":\"Find the key facts about Chime's IPO filing and the most recent private funding round before the IPO, including amount, date, and investors if mentioned.\"}. The results are: \n \"- Reuters article dated June 2, 2025: “Digital banking startup Chime targets $11.2 billion valuation in US IPO.”\\n- IPO filing/terms: Chime Financial said it was targeting a valuation of up to $11.2 billion on a fully diluted basis in its New York IPO.\\n- Chime and some existing shareholders are seeking to raise up to $832 million by offering 32 million shares priced between $24 and $26 each.\\n- Chime is offering 25.9 million shares; certain shareholders including Cathay Innovation are offering...",
+          "Searched Google with query \"Reuters August 2021 Chime raised 750 million led by Sequoia funding round date\". The results are: \n {\"search_results\":[{\"title\":\"Fintech firm Chime valued at $25 bln after $750 mln funding\",\"link\":\"https://www.reuters.com/technology/fintech-firm-chime-valued-25-bln-after-750-mln-funding-2021-08-13/\",\"snippet\":\"Aug 13 (Reuters) - Chime Financial said on Friday it had raised $750 million in its latest funding round led by Sequoia Capital Global Equities, valuing the financial services...\",\"date\":\"Aug 13, 2021\",\"position\":1},{\"title\":\"Chime earns big valuation jump in latest financing, nears IPO\"...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/technology/fintech-firm-chime-valued-25-bln-after-750-mln-funding-2021-08-13/\",\"question\":\"Find the amount, date, round timing, and lead investors named in Chime's 2021 funding round.\"}. The results are: \n \"Reuters article dated August 13, 2021 (updated August 13, 2021):\\n- “Chime Financial said on Friday it had raised $750 million in its latest funding round led by Sequoia Capital Global Equities...”\\n- “Other major investors in the Series G round include SoftBank Group Corp's Vision Fund 2, General Atlantic, Tiger Global and Dragoneer Investment Group.”\\n- Round timing/date in article: “Aug 13” / “on Friday” / article published “August 13, 2021 3:14 PM CDT”.\\n\\nRelevant link:\\n- https://reuters....",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/business/finance/chime-set-long-awaited-market-debut-after-864-million-us-ipo-2025-06-12/\",\"question\":\"Find whether Chime completed its IPO and on what date, including exchange and ticker if available.\"}. The results are: \n \"- Reuters article headline: “Chime valued at $18.4 billion as shares soar in Nasdaq debut”\\n- Article date: June 12, 2025 (updated June 12, 2025)\\n- Relevant text: “June 12 (Reuters) - Chime Financial's (CHYM.O) shares surged 59% in their hotly anticipated Nasdaq debut on Thursday...”\\n- Relevant text: “The company, along with some of its investors, sold 32 million shares at a price above the marketed range to raise $864 million in the IPO.”\\n- Relevant text: “Chime prices IPO at $27, stock ope..."
+        ]
+      }
+    }
+  ]
+}

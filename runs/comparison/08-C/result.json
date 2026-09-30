@@ -1,0 +1,81 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6d5xQC8QX94Sxgfi",
+  "workflow": {
+    "id": "wf_0tm6d21AuFsz5iFGM8e",
+    "name": "Funding lifecycle evaluation C"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:27:33.510Z",
+  "duration": "42s",
+  "dataCreditsUsed": 1.6,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6d5xgeU8uAsmovJT",
+      "nodeId": "wfn_0tm6d21iRtaxx429Y8Q",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:27:33.516Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "freemanseattle.com",
+        "task_type": "entity_resolution",
+        "company_name": "Freeman Seattle"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6d5xbzXzjBg38wFN",
+      "nodeId": "wfn_0tm6d4f6jZzvkGe2wpS",
+      "nodeName": "Company research C",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:27:33.530Z",
+      "completedAt": "2026-09-30T11:28:15.831Z",
+      "duration": "42s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "freemanseattle.com",
+        "task_type": "entity_resolution",
+        "company_name": "Freeman Seattle"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"The domain freemanseattle.com belongs to Freeman Seattle, a Seattle-based brand.\",\"url\":\"https://www.freemanseattle.com/pages/about\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"'Freeman Seattle began with creating high-quality goods right here in the city that knows rain.' The page also identifies founders Scott and Brittany Freeman and shows Seattle contact details.\"},{\"claim\":\"The business sells handcrafted apparel and accessories, beginning with raincoats and expanding into wardrobe staples.\",\"url\":\"https://www.freemanseattle.com/pages/about\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"The company says Scott and Brittany Freeman 'sought to create their ideal raincoat' and that it 'expanded from our original Freeman Raincoat into other wardrobe staples.'\"},{\"claim\":\"The site offers clothing and accessories including tops, bottoms, outerwear, hats, bags, and gifts.\",\"url\":\"https://www.freemanseattle.com/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Homepage categories and products include Tops, Bottoms, Accessories, and items such as outerwear, button downs, tees, sweaters & hoodies, pants, shorts, socks, hats, bags, gifts, and 'The Freeman Raincoat.'\"},{\"claim\":\"The company presents itself as handcrafted in Seattle.\",\"url\":\"https://www.freemanseattle.com/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"The site footer states: '© 2026, Freeman. Handcrafted with ❤️ in Seattle, WA.'\"}]",
+          "latest_round": "not_applicable",
+          "round_amount": "not_applicable",
+          "uncertainties": "No material identity conflict found in the reviewed sources. Funding and lifecycle fields are not applicable for this entity-resolution task.",
+          "lead_investors": "not_applicable",
+          "round_currency": "not_applicable",
+          "company_identity": "Freeman Seattle is a Seattle apparel brand that sells handcrafted raincoats, other clothing staples, and accessories made or presented as handcrafted in Seattle.",
+          "lifecycle_status": "not_applicable",
+          "lifecycle_event_date": "not_applicable",
+          "round_announcement_date": "not_applicable"
+        },
+        "reasoning": "Using the company’s own website, I resolved freemanseattle.com to Freeman Seattle, an apparel brand founded by Scott and Brittany Freeman. The strongest evidence is the About page and homepage, which describe the brand’s origin in making raincoats and its current product categories spanning clothing and accessories. Because this is an entity-resolution task, funding and lifecycle fields are marked not_applicable.",
+        "stepsTaken": [
+          "Searched Google with query \"freemanseattle.com Freeman Seattle company site\". The results are: \n {\"search_results\":[{\"title\":\"Freeman Seattle | Hand-Made Raincoats, Shirts, and More\",\"link\":\"https://www.freemanseattle.com/?srsltid=AU7gw4UImbf_xPWgyDY3CGFxK8j-WKIbiewGLFkB2TAsOC-9flhiyaVC\",\"snippet\":\"Freeman Seattle is a brand that creates handcrafted raincoats, shirts, and other staple items. 85 S Atlantic St. #202 Seattle, WA 98134 Phone: (206) 291-4820\",\"position\":1},{\"title\":\"Freeman | Seattle WA\",\"link\":\"https://www.facebook.com/freemanmadeinseattle/\",\"snippet\":\"Quality, timeless men&#39...",
+          "Used visitWebpage {\"url\":\"https://www.freemanseattle.com/pages/about\",\"question\":\"Identify the business at this domain and what it sells. Find exact descriptive text from the company site, including products and any origin story or manufacturing details.\"}. The results are: \n \"Business: Freeman / Freeman Seattle\\nDomain: https://freemanseattle.com\\n\\nWhat it sells:\\n- “Freeman Raincoats”\\n- “TOPS” including “Outerwear,” “Button Downs,” “Tees,” “Sweaters & Hoodies”\\n- “BOTTOMS” including “Pants” and “Shorts”\\n- “ACCESSORIES” including “Socks,” “Hats,” “Bags,” “Gifts”\\n\\nExact descriptive text from company site:\\n- “In a small apartment in the heart of Seattle, Scott and Brittany Freeman turned their kitchen table into a sewing station as they sought to create their id...",
+          "Used visitWebpage {\"url\":\"https://www.freemanseattle.com/\",\"question\":\"What does the homepage say this company is and what products does it offer? Extract concise text identifying the brand and its goods.\"}. The results are: \n \"Brand: Freeman — “© 2026, Freeman. Handcrafted with ❤️ in Seattle, WA.”\\n\\nHomepage/product categories: Tops, Bottoms, Accessories.\\nSpecific goods shown/offered: raincoats, outerwear, button downs, tees, sweaters & hoodies, pants, shorts, socks, hats, bags, gifts.\\nFeatured products on homepage: The F.C. Coat, Cascadia Flannel, The Freeman Raincoat, Weathervane Flannel, Sashiko Studio Coat, Studio Pants, Hoodies.\\n\\nLinks: https://freemanseattle.com | About Us: https://freemanseattle.com/pages..."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6btzmEYTCRaWa5oC",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:58:47.834Z",
+  "duration": "1m 38s",
+  "dataCreditsUsed": 5.4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6btz67DF8m96CUVH",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:58:47.842Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "n8n.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "n8n"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6btzhQYWoc5irtJF",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:58:47.856Z",
+      "completedAt": "2026-09-30T11:00:26.214Z",
+      "duration": "1m 38s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "n8n.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "n8n"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"n8n.io is the company website for n8n, which sells an AI workflow automation/orchestration platform for technical teams.\",\"url\":\"https://n8n.io/\",\"publication_date\":\"unknown\",\"event_date\":\"2026-09-30\",\"excerpt\":\"Homepage says: 'AI agents and workflows you can see and control', 'AI agents and workflows for technical teams', 'Plug AI into your own data & over 500 integrations', and 'Deploy on your infrastructure or ours.'\"},{\"claim\":\"n8n announced a $180 million Series C financing on 2025-10-09 at a $2.5 billion valuation.\",\"url\":\"https://blog.n8n.io/series-c/\",\"publication_date\":\"2025-10-09\",\"event_date\":\"2025-10-09\",\"excerpt\":\"Company post: 'We just raised $180 million in Series C funding, bringing our total funding to $240 million and our valuation to $2.5 billion.'\"},{\"claim\":\"Accel led n8n's Series C round, with support from Meritech, Redpoint, Evantic and Visionaries Club; NVentures and T.Capital also joined.\",\"url\":\"https://blog.n8n.io/series-c/\",\"publication_date\":\"2025-10-09\",\"event_date\":\"2025-10-09\",\"excerpt\":\"Company post: 'The round is led by Accel, with support from Meritech, Redpoint, Evantic and Visionaries Club. Corporate investors NVentures ... and T.Capital also join the round...'\"},{\"claim\":\"On 2026-05-12, n8n announced a strategic investment from SAP tied to a commercial partnership, not an acquisition; the announcement disclosed valuation but not investment amount or round type.\",\"url\":\"https://blog.n8n.io/n8n-sap/\",\"publication_date\":\"2026-05-12\",\"event_date\":\"2026-05-12\",\"excerpt\":\"Company post: 'Today we are announcing that SAP has invested in n8n.' It also says the investment values n8n at '$5.2bn' and that SAP is 'embedding n8n natively inside SAP's Joule Studio'; no acquisition, round name, or amount is stated.\"},{\"claim\":\"A contemporaneous press release likewise describes SAP's 2026-05-12 deal as a 'strategic investment' plus a 'multi-year commercial partnership,' with no acquisition language and no disclosed amount or financing round type.\",\"url\":\"https://www.prnewswire.com/news-releases/n8n-valuation-doubles-to-5-2bn-as-sap-makes-strategic-investment-and-plans-to-embed-the-ai-platform-into-joule-studio-302767222.html\",\"publication_date\":\"2026-05-12\",\"event_date\":\"2026-05-12\",\"excerpt\":\"Press release: 'n8n ... today announced a strategic investment from SAP alongside a multi-year commercial partnership.' It says the investment 'values n8n at $5.2bn' but does not state an amount or round type.\"},{\"claim\":\"Searches up to the 2026-09-30 cutoff surfaced no stronger public evidence of a completed acquisition, IPO, or a later disclosed venture equity round than the 2025 Series C; search results instead point back to the May 2026 SAP strategic investment and the Oct. 2025 Series C.\",\"url\":\"https://www.google.com/search?q=n8n+acquisition+IPO+announced+completed+2026+n8n.io&hl=en&gl=us\",\"publication_date\":\"2026-09-30\",\"event_date\":\"2026-09-30\",\"excerpt\":\"Google results showed SAP strategic-investment coverage and private-market/secondary references, but no evidenced completed acquisition or IPO announcement before the cutoff.\"}]",
+          "latest_round": "Series C",
+          "round_amount": "180 million",
+          "uncertainties": "SAP's 2026-05-12 transaction is newer than the Series C, but the public company post and press release describe it only as a strategic investment/commercial partnership, with no disclosed amount or financing round type. Because the task asks for the latest evidenced venture equity round or extension, and the SAP deal may be a strategic stake rather than a named primary venture round, the latest clearly evidenced round remains the 2025-10-09 Series C. Lifecycle status is based on affirmative evidence of investment/partnership rather than acquisition language, plus no contrary public evidence found before 2026-09-30; however, no primary source explicitly says 'still private' on the cutoff date.",
+          "lead_investors": "Accel",
+          "round_currency": "USD",
+          "company_identity": "n8n is an AI workflow automation and orchestration platform for technical teams that lets users build AI agents and app/API-connected workflows visually or with code.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2025-10-09"
+        },
+        "reasoning": "I identified the company from the exact domain using the company homepage, then prioritized primary/near-primary financing sources: n8n's own Series C announcement and its own May 2026 SAP-investment announcement, plus a contemporaneous press release. Those sources clearly evidence a $180M Series C on 2025-10-09 led by Accel. The newer May 2026 event is a strategic investment from SAP with disclosed valuation but no amount or round type, so it is not sufficient to replace the Series C as the latest evidenced venture equity round amount. The May 2026 materials also support that n8n remained independently operating and was not announced as acquired; no stronger contrary evidence of acquisition, IPO, closure, or a later disclosed round was found before the cutoff.",
+        "stepsTaken": [
+          "Searched Google with query \"n8n.io funding round acquisition IPO site:n8n.io OR TechCrunch OR Crunchbase OR investor 2024 2025 2026\". The results are: \n {\"search_results\":[{\"title\":\"n8n raises $180m to get AI closer to value with orchestration\",\"link\":\"https://blog.n8n.io/series-c/\",\"snippet\":\"We just raised $180 million in Series C funding, bringing our total funding to $240 million and our valuation to $2.5 billion. The round is led ...\",\"date\":\"Oct 9, 2025\",\"position\":1},{\"title\":\"n8n 2026 Company Profile: Valuation, Funding & Investors\",\"link\":\"https://pitchbook.com/profiles/company/398691-46\",\"snippet\":\"NEWS | Oct 9, 2025. AI agent startup ...",
+          "Used visitWebpage {\"url\":\"https://blog.n8n.io/series-c/\",\"question\":\"Find the announced round type, amount, date, lead investors, total funding, valuation, and any statement identifying what n8n does.\"}. The results are: \n \"Source: https://blog.n8n.io/series-c\\n\\nTitle: “n8n raises $180m to get AI closer to value with orchestration”\\nAuthor/date: Jan Oberhauser — October 9, 2025\\n\\nRelevant excerpts:\\n- “We just raised $180 million in Series C funding, bringing our total funding to $240 million and our valuation to $2.5 billion.”\\n- “The round is led by Accel, with support from Meritech, Redpoint, Evantic and Visionaries Club. Corporate investors NVentures (NVIDIA’s venture capital arm) and T.Capital also join the...",
+          "Searched Google with query \"SAP n8n May 2026 official investment press release n8n\". The results are: \n {\"search_results\":[{\"title\":\"n8n valuation doubles to $5.2bn as SAP makes strategic ...\",\"link\":\"https://www.prnewswire.com/news-releases/n8n-valuation-doubles-to-5-2bn-as-sap-makes-strategic-investment-and-plans-to-embed-the-ai-platform-into-joule-studio-302767222.html\",\"snippet\":\"The investment values n8n at $5.2bn – more than double its previous valuation of $2.5bn, secured less than a year ago. The two companies have ...\",\"date\":\"May 12, 2026\",\"position\":1},{\"title\":\"Announcing SAP's strateg...",
+          "Used visitWebpage {\"url\":\"https://blog.n8n.io/n8n-sap/\",\"question\":\"What does this page say about SAP's investment in n8n, including date, whether a round type or amount is disclosed, ownership implications, and product description?\"}. The results are: \n \"Page: “Announcing SAP’s strategic investment in n8n” — https://blog.n8n.io/n8n-sap\\nAuthor/date: Jan Oberhauser, May 12, 2026.\\nRelevant statements:\\n- “Today we are announcing that SAP has invested in n8n.”\\n- “The investment values n8n at $5.2bn, more than double our valuation from less than a year ago.”\\n- “Alongside the investment, we are also embedding n8n natively inside SAP's Joule Studio.”\\n- The page does not name a financing round type in the provided text.\\n- The page does not state ...",
+          "Searched Google with query \"n8n acquisition IPO announced completed 2026 n8n.io\". The results are: \n {\"search_results\":[{\"title\":\"Invest In n8n.io Stock | Buy Pre-IPO Shares\",\"link\":\"https://equityzen.com/company/n8nio/\",\"snippet\":\"Accredited investors can buy pre-IPO stock in companies like n8n.io through EquityZen funds. These investments are made available by existing n8n.io ...\",\"position\":1},{\"title\":\"n8n valuation doubles to $5.2bn as SAP makes strategic ...\",\"link\":\"https://www.highlandeurope.com/n8n-valuation-doubles-to-5-2bn-as-sap-makes-strategic-investment-and-plans-to-embed-the-ai-p...",
+          "Searched Google with query \"site:n8n.io n8n workflow automation AI homepage\". The results are: \n {\"search_results\":[{\"title\":\"AI Workflow Automation Platform - n8n\",\"link\":\"https://n8n.io/\",\"snippet\":\"n8n is a workflow automation platform that uniquely combines AI capabilities with business process automation, giving technical teams the flexibility of ...\",\"position\":1},{\"title\":\"Advanced AI Workflow Automation Software & Tools\",\"link\":\"https://n8n.io/ai/\",\"snippet\":\"Automate your company's workflows with n8n's AI automation software. Maximize your workflows with our AI customizable automat...",
+          "Used visitWebpage {\"url\":\"https://n8n.io/\",\"question\":\"What does the homepage say n8n is and what it sells?\"}. The results are: \n \"Relevant homepage text from https://n8n.io:\\n- “AI agents and workflows you can see and control”\\n- “Build visually, go deep with code, connect to anything.”\\n- “Deploy on your infrastructure or ours.”\\n- “AI agents and workflows for technical teams”\\n- “Plug AI into your own data & over 500 integrations”\\n- “Use pre-built nodes for common apps. Custom API connections for everything else.”\\n- “Build AI agents you can actually follow”\\n- “Build complex AI without getting boxed in”\\n- “Runs where...",
+          "Searched Google with query \"n8n funding September 2026 news round investment official\". The results are: \n {\"search_results\":[{\"title\":\"n8n has raised $180 million in Series C funding, bringing its ...\",\"link\":\"https://www.instagram.com/p/DPmDfLOEYPh/?hl=en\",\"snippet\":\"n8n has raised $180 million in Series C funding, bringing its total to $240 million and valuing the company at $2.5 billion. The round was led ...\",\"date\":\"11 months ago\",\"position\":1},{\"title\":\"n8n raises $180M, valued at $2.5B, with Accel Ventures ...\",\"link\":\"https://www.linkedin.com/posts/analytics-india-magazine_german-ai-startup-...",
+          "Used visitWebpage {\"url\":\"https://www.prnewswire.com/news-releases/n8n-valuation-doubles-to-5-2bn-as-sap-makes-strategic-investment-and-plans-to-embed-the-ai-platform-into-joule-studio-302767222.html\",\"question\":\"What does this press release say about SAP's May 12, 2026 investment in n8n: is it a strategic investment or acquisition, is any amount or round type disclosed, and what does it say about the companies' partnership?\"}. The results are: \n \"Press release: “n8n valuation doubles to $5.2bn as SAP makes strategic investment and plans to embed the AI platform into Joule Studio” (May 12, 2026, 08:30 ET) — https://prnewswire.com/news/n8n\\n\\nRelevant excerpts:\\n- “n8n, the AI orchestration platform, today announced a strategic investment from SAP alongside a multi-year commercial partnership.”\\n- “The investment values n8n at $5.2bn – more than double its previous valuation of $2.5bn, secured less than a year ago.”\\n- “The two companies ..."
+        ]
+      }
+    }
+  ]
+}

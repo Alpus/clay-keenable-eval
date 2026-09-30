@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6cu0cMiJThJpdqfk",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:20:24.559Z",
+  "duration": "1m 15s",
+  "dataCreditsUsed": 3.9,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6cu0dX7xZxFtHkW3",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:20:24.567Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "ansys.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Ansys"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6cu07izJFACTj97P",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:20:24.616Z",
+      "completedAt": "2026-09-30T11:21:39.880Z",
+      "duration": "1m 15s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "ansys.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Ansys"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "Synopsys",
+          "evidence": "[{\"claim\":\"Ansys is an engineering simulation software company; its site says it develops and markets multiphysics engineering simulation software and related training/support.\",\"url\":\"https://www.ansys.com/company-information\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"ANSYS, Inc. is the leader in multiphysics simulation software... Ansys develops and markets engineering simulation software... We also provide education, training, and support.\"},{\"claim\":\"Synopsys and Ansys announced a definitive acquisition agreement on 2024-01-16.\",\"url\":\"https://ansys.synopsys.com/news-center/press-releases/1-16-24-synopsys-acquires-ansys\",\"publication_date\":\"2024-01-16\",\"event_date\":\"2024-01-16\",\"excerpt\":\"Synopsys (NASDAQ: SNPS) and Ansys (NASDAQ: ANSS) today announced that they have entered into a definitive agreement under which Synopsys will acquire Ansys.\"},{\"claim\":\"The announced acquisition consideration was $197.00 in cash plus 0.3450 shares of Synopsys common stock per Ansys share, implying about a $35 billion enterprise value.\",\"url\":\"https://ansys.synopsys.com/news-center/press-releases/1-16-24-synopsys-acquires-ansys\",\"publication_date\":\"2024-01-16\",\"event_date\":\"2024-01-16\",\"excerpt\":\"Under the terms of the agreement, Ansys shareholders will receive $197.00 in cash and 0.3450 shares of Synopsys common stock for each Ansys share... representing an enterprise value of approximately $35 billion.\"},{\"claim\":\"Synopsys completed its acquisition of Ansys on 2025-07-17.\",\"url\":\"https://investors.ansys.com/news-releases/news-release-details/synopsys-completes-acquisition-ansys/\",\"publication_date\":\"2025-07-17\",\"event_date\":\"2025-07-17\",\"excerpt\":\"Synopsys ... today announced the completion of its acquisition of Ansys.\"},{\"claim\":\"After completion, Ansys common stock would no longer be listed for trading on NASDAQ.\",\"url\":\"https://investors.ansys.com/news-releases/news-release-details/synopsys-completes-acquisition-ansys/\",\"publication_date\":\"2025-07-17\",\"event_date\":\"2025-07-17\",\"excerpt\":\"Ansys common stock will no longer be listed for trading on the NASDAQ stock market.\"},{\"claim\":\"Before the acquisition closed, Ansys was still a Nasdaq-listed public company in 2025.\",\"url\":\"https://investors.ansys.com/static-files/197c7dd3-97c8-4145-8f6c-8992eed48ba7\",\"publication_date\":\"2025-02-19\",\"event_date\":\"2025-02-19\",\"excerpt\":\"Search-result snippet from Ansys 2025 Form 10-K: 'ANSYS, Inc. June 30, 2024, as reported on the Nasdaq Global Select Market, was $23,147,000,000.' This supports that Ansys was public before the later merger close.\"}]",
+          "latest_round": "unknown",
+          "round_amount": "unknown",
+          "uncertainties": "I found strong primary evidence for the announced 2024 transaction and the completed 2025 acquisition, but I did not find reliable public evidence in the reviewed sources for a latest venture equity round or extension. Ansys had been a long-standing public company, and the reviewed materials focus on its public-company status and later acquisition rather than private venture financing. Therefore latest_round, round_amount, round_currency, lead_investors, and round_announcement_date are left unknown rather than inferred from IPO, debt financing, enterprise value, or acquisition price. The company-information page is now hosted on a Synopsys-branded Ansys site after the acquisition, so the product description is current branding rather than a pre-acquisition standalone site snapshot.",
+          "lead_investors": "unknown",
+          "round_currency": "unknown",
+          "company_identity": "Ansys is a multiphysics engineering simulation software company that sells simulation and analysis software plus related training and support.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2025-07-17",
+          "round_announcement_date": "unknown"
+        },
+        "reasoning": "Primary-source evidence shows Ansys agreed to be acquired by Synopsys on 2024-01-16 and that the acquisition was completed on 2025-07-17, after which Ansys stock ceased trading on Nasdaq. That establishes lifecycle_status as acquired and acquirer as Synopsys as of the 2026-09-30 cutoff. I did not find verified evidence of a latest venture equity round in the reviewed public sources, so those funding-specific fields are marked unknown rather than conflated with IPO/public-company status or the acquisition transaction.",
+        "stepsTaken": [
+          "Searched Google with query \"Ansys ansys.com latest financing round public company acquisition closed Synopsys 2026\". The results are: \n {\"search_results\":[{\"title\":\"Synopsys and Ansys are Now United\",\"link\":\"https://www.synopsys.com/synopsys-ansys-united.html\",\"snippet\":\"Synopsys acquires Ansys, marking a new era of innovation from semiconductor to system design with integrated electronics, physics, and AI-driven insights.\",\"position\":1},{\"title\":\"Synopsys Completes Acquisition of Ansys | ANSYS, Inc.\",\"link\":\"https://investors.ansys.com/news-releases/news-release-details/synopsys-completes-acquisition-ansys/\",\"snippet\":\"The tran...",
+          "Used visitWebpage {\"url\":\"https://investors.ansys.com/news-releases/news-release-details/synopsys-completes-acquisition-ansys/\",\"question\":\"What is the publication date, what does it say about the acquisition completion date, and does it say Ansys stock ceased trading on NASDAQ or describe the consideration?\"}. The results are: \n \"Publication date: \\\"July 17, 2025\\\"\\n\\nRelevant acquisition completion/date language:\\n- \\\"Synopsys (Nasdaq: SNPS) today announced the completion of its acquisition of Ansys.\\\"\\n- \\\"The transaction, which was announced on January 16, 2024...\\\"\\n\\nRelevant trading/consideration language:\\n- \\\"Ansys common stock will no longer be listed for trading on the NASDAQ stock market.\\\"\\n- No consideration description is provided in the webpage text.\\n\\nRelevant link:\\n- PDF Version: https://investors.ans...",
+          "Searched Google with query \"site:ansys.com Ansys company simulation software about\". The results are: \n {\"search_results\":[{\"title\":\"Ansys | Engineering Simulation Software\",\"link\":\"https://www.ansys.com/\",\"snippet\":\"Ansys engineering simulation and 3D design software delivers product modeling solutions with unmatched scalability and a comprehensive multiphysics ...\",\"position\":1},{\"title\":\"Ansys Products - Engineering Simulation Software - Synopsys\",\"link\":\"https://www.ansys.com/products\",\"snippet\":\"Ansys offers a comprehensive software suite that spans the entire range of physics, providing acce...",
+          "Used visitWebpage {\"url\":\"https://www.ansys.com/company-information\",\"question\":\"What does this page say Ansys is and what products or software does it provide? Give concise wording and any mention of years in operation.\"}. The results are: \n \"- “ANSYS, Inc. is the leader in multiphysics simulation software.”\\n- “For more than 50 years, Ansys software has enabled innovators across industries to push boundaries by using the predictive power of simulation.”\\n- “Ansys develops and markets engineering simulation software… We also provide education, training, and support.”\\n- “Ansys simulation software is widely used for engineering simulation including structural analysis, fluid dynamics simulations, electromagnetic field simulations, di...",
+          "Searched Google with query \"Ansys funding round venture equity IPO history latest round site:ansys.com OR site:crunchbase.com OR site:wikipedia.org\". The results are: \n {\"search_results\":[{\"title\":\"Vision Invokes Innovation\",\"link\":\"https://investors.ansys.com/static-files/5e73e0c2-61d1-4afc-9b51-dd21bdd26730\",\"snippet\":\"ANSYS ended 2002 with $61.1 million in cash and short-term investments. To further enhance long-term shareholder value, we repurchased 504,900 shares of ANSYS ...\",\"position\":1},{\"title\":\"Delivering Innovative\",\"link\":\"https://investors.ansys.com/static-files/6c209e06-0b40-4b37-a24f-db54b37f3934\",\"snippet\":\"The Company's discussion and analysis...",
+          "Used visitWebpage {\"url\":\"https://ansys.synopsys.com/news-center/press-releases/1-16-24-synopsys-acquires-ansys\",\"question\":\"What is the publication date of this press release, what does it say about Synopsys acquiring Ansys, and what consideration or transaction value is described?\"}. The results are: \n \"Press release: “Synopsys to Acquire Ansys, Creating a Leader in Silicon to Systems Design Solutions”\\nLink: https://ansys.synopsys.com/news-center/press-releases/1-16-24-synopsys-acquires-ansys\\n\\nPublication date shown on page:\\n- “DATE: 1/16/2024”\\n- Lead line: “SUNNYVALE, CA and PITTSBURGH, PA, January 16, 2024”\\n\\nWhat it says about Synopsys acquiring Ansys:\\n- “Synopsys (NASDAQ: SNPS) and Ansys (NASDAQ: ANSS) today announced that they have entered into a definitive agreement under which Sy...",
+          "Searched Google with query \"Ansys IPO date NASDAQ ANSS public company history\". The results are: \n {\"search_results\":[{\"title\":\"ANSYS, Inc. Stock Price: Quote, Forecast, Splits & News ...\",\"link\":\"https://www.perplexity.ai/finance/ANSS\",\"snippet\":\"ANSS IPO Date Jun 20, 1996 CEO Ajei … founded in 1970 by John A. Swanson. Trading on the Nasdaq Global Select Market under the ticker ANSS,\",\"position\":1},{\"title\":\"ANSYS (ANSS) Stock Price & Overview\",\"link\":\"https://stockanalysis.com/stocks/anss/\",\"snippet\":\"IPO Date Jun 20, 1996 Employees 6,500 Stock Exchange NASDAQ Ticker Symbol ANSS Website htt..."
+        ]
+      }
+    }
+  ]
+}

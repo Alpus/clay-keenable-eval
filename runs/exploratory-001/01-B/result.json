@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6ayurcNyhBNrTaTX",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:40:06.293Z",
+  "duration": "2m 9s",
+  "dataCreditsUsed": 3.7,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6ayuoSdgziSjzfkk",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:40:06.300Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "keenable.ai",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Keenable"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6ayuQhCFxo9YXPRh",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:40:06.323Z",
+      "completedAt": "2026-09-30T10:42:15.365Z",
+      "duration": "2m 9s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "keenable.ai",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Keenable"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Keenable at keenable.ai sells web search infrastructure for AI labs and agents, including a Search API, SELECT, and Time Machine.\",\"url\":\"https://keenable.ai\",\"publication_date\":\"unknown\",\"event_date\":\"2026-09-30\",\"excerpt\":\"Homepage headline: 'Web Search Infrastructure for AI Labs and Agents.' Products listed: 'Search API for your agents,' 'SELECT,' and 'Time Machine.'\"},{\"claim\":\"Keenable announced/emerged from stealth with a $26 million seed round led by Accel, with participation from Conviction Partners and business angels.\",\"url\":\"https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents/\",\"publication_date\":\"2026-08-25\",\"event_date\":\"2026-08-25\",\"excerpt\":\"TechCrunch reported: 'The company recently came out of stealth with $26 million in seed funding. Accel led the funding round, which also saw participation from Conviction Partners and some business angels.'\"},{\"claim\":\"As of the seed-round coverage, Keenable was operating as an active startup building infrastructure for AI-oriented web search, with no acquisition mentioned.\",\"url\":\"https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents/\",\"publication_date\":\"2026-08-25\",\"event_date\":\"2026-08-25\",\"excerpt\":\"TechCrunch described Keenable as a startup building a web search index of more than 100 billion documents whose API was already used in production at several AI labs and inference providers; the article did not mention any acquisition, IPO, or shutdown.\"},{\"claim\":\"Crunchbase publicly shows one seed round with Accel as lead investor and four investors total; ScOp Venture Capital and Conviction are listed among the investors.\",\"url\":\"https://www.crunchbase.com/organization/keenable-ai/financial_details\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Visible page fields showed: Seed Round - Keenable; Lead Investors: Accel; Number of Investors: 4; and 'ScOp Venture Capital and Conviction are the most recent investors.' Amount and announced date were obfuscated on the public view.\"}]",
+          "latest_round": "Seed",
+          "round_amount": "26 million",
+          "uncertainties": "No official Keenable press release about the round was located in the allotted searches. The strongest round evidence is TechCrunch (secondary reporting), supported in part by Crunchbase's public fields showing a seed round led by Accel with four investors, but Crunchbase obfuscated the amount and date. I found no public evidence of an acquisition, IPO, or closure through the 2026-09-30 cutoff; lifecycle status is therefore based on affirmative evidence of recent seed financing and an active commercial website, plus absence of contrary evidence, rather than a direct company statement saying it remains independently owned. The homepage evidence has no clear publication date, so its publication_date is marked unknown and its event_date reflects the as-of cutoff context rather than a dated corporate event.",
+          "lead_investors": "Accel",
+          "round_currency": "USD",
+          "company_identity": "Keenable (keenable.ai) is a startup that provides web search infrastructure and APIs for AI labs and AI agents.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "2026-08-25",
+          "round_announcement_date": "2026-08-25"
+        },
+        "reasoning": "I resolved the company via its exact domain and used public web evidence to identify its business and latest financing. The strongest funding evidence is TechCrunch's 2026-08-25 report of a $26 million seed round led by Accel, with Conviction Partners and business angels participating. Keenable's own site confirms the business model and active commercial product offering. I also checked for newer or contradictory lifecycle evidence through the cutoff and found no public evidence of acquisition, IPO, or closure; recent evidence instead supports an active private company after a seed round.",
+        "stepsTaken": [
+          "Searched Google with query \"Keenable keenable.ai funding acquisition investors site:keenable.ai OR Crunchbase OR TechCrunch OR PitchBook OR press release\". The results are: \n {\"search_results\":[{\"title\":\"Accel-backed Keenable is indexing the web for AI agents\",\"link\":\"https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents/\",\"snippet\":\"Now exiting stealth mode with a $26 million seed round, Keenable has been building a vast web search index for AI agents.\",\"date\":\"Aug 25, 2026\",\"position\":1},{\"title\":\"Financial Details - Keenable\",\"link\":\"https://www.crunchbase.com/organization/keenable-ai/financial_details\",\"snippet\":\"Keenable is fu...",
+          "Searched Google with query \"Keenable.ai acquisition IPO shutdown 2026 Keenable site:news OR site:techcrunch.com OR site:keenable.ai\". The results are: \n {\"search_results\":[{\"title\":\"Does Google Have An Interest In Pinterest?\",\"link\":\"https://techcrunch.com/2012/01/19/ginterest/\",\"snippet\":\"Google had expressed interest in a Pinterest acquisition. Google never gave an official offer to grid bookmarking service Pinterest, Former ...\",\"date\":\"Jan 19, 2012\",\"position\":1},{\"title\":\"WhitePages.com To Buy Snapvine for Around $20 Million\",\"link\":\"https://techcrunch.com/2008/06/04/whitepagescom-to-buy-snapvine-for-around-20-million/\",\"snippet\":\"acquisiti...",
+          "Used visitWebpage {\"url\":\"https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents/\",\"question\":\"What does the article say about Keenable's funding round amount, round type, date, investors, company description, and whether it mentions acquisition or current independent status?\"}. The results are: \n \"Article: “Accel-backed Keenable is indexing the web for AI agents” — TechCrunch, published August 25, 2026. Link: https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents\\n\\nRelevant excerpts/context:\\n- “The company recently came out of stealth with $26 million in seed funding.”\\n- “Accel led the funding round, which also saw participation from Conviction Partners and some business angels.”\\n- Keenable is described as a startup founded by Andrey Styskin and Mat...",
+          "Used visitWebpage {\"url\":\"https://keenable.ai\",\"question\":\"What does the homepage say Keenable is and what product or service does it sell?\"}. The results are: \n \"Homepage headline: “Web Search Infrastructure for AI Labs and Agents.”\\n\\nHomepage CTA/footer repeats: “Get Independent Web Search infrastructure for AI Labs and Agents.”\\n\\nProducts section: “One index, three products”\\n1. “Search API for your agents”\\n   - “Get Free 100K requests”\\n   - “Agent Builder Tier … Cloud-only access … $4 / 1000 requests”\\n   - “Frontier Tier … For AI Labs and Inference platforms … Cloud & On-premises … $1 / 1000 requests at 100 RPS+”\\n2. “SELECT”\\n   - “Thousands of...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"public reporting or official pages about Keenable at keenable.ai covering funding, acquisition, IPO, shutdown, or other corporate events after its seed round announcement\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"2026-08-25\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":400,\"max_results\":10,\"session_id\":\"sess-keenable-20260930\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Web Index for AI Agents: Keenable's Amazing $26M Accel Win\\nURL: https://progressiverobot.com/2026/08/25/keenable-web-index-for-ai-agents\\nPublished: 2026-08-25\\nAcquired: 2026-09-13\\nSnippets:\\nCompany Latest capital event Valuation or price Backer Keenable $26m seed, Aug 2026 Not disclosed Accel  Exa $250m Series C, May 2026 $2.2 billion Andreessen Horowitz  Parallel Web Systems $100m Series B, Apr 2026 $2 billion Sequoia  Tavily Acquired by Nebius, Fe...",
+          "Searched Google with query \"site:keenable.ai Keenable 26M seed Accel\". The results are: \n {\"message\":\"No data returned from search query\"}",
+          "Used visitWebpage {\"url\":\"https://www.crunchbase.com/organization/keenable-ai/financial_details\",\"question\":\"What funding rounds, dates, amounts, and investors are publicly visible for Keenable on this page?\"}. The results are: \n \"- Company: Keenable\\n- Financials page: https://crunchbase.com/organization/keenable-ai#financials\\n- Financial Details page: https://crunchbase.com/organization/keenable-ai/financial_details\\n- Visible funding summary:\\n  - \\\"Keenable has raised a total of obfuscated obfuscation in funding over 1 round.\\\"\\n  - \\\"This was a Seed round raised on obfuscated obfuscation.\\\"\\n  - \\\"Keenable is funded by 4 investors.\\\"\\n  - \\\"ScOp Venture Capital and Conviction are the most recent investors.\\\"\\n- Fun..."
+        ]
+      }
+    }
+  ]
+}

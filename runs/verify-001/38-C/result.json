@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6dhnJxaFmcZtHq8q",
+  "workflow": {
+    "id": "wf_0tm6d21AuFsz5iFGM8e",
+    "name": "Funding lifecycle evaluation C"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:34:35.688Z",
+  "duration": "1m 41s",
+  "dataCreditsUsed": 3.8,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6dhnzir8Bcqm2Km2",
+      "nodeId": "wfn_0tm6d21iRtaxx429Y8Q",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:34:35.695Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "redcanary.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Red Canary"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6dhn7jMGx7u3hDhK",
+      "nodeId": "wfn_0tm6d4f6jZzvkGe2wpS",
+      "nodeName": "Company research C",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:34:35.709Z",
+      "completedAt": "2026-09-30T11:36:17.230Z",
+      "duration": "1m 41s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "redcanary.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Red Canary"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "Zscaler, Inc.",
+          "evidence": "[{\"claim\":\"redcanary.com is Red Canary, a cybersecurity company selling managed detection and response and related security operations products.\",\"url\":\"https://redcanary.com\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Homepage text describes \\\"Managed Detection and Response — Find and stop threats 24x7 across your IT environment\\\" and also lists Threat Intelligence, Automation, Security Data Lake, Managed Phishing Response, and Training & Tabletops.\"},{\"claim\":\"Red Canary announced a $34 million growth equity financing led by Summit Partners, with Access Venture Partners and Noro-Moseley Partners participating.\",\"url\":\"https://redcanary.com/news/red-canary-raises-34m-series-b/\",\"publication_date\":\"2019-04-30\",\"event_date\":\"2019-04-30\",\"excerpt\":\"Company press release title: \\\"Red Canary Raises $34m in Growth Equity Funding Led by Summit Partners\\\" and text says it \\\"has raised $34 million in a funding round led by global growth equity investor Summit Partners and joined by existing investors Access Venture Partners and Noro-Moseley Partners.\\\"\"},{\"claim\":\"Red Canary later raised an $81 million Series C round led by Summit Partners, with Noro-Moseley Partners and Access Venture Partners participating.\",\"url\":\"https://accessvp.com/blog/red-canary-series-c-funding/\",\"publication_date\":\"2021-02-17\",\"event_date\":\"2021-02-17\",\"excerpt\":\"Access Venture Partners page states: \\\"Cybersecurity leader Red Canary raises $81M Series C\\\" and lists: Publication Date February 17, 2021; Round Name Series C; Amount Raised $81 million; Lead Investor Summit Partners; Participating Investors Noro-Moseley Partners and Access Venture Partners.\"},{\"claim\":\"Zscaler completed its acquisition of Red Canary on August 1, 2025.\",\"url\":\"https://ir.zscaler.com/news-releases/news-release-details/zscaler-completes-acquisition-red-canary-accelerate-innovations\",\"publication_date\":\"2025-08-01\",\"event_date\":\"2025-08-01\",\"excerpt\":\"Zscaler press release says: \\\"today announced it has completed its acquisition of Red Canary\\\" and \\\"Following the close of the acquisition, Red Canary will be branded as Red Canary, a Zscaler company.\\\"\"},{\"claim\":\"A freshness check found no newer public evidence before 2026-09-30 of a later financing, IPO, closure, or reversal of ownership status; secondary sources continued to describe Red Canary as acquired by Zscaler with closing on August 1, 2025.\",\"url\":\"https://btw.media/en/zscaler-arr-revenue-audit-acquisition-perimeter-bridge\",\"publication_date\":\"2026-09-15\",\"event_date\":\"2025-08-01\",\"excerpt\":\"Keenable search surfaced a 2026 article summarizing Zscaler's Form 10-K and noting Red Canary was one of the acquisitions, with Red Canary acquired on 1 August 2025; no later contrary lifecycle event appeared in the check results.\"}]",
+          "latest_round": "Series C",
+          "round_amount": "81 million",
+          "uncertainties": "The latest-round evidence available within the call budget came from an existing investor's 2021 post (Access Venture Partners), not a directly retrieved Red Canary or regulatory filing. The 2019 company page URL contains 'series-b' but the page wording says 'growth equity funding'; I therefore rely on the retrieved 2021 investor post for the latest round name and amount. The freshness check used Keenable search results and did not retrieve the underlying SEC filing directly; it found no newer contradictory financing or lifecycle event before 2026-09-30.",
+          "lead_investors": "Summit Partners",
+          "round_currency": "USD",
+          "company_identity": "Red Canary is a cybersecurity company that sells managed detection and response and related security operations software and services.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2025-08-01",
+          "round_announcement_date": "2021-02-17"
+        },
+        "reasoning": "I resolved the entity from redcanary.com, identified products from the company site, found company evidence for the 2019 funding, found later 2021 Series C evidence from an investor source, confirmed acquisition completion from Zscaler's investor-relations press release, and used the required Keenable freshness check to look for any newer financing or lifecycle change before the 2026-09-30 cutoff. The best-supported latest venture equity round before acquisition is the 2021 Series C; the company was acquired by Zscaler on 2025-08-01.",
+        "stepsTaken": [
+          "Searched Google with query \"Red Canary redcanary.com funding acquisition IPO latest round site:redcanary.com OR site:techcrunch.com OR site:crunchbase.com OR site:businesswire.com\". The results are: \n {\"message\":\"No data returned from search query\"}",
+          "Searched Google with query \"redcanary.com company funding round acquisition ipo Red Canary cybersecurity\". The results are: \n {\"search_results\":[{\"title\":\"VC Daily: VC Firms Polish Their Brands | Andreessen Horowitz ...\",\"link\":\"https://www.wsj.com/articles/vc-daily-vc-firms-polish-their-brands-andreessen-horowitz-raises-first-late-stage-fund-11556801446\",\"snippet\":\"... company that held the largest biotech IPO on record last December. ... Series C round of funding. Tiger Global ... Red Canary, a Denver-based cybersecurity startup ...\",\"position\":1},{\"title\":\"Bill Dedrick - Go-to-Market Advisor helping Founders & ...\",...",
+          "Used visitWebpage {\"url\":\"https://redcanary.com\",\"question\":\"Find evidence of what Red Canary sells and whether the site says it is part of another company, with exact wording and any relevant dates or links.\"}. The results are: \n \"Relevant evidence from the webpage:\\n\\n- Products / what Red Canary sells:\\n  - “Managed Detection and Response — Find and stop threats 24x7 across your IT environment”\\n    Link: https://redcanary.com/products/managed-detection-and-response\\n  - “AI Agents — Unlock speed and expertise at scale”\\n    Link: https://redcanary.com/products/ai-agents\\n  - “Threat Intelligence — Improve operations with research, insights, and threat hunting”\\n    Link: https://redcanary.com/products/threat-intellige...",
+          "Searched Google with query \"Red Canary funding press release Series B 2021 Lightspeed Ventures\". The results are: \n {\"search_results\":[{\"title\":\"Red Canary Raises $34m in a Funding Round Led ...\",\"link\":\"https://redcanary.com/news/red-canary-raises-34m-series-b/\",\"snippet\":\"Red Canary secured $34M in funding led by Summit Partners to enhance their outcome-focused security operations solutions. Learn more here.\",\"position\":1},{\"title\":\"Lightspeed Venture Partners\",\"link\":\"https://lsvp.com/\",\"snippet\":\"Lightspeed Venture Partners is a multi-stage VC firm backing bold founders and disruptive innovations from See...",
+          "Used visitWebpage {\"url\":\"https://redcanary.com/news/red-canary-raises-34m-series-b/\",\"question\":\"What round was announced, how much was raised, on what date, and who led or participated according to this press release?\"}. The results are: \n \"Press release title: “Red Canary Raises $34m in Growth Equity Funding Led by Summit Partners”\\n\\nRelevant excerpts:\\n- “Red Canary, a leading provider of security operations solutions, today announced that it has raised $34 million in a funding round led by global growth equity investor Summit Partners and joined by existing investors Access Venture Partners and Noro-Moseley Partners.”\\n- Share URL provided on the page: https://redcanary.com/news/red-canary-raises-34m-series-b\\n\\nRelevant conta...",
+          "Used visitWebpage {\"url\":\"https://ir.zscaler.com/news-releases/news-release-details/zscaler-completes-acquisition-red-canary-accelerate-innovations\",\"question\":\"Find the acquisition completion date, acquirer, and exact wording showing the transaction completed.\"}. The results are: \n \"Source: https://ir.zscaler.com/news-events/press-releases\\nPDF: https://ir.zscaler.com/node/15086/pdf\\n\\nPress Release Details: “Zscaler Completes Acquisition of Red Canary to Accelerate Innovations in Agentic AI-driven Security Operations”\\nDate: “August 1, 2025”\\n\\nRelevant text:\\n- “SAN JOSE, Calif., Aug. 01, 2025 ... Zscaler, Inc. (NASDAQ: ZS) ... today announced it has completed its acquisition of Red Canary.”\\n- “Following the close of the acquisition, Red Canary will be branded as Red Ca...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Red Canary funding acquisition IPO latest after Zscaler completed acquisition August 2025 any newer financing, divestiture, IPO, closure, or ownership status before 2026-09-30\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"2025-08-01\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":500,\"max_results\":5,\"session_id\":\"redcanary-2026-09-30\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Red Canary: Funding, Team & Investors\\nURL: https://startupintros.com/orgs/red-canary\\nPublished: 2026-07-13\\nAcquired: 2026-07-16\\nSnippets:\\nThe company has demonstrated strong growth and capital efficiency, raising $129.92 million in total funding before being acquired by Zscaler in May 2025.[3]\\n\\n---\\n\\nTitle: Zscaler’s acquisition-adjusted growth uses three different perimeters\\nURL: https://btw.media/en/zscaler-arr-revenue-audit-acquisition-perime...",
+          "Used keenable-public-evaluation-fetch_page_content {\"url\":\"https://accessvp.com/blog/red-canary-series-c-funding/\",\"max_chars\":12000,\"live\":false,\"prompt\":\"Extract the publication date and the key financing facts: round name, amount raised, lead investor(s), and any participating investors for Red Canary.\",\"session_id\":\"redcanary-2026-09-30\",\"output_format\":\"text\"}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Cybersecurity leader Red Canary raises $81M Series C\\nURL: https://accessvp.com/blog/red-canary-series-c-funding/\\n\\nPublication Date: February 17, 2021\\nRound Name: Series C\\nAmount Raised: $81 million\\nLead Investor: Summit Partners\\nParticipating Investors: Noro-Moseley Partners and Access Venture Partners\"}]}"
+        ]
+      }
+    }
+  ]
+}

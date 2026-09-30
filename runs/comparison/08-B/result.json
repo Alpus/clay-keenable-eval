@@ -1,0 +1,80 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6bcba22MaQuytdRq",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:48:11.103Z",
+  "duration": "29s",
+  "dataCreditsUsed": 0.9999999999999998,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6bcbH3jEjXr9nXY9",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:48:11.110Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "freemanseattle.com",
+        "task_type": "entity_resolution",
+        "company_name": "Freeman Seattle"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6bcbfabbyzK9F6dx",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:48:11.124Z",
+      "completedAt": "2026-09-30T10:48:41.060Z",
+      "duration": "29s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "freemanseattle.com",
+        "task_type": "entity_resolution",
+        "company_name": "Freeman Seattle"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"The exact business at freemanseattle.com is Freeman Seattle, a Seattle-based brand/apparel business.\",\"url\":\"https://www.freemanseattle.com/\",\"publication_date\":\"unknown\",\"event_date\":\"2026\",\"excerpt\":\"The homepage identifies the brand as 'Freeman Seattle' and the footer states '© 2026, Freeman. Handcrafted with ❤️ in Seattle, WA.' It also lists a Seattle showroom address at 85 S Atlantic St. #202, Seattle, WA 98134.\"},{\"claim\":\"Freeman Seattle sells handcrafted apparel and accessories, especially raincoats, shirts, outerwear, pants, shorts, and related staple items.\",\"url\":\"https://www.freemanseattle.com/\",\"publication_date\":\"unknown\",\"event_date\":\"2026\",\"excerpt\":\"The site says Freeman Seattle is a brand that creates 'handcrafted raincoats, shirts, and other staple items.' Shopping categories shown include Outerwear, Button Downs, Tees, Sweaters & Hoodies, Pants, Shorts, Socks, Hats, Bags, and Gifts; featured items include 'The Freeman Raincoat' and flannels/coats.\"}]",
+          "latest_round": "not_applicable",
+          "round_amount": "not_applicable",
+          "uncertainties": "The homepage evidence is sufficient to identify the business and what it sells, but it does not clearly state a founding date or corporate legal entity name on the retrieved page. No funding or lifecycle research was necessary because this task is entity_resolution and those fields are not applicable.",
+          "lead_investors": "not_applicable",
+          "round_currency": "not_applicable",
+          "company_identity": "Freeman Seattle is a Seattle apparel brand that sells handcrafted clothing and accessories, especially raincoats, shirts, outerwear, and other staple garments.",
+          "lifecycle_status": "not_applicable",
+          "lifecycle_event_date": "not_applicable",
+          "round_announcement_date": "not_applicable"
+        },
+        "reasoning": "I resolved the entity directly from the company domain and cited the company site. The homepage identifies Freeman Seattle as a Seattle-based handcrafted apparel brand and shows the products it sells. Because the task is entity_resolution, funding and lifecycle fields are marked not_applicable.",
+        "stepsTaken": [
+          "Searched Google with query \"Freeman Seattle freemanseattle.com company site what does it sell\". The results are: \n {\"search_results\":[{\"title\":\"Freeman Seattle | Hand-Made Raincoats, Shirts, and More\",\"link\":\"https://www.freemanseattle.com/?srsltid=AU7gw4VKf0mqZMuieY6ppMNeXPWju1LQMMBbt-bmQ6AoSOttk3qKOaMv\",\"snippet\":\"Freeman Seattle is a brand that creates handcrafted raincoats, shirts, and other staple items. We are passionate about making high-quality products that are ...\",\"position\":1},{\"title\":\"Freeman Brand (@freemanseattle) · Seattle, WA\",\"link\":\"https://www.instagram.com/freemanseattle/?hl=en\",\"snippe...",
+          "Used visitWebpage {\"url\":\"https://www.freemanseattle.com/\",\"question\":\"What does Freeman Seattle say it is and what products does it make or sell?\"}. The results are: \n \"Freeman site context relevant to identifying what it says it is and what it makes/sells:\\n\\n- Brand/site name: Freeman / Freeman Seattle\\n- Footer tagline: \\\"© 2026, Freeman. Handcrafted with ❤️ in Seattle, WA.\\\"\\n- Showroom note: \\\"Come See us at our Seattle Showroom.\\\"\\n- Main shopping categories/products shown:\\n  - Tops: Outerwear, Button Downs, Tees, Sweaters & Hoodies\\n  - Bottoms: Pants, Shorts\\n  - Accessories: Socks, Hats, Bags, Gifts\\n  - Featured collections/items: Freeman Raincoats,..."
+        ]
+      }
+    }
+  ]
+}

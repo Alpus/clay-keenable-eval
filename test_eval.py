@@ -236,13 +236,13 @@ class RunnerTests(unittest.TestCase):
                 self.assertEqual(len(submissions), 2, 'Repeating checkpoint cannot start pair two')
                 args.limit = 50
                 args.stop_after_pairs = None
-                args.concurrency = 4
-                current_cap[0] = 4
+                args.concurrency = 30
+                current_cap[0] = 30
                 runner.run(args)
                 after = runner.read(args.output / 'manifest.json')
                 self.assertEqual(before['frozen_hash'], after['frozen_hash'])
                 self.assertEqual(before['frozen'], after['frozen'])
-                self.assertEqual([x['concurrency'] for x in after['execution_history']], [2, 2, 2, 4])
+                self.assertEqual([x['concurrency'] for x in after['execution_history']], [2, 2, 2, 30])
                 self.assertEqual(len(submissions), 100)
                 self.assertEqual(submissions[:4], [('A', 'Company 0'), ('B', 'Company 0'),
                                                   ('B', 'Company 1'), ('A', 'Company 1')])
@@ -252,6 +252,217 @@ class RunnerTests(unittest.TestCase):
                 with self.assertRaisesRegex(RuntimeError, 'no larger than the case count'):
                     runner.run(args)
                 self.assertEqual(len(submissions), 100)
+
+    def test_preflight_c_requires_verification_prompt(self):
+        cfg = {'prompt': 'base', 'verification_prompt': 'base verify', 'strategy': 'verify',
+               'model': 'test', 'schema': {}}
+        state = {'workspace_id': 'test', 'arms': {'C': {'workflow_id': 'w', 'node_id': 'n',
+                  'trigger_node_id': 't', 'trigger_id': 'trigger'}}}
+        node = dict(runner.node_spec('C', 't', cfg), id='n')
+        graph = {'nodes': [{'id': 't'}, node], 'summary': {'edges': [{'sourceNodeId': 't', 'targetNodeId': 'n'}]}}
+        def fake_cli(*args, **kwargs):
+            if args == ('whoami',):
+                return {'workspace': {'id': 'test'}}
+            if args[:3] == ('workflows', 'graph', 'get'):
+                return graph
+            if args[:3] == ('workflows', 'triggers', 'get'):
+                return {'workflowNodeId': 't'}
+            self.fail(f'Unexpected CLI call: {args}')
+        with patch.object(runner, 'cli', side_effect=fake_cli), patch.object(runner, 'validate', return_value={'valid': True}):
+            self.assertEqual(set(runner.preflight(state, cfg)), {'C'})
+            node['agentPrompt'] = cfg['prompt']
+            with self.assertRaisesRegex(RuntimeError, 'actual prompt/model differs'):
+                runner.preflight(state, cfg)
+
+    def test_paced_single_initialization_retry_archives_and_costs(self):
+        import copy
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            runner.save(root / 'cases.json', [dict(id='x', company_name='X', domain='x.test',
+                        as_of='2026-09-30', task_type='funding_and_lifecycle')])
+            state = {'workspace_id': 'test', 'arms': {a: {'workflow_id': a, 'node_id': a} for a in 'AB'}}
+            cfg = {'prompt': 'base', 'model': 'test', 'schema': {}}
+            clock, submissions, sleeps = [1000.0], [], []
+            error = 'Error initializing MCP client: Too many requests, 10 RPS limit'
+            failure = {'status': 'failed', 'dataCreditsUsed': 0, 'actionCreditsUsed': 2,
+                       'error': error, 'nodes': [{'nodeId': 'C', 'status': 'failed', 'outputs': {'error': error}}]}
+            fail_c = [True]
+            lose_retry_poll = [True]
+            def sleep(seconds):
+                sleeps.append(seconds)
+                clock[0] += seconds
+            def fake_cli(*args, **kwargs):
+                if args[2] == 'test':
+                    submissions.append((args[3], clock[0]))
+                    started = {'runId': f'r{len(submissions)}', 'status': 'pending'}
+                    runner.save(kwargs['archive'], {'command': list(args), 'stdout': str(started)})
+                    return started
+                if args[3] == 'C' and fail_c[0]:
+                    fail_c[0] = False
+                    return dict(copy.deepcopy(failure), runId=args[4])
+                if args[3] == 'C' and len(submissions) == 4 and lose_retry_poll[0]:
+                    lose_retry_poll[0] = False
+                    raise RuntimeError('retry poll transport lost')
+                return {'runId': args[4], 'status': 'completed', 'dataCreditsUsed': 1, 'actionCreditsUsed': 1,
+                        'nodes': [{'nodeId': args[3], 'outputs': {'stepsTaken': []}}]}
+            args = argparse.Namespace(concurrency=30, limit=None, stop_after_pairs=None,
+                                      output=root / 'baseline', allow_credit_use=True, timeout=1,
+                                      start_interval=2, retry_initialization_failures=False)
+            with patch.object(runner, 'ROOT', root), patch.object(runner, 'state_read', return_value=state), \
+                 patch.object(runner, 'config', return_value=cfg), patch.object(runner, 'preflight', return_value={}), \
+                 patch.object(runner, 'cli', side_effect=fake_cli), patch.object(runner.time, 'time', side_effect=lambda: clock[0]), \
+                 patch.object(runner.time, 'sleep', side_effect=sleep), \
+                 patch.object(runner, 'now', side_effect=lambda: runner.dt.datetime.fromtimestamp(clock[0], runner.dt.timezone.utc).isoformat()), \
+                 contextlib.redirect_stdout(io.StringIO()):
+                runner.run(args)
+                self.assertEqual(submissions, [('A', 1000.0), ('B', 1002.0)])
+                self.assertEqual(sleeps, [2])
+                state['arms'] = {'C': {'workflow_id': 'C', 'node_id': 'C'}}
+                cfg.update(strategy='verify', verification_prompt='base verify')
+                args.output = root / 'variant'
+                runner.run(args)
+                original = runner.read(args.output / 'manifest.json')
+                original_record = copy.deepcopy(original['runs'][0])
+                frozen_hash = original['frozen_hash']
+                original_start = (args.output / '01-C' / 'start-call.json').read_bytes()
+                self.assertEqual(len(submissions), 3)
+                runner.run(args)
+                self.assertEqual(len(submissions), 3, 'Ordinary resume must not retry failed runs')
+                # Reject paid/research/non-rate failures even if a retry was requested.
+                original_result = runner.read(args.output / '01-C' / 'result.json')
+                for field, value in [('dataCreditsUsed', 0.1), ('error', 'Different failure')]:
+                    altered = dict(original_result, **{field: value})
+                    self.assertFalse(runner.eligible_initialization_failure(original_record, altered))
+                altered = copy.deepcopy(original_result)
+                altered['nodes'][0]['outputs']['stepsTaken'] = ['Searched Google with query "X"']
+                self.assertFalse(runner.eligible_initialization_failure(original_record, altered))
+                args.retry_initialization_failures = True
+                with self.assertRaisesRegex(RuntimeError, 'retry poll transport lost'):
+                    runner.run(args)
+                self.assertEqual(runner.read(args.output / 'manifest.json')['runs'][0]['run_id'], 'r4')
+                runner.run(args)
+                self.assertEqual(len(submissions), 4)
+                after = runner.read(args.output / 'manifest.json')
+                self.assertEqual(after['frozen_hash'], frozen_hash)
+                self.assertEqual(after['runs'][0]['prior_attempts'][0]['run_id'], original_record['run_id'])
+                self.assertEqual((args.output / '01-C' / 'attempts' / '1' / 'start-call.json').read_bytes(), original_start)
+                self.assertEqual(runner.read(args.output / '01-C' / 'attempts' / '1' / 'result.json')['status'], 'failed')
+                self.assertEqual(runner.read(args.output / '01-C' / 'result.json')['status'], 'completed')
+                self.assertFalse(runner.eligible_initialization_failure(after['runs'][0], original_result))
+                runner.run(args)
+                self.assertEqual(len(submissions), 4)
+                summary = runner.read(args.output / 'summary.json')
+                self.assertEqual(summary['provider_attempts_observed'], 2)
+                self.assertEqual(summary['action_credits_observed'], 3)
+                self.assertEqual(summary['data_credits_observed'], 1)
+                self.assertEqual(summary['execution_by_arm']['C']['archived_initialization_failures'], 1)
+                with patch.object(runner, 'cli', side_effect=AssertionError('Offline call')):
+                    runner.compare(root / 'baseline', root / 'variant', root / 'comparison')
+                    compared = runner.read(root / 'comparison' / 'summary.json')
+                    self.assertEqual(compared['comparison_costs']['new_variant']['action_credits_observed'], 3)
+                    self.assertEqual(compared['provider_attempts_observed'], 4)
+                    self.assertTrue((root / 'comparison' / '01-C' / 'attempts' / '1' / 'result.json').exists())
+
+    def test_strategy_state_and_default_concurrency(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            local = Path(temporary)
+            with patch.object(runner, 'LOCAL', local), patch.object(runner, 'STATE', local / 'state.json'), \
+                 patch.object(runner, 'STRATEGY', 'optional'), patch.object(runner, 'setup') as setup, \
+                 patch.object(runner.sys, 'argv', ['eval', 'setup', '--strategy', 'verify']):
+                runner.main()
+                setup.assert_called_once()
+                self.assertEqual(runner.STATE, local / 'verify' / 'state.json')
+                self.assertFalse((local / 'state.json').exists())
+            with patch.object(runner, 'LOCAL', local), patch.object(runner, 'STATE', local / 'state.json'), \
+                 patch.object(runner, 'STRATEGY', 'optional'), patch.object(runner, 'run') as run, \
+                 patch.object(runner.sys, 'argv', ['eval', 'run', '--output', temporary]):
+                runner.main()
+                self.assertEqual(run.call_args.args[0].concurrency, 30)
+                self.assertEqual(run.call_args.args[0].start_interval, 2)
+                self.assertEqual(runner.STATE, local / 'state.json')
+
+    def test_c_only_checkpoint_resume_comparison_and_guards(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            cases = [dict(id=f'c{i}', company_name=f'Company {i}', domain=f'c{i}.test',
+                          as_of='2026-09-30', task_type='funding_and_lifecycle') for i in range(2)]
+            runner.save(root / 'cases.json', cases)
+            runner.save(root / 'output-schema.json', {})
+            (root / 'prompt.txt').write_text('Original prompt.\n')
+            (root / 'prompt-verify.txt').write_text('Original prompt.\nVerify latest facts using Keenable.')
+            state = {'workspace_id': 'test', 'arms': {arm: {'workflow_id': arm, 'node_id': arm} for arm in 'AB'}}
+            submissions = []
+            def fake_cli(*args, **kwargs):
+                if args[:3] == ('workflows', 'runs', 'test'):
+                    submissions.append(args[3])
+                    return {'runId': f'run-{len(submissions)}', 'status': 'pending'}
+                self.assertEqual(args[-3:], ('--wait', '5', '--verbose'))
+                return {'runId': args[4], 'status': 'completed', 'dataCreditsUsed': 1,
+                        'actionCreditsUsed': 1, 'nodes': [{'nodeId': args[3], 'outputs': {'stepsTaken': []}}]}
+            args = argparse.Namespace(concurrency=30, limit=None, stop_after_pairs=None, output=root / 'baseline',
+                                      allow_credit_use=True, timeout=1)
+            with patch.object(runner, 'ROOT', root), patch.object(runner, 'state_read', return_value=state), \
+                 patch.object(runner, 'STRATEGY', 'optional'), patch.object(runner, 'preflight', return_value={}), \
+                 patch.object(runner, 'cli', side_effect=fake_cli), contextlib.redirect_stdout(io.StringIO()):
+                runner.run(args)
+                baseline_hash = runner.read(args.output / 'manifest.json')['frozen_hash']
+                self.assertEqual(submissions, ['A', 'B', 'B', 'A'])
+                runner.STRATEGY = 'verify'
+                state['arms'] = {'C': {'workflow_id': 'C', 'node_id': 'C'}}
+                cfg = runner.config()
+                self.assertEqual(runner.node_spec('C', 't', cfg)['agentPrompt'], cfg['verification_prompt'])
+                with self.assertRaisesRegex(RuntimeError, 'Resume rejected'):
+                    runner.run(args)
+                self.assertEqual(len(submissions), 4)
+                args.output = root / 'variant'
+                args.stop_after_pairs = 1
+                runner.run(args)
+                self.assertEqual(submissions[4:], ['C'])
+                runner.run(args)
+                self.assertEqual(submissions[4:], ['C'])
+                args.stop_after_pairs = None
+                runner.run(args)
+                self.assertEqual(submissions[4:], ['C', 'C'])
+                summary = runner.read(args.output / 'summary.json')
+                self.assertEqual(set(summary['execution_by_arm']), {'C'})
+                self.assertIn('C target fields', (args.output / 'results.md').read_text())
+                for directory, arms in [(root / 'baseline', 'AB'), (root / 'variant', 'C')]:
+                    runner.save(directory / 'judgments.json', {'cases': [
+                        {'case_id': case['id'], 'arm': arm, 'scored_task': 'funding_and_lifecycle',
+                         'fields': {'stage': arm == 'C'}, 'supported_answer': arm == 'C'}
+                        for case in cases for arm in arms]})
+                with patch.object(runner, 'cli', side_effect=AssertionError('Offline command called provider')):
+                    runner.compare(root / 'baseline', root / 'variant', root / 'comparison')
+                    result = runner.read(root / 'comparison' / 'summary.json')
+                    self.assertEqual(set(result['execution_by_arm']), {'A', 'B', 'C'})
+                    self.assertEqual(result['accuracy']['paired_comparisons']['AB']['ties'], 2)
+                    self.assertEqual(result['accuracy']['paired_comparisons']['AC']['C_wins'], 2)
+                    self.assertEqual(result['accuracy']['paired_comparisons']['BC']['C_wins'], 2)
+                    self.assertEqual(result['comparison_costs']['reused_baseline']['data_credits_observed'], 4)
+                    self.assertEqual(result['comparison_costs']['new_variant']['data_credits_observed'], 2)
+                    self.assertEqual(result['new_provider_calls_in_comparison'], 0)
+                    self.assertEqual(result['provenance']['baseline']['frozen_hash'], baseline_hash)
+                    manifest = runner.read(root / 'comparison' / 'manifest.json')
+                    source = manifest['runs'][0]['provenance']['source_result']
+                    self.assertFalse(Path(source).is_absolute())
+                    self.assertEqual((root / 'comparison' / source).resolve(),
+                                     (root / 'baseline' / '01-A' / 'result.json').resolve())
+                    self.assertEqual(result['provenance']['baseline']['directory'], '../baseline')
+                    before = (root / 'comparison' / 'summary.json').read_bytes()
+                    runner.reproduce(root / 'comparison')
+                    self.assertEqual(before, (root / 'comparison' / 'summary.json').read_bytes())
+                    # Deliberately mismatched but internally consistent source input.
+                    changed = runner.read(root / 'variant' / 'manifest.json')
+                    changed['frozen']['cases'][0]['domain'] = 'changed.test'
+                    changed['runs'][0]['inputs']['domain'] = 'changed.test'
+                    changed['frozen_hash'] = runner.digest(changed['frozen'])
+                    runner.save(root / 'variant' / 'manifest.json', changed)
+                    with self.assertRaisesRegex(RuntimeError, 'different inputs'):
+                        runner.compare(root / 'baseline', root / 'variant', root / 'rejected')
+                    self.assertFalse((root / 'rejected').exists())
+                args.concurrency = 31
+                with self.assertRaisesRegex(RuntimeError, '1..30'):
+                    runner.run(args)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,1829 @@
+{
+  "reviewed_on": "2026-09-30",
+  "review_method": "Source-based Codex adjudication with visible condition labels; final reference corrections applied across conditions. Target metrics do not certify every additional claim.",
+  "cases": [
+    {
+      "case_id": "freeman_seattle",
+      "arm": "C",
+      "scored_task": "entity_resolution",
+      "fields": {
+        "entity_resolution": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "C correctly identifies the same Seattle clothing and raincoat business from its official about page and homepage. The historical wrong-entity complaint is not reproduced in any condition.",
+      "evidence_checks": [
+        {
+          "claim": "Clothing and raincoats business",
+          "url": "https://www.freemanseattle.com/pages/about",
+          "assessment": "Company source and homepage support correct identity/product description. Founding date is not required."
+        }
+      ]
+    },
+    {
+      "case_id": "keenable",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "funding_stage": true,
+        "announcement_date": true,
+        "lead_investor": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Correct seed, August 25 and Accel with TechCrunch citation corroborated by the independent investor reference. Amount and current lifecycle are outside scored dimensions.",
+      "evidence_checks": [
+        {
+          "claim": "Seed financing led by Accel on August 25, 2026",
+          "url": "https://www.accel.com/news/our-seed-investment-in-keenable-search-infrastructure-for-better-ai-agents",
+          "assessment": "Independent primary reference supports the answer; both outputs cite TechCrunch reporting linked from the company site."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents/",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        }
+      ],
+      "output_citations": [
+        "https://keenable.ai/about",
+        "https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents/",
+        "https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents/",
+        "https://keenable.ai/about"
+      ]
+    },
+    {
+      "case_id": "wayve",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "funding_stage": true,
+        "extension_recognition": true,
+        "announcement_date": true,
+        "event_amount": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Correctly recognizes April 15 USD 60M Series D extension using the company announcement, separately from February financing and employee liquidity.",
+      "evidence_checks": [
+        {
+          "claim": "Later Series D extension",
+          "url": "https://wayve.ai/press/series-d-extension/",
+          "assessment": "Primary announcement dated April 15 states $60M investment extending Series D. Both answers cite the earlier round, not this event."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://wayve.ai/press/series-d/",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        }
+      ],
+      "output_citations": [
+        "https://wayve.ai/",
+        "https://wayve.ai/press/series-d/",
+        "https://wayve.ai/press/series-d-extension/",
+        "https://www.reuters.com/business/mercedes-wayve-partner-up-autonomous-driving-2026-09-22/"
+      ]
+    },
+    {
+      "case_id": "aikido_security",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "funding_stage": true,
+        "announcement_date": true,
+        "event_amount": true,
+        "lead_investor": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Correct January 14 Series B USD 60M led by DST Global. Company citation supports scored facts; relative search-result age is not a reliable publication date for the unscored About-page claim.",
+      "evidence_checks": [
+        {
+          "claim": "Series B terms",
+          "url": "https://www.aikido.dev/blog/aikido-funding-series-b",
+          "assessment": "Primary source matches stage, date, amount and lead."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://www.aikido.dev/blog/aikido-funding-series-b",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        }
+      ],
+      "output_citations": [
+        "https://www.aikido.dev/",
+        "https://www.aikido.dev/blog/aikido-funding-series-b",
+        "https://www.reuters.com/technology/belgian-cybersecurity-startup-aikido-hits-unicorn-status-with-new-funding-round-2026-01-14/",
+        "https://www.aikido.dev/company/about"
+      ]
+    },
+    {
+      "case_id": "material_depot",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "funding_stage": true,
+        "announcement_month": true,
+        "event_amount": true,
+        "lead_investors": true,
+        "entity_resolution": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Correct Indian interiors company, February Series A USD 10M with Accel and Stellaris. Exact day is unscored. Embedded evidence string is malformed JSON but readable; this is a formatting caveat, not a factual failure.",
+      "evidence_checks": [
+        {
+          "claim": "Series A terms and month",
+          "url": "https://www.linkedin.com/posts/materialdepot_were-happy-to-share-a-major-milestone-for-activity-7425536192487702529-G_lO",
+          "assessment": "Company primary announcement corroborates both answers. Both cite February 5 independent reporting, with the limitation disclosed."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://inc42.com/buzz/material-depot-nets-10-mn-to-scale-omnichannel-home-interiors-play/",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        }
+      ],
+      "output_citations": [
+        "https://materialdepot.com",
+        "https://inc42.com/buzz/material-depot-nets-10-mn-to-scale-omnichannel-home-interiors-play/",
+        "https://inc42.com/buzz/material-depot-nets-10-mn-to-scale-omnichannel-home-interiors-play/",
+        "https://m.economictimes.com/tech/funding/interior-decor-startup-material-depot-raises-10-million-from-accel-stellaris-venture-partners/articleshow/127915373.cms",
+        "https://app.fundz.net/signals/materialdepot.com"
+      ],
+      "format_caveat": "Nested evidence JSON is malformed; factual content manually inspected."
+    },
+    {
+      "case_id": "lovable",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": true,
+        "funding_stage": true,
+        "announcement_date": true,
+        "event_amount": true,
+        "lead_investors": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Correct August 12 USD 400M Series C led by Menlo and co-led by EQT-managed Scaleup Europe, cited to company announcement.",
+      "evidence_checks": [
+        {
+          "claim": "Series C, August 12, USD400M, Menlo Ventures and EQT-managed Scaleup Europe Fund",
+          "url": "https://lovable.dev/blog/series-c",
+          "assessment": "Supported by original company announcement inspected before evaluation; exact date and facts match."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://lovable.dev/blog/series-c",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        }
+      ],
+      "output_citations": [
+        "https://lovable.dev",
+        "https://lovable.dev/blog/series-c",
+        "https://lovable.dev/blog/series-c",
+        "https://www.reuters.com/business/media-telecom/vibe-coding-startup-lovable-raises-400-million-133-billion-valuation-2026-08-12/",
+        "https://techcrunch.com/2026/09/24/lovables-annualized-revenue-crosses-600m-as-vibe-coding-takes-off/"
+      ]
+    },
+    {
+      "case_id": "supabase",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": true,
+        "funding_stage": true,
+        "announcement_date": true,
+        "event_amount": true,
+        "lead_investors": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Correct June 4 Series F USD 500M led by GIC with primary company citation. Pre-money versus post-money valuation is correctly distinguished and is not a scored amount ambiguity.",
+      "evidence_checks": [
+        {
+          "claim": "Scored funding facts",
+          "url": "https://supabase.com/blog/supabase-series-f",
+          "assessment": "Primary company announcement dated June 4 confirms Series F, USD 500M, led by GIC. Pre-money valuation and employee liquidity are distinct."
+        }
+      ]
+    },
+    {
+      "case_id": "elevenlabs",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": false,
+        "funding_stage": true,
+        "announcement_date": false,
+        "extension_recognition": true
+      },
+      "supported_answer": false,
+      "missing_facts": [
+        "June 17 investor / June 18 company disclosure of completed Vinci investment in extended Series D."
+      ],
+      "wrong_claims": [
+        "February 4 is used as latest round announcement date even though answer recognizes a later third close, and the final audited June investment is missing."
+      ],
+      "unsupported_claims": [],
+      "notes": "Recognizes May 5 third close of Series D in evidence and uncertainties, so extension_recognition is true consistently with B. Returning the original February date does not satisfy latest-event date: C also misses the independently verified June 17/18 Vinci/BGK completed investment in extended Series D. Lack of a separately quantified May close does not remove it from the task. No amount target is added.",
+      "evidence_checks": [
+        {
+          "claim": "Scored funding facts",
+          "url": "https://elevenlabs.io/blog/500m-arr-and-new-investors",
+          "assessment": "Primary page published May 5 explicitly describes the third close of Series D. September 20 is page update; incremental amount is undisclosed."
+        },
+        {
+          "claim": "Later completed Vinci investment in extended Series D",
+          "url": "https://media.bgk.pl/komunikat-prasowy/vinci-z-grupy-bgk-inwestuje-w-elevenlabs-powstanie-ai-lab-poland/",
+          "assessment": "Fresh primary investor announcement dated June 17, 2026 says Vinci became a shareholder and invested USD 11M as part of extended Series D. Do not mistake prospective AI Lab project capital for this transaction."
+        },
+        {
+          "claim": "Company confirms Poland has taken a stake",
+          "url": "https://elevenlabs.io/blog/poland-invests-in-elevenlabs",
+          "assessment": "Fresh company primary dated June 18 confirms completed stake via Vinci/BGK. It is later public financing evidence than the May 5 third-close anchor."
+        },
+        {
+          "claim": "Transaction counsel confirms Series D extension",
+          "url": "https://www.gtlaw.com/en/news/2026/06/press-releases/greenberg-traurig-advised-vinci-on-its-investment-in-elevenlabs",
+          "assessment": "Investor counsel June 18 states it advised Vinci on its investment in extended Series D; supports financing classification."
+        }
+      ]
+    },
+    {
+      "case_id": "helsing",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": true,
+        "funding_stage": true,
+        "announcement_date": true,
+        "event_amount": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Correct July 13 Series E USD 1.8B. Lead is not a scored target.",
+      "evidence_checks": [
+        {
+          "claim": "Scored funding facts",
+          "url": "https://helsing.ai/newsroom/helsing-raises-1-8bn-in-series-e",
+          "assessment": "Company July 13 release confirms Series E and USD 1.8B. Investors are listed without an explicit lead."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://helsing.ai/newsroom/helsing-raises-1-8bn-in-series-e",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        }
+      ],
+      "output_citations": [
+        "https://helsing.ai/newsroom/helsing-raises-1-8bn-in-series-e",
+        "https://helsing.ai/newsroom/helsing-raises-1-8bn-in-series-e",
+        "https://www.reuters.com/business/aerospace-defense/europes-helsing-raises-18-billion-valuing-defence-group-18-billion-2026-07-13/",
+        "https://helsing.ai/newsroom/helsing-raises-1-8bn-in-series-e"
+      ]
+    },
+    {
+      "case_id": "mistral_ai",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": true,
+        "funding_stage": true,
+        "event_amount": true,
+        "lead_investors": true,
+        "announcement_month": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Correct September Series D EUR 3B and three co-leads. Company source supports stage and Reuters supports amount and leaders. Only month is scored.",
+      "evidence_checks": [
+        {
+          "claim": "Scored funding facts",
+          "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+          "assessment": "Company explicitly labels EUR 3B financing Series D, with Samsung leading and PSG Equity plus Scaleup Europe Fund co-leading. Samsung partner release confirms September announcement."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        }
+      ],
+      "output_citations": [
+        "https://mistral.ai",
+        "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+        "https://www.reuters.com/world/europe/french-ai-company-mistral-hits-24-billion-valuation-funding-round-2026-09-08/",
+        "https://www.reuters.com/world/europe/french-ai-company-mistral-hits-24-billion-valuation-funding-round-2026-09-08/",
+        "https://techjournal.org/mistral-samsung-ai-funding"
+      ]
+    },
+    {
+      "case_id": "nscale",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": true,
+        "funding_stage": true,
+        "announcement_date": true,
+        "event_amount": true,
+        "lead_investors": true,
+        "debt_distinction": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Correct March 9 equity Series C USD 2B led by Aker and 8090. Separates later convertible loan notes from venture equity. Legal IPO status is outside scored targets.",
+      "evidence_checks": [
+        {
+          "claim": "Series C equity financing",
+          "url": "https://www.nscale.com/press-releases/nscale-series-c",
+          "assessment": "March 9 primary confirms USD 2B, Series C and Aker ASA plus 8090 Industries."
+        },
+        {
+          "claim": "Separate later convertible notes",
+          "url": "https://www.nscale.com/press-releases/pre-ipo-convertible-financing",
+          "assessment": "September 25 primary announces convertible financing with initial USD 2.36B tranche and USD 1B future commitment. It is not a later venture equity round."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://www.nscale.com/press-releases/nscale-series-c",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        }
+      ],
+      "output_citations": [
+        "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
+        "https://www.nscale.com/press-releases/nscale-series-c",
+        "https://www.nscale.com/press-releases/nscale-series-c",
+        "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
+        "https://techfundingnews.com/nscale-raises-3-36b-in-pre-ipo-financing-to-accelerate-full-stack-ai-cloud-expansion/"
+      ]
+    },
+    {
+      "case_id": "isomorphic_labs",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": true,
+        "funding_stage": true,
+        "announcement_date": true,
+        "event_amount": true,
+        "lead_investors": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [
+        "Unscored lifecycle private_independent is not established; answer itself cites Alphabet subsidiary evidence."
+      ],
+      "notes": "Correct May 12 Series B USD 2.1B led by Thrive using company announcement. The answer calls lifecycle private-independent despite evidence of Alphabet subsidiary status; lifecycle is outside frozen funding targets and no ownership point is awarded.",
+      "evidence_checks": [
+        {
+          "claim": "Scored funding facts",
+          "url": "https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-series-b-investment-round",
+          "assessment": "Company May 12 announcement confirms Series B, USD 2.1B and Thrive Capital lead."
+        }
+      ]
+    },
+    {
+      "case_id": "harvey",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": false,
+        "funding_stage": false,
+        "announcement_date": false,
+        "event_amount": false,
+        "extension_recognition": false
+      },
+      "supported_answer": false,
+      "missing_facts": [
+        "September 24 extension, USD 50M incremental or USD 600M combined round."
+      ],
+      "wrong_claims": [
+        "USD 550M September 9 financing is presented as latest without the September 24 extension."
+      ],
+      "unsupported_claims": [],
+      "notes": "C has the same target gap as the original answers. Original arms find original September round but omit latest extension. Generic venture funding stage does not recognize extension; lettered series is not required. Failed dimensions are correlated consequences of one missed extension, not independent factual errors.",
+      "evidence_checks": [
+        {
+          "claim": "Latest financing extension",
+          "url": "https://www.harvey.ai/blog/harvey-announces-investment-from-ontario-teachers-pension-plan-and-deepens-its-commitment-to-canada",
+          "assessment": "September 24 company announcement confirms completed USD 50M TVG investment extending the recent round to USD 600M."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://www.harvey.ai/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        }
+      ],
+      "output_citations": [
+        "https://www.harvey.ai/company",
+        "https://www.harvey.ai/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence",
+        "https://www.harvey.ai/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence",
+        "https://www.reuters.com/legal/government/legal-ai-startup-harvey-reaches-155-billion-valuation-new-funding-round-2026-09-09/"
+      ]
+    },
+    {
+      "case_id": "replit",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": true,
+        "announcement_date": true,
+        "event_amount": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Correct March 11 USD 400M. Company-hosted funding story supports amount; company news index dates this exact story March 11. Stage and lead are outside frozen targets.",
+      "evidence_checks": [
+        {
+          "claim": "Round date and USD 400M amount",
+          "url": "https://replit.com/blog/replit-raises-400-million-dollars",
+          "assessment": "Company announcement confirms March 11 and USD 400M."
+        },
+        {
+          "claim": "Additional stage and lead",
+          "url": "https://www.prnewswire.com/news-releases/georgian-leads-400m-series-d-investment-in-replit-to-support-continued-investment-in-replit-agent-302711218.html",
+          "assessment": "Investor-issued release confirms Georgian led USD 400M Series D; supported additional fields."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://replit.com/news/funding-announcement",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        },
+        {
+          "claim": "Additional C-source check",
+          "url": "https://replit.com/news",
+          "assessment": "Fresh company news index dates the exact funding-announcement story cited by C to March 11, 2026; the cited story supports USD 400M. Separate official founder post also confirms March 11 amount."
+        }
+      ],
+      "output_citations": [
+        "https://replit.com/",
+        "https://replit.com/news/funding-announcement",
+        "https://tech-insider.org/ie/replit-9-billion-valuation-2026/",
+        "https://replit.com/",
+        "https://aistackcurrent.com/companies/replit"
+      ]
+    },
+    {
+      "case_id": "ramp",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": true,
+        "funding_stage": true,
+        "announcement_date": true,
+        "event_amount": true,
+        "lead_investors": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Correct June 4 Series F USD 750M and disclosed co-leads. Later fundraising talks do not establish another completed event.",
+      "evidence_checks": [
+        {
+          "claim": "Scored funding facts",
+          "url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+          "assessment": "Company-distributed June 4 announcement confirms Series F, USD 750M primary financing and ICONIQ, GIC, Ontario Teachers leads."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        }
+      ],
+      "output_citations": [
+        "https://ramp.com/",
+        "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+        "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+        "https://www.reuters.com/legal/transactional/fintech-firm-ramps-valuation-surges-44-billion-ai-driven-growth-2026-06-04/",
+        "https://www.reuters.com/legal/transactional/fintech-firm-ramps-valuation-surges-44-billion-ai-driven-growth-2026-06-04/"
+      ]
+    },
+    {
+      "case_id": "rillet",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": true,
+        "funding_stage": true,
+        "event_amount": true,
+        "lead_investors": true,
+        "announcement_month": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Correct August Series C USD 100M led by ICONIQ. Exact date differs among company and syndicated reports; only August month is a scored target. No exact-day penalty.",
+      "evidence_checks": [
+        {
+          "claim": "Scored funding facts",
+          "url": "https://www.rillet.com/blog/rillet-raises-100m-series-c-at-1b-valuation-to-build-accounting-superintelligence",
+          "assessment": "Company press release dateline August 17, 2026 confirms USD 100M Series C and ICONIQ lead. This is stronger exact-day evidence than reference investor announcement August 18."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://www.rillet.com/blog/rillet-raises-70m-series-b-from-andreessen-horowitz-and-iconiq",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        },
+        {
+          "claim": "Additional C-source check",
+          "url": "https://www.rillet.com/blog/rillet-raises-100m-series-c-at-1b-valuation-to-build-accounting-superintelligence",
+          "assessment": "Fresh primary body confirms August Series C USD 100M led by ICONIQ; August 17 company dateline differs from August 19 syndication. Monthly target remains correct."
+        }
+      ],
+      "output_citations": [
+        "https://www.rillet.com/blog/rillet-raises-70m-series-b-from-andreessen-horowitz-and-iconiq",
+        "https://www.rillet.com/blog/rillet-raises-70m-series-b-from-andreessen-horowitz-and-iconiq",
+        "https://finance.yahoo.com/technology/ai/articles/rillet-raises-100m-series-c-120000458.html",
+        "https://techcrunch.com/2026/08/21/how-ai-accounting-startup-rillet-raised-100m-and-became-a-unicorn-in-48-hours/",
+        "https://techcrunch.com/2026/08/21/how-ai-accounting-startup-rillet-raised-100m-and-became-a-unicorn-in-48-hours/"
+      ]
+    },
+    {
+      "case_id": "pennylane",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": true,
+        "announcement_month": true,
+        "event_amount": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Correct January EUR 175M. Lettered stage and lead are not frozen targets, so cautious unknown stage is accepted. Bloomberg and reporting support the amount and month.",
+      "evidence_checks": [
+        {
+          "claim": "Required month and amount",
+          "url": "https://www.pennylane.com/fr/investisseurs",
+          "assessment": "Company funding history lists EUR 175M in January 2026."
+        },
+        {
+          "claim": "Additional stage and co-lead label",
+          "url": "https://www.willkie.com/news/2026/01/willkie-advises-blackstone-growth-on-investment-in-pennylane",
+          "assessment": "Investor legal adviser describes Series F and Blackstone Growth co-lead; Latham describes TCV lead. These differences do not affect scored targets."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://www.bloomberg.com/news/articles/2026-01-20/tcv-blackstone-back-startup-pennylane-at-4-25-billion-value",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        },
+        {
+          "claim": "Additional C-source check",
+          "url": "https://www.maddyness.com/2026/01/20/pennylane-nouvelle-levee-de-fonds-de-175-millions-deuros-pour-la-licorne-francaise/",
+          "assessment": "Fresh French article confirms January EUR 175M. C English variant URL did not open in adjudication; corresponding original reporting and independently inspected company reference support scored facts. Bloomberg is also cited by C."
+        }
+      ],
+      "output_citations": [
+        "https://www.pennylane.com",
+        "https://www.bloomberg.com/news/articles/2026-01-20/tcv-blackstone-back-startup-pennylane-at-4-25-billion-value",
+        "https://www.maddyness.com/uk/2026/01/20/pennylane-new-e175-million-funding-round-for-the-french-unicorn/",
+        "https://www.eu-startups.com/2026/01/sequoia-backed-french-accounting-unicorn-pennylane-secures-e175-million-as-it-approaches-profitability"
+      ]
+    },
+    {
+      "case_id": "n8n",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": true,
+        "latest_financing_recognition": true,
+        "valuation_vs_amount": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Correctly recovers May 12 SAP strategic investment and separates USD 5.2B valuation from unknown investment amount. Preserving October Series C as latest named round plus explicit later-investment supplement is allowed by the shared contract.",
+      "evidence_checks": [
+        {
+          "claim": "Latest strategic financing recognition",
+          "url": "https://blog.n8n.io/n8n-sap/",
+          "assessment": "May 12 primary states SAP invested, values n8n at USD 5.2B, and does not disclose amount. Both answers preserve this distinction."
+        },
+        {
+          "claim": "Earlier named venture round",
+          "url": "https://blog.n8n.io/series-c/",
+          "assessment": "October 9, 2025 primary confirms USD 180M Series C led by Accel. B clearly attaches amount to this event."
+        }
+      ]
+    },
+    {
+      "case_id": "alan",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": true,
+        "funding_stage": true,
+        "announcement_date": true,
+        "event_amount": true,
+        "lead_investors": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Correct June 25 Series G EUR 480M led by Prosus. Approvals qualifier is preserved. August shareholder letter does not require a new funding event.",
+      "evidence_checks": [
+        {
+          "claim": "Series G and EUR 480M in June",
+          "url": "https://alan.com/en/blog/discover-alan/a/alan-2026-q2-letter-to-shareholders",
+          "assessment": "Company Q2 letter explicitly identifies June Series G, EUR 480M and Prosus."
+        },
+        {
+          "claim": "June 24 investor announcement",
+          "url": "https://www.prosus.com/news-insights/2026/prosus-leads-euros-480-million-funding-round-in-alan-to-shape-the-future-of-ai-powered-healthcare?trk=article-ssr-frontend-pulse_little-text-block",
+          "assessment": "Primary content confirms financing and primary/secondary equity mix. Date absent in web extraction; contemporaneous public reporting and indexed references corroborate June 24, so do not treat as wrong against June 25 company release."
+        },
+        {
+          "claim": "June 25 company announcement",
+          "url": "https://alan.com/fr-fr/blog/tout-alan/a/alan-leve-480-millions-deuros-pour-faire-de-la-prevention-le-nouveau-standard-mondial-de-la-sante",
+          "assessment": "Company dated announcement supports June 25, subject to regulatory approvals."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://www.prnewswire.com/news-releases/alan-announces-a-480-million-financing-round-to-make-prevention-insurance-the-new-global-standard-in-healthcare-302809870.html",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        }
+      ],
+      "output_citations": [
+        "https://alan.com/en",
+        "https://www.prnewswire.com/news-releases/alan-announces-a-480-million-financing-round-to-make-prevention-insurance-the-new-global-standard-in-healthcare-302809870.html",
+        "https://www.prnewswire.com/news-releases/alan-announces-a-480-million-financing-round-to-make-prevention-insurance-the-new-global-standard-in-healthcare-302809870.html",
+        "https://www.prnewswire.com/news-releases/alan-announces-a-480-million-financing-round-to-make-prevention-insurance-the-new-global-standard-in-healthcare-302809870.html",
+        "https://alan.com/en/blog/discover-alan/a/alan-2026-q2-letter-to-shareholders",
+        "https://www.prnewswire.com/news-releases/alan-announces-a-480-million-financing-round-to-make-prevention-insurance-the-new-global-standard-in-healthcare-302809870.html",
+        "https://healthcare.digital/single-post/strategic-reconfiguration-of-global-healthcare-analysing-prosus-s-400-million-investment-in-alan-a"
+      ]
+    },
+    {
+      "case_id": "quince",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": true,
+        "funding_stage": true,
+        "announcement_date": true,
+        "event_amount": true,
+        "lead_investors": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Correct March 11 retail Quince Series E USD 500M led by ICONIQ. Reuters citation agrees with verified company-issued announcement.",
+      "evidence_checks": [
+        {
+          "claim": "Scored funding facts",
+          "url": "https://www.prnewswire.com/news-releases/quince-raises-500m-series-e-resulting-in-10-1b-valuation-to-accelerate-the-manufacturer-to-consumer-platform-302710298.html",
+          "assessment": "Previously inspected company-issued corrected release confirms March 11, USD 500M Series E, ICONIQ lead. USD 10.1B is valuation."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://www.reuters.com/technology/quince-raises-500-million-101-billion-valuation-2026-03-11/",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        }
+      ],
+      "output_citations": [
+        "https://www.quince.com",
+        "https://www.reuters.com/technology/quince-raises-500-million-101-billion-valuation-2026-03-11/",
+        "https://www.reuters.com/technology/quince-raises-500-million-101-billion-valuation-2026-03-11/",
+        "http://www.nasdaqprivatemarket.com/company/quince/"
+      ]
+    },
+    {
+      "case_id": "cyera",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": true,
+        "funding_stage": true,
+        "announcement_date": true,
+        "event_amount": true,
+        "lead_investors": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Correct September 22 Series G extension USD 400M. Distinguishes Goldman Sachs Alternatives extension investment from Evolution Equity leadership of the underlying round.",
+      "evidence_checks": [
+        {
+          "claim": "Newer pre-cutoff extension",
+          "url": "https://www.cyera.com/press-releases/cyera-announces-400-million-investment-from-goldman-sachs-to-build-the-trust-layer-for-the-agentic-enterprise",
+          "assessment": "Primary company release confirms September 22 Series G extension, USD 400M from Growth Equity at Goldman Sachs Alternatives, with original round led by Evolution Equity."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://finance.yahoo.com/technology/ai/articles/cyera-announces-400-million-investment-111500622.html",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        }
+      ],
+      "output_citations": [
+        "https://www.cyera.com/",
+        "https://finance.yahoo.com/technology/ai/articles/cyera-announces-400-million-investment-111500622.html",
+        "https://finance.yahoo.com/technology/ai/articles/cyera-announces-400-million-investment-111500622.html",
+        "https://finance.yahoo.com/technology/ai/articles/cyera-receives-400m-funding-advance-090157379.html"
+      ]
+    },
+    {
+      "case_id": "airwallex",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": true,
+        "funding_stage": true,
+        "announcement_date": true,
+        "event_amount": true,
+        "lead_investors": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Correct June 25 Series H USD 320M led by Addition. Does not label participating T. Rowe Price or Hummingbird as co-leads.",
+      "evidence_checks": [
+        {
+          "claim": "Scored funding facts and investor roles",
+          "url": "https://www.airwallex.com/global/newsroom/airwallex-secures-320-million-in-series-h-funding-valuation-hits-11-billion",
+          "assessment": "Primary June 25 release confirms Series H, USD 320M, Addition lead; T. Rowe Price and Hummingbird are participants. Reuters anchored-by phrasing does not explicitly make participants co-leads."
+        },
+        {
+          "claim": "Exact lead_investors output: Addition, T. Rowe Price, Hummingbird",
+          "url": "https://www.airwallex.com/global/newsroom/airwallex-secures-320-million-in-series-h-funding-valuation-hits-11-billion",
+          "assessment": "Structured output explicitly puts all three in lead_investors. Primary identifies Addition as lead and other two as participants; Reuters anchor wording is not explicit co-lead evidence."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://www.airwallex.com/global/newsroom/airwallex-secures-320-million-in-series-h-funding-valuation-hits-11-billion",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        }
+      ],
+      "output_citations": [
+        "https://www.airwallex.com/en-us/who-we-are",
+        "https://www.airwallex.com/global/newsroom/airwallex-secures-320-million-in-series-h-funding-valuation-hits-11-billion",
+        "https://www.airwallex.com/global/newsroom/airwallex-secures-320-million-in-series-h-funding-valuation-hits-11-billion",
+        "https://fortune.com/article/airwallex-fundraise-lucy-liu-ai-fintech-ipo-08-20-2026/"
+      ]
+    },
+    {
+      "case_id": "abridge",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": null,
+        "funding_stage": null,
+        "announcement_date": null,
+        "event_amount": null,
+        "lead_investors": null
+      },
+      "supported_answer": null,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Latest venture-equity target remains unresolved under the same policy used for A/B. C cites an April 2026 USD 316M extension via Fortune; the inspected Fortune sentence links to Sacra, so this is derivative support for the same unresolved database claim. Historical 2025 Series E remains supported, but later strategic disclosure mechanics are unresolved.",
+      "evidence_checks": [
+        {
+          "claim": "Scored funding facts",
+          "url": "https://www.abridge.com/blog/series-e",
+          "assessment": "Previously inspected company release confirms June 23 Series E, USD 300M and a16z lead; Khosla joined."
+        },
+        {
+          "claim": "Later Lilly strategic investment disclosed at June 11 keynote",
+          "url": "https://www.fiercehealthcare.com/health-tech/abridge-expands-payment-research-workflows-build-out-full-scale-ai-clinical-assistant",
+          "assessment": "Firsthand reporter June 11 attributes to CEO Shiv Rao that Lilly made a strategic investment. Financial details undisclosed. Supports material later investment disclosure, but does not specify legal venture-equity mechanics."
+        },
+        {
+          "claim": "Independent keynote report and announcement date",
+          "url": "https://www.healthcaredive.com/news/abridge-nvidia-eli-lilly-investment-ai-platform-expansion/822783/",
+          "assessment": "Published June 12; reports Thursday June 11 keynote and CEO statement that Lilly is making a strategic investment. Amount undisclosed. Does not independently establish round stage, closing date or legal structure."
+        },
+        {
+          "claim": "Current company keynote page",
+          "url": "https://www.abridge.com/press-release/patient-centered-clinician-intelligence-platform-keynote",
+          "assessment": "Fresh June 11 company release discusses platform and NVIDIA collaboration but does not name Lilly investment. Investor primary or filing establishing exact equity mechanics not located in bounded follow-up."
+        },
+        {
+          "claim": "Reported April Series E extension",
+          "url": "https://techjacksolutions.com/ai-brief/abridge-closes-reported-316m-series-e-extension-at-53b-valua/",
+          "assessment": "Secondary summary explicitly labels USD316M report weak and without primary confirmation. Sacra and derivative databases repeat extension claims; conflicting dates January/April and no verified original transaction evidence make this unsuitable as mandatory ground truth."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://www.abridge.com/blog/series-e",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        },
+        {
+          "claim": "Additional C-source check",
+          "url": "https://fortune.com/2026/06/11/abridge-operating-system-medicine-nvidia-eli-lilly-artsight/",
+          "assessment": "Fresh full-text inspection: extension sentence links to Sacra. This derivative claim does not resolve the independently audited financing uncertainty."
+        }
+      ],
+      "output_citations": [
+        "https://www.abridge.com/blog/series-e",
+        "https://www.abridge.com/blog/series-e",
+        "https://www.reuters.com/business/healthcare-pharmaceuticals/healthcare-startup-abridge-raises-300-million-led-by-vc-firm-andreessen-horowitz-2025-06-24/",
+        "https://www.reuters.com/business/healthcare-pharmaceuticals/healthcare-startup-abridge-raises-250-million-enhance-ai-capabilities-2025-02-17/",
+        "https://fortune.com/2026/06/11/abridge-operating-system-medicine-nvidia-eli-lilly-artsight/",
+        "https://fortune.com/2026/06/11/abridge-operating-system-medicine-nvidia-eli-lilly-artsight/",
+        "https://segmara.com/blog/when-will-abridge-ipo"
+      ]
+    },
+    {
+      "case_id": "cuspai",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": true,
+        "funding_stage": true,
+        "announcement_date": true,
+        "event_amount": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Correct July 20 USD 450M Series B. Newly inspected company-authored Medium announcement corroborates final round, distinct from earlier talks.",
+      "evidence_checks": [
+        {
+          "claim": "Scored funding facts",
+          "url": "https://www.linkedin.com/posts/edwardschad_a-big-day-for-cuspai-as-we-announce-our-450-activity-7484853244259713024-GH6n",
+          "assessment": "Previously inspected founder announcement states USD 450M Series B. Public JSON-LD datePublished is July 20, 2026, consistent with answers and Reuters date."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://medium.com/@CuspAI/launching-our-ai-materials-foundry-and-450-million-series-b-f5603d8259dd",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        },
+        {
+          "claim": "Additional C-source check",
+          "url": "https://medium.com/@CuspAI/launching-our-ai-materials-foundry-and-450-million-series-b-f5603d8259dd",
+          "assessment": "Fresh full-text primary company Medium post confirms July 20, 2026 Series B USD 450M. Earlier tentative USD 400M reporting is not a distinct completed latest event."
+        }
+      ],
+      "output_citations": [
+        "https://cusp.ai",
+        "https://medium.com/@CuspAI/launching-our-ai-materials-foundry-and-450-million-series-b-f5603d8259dd",
+        "https://www.reuters.com/business/uk-government-bezos-back-cuspais-450-million-round-startup-seeks-discover-new-2026-07-20/",
+        "https://cusp.ai",
+        "https://www.ft.com/content/4c479227-567c-435e-a4d3-795dd957b347?syn-25a6b1a6=1"
+      ]
+    },
+    {
+      "case_id": "biorce",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": false,
+        "funding_stage": true,
+        "announcement_date": true,
+        "event_amount": true,
+        "lead_investors": false
+      },
+      "supported_answer": false,
+      "missing_facts": [
+        "DST Global Partners lead investor, explicitly identified in company LinkedIn announcement."
+      ],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "C has the same target gap as the original answers. All three correctly recover Series A, February 2 and USD 52.5M, but leave lead unknown. This is cautious missing information, not hallucination. Company press-release text alone names participants; a separate company-authored public LinkedIn post resolves the lead.",
+      "evidence_checks": [
+        {
+          "claim": "Amount, stage and date",
+          "url": "https://www.einnews.com/pr_news/888335966/biorce-closes-52-5mm-series-a-to-accelerate-international-expansion-lead-transformation-of-clinical-trials-through-ai",
+          "assessment": "Previously inspected company-issued release confirms USD 52.5M Series A February 2."
+        },
+        {
+          "claim": "Lead investor",
+          "url": "https://www.linkedin.com/posts/biorce_announcement-biorce-raised-52m-led-by-activity-7424016314391863296-O0Ix",
+          "assessment": "Fresh primary company LinkedIn read explicitly identifies DST Global Partners as lead; both answers omit it."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://www.norrsken.vc/news/biorce",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        }
+      ],
+      "output_citations": [
+        "https://biorce.com",
+        "https://www.norrsken.vc/news/biorce",
+        "https://www.einpresswire.com/article/888335966/biorce-closes-52-5mm-series-a-to-accelerate-international-expansion-lead-transformation-of-clinical-trials-through-ai",
+        "https://www.einpresswire.com/article/888335966/biorce-closes-52-5mm-series-a-to-accelerate-international-expansion-lead-transformation-of-clinical-trials-through-ai",
+        "https://app.fundz.net/signals/biorce.com"
+      ]
+    },
+    {
+      "case_id": "mangoboost",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": null,
+        "funding_stage": null,
+        "announcement_date": null,
+        "event_amount": null,
+        "lead_investors": null
+      },
+      "supported_answer": null,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Latest venture-equity target remains unresolved under the same policy used for A/B. C returns historical 2023 Series A, recognizes September Series B talks and cumulative-capital conflict. It does not resolve December strategic investment versus February bridge versus later Series B classification. No arm is rewarded for matching the old anchor.",
+      "evidence_checks": [
+        {
+          "claim": "Historical Series A",
+          "url": "https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward",
+          "assessment": "Primary company November 10, 2023 closing announcement verifies USD 55M Series A, IMM and Shinhan. Does not prove latest status through cutoff."
+        },
+        {
+          "claim": "December 2025 investment report",
+          "url": "https://news.nate.com/view/20251229n28296",
+          "assessment": "Secondary Chosun article republished by Nate reports AMD/Samsung strategic participation and Aion USD 6.8M investment while calling context Series B; not clear total amount or completed whole round."
+        },
+        {
+          "claim": "Database round label",
+          "url": "https://app.dealroom.co/news/feed/mangoboost-rejects-nvidia-acquisition-raises-series-b-from-amd-samsung-and-kakao",
+          "assessment": "Secondary Dealroom digest labels December financing secured Series B; stronger than underlying closing evidence permits, and conflicts with later reports."
+        },
+        {
+          "claim": "February 2026 bridge context",
+          "url": "https://www.thebell.co.kr/front/newsview.asp?code=0303&key=202602130952160560101435",
+          "assessment": "Secondary Korean financial reporting February 13 describes secret/bridge fundraising ahead of Series B, with investors considering commitments."
+        },
+        {
+          "claim": "September 2026 fundraising context",
+          "url": "https://news.bloomberglaw.com/private-equity/samsung-backed-mangoboost-makes-profit-on-ai-data-center-demand",
+          "assessment": "CEO interview reported September 9 says courting investors for Series B and more than USD 100M cumulative; no complete round terms."
+        },
+        {
+          "claim": "Current primary cumulative funding",
+          "url": "https://www.mangoboost.io/company/about",
+          "assessment": "Company shows USD 100M+ cumulative funding, but public timeline only seed and Series A. This leaves later financing labels unresolved."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        }
+      ],
+      "output_citations": [
+        "https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward",
+        "https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward",
+        "https://news.bloomberglaw.com/private-equity/samsung-backed-mangoboost-makes-profit-on-ai-data-center-demand",
+        "https://streamlinefeed.co.ke/news/mangoboost-ceo-kim-bets-on-ai-racks-in-funding-push"
+      ]
+    },
+    {
+      "case_id": "vizzia",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": false,
+        "announcement_date": false,
+        "event_amount": true,
+        "entity_resolution": true
+      },
+      "supported_answer": false,
+      "missing_facts": [
+        "February 19 company announcement; C returns February 20 FinSMEs reporting date."
+      ],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Correct French entity and EUR 30M. C flags one-day ambiguity but uses later reporting as announcement. This is a date-precision gap, not fabricated round or entity.",
+      "evidence_checks": [
+        {
+          "claim": "Company announcement amount and date",
+          "url": "https://fr.linkedin.com/posts/vizziafr_30m-ceci-nest-pas-une-lev%C3%A9e-de-fonds-activity-7430159501669871616-m-b9",
+          "assessment": "Company post states EUR 30M. Public JSON-LD datePublished previously verified as 2026-02-19T08:01:10.868Z. FinSMEs publication February 20 is later reporting, not established announcement."
+        },
+        {
+          "claim": "Entity resolution",
+          "url": "https://headline.com/portfolio/vizzia/",
+          "assessment": "Investor portfolio confirms Paris municipal technology entity; both answers match it."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://www.finsmes.com/2026/02/vizzia-raises-e30m-in-series-b-funding.html",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        }
+      ],
+      "output_citations": [
+        "https://vizzia.com",
+        "https://www.finsmes.com/2026/02/vizzia-raises-e30m-in-series-b-funding.html",
+        "https://www.finsmes.com/2026/02/vizzia-raises-e30m-in-series-b-funding.html",
+        "https://funding.tech.eu/companies/07538BD5-BF27-4FB9-B712-2863D6E311A2",
+        "https://funding.tech.eu/companies/07538BD5-BF27-4FB9-B712-2863D6E311A2"
+      ]
+    },
+    {
+      "case_id": "digantara",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": true,
+        "funding_stage": true,
+        "announcement_date": true,
+        "event_amount": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Correct December 16, 2025 Series B USD 50M, consistent with the primary company PDF. Later filing-based reporting is not misdated as a new round.",
+      "evidence_checks": [
+        {
+          "claim": "Original funding announcement",
+          "url": "https://d19ys3z2o27xup.cloudfront.net/Digantara_Series_B_Press_Release_9e1dde469d.pdf",
+          "assessment": "Previously inspected primary company PDF dated December 16, 2025 confirms Series B and USD 50M."
+        },
+        {
+          "claim": "Later filing report date",
+          "url": "https://economictimes.indiatimes.com/tech/funding/reliance-leads-50-million-round-for-spacetech-startup-digantara/articleshow/127807185.cms",
+          "assessment": "January 30 article, updated January 31, reports Reliance lead from company filing and expressly says company announced the round last month. It does not establish a new January 30 funding announcement."
+        },
+        {
+          "claim": "C answer comparison with final audited reference",
+          "url": "https://techcrunch.com/2023/06/20/digantara-funding-peak-xv-partners/",
+          "assessment": "Structured answer inspected before provider traces. Compared scored targets and supplied citations with independently audited primary references. Routine agreeing references reused; material new claims checked separately."
+        }
+      ],
+      "output_citations": [
+        "https://www.digantara.co.in",
+        "https://techcrunch.com/2023/06/20/digantara-funding-peak-xv-partners/",
+        "https://inc42.com/buzz/spacetech-startup-digantara-raises-50-mn-for-global-expansion/",
+        "https://india.entrepreneur.com/news-and-trends/reliance-leads-usd-50-mn-investment-in-spacetech-firm/502349",
+        "https://forbes.com/sites/meghamandavia/2026/07/09/meet-the-small-indian-firm-building-a-missile-tracking-system-for-space"
+      ]
+    },
+    {
+      "case_id": "lessn",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "citation_support": true,
+        "funding_stage": true,
+        "announcement_date": null,
+        "entity_resolution": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "C correctly recovers the later completed November small investment round and distinguishes March disclosure, historical August Pre-Series A, and a prospective future raise. Generic stage label is supported. The output date field contains event month; original announcement date cannot be uniquely established, so null for all arms. Amount/currency/lead are unscored. C describes the syndicated release as third party, but it is company-issued primary disclosure.",
+      "evidence_checks": [
+        {
+          "claim": "Later completed small investment round",
+          "url": "https://prwire.com.au/pr/127192/lessn-exceeds-100-million-turnover-on-its-payments-orchestration-platform-1",
+          "assessment": "Freshly inspected ACN Newswire company-issued release dated March 3, 2026 says a small round raised $300,000 at $30M valuation in November 2025. Event month is established; original announcement date, currency and lettered stage are not. Same release explicitly distinguishes a prospective next round. Access note: adjudicator web open succeeded September 30 with full body lines 25-40; root reported later 404. This is another syndication of the same company release, not independent transaction confirmation."
+        },
+        {
+          "claim": "C cited disclosure source",
+          "url": "https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/sydney-au-mar-3-2026-acn-newswire-accounts-payable-automation/68628893",
+          "assessment": "Fresh full-text inspection confirms same ACN release with Source: Lessn. Local March 2 timestamp and Sydney March 3 dateline refer to the same disclosure, not a new March financing."
+        }
+      ]
+    },
+    {
+      "case_id": "wiz",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "current_lifecycle": true,
+        "acquirer": true,
+        "completion_date": true,
+        "icp_exclusion": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Declared lifecycle facts agree with independently verified source content. Historical funding fields are outside this lifecycle score.",
+      "evidence_checks": [
+        {
+          "claim": "Declared lifecycle facts.",
+          "url": "https://cloud.google.com/blog/products/identity-security/google-completes-acquisition-of-wiz",
+          "assessment": "Primary Google Cloud announcement dated March 11, 2026 explicitly confirms completed acquisition."
+        }
+      ]
+    },
+    {
+      "case_id": "moveworks",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "current_lifecycle": true,
+        "acquirer": true,
+        "completion_date": true,
+        "icp_exclusion": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Declared lifecycle facts agree with independently verified source content. Historical funding fields are outside this lifecycle score.",
+      "evidence_checks": [
+        {
+          "claim": "Declared lifecycle facts.",
+          "url": "https://www.moveworks.com/us/en/company/news/press-releases/servicenow-completes-acquisition-of-moveworks",
+          "assessment": "Primary release dated December 15, 2025 explicitly confirms ServiceNow completion."
+        }
+      ]
+    },
+    {
+      "case_id": "figma",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "current_lifecycle": true,
+        "terminated_vs_completed_transaction": true,
+        "icp_exclusion": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Public status and no acquirer are correct. Per A/B contract, no requirement to narrate terminated Adobe deal when current status is established. Exact IPO day and historical-round unknown are unscored.",
+      "evidence_checks": [
+        {
+          "claim": "Declared lifecycle facts.",
+          "url": "https://investor.figma.com/overview/default.aspx",
+          "assessment": "Current issuer investor-relations infrastructure plus cited IPO prospectus/pricing materials corroborate public status."
+        }
+      ]
+    },
+    {
+      "case_id": "informatica",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "current_lifecycle": true,
+        "acquirer": true,
+        "completion_date": true,
+        "icp_exclusion": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "SEC filing mirror is acceptable equivalent evidence; no requirement for exact reference URL. Visible trace shows Keenable fetched the completed-merger filing mirror and supplied closing evidence, but original A/B already gave the correct outcome.",
+      "evidence_checks": [
+        {
+          "claim": "Declared lifecycle facts.",
+          "url": "https://www.stocktitan.net/sec-filings/INFA/8-k-informatica-inc-reports-material-event-d204257410fb.html",
+          "assessment": "Opened full reproduced 8-K, not only generated summary: introductory note specifies November 18, 2025 closing and wholly owned Salesforce subsidiary. Consistent with original primary reference."
+        }
+      ]
+    },
+    {
+      "case_id": "hashicorp",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "current_lifecycle": true,
+        "acquirer": true,
+        "completion_date": true,
+        "icp_exclusion": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Declared lifecycle facts agree with independently verified source content. Historical funding fields are outside this lifecycle score.",
+      "evidence_checks": [
+        {
+          "claim": "Declared lifecycle facts.",
+          "url": "https://newsroom.ibm.com/2025-02-27-ibm-completes-acquisition-of-hashicorp,-creates-comprehensive,-end-to-end-hybrid-cloud-platform",
+          "assessment": "Cited primary completion release matches independently verified lifecycle, acquirer and completion date. Valid A/B source verification reused where unchanged."
+        }
+      ]
+    },
+    {
+      "case_id": "protect_ai",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "current_lifecycle": true,
+        "acquirer": true,
+        "completion_date": true,
+        "icp_exclusion": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Declared lifecycle facts agree with independently verified source content. Historical funding fields are outside this lifecycle score.",
+      "evidence_checks": [
+        {
+          "claim": "Declared lifecycle facts.",
+          "url": "https://www.paloaltonetworks.com/company/press/2025/palo-alto-networks-completes-acquisition-of-protect-ai",
+          "assessment": "Cited primary completion release matches independently verified lifecycle, acquirer and completion date. Valid A/B source verification reused where unchanged."
+        }
+      ]
+    },
+    {
+      "case_id": "cognigy",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "current_lifecycle": true,
+        "acquirer": true,
+        "completion_date": true,
+        "icp_exclusion": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Declared lifecycle facts agree with independently verified source content. Historical funding fields are outside this lifecycle score.",
+      "evidence_checks": [
+        {
+          "claim": "Declared lifecycle facts.",
+          "url": "https://www.cognigy.com/news/nice-closes-acquisition-of-cognigy",
+          "assessment": "Cited primary completion release matches independently verified lifecycle, acquirer and completion date. Valid A/B source verification reused where unchanged."
+        }
+      ]
+    },
+    {
+      "case_id": "verona_pharma",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "current_lifecycle": true,
+        "acquirer": true,
+        "completion_date": true,
+        "icp_exclusion": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Declared lifecycle facts agree with independently verified source content. Historical funding fields are outside this lifecycle score.",
+      "evidence_checks": [
+        {
+          "claim": "Declared lifecycle facts.",
+          "url": "https://www.veronapharma.com/news/msd-to-acquire-verona-pharma-expanding-its-portfolio-to-include-ohtuvayre-ensifentrine-a-first-in-class-copd-maintenance-treatment-for-adults-and-expected-to-drive-growth-into-the-next-dec",
+          "assessment": "Cited primary completion release matches independently verified lifecycle, acquirer and completion date. Valid A/B source verification reused where unchanged."
+        }
+      ]
+    },
+    {
+      "case_id": "chronosphere",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "current_lifecycle": true,
+        "acquirer": true,
+        "completion_date": true,
+        "icp_exclusion": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Declared lifecycle facts agree with independently verified source content. Historical funding fields are outside this lifecycle score. Extra funding history omits later CrowdStrike Falcon Fund strategic investment and does not reconcile the issuer retrospective $120m Series C total; no unambiguous new-round amount/date reference added.",
+      "evidence_checks": [
+        {
+          "claim": "Declared lifecycle facts.",
+          "url": "https://investors.paloaltonetworks.com/news-releases/news-release-details/palo-alto-networks-completes-chronosphere-acquisition-unifying/",
+          "assessment": "Cited primary completion release matches independently verified lifecycle, acquirer and completion date. Valid A/B source verification reused where unchanged."
+        }
+      ]
+    },
+    {
+      "case_id": "cyberark",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "current_lifecycle": true,
+        "acquirer": true,
+        "completion_date": true,
+        "icp_exclusion": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Declared lifecycle facts agree with independently verified source content. Historical funding fields are outside this lifecycle score.",
+      "evidence_checks": [
+        {
+          "claim": "Declared lifecycle facts.",
+          "url": "https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-cyberark-to-secure-the-ai-era",
+          "assessment": "Cited primary completion release matches independently verified lifecycle, acquirer and completion date. Valid A/B source verification reused where unchanged."
+        }
+      ]
+    },
+    {
+      "case_id": "ansys",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "current_lifecycle": true,
+        "acquirer": true,
+        "completion_date": true,
+        "icp_exclusion": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Declared lifecycle facts agree with independently verified source content. Historical funding fields are outside this lifecycle score.",
+      "evidence_checks": [
+        {
+          "claim": "Declared lifecycle facts.",
+          "url": "https://investors.ansys.com/news-releases/news-release-details/synopsys-completes-acquisition-ansys/",
+          "assessment": "Cited primary completion release matches independently verified lifecycle, acquirer and completion date. Valid A/B source verification reused where unchanged."
+        }
+      ]
+    },
+    {
+      "case_id": "juniper_networks",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "current_lifecycle": true,
+        "acquirer": true,
+        "completion_date": true,
+        "icp_exclusion": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Declared lifecycle facts agree with independently verified source content. Historical funding fields are outside this lifecycle score.",
+      "evidence_checks": [
+        {
+          "claim": "Declared lifecycle facts.",
+          "url": "https://www.hpe.com/us/en/newsroom/press-release/2025/07/hewlett-packard-enterprise-closes-acquisition-of-juniper-networks-to-offer-industry-leading-comprehensive-cloud-native-ai-driven-portfolio.html",
+          "assessment": "Cited primary completion release matches independently verified lifecycle, acquirer and completion date. Valid A/B source verification reused where unchanged."
+        }
+      ]
+    },
+    {
+      "case_id": "walkme",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "current_lifecycle": true,
+        "acquirer": true,
+        "completion_date": true,
+        "icp_exclusion": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [
+        "round_amount is 90 with currency USD, while cited source says $90 million."
+      ],
+      "unsupported_claims": [
+        "IPO pricing release describes expected trading and closing, not completed IPO on pricing day."
+      ],
+      "notes": "Lifecycle correct. Same unscored units error as B.",
+      "evidence_checks": [
+        {
+          "claim": "Declared lifecycle facts.",
+          "url": "https://www.walkme.com/news-releases/sap-completes-acquisition-of-walkme/",
+          "assessment": "Cited primary completion release establishes SAP acquisition September 12, 2024; corroborated by issuer 6-K."
+        }
+      ]
+    },
+    {
+      "case_id": "circle",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "current_lifecycle": true,
+        "icp_exclusion": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [
+        "March 2024 $150m Series E is not supported by submitted Circle SEC prospectus. Actual source says Series E proceeds $148.9m in 2018 and Series F proceeds $401m in May 2022."
+      ],
+      "unsupported_claims": [
+        "Fidelity/Wellington lead-investor attribution for alleged March 2024 Series E is unsupported by that source."
+      ],
+      "notes": "Correct current public status. A new alleged 2024 round was checked against the actual submitted SEC source and rejected; no lifecycle-reference correction. June 11 is greenshoe closing, not original IPO day (unscored). Retrieval trace shows wrong funding content originated in native visitWebpage; Keenable freshness search did not repair it. No adverse causal attribution to Keenable retrieval is made.",
+      "evidence_checks": [
+        {
+          "claim": "Declared lifecycle facts.",
+          "url": "https://investor.circle.com/news/news-details/2025/Circle-Announces-Closing-of-the-Full-Exercise-of-Greenshoe-Option-Granted-in-the-Initial-Public-Offering/default.aspx",
+          "assessment": "Primary June 11, 2025 release confirms previously completed IPO and NYSE:CRCL."
+        },
+        {
+          "claim": "Alleged newer March 2024 $150m Series E.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1876042/000119312525135795/d737521d424b4.htm",
+          "assessment": "Actual full Circle prospectus inspected: no Omada/OMDA, Series E in 2018, Series F in May 2022; later note conversion is not this alleged round."
+        }
+      ]
+    },
+    {
+      "case_id": "hinge_health",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "current_lifecycle": true,
+        "icp_exclusion": true,
+        "citation_support": false,
+        "first_trading_date": false
+      },
+      "supported_answer": false,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [
+        "Actual first-trading date is not established by submitted citations.",
+        "October 27, 2021 funding announcement date conflicts with original issuer release dated October 28; snippet/timezone explanation not established."
+      ],
+      "notes": "Correct date but insufficient submitted support for completed first trading on May 22, same A/B criterion. Two failed dimensions represent one evidence gap. Extra Series E primary issuance $400m and secondary $200m are corroborated by original company Business Wire release, dated October 28 rather than returned October 27.",
+      "evidence_checks": [
+        {
+          "claim": "Declared lifecycle facts.",
+          "url": "https://ir.hingehealth.com/news/news-details/2025/Hinge-Health-Announces-Pricing-of-Initial-Public-Offering/default.aspx",
+          "assessment": "Pricing release only states expected May 22 trading. Other submitted later sources confirm public company status without actual first-trading date."
+        }
+      ]
+    },
+    {
+      "case_id": "klarna",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "current_lifecycle": true,
+        "icp_exclusion": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Lifecycle correct. Returns 2022 $800m funding, correcting B stale 2021 answer; independently verified investor regulatory disclosure. Historical funding is unscored.",
+      "evidence_checks": [
+        {
+          "claim": "Declared lifecycle facts.",
+          "url": "https://investors.klarna.com/overview/default.aspx",
+          "assessment": "Cited issuer page explicitly says listed on NYSE:KLAR."
+        }
+      ]
+    },
+    {
+      "case_id": "coreweave",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "current_lifecycle": true,
+        "icp_exclusion": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [
+        "Claim that OpenAI agreed to buy $350m of stock as latest equity financing contradicts cited prospectus: issuer receives no proceeds; stock issuance under services contract offsets revenue."
+      ],
+      "unsupported_claims": [],
+      "notes": "Current public status is correctly supported. Final extra-claim audit resolves ambiguous funding category: $350m OpenAI stock issuance brings no proceeds and is not a replacement venture financing round. Exact IPO day is unscored.",
+      "evidence_checks": [
+        {
+          "claim": "Declared lifecycle facts.",
+          "url": "https://investors.coreweave.com/overview/default.aspx",
+          "assessment": "Issuer page explicitly confirms completed March 2025 Nasdaq listing."
+        },
+        {
+          "claim": "Concurrent OpenAI share issuance.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000119312525067651/d899798d424b4.htm",
+          "assessment": "Direct source confirms $350m stock issuance but explicitly no proceeds; this is not new cash venture funding."
+        }
+      ]
+    },
+    {
+      "case_id": "mntn",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "current_lifecycle": true,
+        "icp_exclusion": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Declared lifecycle facts agree with independently verified source content. Historical funding fields are outside this lifecycle score. Visible trace shows Keenable fetched the original financing release after native scrape failed. Useful source-access recovery, without a target-quality gain over A/B.",
+      "evidence_checks": [
+        {
+          "claim": "Declared lifecycle facts.",
+          "url": "https://ir.mountain.com/news/news-details/2025/MNTN-Reports-Strong-Second-Quarter-2025-Results/default.aspx",
+          "assessment": "Primary issuer Q2 release explicitly confirms completed IPO and trading from May 22, 2025. Funding issuer release also confirms $119m Series D, February 1 announcement and Q4 2021 closing."
+        }
+      ]
+    },
+    {
+      "case_id": "armis",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "current_lifecycle": true,
+        "acquirer": true,
+        "completion_date": true,
+        "icp_exclusion": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Primary ServiceNow completion release and Armis funding release were independently verified. All lifecycle targets match. C correctly distinguishes Goldman Sachs lead role from CapitalG major participation.",
+      "evidence_checks": [
+        {
+          "claim": "Completed acquisition, acquirer, and completion date.",
+          "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-completes-Armis-acquisition-closing-the-gap-between-asset-visibility-and-cyber-risk/default.aspx",
+          "assessment": "Primary source supports all target facts."
+        }
+      ]
+    },
+    {
+      "case_id": "chime",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "current_lifecycle": true,
+        "icp_exclusion": true,
+        "citation_support": true,
+        "first_trading_date": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Actual June 12, 2025 first-trading date is supported by updated Reuters debut report, independently verified via Reuters syndication. Later cited company 10-Q corroborates current public status. No target reference correction.",
+      "evidence_checks": [
+        {
+          "claim": "Actual first trading on June 12, 2025.",
+          "url": "https://www.reuters.com/business/finance/chime-set-long-awaited-market-debut-after-864-million-us-ipo-2025-06-12/",
+          "assessment": "Direct fetch unavailable; updated Reuters article verified through https://www.investing.com/news/economy-news/chime-set-for-longawaited-market-debut-after-864-million-us-ipo-4092780 and https://finance.yahoo.com/news/chime-set-long-awaited-market-110432906.html. Updated article confirms actual debut; earlier KFGO syndication preserves an obsolete pre-debut version."
+        }
+      ]
+    },
+    {
+      "case_id": "red_canary",
+      "arm": "C",
+      "scored_task": "funding_and_lifecycle",
+      "fields": {
+        "current_lifecycle": true,
+        "acquirer": true,
+        "completion_date": true,
+        "icp_exclusion": true,
+        "citation_support": true
+      },
+      "supported_answer": true,
+      "missing_facts": [],
+      "wrong_claims": [],
+      "unsupported_claims": [],
+      "notes": "Completion release confirms Zscaler acquisition August 1, 2025. Newly cited Access Venture Partners page independently opened and confirms $81m Series C, February 17, 2021, Summit Partners lead. No reference target correction.",
+      "evidence_checks": [
+        {
+          "claim": "Completed acquisition, acquirer, and completion date.",
+          "url": "https://ir.zscaler.com/news-releases/news-release-details/zscaler-completes-acquisition-red-canary-accelerate-innovations",
+          "assessment": "Opened primary source supports all three target facts."
+        },
+        {
+          "claim": "Historical Series C funding.",
+          "url": "https://accessvp.com/blog/red-canary-series-c-funding/",
+          "assessment": "Investor primary page contains full issuer financing release with date, amount, series and lead investor."
+        }
+      ]
+    }
+  ],
+  "reviews": {
+    "root-C-judgments": {},
+    "funding-C-judgments": {
+      "judgment_policy": "Same final audited targets and fieldsets as A/B. First inspect structured outputs, then verify sources. New reliable pre-cutoff evidence can correct all arms; unresolved latest-event cases remain null symmetrically. No provider traces used for initial judgments.",
+      "reference_corrections": [
+        {
+          "case_id": "lessn",
+          "correction": "Later company-issued release establishes a completed unlabelled November 2025 investment round, $300,000 at $30M valuation, disclosed March 3, 2026. Original August Pre-Series A anchor is historical. Currency and exact announcement date not established.",
+          "url": "https://prwire.com.au/pr/127192/lessn-exceeds-100-million-turnover-on-its-payments-orchestration-platform-1",
+          "score_effect": "A/B funding_stage and citation_support become false for missing later event; announcement_date null symmetrically for A/B/C; C funding_stage/citation_support true; entity_resolution true in all arms. No amount target added."
+        }
+      ],
+      "reference_integrity": {
+        "frozen_ground_truth_sha256": "ec230990755ea4b06f09a86bfa4bcd98119846e3e8cb7fe512f52caa3ee004f9",
+        "policy": "Frozen input/reference file not modified. Final audited corrections applied equally across all arms."
+      },
+      "review_coverage": {
+        "funding_cases": 28,
+        "case_arms": 28,
+        "unresolved_latest_event_cases": [
+          "abridge",
+          "mangoboost"
+        ],
+        "all_structured_outputs_read_before_trace_adjudication": true,
+        "new_reference_correction_cases": [
+          "lessn"
+        ],
+        "pending": []
+      }
+    },
+    "lifecycle-C-judgments": {
+      "adjudication_method": "Manual assessment of structured outputs before inspecting retrieval traces. Arm labels are visible; this is not blinded. Sources checked independently. ICP exclusion is a deterministic consequence of acquired or public status. Historical funding is outside this lifecycle scoring scope.",
+      "final_audit": {
+        "date": "2026-09-30",
+        "coverage": "All 21 assigned completed C answers and citations checked against unchanged A/B target fieldsets. Material additional funding claims reviewed separately. All three initially failed assigned cases completed on permitted infrastructure-only retry; latest completed answer graded. No lifecycle reference changed.",
+        "companies": [
+          {
+            "case_id": "wiz",
+            "target_claims_rechecked": true,
+            "new_material_claims_reviewed": true,
+            "reference_target_corrections": [],
+            "keenable_calls_in_visible_steps": 1
+          },
+          {
+            "case_id": "moveworks",
+            "target_claims_rechecked": true,
+            "new_material_claims_reviewed": true,
+            "reference_target_corrections": [],
+            "keenable_calls_in_visible_steps": 1
+          },
+          {
+            "case_id": "figma",
+            "target_claims_rechecked": true,
+            "new_material_claims_reviewed": true,
+            "reference_target_corrections": [],
+            "keenable_calls_in_visible_steps": 1
+          },
+          {
+            "case_id": "informatica",
+            "target_claims_rechecked": true,
+            "new_material_claims_reviewed": true,
+            "reference_target_corrections": [],
+            "keenable_calls_in_visible_steps": 2
+          },
+          {
+            "case_id": "hashicorp",
+            "target_claims_rechecked": true,
+            "new_material_claims_reviewed": true,
+            "reference_target_corrections": [],
+            "keenable_calls_in_visible_steps": 1
+          },
+          {
+            "case_id": "walkme",
+            "target_claims_rechecked": true,
+            "new_material_claims_reviewed": true,
+            "reference_target_corrections": [],
+            "keenable_calls_in_visible_steps": 1
+          },
+          {
+            "case_id": "protect_ai",
+            "target_claims_rechecked": true,
+            "new_material_claims_reviewed": true,
+            "reference_target_corrections": [],
+            "keenable_calls_in_visible_steps": 1
+          },
+          {
+            "case_id": "cognigy",
+            "target_claims_rechecked": true,
+            "new_material_claims_reviewed": true,
+            "reference_target_corrections": [],
+            "keenable_calls_in_visible_steps": 1
+          },
+          {
+            "case_id": "red_canary",
+            "target_claims_rechecked": true,
+            "new_material_claims_reviewed": true,
+            "reference_target_corrections": [],
+            "keenable_calls_in_visible_steps": 2
+          },
+          {
+            "case_id": "verona_pharma",
+            "target_claims_rechecked": true,
+            "new_material_claims_reviewed": true,
+            "reference_target_corrections": [],
+            "keenable_calls_in_visible_steps": 2
+          },
+          {
+            "case_id": "chronosphere",
+            "target_claims_rechecked": true,
+            "new_material_claims_reviewed": true,
+            "reference_target_corrections": [],
+            "keenable_calls_in_visible_steps": 1
+          },
+          {
+            "case_id": "cyberark",
+            "target_claims_rechecked": true,
+            "new_material_claims_reviewed": true,
+            "reference_target_corrections": [],
+            "keenable_calls_in_visible_steps": 1
+          },
+          {
+            "case_id": "armis",
+            "target_claims_rechecked": true,
+            "new_material_claims_reviewed": true,
+            "reference_target_corrections": [],
+            "keenable_calls_in_visible_steps": 1
+          },
+          {
+            "case_id": "ansys",
+            "target_claims_rechecked": true,
+            "new_material_claims_reviewed": true,
+            "reference_target_corrections": [],
+            "keenable_calls_in_visible_steps": 1
+          },
+          {
+            "case_id": "juniper_networks",
+            "target_claims_rechecked": true,
+            "new_material_claims_reviewed": true,
+            "reference_target_corrections": [],
+            "keenable_calls_in_visible_steps": 1
+          },
+          {
+            "case_id": "circle",
+            "target_claims_rechecked": true,
+            "new_material_claims_reviewed": true,
+            "reference_target_corrections": [],
+            "keenable_calls_in_visible_steps": 2
+          },
+          {
+            "case_id": "chime",
+            "target_claims_rechecked": true,
+            "new_material_claims_reviewed": true,
+            "reference_target_corrections": [],
+            "keenable_calls_in_visible_steps": 2
+          },
+          {
+            "case_id": "hinge_health",
+            "target_claims_rechecked": true,
+            "new_material_claims_reviewed": true,
+            "reference_target_corrections": [],
+            "keenable_calls_in_visible_steps": 1
+          },
+          {
+            "case_id": "klarna",
+            "target_claims_rechecked": true,
+            "new_material_claims_reviewed": true,
+            "reference_target_corrections": [],
+            "keenable_calls_in_visible_steps": 1
+          },
+          {
+            "case_id": "coreweave",
+            "target_claims_rechecked": true,
+            "new_material_claims_reviewed": true,
+            "reference_target_corrections": [],
+            "keenable_calls_in_visible_steps": 1
+          },
+          {
+            "case_id": "mntn",
+            "target_claims_rechecked": true,
+            "new_material_claims_reviewed": true,
+            "reference_target_corrections": [],
+            "keenable_calls_in_visible_steps": 2
+          }
+        ],
+        "material_extra_findings": [
+          "Circle C native page-reading output introduced unsupported March 2024 Series E; Keenable freshness query did not correct it.",
+          "CoreWeave B/C substituted a no-proceeds OpenAI stock issuance for venture financing; actual SEC prospectus resolves category.",
+          "WalkMe B/C omit million units in structured round_amount.",
+          "Klarna C corrects B stale 2021 funding to 2022; native retrieval already found 2022 before Keenable freshness call.",
+          "MNTN C Keenable extraction recovered issuer funding release after native page-reading failure; A/B also had correct lifecycle targets.",
+          "Informatica C Keenable extraction supplied completed-merger 8-K; A/B already correctly acquired."
+        ]
+      }
+    }
+  }
+}

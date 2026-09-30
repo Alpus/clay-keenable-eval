@@ -1,0 +1,84 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6bthdnwxSXqgwhRb",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:58:29.683Z",
+  "duration": "1m 27s",
+  "dataCreditsUsed": 3.3,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6bthaEKtRtkXdzGj",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:58:29.693Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "pennylane.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Pennylane"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6bth8nyyNgr2Vf8k",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:58:29.706Z",
+      "completedAt": "2026-09-30T10:59:57.206Z",
+      "duration": "1m 27s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "pennylane.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Pennylane"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Pennylane at pennylane.com is a French financial management and accounting software company for SMEs and accountants, founded in 2019.\",\"url\":\"https://www.pennylane.com/fr/investisseurs\",\"publication_date\":\"unknown\",\"event_date\":\"2019-09\",\"excerpt\":\"The investor page says Pennylane began in September 2019 and was created by seven named founders; it also states 'Pennylane n'est pas un cabinet d'expertise-comptable,' indicating it is a software platform rather than an accounting firm.\"},{\"claim\":\"Pennylane says it has raised a total of €359 million across six financing rounds, including €75 million in Series D in April 2025 and €175 million in January 2026.\",\"url\":\"https://www.pennylane.com/fr/investisseurs\",\"publication_date\":\"unknown\",\"event_date\":\"2026-01\",\"excerpt\":\"The investor page lists: 4 M€ seed (May 2020), 15 M€ Series A (January 2021), 50 M€ Series B (January 2022), 40 M€ Series C (February 2024), 75 M€ Series D (April 2025), and 175 M€ in January 2026; total raised since inception: 359 M€.\"},{\"claim\":\"Pennylane announced a €175 million funding round on 2026-01-20.\",\"url\":\"https://www.eu-startups.com/2026/01/sequoia-backed-french-accounting-unicorn-pennylane-secures-e175-million-as-it-approaches-profitability/\",\"publication_date\":\"2026-01-20\",\"event_date\":\"2026-01-20\",\"excerpt\":\"EU-Startups reported that Pennylane 'today announced a €175 million funding round,' indicating the announcement date was January 20, 2026.\"},{\"claim\":\"The January 2026 round was led by TCV, with participation from Blackstone Growth and existing investors including Sequoia Capital, DST Global, CapitalG, and Meritech Capital.\",\"url\":\"https://www.eu-startups.com/2026/01/sequoia-backed-french-accounting-unicorn-pennylane-secures-e175-million-as-it-approaches-profitability/\",\"publication_date\":\"2026-01-20\",\"event_date\":\"2026-01-20\",\"excerpt\":\"EU-Startups says the round was led by TCV, with participation from Blackstone through Blackstone Growth; existing shareholders Sequoia Capital, DST Global, CapitalG, and Meritech Capital also participated.\"},{\"claim\":\"A later trade-press report also describes the same €175 million round and says it was led by new investors TCV and Blackstone Growth.\",\"url\":\"https://www.fintechfutures.com/venture-capital-funding/french-fintech-pennylane-secures-175m-funding-round\",\"publication_date\":\"2026-01-26\",\"event_date\":\"2026-01-26\",\"excerpt\":\"FinTech Futures reported Pennylane 'has secured a €175 million funding round' and that 'The round was led by new investors TCV and Blackstone Growth,' with participation from DST Global, CapitalG, Sequoia Capital, and Meritech Capital.\"},{\"claim\":\"As of 2026, Pennylane presents itself as founder-controlled and backed by venture investors rather than acquired or public.\",\"url\":\"https://www.pennylane.com/fr/investisseurs\",\"publication_date\":\"unknown\",\"event_date\":\"2026\",\"excerpt\":\"The investor page states that voting rights are mostly held by Pennylane's founders and that in 2026 the founders retain control over governance and strategy, while nine venture capital funds and employees also hold equity.\"}]",
+          "latest_round": "funding round",
+          "round_amount": "175 million",
+          "uncertainties": "Pennylane's own investor page lists the latest financing only as '175 M€ en janvier 2026' without naming the round; independent coverage calls it a generic 'funding round,' so the exact round label (for example Series E or growth round) is unverified here. Announcement-date semantics also vary: EU-Startups indicates an announcement on 2026-01-20 ('today announced'), while FinTech Futures published a report on 2026-01-26 that appears to cover the same round rather than a separate closing. No affirmative public evidence was found in the retrieved sources of a completed acquisition, IPO, shutdown, or other lifecycle-changing event before the 2026-09-30 cutoff.",
+          "lead_investors": "TCV",
+          "round_currency": "EUR",
+          "company_identity": "Pennylane is a French financial management and accounting software platform for SMEs and accountants.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-01-20"
+        },
+        "reasoning": "I resolved the exact company from pennylane.com using Pennylane's own investor page, which identifies the business and lists its financing history through January 2026. I then corroborated the latest financing with independent reporting that specifies the amount and investors. The strongest available evidence indicates a €175 million latest venture financing announced on 2026-01-20, led by TCV with Blackstone Growth participating. For lifecycle, the company page explicitly says founders still held majority voting control in 2026 and I found no evidence in the retrieved sources of a completed acquisition, IPO, or closure before the cutoff, so private_independent is the best supported status.",
+        "stepsTaken": [
+          "Searched Google with query \"site:pennylane.com Pennylane funding round press release 2024 2025 acquisition IPO\". The results are: \n {\"search_results\":[{\"title\":\"Changelog | Data Sharing Documentation - Pennylane\",\"link\":\"https://data-sharing.pennylane.com/docs/en/changelog.html\",\"snippet\":\"The logs listed below document the main changes introduced over time in data sharing schemas, tables, permissions and other infrastructure aspects.\",\"position\":1},{\"title\":\"Careers\",\"link\":\"https://www.pennylane.com/fr/careers\",\"snippet\":\"In 2024, our Index stands at 73/100. Here is our 2025 action plan: Raising awareness of biases in recr...",
+          "Used visitWebpage {\"url\":\"https://www.pennylane.com/fr/investisseurs\",\"question\":\"What does this page say about Pennylane's identity, total funding, each financing round amounts and dates, latest round amount and announcement date, lifecycle/ownership status, and any acquisition or IPO mentions?\"}. The results are: \n \"- Page/topic: ownership and control of Pennylane.\\n- Identity/context:\\n  - “C'est ainsi que naît Pennylane.”\\n  - “L'aventure débute en septembre 2019.”\\n  - “Alexandre Roquoplo, Arthur Waller, Edouard Mascré, Félix Blossier, Quentin de Metz, Tancrède Besnard et Thierry Déo donnent vie à Pennylane.”\\n  - “Pennylane n'est pas un cabinet d'expertise-comptable.”\\n- Ownership / control / lifecycle context:\\n  - “Les droits de vote sont majoritairement détenus par les fondateurs de Pennylane.”\\n  -...",
+          "Searched Google with query \"Pennylane January 2026 funding 175 million source\". The results are: \n {\"search_results\":[{\"title\":\"Pennylane Raises €175 Million in Funding\",\"link\":\"https://www.thesaasnews.com/news/pennylane-raises-175-million-in-funding/\",\"snippet\":\"Funding Details. Company: Pennylane. Raised: €175.0M. Round: Growth. Funding Date: January 2026 ... Source: https://www.eu-startups.com/2026/01 ...\",\"date\":\"Jan 20, 2026\",\"position\":1},{\"title\":\"French fintech Pennylane secures €175m funding round\",\"link\":\"https://www.fintechfutures.com/venture-capital-funding/french-fintech-pennylan...",
+          "Used visitWebpage {\"url\":\"https://www.eu-startups.com/2026/01/sequoia-backed-french-accounting-unicorn-pennylane-secures-e175-million-as-it-approaches-profitability/\",\"question\":\"What does this article report about Pennylane's January 2026 funding round, including round name, amount, announcement date, valuation, and lead or participating investors?\"}. The results are: \n \"Article: “Sequoia-backed French accounting unicorn Pennylane secures €175 million as it nears profitability” (EU-Startups) — https://eu-startups.com/tag/pennylane\\nBy Rahul Raj; announcement date shown on article: January 20, 2026.\\n\\nRelevant funding details from the article:\\n- “Pennylane … today announced a €175 million funding round …”\\n- “The round was led by TCV, with participation from Blackstone through funds managed by Blackstone Growth.”\\n- “Existing shareholders, including Sequoia Ca...",
+          "Searched Google with query \"Pennylane IPO acquisition 2026 site:reuters.com OR site:techcrunch.com OR site:bloomberg.com Pennylane\". The results are: \n {\"search_results\":[{\"title\":\"Global Founders Capital will deploy Rocket Internet's cash ...\",\"link\":\"https://techcrunch.com/2024/04/26/global-founders-capital-becomes-rocket-internets-venture-arm/\",\"snippet\":\"as Pennylane, we have a few clear winners like Pennylane. We entered at the pre-seed stage and the company is worth over €1 billion.”\",\"date\":\"Apr 26, 2024\",\"position\":1},{\"title\":\"European embedded banking startup Swan adds another ...\",\"link\":\"https://techcrunch.com/2025/01/29/european-em...",
+          "Used visitWebpage {\"url\":\"https://www.fintechfutures.com/venture-capital-funding/french-fintech-pennylane-secures-175m-funding-round\",\"question\":\"Does this article identify the January 2026 Pennylane financing round type or name, amount, announcement date, and investors?\"}. The results are: \n \"Article: “French fintech Pennylane secures €175m funding round” — https://www.fintechfutures.com/venture-capital-funding/french-fintech-pennylane-secures-175m-funding-round\\n\\nRelevant data from the article:\\n- Announcement date: January 26, 2026.\\n- Amount: €175 million.\\n- Round wording/type/name used in article: “funding round” / “latest funding round.”\\n- Investors: led by new investors TCV and Blackstone Growth, with participation from existing shareholders DST Global, CapitalG, Sequoia Ca..."
+        ]
+      }
+    }
+  ]
+}

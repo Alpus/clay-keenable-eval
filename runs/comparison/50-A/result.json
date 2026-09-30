@@ -1,0 +1,89 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6cx5QxhwFnouMNra",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:22:17.513Z",
+  "duration": "2m 21s",
+  "dataCreditsUsed": 5.1,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6cx5NuA6G7mcCnrH",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:22:17.534Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "mountain.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "MNTN"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6cx5regSjFRQYsdA",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:22:17.567Z",
+      "completedAt": "2026-09-30T11:24:39.106Z",
+      "duration": "2m 21s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "mountain.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "MNTN"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"The exact company at mountain.com is MNTN, which sells self-serve software for Connected TV advertising.\",\"url\":\"https://mountain.com/about/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"MNTN is the Hardest Working Software in Television, bringing performance and simplicity to Connected TV advertising. Our self-serve technology makes running TV ads as easy as search and social.\"},{\"claim\":\"MNTN is a public company by 2026, with an active investor relations site, stock info, and SEC filings.\",\"url\":\"https://ir.mountain.com/overview/default.aspx\",\"publication_date\":\"unknown\",\"event_date\":\"2026\",\"excerpt\":\"The investor relations overview includes Stock Info, Stock Quote, Historical Stock Quote, Analyst Coverage, Quarterly Results, and SEC Filings, indicating an active public-company IR presence.\"},{\"claim\":\"MNTN's IPO priced on May 21, 2025, with trading expected to begin on May 22, 2025 under ticker MNTN on the New York Stock Exchange.\",\"url\":\"https://www.google.com/search?q=MNTN+IPO+date+Nasdaq+2025+Reuters&hl=en&gl=us\",\"publication_date\":\"2025-05-21\",\"event_date\":\"2025-05-22\",\"excerpt\":\"Google results show the company press release 'MNTN Announces Pricing of Initial Public Offering' stating the shares were expected to begin trading on May 22, 2025 under ticker MNTN on the New York Stock Exchange.\"},{\"claim\":\"Reuters reported that MNTN debuted on the NYSE on May 22, 2025 and that the IPO raised $187.2 million from MNTN and selling stockholders.\",\"url\":\"https://www.reuters.com/business/media-telecom/adtech-platform-mntn-gains-over-31-stellar-nasdaq-debut-2025-05-22/\",\"publication_date\":\"2025-05-22\",\"event_date\":\"2025-05-22\",\"excerpt\":\"Reuters said MNTN secured a valuation of $1.62 billion after its shares jumped in their debut on the NYSE, and that MNTN and some existing stockholders sold 11.70 million shares at $16 per share, raising $187.2 million.\"},{\"claim\":\"The latest evidenced venture equity round before the IPO was a Series D financing announced on February 1, 2022 for $119 million, co-led by BlackRock and Fidelity Management and Research Company.\",\"url\":\"https://www.businesswire.com/news/home/20220201005547/en/MNTN-Raises-%24119-Million-With-BlackRock-and-Fidelity\",\"publication_date\":\"2022-02-01\",\"event_date\":\"2022-02-01\",\"excerpt\":\"Business Wire states 'MNTN Raises $119 Million With BlackRock and Fidelity' and describes it as Series D financing co-led by funds and accounts managed by BlackRock and Fidelity Management and Research Company.\"},{\"claim\":\"That Series D had closed earlier, in Q4 2021.\",\"url\":\"https://www.businesswire.com/news/home/20220201005547/en/MNTN-Raises-%24119-Million-With-BlackRock-and-Fidelity\",\"publication_date\":\"2022-02-01\",\"event_date\":\"2021-Q4\",\"excerpt\":\"The press release says the round 'closed in the 4th quarter of 2021.'\"}]",
+          "latest_round": "Series D",
+          "round_amount": "119 million",
+          "uncertainties": "The Series D was announced on 2022-02-01 but the Business Wire release says it closed in Q4 2021, so announcement and closing differ. I found clear evidence of the IPO/public listing in May 2025 and no later venture equity round before the IPO in the retrieved sources, but absence of a later private round is based on the searched evidence set rather than an exhaustive database review. One Google result snippet referenced the IPO press release directly, but I did not separately open that IR press release because the IR site had already been visited and Reuters independently confirmed the NYSE debut on 2025-05-22.",
+          "lead_investors": "BlackRock; Fidelity Management and Research Company",
+          "round_currency": "USD",
+          "company_identity": "MNTN is a software company that provides self-serve Connected TV advertising technology.",
+          "lifecycle_status": "public",
+          "lifecycle_event_date": "2025-05-22",
+          "round_announcement_date": "2022-02-01"
+        },
+        "reasoning": "I resolved the domain to MNTN using the company site, then used the investor relations site and Reuters to establish that the company became publicly listed via IPO in May 2025. For funding, the strongest retrieved financing evidence was the Business Wire press release for MNTN's $119 million Series D, which appears to be the latest evidenced venture equity round before the IPO. No acquisition or closure evidence was found; the company is public as of the cutoff.",
+        "stepsTaken": [
+          "Searched Google with query \"MNTN mountain.com funding IPO acquisition latest round site:mountain.com OR TechCrunch OR Crunchbase\". The results are: \n {\"search_results\":[{\"title\":\"MNTN - Crunchbase Company Profile & Funding\",\"link\":\"https://www.crunchbase.com/organization/mntn\",\"snippet\":\"Investments. Acquisitions. Number of Acquisitions 2 · MNTN has acquired 2 organizations. Their most recent acquisition was QuickFrame on. obfuscated.\",\"position\":1},{\"title\":\"About Us\",\"link\":\"https://mountain.com/about/\",\"snippet\":\"Our Story. MNTN is the Hardest Working Software in Television™, bringing unrivaled performance and simplicity to Connected TV ad...",
+          "Used visitWebpage {\"url\":\"https://mountain.com/about/\",\"question\":\"Identify the company at this domain and what it sells. Look for any mention of public listing, ownership status, or company description.\"}. The results are: \n \"- Company/domain: MNTN — https://mountain.com (also labeled “mntn.com”)\\n- What it sells/services:\\n  - “QuickFrame AI — AI-generated video ads, made in minutes” — https://quickframe.com\\n  - “Case Studies — Brand & agency success stories” — https://mountain.com/case-studies\\n  - “The Tech Blog — An inside view into our technology, how the platform works, performance metrics, bidding systems, and more” — https://mountain.com/tech\\n- Company description sources:\\n  - About — https://mountain.com...",
+          "Searched Google with query \"site:ir.mountain.com MNTN IPO press release 2025 2024 investor relations\". The results are: \n {\"search_results\":[{\"title\":\"Financials - Quarterly Results\",\"link\":\"https://ir.mountain.com/financials/quarterly-results/default.aspx\",\"snippet\":\"Second quarter revenue grew 21% year-over-year to $82.5 million. · Second quarter gross margin improved to 80% from 77% in Q2 2025, up 350 basis points year-over ...\",\"position\":1},{\"title\":\"MNTN Reports Strong Second Quarter 2025 Results\",\"link\":\"https://ir.mountain.com/news/news-details/2025/MNTN-Reports-Strong-Second-Quarter-2025-Results/default.as...",
+          "Used visitWebpage {\"url\":\"https://ir.mountain.com/overview/default.aspx\",\"question\":\"Does this investor relations overview identify MNTN as a public company, include stock ticker/exchange, and mention IPO timing or current listing status?\"}. The results are: \n \"Overview page: “MNTN Investor Relations” and “Your one-stop shop for company updates and investor resources.”\\n\\nRelevant visible items on the page:\\n- Navigation includes: “Stock Info,” “Stock Quote,” “Stock Chart,” “Historical Stock Quote,” “Analyst Coverage,” “Quarterly Results,” and “SEC Filings.”\\n- Investor Resources links shown: “Corporate Governance” and “SEC Filings.”\\n- Investor alert options include: “Quarterly Reports,” “Annual Reports,” “SEC Filings,” “End of Day Stock Quote,” and ...",
+          "Searched Google with query \"MNTN raises funding BlackRock Fidelity latest round 2022 2023 2024 site:mountain.com OR TechCrunch OR businesswire\". The results are: \n {\"search_results\":[{\"title\":\"Crunchbase Unicorn Company List\",\"link\":\"https://news.crunchbase.com/unicorn-company-list/\",\"snippet\":\"Powered by Crunchbase's comprehensive data, this unicorn company list is updated as companies are valued at $1 billion or more in a new funding round.\",\"position\":1},{\"title\":\"Iconiq, famous for managing the fortunes of the tech elite ...\",\"link\":\"https://www.facebook.com/bloombergbusiness/posts/iconiq-famous-for-managing-the-fortunes-of-the-tech-elite-has-raised-57...",
+          "Searched Google with query \"MNTN S-1 funding BlackRock Fidelity date IPO 2025 site:sec.gov OR site:ir.mountain.com/news\". The results are: \n {\"search_results\":[{\"title\":\"Amended and Restated Investors' Rights Agreement, dated ...\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1891027/000189102725000012/exhibit41investorrightsagr.htm\",\"snippet\":\"IN WITNESS WHEREOF, the parties have executed this Amended and Restated Investors' Rights Agreement as of the date first above written.\",\"date\":\"May 23, 2025\",\"position\":1},{\"title\":\"S-1/A\",\"link\":\"https://www.sec.gov/Archives/edgar/data/2042694/000119312525039341/d923488ds1a.htm\",\"snippet\":...",
+          "Searched Google with query \"site:sec.gov MNTN Inc S-1 2025 Ryan Reynolds BlackRock Fidelity\". The results are: \n {\"search_results\":[{\"title\":\"Amended and Restated Investors' Rights Agreement, dated ...\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1891027/000189102725000012/exhibit41investorrightsagr.htm\",\"snippet\":\"This Amended and Restated Investors' Rights Agreement (the “Agreement”) is made as of May 23, 2025, by and among MNTN, Inc., a Delaware ...\",\"position\":1},{\"title\":\"2026 - S-1 Group - Final Filing Package\",\"link\":\"https://www.sec.gov/Archives/edgar/data/744455/000074445526000013/a2026-sx1gro...",
+          "Searched Google with query \"MNTN IPO date Nasdaq 2025 Reuters\". The results are: \n {\"search_results\":[{\"title\":\"Adtech MNTN and investors raise $187.2 million in US IPO\",\"link\":\"https://www.reuters.com/business/media-telecom/adtech-mntn-investors-raise-1872-million-us-ipo-2025-05-22/\",\"snippet\":\"Adtech MNTN and investors raise $187.2 million in US IPO. By Reuters. May 22, 20258:12 AM PDTUpdated May 22, 2025.\",\"date\":\"May 22, 2025\",\"position\":1},{\"title\":\"(MNTN.N) | Stock Price & Latest News\",\"link\":\"https://www.reuters.com/markets/companies/MNTN.N/\",\"snippet\":\"May 22, 2025. Ad...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/business/media-telecom/adtech-platform-mntn-gains-over-31-stellar-nasdaq-debut-2025-05-22/\",\"question\":\"Find evidence for MNTN's IPO listing status/date and any mention of its most recent private funding round, amount, and investors.\"}. The results are: \n \"- Reuters article: “Adtech platform MNTN valued at $1.6 billion in another sign of IPO markets comeback” (May 22, 2025): https://reuters.com/markets/companies/MNTN.N\\n- IPO/listing status/date evidence:\\n  - “MNTN (MNTN.N) … secured a valuation of $1.62 billion after its shares jumped 31.25% in their debut on the NYSE on Thursday”\\n  - “The U.S. adtech's stock opened at $21 apiece, compared with the IPO price of $16”\\n  - “MNTN and some existing stockholders on Wednesday sold 11.70 million shar...",
+          "Searched Google with query \"Reuters May 14 2025 MNTN funding round BlackRock Fidelity Series D 65 million\". The results are: \n {\"search_results\":[{\"title\":\"Adtech firm MNTN raises $119 mln in BlackRock, Fidelity- ...\",\"link\":\"https://www.reuters.com/technology/adtech-firm-mntn-raises-119-mln-blackrock-fidelity-led-round-2022-02-01/\",\"snippet\":\"MNTN, an adtech company specializing in Connected TV (CTV), has raised $119 million in a funding round co-led by asset manager BlackRock and ...\",\"date\":\"Feb 1, 2022\",\"position\":1},{\"title\":\"Adtech platform MNTN targets up to $1.24 billion valuation ...\",\"link\":\"https://wmbdradio....",
+          "Used visitWebpage {\"url\":\"https://www.businesswire.com/news/home/20220201005547/en/MNTN-Raises-%24119-Million-With-BlackRock-and-Fidelity\",\"question\":\"Confirm the latest private funding round for MNTN before its IPO: round type, amount, currency, announcement date, and lead investors.\"}. The results are: \n \"Relevant webpage data:\\n- Press release: “MNTN Raises $119 Million With BlackRock and Fidelity”\\n- Announcement date: 2022-02-01 (from Business Wire news item URL: https://businesswire.com/news/home/20220201005547/en/MNTN-Raises-119-Million-With-BlackRock-and-Fidelity)\\n- Round type: Series D financing\\n- Amount: $119 million\\n- Currency: USD (stated as “$119 million”)\\n- Lead investors: co-led by funds and accounts managed by BlackRock and Fidelity Management and Research Company\\n- Additional..."
+        ]
+      }
+    }
+  ]
+}
