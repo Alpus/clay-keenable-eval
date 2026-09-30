@@ -14,7 +14,7 @@ import sys
 import time
 
 ROOT = Path(__file__).resolve().parent
-LOCAL = ROOT / '.local'
+LOCAL = Path(os.environ.get('CLAY_EVAL_STATE_DIR', ROOT / '.local')).expanduser().resolve()
 STATE = LOCAL / 'state.json'
 FIELDS = ('company_name', 'domain', 'as_of', 'task_type')
 MODEL = 'gpt-5.4'
@@ -348,6 +348,42 @@ def judge_summary(path, manifest, rows):
                 'supported_answer covers target facts only. Additional claim arrays are not counted again.'}
 
 
+def write_results_table(output, manifest, summary):
+    """A compact view of the saved scores, with links to each original answer."""
+    rows = {(row['case_id'], row['arm']): row for row in summary['runs']}
+    scores = {}
+    if (output / 'judgments.json').exists():
+        scores = {(item['case_id'], item['arm']): item for item in read(output / 'judgments.json')['cases']}
+    pairs = {}
+    accuracy = summary['accuracy']
+    if accuracy.get('calculated'):
+        for group in ('main', 'entity_resolution'):
+            pairs.update({row['case_id']: row['outcome'] for row in accuracy[group]['paired_cases']['cases']})
+    lines = ['# Per-company results', '',
+             'A: native Clay search. B: native search plus Keenable. Scores count correct, supported target fields. '
+             'A tie can include shared errors. Correlated fields are not independent errors. '
+             'The entity probe is excluded from the main aggregate.', '',
+             '| Company | A target fields | B target fields | Pair outcome | B Keenable calls |',
+             '| --- | --- | --- | --- | --- |']
+    for record in manifest['runs']:
+        if record['arm'] != 'A':
+            continue
+        case_id = record['case_id']
+        cells = []
+        for arm in ('A', 'B'):
+            item = scores.get((case_id, arm))
+            fields = [v for v in item['fields'].values() if v is not None] if item else []
+            label = f'{sum(fields)}/{len(fields)}' if fields else 'ungraded'
+            key = record['key'][:-1] + arm
+            cells.append(f'[{label}]({key}/result.json)' if (case_id, arm) in rows else 'pending')
+        name = record.get('inputs', {}).get('company_name', case_id).replace('|', '\\|')
+        outcome = pairs.get(case_id, 'ungraded').replace('_', ' ')
+        calls = rows.get((case_id, 'B'), {}).get('keenable_calls')
+        lines.append(f'| {name} | {cells[0]} | {cells[1]} | {outcome} | {calls if calls is not None else "unknown"} |')
+    lines += ['', '[Judgments and source checks](judgments.json) · [Full summary](summary.json)', '']
+    (output / 'results.md').write_text('\n'.join(lines))
+
+
 def reproduce(output):
     manifest = read(output / 'manifest.json')
     rows = []
@@ -363,6 +399,7 @@ def reproduce(output):
                'missing_cost_observations': sum(row['data_credits'] is None or row['action_credits'] is None for row in rows)}
     summary['accuracy'] = judge_summary(output / 'judgments.json', manifest, rows)
     save(output / 'summary.json', summary)
+    write_results_table(output, manifest, summary)
     print(json.dumps({k: v for k, v in summary.items() if k != 'runs'}, indent=2))
 
 

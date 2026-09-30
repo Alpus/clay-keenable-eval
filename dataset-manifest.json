@@ -9,7 +9,6 @@
   },
   "source_discovery": "Primary sources independently collected before evaluation, using ordinary web search rather than Keenable.",
   "warning": "Exploratory purposive sample. The reference answers are not a claim of exhaustive absence of later events.",
-  "frozen_at": "2026-09-30T10:40:13.955214+00:00",
   "case_count": 50,
   "reference_freeze_note": "All 50 identities and shared configuration fixed before any company answer. Initial eight reference cases already verified. Expansion reference research is independent and blind to evaluation outputs; full reference hashes will be recorded before running expansion cases.",
   "reference_frozen_at": "2026-09-30T10:41:19.330331+00:00",
@@ -18,5 +17,8 @@
   "reference_amendment": {
     "at": "2026-09-30T10:42:59.486099+00:00",
     "reason": "Pre-expansion contract review separated Nscale debt from latest equity, and allowed equivalent original-round-plus-extension field representation. No expansion answers observed."
-  }
+  },
+  "hash_recorded_at": "2026-09-30T10:40:13.955214+00:00",
+  "inputs_written_at": "2026-09-30T10:37:31.775296+00:00",
+  "first_run_submitted_at": "2026-09-30T10:40:05.127621+00:00"
 }

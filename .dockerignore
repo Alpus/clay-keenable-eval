@@ -1,0 +1,9 @@
+# Allow only runtime inputs into the build context. No credentials, local
+# workflow state, git metadata, reference answers, or recorded runs enter layers.
+*
+!Dockerfile
+!.dockerignore
+!eval
+!prompt.txt
+!output-schema.json
+!cases.json

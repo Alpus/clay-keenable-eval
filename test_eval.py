@@ -108,8 +108,11 @@ class RunnerTests(unittest.TestCase):
                 runner.run(args)
                 self.assertEqual(len(calls), count, 'Resume must not submit completed runs again')
                 first = (args.output / 'summary.json').read_bytes()
+                first_table = (args.output / 'results.md').read_bytes()
                 runner.reproduce(args.output)
                 self.assertEqual(first, (args.output / 'summary.json').read_bytes())
+                self.assertEqual(first_table, (args.output / 'results.md').read_bytes())
+                self.assertIn(b'[ungraded](01-A/result.json)', first_table)
                 self.assertFalse(runner.read(args.output / 'summary.json')['accuracy']['calculated'])
                 cases[0]['domain'] = 'changed.test'
                 runner.save(root / 'cases.json', cases)
@@ -125,6 +128,7 @@ class RunnerTests(unittest.TestCase):
                 groups = runner.read(args.output / 'summary.json')['accuracy']['by_arm']
                 self.assertEqual(groups['A']['fields']['funding_stage'], {'correct': 1, 'total': 1})
                 self.assertEqual(groups['B']['supported_answer']['total'], 0)
+                self.assertIn('[1/1](01-A/result.json)', (args.output / 'results.md').read_text())
 
     def test_judgment_coverage_pairs_and_separate_entity_metrics(self):
         with tempfile.TemporaryDirectory() as temporary:

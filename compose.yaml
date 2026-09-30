@@ -1,0 +1,32 @@
+services:
+  eval:
+    build: .
+    image: clay-keenable-eval:local
+    init: true
+    working_dir: /app
+    entrypoint: ["./eval"]
+    command: ["--help"]
+    network_mode: "${CLAY_NETWORK_MODE:-bridge}"
+    volumes:
+      - type: bind
+        source: .
+        target: /app
+        read_only: true
+      # Dedicated Docker state. Never bind the host's live .local or credentials.
+      - type: volume
+        source: workflow_state
+        target: /var/lib/clay-eval
+        volume:
+          nocopy: true
+      - type: volume
+        source: clay_auth
+        target: /root/.config/clay
+        volume:
+          nocopy: true
+      - type: bind
+        source: "${CLAY_RUNS_DIR:-./runs}"
+        target: /results
+
+volumes:
+  workflow_state:
+  clay_auth:
