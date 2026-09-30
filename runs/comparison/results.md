@@ -1,6 +1,6 @@
 # Per-company results
 
-A: native Clay search. B: native search plus optional Keenable. C: native search plus required native verification. D: native search plus required Keenable verification. Scores count correct, supported target fields. A tie can include shared errors. Correlated fields are not independent errors. The entity probe is excluded from the main aggregate.
+A: Native. B: Optional Keenable. C: Native prompted. D: Keenable prompted. Scores count correct, supported target fields. A tie can include shared errors. Correlated fields are not independent errors. The entity probe is excluded from the main aggregate.
 
 | Company | A target fields | B target fields | D target fields | AB outcome | AD outcome | BD outcome | B Keenable calls | D Keenable calls |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |

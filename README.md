@@ -14,7 +14,7 @@ The hypothesis comes from [user reports available online](docs/evidence.md).
 
 **Keenable with explicit verification prompting may improve results.**
 
-| | A: native | B: optional Keenable | C: native verification | D: Keenable verification |
+| | A: Native | B: Optional Keenable | C: Native prompted | D: Keenable prompted |
 | --- | ---: | ---: | ---: | ---: |
 | Companies with all target facts correct and supported | **38/47** | **39/47** | **38/47** | **42/47** |
 | Clay data credits (all runs) | 176.5 | 206.2 | 204.3 | 207.3 |
