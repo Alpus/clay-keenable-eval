@@ -4,7 +4,7 @@
 
 ![Clay table with company domains, an enriched company column and extracted URLs](evidence/clay-table.png)
 
-*Clay works like a spreadsheet with enrichment columns. This example shows company enrichment; Claygent adds AI research columns.*
+*It works like a spreadsheet with AI-powered columns.*
 
 This experiment tests whether [Keenable](https://keenable.ai/) improves answers about the latest funding and current ownership status.
 
