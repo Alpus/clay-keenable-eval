@@ -25,8 +25,6 @@ Scores cover preselected target facts, not every claim in an answer.
 
 [All company results](runs/comparison-abcd/results.md) · [Scores and sources](runs/comparison-abcd/judgments.json) · [Retrieval audit](evidence/retrieval-audit.json) · [Case findings and remaining errors](docs/methodology.md#result-interpretation)
 
-Seven C attempts failed during MCP initialization, with zero reported credits. Each was retried once; all attempts are preserved. The 200 answers consumed 794.3 data credits and 200 actions, excluding setup smoke tests.
-
 ## How to run
 
 Use Docker with Compose. Python and the official Clay CLI are pinned in the image.
