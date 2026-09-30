@@ -1,0 +1,16 @@
+{
+  "mapping": {
+    "C": "native verification",
+    "D": "Keenable verification"
+  },
+  "raw_receipts_byte_identical": 1006,
+  "all_manifest_and_source_hashes_verified": true,
+  "scores_ABCD": [
+    38,
+    39,
+    38,
+    42
+  ],
+  "denominator": 47,
+  "new_provider_calls": 0
+}

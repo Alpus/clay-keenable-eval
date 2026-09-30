@@ -3,15 +3,15 @@
     "id": "1403344",
     "name": "Aleksandr's Workspace"
   },
-  "runId": "wfr_0tm6d61Hc5v3kwD8r88",
+  "runId": "wfr_0tm6hcdpqo2catNcJjx",
   "workflow": {
-    "id": "wf_0tm6d21AuFsz5iFGM8e",
-    "name": "Funding lifecycle evaluation C"
+    "id": "wf_0tm6h66X7iVxzjahRjg",
+    "name": "Funding lifecycle evaluation D"
   },
   "status": "completed",
-  "startedAt": "2026-09-30T11:27:37.767Z",
-  "duration": "1m 21s",
-  "dataCreditsUsed": 3,
+  "startedAt": "2026-09-30T12:57:49.119Z",
+  "duration": "1m 8s",
+  "dataCreditsUsed": 2.3,
   "actionCreditsUsed": 1,
   "progress": {
     "completed": 2,
@@ -26,12 +26,12 @@
   "totalEntrySteps": 0,
   "nodes": [
     {
-      "stepId": "wfrs_0tm6d61vpVMA6yxToe3",
-      "nodeId": "wfn_0tm6d21iRtaxx429Y8Q",
+      "stepId": "wfrs_0tm6hcdpVNSvMoWPEDq",
+      "nodeId": "wfn_0tm6h67uBuBJhxVb2Hm",
       "nodeName": "Manual",
       "status": "completed",
       "startedAt": null,
-      "completedAt": "2026-09-30T11:27:37.775Z",
+      "completedAt": "2026-09-30T12:57:49.125Z",
       "inputs": {},
       "outputs": {
         "as_of": "2026-09-30",
@@ -41,13 +41,13 @@
       }
     },
     {
-      "stepId": "wfrs_0tm6d61sk8eNRUEvz5k",
-      "nodeId": "wfn_0tm6d4f6jZzvkGe2wpS",
-      "nodeName": "Company research C",
+      "stepId": "wfrs_0tm6hcdb3hqjPwkDJpP",
+      "nodeId": "wfn_0tm6h68JRj3sTcusv7e",
+      "nodeName": "Company research D",
       "status": "completed",
-      "startedAt": "2026-09-30T11:27:37.788Z",
-      "completedAt": "2026-09-30T11:28:59.455Z",
-      "duration": "1m 21s",
+      "startedAt": "2026-09-30T12:57:49.143Z",
+      "completedAt": "2026-09-30T12:58:57.861Z",
+      "duration": "1m 8s",
       "inputs": {
         "as_of": "2026-09-30",
         "domain": "harvey.ai",
@@ -58,24 +58,24 @@
         "isTerminal": true,
         "structuredOutputs": {
           "acquirer": "not_applicable",
-          "evidence": "[{\"claim\":\"The company at harvey.ai is Harvey, a legal and professional-services AI software company.\",\"url\":\"https://www.harvey.ai/company\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Harvey says it is 'the operating system for legal and professional services' and that its products streamline workflows including contract analysis, due diligence, compliance, and litigation.\"},{\"claim\":\"Harvey announced its latest evidenced venture equity financing on 2026-09-09: a $550M funding round at a $15.5B valuation.\",\"url\":\"https://www.harvey.ai/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence\",\"publication_date\":\"2026-09-09\",\"event_date\":\"2026-09-09\",\"excerpt\":\"Harvey wrote: 'Today, Harvey announced a $550M funding round at a $15.5B valuation.'\"},{\"claim\":\"The 2026-09-09 round was co-led by Diffusion and Lightspeed Venture Partners.\",\"url\":\"https://www.harvey.ai/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence\",\"publication_date\":\"2026-09-09\",\"event_date\":\"2026-09-09\",\"excerpt\":\"The company said the round was 'co-led by Diffusion and Lightspeed Venture Partners.'\"},{\"claim\":\"Reuters independently corroborated the 2026-09-09 $550M round and described Harvey as a startup/company providing legal AI tools, supporting that it remained privately held at that time.\",\"url\":\"https://www.reuters.com/legal/government/legal-ai-startup-harvey-reaches-155-billion-valuation-new-funding-round-2026-09-09/\",\"publication_date\":\"2026-09-09\",\"event_date\":\"2026-09-09\",\"excerpt\":\"Reuters reported that 'legal software startup Harvey' raised '$550 million at a $15.5 billion valuation' and said Harvey develops legal AI tools for law firms and corporate legal departments.\"}]",
-          "latest_round": "undisclosed venture funding round",
-          "round_amount": "550000000",
-          "uncertainties": "Harvey's 2026-09-09 announcement and Reuters both call this a funding round but do not specify a named series (for example, Series F), so the round type is recorded as undisclosed. I performed a freshness check through the available Keenable web-search tool for 2026-09-09 through 2026-09-30 looking for a newer financing, IPO, acquisition of Harvey, or closure before the cutoff; it did not surface a stronger contrary event, but absence of such search hits is not definitive proof that no later event occurred. I found evidence that Harvey announced/accompanied an acquisition of Guardrails AI around the same time in secondary sources, but that is Harvey as acquirer, not evidence that Harvey itself was acquired.",
+          "evidence": "[{\"claim\":\"Harvey at harvey.ai is an AI company serving legal and professional-services customers.\",\"url\":\"https://www.harvey.ai/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence\",\"publication_date\":\"2026-09-09\",\"event_date\":\"2026-09-09\",\"excerpt\":\"Harvey said the new capital will help law firms, in-house legal teams, and professional services firms build and own their intelligence at scale.\"},{\"claim\":\"The latest evidenced venture equity financing by the cutoff is a $550M funding round announced on 2026-09-09 at a $15.5B valuation.\",\"url\":\"https://www.harvey.ai/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence\",\"publication_date\":\"2026-09-09\",\"event_date\":\"2026-09-09\",\"excerpt\":\"Harvey announced a $550M funding round at a $15.5B valuation.\"},{\"claim\":\"Diffusion and Lightspeed Venture Partners co-led that latest round.\",\"url\":\"https://www.harvey.ai/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence\",\"publication_date\":\"2026-09-09\",\"event_date\":\"2026-09-09\",\"excerpt\":\"The company said the round was co-led by Diffusion and Lightspeed Venture Partners.\"},{\"claim\":\"Reuters independently reported the same 2026-09-09 financing and listed additional participating investors.\",\"url\":\"https://www.reuters.com/legal/government/legal-ai-startup-harvey-reaches-155-billion-valuation-new-funding-round-2026-09-09/\",\"publication_date\":\"2026-09-09\",\"event_date\":\"2026-09-09\",\"excerpt\":\"Reuters reported Harvey raised $550 million at a $15.5 billion valuation in a round co-led by Diffusion and Lightspeed Venture Partners, with other investors including Sequoia, Kleiner Perkins, a16z, Coatue, Conviction, Elad Gil, Evantic, GIC, Goldman Sachs Alternatives, Verified Capital, WNDR, Sapphire Ventures and Whale Rock.\"},{\"claim\":\"As of 2026-09-09 Harvey was operating as an independent private company rather than having been acquired or gone public; on that date it announced a private funding round and Reuters reported Harvey itself was acquiring Guardrails AI.\",\"url\":\"https://www.reuters.com/legal/government/legal-ai-startup-harvey-reaches-155-billion-valuation-new-funding-round-2026-09-09/\",\"publication_date\":\"2026-09-09\",\"event_date\":\"2026-09-09\",\"excerpt\":\"Reuters described Harvey as a legal AI startup raising a new funding round and said Harvey had acquired Guardrails AI in its fourth acquisition that year; no IPO or sale of Harvey was reported.\"}]",
+          "latest_round": "funding round",
+          "round_amount": "550 million",
+          "uncertainties": "The company post and Reuters both call the 2026-09-09 event a funding round but do not give a Series letter, so the round name beyond 'funding round' is unverified. No separate legal closing date for that round was found, so the announcement date is used. Lifecycle status is based on affirmative evidence of Harvey raising private capital and acting as an acquirer on 2026-09-09, plus verification searches that did not surface a completed acquisition of Harvey or an IPO by the 2026-09-30 cutoff; absence of later evidence is not proof, but no contrary public evidence was found in the allotted research.",
           "lead_investors": "Diffusion; Lightspeed Venture Partners",
           "round_currency": "USD",
-          "company_identity": "Harvey at harvey.ai sells AI software for legal and professional-services teams, including workflow, research, document, and contract-analysis tools.",
+          "company_identity": "Harvey is a legal AI software company that helps law firms, in-house legal teams, and professional-services firms build and use AI-driven intelligence.",
           "lifecycle_status": "private_independent",
           "lifecycle_event_date": "unknown",
           "round_announcement_date": "2026-09-09"
         },
-        "reasoning": "I identified the exact company from its own site, used Harvey's September 9, 2026 funding announcement as the primary source for the latest round, and used Reuters the same day as independent corroboration. Reuters' description of Harvey as a startup/company raising private funding supports private status as of that date. I then performed the required freshness check with the Keenable search tool for the remainder of the period through 2026-09-30 and found no stronger evidence of a newer financing, IPO, completed acquisition of Harvey, or closure before the cutoff.",
+        "reasoning": "I resolved the company using harvey.ai and used the company’s own 2026-09-09 funding announcement plus Reuters’ same-day report as the strongest evidence. I then ran independent Google freshness checks for IPO/acquisition/public-status developments through the 2026-09-30 cutoff and found no newer contrary event. The latest evidenced venture equity financing is therefore the $550M funding round announced 2026-09-09, co-led by Diffusion and Lightspeed. Current lifecycle status is best supported as private_independent.",
         "stepsTaken": [
-          "Searched Google with query \"Harvey harvey.ai funding acquisition IPO latest round site:harvey.ai OR news Harvey AI legal startup funding\". The results are: \n {\"search_results\":[{\"title\":\"Legal AI startup Harvey reaches $15.5 billion valuation in ...\",\"link\":\"https://www.reuters.com/legal/government/legal-ai-startup-harvey-reaches-155-billion-valuation-new-funding-round-2026-09-09/\",\"snippet\":\"Harvey said on Wednesday that it raised $550 million at a $15.5 billion valuation in a funding round co-led by new investors Diffusion and ...\",\"date\":\"Sep 9, 2026\",\"position\":1},{\"title\":\"Harvey Raises $550M at a $15.5B Valuation to Help Legal ...\",\"link\":\"http...",
-          "Used visitWebpage {\"url\":\"https://www.harvey.ai/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence\",\"question\":\"What amount was raised, on what date was it announced, who were the lead investors, and how does Harvey describe itself?\"}. The results are: \n \"Relevant page: https://harvey.ai/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence\\n\\n- Article title: “Harvey Raises $550M at a $15.5B Valuation to Help Legal Teams Own Their Intelligence”\\n- Byline/date: “by Harvey Team • Sep 9, 2026”\\n- Key funding sentence: “Today, Harvey announced a $550M funding round at a $15.5B valuation, co-led by Diffusion and Lightspeed Venture Partners.”\\n- Self-description language on the page:\\n  - “to Help Legal Te...",
-          "Used visitWebpage {\"url\":\"https://www.reuters.com/legal/government/legal-ai-startup-harvey-reaches-155-billion-valuation-new-funding-round-2026-09-09/\",\"question\":\"What does Reuters say Harvey raised, who led the round, and how does Reuters describe the company and its status?\"}. The results are: \n \"Reuters says: “Legal software startup Harvey said on Wednesday that it raised $550 million at a $15.5 billion valuation in a funding round co-led by new investors Diffusion and Lightspeed Venture Partners.” Reuters describes Harvey as: “The San Francisco-based company” and “Harvey develops legal AI tools for law firms and corporate legal departments, helping automate legal workflows such as contract analysis, due diligence, compliance and litigation.” Reuters also says: “Harvey raised $200 mill...",
-          "Used visitWebpage {\"url\":\"https://www.harvey.ai/company\",\"question\":\"How does Harvey describe the business on its company page and what does it sell?\"}. The results are: \n \"Company page: https://harvey.ai/company\\n\\nRelevant company description:\\n- “We’re helping the world’s best teams transform the way they work”\\n- “Harvey is the operating system for legal and professional services.”\\n- “Our products streamline workflows in areas including contract analysis, due diligence, compliance, and litigation to drive efficiency and value.”\\n- “Law firms and legal teams around the world use Harvey to enable faster, smarter decision-making.”\\n\\nRelevant products / what it ...",
-          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Recent public evidence about Harvey at harvey.ai after its September 2026 funding round, including acquisition completion, IPO filing/listing, shutdown, or newer financing before 2026-09-30\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"2026-09-09\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":400,\"max_results\":5,\"session_id\":\"harvey-ai-2026-09-30\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Entry 103 — NSA names six Chinese labs in distillation advisory, Harvey hits $15.6B in six months, and DeepMind ships every human DNA variant prediction\\nURL: https://responsibility-ledger.one/reports/2026-09-10\\nPublished: 2026-09-10\\nAcquired: 2026-09-12\\nSnippets:\\n8 accusing six Chinese AI companies—DeepSeek, Moonshot AI, Alibaba, MiniMax, StepFun and Z.AI—of systematically extracting capabilities from leading American models since late 2024, likely ..."
+          "Searched Google with query \"Harvey harvey.ai funding acquisition IPO site:harvey.ai OR site:techcrunch.com OR site:reuters.com\". The results are: \n {\"search_results\":[{\"title\":\"Legal AI startup Harvey reaches $15.5 billion valuation in ...\",\"link\":\"https://www.reuters.com/legal/government/legal-ai-startup-harvey-reaches-155-billion-valuation-new-funding-round-2026-09-09/\",\"snippet\":\"Harvey said on Wednesday that it raised $550 million at a $15.5 billion valuation in a funding round co-led by new investors Diffusion and ...\",\"date\":\"Sep 9, 2026\",\"position\":1},{\"title\":\"Harvey Raises $550M at a $15.5B Valuation to Help Legal ...\",\"link\":\"http...",
+          "Used visitWebpage {\"url\":\"https://www.harvey.ai/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence\",\"question\":\"What round amount, date, lead investors, valuation, and description of Harvey business are stated on this page?\"}. The results are: \n \"Source: https://harvey.ai/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence\\n\\nTitle: “Harvey Raises $550M at a $15.5B Valuation to Help Legal Teams Own Their Intelligence”\\nBy Harvey Team • Sep 9, 2026\\n\\nRelevant text:\\n- “Today, Harvey announced a $550M funding round at a $15.5B valuation, co-led by Diffusion and Lightspeed Venture Partners.”\\n- “It will accelerate Harvey’s efforts to help law firms, in-house legal teams, and professional serv...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/legal/government/legal-ai-startup-harvey-reaches-155-billion-valuation-new-funding-round-2026-09-09/\",\"question\":\"What financing event, amount, investors, and any ownership or IPO/acquisition status are reported for Harvey on this Reuters page?\"}. The results are: \n \"- Reuters article title/date: “Legal AI startup Harvey reaches $15.5 billion valuation in new funding round,” September 9, 2026.\\n- Reported financing event: Harvey “raised $550 million at a $15.5 billion valuation” in a funding round.\\n- Round leads / new investors: “co-led by new investors Diffusion and Lightspeed Venture Partners.”\\n- Other investors in latest round: existing investors “Sequoia, Kleiner Perkins, a16z, Coatue, Conviction, Elad Gil, Evantic, GIC, Goldman Sachs Alternatives, Ve...",
+          "Searched Google with query \"Harvey AI acquisition IPO public company 2026 site:reuters.com OR site:harvey.ai OR site:sec.gov\". The results are: \n {\"search_results\":[{\"title\":\"Harvey Raises at $11 Billion Valuation to Scale Agents ...\",\"link\":\"https://www.harvey.ai/blog/harvey-raises-at-dollar11-billion-valuation-to-scale-agents-across-law-firms-and-enterprises\",\"snippet\":\"The investment will be used to expand the agents customers run on Harvey and grow the embedded legal engineering teams supporting them globally.\",\"date\":\"Mar 25, 2026\",\"position\":1},{\"title\":\"Legal software firm Harvey valued at $11 billion in latest ...\",\"link\":\"https:/...",
+          "Searched Google with query \"Harvey ai acquired IPO September 2026 Reuters acquisition completed public\". The results are: \n {\"search_results\":[{\"title\":\"Legal AI startup Harvey reaches $15.5 billion valuation in ...\",\"link\":\"https://www.reuters.com/legal/government/legal-ai-startup-harvey-reaches-155-billion-valuation-new-funding-round-2026-09-09/\",\"snippet\":\"Legal software startup Harvey said on Wednesday that it raised $550 million at a $15.5 billion valuation in a funding ​round co-led by new ...\",\"date\":\"Sep 9, 2026\",\"position\":1},{\"title\":\"Legal AI leaders like Harvey are sprinting to scale while ...\",\"link\":\"ht..."
         ]
       }
     }

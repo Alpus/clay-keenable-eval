@@ -1,11 +1,11 @@
 {
   "prior_attempts": [],
   "provider_attempts_observed": 50,
-  "configuration_hash": "978599273170c9b293144df005794ab4ed263eec90643911301a2d6d0c08fa7e",
+  "configuration_hash": "a964949aa55e4f650be000a96e218612e2a2c02b029b0c646c677dfa34bea52f",
   "runs": [
     {
       "case_id": "keenable",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6h84HMuCTzm6Dpwt",
       "status": "completed",
       "data_credits": 3.5,
@@ -58,7 +58,7 @@
     },
     {
       "case_id": "wayve",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hbkjBJc2HfzFxxF",
       "status": "completed",
       "data_credits": 5.9,
@@ -117,7 +117,7 @@
     },
     {
       "case_id": "aikido_security",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hbmM3y65b3SfaTU",
       "status": "completed",
       "data_credits": 3.3,
@@ -168,7 +168,7 @@
     },
     {
       "case_id": "material_depot",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hbohVkE25SQw5Z2",
       "status": "completed",
       "data_credits": 5.199999999999999,
@@ -223,7 +223,7 @@
     },
     {
       "case_id": "wiz",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hbqoYmyc4CwHvJB",
       "status": "completed",
       "data_credits": 3.7,
@@ -276,7 +276,7 @@
     },
     {
       "case_id": "moveworks",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hbsti3RFF2PNq4m",
       "status": "completed",
       "data_credits": 2.9,
@@ -327,7 +327,7 @@
     },
     {
       "case_id": "figma",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hbuvV49TcPJiXZw",
       "status": "completed",
       "data_credits": 6.1,
@@ -384,7 +384,7 @@
     },
     {
       "case_id": "freeman_seattle",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hbxGgr4CbXFiPrt",
       "status": "completed",
       "data_credits": 1.4,
@@ -427,7 +427,7 @@
     },
     {
       "case_id": "lovable",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hbyMTuwgznvES3V",
       "status": "completed",
       "data_credits": 3.6,
@@ -478,7 +478,7 @@
     },
     {
       "case_id": "supabase",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hc0dgMdANgEWMoy",
       "status": "completed",
       "data_credits": 2.4,
@@ -527,7 +527,7 @@
     },
     {
       "case_id": "elevenlabs",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hc2i6syknScQQtZ",
       "status": "completed",
       "data_credits": 2.3,
@@ -574,7 +574,7 @@
     },
     {
       "case_id": "helsing",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hc4cAg5anev89pa",
       "status": "completed",
       "data_credits": 2.6,
@@ -623,7 +623,7 @@
     },
     {
       "case_id": "mistral_ai",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hc7oEBvTixVSnVP",
       "status": "completed",
       "data_credits": 3.3,
@@ -674,7 +674,7 @@
     },
     {
       "case_id": "nscale",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hc8DGUVJ9CW529D",
       "status": "completed",
       "data_credits": 3.3,
@@ -723,7 +723,7 @@
     },
     {
       "case_id": "isomorphic_labs",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hcaupYpEzftkGwK",
       "status": "completed",
       "data_credits": 3.2,
@@ -776,7 +776,7 @@
     },
     {
       "case_id": "harvey",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hcdpqo2catNcJjx",
       "status": "completed",
       "data_credits": 2.3,
@@ -823,7 +823,7 @@
     },
     {
       "case_id": "replit",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hcesmvfcPURWXri",
       "status": "completed",
       "data_credits": 4.699999999999999,
@@ -878,7 +878,7 @@
     },
     {
       "case_id": "ramp",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hcg4RupuhWiysS3",
       "status": "completed",
       "data_credits": 3.7,
@@ -929,7 +929,7 @@
     },
     {
       "case_id": "rillet",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hciK2MhfC6Jd7U2",
       "status": "completed",
       "data_credits": 3.3,
@@ -980,7 +980,7 @@
     },
     {
       "case_id": "pennylane",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hck9T6EoDDm53UJ",
       "status": "completed",
       "data_credits": 4,
@@ -1035,7 +1035,7 @@
     },
     {
       "case_id": "n8n",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hcmKCFjZiKJEZM3",
       "status": "completed",
       "data_credits": 5.4,
@@ -1092,7 +1092,7 @@
     },
     {
       "case_id": "alan",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hcog5WqkPh7TRjR",
       "status": "completed",
       "data_credits": 4.3,
@@ -1145,7 +1145,7 @@
     },
     {
       "case_id": "quince",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hcq4Z9nCzCzgpwd",
       "status": "completed",
       "data_credits": 4.1,
@@ -1198,7 +1198,7 @@
     },
     {
       "case_id": "cyera",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hcs7AT9dmh64TJ3",
       "status": "completed",
       "data_credits": 4.199999999999999,
@@ -1249,7 +1249,7 @@
     },
     {
       "case_id": "airwallex",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hcuz4z8q4e5omKd",
       "status": "completed",
       "data_credits": 5,
@@ -1304,7 +1304,7 @@
     },
     {
       "case_id": "abridge",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hcw9CaGJRn9XxPw",
       "status": "completed",
       "data_credits": 4,
@@ -1357,7 +1357,7 @@
     },
     {
       "case_id": "cuspai",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hcyT6uQ7P4uvhQe",
       "status": "completed",
       "data_credits": 3.7,
@@ -1412,7 +1412,7 @@
     },
     {
       "case_id": "biorce",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hd0c2UXYJtdadcT",
       "status": "completed",
       "data_credits": 3.9,
@@ -1467,7 +1467,7 @@
     },
     {
       "case_id": "mangoboost",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hd2YYoKs8ipe9Ds",
       "status": "completed",
       "data_credits": 4.3,
@@ -1522,7 +1522,7 @@
     },
     {
       "case_id": "vizzia",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hd4VoxGsS3aSRXg",
       "status": "completed",
       "data_credits": 3.7,
@@ -1579,7 +1579,7 @@
     },
     {
       "case_id": "digantara",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hd6ViPyQjAN7wjy",
       "status": "completed",
       "data_credits": 3.5,
@@ -1632,7 +1632,7 @@
     },
     {
       "case_id": "lessn",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hdyMH3gDCnsiGEG",
       "status": "completed",
       "data_credits": 11.2,
@@ -1687,7 +1687,7 @@
     },
     {
       "case_id": "informatica",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6he6qc2vDox4vUV6",
       "status": "completed",
       "data_credits": 4.4,
@@ -1742,7 +1742,7 @@
     },
     {
       "case_id": "hashicorp",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hed43U5NhVd35Ry",
       "status": "completed",
       "data_credits": 4.199999999999999,
@@ -1795,7 +1795,7 @@
     },
     {
       "case_id": "walkme",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hefmy8hjnkeWmx8",
       "status": "completed",
       "data_credits": 3.7,
@@ -1848,7 +1848,7 @@
     },
     {
       "case_id": "protect_ai",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hem2jmHJk5fxdUX",
       "status": "completed",
       "data_credits": 2.9,
@@ -1901,7 +1901,7 @@
     },
     {
       "case_id": "cognigy",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6heuHV3S4DxZ5Siy",
       "status": "completed",
       "data_credits": 3.3,
@@ -1952,7 +1952,7 @@
     },
     {
       "case_id": "red_canary",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hewFZAHY268isvU",
       "status": "completed",
       "data_credits": 4.199999999999999,
@@ -2007,7 +2007,7 @@
     },
     {
       "case_id": "verona_pharma",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hf3oyBNqkzUvVS5",
       "status": "completed",
       "data_credits": 5.699999999999999,
@@ -2064,7 +2064,7 @@
     },
     {
       "case_id": "chronosphere",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hf5BqPSNeQrX8HY",
       "status": "completed",
       "data_credits": 3.4,
@@ -2115,7 +2115,7 @@
     },
     {
       "case_id": "cyberark",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hfiFiui2ngZtGrH",
       "status": "completed",
       "data_credits": 4.1,
@@ -2170,7 +2170,7 @@
     },
     {
       "case_id": "armis",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hgariNuhvntQznm",
       "status": "completed",
       "data_credits": 2.6,
@@ -2219,7 +2219,7 @@
     },
     {
       "case_id": "ansys",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hgdkPbaFUuuWzQP",
       "status": "completed",
       "data_credits": 4.8,
@@ -2272,7 +2272,7 @@
     },
     {
       "case_id": "juniper_networks",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hgek6pVQhdyd2Ar",
       "status": "completed",
       "data_credits": 3.7,
@@ -2323,7 +2323,7 @@
     },
     {
       "case_id": "circle",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hggS2nWXwA2BtFs",
       "status": "completed",
       "data_credits": 3.9,
@@ -2378,7 +2378,7 @@
     },
     {
       "case_id": "chime",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hgiujdoFBFwTtTJ",
       "status": "completed",
       "data_credits": 5.9,
@@ -2435,7 +2435,7 @@
     },
     {
       "case_id": "hinge_health",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hgktuSTvnfDe25h",
       "status": "completed",
       "data_credits": 3.8,
@@ -2490,7 +2490,7 @@
     },
     {
       "case_id": "klarna",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hgmbmKiyCryBveb",
       "status": "completed",
       "data_credits": 4.3,
@@ -2547,7 +2547,7 @@
     },
     {
       "case_id": "coreweave",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hgp9u6aeV5aFAuP",
       "status": "completed",
       "data_credits": 5.5,
@@ -2604,7 +2604,7 @@
     },
     {
       "case_id": "mntn",
-      "arm": "D",
+      "arm": "C",
       "run_id": "wfr_0tm6hgqxPTB2Hy2YMRb",
       "status": "completed",
       "data_credits": 5.9,
@@ -2673,7 +2673,7 @@
     "source": "judgments.json",
     "main_task_only": true,
     "by_arm": {
-      "D": {
+      "C": {
         "fields": {
           "funding_stage": {
             "correct": 19,
@@ -2769,7 +2769,7 @@
     "observed_case_arms": 50,
     "main": {
       "by_arm": {
-        "D": {
+        "C": {
           "fields": {
             "funding_stage": {
               "correct": 19,
@@ -2865,7 +2865,7 @@
     },
     "excluding_keenable": {
       "by_arm": {
-        "D": {
+        "C": {
           "fields": {
             "funding_stage": {
               "correct": 18,
@@ -2961,7 +2961,7 @@
     },
     "entity_resolution": {
       "by_arm": {
-        "D": {
+        "C": {
           "fields": {
             "entity_resolution": {
               "correct": 1,
@@ -2994,7 +2994,7 @@
     "scoring_policy": "Pair outcomes compare correct field counts only when both non-null field sets match. Null fields are unscored. All-target correctness requires at least one non-null field and all such fields true. supported_answer covers target facts only. Additional claim arrays are not counted again."
   },
   "execution_by_arm": {
-    "D": {
+    "C": {
       "observed_runs": 50,
       "provider_attempts_observed": 50,
       "archived_initialization_failures": 0,

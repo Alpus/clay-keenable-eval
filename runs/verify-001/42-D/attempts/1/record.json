@@ -1,7 +1,7 @@
 {
-  "key": "42-C",
+  "key": "42-D",
   "case_id": "armis",
-  "arm": "C",
+  "arm": "D",
   "inputs": {
     "company_name": "Armis",
     "domain": "armis.com",
@@ -14,6 +14,6 @@
   "submitted_at": "2026-09-30T11:29:13.385333+00:00",
   "run_id": "wfr_0tm6d8pmhDYDkn9RwyF",
   "terminal_observed_at": "2026-09-30T11:32:04.170740+00:00",
-  "directory": "42-C/attempts/1",
+  "directory": "42-D/attempts/1",
   "archived_at": "2026-09-30T11:34:27.102582+00:00"
 }

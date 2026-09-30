@@ -1,7 +1,7 @@
 {
-  "key": "38-C",
+  "key": "38-D",
   "case_id": "red_canary",
-  "arm": "C",
+  "arm": "D",
   "inputs": {
     "company_name": "Red Canary",
     "domain": "redcanary.com",
@@ -14,6 +14,6 @@
   "submitted_at": "2026-09-30T11:29:03.149136+00:00",
   "run_id": "wfr_0tm6d8fBb9gEwKBci84",
   "terminal_observed_at": "2026-09-30T11:30:24.171173+00:00",
-  "directory": "38-C/attempts/1",
+  "directory": "38-D/attempts/1",
   "archived_at": "2026-09-30T11:34:27.100050+00:00"
 }

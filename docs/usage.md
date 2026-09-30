@@ -14,7 +14,7 @@ Clone the repository, enter its directory and run `docker compose build` first.
    docker compose run --rm eval setup --strategy verify
    ```
 
-2. [Enable Keenable in B and C once in Builder](#connect-keenable-once), then bind their saved versions:
+2. [Enable Keenable in B and D once in Builder](#connect-keenable-once), then bind their saved versions:
 
    ```sh
    docker compose run --rm eval bind-refresh
@@ -25,11 +25,11 @@ Clone the repository, enter its directory and run `docker compose build` first.
 
    ```sh
    docker compose run --rm eval run --output /results/my-ab --timeout 1200 --allow-credit-use
-   docker compose run --rm eval run --strategy verify --output /results/my-c --timeout 1200 --allow-credit-use
-   docker compose run --rm eval compare --baseline /results/my-ab --variant /results/my-c --output /results/my-comparison
+   docker compose run --rm eval run --strategy verify --output /results/my-d --timeout 1200 --allow-credit-use
+   docker compose run --rm eval compare --baseline /results/my-ab --variant /results/my-d --output /results/my-domparison
    ```
 
-The default is 30 in-flight runs, with starts spaced by two seconds to reduce request bursts. The second run submits only C; it does not repeat A/B. Repeat a run command to resume. Results appear under `runs/`. Fresh runs consume existing Clay credits. New factual scores require [source review](#reproduce-and-grade).
+The default is 30 in-flight runs, with starts spaced by two seconds to reduce request bursts. The second run submits only D; it does not repeat A/B. Repeat a run command to resume. Results appear under `runs/`. Fresh runs consume existing Clay credits. New factual scores require [source review](#reproduce-and-grade).
 
 
 ## Docker setup
@@ -64,16 +64,16 @@ CLAY_NETWORK_MODE=none docker compose run --rm eval reproduce --output /results/
 
 ## Connect Keenable once
 
-Open **Funding lifecycle evaluation B** and **Funding lifecycle evaluation C** in Claygent Builder, using the agent IDs printed by each setup command to distinguish them from older experiments.
+Open **Funding lifecycle evaluation B** and **Funding lifecycle evaluation D** in Claygent Builder, using the agent IDs printed by each setup command to distinguish them from older experiments.
 
 1. Under Tools, keep **Web search** enabled.
 2. Add a custom MCP server named **Keenable public evaluation** with URL `https://api.keenable.ai/mcp`. Leave the API key empty for the public tier.
-3. Enable that connection in B and C, then save each agent. Reuse the same server definition.
+3. Enable that connection in B and D, then save each agent. Reuse the same server definition.
 4. Verify A has Web search enabled and Keenable disabled. Keep other private connectors, account context and business context disabled on both.
 
-Run `./eval bind-refresh` for B and `./eval bind-refresh --strategy verify` for C.
+Run `./eval bind-refresh` for B and `./eval bind-refresh --strategy verify` for D.
 
-This setting is not exposed by the inspected official CLI node schema. The runner therefore uses one manual Builder step, then the official CLI for all runs. It never replays private browser endpoints or stores browser credentials. [A configuration](../evidence/variant-a-settings.png) · [B configuration](../evidence/variant-b-settings.png) · [C configuration](../evidence/variant-c-settings.png).
+This setting is not exposed by the inspected official CLI node schema. The runner therefore uses one manual Builder step, then the official CLI for all runs. It never replays private browser endpoints or stores browser credentials. [A configuration](../evidence/variant-a-settings.png) · [B configuration](../evidence/variant-b-settings.png) · [D configuration](../evidence/variant-c-settings.png).
 
 The [public Keenable tier](https://docs.keenable.ai/rate-limits) is unbilled and allows 1,000 requests per hour, at most 10 per second, shared per IP. Clay may use shared egress. A rate-limit failure must be recorded, not bypassed. Authenticated Keenable setup was not tested here.
 
@@ -111,44 +111,44 @@ Keenable's public MCP endpoint limits request rate, including connection initial
 The runner preserves failed runs and does not retry automatically. For a confirmed Keenable MCP initialization rate limit that consumed zero data credits and returned no research outputs, allow one explicit retry:
 
 ```sh
-./eval run --strategy verify --output runs/my-c --timeout 1200 --allow-credit-use --retry-initialization-failures
+./eval run --strategy verify --output runs/my-d --timeout 1200 --allow-credit-use --retry-initialization-failures
 ```
 
 This archives the prior result, submission and run ID under the case's `attempts/` directory. It permits at most one retry of that specific initialization failure. Completed answers, research failures, paid inference and ambiguous submissions are ineligible. All attempt charges remain in summary accounting. Later resumes use the recorded retry ID rather than submitting it again. Increase `--start-interval` if the public endpoint remains busy.
 
-## Separate verification condition C
+## Separate verification condition D
 
-The default strategy creates and runs A/B. The `verify` strategy creates and runs only C. It keeps separate workflow state under `.local/verify/` (or the Docker state volume's `verify/` directory). Its prompt must preserve the original prompt as an exact prefix. Existing A/B state and recorded answers are not changed.
+The default strategy creates and runs A/B. The `verify` strategy creates and runs only D. It keeps separate workflow state under `.local/verify/` (or the Docker state volume's `verify/` directory). Its prompt must preserve the original prompt as an exact prefix. Existing A/B state and recorded answers are not changed.
 
 ```sh
 ./eval setup --strategy verify
-# Enable the same Keenable connection in C through Builder.
+# Enable the same Keenable connection in D through Builder.
 ./eval bind-refresh --strategy verify
-./eval run --strategy verify --output runs/my-c --timeout 1200 --allow-credit-use
+./eval run --strategy verify --output runs/my-d --timeout 1200 --allow-credit-use
 ```
 
 After both studies finish, combine them offline:
 
 ```sh
-./eval compare --baseline runs/my-ab --variant runs/my-c --output runs/my-comparison
+./eval compare --baseline runs/my-ab --variant runs/my-d --output runs/my-domparison
 ```
 
-Comparison checks the input identities, cutoff, model, schema and original prompt. It copies the saved outputs into a portable snapshot, records source hashes and provenance, and calculates A/B, A/C and B/C paired outcomes when judgments exist. It makes no provider calls. Cost accounting separates reused A/B charges from new C charges. Use an empty comparison directory; subsequent `reproduce` calls recalculate that snapshot.
+Comparison checks the input identities, cutoff, model, schema and original prompt. It copies the saved outputs into a portable snapshot, records source hashes and provenance, and calculates A/B, A/D and B/D paired outcomes when judgments exist. It makes no provider calls. Cost accounting separates reused A/B charges from new D charges. Use an empty comparison directory; subsequent `reproduce` calls recalculate that snapshot.
 
-## Native verification control D
+## Native verification control C
 
-D repeats C's verification strategy using only native search and page reading. It uses the same companies, cutoff, GPT-5.4, schema and eight-call instruction. Its isolated state is `.local/verify-native/`.
+C repeats D's verification strategy using only native search and page reading. It uses the same companies, cutoff, GPT-5.4, schema and eight-call instruction. Its isolated state is `.local/verify-native/`.
 
 1. Run `./eval setup --strategy verify-native`.
-2. Open **Funding lifecycle evaluation D** in Builder. Verify Web search is on and Keenable, other connectors and private context are off. No Keenable connection is required.
-3. Run `./eval run --strategy verify-native --output runs/my-d --timeout 1200 --allow-credit-use`. Repeat the same command to resume.
+2. Open **Funding lifecycle evaluation C** in Builder. Verify Web search is on and Keenable, other connectors and private context are off. No Keenable connection is required.
+3. Run `./eval run --strategy verify-native --output runs/my-c --timeout 1200 --allow-credit-use`. Repeat the same command to resume.
 4. Review the saved answers with the existing scoring rules, then combine them offline:
 
    ```sh
-   ./eval compare --baseline runs/my-ab --variant runs/my-c --control runs/my-d --output runs/my-abcd
+   ./eval compare --baseline runs/my-ab --variant runs/my-d --control runs/my-c --output runs/my-abcd
    ```
 
-Existing A/B/C answers are reused. The new D research consumes Clay credits; comparison and replay do not.
+Existing A/B/D answers are reused. The new C research consumes Clay credits; comparison and replay do not.
 
 ## Reproduce and grade
 
@@ -178,3 +178,5 @@ For a fresh run, review every answer against the [scoring rules](methodology.md)
 Use `null` only for a target that cannot be fairly scored, with an explanation. `supported_answer` refers to the predeclared target facts, not all unscored claims. Keep evidence checks and corrections beside the judgments. Score entity resolution separately.
 
 Run local safety checks with `python3 -m unittest -v test_eval.py`. Credentials remain in Clay's credential store. Never commit `.local/`, `.env` or API keys.
+
+Saved receipts and screenshots retain their original Clay workflow titles. See the [condition-label mapping](condition-labels.md) when inspecting historical evidence.

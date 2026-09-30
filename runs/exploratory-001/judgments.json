@@ -1795,7 +1795,7 @@
       "unsupported_claims": [
         "AUD is plausible from Australian context, but the funding primary gives only $ without explicit currency; unscored."
       ],
-      "notes": "Both recover Pre-Series-A, August 13, 2025 and correct payments entity. Currency/amount/lead and lifecycle are not required dimensions. B flags a legal-entity status conflict instead of asserting closure; that does not alter funding score. Final C-source audit discovered a company-issued later completed investment round. Historical Pre-Series A remains correct but is not latest. The November event lacks a uniquely established original announcement date, so that target is null for all arms. Stage target means latest financing label/recognition, not an invented lettered series.",
+      "notes": "Both recover Pre-Series-A, August 13, 2025 and correct payments entity. Currency/amount/lead and lifecycle are not required dimensions. B flags a legal-entity status conflict instead of asserting closure; that does not alter funding score. Final D-source audit discovered a company-issued later completed investment round. Historical Pre-Series A remains correct but is not latest. The November event lacks a uniquely established original announcement date, so that target is null for all arms. Stage target means latest financing label/recognition, not an invented lettered series.",
       "evidence_checks": [
         {
           "claim": "Scored stage, date and identity",
@@ -1838,7 +1838,7 @@
         "AUD is plausible from Australian context, but the funding primary gives only $ without explicit currency; unscored.",
         "Claimed ASIC liquidation notice could not be independently verified: exact cited URL returned HTTP 404, web tool failed, scoped search did not retrieve notice. Do not treat lifecycle discovery as verified gain."
       ],
-      "notes": "Both recover Pre-Series-A, August 13, 2025 and correct payments entity. Currency/amount/lead and lifecycle are not required dimensions. B flags a legal-entity status conflict instead of asserting closure; that does not alter funding score. Final C-source audit discovered a company-issued later completed investment round. Historical Pre-Series A remains correct but is not latest. The November event lacks a uniquely established original announcement date, so that target is null for all arms. Stage target means latest financing label/recognition, not an invented lettered series.",
+      "notes": "Both recover Pre-Series-A, August 13, 2025 and correct payments entity. Currency/amount/lead and lifecycle are not required dimensions. B flags a legal-entity status conflict instead of asserting closure; that does not alter funding score. Final D-source audit discovered a company-issued later completed investment round. Historical Pre-Series A remains correct but is not latest. The November event lacks a uniquely established original announcement date, so that target is null for all arms. Stage target means latest financing label/recognition, not an invented lettered series.",
       "evidence_checks": [
         {
           "claim": "Scored stage, date and identity",

@@ -1,7 +1,7 @@
 {
-  "key": "46-C",
+  "key": "46-D",
   "case_id": "chime",
-  "arm": "C",
+  "arm": "D",
   "inputs": {
     "company_name": "Chime",
     "domain": "chime.com",
@@ -14,6 +14,6 @@
   "submitted_at": "2026-09-30T11:29:37.372818+00:00",
   "run_id": "wfr_0tm6d9dh2cZ47pjDfzZ",
   "terminal_observed_at": "2026-09-30T11:32:05.893507+00:00",
-  "directory": "46-C/attempts/1",
+  "directory": "46-D/attempts/1",
   "archived_at": "2026-09-30T11:34:27.105195+00:00"
 }

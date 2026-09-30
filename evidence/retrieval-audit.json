@@ -1,10 +1,10 @@
 {
   "analyzed_at": "2026-09-30T11:36:47.087492+00:00",
-  "scope": "Full completed A/B/C coverage: 50 cases per arm, plus all 7 archived C initialization failures. No provider calls were made by this audit.",
+  "scope": "Full completed A/B/D coverage: 50 cases per arm, plus all 7 archived D initialization failures. No provider calls were made by this audit.",
   "method": "Read saved result JSON only. Tool calls and visible responses come from stepsTaken, not final self-report. Manual attribution is separate from factual grading.",
   "limitations": [
     "Saved agent step summaries contain truncated response bodies despite verbose retrieval. This does not establish whether the model saw truncated data.",
-    "Visible evidence paths are not causal estimates. A/B/C vary in generated queries and sampling; C also changes the prompt.",
+    "Visible evidence paths are not causal estimates. A/B/D vary in generated queries and sampling; D also changes the prompt.",
     "Content gaps differ from transport/API errors. Error counts cover only explicit visible strings.",
     "Zero Keenable calls means no direct retrieval contribution. Differences between answers can still reflect stochastic native research."
   ],
@@ -169,7 +169,7 @@
       ],
       "initialization_rate_limit_failures": 0
     },
-    "C": {
+    "D": {
       "completed_runs_inspected": 50,
       "planned_runs": 50,
       "archived_failed_attempts": 7,
@@ -223,11 +223,11 @@
     "Pennylane failed to recover requested facts using either native or Keenable fetch on the same TCV URL.",
     "Verona Pharma shows that successful retrieval can feed an out-of-scope public financing answer.",
     "Saved agent step summaries contain truncated response bodies despite verbose retrieval. This limits evidence attribution; it does not establish what the model saw.",
-    "C called Keenable search in all 49 funding/lifecycle cases. All 50 C cases began with native research; the Freeman entity probe omitted Keenable without an observed need for verification.",
-    "C initial MCP setup failed under the public 10 RPS limit in seven attempts before model research. These failures have zero observed data/action credits and were retried once with two-second submission spacing. Their transport errors are separate from errors returned by research calls.",
-    "C still exceeded the eight-call prompt instruction in nine cases and made more than six native calls before its first Keenable call in eight cases. Tool order compliance and factual usefulness must be reported separately.",
+    "D called Keenable search in all 49 funding/lifecycle cases. All 50 D cases began with native research; the Freeman entity probe omitted Keenable without an observed need for verification.",
+    "D initial MCP setup failed under the public 10 RPS limit in seven attempts before model research. These failures have zero observed data/action credits and were retried once with two-second submission spacing. Their transport errors are separate from errors returned by research calls.",
+    "D still exceeded the eight-call prompt instruction in nine cases and made more than six native calls before its first Keenable call in eight cases. Tool order compliance and factual usefulness must be reported separately.",
     "Lessn has a visible Keenable-origin later-funding discovery. Abridge has a visible Keenable discovery lead corroborated by native Fortune fetch. Wayve has native-confirmed extension evidence with unresolved Keenable discovery attribution. Source adjudication determines correctness.",
-    "Circle C shows a native SEC extraction contamination retained in financing fields; mandatory Keenable verification did not repair it."
+    "Circle D shows a native SEC extraction contamination retained in financing fields; mandatory Keenable verification did not repair it."
   ],
   "cases": {
     "keenable": {
@@ -276,9 +276,9 @@
           "attribution": "no_demonstrated_incremental_benefit",
           "evidence_limit": "The Keenable result is truncated; the final answer does not cite the visible progressive-robot result. This cannot establish that all Keenable results were unused."
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d5shka326BUW5dh",
-          "result_file": "../runs/verify-001/01-C/result.json",
+          "result_file": "../runs/verify-001/01-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -345,9 +345,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d5sudfrE8KMeu4s",
-          "result_file": "../runs/verify-001/02-C/result.json",
+          "result_file": "../runs/verify-001/02-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -369,14 +369,14 @@
             "within_eight_research_calls": false,
             "trigger_note": "Funding/lifecycle claims are latest/current and require Keenable search. Entity-only verification depends on uncertainty; omission is not automatically a violation."
           },
-          "finding": "Native steps 0-2 had the February 2026 Series D. Keenable step 3 searched for newer evidence, but its visible prefix does not mention the April extension. Native search step 5 and primary-company fetch step 6 establish the $60m April 15 extension adopted by C.",
+          "finding": "Native steps 0-2 had the February 2026 Series D. Keenable step 3 searched for newer evidence, but its visible prefix does not mention the April extension. Native search step 5 and primary-company fetch step 6 establish the $60m April 15 extension adopted by D.",
           "supporting_step_indices": [
             1,
             3,
             5,
             6
           ],
-          "answer_comparison": "A/B retained the February $1.2bn round. C returns the later $60m extension.",
+          "answer_comparison": "A/B retained the February $1.2bn round. D returns the later $60m extension.",
           "attribution": "native_confirmed_correction_keenable_discovery_attribution_unresolved",
           "evidence_limit": "The Keenable body and intervening native investor page are truncated. Timing alone cannot establish which led to the extension query."
         }
@@ -422,9 +422,9 @@
           "finding": "B completed using native research tools only. No direct Keenable retrieval contribution can be attributed to any A/B answer difference.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d5t4yc5emJs6wJS",
-          "result_file": "../runs/verify-001/03-C/result.json",
+          "result_file": "../runs/verify-001/03-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 5,
@@ -491,9 +491,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d5tEP4ynqdWdeXS",
-          "result_file": "../runs/verify-001/04-C/result.json",
+          "result_file": "../runs/verify-001/04-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 4,
@@ -566,9 +566,9 @@
           "attribution": "acquisition_fact_from_native_fetch; possible_round_label_influence_unproven",
           "evidence_limit": "A same-value snippet is not enough to prove sole causation. Other native search responses are truncated too. A Series E label is not scored as a retrieval benefit here."
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d5uFNs5G26eXvTR",
-          "result_file": "../runs/verify-001/05-C/result.json",
+          "result_file": "../runs/verify-001/05-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 2,
@@ -642,9 +642,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d5vnnU2uSY26WX2",
-          "result_file": "../runs/verify-001/06-C/result.json",
+          "result_file": "../runs/verify-001/06-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 2,
@@ -718,9 +718,9 @@
           "attribution": "keenable_fetch_path_present; round_detail_difference_from_native_fetch",
           "evidence_limit": "The saved SEC response cuts off before the detailed listing/financing passages. Full support for every prospectus-based final claim cannot be audited from this prefix. No failed native SEC fetch is present to establish a Keenable rescue."
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d5xUFRg3zewoaSS",
-          "result_file": "../runs/verify-001/07-C/result.json",
+          "result_file": "../runs/verify-001/07-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 5,
@@ -787,9 +787,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d5xQC8QX94Sxgfi",
-          "result_file": "../runs/verify-001/08-C/result.json",
+          "result_file": "../runs/verify-001/08-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 1,
@@ -856,9 +856,9 @@
           "finding": "B completed using native research tools only. No direct Keenable retrieval contribution can be attributed to any A/B answer difference.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d5xaRQT3nJa6q3f",
-          "result_file": "../runs/verify-001/09-C/result.json",
+          "result_file": "../runs/verify-001/09-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -925,9 +925,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6dhfqsdiKTU2C9Tt",
-          "result_file": "../runs/verify-001/10-C/result.json",
+          "result_file": "../runs/verify-001/10-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -947,7 +947,7 @@
               "error": "AI action task completed with status: ERROR — Error initializing MCP client for custom-mcp-aa_0tm69c8Kw5dGSUqyRQD: Error: Streamable HTTP error: Error POSTing to endpoint: {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32000,\"message\":\"Too many requests — 10 RPS limit on public API. Please try again shortly. More info about authentication & upgrade: curl https://docs.keenable.ai/authentication.md\"},\"id\":null}. The server might be temporarily down, or your account credentials are incorrect.",
               "data_credits": 0,
               "action_credits": 0,
-              "result_file": "outputs/clay-keenable-eval/runs/verify-001/10-C/attempts/1/result.json"
+              "result_file": "outputs/clay-keenable-eval/runs/verify-001/10-D/attempts/1/result.json"
             }
           ],
           "prompt_following": {
@@ -1003,9 +1003,9 @@
           "finding": "B completed using native research tools only. No direct Keenable retrieval contribution can be attributed to any A/B answer difference.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6dhhzxJeVaBPTRi9",
-          "result_file": "../runs/verify-001/11-C/result.json",
+          "result_file": "../runs/verify-001/11-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -1025,7 +1025,7 @@
               "error": "AI action task completed with status: ERROR — Error initializing MCP client for custom-mcp-aa_0tm69c8Kw5dGSUqyRQD: Error: Streamable HTTP error: Error POSTing to endpoint: {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32000,\"message\":\"Too many requests — 10 RPS limit on public API. Please try again shortly. More info about authentication & upgrade: curl https://docs.keenable.ai/authentication.md\"},\"id\":0}. The server might be temporarily down, or your account credentials are incorrect.",
               "data_credits": 0,
               "action_credits": 0,
-              "result_file": "outputs/clay-keenable-eval/runs/verify-001/11-C/attempts/1/result.json"
+              "result_file": "outputs/clay-keenable-eval/runs/verify-001/11-D/attempts/1/result.json"
             }
           ],
           "prompt_following": {
@@ -1081,9 +1081,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d5zZK2MuMrUgfiq",
-          "result_file": "../runs/verify-001/12-C/result.json",
+          "result_file": "../runs/verify-001/12-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 2,
@@ -1150,9 +1150,9 @@
           "finding": "B completed using native research tools only. No direct Keenable retrieval contribution can be attributed to any A/B answer difference.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d605tStoR7tdyHV",
-          "result_file": "../runs/verify-001/13-C/result.json",
+          "result_file": "../runs/verify-001/13-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 2,
@@ -1219,9 +1219,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d60wsksva5eSdU4",
-          "result_file": "../runs/verify-001/14-C/result.json",
+          "result_file": "../runs/verify-001/14-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 4,
@@ -1243,7 +1243,7 @@
             "within_eight_research_calls": true,
             "trigger_note": "Funding/lifecycle claims are latest/current and require Keenable search. Entity-only verification depends on uncertainty; omission is not automatically a violation."
           },
-          "finding": "Native initial research had Series C and planned IPO. Keenable step 3 visibly introduces a September 2026 S-1 headline. Native SEC search/fetch steps 5-6 confirms filing, not effective public listing. Keenable fetch step 7 classifies $3.36bn September financing as convertible loan notes, which C excludes from venture equity.",
+          "finding": "Native initial research had Series C and planned IPO. Keenable step 3 visibly introduces a September 2026 S-1 headline. Native SEC search/fetch steps 5-6 confirms filing, not effective public listing. Keenable fetch step 7 classifies $3.36bn September financing as convertible loan notes, which D excludes from venture equity.",
           "supporting_step_indices": [
             2,
             3,
@@ -1251,7 +1251,7 @@
             6,
             7
           ],
-          "answer_comparison": "All arms keep Series C and private_independent. C adds a September 18 lifecycle date for the filing and discusses excluded convertible debt.",
+          "answer_comparison": "All arms keep Series C and private_independent. D adds a September 18 lifecycle date for the filing and discusses excluded convertible debt.",
           "attribution": "additional_current_evidence_with_native_sec_confirmation",
           "evidence_limit": "Additional detail is not automatically a target-field accuracy gain; IPO filing date is not necessarily the required lifecycle-event date."
         }
@@ -1297,9 +1297,9 @@
           "finding": "B completed using native research tools only. No direct Keenable retrieval contribution can be attributed to any A/B answer difference.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6dhj4B4ifuNJRVXd",
-          "result_file": "../runs/verify-001/15-C/result.json",
+          "result_file": "../runs/verify-001/15-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -1319,7 +1319,7 @@
               "error": "AI action task completed with status: ERROR — Error initializing MCP client for custom-mcp-aa_0tm69c8Kw5dGSUqyRQD: Error: Streamable HTTP error: Error POSTing to endpoint: {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32000,\"message\":\"Too many requests — 10 RPS limit on public API. Please try again shortly. More info about authentication & upgrade: curl https://docs.keenable.ai/authentication.md\"},\"id\":null}. The server might be temporarily down, or your account credentials are incorrect.",
               "data_credits": 0,
               "action_credits": 0,
-              "result_file": "outputs/clay-keenable-eval/runs/verify-001/15-C/attempts/1/result.json"
+              "result_file": "outputs/clay-keenable-eval/runs/verify-001/15-D/attempts/1/result.json"
             }
           ],
           "prompt_following": {
@@ -1375,9 +1375,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d61Hc5v3kwD8r88",
-          "result_file": "../runs/verify-001/16-C/result.json",
+          "result_file": "../runs/verify-001/16-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 1,
@@ -1444,9 +1444,9 @@
           "finding": "B completed using native research tools only. No direct Keenable retrieval contribution can be attributed to any A/B answer difference.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d62PVgHfApn6ieN",
-          "result_file": "../runs/verify-001/17-C/result.json",
+          "result_file": "../runs/verify-001/17-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -1513,9 +1513,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d62fvSU7mX87xMD",
-          "result_file": "../runs/verify-001/18-C/result.json",
+          "result_file": "../runs/verify-001/18-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -1582,9 +1582,9 @@
           "finding": "B completed using native research tools only. No direct Keenable retrieval contribution can be attributed to any A/B answer difference.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d63KoSxEizYFjpp",
-          "result_file": "../runs/verify-001/19-C/result.json",
+          "result_file": "../runs/verify-001/19-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -1606,7 +1606,7 @@
             "within_eight_research_calls": true,
             "trigger_note": "Funding/lifecycle claims are latest/current and require Keenable search. Entity-only verification depends on uncertainty; omission is not automatically a violation."
           },
-          "finding": "Keenable search step 3 shows August 17 in its visible snippet. Later native Yahoo/Business Wire syndication fetch step 6 supplies August 19, which C selects despite native company-search results also showing August 17. Keenable step 7 fails to recover requested facts from the abbreviated Business Wire URL.",
+          "finding": "Keenable search step 3 shows August 17 in its visible snippet. Later native Yahoo/Business Wire syndication fetch step 6 supplies August 19, which D selects despite native company-search results also showing August 17. Keenable step 7 fails to recover requested facts from the abbreviated Business Wire URL.",
           "supporting_step_indices": [
             3,
             4,
@@ -1614,7 +1614,7 @@
             6,
             7
           ],
-          "answer_comparison": "A/B return August 17. C returns August 19 and acknowledges date conflict.",
+          "answer_comparison": "A/B return August 17. D returns August 19 and acknowledges date conflict.",
           "attribution": "native_syndication_date_selection_and_keenable_fetch_content_gap",
           "evidence_limit": "This is not a corrected announcement date attributable to Keenable; source date adjudication belongs to graders."
         }
@@ -1666,9 +1666,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d63fVT6rtHiV7bq",
-          "result_file": "../runs/verify-001/20-C/result.json",
+          "result_file": "../runs/verify-001/20-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 1,
@@ -1735,9 +1735,9 @@
           "finding": "B completed using native research tools only. No direct Keenable retrieval contribution can be attributed to any A/B answer difference.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6dhlyU2zCf5vuXSa",
-          "result_file": "../runs/verify-001/21-C/result.json",
+          "result_file": "../runs/verify-001/21-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 2,
@@ -1757,7 +1757,7 @@
               "error": "AI action task completed with status: ERROR — Error initializing MCP client for custom-mcp-aa_0tm69c8Kw5dGSUqyRQD: Error: Streamable HTTP error: Error POSTing to endpoint: {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32000,\"message\":\"Too many requests — 10 RPS limit on public API. Please try again shortly. More info about authentication & upgrade: curl https://docs.keenable.ai/authentication.md\"},\"id\":null}. The server might be temporarily down, or your account credentials are incorrect.",
               "data_credits": 0,
               "action_credits": 0,
-              "result_file": "outputs/clay-keenable-eval/runs/verify-001/21-C/attempts/1/result.json"
+              "result_file": "outputs/clay-keenable-eval/runs/verify-001/21-D/attempts/1/result.json"
             }
           ],
           "prompt_following": {
@@ -1813,9 +1813,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d643AeocqsZ46fW",
-          "result_file": "../runs/verify-001/22-C/result.json",
+          "result_file": "../runs/verify-001/22-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 2,
@@ -1882,9 +1882,9 @@
           "finding": "B completed using native research tools only. No direct Keenable retrieval contribution can be attributed to any A/B answer difference.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d654ZqdTrTadrki",
-          "result_file": "../runs/verify-001/23-C/result.json",
+          "result_file": "../runs/verify-001/23-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 1,
@@ -1951,9 +1951,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d659W47ZgTAtNdA",
-          "result_file": "../runs/verify-001/24-C/result.json",
+          "result_file": "../runs/verify-001/24-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -2020,9 +2020,9 @@
           "finding": "B completed using native research tools only. No direct Keenable retrieval contribution can be attributed to any A/B answer difference.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d66j66PUiwr6uWW",
-          "result_file": "../runs/verify-001/25-C/result.json",
+          "result_file": "../runs/verify-001/25-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 4,
@@ -2089,9 +2089,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d669U3zExBHNV8b",
-          "result_file": "../runs/verify-001/26-C/result.json",
+          "result_file": "../runs/verify-001/26-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -2113,14 +2113,14 @@
             "within_eight_research_calls": true,
             "trigger_note": "Funding/lifecycle claims are latest/current and require Keenable search. Entity-only verification depends on uncertainty; omission is not automatically a violation."
           },
-          "finding": "Native steps 0-4 retrieved the $300m June 2025 Series E. Keenable step 5 first visibly introduced a $316m April 2026 Series E extension from a secondary page. Native search step 6 and Fortune fetch step 7 then corroborated that exact claim. C uses $316m extension, with announcement day and lead unknown.",
+          "finding": "Native steps 0-4 retrieved the $300m June 2025 Series E. Keenable step 5 first visibly introduced a $316m April 2026 Series E extension from a secondary page. Native search step 6 and Fortune fetch step 7 then corroborated that exact claim. D uses $316m extension, with announcement day and lead unknown.",
           "supporting_step_indices": [
             1,
             5,
             6,
             7
           ],
-          "answer_comparison": "A/B use the $300m June 2025 round. C changes to the later extension based on new retrieved evidence.",
+          "answer_comparison": "A/B use the $300m June 2025 round. D changes to the later extension based on new retrieved evidence.",
           "attribution": "keenable_visible_discovery_lead_with_native_corroboration",
           "evidence_limit": "Initial Keenable lead is lower authority. Final cited evidence came from a native Fortune fetch. Separate graders must verify the source claim and round scope; the search-plus-prompt change is not an isolated provider causal experiment."
         }
@@ -2166,9 +2166,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d67wfRQBziwyRzh",
-          "result_file": "../runs/verify-001/27-C/result.json",
+          "result_file": "../runs/verify-001/27-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -2235,9 +2235,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d67Tzowg733PiYr",
-          "result_file": "../runs/verify-001/28-C/result.json",
+          "result_file": "../runs/verify-001/28-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 4,
@@ -2304,9 +2304,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d68wHWJ72m7dEWZ",
-          "result_file": "../runs/verify-001/29-C/result.json",
+          "result_file": "../runs/verify-001/29-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 2,
@@ -2373,9 +2373,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d688sN6QkvsYwqr",
-          "result_file": "../runs/verify-001/30-C/result.json",
+          "result_file": "../runs/verify-001/30-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 4,
@@ -2442,9 +2442,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d7lnr952cPVj8zw",
-          "result_file": "../runs/verify-001/31-C/result.json",
+          "result_file": "../runs/verify-001/31-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 2,
@@ -2511,9 +2511,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d7sbG696zPoifSR",
-          "result_file": "../runs/verify-001/32-C/result.json",
+          "result_file": "../runs/verify-001/32-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -2535,7 +2535,7 @@
             "within_eight_research_calls": true,
             "trigger_note": "Funding/lifecycle claims are latest/current and require Keenable search. Entity-only verification depends on uncertainty; omission is not automatically a violation."
           },
-          "finding": "C native steps 0-1 found the August 2025 over-$1m pre-Series-A; step 4 returned no native data. Keenable search step 5 found the March 2026 newswire republication; fetch step 6 visibly returned a $300,000 November 2025 small investment round. C changed its final latest-round answer to that later event and explicitly preserved uncertainty about currency, precise announcement day, tranche/extension classification and lead investor.",
+          "finding": "D native steps 0-1 found the August 2025 over-$1m pre-Series-A; step 4 returned no native data. Keenable search step 5 found the March 2026 newswire republication; fetch step 6 visibly returned a $300,000 November 2025 small investment round. D changed its final latest-round answer to that later event and explicitly preserved uncertainty about currency, precise announcement day, tranche/extension classification and lead investor.",
           "supporting_step_indices": [
             0,
             1,
@@ -2544,7 +2544,7 @@
             6,
             7
           ],
-          "answer_comparison": "A and B retained the August 2025 pre-Series-A answer. C reports the later November 2025 event. Its date field conflates a funding-event month with an announcement date unless separately adjudicated.",
+          "answer_comparison": "A and B retained the August 2025 pre-Series-A answer. D reports the later November 2025 event. Its date field conflates a funding-event month with an announcement date unless separately adjudicated.",
           "attribution": "concrete_keenable_origin_later_funding_evidence",
           "evidence_limit": "This is a visible evidence-to-answer path. It does not prove native tools with a different query could not find the same newswire. Funding classification/date scoring requires source adjudication."
         }
@@ -2590,9 +2590,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d7t7o4nrvQ2WYDb",
-          "result_file": "../runs/verify-001/33-C/result.json",
+          "result_file": "../runs/verify-001/33-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -2659,9 +2659,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d81Zd47WE8mZQEX",
-          "result_file": "../runs/verify-001/34-C/result.json",
+          "result_file": "../runs/verify-001/34-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -2728,9 +2728,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d8cZZKuVmh4SSD7",
-          "result_file": "../runs/verify-001/35-C/result.json",
+          "result_file": "../runs/verify-001/35-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -2806,9 +2806,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d8dcr6CaufgcCNH",
-          "result_file": "../runs/verify-001/36-C/result.json",
+          "result_file": "../runs/verify-001/36-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -2875,9 +2875,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d8eQD55mc5h2X6A",
-          "result_file": "../runs/verify-001/37-C/result.json",
+          "result_file": "../runs/verify-001/37-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -2952,9 +2952,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6dhnJxaFmcZtHq8q",
-          "result_file": "../runs/verify-001/38-C/result.json",
+          "result_file": "../runs/verify-001/38-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -2974,7 +2974,7 @@
               "error": "AI action task completed with status: ERROR — Error initializing MCP client for custom-mcp-aa_0tm69c8Kw5dGSUqyRQD: Error: Streamable HTTP error: Error POSTing to endpoint: {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32000,\"message\":\"Too many requests — 10 RPS limit on public API. Please try again shortly. More info about authentication & upgrade: curl https://docs.keenable.ai/authentication.md\"},\"id\":null}. The server might be temporarily down, or your account credentials are incorrect.",
               "data_credits": 0,
               "action_credits": 0,
-              "result_file": "outputs/clay-keenable-eval/runs/verify-001/38-C/attempts/1/result.json"
+              "result_file": "outputs/clay-keenable-eval/runs/verify-001/38-D/attempts/1/result.json"
             }
           ],
           "prompt_following": {
@@ -3039,9 +3039,9 @@
           "attribution": "retrieval_to_answer_path_with_task_scope_error",
           "evidence_limit": "The 2022 offering was found via Keenable but detailed through native fetch. This is not an improved venture-round answer. Search responses are truncated, so irrelevant leading hits do not prove all results irrelevant."
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d8mnu9QoiqGn5rw",
-          "result_file": "../runs/verify-001/39-C/result.json",
+          "result_file": "../runs/verify-001/39-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 2,
@@ -3108,9 +3108,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d8nTjUyQr3FnGNb",
-          "result_file": "../runs/verify-001/40-C/result.json",
+          "result_file": "../runs/verify-001/40-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -3177,9 +3177,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d8oUztmf4DM9TmB",
-          "result_file": "../runs/verify-001/41-C/result.json",
+          "result_file": "../runs/verify-001/41-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 4,
@@ -3246,9 +3246,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6dhpr3nzQ2Xxo5aP",
-          "result_file": "../runs/verify-001/42-C/result.json",
+          "result_file": "../runs/verify-001/42-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 2,
@@ -3268,7 +3268,7 @@
               "error": "AI action task completed with status: ERROR — Error initializing MCP client for custom-mcp-aa_0tm69c8Kw5dGSUqyRQD: Error: Streamable HTTP error: Error POSTing to endpoint: {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32000,\"message\":\"Too many requests — 10 RPS limit on public API. Please try again shortly. More info about authentication & upgrade: curl https://docs.keenable.ai/authentication.md\"},\"id\":null}. The server might be temporarily down, or your account credentials are incorrect.",
               "data_credits": 0,
               "action_credits": 0,
-              "result_file": "outputs/clay-keenable-eval/runs/verify-001/42-C/attempts/1/result.json"
+              "result_file": "outputs/clay-keenable-eval/runs/verify-001/42-D/attempts/1/result.json"
             }
           ],
           "prompt_following": {
@@ -3324,9 +3324,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d9bSFYah49xmgyw",
-          "result_file": "../runs/verify-001/43-C/result.json",
+          "result_file": "../runs/verify-001/43-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 1,
@@ -3393,9 +3393,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d9b8S3JZg9YiD3x",
-          "result_file": "../runs/verify-001/44-C/result.json",
+          "result_file": "../runs/verify-001/44-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 4,
@@ -3469,9 +3469,9 @@
           "attribution": "documented_keenable_only_research_with_unresolved_exact_date_attribution",
           "evidence_limit": "Every Keenable response body is truncated. Do not treat B date difference as a demonstrated corrected claim solely from final output."
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d9cc8W8ZzmVmHrC",
-          "result_file": "../runs/verify-001/45-C/result.json",
+          "result_file": "../runs/verify-001/45-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 4,
@@ -3493,7 +3493,7 @@
             "within_eight_research_calls": true,
             "trigger_note": "Funding/lifecycle claims are latest/current and require Keenable search. Entity-only verification depends on uncertainty; omission is not automatically a violation."
           },
-          "finding": "Before any Keenable call, native SEC fetch step 3 returned an inconsistent Nasdaq/OMDA company ticker. C later warns about this contamination but keeps a March 2024 Series E/$150m/Fidelity and Wellington financing answer. Native step 5 already searches those financing terms. Keenable steps 6-7 concern later ownership/status, not that financing.",
+          "finding": "Before any Keenable call, native SEC fetch step 3 returned an inconsistent Nasdaq/OMDA company ticker. D later warns about this contamination but keeps a March 2024 Series E/$150m/Fidelity and Wellington financing answer. Native step 5 already searches those financing terms. Keenable steps 6-7 concern later ownership/status, not that financing.",
           "supporting_step_indices": [
             1,
             3,
@@ -3501,7 +3501,7 @@
             6,
             7
           ],
-          "answer_comparison": "A/B use the 2022 $400m financing. C changes to an apparently contaminated 2024 financing extraction; dedicated source adjudication is required.",
+          "answer_comparison": "A/B use the 2022 $400m financing. D changes to an apparently contaminated 2024 financing extraction; dedicated source adjudication is required.",
           "attribution": "native_extraction_contamination_not_keenable_origin",
           "evidence_limit": "Saved step 3 body truncates before the funding bullets, so exact origin is inferred from the subsequent native query and final warning. It is clearly not established as a Keenable financing benefit."
         }
@@ -3547,9 +3547,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6dhrsckP5ZPa9RC9",
-          "result_file": "../runs/verify-001/46-C/result.json",
+          "result_file": "../runs/verify-001/46-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -3569,7 +3569,7 @@
               "error": "AI action task completed with status: ERROR — Error initializing MCP client for custom-mcp-aa_0tm69c8Kw5dGSUqyRQD: Error: Streamable HTTP error: Error POSTing to endpoint: {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32000,\"message\":\"Too many requests — 10 RPS limit on public API. Please try again shortly. More info about authentication & upgrade: curl https://docs.keenable.ai/authentication.md\"},\"id\":null}. The server might be temporarily down, or your account credentials are incorrect.",
               "data_credits": 0,
               "action_credits": 0,
-              "result_file": "outputs/clay-keenable-eval/runs/verify-001/46-C/attempts/1/result.json"
+              "result_file": "outputs/clay-keenable-eval/runs/verify-001/46-D/attempts/1/result.json"
             }
           ],
           "prompt_following": {
@@ -3625,9 +3625,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d9eVum52omgf2FQ",
-          "result_file": "../runs/verify-001/47-C/result.json",
+          "result_file": "../runs/verify-001/47-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 5,
@@ -3694,9 +3694,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d9ffk83gMNb3WkQ",
-          "result_file": "../runs/verify-001/48-C/result.json",
+          "result_file": "../runs/verify-001/48-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,
@@ -3763,9 +3763,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d9ghjSrofa7x8AM",
-          "result_file": "../runs/verify-001/49-C/result.json",
+          "result_file": "../runs/verify-001/49-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 2,
@@ -3841,9 +3841,9 @@
           "finding": "No direct Keenable retrieval contribution can be attributed to this answer.",
           "attribution": "no_keenable_call_observed"
         },
-        "C": {
+        "D": {
           "run_id": "wfr_0tm6d9hc3pDvdnkTUUi",
-          "result_file": "../runs/verify-001/50-C/result.json",
+          "result_file": "../runs/verify-001/50-D/result.json",
           "status": "completed",
           "trace_available": true,
           "native_search_calls": 3,

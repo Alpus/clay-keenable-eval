@@ -1,6 +1,6 @@
-# D runner review
+# C runner review
 
-An independent Codex agent inspected the D runner and comparison changes and executed all 12 offline tests. It found one stale report description that omitted D and its separately incurred costs. Both descriptions were corrected; the tests passed again.
+An independent Codex agent inspected the C runner and comparison changes and executed all 12 offline tests. It found one stale report description that omitted C and its separately incurred costs. Both descriptions were corrected; the tests passed again.
 
 No resume-isolation, scoring, source-hash or numeric cost-accounting defects were reported. No provider calls were made by the reviewer.
 

@@ -1,7 +1,7 @@
 {
-  "key": "10-C",
+  "key": "10-D",
   "case_id": "supabase",
-  "arm": "C",
+  "arm": "D",
   "inputs": {
     "company_name": "Supabase",
     "domain": "supabase.com",
@@ -14,6 +14,6 @@
   "submitted_at": "2026-09-30T11:27:34.023443+00:00",
   "run_id": "wfr_0tm6d5ySVrwZQ8jThhz",
   "terminal_observed_at": "2026-09-30T11:28:40.313132+00:00",
-  "directory": "10-C/attempts/1",
+  "directory": "10-D/attempts/1",
   "archived_at": "2026-09-30T11:34:27.090477+00:00"
 }

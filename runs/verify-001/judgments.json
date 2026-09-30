@@ -4,7 +4,7 @@
   "cases": [
     {
       "case_id": "freeman_seattle",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "entity_resolution",
       "fields": {
         "entity_resolution": true,
@@ -14,7 +14,7 @@
       "missing_facts": [],
       "wrong_claims": [],
       "unsupported_claims": [],
-      "notes": "C correctly identifies the same Seattle clothing and raincoat business from its official about page and homepage. The historical wrong-entity complaint is not reproduced in any condition.",
+      "notes": "D correctly identifies the same Seattle clothing and raincoat business from its official about page and homepage. The historical wrong-entity complaint is not reproduced in any condition.",
       "evidence_checks": [
         {
           "claim": "Clothing and raincoats business",
@@ -25,7 +25,7 @@
     },
     {
       "case_id": "keenable",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "funding_stage": true,
@@ -59,7 +59,7 @@
     },
     {
       "case_id": "wayve",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "funding_stage": true,
@@ -94,7 +94,7 @@
     },
     {
       "case_id": "aikido_security",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "funding_stage": true,
@@ -129,7 +129,7 @@
     },
     {
       "case_id": "material_depot",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "funding_stage": true,
@@ -167,7 +167,7 @@
     },
     {
       "case_id": "lovable",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": true,
@@ -203,7 +203,7 @@
     },
     {
       "case_id": "supabase",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": true,
@@ -227,7 +227,7 @@
     },
     {
       "case_id": "elevenlabs",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": false,
@@ -243,7 +243,7 @@
         "February 4 is used as latest round announcement date even though answer recognizes a later third close, and the final audited June investment is missing."
       ],
       "unsupported_claims": [],
-      "notes": "Recognizes May 5 third close of Series D in evidence and uncertainties, so extension_recognition is true consistently with B. Returning the original February date does not satisfy latest-event date: C also misses the independently verified June 17/18 Vinci/BGK completed investment in extended Series D. Lack of a separately quantified May close does not remove it from the task. No amount target is added.",
+      "notes": "Recognizes May 5 third close of Series D in evidence and uncertainties, so extension_recognition is true consistently with B. Returning the original February date does not satisfy latest-event date: D also misses the independently verified June 17/18 Vinci/BGK completed investment in extended Series D. Lack of a separately quantified May close does not remove it from the task. No amount target is added.",
       "evidence_checks": [
         {
           "claim": "Scored funding facts",
@@ -269,7 +269,7 @@
     },
     {
       "case_id": "helsing",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": true,
@@ -303,7 +303,7 @@
     },
     {
       "case_id": "mistral_ai",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": true,
@@ -339,7 +339,7 @@
     },
     {
       "case_id": "nscale",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": true,
@@ -381,7 +381,7 @@
     },
     {
       "case_id": "isomorphic_labs",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": true,
@@ -407,7 +407,7 @@
     },
     {
       "case_id": "harvey",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": false,
@@ -424,7 +424,7 @@
         "USD 550M September 9 financing is presented as latest without the September 24 extension."
       ],
       "unsupported_claims": [],
-      "notes": "C has the same target gap as the original answers. Original arms find original September round but omit latest extension. Generic venture funding stage does not recognize extension; lettered series is not required. Failed dimensions are correlated consequences of one missed extension, not independent factual errors.",
+      "notes": "D has the same target gap as the original answers. Original arms find original September round but omit latest extension. Generic venture funding stage does not recognize extension; lettered series is not required. Failed dimensions are correlated consequences of one missed extension, not independent factual errors.",
       "evidence_checks": [
         {
           "claim": "Latest financing extension",
@@ -446,7 +446,7 @@
     },
     {
       "case_id": "replit",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": true,
@@ -477,7 +477,7 @@
         {
           "claim": "Additional C-source check",
           "url": "https://replit.com/news",
-          "assessment": "Fresh company news index dates the exact funding-announcement story cited by C to March 11, 2026; the cited story supports USD 400M. Separate official founder post also confirms March 11 amount."
+          "assessment": "Fresh company news index dates the exact funding-announcement story cited by D to March 11, 2026; the cited story supports USD 400M. Separate official founder post also confirms March 11 amount."
         }
       ],
       "output_citations": [
@@ -490,7 +490,7 @@
     },
     {
       "case_id": "ramp",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": true,
@@ -526,7 +526,7 @@
     },
     {
       "case_id": "rillet",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": true,
@@ -567,7 +567,7 @@
     },
     {
       "case_id": "pennylane",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": true,
@@ -598,7 +598,7 @@
         {
           "claim": "Additional C-source check",
           "url": "https://www.maddyness.com/2026/01/20/pennylane-nouvelle-levee-de-fonds-de-175-millions-deuros-pour-la-licorne-francaise/",
-          "assessment": "Fresh French article confirms January EUR 175M. C English variant URL did not open in adjudication; corresponding original reporting and independently inspected company reference support scored facts. Bloomberg is also cited by C."
+          "assessment": "Fresh French article confirms January EUR 175M. D English variant URL did not open in adjudication; corresponding original reporting and independently inspected company reference support scored facts. Bloomberg is also cited by D."
         }
       ],
       "output_citations": [
@@ -610,7 +610,7 @@
     },
     {
       "case_id": "n8n",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": true,
@@ -637,7 +637,7 @@
     },
     {
       "case_id": "alan",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": true,
@@ -685,7 +685,7 @@
     },
     {
       "case_id": "quince",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": true,
@@ -720,7 +720,7 @@
     },
     {
       "case_id": "cyera",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": true,
@@ -755,7 +755,7 @@
     },
     {
       "case_id": "airwallex",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": true,
@@ -795,7 +795,7 @@
     },
     {
       "case_id": "abridge",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": null,
@@ -808,7 +808,7 @@
       "missing_facts": [],
       "wrong_claims": [],
       "unsupported_claims": [],
-      "notes": "Latest venture-equity target remains unresolved under the same policy used for A/B. C cites an April 2026 USD 316M extension via Fortune; the inspected Fortune sentence links to Sacra, so this is derivative support for the same unresolved database claim. Historical 2025 Series E remains supported, but later strategic disclosure mechanics are unresolved.",
+      "notes": "Latest venture-equity target remains unresolved under the same policy used for A/B. D cites an April 2026 USD 316M extension via Fortune; the inspected Fortune sentence links to Sacra, so this is derivative support for the same unresolved database claim. Historical 2025 Series E remains supported, but later strategic disclosure mechanics are unresolved.",
       "evidence_checks": [
         {
           "claim": "Scored funding facts",
@@ -858,7 +858,7 @@
     },
     {
       "case_id": "cuspai",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": true,
@@ -898,7 +898,7 @@
     },
     {
       "case_id": "biorce",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": false,
@@ -913,7 +913,7 @@
       ],
       "wrong_claims": [],
       "unsupported_claims": [],
-      "notes": "C has the same target gap as the original answers. All three correctly recover Series A, February 2 and USD 52.5M, but leave lead unknown. This is cautious missing information, not hallucination. Company press-release text alone names participants; a separate company-authored public LinkedIn post resolves the lead.",
+      "notes": "D has the same target gap as the original answers. All three correctly recover Series A, February 2 and USD 52.5M, but leave lead unknown. This is cautious missing information, not hallucination. Company press-release text alone names participants; a separate company-authored public LinkedIn post resolves the lead.",
       "evidence_checks": [
         {
           "claim": "Amount, stage and date",
@@ -941,7 +941,7 @@
     },
     {
       "case_id": "mangoboost",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": null,
@@ -954,7 +954,7 @@
       "missing_facts": [],
       "wrong_claims": [],
       "unsupported_claims": [],
-      "notes": "Latest venture-equity target remains unresolved under the same policy used for A/B. C returns historical 2023 Series A, recognizes September Series B talks and cumulative-capital conflict. It does not resolve December strategic investment versus February bridge versus later Series B classification. No arm is rewarded for matching the old anchor.",
+      "notes": "Latest venture-equity target remains unresolved under the same policy used for A/B. D returns historical 2023 Series A, recognizes September Series B talks and cumulative-capital conflict. It does not resolve December strategic investment versus February bridge versus later Series B classification. No arm is rewarded for matching the old anchor.",
       "evidence_checks": [
         {
           "claim": "Historical Series A",
@@ -1001,7 +1001,7 @@
     },
     {
       "case_id": "vizzia",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": false,
@@ -1015,7 +1015,7 @@
       ],
       "wrong_claims": [],
       "unsupported_claims": [],
-      "notes": "Correct French entity and EUR 30M. C flags one-day ambiguity but uses later reporting as announcement. This is a date-precision gap, not fabricated round or entity.",
+      "notes": "Correct French entity and EUR 30M. D flags one-day ambiguity but uses later reporting as announcement. This is a date-precision gap, not fabricated round or entity.",
       "evidence_checks": [
         {
           "claim": "Company announcement amount and date",
@@ -1043,7 +1043,7 @@
     },
     {
       "case_id": "digantara",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": true,
@@ -1083,7 +1083,7 @@
     },
     {
       "case_id": "lessn",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "citation_support": true,
@@ -1095,7 +1095,7 @@
       "missing_facts": [],
       "wrong_claims": [],
       "unsupported_claims": [],
-      "notes": "C correctly recovers the later completed November small investment round and distinguishes March disclosure, historical August Pre-Series A, and a prospective future raise. Generic stage label is supported. The output date field contains event month; original announcement date cannot be uniquely established, so null for all arms. Amount/currency/lead are unscored. C describes the syndicated release as third party, but it is company-issued primary disclosure.",
+      "notes": "D correctly recovers the later completed November small investment round and distinguishes March disclosure, historical August Pre-Series A, and a prospective future raise. Generic stage label is supported. The output date field contains event month; original announcement date cannot be uniquely established, so null for all arms. Amount/currency/lead are unscored. D describes the syndicated release as third party, but it is company-issued primary disclosure.",
       "evidence_checks": [
         {
           "claim": "Later completed small investment round",
@@ -1111,7 +1111,7 @@
     },
     {
       "case_id": "wiz",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "current_lifecycle": true,
@@ -1135,7 +1135,7 @@
     },
     {
       "case_id": "moveworks",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "current_lifecycle": true,
@@ -1159,7 +1159,7 @@
     },
     {
       "case_id": "figma",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "current_lifecycle": true,
@@ -1182,7 +1182,7 @@
     },
     {
       "case_id": "informatica",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "current_lifecycle": true,
@@ -1206,7 +1206,7 @@
     },
     {
       "case_id": "hashicorp",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "current_lifecycle": true,
@@ -1230,7 +1230,7 @@
     },
     {
       "case_id": "protect_ai",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "current_lifecycle": true,
@@ -1254,7 +1254,7 @@
     },
     {
       "case_id": "cognigy",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "current_lifecycle": true,
@@ -1278,7 +1278,7 @@
     },
     {
       "case_id": "verona_pharma",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "current_lifecycle": true,
@@ -1302,7 +1302,7 @@
     },
     {
       "case_id": "chronosphere",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "current_lifecycle": true,
@@ -1326,7 +1326,7 @@
     },
     {
       "case_id": "cyberark",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "current_lifecycle": true,
@@ -1350,7 +1350,7 @@
     },
     {
       "case_id": "ansys",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "current_lifecycle": true,
@@ -1374,7 +1374,7 @@
     },
     {
       "case_id": "juniper_networks",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "current_lifecycle": true,
@@ -1398,7 +1398,7 @@
     },
     {
       "case_id": "walkme",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "current_lifecycle": true,
@@ -1426,7 +1426,7 @@
     },
     {
       "case_id": "circle",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "current_lifecycle": true,
@@ -1457,7 +1457,7 @@
     },
     {
       "case_id": "hinge_health",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "current_lifecycle": true,
@@ -1483,7 +1483,7 @@
     },
     {
       "case_id": "klarna",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "current_lifecycle": true,
@@ -1505,7 +1505,7 @@
     },
     {
       "case_id": "coreweave",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "current_lifecycle": true,
@@ -1534,7 +1534,7 @@
     },
     {
       "case_id": "mntn",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "current_lifecycle": true,
@@ -1556,7 +1556,7 @@
     },
     {
       "case_id": "armis",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "current_lifecycle": true,
@@ -1569,7 +1569,7 @@
       "missing_facts": [],
       "wrong_claims": [],
       "unsupported_claims": [],
-      "notes": "Primary ServiceNow completion release and Armis funding release were independently verified. All lifecycle targets match. C correctly distinguishes Goldman Sachs lead role from CapitalG major participation.",
+      "notes": "Primary ServiceNow completion release and Armis funding release were independently verified. All lifecycle targets match. D correctly distinguishes Goldman Sachs lead role from CapitalG major participation.",
       "evidence_checks": [
         {
           "claim": "Completed acquisition, acquirer, and completion date.",
@@ -1580,7 +1580,7 @@
     },
     {
       "case_id": "chime",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "current_lifecycle": true,
@@ -1603,7 +1603,7 @@
     },
     {
       "case_id": "red_canary",
-      "arm": "C",
+      "arm": "D",
       "scored_task": "funding_and_lifecycle",
       "fields": {
         "current_lifecycle": true,
@@ -1632,8 +1632,8 @@
     }
   ],
   "reviews": {
-    "root-C-judgments": {},
-    "funding-C-judgments": {
+    "root-D-judgments": {},
+    "funding-D-judgments": {
       "judgment_policy": "Same final audited targets and fieldsets as A/B. First inspect structured outputs, then verify sources. New reliable pre-cutoff evidence can correct all arms; unresolved latest-event cases remain null symmetrically. No provider traces used for initial judgments.",
       "reference_corrections": [
         {
@@ -1661,7 +1661,7 @@
         "pending": []
       }
     },
-    "lifecycle-C-judgments": {
+    "lifecycle-D-judgments": {
       "adjudication_method": "Manual assessment of structured outputs before inspecting retrieval traces. Arm labels are visible; this is not blinded. Sources checked independently. ICP exclusion is a deterministic consequence of acquired or public status. Historical funding is outside this lifecycle scoring scope.",
       "final_audit": {
         "date": "2026-09-30",

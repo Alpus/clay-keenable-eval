@@ -12,18 +12,18 @@ The business outcome is avoiding incorrect prospect qualification caused by stal
 | --- | --- | --- |
 | A | Identical fixed configuration | Native Clay web search and page access |
 | B | Same configuration as A | Native Clay tools plus Keenable search and fetch |
-| C | Same model/schema and original prompt prefix, plus verification instructions | Native first, then Keenable for gaps, conflicts and freshness |
-| D | Same verification prompt as C, changing provider references only | Native search and page reading for both research and verification |
+| C | Same verification prompt as D, changing provider references only | Native search and page reading for both research and verification |
+| D | Same model/schema and original prompt prefix, plus verification instructions | Native first, then Keenable for gaps, conflicts and freshness |
 
 A remains a full research agent. Both A and B explicitly check for newer acquisition, IPO and closure evidence. B is an augmentation test. It does not test replacement of Clay's search. Saved tool-step summaries distinguish availability from actual use.
 
 The original prompt does not force B to use Keenable. Both agents may choose their available tools. A B-run that does not call Keenable remains in the aggregate result, with non-use reported. A forced-tool smoke test verifies wiring separately and does not count toward quality results.
 
-After observing B's optional tool use, the user requested a separate C condition. All original A/B runs finished before C began. C uses every original company and preserves A/B unchanged. It reserves up to two of the same eight requested research calls for Keenable. A latest/current claim explicitly triggers verification. C is a post hoc strategy experiment with a changed prompt, not a held-out or isolated search-engine comparison.
+After observing B's optional tool use, the user requested a separate D condition. All original A/B runs finished before D began. D uses every original company and preserves A/B unchanged. It reserves up to two of the same eight requested research calls for Keenable. A latest/current claim explicitly triggers verification. D is a post hoc strategy experiment with a changed prompt, not a held-out or isolated search-engine comparison.
 
 If a tool needs a short explanation of its name, put an equivalent tool-use instruction in both prompts. Do not add special research hints or target URLs only to B.
 
-D was requested after C to control for the added verification instructions. It preserves the same 50 inputs, cutoff, model, schema and eight-call instruction, without Keenable or other custom tools. C/D isolates the intended provider difference more closely, but the sequential single runs remain exploratory.
+C was requested after D to control for the added verification instructions. It preserves the same 50 inputs, cutoff, model, schema and eight-call instruction, without Keenable or other custom tools. D/C isolates the intended provider difference more closely, but the sequential single runs remain exploratory.
 
 ## Cases and evidence
 
@@ -88,37 +88,37 @@ I checked the protocol for an active native-search baseline, equal prompts and m
 
 An independent model review was attempted through the configured free OpenRouter MCP on September 30, 2026. Both listed connections returned a reauthentication error during the read-only health check. No review generation ran. I did not use a paid fallback or a separate Claude budget. This is a review coverage limitation, not an independent endorsement.
 
-The runner passed eleven offline checks covering ambiguous submissions, 50-case scheduling and resume, bounded concurrency, exact prompt restoration after Builder formatting, native and Keenable trace parsing, and complete versus partial judgment aggregation. The original 100-run A/B comparison completed. C adds 50 research outputs without rerunning A/B. Setup and graph validation are not treated as evidence of research accuracy.
+The runner passed eleven offline checks covering ambiguous submissions, 50-case scheduling and resume, bounded concurrency, exact prompt restoration after Builder formatting, native and Keenable trace parsing, and complete versus partial judgment aggregation. The original 100-run A/B comparison completed. D adds 50 research outputs without rerunning A/B. Setup and graph validation are not treated as evidence of research accuracy.
 
 ## Execution amendments
 
 The initial A/B pair used concurrency 2, then the remaining plan continued at 4. At the user's request, the limit increased to 30 for the last 15 A/B runs. Each invocation is recorded in its manifest. Concurrency is operational; prompts, model, inputs and saved research answers were unchanged.
 
-C initially used concurrency 30 without submission spacing. Seven runs were rejected while initializing Keenable because the public API limits requests to 10 per second. They produced no research answers and consumed zero reported Clay data or action credits. Their full attempts remain archived. Each received one explicit retry with the same configuration, with starts spaced by two seconds. The runner now defaults to that spacing and concurrency 30. It never automatically retries a research answer or an ambiguous submission. Initialization success is reported separately from factual quality.
+D initially used concurrency 30 without submission spacing. Seven runs were rejected while initializing Keenable because the public API limits requests to 10 per second. They produced no research answers and consumed zero reported Clay data or action credits. Their full attempts remain archived. Each received one explicit retry with the same configuration, with starts spaced by two seconds. The runner now defaults to that spacing and concurrency 30. It never automatically retries a research answer or an ambiguous submission. Initialization success is reported separately from factual quality.
 
-Polling and manual inspection pauses affect submission-to-observed-completion time. These timestamps remain available for audit; they should not be read as an isolated measure of search-engine speed. Clay's reported duration is a separate observation. The A/B and C runs also occurred at different times and concurrency settings.
+Polling and manual inspection pauses affect submission-to-observed-completion time. These timestamps remain available for audit; they should not be read as an isolated measure of search-engine speed. Clay's reported duration is a separate observation. The A/B and D runs also occurred at different times and concurrency settings.
 
 ## Final source review
 
-The frozen reference file remains unchanged. Final judgments record newer evidence and corrections discovered during adjudication. The review includes claims from A, B and C, and applies each correction to all conditions. Examples include newer financing disclosures for Cyera, ElevenLabs and Lessn, and ambiguous financing evidence for MangoBoost and Abridge. The latter two remain in the dataset with null latest-event targets while their conflicts remain unresolved.
+The frozen reference file remains unchanged. Final judgments record newer evidence and corrections discovered during adjudication. The review includes claims from A, B and D, and applies each correction to all conditions. Examples include newer financing disclosures for Cyera, ElevenLabs and Lessn, and ambiguous financing evidence for MangoBoost and Abridge. The latter two remain in the dataset with null latest-event targets while their conflicts remain unresolved.
 
 Lifecycle cases have preselected lifecycle targets; historical funding is not fully scored in those cases. Additional mistakes and unsupported claims remain visible in judgments. Thus a full target score does not certify every statement in an answer. The separate Freeman entity probe is outside the main funding/lifecycle aggregate.
 
 ## Result interpretation
 
-**Where Keenable helped:** C used Keenable search and fetch to find a [company-issued Lessn disclosure](https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/sydney-au-mar-3-2026-acn-newswire-accounts-payable-automation/68628893) reporting a $300,000 investment in November 2025. A/B stopped at the earlier August round. The saved trace supports this retrieval attribution. C also found Wayve's later extension, but native tools established the final precise facts, so that improvement cannot be attributed solely to Keenable.
+**Where Keenable helped:** D used Keenable search and fetch to find a [company-issued Lessn disclosure](https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/sydney-au-mar-3-2026-acn-newswire-accounts-payable-automation/68628893) reporting a $300,000 investment in November 2025. A/B stopped at the earlier August round. The saved trace supports this retrieval attribution. D also found Wayve's later extension, but native tools established the final precise facts, so that improvement cannot be attributed solely to Keenable.
 
-**Where it did not solve the problem:** all conditions missed later extensions for ElevenLabs and Harvey. All got the 21 lifecycle statuses right. C still made additional errors outside those targets, including a wrong historical funding claim for Circle. All four B field-score wins over A occurred without calling Keenable, so those gains do not establish a Keenable contribution. Merely enabling Keenable had little aggregate effect; the prompted strategy did better in this exploratory run, with higher credit use and a changed prompt.
+**Where it did not solve the problem:** all conditions missed later extensions for ElevenLabs and Harvey. All got the 21 lifecycle statuses right. D still made additional errors outside those targets, including a wrong historical funding claim for Circle. All four B field-score wins over A occurred without calling Keenable, so those gains do not establish a Keenable contribution. Merely enabling Keenable had little aggregate effect; the prompted strategy did better in this exploratory run, with higher credit use and a changed prompt.
 
 ## Native verification control results
 
-D completed all 50 companies using GPT-5.4, the same inputs, cutoff, output schema and verification instructions as C. Only the provider references changed to native search and page reading; Keenable was disabled, with zero observed Keenable calls. D cost 204.3 data credits and 50 actions.
+C completed all 50 companies using GPT-5.4, the same inputs, cutoff, output schema and verification instructions as D. Only the provider references changed to native search and page reading; Keenable was disabled, with zero observed Keenable calls. C cost 204.3 data credits and 50 actions.
 
-- **Complete supported answers:** C 42/47, D 38/47. C passed four cases D failed: Alan, Lessn, CyberArk and Chime.
-- **Field differences:** C also scored one additional ElevenLabs target, although both failed that company overall. D had no target-field wins over C.
-- **Why:** D omitted Alan’s round stage, missed Lessn’s later financing, confused CyberArk’s announcement page date with acquisition completion, and cited Chime’s expected trading date without proving actual first trading. These differences include retrieval, extraction and citation errors, not only search coverage.
-- **Unscored claims:** D corrected C’s Circle funding claim but introduced errors such as Protect AI’s amount units and Red Canary’s completion date. Scores cover only the preselected targets.
+- **Complete supported answers:** D 42/47, C 38/47. D passed four cases C failed: Alan, Lessn, CyberArk and Chime.
+- **Field differences:** D also scored one additional ElevenLabs target, although both failed that company overall. C had no target-field wins over D.
+- **Why:** C omitted Alan’s round stage, missed Lessn’s later financing, confused CyberArk’s announcement page date with acquisition completion, and cited Chime’s expected trading date without proving actual first trading. These differences include retrieval, extraction and citation errors, not only search coverage.
+- **Unscored claims:** C corrected D’s Circle funding claim but introduced errors such as Protect AI’s amount units and Red Canary’s completion date. Scores cover only the preselected targets.
 
-This control was added after inspecting C, with visible condition labels during source adjudication. It tests the same verification strategy with native tools in one later run; it does not establish a repeatable causal effect. Replit’s later Visa investment has undisclosed terms, so existing positive-anchor targets remain consistent across arms rather than claiming exhaustive latest-event verification.
+This control was added after inspecting D, with visible condition labels during source adjudication. It tests the same verification strategy with native tools in one later run; it does not establish a repeatable causal effect. Replit’s later Visa investment has undisclosed terms, so existing positive-anchor targets remain consistent across arms rather than claiming exhaustive latest-event verification.
 
-The eight-call limit remained a prompt instruction: 22/50 D traces exceeded it. Actual tool counts are preserved in the [combined evidence](../runs/comparison-abcd/summary.json). Twelve offline runner tests passed, including D isolation, resume, four-condition comparison and replay.
+The eight-call limit remained a prompt instruction: 22/50 C traces exceeded it. Actual tool counts are preserved in the [combined evidence](../runs/comparison-abcd/summary.json). Twelve offline runner tests passed, including C isolation, resume, four-condition comparison and replay.

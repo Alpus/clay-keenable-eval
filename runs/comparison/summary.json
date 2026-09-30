@@ -2,7 +2,7 @@
   "prior_attempts": [
     {
       "case_id": "supabase",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d5ySVrwZQ8jThhz",
       "status": "failed",
       "data_credits": 0,
@@ -25,7 +25,7 @@
     },
     {
       "case_id": "elevenlabs",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d5zQsP37s3GUdw7",
       "status": "failed",
       "data_credits": 0,
@@ -48,7 +48,7 @@
     },
     {
       "case_id": "isomorphic_labs",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d61mGJgx9KqjX7m",
       "status": "failed",
       "data_credits": 0,
@@ -71,7 +71,7 @@
     },
     {
       "case_id": "n8n",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d64PCm7kSaQsP3b",
       "status": "failed",
       "data_credits": 0,
@@ -94,7 +94,7 @@
     },
     {
       "case_id": "red_canary",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d8fBb9gEwKBci84",
       "status": "failed",
       "data_credits": 0,
@@ -117,7 +117,7 @@
     },
     {
       "case_id": "armis",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d8pmhDYDkn9RwyF",
       "status": "failed",
       "data_credits": 0,
@@ -140,7 +140,7 @@
     },
     {
       "case_id": "chime",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d9dh2cZ47pjDfzZ",
       "status": "failed",
       "data_credits": 0,
@@ -163,7 +163,7 @@
     }
   ],
   "provider_attempts_observed": 157,
-  "configuration_hash": "ac22fdc3f084118d96fd06afceaaa4fb9682088f96a78494aa3216c32c668c9b",
+  "configuration_hash": "e2ead7838149b94ca814996bcca3f7d12064fe2f9b1f9a9149d4f9bfb7f8b924",
   "runs": [
     {
       "case_id": "keenable",
@@ -5357,7 +5357,7 @@
     },
     {
       "case_id": "keenable",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d5shka326BUW5dh",
       "status": "completed",
       "data_credits": 3,
@@ -5406,7 +5406,7 @@
     },
     {
       "case_id": "wayve",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d5sudfrE8KMeu4s",
       "status": "completed",
       "data_credits": 5.6,
@@ -5461,7 +5461,7 @@
     },
     {
       "case_id": "aikido_security",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d5t4yc5emJs6wJS",
       "status": "completed",
       "data_credits": 5.4,
@@ -5516,7 +5516,7 @@
     },
     {
       "case_id": "material_depot",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d5tEP4ynqdWdeXS",
       "status": "completed",
       "data_credits": 4.8,
@@ -5569,7 +5569,7 @@
     },
     {
       "case_id": "wiz",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d5uFNs5G26eXvTR",
       "status": "completed",
       "data_credits": 3.1,
@@ -5618,7 +5618,7 @@
     },
     {
       "case_id": "moveworks",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d5vnnU2uSY26WX2",
       "status": "completed",
       "data_credits": 3.6,
@@ -5667,7 +5667,7 @@
     },
     {
       "case_id": "figma",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d5xUFRg3zewoaSS",
       "status": "completed",
       "data_credits": 4.6,
@@ -5722,7 +5722,7 @@
     },
     {
       "case_id": "freeman_seattle",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d5xQC8QX94Sxgfi",
       "status": "completed",
       "data_credits": 1.6,
@@ -5765,7 +5765,7 @@
     },
     {
       "case_id": "lovable",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d5xaRQT3nJa6q3f",
       "status": "completed",
       "data_credits": 4.5,
@@ -5818,7 +5818,7 @@
     },
     {
       "case_id": "supabase",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6dhfqsdiKTU2C9Tt",
       "status": "completed",
       "data_credits": 3.4,
@@ -5869,7 +5869,7 @@
     },
     {
       "case_id": "elevenlabs",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6dhhzxJeVaBPTRi9",
       "status": "completed",
       "data_credits": 4.8,
@@ -5922,7 +5922,7 @@
     },
     {
       "case_id": "helsing",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d5zZK2MuMrUgfiq",
       "status": "completed",
       "data_credits": 2.6,
@@ -5969,7 +5969,7 @@
     },
     {
       "case_id": "mistral_ai",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d605tStoR7tdyHV",
       "status": "completed",
       "data_credits": 3.7,
@@ -6018,7 +6018,7 @@
     },
     {
       "case_id": "nscale",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d60wsksva5eSdU4",
       "status": "completed",
       "data_credits": 4.5,
@@ -6071,7 +6071,7 @@
     },
     {
       "case_id": "isomorphic_labs",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6dhj4B4ifuNJRVXd",
       "status": "completed",
       "data_credits": 3.2,
@@ -6122,7 +6122,7 @@
     },
     {
       "case_id": "harvey",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d61Hc5v3kwD8r88",
       "status": "completed",
       "data_credits": 3,
@@ -6169,7 +6169,7 @@
     },
     {
       "case_id": "replit",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d62PVgHfApn6ieN",
       "status": "completed",
       "data_credits": 3.4,
@@ -6220,7 +6220,7 @@
     },
     {
       "case_id": "ramp",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d62fvSU7mX87xMD",
       "status": "completed",
       "data_credits": 4.8,
@@ -6275,7 +6275,7 @@
     },
     {
       "case_id": "rillet",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d63KoSxEizYFjpp",
       "status": "completed",
       "data_credits": 4.6,
@@ -6328,7 +6328,7 @@
     },
     {
       "case_id": "pennylane",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d63fVT6rtHiV7bq",
       "status": "completed",
       "data_credits": 3.5,
@@ -6377,7 +6377,7 @@
     },
     {
       "case_id": "n8n",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6dhlyU2zCf5vuXSa",
       "status": "completed",
       "data_credits": 4.8,
@@ -6430,7 +6430,7 @@
     },
     {
       "case_id": "alan",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d643AeocqsZ46fW",
       "status": "completed",
       "data_credits": 5.199999999999999,
@@ -6483,7 +6483,7 @@
     },
     {
       "case_id": "quince",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d654ZqdTrTadrki",
       "status": "completed",
       "data_credits": 3.9,
@@ -6534,7 +6534,7 @@
     },
     {
       "case_id": "cyera",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d659W47ZgTAtNdA",
       "status": "completed",
       "data_credits": 3.7,
@@ -6585,7 +6585,7 @@
     },
     {
       "case_id": "airwallex",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d66j66PUiwr6uWW",
       "status": "completed",
       "data_credits": 5.199999999999999,
@@ -6640,7 +6640,7 @@
     },
     {
       "case_id": "abridge",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d669U3zExBHNV8b",
       "status": "completed",
       "data_credits": 5.1,
@@ -6693,7 +6693,7 @@
     },
     {
       "case_id": "cuspai",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d67wfRQBziwyRzh",
       "status": "completed",
       "data_credits": 4.199999999999999,
@@ -6746,7 +6746,7 @@
     },
     {
       "case_id": "biorce",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d67Tzowg733PiYr",
       "status": "completed",
       "data_credits": 3.5,
@@ -6799,7 +6799,7 @@
     },
     {
       "case_id": "mangoboost",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d68wHWJ72m7dEWZ",
       "status": "completed",
       "data_credits": 3.1,
@@ -6848,7 +6848,7 @@
     },
     {
       "case_id": "vizzia",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d688sN6QkvsYwqr",
       "status": "completed",
       "data_credits": 4.1,
@@ -6901,7 +6901,7 @@
     },
     {
       "case_id": "digantara",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d7lnr952cPVj8zw",
       "status": "completed",
       "data_credits": 4.4,
@@ -6954,7 +6954,7 @@
     },
     {
       "case_id": "lessn",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d7sbG696zPoifSR",
       "status": "completed",
       "data_credits": 4,
@@ -7007,7 +7007,7 @@
     },
     {
       "case_id": "informatica",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d7t7o4nrvQ2WYDb",
       "status": "completed",
       "data_credits": 5.6,
@@ -7062,7 +7062,7 @@
     },
     {
       "case_id": "hashicorp",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d81Zd47WE8mZQEX",
       "status": "completed",
       "data_credits": 4.6,
@@ -7115,7 +7115,7 @@
     },
     {
       "case_id": "walkme",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d8cZZKuVmh4SSD7",
       "status": "completed",
       "data_credits": 3.5,
@@ -7166,7 +7166,7 @@
     },
     {
       "case_id": "protect_ai",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d8dcr6CaufgcCNH",
       "status": "completed",
       "data_credits": 3.8,
@@ -7219,7 +7219,7 @@
     },
     {
       "case_id": "cognigy",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d8eQD55mc5h2X6A",
       "status": "completed",
       "data_credits": 3.6,
@@ -7270,7 +7270,7 @@
     },
     {
       "case_id": "red_canary",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6dhnJxaFmcZtHq8q",
       "status": "completed",
       "data_credits": 3.8,
@@ -7323,7 +7323,7 @@
     },
     {
       "case_id": "verona_pharma",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d8mnu9QoiqGn5rw",
       "status": "completed",
       "data_credits": 4.8,
@@ -7376,7 +7376,7 @@
     },
     {
       "case_id": "chronosphere",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d8nTjUyQr3FnGNb",
       "status": "completed",
       "data_credits": 4.8,
@@ -7429,7 +7429,7 @@
     },
     {
       "case_id": "cyberark",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d8oUztmf4DM9TmB",
       "status": "completed",
       "data_credits": 3.9,
@@ -7482,7 +7482,7 @@
     },
     {
       "case_id": "armis",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6dhpr3nzQ2Xxo5aP",
       "status": "completed",
       "data_credits": 3.2,
@@ -7531,7 +7531,7 @@
     },
     {
       "case_id": "ansys",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d9bSFYah49xmgyw",
       "status": "completed",
       "data_credits": 3.2,
@@ -7578,7 +7578,7 @@
     },
     {
       "case_id": "juniper_networks",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d9b8S3JZg9YiD3x",
       "status": "completed",
       "data_credits": 3.6,
@@ -7629,7 +7629,7 @@
     },
     {
       "case_id": "circle",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d9cc8W8ZzmVmHrC",
       "status": "completed",
       "data_credits": 4.6,
@@ -7682,7 +7682,7 @@
     },
     {
       "case_id": "chime",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6dhrsckP5ZPa9RC9",
       "status": "completed",
       "data_credits": 4.6,
@@ -7735,7 +7735,7 @@
     },
     {
       "case_id": "hinge_health",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d9eVum52omgf2FQ",
       "status": "completed",
       "data_credits": 5.9,
@@ -7792,7 +7792,7 @@
     },
     {
       "case_id": "klarna",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d9ffk83gMNb3WkQ",
       "status": "completed",
       "data_credits": 6,
@@ -7847,7 +7847,7 @@
     },
     {
       "case_id": "coreweave",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d9ghjSrofa7x8AM",
       "status": "completed",
       "data_credits": 4,
@@ -7898,7 +7898,7 @@
     },
     {
       "case_id": "mntn",
-      "arm": "C",
+      "arm": "D",
       "run_id": "wfr_0tm6d9hc3pDvdnkTUUi",
       "status": "completed",
       "data_credits": 4.9,
@@ -8133,7 +8133,7 @@
           "total": 47
         }
       },
-      "C": {
+      "D": {
         "fields": {
           "funding_stage": {
             "correct": 21,
@@ -9533,9 +9533,9 @@
           }
         ]
       },
-      "AC": {
+      "AD": {
         "A_wins": 1,
-        "C_wins": 6,
+        "D_wins": 6,
         "ties": 40,
         "incomparable": 2,
         "cases": [
@@ -9544,7 +9544,7 @@
             "outcome": "incomparable",
             "reason": "no_matching_nonnull_field_set",
             "A_fields": [],
-            "C_fields": []
+            "D_fields": []
           },
           {
             "case_id": "aikido_security",
@@ -9558,11 +9558,11 @@
               "lead_investor"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "airwallex",
-            "outcome": "C_wins",
+            "outcome": "D_wins",
             "total": 5,
             "scored_fields": [
               "announcement_date",
@@ -9572,7 +9572,7 @@
               "lead_investors"
             ],
             "A_correct": 3,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "alan",
@@ -9586,7 +9586,7 @@
               "lead_investors"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "ansys",
@@ -9600,7 +9600,7 @@
               "icp_exclusion"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "armis",
@@ -9614,7 +9614,7 @@
               "icp_exclusion"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "biorce",
@@ -9628,11 +9628,11 @@
               "lead_investors"
             ],
             "A_correct": 3,
-            "C_correct": 3
+            "D_correct": 3
           },
           {
             "case_id": "chime",
-            "outcome": "C_wins",
+            "outcome": "D_wins",
             "total": 4,
             "scored_fields": [
               "citation_support",
@@ -9641,7 +9641,7 @@
               "icp_exclusion"
             ],
             "A_correct": 2,
-            "C_correct": 4
+            "D_correct": 4
           },
           {
             "case_id": "chronosphere",
@@ -9655,7 +9655,7 @@
               "icp_exclusion"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "circle",
@@ -9667,7 +9667,7 @@
               "icp_exclusion"
             ],
             "A_correct": 3,
-            "C_correct": 3
+            "D_correct": 3
           },
           {
             "case_id": "cognigy",
@@ -9681,7 +9681,7 @@
               "icp_exclusion"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "coreweave",
@@ -9693,7 +9693,7 @@
               "icp_exclusion"
             ],
             "A_correct": 3,
-            "C_correct": 3
+            "D_correct": 3
           },
           {
             "case_id": "cuspai",
@@ -9706,7 +9706,7 @@
               "funding_stage"
             ],
             "A_correct": 4,
-            "C_correct": 4
+            "D_correct": 4
           },
           {
             "case_id": "cyberark",
@@ -9720,7 +9720,7 @@
               "icp_exclusion"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "cyera",
@@ -9734,7 +9734,7 @@
               "lead_investors"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "digantara",
@@ -9747,11 +9747,11 @@
               "funding_stage"
             ],
             "A_correct": 4,
-            "C_correct": 4
+            "D_correct": 4
           },
           {
             "case_id": "elevenlabs",
-            "outcome": "C_wins",
+            "outcome": "D_wins",
             "total": 4,
             "scored_fields": [
               "announcement_date",
@@ -9760,7 +9760,7 @@
               "funding_stage"
             ],
             "A_correct": 1,
-            "C_correct": 2
+            "D_correct": 2
           },
           {
             "case_id": "figma",
@@ -9773,7 +9773,7 @@
               "terminated_vs_completed_transaction"
             ],
             "A_correct": 4,
-            "C_correct": 4
+            "D_correct": 4
           },
           {
             "case_id": "harvey",
@@ -9787,7 +9787,7 @@
               "funding_stage"
             ],
             "A_correct": 0,
-            "C_correct": 0
+            "D_correct": 0
           },
           {
             "case_id": "hashicorp",
@@ -9801,7 +9801,7 @@
               "icp_exclusion"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "helsing",
@@ -9814,7 +9814,7 @@
               "funding_stage"
             ],
             "A_correct": 4,
-            "C_correct": 4
+            "D_correct": 4
           },
           {
             "case_id": "hinge_health",
@@ -9827,7 +9827,7 @@
               "icp_exclusion"
             ],
             "A_correct": 2,
-            "C_correct": 2
+            "D_correct": 2
           },
           {
             "case_id": "informatica",
@@ -9841,7 +9841,7 @@
               "icp_exclusion"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "isomorphic_labs",
@@ -9855,7 +9855,7 @@
               "lead_investors"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "juniper_networks",
@@ -9869,7 +9869,7 @@
               "icp_exclusion"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "keenable",
@@ -9882,7 +9882,7 @@
               "lead_investor"
             ],
             "A_correct": 4,
-            "C_correct": 4
+            "D_correct": 4
           },
           {
             "case_id": "klarna",
@@ -9894,11 +9894,11 @@
               "icp_exclusion"
             ],
             "A_correct": 3,
-            "C_correct": 3
+            "D_correct": 3
           },
           {
             "case_id": "lessn",
-            "outcome": "C_wins",
+            "outcome": "D_wins",
             "total": 3,
             "scored_fields": [
               "citation_support",
@@ -9906,7 +9906,7 @@
               "funding_stage"
             ],
             "A_correct": 1,
-            "C_correct": 3
+            "D_correct": 3
           },
           {
             "case_id": "lovable",
@@ -9920,14 +9920,14 @@
               "lead_investors"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "mangoboost",
             "outcome": "incomparable",
             "reason": "no_matching_nonnull_field_set",
             "A_fields": [],
-            "C_fields": []
+            "D_fields": []
           },
           {
             "case_id": "material_depot",
@@ -9942,11 +9942,11 @@
               "lead_investors"
             ],
             "A_correct": 6,
-            "C_correct": 6
+            "D_correct": 6
           },
           {
             "case_id": "mistral_ai",
-            "outcome": "C_wins",
+            "outcome": "D_wins",
             "total": 5,
             "scored_fields": [
               "announcement_month",
@@ -9956,7 +9956,7 @@
               "lead_investors"
             ],
             "A_correct": 3,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "mntn",
@@ -9968,7 +9968,7 @@
               "icp_exclusion"
             ],
             "A_correct": 3,
-            "C_correct": 3
+            "D_correct": 3
           },
           {
             "case_id": "moveworks",
@@ -9982,7 +9982,7 @@
               "icp_exclusion"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "n8n",
@@ -9994,7 +9994,7 @@
               "valuation_vs_amount"
             ],
             "A_correct": 3,
-            "C_correct": 3
+            "D_correct": 3
           },
           {
             "case_id": "nscale",
@@ -10009,7 +10009,7 @@
               "lead_investors"
             ],
             "A_correct": 6,
-            "C_correct": 6
+            "D_correct": 6
           },
           {
             "case_id": "pennylane",
@@ -10021,7 +10021,7 @@
               "event_amount"
             ],
             "A_correct": 3,
-            "C_correct": 3
+            "D_correct": 3
           },
           {
             "case_id": "protect_ai",
@@ -10035,7 +10035,7 @@
               "icp_exclusion"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "quince",
@@ -10049,7 +10049,7 @@
               "lead_investors"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "ramp",
@@ -10063,7 +10063,7 @@
               "lead_investors"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "red_canary",
@@ -10077,7 +10077,7 @@
               "icp_exclusion"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "replit",
@@ -10089,7 +10089,7 @@
               "event_amount"
             ],
             "A_correct": 3,
-            "C_correct": 3
+            "D_correct": 3
           },
           {
             "case_id": "rillet",
@@ -10103,7 +10103,7 @@
               "lead_investors"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "supabase",
@@ -10117,7 +10117,7 @@
               "lead_investors"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "verona_pharma",
@@ -10131,7 +10131,7 @@
               "icp_exclusion"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "vizzia",
@@ -10144,7 +10144,7 @@
               "event_amount"
             ],
             "A_correct": 4,
-            "C_correct": 2
+            "D_correct": 2
           },
           {
             "case_id": "walkme",
@@ -10158,11 +10158,11 @@
               "icp_exclusion"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "wayve",
-            "outcome": "C_wins",
+            "outcome": "D_wins",
             "total": 5,
             "scored_fields": [
               "announcement_date",
@@ -10172,7 +10172,7 @@
               "funding_stage"
             ],
             "A_correct": 1,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "wiz",
@@ -10186,13 +10186,13 @@
               "icp_exclusion"
             ],
             "A_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           }
         ]
       },
-      "BC": {
+      "BD": {
         "B_wins": 0,
-        "C_wins": 3,
+        "D_wins": 3,
         "ties": 44,
         "incomparable": 2,
         "cases": [
@@ -10201,7 +10201,7 @@
             "outcome": "incomparable",
             "reason": "no_matching_nonnull_field_set",
             "B_fields": [],
-            "C_fields": []
+            "D_fields": []
           },
           {
             "case_id": "aikido_security",
@@ -10215,7 +10215,7 @@
               "lead_investor"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "airwallex",
@@ -10229,7 +10229,7 @@
               "lead_investors"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "alan",
@@ -10243,7 +10243,7 @@
               "lead_investors"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "ansys",
@@ -10257,7 +10257,7 @@
               "icp_exclusion"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "armis",
@@ -10271,7 +10271,7 @@
               "icp_exclusion"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "biorce",
@@ -10285,7 +10285,7 @@
               "lead_investors"
             ],
             "B_correct": 3,
-            "C_correct": 3
+            "D_correct": 3
           },
           {
             "case_id": "chime",
@@ -10298,7 +10298,7 @@
               "icp_exclusion"
             ],
             "B_correct": 4,
-            "C_correct": 4
+            "D_correct": 4
           },
           {
             "case_id": "chronosphere",
@@ -10312,7 +10312,7 @@
               "icp_exclusion"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "circle",
@@ -10324,7 +10324,7 @@
               "icp_exclusion"
             ],
             "B_correct": 3,
-            "C_correct": 3
+            "D_correct": 3
           },
           {
             "case_id": "cognigy",
@@ -10338,7 +10338,7 @@
               "icp_exclusion"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "coreweave",
@@ -10350,7 +10350,7 @@
               "icp_exclusion"
             ],
             "B_correct": 3,
-            "C_correct": 3
+            "D_correct": 3
           },
           {
             "case_id": "cuspai",
@@ -10363,7 +10363,7 @@
               "funding_stage"
             ],
             "B_correct": 4,
-            "C_correct": 4
+            "D_correct": 4
           },
           {
             "case_id": "cyberark",
@@ -10377,7 +10377,7 @@
               "icp_exclusion"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "cyera",
@@ -10391,11 +10391,11 @@
               "lead_investors"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "digantara",
-            "outcome": "C_wins",
+            "outcome": "D_wins",
             "total": 4,
             "scored_fields": [
               "announcement_date",
@@ -10404,7 +10404,7 @@
               "funding_stage"
             ],
             "B_correct": 2,
-            "C_correct": 4
+            "D_correct": 4
           },
           {
             "case_id": "elevenlabs",
@@ -10417,7 +10417,7 @@
               "funding_stage"
             ],
             "B_correct": 2,
-            "C_correct": 2
+            "D_correct": 2
           },
           {
             "case_id": "figma",
@@ -10430,7 +10430,7 @@
               "terminated_vs_completed_transaction"
             ],
             "B_correct": 4,
-            "C_correct": 4
+            "D_correct": 4
           },
           {
             "case_id": "harvey",
@@ -10444,7 +10444,7 @@
               "funding_stage"
             ],
             "B_correct": 0,
-            "C_correct": 0
+            "D_correct": 0
           },
           {
             "case_id": "hashicorp",
@@ -10458,7 +10458,7 @@
               "icp_exclusion"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "helsing",
@@ -10471,7 +10471,7 @@
               "funding_stage"
             ],
             "B_correct": 4,
-            "C_correct": 4
+            "D_correct": 4
           },
           {
             "case_id": "hinge_health",
@@ -10484,7 +10484,7 @@
               "icp_exclusion"
             ],
             "B_correct": 2,
-            "C_correct": 2
+            "D_correct": 2
           },
           {
             "case_id": "informatica",
@@ -10498,7 +10498,7 @@
               "icp_exclusion"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "isomorphic_labs",
@@ -10512,7 +10512,7 @@
               "lead_investors"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "juniper_networks",
@@ -10526,7 +10526,7 @@
               "icp_exclusion"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "keenable",
@@ -10539,7 +10539,7 @@
               "lead_investor"
             ],
             "B_correct": 4,
-            "C_correct": 4
+            "D_correct": 4
           },
           {
             "case_id": "klarna",
@@ -10551,11 +10551,11 @@
               "icp_exclusion"
             ],
             "B_correct": 3,
-            "C_correct": 3
+            "D_correct": 3
           },
           {
             "case_id": "lessn",
-            "outcome": "C_wins",
+            "outcome": "D_wins",
             "total": 3,
             "scored_fields": [
               "citation_support",
@@ -10563,7 +10563,7 @@
               "funding_stage"
             ],
             "B_correct": 1,
-            "C_correct": 3
+            "D_correct": 3
           },
           {
             "case_id": "lovable",
@@ -10577,14 +10577,14 @@
               "lead_investors"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "mangoboost",
             "outcome": "incomparable",
             "reason": "no_matching_nonnull_field_set",
             "B_fields": [],
-            "C_fields": []
+            "D_fields": []
           },
           {
             "case_id": "material_depot",
@@ -10599,7 +10599,7 @@
               "lead_investors"
             ],
             "B_correct": 6,
-            "C_correct": 6
+            "D_correct": 6
           },
           {
             "case_id": "mistral_ai",
@@ -10613,7 +10613,7 @@
               "lead_investors"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "mntn",
@@ -10625,7 +10625,7 @@
               "icp_exclusion"
             ],
             "B_correct": 3,
-            "C_correct": 3
+            "D_correct": 3
           },
           {
             "case_id": "moveworks",
@@ -10639,7 +10639,7 @@
               "icp_exclusion"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "n8n",
@@ -10651,7 +10651,7 @@
               "valuation_vs_amount"
             ],
             "B_correct": 3,
-            "C_correct": 3
+            "D_correct": 3
           },
           {
             "case_id": "nscale",
@@ -10666,7 +10666,7 @@
               "lead_investors"
             ],
             "B_correct": 6,
-            "C_correct": 6
+            "D_correct": 6
           },
           {
             "case_id": "pennylane",
@@ -10678,7 +10678,7 @@
               "event_amount"
             ],
             "B_correct": 3,
-            "C_correct": 3
+            "D_correct": 3
           },
           {
             "case_id": "protect_ai",
@@ -10692,7 +10692,7 @@
               "icp_exclusion"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "quince",
@@ -10706,7 +10706,7 @@
               "lead_investors"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "ramp",
@@ -10720,7 +10720,7 @@
               "lead_investors"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "red_canary",
@@ -10734,7 +10734,7 @@
               "icp_exclusion"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "replit",
@@ -10746,7 +10746,7 @@
               "event_amount"
             ],
             "B_correct": 3,
-            "C_correct": 3
+            "D_correct": 3
           },
           {
             "case_id": "rillet",
@@ -10760,7 +10760,7 @@
               "lead_investors"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "supabase",
@@ -10774,7 +10774,7 @@
               "lead_investors"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "verona_pharma",
@@ -10788,7 +10788,7 @@
               "icp_exclusion"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "vizzia",
@@ -10801,7 +10801,7 @@
               "event_amount"
             ],
             "B_correct": 2,
-            "C_correct": 2
+            "D_correct": 2
           },
           {
             "case_id": "walkme",
@@ -10815,11 +10815,11 @@
               "icp_exclusion"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "wayve",
-            "outcome": "C_wins",
+            "outcome": "D_wins",
             "total": 5,
             "scored_fields": [
               "announcement_date",
@@ -10829,7 +10829,7 @@
               "funding_stage"
             ],
             "B_correct": 1,
-            "C_correct": 5
+            "D_correct": 5
           },
           {
             "case_id": "wiz",
@@ -10843,7 +10843,7 @@
               "icp_exclusion"
             ],
             "B_correct": 5,
-            "C_correct": 5
+            "D_correct": 5
           }
         ]
       }
@@ -11023,7 +11023,7 @@
             "total": 47
           }
         },
-        "C": {
+        "D": {
           "fields": {
             "funding_stage": {
               "correct": 21,
@@ -12423,9 +12423,9 @@
             }
           ]
         },
-        "AC": {
+        "AD": {
           "A_wins": 1,
-          "C_wins": 6,
+          "D_wins": 6,
           "ties": 40,
           "incomparable": 2,
           "cases": [
@@ -12434,7 +12434,7 @@
               "outcome": "incomparable",
               "reason": "no_matching_nonnull_field_set",
               "A_fields": [],
-              "C_fields": []
+              "D_fields": []
             },
             {
               "case_id": "aikido_security",
@@ -12448,11 +12448,11 @@
                 "lead_investor"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "airwallex",
-              "outcome": "C_wins",
+              "outcome": "D_wins",
               "total": 5,
               "scored_fields": [
                 "announcement_date",
@@ -12462,7 +12462,7 @@
                 "lead_investors"
               ],
               "A_correct": 3,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "alan",
@@ -12476,7 +12476,7 @@
                 "lead_investors"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "ansys",
@@ -12490,7 +12490,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "armis",
@@ -12504,7 +12504,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "biorce",
@@ -12518,11 +12518,11 @@
                 "lead_investors"
               ],
               "A_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "chime",
-              "outcome": "C_wins",
+              "outcome": "D_wins",
               "total": 4,
               "scored_fields": [
                 "citation_support",
@@ -12531,7 +12531,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 2,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "chronosphere",
@@ -12545,7 +12545,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "circle",
@@ -12557,7 +12557,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "cognigy",
@@ -12571,7 +12571,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "coreweave",
@@ -12583,7 +12583,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "cuspai",
@@ -12596,7 +12596,7 @@
                 "funding_stage"
               ],
               "A_correct": 4,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "cyberark",
@@ -12610,7 +12610,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "cyera",
@@ -12624,7 +12624,7 @@
                 "lead_investors"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "digantara",
@@ -12637,11 +12637,11 @@
                 "funding_stage"
               ],
               "A_correct": 4,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "elevenlabs",
-              "outcome": "C_wins",
+              "outcome": "D_wins",
               "total": 4,
               "scored_fields": [
                 "announcement_date",
@@ -12650,7 +12650,7 @@
                 "funding_stage"
               ],
               "A_correct": 1,
-              "C_correct": 2
+              "D_correct": 2
             },
             {
               "case_id": "figma",
@@ -12663,7 +12663,7 @@
                 "terminated_vs_completed_transaction"
               ],
               "A_correct": 4,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "harvey",
@@ -12677,7 +12677,7 @@
                 "funding_stage"
               ],
               "A_correct": 0,
-              "C_correct": 0
+              "D_correct": 0
             },
             {
               "case_id": "hashicorp",
@@ -12691,7 +12691,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "helsing",
@@ -12704,7 +12704,7 @@
                 "funding_stage"
               ],
               "A_correct": 4,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "hinge_health",
@@ -12717,7 +12717,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 2,
-              "C_correct": 2
+              "D_correct": 2
             },
             {
               "case_id": "informatica",
@@ -12731,7 +12731,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "isomorphic_labs",
@@ -12745,7 +12745,7 @@
                 "lead_investors"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "juniper_networks",
@@ -12759,7 +12759,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "keenable",
@@ -12772,7 +12772,7 @@
                 "lead_investor"
               ],
               "A_correct": 4,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "klarna",
@@ -12784,11 +12784,11 @@
                 "icp_exclusion"
               ],
               "A_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "lessn",
-              "outcome": "C_wins",
+              "outcome": "D_wins",
               "total": 3,
               "scored_fields": [
                 "citation_support",
@@ -12796,7 +12796,7 @@
                 "funding_stage"
               ],
               "A_correct": 1,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "lovable",
@@ -12810,14 +12810,14 @@
                 "lead_investors"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "mangoboost",
               "outcome": "incomparable",
               "reason": "no_matching_nonnull_field_set",
               "A_fields": [],
-              "C_fields": []
+              "D_fields": []
             },
             {
               "case_id": "material_depot",
@@ -12832,11 +12832,11 @@
                 "lead_investors"
               ],
               "A_correct": 6,
-              "C_correct": 6
+              "D_correct": 6
             },
             {
               "case_id": "mistral_ai",
-              "outcome": "C_wins",
+              "outcome": "D_wins",
               "total": 5,
               "scored_fields": [
                 "announcement_month",
@@ -12846,7 +12846,7 @@
                 "lead_investors"
               ],
               "A_correct": 3,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "mntn",
@@ -12858,7 +12858,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "moveworks",
@@ -12872,7 +12872,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "n8n",
@@ -12884,7 +12884,7 @@
                 "valuation_vs_amount"
               ],
               "A_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "nscale",
@@ -12899,7 +12899,7 @@
                 "lead_investors"
               ],
               "A_correct": 6,
-              "C_correct": 6
+              "D_correct": 6
             },
             {
               "case_id": "pennylane",
@@ -12911,7 +12911,7 @@
                 "event_amount"
               ],
               "A_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "protect_ai",
@@ -12925,7 +12925,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "quince",
@@ -12939,7 +12939,7 @@
                 "lead_investors"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "ramp",
@@ -12953,7 +12953,7 @@
                 "lead_investors"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "red_canary",
@@ -12967,7 +12967,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "replit",
@@ -12979,7 +12979,7 @@
                 "event_amount"
               ],
               "A_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "rillet",
@@ -12993,7 +12993,7 @@
                 "lead_investors"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "supabase",
@@ -13007,7 +13007,7 @@
                 "lead_investors"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "verona_pharma",
@@ -13021,7 +13021,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "vizzia",
@@ -13034,7 +13034,7 @@
                 "event_amount"
               ],
               "A_correct": 4,
-              "C_correct": 2
+              "D_correct": 2
             },
             {
               "case_id": "walkme",
@@ -13048,11 +13048,11 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "wayve",
-              "outcome": "C_wins",
+              "outcome": "D_wins",
               "total": 5,
               "scored_fields": [
                 "announcement_date",
@@ -13062,7 +13062,7 @@
                 "funding_stage"
               ],
               "A_correct": 1,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "wiz",
@@ -13076,13 +13076,13 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             }
           ]
         },
-        "BC": {
+        "BD": {
           "B_wins": 0,
-          "C_wins": 3,
+          "D_wins": 3,
           "ties": 44,
           "incomparable": 2,
           "cases": [
@@ -13091,7 +13091,7 @@
               "outcome": "incomparable",
               "reason": "no_matching_nonnull_field_set",
               "B_fields": [],
-              "C_fields": []
+              "D_fields": []
             },
             {
               "case_id": "aikido_security",
@@ -13105,7 +13105,7 @@
                 "lead_investor"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "airwallex",
@@ -13119,7 +13119,7 @@
                 "lead_investors"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "alan",
@@ -13133,7 +13133,7 @@
                 "lead_investors"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "ansys",
@@ -13147,7 +13147,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "armis",
@@ -13161,7 +13161,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "biorce",
@@ -13175,7 +13175,7 @@
                 "lead_investors"
               ],
               "B_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "chime",
@@ -13188,7 +13188,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 4,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "chronosphere",
@@ -13202,7 +13202,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "circle",
@@ -13214,7 +13214,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "cognigy",
@@ -13228,7 +13228,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "coreweave",
@@ -13240,7 +13240,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "cuspai",
@@ -13253,7 +13253,7 @@
                 "funding_stage"
               ],
               "B_correct": 4,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "cyberark",
@@ -13267,7 +13267,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "cyera",
@@ -13281,11 +13281,11 @@
                 "lead_investors"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "digantara",
-              "outcome": "C_wins",
+              "outcome": "D_wins",
               "total": 4,
               "scored_fields": [
                 "announcement_date",
@@ -13294,7 +13294,7 @@
                 "funding_stage"
               ],
               "B_correct": 2,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "elevenlabs",
@@ -13307,7 +13307,7 @@
                 "funding_stage"
               ],
               "B_correct": 2,
-              "C_correct": 2
+              "D_correct": 2
             },
             {
               "case_id": "figma",
@@ -13320,7 +13320,7 @@
                 "terminated_vs_completed_transaction"
               ],
               "B_correct": 4,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "harvey",
@@ -13334,7 +13334,7 @@
                 "funding_stage"
               ],
               "B_correct": 0,
-              "C_correct": 0
+              "D_correct": 0
             },
             {
               "case_id": "hashicorp",
@@ -13348,7 +13348,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "helsing",
@@ -13361,7 +13361,7 @@
                 "funding_stage"
               ],
               "B_correct": 4,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "hinge_health",
@@ -13374,7 +13374,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 2,
-              "C_correct": 2
+              "D_correct": 2
             },
             {
               "case_id": "informatica",
@@ -13388,7 +13388,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "isomorphic_labs",
@@ -13402,7 +13402,7 @@
                 "lead_investors"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "juniper_networks",
@@ -13416,7 +13416,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "keenable",
@@ -13429,7 +13429,7 @@
                 "lead_investor"
               ],
               "B_correct": 4,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "klarna",
@@ -13441,11 +13441,11 @@
                 "icp_exclusion"
               ],
               "B_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "lessn",
-              "outcome": "C_wins",
+              "outcome": "D_wins",
               "total": 3,
               "scored_fields": [
                 "citation_support",
@@ -13453,7 +13453,7 @@
                 "funding_stage"
               ],
               "B_correct": 1,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "lovable",
@@ -13467,14 +13467,14 @@
                 "lead_investors"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "mangoboost",
               "outcome": "incomparable",
               "reason": "no_matching_nonnull_field_set",
               "B_fields": [],
-              "C_fields": []
+              "D_fields": []
             },
             {
               "case_id": "material_depot",
@@ -13489,7 +13489,7 @@
                 "lead_investors"
               ],
               "B_correct": 6,
-              "C_correct": 6
+              "D_correct": 6
             },
             {
               "case_id": "mistral_ai",
@@ -13503,7 +13503,7 @@
                 "lead_investors"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "mntn",
@@ -13515,7 +13515,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "moveworks",
@@ -13529,7 +13529,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "n8n",
@@ -13541,7 +13541,7 @@
                 "valuation_vs_amount"
               ],
               "B_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "nscale",
@@ -13556,7 +13556,7 @@
                 "lead_investors"
               ],
               "B_correct": 6,
-              "C_correct": 6
+              "D_correct": 6
             },
             {
               "case_id": "pennylane",
@@ -13568,7 +13568,7 @@
                 "event_amount"
               ],
               "B_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "protect_ai",
@@ -13582,7 +13582,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "quince",
@@ -13596,7 +13596,7 @@
                 "lead_investors"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "ramp",
@@ -13610,7 +13610,7 @@
                 "lead_investors"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "red_canary",
@@ -13624,7 +13624,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "replit",
@@ -13636,7 +13636,7 @@
                 "event_amount"
               ],
               "B_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "rillet",
@@ -13650,7 +13650,7 @@
                 "lead_investors"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "supabase",
@@ -13664,7 +13664,7 @@
                 "lead_investors"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "verona_pharma",
@@ -13678,7 +13678,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "vizzia",
@@ -13691,7 +13691,7 @@
                 "event_amount"
               ],
               "B_correct": 2,
-              "C_correct": 2
+              "D_correct": 2
             },
             {
               "case_id": "walkme",
@@ -13705,11 +13705,11 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "wayve",
-              "outcome": "C_wins",
+              "outcome": "D_wins",
               "total": 5,
               "scored_fields": [
                 "announcement_date",
@@ -13719,7 +13719,7 @@
                 "funding_stage"
               ],
               "B_correct": 1,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "wiz",
@@ -13733,7 +13733,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             }
           ]
         }
@@ -13913,7 +13913,7 @@
             "total": 46
           }
         },
-        "C": {
+        "D": {
           "fields": {
             "funding_stage": {
               "correct": 20,
@@ -15287,9 +15287,9 @@
             }
           ]
         },
-        "AC": {
+        "AD": {
           "A_wins": 1,
-          "C_wins": 6,
+          "D_wins": 6,
           "ties": 39,
           "incomparable": 2,
           "cases": [
@@ -15298,7 +15298,7 @@
               "outcome": "incomparable",
               "reason": "no_matching_nonnull_field_set",
               "A_fields": [],
-              "C_fields": []
+              "D_fields": []
             },
             {
               "case_id": "aikido_security",
@@ -15312,11 +15312,11 @@
                 "lead_investor"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "airwallex",
-              "outcome": "C_wins",
+              "outcome": "D_wins",
               "total": 5,
               "scored_fields": [
                 "announcement_date",
@@ -15326,7 +15326,7 @@
                 "lead_investors"
               ],
               "A_correct": 3,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "alan",
@@ -15340,7 +15340,7 @@
                 "lead_investors"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "ansys",
@@ -15354,7 +15354,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "armis",
@@ -15368,7 +15368,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "biorce",
@@ -15382,11 +15382,11 @@
                 "lead_investors"
               ],
               "A_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "chime",
-              "outcome": "C_wins",
+              "outcome": "D_wins",
               "total": 4,
               "scored_fields": [
                 "citation_support",
@@ -15395,7 +15395,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 2,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "chronosphere",
@@ -15409,7 +15409,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "circle",
@@ -15421,7 +15421,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "cognigy",
@@ -15435,7 +15435,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "coreweave",
@@ -15447,7 +15447,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "cuspai",
@@ -15460,7 +15460,7 @@
                 "funding_stage"
               ],
               "A_correct": 4,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "cyberark",
@@ -15474,7 +15474,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "cyera",
@@ -15488,7 +15488,7 @@
                 "lead_investors"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "digantara",
@@ -15501,11 +15501,11 @@
                 "funding_stage"
               ],
               "A_correct": 4,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "elevenlabs",
-              "outcome": "C_wins",
+              "outcome": "D_wins",
               "total": 4,
               "scored_fields": [
                 "announcement_date",
@@ -15514,7 +15514,7 @@
                 "funding_stage"
               ],
               "A_correct": 1,
-              "C_correct": 2
+              "D_correct": 2
             },
             {
               "case_id": "figma",
@@ -15527,7 +15527,7 @@
                 "terminated_vs_completed_transaction"
               ],
               "A_correct": 4,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "harvey",
@@ -15541,7 +15541,7 @@
                 "funding_stage"
               ],
               "A_correct": 0,
-              "C_correct": 0
+              "D_correct": 0
             },
             {
               "case_id": "hashicorp",
@@ -15555,7 +15555,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "helsing",
@@ -15568,7 +15568,7 @@
                 "funding_stage"
               ],
               "A_correct": 4,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "hinge_health",
@@ -15581,7 +15581,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 2,
-              "C_correct": 2
+              "D_correct": 2
             },
             {
               "case_id": "informatica",
@@ -15595,7 +15595,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "isomorphic_labs",
@@ -15609,7 +15609,7 @@
                 "lead_investors"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "juniper_networks",
@@ -15623,7 +15623,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "klarna",
@@ -15635,11 +15635,11 @@
                 "icp_exclusion"
               ],
               "A_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "lessn",
-              "outcome": "C_wins",
+              "outcome": "D_wins",
               "total": 3,
               "scored_fields": [
                 "citation_support",
@@ -15647,7 +15647,7 @@
                 "funding_stage"
               ],
               "A_correct": 1,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "lovable",
@@ -15661,14 +15661,14 @@
                 "lead_investors"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "mangoboost",
               "outcome": "incomparable",
               "reason": "no_matching_nonnull_field_set",
               "A_fields": [],
-              "C_fields": []
+              "D_fields": []
             },
             {
               "case_id": "material_depot",
@@ -15683,11 +15683,11 @@
                 "lead_investors"
               ],
               "A_correct": 6,
-              "C_correct": 6
+              "D_correct": 6
             },
             {
               "case_id": "mistral_ai",
-              "outcome": "C_wins",
+              "outcome": "D_wins",
               "total": 5,
               "scored_fields": [
                 "announcement_month",
@@ -15697,7 +15697,7 @@
                 "lead_investors"
               ],
               "A_correct": 3,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "mntn",
@@ -15709,7 +15709,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "moveworks",
@@ -15723,7 +15723,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "n8n",
@@ -15735,7 +15735,7 @@
                 "valuation_vs_amount"
               ],
               "A_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "nscale",
@@ -15750,7 +15750,7 @@
                 "lead_investors"
               ],
               "A_correct": 6,
-              "C_correct": 6
+              "D_correct": 6
             },
             {
               "case_id": "pennylane",
@@ -15762,7 +15762,7 @@
                 "event_amount"
               ],
               "A_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "protect_ai",
@@ -15776,7 +15776,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "quince",
@@ -15790,7 +15790,7 @@
                 "lead_investors"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "ramp",
@@ -15804,7 +15804,7 @@
                 "lead_investors"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "red_canary",
@@ -15818,7 +15818,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "replit",
@@ -15830,7 +15830,7 @@
                 "event_amount"
               ],
               "A_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "rillet",
@@ -15844,7 +15844,7 @@
                 "lead_investors"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "supabase",
@@ -15858,7 +15858,7 @@
                 "lead_investors"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "verona_pharma",
@@ -15872,7 +15872,7 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "vizzia",
@@ -15885,7 +15885,7 @@
                 "event_amount"
               ],
               "A_correct": 4,
-              "C_correct": 2
+              "D_correct": 2
             },
             {
               "case_id": "walkme",
@@ -15899,11 +15899,11 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "wayve",
-              "outcome": "C_wins",
+              "outcome": "D_wins",
               "total": 5,
               "scored_fields": [
                 "announcement_date",
@@ -15913,7 +15913,7 @@
                 "funding_stage"
               ],
               "A_correct": 1,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "wiz",
@@ -15927,13 +15927,13 @@
                 "icp_exclusion"
               ],
               "A_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             }
           ]
         },
-        "BC": {
+        "BD": {
           "B_wins": 0,
-          "C_wins": 3,
+          "D_wins": 3,
           "ties": 43,
           "incomparable": 2,
           "cases": [
@@ -15942,7 +15942,7 @@
               "outcome": "incomparable",
               "reason": "no_matching_nonnull_field_set",
               "B_fields": [],
-              "C_fields": []
+              "D_fields": []
             },
             {
               "case_id": "aikido_security",
@@ -15956,7 +15956,7 @@
                 "lead_investor"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "airwallex",
@@ -15970,7 +15970,7 @@
                 "lead_investors"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "alan",
@@ -15984,7 +15984,7 @@
                 "lead_investors"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "ansys",
@@ -15998,7 +15998,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "armis",
@@ -16012,7 +16012,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "biorce",
@@ -16026,7 +16026,7 @@
                 "lead_investors"
               ],
               "B_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "chime",
@@ -16039,7 +16039,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 4,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "chronosphere",
@@ -16053,7 +16053,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "circle",
@@ -16065,7 +16065,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "cognigy",
@@ -16079,7 +16079,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "coreweave",
@@ -16091,7 +16091,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "cuspai",
@@ -16104,7 +16104,7 @@
                 "funding_stage"
               ],
               "B_correct": 4,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "cyberark",
@@ -16118,7 +16118,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "cyera",
@@ -16132,11 +16132,11 @@
                 "lead_investors"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "digantara",
-              "outcome": "C_wins",
+              "outcome": "D_wins",
               "total": 4,
               "scored_fields": [
                 "announcement_date",
@@ -16145,7 +16145,7 @@
                 "funding_stage"
               ],
               "B_correct": 2,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "elevenlabs",
@@ -16158,7 +16158,7 @@
                 "funding_stage"
               ],
               "B_correct": 2,
-              "C_correct": 2
+              "D_correct": 2
             },
             {
               "case_id": "figma",
@@ -16171,7 +16171,7 @@
                 "terminated_vs_completed_transaction"
               ],
               "B_correct": 4,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "harvey",
@@ -16185,7 +16185,7 @@
                 "funding_stage"
               ],
               "B_correct": 0,
-              "C_correct": 0
+              "D_correct": 0
             },
             {
               "case_id": "hashicorp",
@@ -16199,7 +16199,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "helsing",
@@ -16212,7 +16212,7 @@
                 "funding_stage"
               ],
               "B_correct": 4,
-              "C_correct": 4
+              "D_correct": 4
             },
             {
               "case_id": "hinge_health",
@@ -16225,7 +16225,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 2,
-              "C_correct": 2
+              "D_correct": 2
             },
             {
               "case_id": "informatica",
@@ -16239,7 +16239,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "isomorphic_labs",
@@ -16253,7 +16253,7 @@
                 "lead_investors"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "juniper_networks",
@@ -16267,7 +16267,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "klarna",
@@ -16279,11 +16279,11 @@
                 "icp_exclusion"
               ],
               "B_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "lessn",
-              "outcome": "C_wins",
+              "outcome": "D_wins",
               "total": 3,
               "scored_fields": [
                 "citation_support",
@@ -16291,7 +16291,7 @@
                 "funding_stage"
               ],
               "B_correct": 1,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "lovable",
@@ -16305,14 +16305,14 @@
                 "lead_investors"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "mangoboost",
               "outcome": "incomparable",
               "reason": "no_matching_nonnull_field_set",
               "B_fields": [],
-              "C_fields": []
+              "D_fields": []
             },
             {
               "case_id": "material_depot",
@@ -16327,7 +16327,7 @@
                 "lead_investors"
               ],
               "B_correct": 6,
-              "C_correct": 6
+              "D_correct": 6
             },
             {
               "case_id": "mistral_ai",
@@ -16341,7 +16341,7 @@
                 "lead_investors"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "mntn",
@@ -16353,7 +16353,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "moveworks",
@@ -16367,7 +16367,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "n8n",
@@ -16379,7 +16379,7 @@
                 "valuation_vs_amount"
               ],
               "B_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "nscale",
@@ -16394,7 +16394,7 @@
                 "lead_investors"
               ],
               "B_correct": 6,
-              "C_correct": 6
+              "D_correct": 6
             },
             {
               "case_id": "pennylane",
@@ -16406,7 +16406,7 @@
                 "event_amount"
               ],
               "B_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "protect_ai",
@@ -16420,7 +16420,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "quince",
@@ -16434,7 +16434,7 @@
                 "lead_investors"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "ramp",
@@ -16448,7 +16448,7 @@
                 "lead_investors"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "red_canary",
@@ -16462,7 +16462,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "replit",
@@ -16474,7 +16474,7 @@
                 "event_amount"
               ],
               "B_correct": 3,
-              "C_correct": 3
+              "D_correct": 3
             },
             {
               "case_id": "rillet",
@@ -16488,7 +16488,7 @@
                 "lead_investors"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "supabase",
@@ -16502,7 +16502,7 @@
                 "lead_investors"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "verona_pharma",
@@ -16516,7 +16516,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "vizzia",
@@ -16529,7 +16529,7 @@
                 "event_amount"
               ],
               "B_correct": 2,
-              "C_correct": 2
+              "D_correct": 2
             },
             {
               "case_id": "walkme",
@@ -16543,11 +16543,11 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "wayve",
-              "outcome": "C_wins",
+              "outcome": "D_wins",
               "total": 5,
               "scored_fields": [
                 "announcement_date",
@@ -16557,7 +16557,7 @@
                 "funding_stage"
               ],
               "B_correct": 1,
-              "C_correct": 5
+              "D_correct": 5
             },
             {
               "case_id": "wiz",
@@ -16571,7 +16571,7 @@
                 "icp_exclusion"
               ],
               "B_correct": 5,
-              "C_correct": 5
+              "D_correct": 5
             }
           ]
         }
@@ -16623,7 +16623,7 @@
             "total": 1
           }
         },
-        "C": {
+        "D": {
           "fields": {
             "entity_resolution": {
               "correct": 1,
@@ -16683,9 +16683,9 @@
             }
           ]
         },
-        "AC": {
+        "AD": {
           "A_wins": 0,
-          "C_wins": 0,
+          "D_wins": 0,
           "ties": 1,
           "incomparable": 0,
           "cases": [
@@ -16698,13 +16698,13 @@
                 "entity_resolution"
               ],
               "A_correct": 2,
-              "C_correct": 2
+              "D_correct": 2
             }
           ]
         },
-        "BC": {
+        "BD": {
           "B_wins": 0,
-          "C_wins": 0,
+          "D_wins": 0,
           "ties": 1,
           "incomparable": 0,
           "cases": [
@@ -16717,7 +16717,7 @@
                 "entity_resolution"
               ],
               "B_correct": 2,
-              "C_correct": 2
+              "D_correct": 2
             }
           ]
         }
@@ -16756,7 +16756,7 @@
       "runs_exceeding_eight_call_instruction": 16,
       "median_submission_to_terminal_observed_seconds": 114.621161
     },
-    "C": {
+    "D": {
       "observed_runs": 50,
       "provider_attempts_observed": 57,
       "archived_initialization_failures": 7,
@@ -16782,19 +16782,19 @@
       ],
       "reused": true,
       "hash_format": "SHA-256 of sorted-key JSON, as used by frozen_hash",
-      "judgments_sha256": "1ed87f0279ddffb865a99e50e31a1b66afc6968c985170542a2e86011aa190e7"
+      "judgments_sha256": "49742e32f9bf315bf95bdac1a3f259b9813122c0f47fdbedbcf39935529bff89"
     },
     "variant": {
       "directory": "../verify-001",
       "manifest": "../verify-001/manifest.json",
-      "manifest_sha256": "bf05c86671ca338b54b2b9e132aa972112bdcea77ebb1323588f1adf45e37677",
-      "frozen_hash": "d2c4b33754891f361a1097badc6b983b48c669233ce169948b4efb5264cd63b7",
+      "manifest_sha256": "d9d7dae9810268781094a93a8db19b0c345487a33e119231c92071e0574d7e43",
+      "frozen_hash": "23d2b04477dfed48437a1c13567437c7b79b98c2f19e797046f2c01df9a72f40",
       "arms": [
-        "C"
+        "D"
       ],
       "reused": false,
       "hash_format": "SHA-256 of sorted-key JSON, as used by frozen_hash",
-      "judgments_sha256": "8367bf944240dfb906da0f9a9765509fb68421d07e6472c8ba52a0523620ba78"
+      "judgments_sha256": "7d7b116736299bde390cdc0970d4f0915cf4ed3927ae31cd683d0827b13a151e"
     }
   },
   "comparison_costs": {
@@ -16808,5 +16808,5 @@
     }
   },
   "new_provider_calls_in_comparison": 0,
-  "cost_scope": "Top-level observed credits include historical A/B plus C exactly once. Only comparison_costs.new_variant is additional C study spend; offline compare itself consumes no credits."
+  "cost_scope": "Top-level observed credits include all included studies exactly once. comparison_costs separates baseline, D and any C study spend; offline compare itself consumes no credits."
 }
