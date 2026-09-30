@@ -16,7 +16,7 @@ This experiment tests whether [Keenable](https://keenable.ai/) improves answers 
 
 ## Results
 
-**Simply adding Keenable showed no clear benefit; explicitly prompting Keenable verification improved results in this run.**
+**Keenable with explicit verification prompting improved results.**
 
 All 150 answers completed and were reviewed against sources on September 30, 2026.
 
