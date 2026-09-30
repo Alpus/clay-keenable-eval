@@ -18,7 +18,6 @@ The hypothesis comes from [user reports available online](docs/evidence.md).
 | --- | ---: | ---: | ---: | ---: |
 | Companies with all target facts correct and supported | **38/47** | **39/47** | **42/47** | **38/47** |
 | Clay data credits (all runs) | 176.5 | 206.2 | 207.3 | 204.3 |
-| Clay action credits (all runs) | 50 | 50 | 50 | 50 |
 
 Scores cover preselected target facts, not every claim in an answer.
 
