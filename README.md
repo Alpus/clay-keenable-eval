@@ -23,7 +23,7 @@ Scores cover preselected target facts, not every claim in an answer.
 
 **Successful search example:** C used Keenable to retrieve a [Lessn disclosure](https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/sydney-au-mar-3-2026-acn-newswire-accounts-payable-automation/68628893) of a $300,000 investment in November 2025. A/B stopped at the earlier August round.
 
-[All company results](runs/comparison-abcd/results.md) · [Scores and sources](runs/comparison-abcd/judgments.json) · [Retrieval audit](evidence/retrieval-audit.json)
+[All company results](runs/comparison-abcd/results.md) · [Scores and sources](runs/comparison-abcd/judgments.json) · [Retrieval audit](evidence/retrieval-audit.json) · [Case findings and remaining errors](docs/methodology.md#result-interpretation)
 
 Seven C attempts failed during MCP initialization, with zero reported credits. Each was retried once; all attempts are preserved. The 200 answers consumed 794.3 data credits and 200 actions, excluding setup smoke tests.
 
