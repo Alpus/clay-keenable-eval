@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6cwyAc484PMAFyYY",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:22:10.694Z",
+  "duration": "1m 2s",
+  "dataCreditsUsed": 5.1,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6cwy8QKqkcnvZq3Q",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:22:10.726Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "circle.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Circle"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6cwymzFPpHBafNRJ",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:22:10.782Z",
+      "completedAt": "2026-09-30T11:23:13.395Z",
+      "duration": "1m 2s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "circle.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Circle"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"circle.com is Circle, a financial technology company providing developer and financial infrastructure including USDC/EURC.\",\"url\":\"https://www.circle.com/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Circle’s full-stack platform provides the tools developers use to ship AI-powered applications and the financial primitives agents need to hold value, discover services, and transact programmatically.\"},{\"claim\":\"Circle announced a $400 million private funding round with BlackRock, Fidelity, Marshall Wace and Fin Capital on 2022-04-12; this is the latest evidenced venture-style equity round found before Circle became public.\",\"url\":\"https://circle.com/en/pressroom/circle-announces-400m-funding-round\",\"publication_date\":\"2022-04-12\",\"event_date\":\"2022-04-12\",\"excerpt\":\"Circle... announced it has entered into an agreement for a $400M funding round with investments from BlackRock, Inc., Fidelity Management and Research, Marshall Wace LLP and Fin Capital. The funding round is expected to close in the second quarter.\"},{\"claim\":\"Circle priced its IPO on 2025-06-04 and its shares were expected to begin trading on the NYSE under ticker CRCL on 2025-06-05, with closing expected on 2025-06-06.\",\"url\":\"https://circle.com/es/pressroom/circle-announces-pricing-of-upsized-initial-public-offering\",\"publication_date\":\"2025-06-04\",\"event_date\":\"2025-06-04\",\"excerpt\":\"Circle... announced the pricing of its upsized initial public offering of 34,000,000 shares... at $31.00 per share... The shares... are expected to begin trading on the New York Stock Exchange on June 5, 2025 under the ticker symbol 'CRCL.' The closing of the offering is expected to occur on June 6, 2025.\"},{\"claim\":\"By 2025-08-12, Circle stated it had completed its IPO and identified itself as a public company listed on the NYSE.\",\"url\":\"https://s206.q4cdn.com/265218871/files/doc_financials/2025/q2/Q2-2025-Earnings-Press-Release.pdf\",\"publication_date\":\"2025-08-12\",\"event_date\":\"2025-06\",\"excerpt\":\"Successful $1.2 billion IPO... In June, we completed our $1.2 billion initial public offering... Circle sold 19.9 million newly issued primary shares of Class A common stock at a price of $31 per share... Circle Internet Group, Inc. (NYSE: CRCL)... our first as a public company.\"},{\"claim\":\"A later SEC prospectus confirms Circle was already listed on the NYSE under CRCL by August 2025.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1876042/000119312525181916/d839239d424b4.htm\",\"publication_date\":\"2025-08-14\",\"event_date\":\"2025-08-14\",\"excerpt\":\"Our Class A common stock is listed on the New York Stock Exchange (the 'NYSE') under the symbol 'CRCL'. On August 14, 2025, the last reported sale price of our Class A common stock on the NYSE was $139.23 per share.\"},{\"claim\":\"Circle disclosed a 2026 ARC token presale raise, but this is not a venture equity round and should not replace the latest equity funding round.\",\"url\":\"https://circle.com/pressroom/circle-reports-first-quarter-2026-results\",\"publication_date\":\"2026-05-11\",\"event_date\":\"2026-05-11\",\"excerpt\":\"ARC Token: $222M presale raise at a $3 billion fully diluted network valuation...\"}]",
+          "latest_round": "2022 private funding round",
+          "round_amount": "400000000",
+          "uncertainties": "The strongest primary source found for the latest private equity financing is Circle’s 2022 press release, which says the $400M round was entered into on 2022-04-12 and was expected to close in Q2 2022; in this research run I did not find a primary source confirming the exact legal closing date, round label/series name, or any designated lead investor, so those remain unresolved. Circle later became public in June 2025; announcement/trading/closing dates differ (priced June 4, expected trading June 5, expected closing June 6, and later filings/results confirm completion in June). A 2026 ARC token presale was found but excluded because it is not venture equity.",
+          "lead_investors": "unknown",
+          "round_currency": "USD",
+          "company_identity": "Circle is a financial technology company that provides stablecoin, payments, and developer infrastructure, including USDC, for businesses, institutions, and developers.",
+          "lifecycle_status": "public",
+          "lifecycle_event_date": "2025-06-05",
+          "round_announcement_date": "2022-04-12"
+        },
+        "reasoning": "I resolved circle.com to Circle using the company site, then checked company/IR and SEC materials for funding and lifecycle. The latest evidenced venture equity financing I found was Circle’s own 2022 $400M funding-round announcement. More recent capital events found were the 2025 IPO/public offerings and a 2026 token presale, which are not venture equity rounds. Multiple post-IPO sources confirm Circle is public and listed on the NYSE as CRCL by the cutoff.",
+        "stepsTaken": [
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"official Circle company site circle.com about USDC payments infrastructure investor relations public company IPO acquisition financing latest funding round\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":800,\"max_results\":5,\"session_id\":\"circle_funding_lifecycle_20260930\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Circle raises $222M at $3B valuation\\nURL: https://thedailyscout.com/s/UeCyh6qvDOk\\nPublished: 2026-05-12\\nAcquired: 2026-09-01\\nSnippets:\\n### Who backed the sale? The investor list is the loudest part of the announcement. a16z crypto led with a $75 million commitment, and the syndicate also included BlackRock, Apollo Funds, Intercontinental Exchange, ARK Invest, Janus Henderson, Standard Chartered Ventures, General Catalyst, Haun Ventures, SBI Group, I...",
+          "Used keenable-public-evaluation-fetch_page_content {\"url\":\"https://www.circle.com/\",\"max_chars\":6000,\"live\":false,\"prompt\":\"Identify the company at this domain and summarize what it sells or does in one short sentence. Quote the most relevant lines with headings if available.\",\"session_id\":\"circle_funding_lifecycle_20260930\",\"output_format\":\"text\"}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Circle | The full-stack platform for the internet financial system\\nURL: https://www.circle.com/\\n\\n**Company Name:** Circle\\n\\n**Summary:** Circle provides a full-stack platform and infrastructure offering financial tools and digital currencies (such as USDC and EURC) for developers, applications, and institutions to build AI-native applications and transact programmatically.\\n\\n**Relevant Quotes:**\\n## AI-enabled financial and developer infrastructure\\...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"official Circle press release IPO priced NYSE CRCL June 2025 latest private funding round official press release SEC S-1\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":900,\"max_results\":10,\"session_id\":\"circle_funding_lifecycle_20260930\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: 2025-06-04 | Circle Announces Pricing of Upsized Initial Public Offering | NYSE:CRCL | Press Release\\nURL: https://stockhouse.com/news/press-releases/2025/06/04/circle-announces-pricing-of-upsized-initial-public-offering\\nPublished: 2025-06-04\\nAcquired: 2026-04-09\\nSnippets:\\nCircle Internet Group, Inc., a global financial technology company and stablecoin market leader, today announced the pricing of its upsized initial public offering of 34,000,000 sh...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"SEC S-1 Circle Internet Group recent financing preferred stock round BlackRock Fidelity 2022 official filing\",\"site\":\"sec.gov\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":900,\"max_results\":10,\"session_id\":\"circle_funding_lifecycle_20260930\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: 424B4\\nURL: https://www.sec.gov/Archives/edgar/data/1876042/000119312525181916/d839239d424b4.htm\\nAcquired: 2026-09-28\\nSnippets:\\nFiled Pursuant to Rule 424(b)(4) Registration No. 333-289531 10,000,000 shares  Class A common stock We are offering 2,000,000 shares of Class A common stock and the selling stockholders identified in this prospectus are offering 8,000,000 shares of Class A common stock.\\n[...]\\ncontents On July 1, 2024, we consummated an Iri...",
+          "Used keenable-public-evaluation-fetch_page_content {\"url\":\"https://www.sec.gov/Archives/edgar/data/1876042/000119312525181916/d839239d424b4.htm\",\"max_chars\":12000,\"live\":false,\"prompt\":\"From this prospectus for Circle Internet Group, extract: 1) evidence that the company is publicly listed or conducting an IPO, with dates for pricing, trading, and closing if stated; 2) the most recent private equity financing round or sale of preferred stock before the IPO, including round name, amount raised, announcement/closing date if stated, and lead or notable investors if stated. Quote or faithfully paraphrase the relevant lines.\",\"session_id\":\"circle_funding_lifecycle_20260930\",\"output_format\":\"text\"}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: 424B4\\nURL: https://www.sec.gov/Archives/edgar/data/1876042/000119312525181916/d839239d424b4.htm\\n\\n**Filed Pursuant to Rule 424(b)(4)**\\n\\n**Registration No. 333-289531**\\n\\n***10,000,000 shares***\\n\\n![LOGO](g839239g03a03.jpg)\\n\\n**Class A common stock**\\n\\nWe are offering 2,000,000 shares of Class A common stock and the selling stockholders identified in this prospectus are offering 8,000,000 shares of Class A common stock. We will not receive any pro...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Circle official press release 2022 financing 400 million BlackRock Fidelity Marshall Wace company pressroom\",\"site\":\"circle.com\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":900,\"max_results\":10,\"session_id\":\"circle_funding_lifecycle_20260930\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Circle Announces $400M Funding Round\\nURL: https://circle.com/en/pressroom/circle-announces-400m-funding-round\\nPublished: 2022-04-12\\nAcquired: 2026-05-19\\nSnippets:\\nCircle Announces $400M Funding Round BlackRock, Fidelity, Marshall Wace and Fin Capital Participate BOSTON — April 12, 2022 — Circle Internet Financial, a global internet finance firm and the issuer of USD Coin (USDC), today announced it has entered into an agreement for a $400M funding ro...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"site:circle.com Circle pressroom initial public offering closing June 2025 CRCL official\",\"site\":\"circle.com\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":900,\"max_results\":10,\"session_id\":\"circle_funding_lifecycle_20260930\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Circle Announces Closing of the Full Exercise of Greenshoe Option Granted in the Initial Public Offering\\nURL: https://circle.com/es/pressroom/circle-announces-closing-of-the-full-exercise-of-greenshoe-option-granted-in-the-initial-public-offering-rfe6r\\nPublished: 2025-06-11\\nAcquired: 2026-06-04\\nSnippets:\\nCircle Announces Closing of the Full Exercise of Greenshoe Option Granted in the Initial Public Offering NEW YORK, June 11, 2025 — Circle Internet ...",
+          "Used keenable-public-evaluation-fetch_page_content {\"url\":\"https://investor.circle.com/news/news-details/2025/Circle-Reports-Second-Quarter-2025-Results\",\"max_chars\":5000,\"live\":false,\"prompt\":\"Extract the lines that state whether Circle completed its IPO, the amount, the number of shares sold by Circle, the IPO price, and any statement showing it is publicly traded, with dates.\",\"session_id\":\"circle_funding_lifecycle_20260930\",\"output_format\":\"text\"}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Q2 2025 Earnings Press Release\\nURL: https://s206.q4cdn.com/265218871/files/doc_financials/2025/q2/Q2-2025-Earnings-Press-Release.pdf\\n\\n- Successful $1.2 billion IPO; GENIUS Act signed into law\\n- In June, we completed our $1.2 billion initial public offering.\\n- Of the total offering of 39.1 million shares, Circle sold 19.9 million newly issued primary shares of Class A common stock at a price of $31 per share\\n- Circle Internet Group, Inc. (NYSE: CRCL..."
+        ]
+      }
+    }
+  ]
+}

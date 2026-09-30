@@ -1,0 +1,29 @@
+{
+  "observed_at": "2026-09-30T12:59:32.841939+00:00",
+  "workspace_id": "1403344",
+  "claygent_id": "c_0tm6h68W4Kkg5587Ddq",
+  "model": "gpt-5.4",
+  "web_search_enabled": true,
+  "keenable_enabled": false,
+  "other_connectors_enabled": false,
+  "account_context_enabled": false,
+  "business_context_enabled": false,
+  "evidence": "Observed Claygent Builder settings via accessibility tree before full launch. No settings changed in Builder.",
+  "balance_before": {
+    "data": 414.4,
+    "actions": 4892
+  },
+  "checkpoint": {
+    "case": "keenable",
+    "run_id": "wfr_0tm6h84HMuCTzm6Dpwt",
+    "native_calls": 8,
+    "keenable_calls": 0,
+    "data_credits": 3.5
+  },
+  "file_sha256": {
+    "prompt.txt": "01e5b742b40c2213f8f49326571955605a04c8876c02c796caa89606e1c38c70",
+    "prompt-verify-native.txt": "6a0c6c2163a3a180804c9f076be1ebe8fc2d142736d4a7ad4dbfc1adb4cfb948",
+    "cases.json": "4838a4db24605ed728c9873da4c4c5a99fff1f2067a9f2c0d05136fcbeb39b3a",
+    "output-schema.json": "fd4acdf1ca0b045c587b29eb503610741a66c2eba0475943ffabae009e8a08c3"
+  }
+}

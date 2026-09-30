@@ -1,0 +1,88 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6hbuvV49TcPJiXZw",
+  "workflow": {
+    "id": "wf_0tm6h66X7iVxzjahRjg",
+    "name": "Funding lifecycle evaluation D"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T12:57:30.358Z",
+  "duration": "2m 37s",
+  "dataCreditsUsed": 6.1,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6hbupNMvRiXybQFB",
+      "nodeId": "wfn_0tm6h67uBuBJhxVb2Hm",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T12:57:30.364Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "figma.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Figma"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6hbuUKtkNT4jQojb",
+      "nodeId": "wfn_0tm6h68JRj3sTcusv7e",
+      "nodeName": "Company research D",
+      "status": "completed",
+      "startedAt": "2026-09-30T12:57:30.374Z",
+      "completedAt": "2026-09-30T13:00:07.537Z",
+      "duration": "2m 37s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "figma.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Figma"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Figma is a design and product development platform at figma.com.\",\"url\":\"https://www.figma.com/blog/ipo-pricing/\",\"publication_date\":\"2025-07-30\",\"event_date\":\"2025-07-30\",\"excerpt\":\"Figma describes itself as 'a design and product development platform—where teams come together to turn ideas into the world’s best digital products and experiences.'\"},{\"claim\":\"Figma priced its IPO at $33.00 per share, expected trading on the NYSE under ticker FIG starting July 31, 2025, with expected closing on August 1, 2025.\",\"url\":\"https://www.figma.com/blog/ipo-pricing/\",\"publication_date\":\"2025-07-30\",\"event_date\":\"2025-08-01\",\"excerpt\":\"Figma announced pricing of 36,937,080 shares of Class A common stock at $33.00 per share; the shares were expected to begin trading on the NYSE under 'FIG' on July 31, 2025, and the offering was expected to close on August 1, 2025.\"},{\"claim\":\"By a later SEC filing, Figma was publicly listed on the NYSE as FIG after the IPO.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1579878/000157987825000027/fig-20250630.htm\",\"publication_date\":\"unknown\",\"event_date\":\"2025-08-29\",\"excerpt\":\"The Form 10-Q cover page lists Class A common stock trading symbol 'FIG' on 'The New York Stock Exchange' and states that as of August 29, 2025 the registrant had outstanding Class A and Class B common shares.\"},{\"claim\":\"The planned Adobe acquisition of Figma was terminated rather than completed.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1579878/000162828025033742/figma-sx1.htm\",\"publication_date\":\"unknown\",\"event_date\":\"2023-12-17\",\"excerpt\":\"Figma's S-1 says it 'mutually agreed with Adobe to terminate the Merger Agreement' on December 17, 2023 because there was no clear path to required regulatory approvals, and that Adobe paid Figma a $1.0 billion termination fee on December 20, 2023.\"},{\"claim\":\"The latest evidenced venture equity financing found in retrieved sources was a $200 million private round in June 2021 at a $10 billion valuation.\",\"url\":\"https://www.forbes.com/sites/alexkonrad/2021/08/10/how-figma-became-designs-hottest-startup-valued-at-10billion/\",\"publication_date\":\"2021-08-10\",\"event_date\":\"2021-06\",\"excerpt\":\"Forbes reported: 'In June, the company raised $200 million from investors, valuing Figma at $10 billion.' The article also mentions the round included strategic investors such as Base Partners, but the retrieved text did not establish a lead investor.\"}]",
+          "latest_round": "venture equity round in June 2021 (round name unverified in retrieved evidence)",
+          "round_amount": "200 million",
+          "uncertainties": "The strongest retrieved primary sources establish Figma's IPO and public status, and establish that the Adobe deal was terminated. For the latest venture equity round, the retrieved evidence is secondary reporting (Forbes), not a primary company financing announcement, so the exact round name and lead investor(s) remain unverified here. A 2024 tender offer appears in Figma's S-1, but that was secondary liquidity for existing holders, not a new venture equity financing round. The SEC filing consulted was for the quarter ended June 30, 2025 but references post-IPO trading status on its cover page; another later SEC filing snippet in search results also indicated Figma completed its IPO on 2025-08-01. Publication dates for some SEC filings were not extracted by the page tool, so they are marked unknown where necessary.",
+          "lead_investors": "unknown",
+          "round_currency": "USD",
+          "company_identity": "Figma is a software company that sells a collaborative design and product development platform.",
+          "lifecycle_status": "public",
+          "lifecycle_event_date": "2025-08-01",
+          "round_announcement_date": "2021-06"
+        },
+        "reasoning": "I identified the company from figma.com, then gathered primary evidence from Figma's own IPO announcement and SEC filings to establish its business identity, the termination of the Adobe acquisition, and its current public-company status. For the latest venture equity financing, the retrieved primary filings did not provide the historical round details, so I used a specific secondary source (Forbes) for the June 2021 $200 million round and clearly flagged the limitation that the round name and lead investors were not verified in the retrieved evidence. I also checked for newer lifecycle-changing events and found evidence of the completed 2025 IPO and NYSE listing, making Figma public as of the cutoff.",
+        "stepsTaken": [
+          "Searched Google with query \"Figma figma.com funding acquisition IPO latest round current status site:figma.com OR site:news.adobe.com OR site:sec.gov OR site:techcrunch.com\". The results are: \n {\"search_results\":[{\"title\":\"Figma Announces Second Quarter 2025 Financial Results\",\"link\":\"https://investor.figma.com/news-events/news/news-details/2025/Figma-Announces-Second-Quarter-2025-Financial-Results/default.aspx\",\"snippet\":\"Figma anticipates that the Early Release Condition will be satisfied following the close of market on September 4, 2025. Accordingly, pursuant ...\",\"date\":\"Sep 3, 2025\",\"position\":1},{\"title\":\"Figma Announces Pricing of Initial Public Offering\",\"link\":\"https://www.fi...",
+          "Used visitWebpage {\"url\":\"https://www.figma.com/blog/ipo-pricing/\",\"question\":\"What does this page say about Figma's IPO pricing, listing exchange and ticker, expected closing date, and what business Figma is?\"}. The results are: \n \"From Figma’s July 30, 2025 post, “Figma Announces Pricing of Initial Public Offering” (https://figma.com/blog/ipo-roadshow-launch is related, but the page content provided is this pricing announcement):\\n\\n- “Today, we’re announcing the pricing of Figma’s initial public offering of 36,937,080 shares of Class A common stock at a public offering price of $33.00 per share.”\\n- “The shares are expected to begin trading on the New York Stock Exchange on July 31, 2025 under the ticker symbol ‘FIG.’”\\...",
+          "Searched Google with query \"Figma latest funding round Series valuation announced 2024 2023 2022 site:figma.com OR site:techcrunch.com OR site:crunchbase.com OR site:sec.gov\". The results are: \n {\"search_results\":[{\"title\":\"Design Software Startup Figma Boosts IPO Range, Targets ...\",\"link\":\"https://news.crunchbase.com/public/ipo/design-software-startup-boosts-range-nyse-fig/\",\"snippet\":\"In July 2024, Figma raised $700 million in a secondary market transaction that valued the company at $18.8 billion. General Catalyst, Coatue and ...\",\"date\":\"Jul 28, 2025\",\"position\":1},{\"title\":\"Figma's Venture Backers Win Big With Adobe's $20B M&A ...\",\"link\":\"https://news.crunchbase.com/news/venture-...",
+          "Used visitWebpage {\"url\":\"https://www.sec.gov/Archives/edgar/data/1579878/000162828025033742/figma-sx1.htm\",\"question\":\"What does this S-1 say about Figma's prior funding rounds, most recent private financing or secondary transaction, and the status/termination of the Adobe merger?\"}. The results are: \n \"Relevant context from the S-1:\\n\\n- Adobe merger status/termination:\\n  - “On December 17, 2023, we mutually agreed with Adobe to terminate the Merger Agreement based on the joint assessment that there was no clear path to obtain the required regulatory approvals for the transaction to close (the ‘Abandoned Merger with Adobe’).”\\n  - “On December 20, 2023, we received a $1.0 billion termination fee per the terms of the Merger Agreement from Adobe which was recorded within other income, net on o...",
+          "Searched Google with query \"Figma Series announced round June 2021 lead investors latest venture round site:figma.com OR site:forbes.com OR site:techcrunch.com OR site:businesswire.com\". The results are: \n {\"search_results\":[{\"title\":\"How Figma Became Design's Hottest Startup, Valued At ...\",\"link\":\"https://www.forbes.com/sites/alexkonrad/2021/08/10/how-figma-became-designs-hottest-startup-valued-at-10billion/\",\"snippet\":\"In June, the company raised $200 million from investors, valuing Figma at $10 billion. Forbes estimates that Field and cofounder Evan Wallace, ...\",\"date\":\"Aug 10, 2021\",\"position\":1},{\"title\":\"After the Figma-Adobe deal, which design startups are ...\",\"link\":\"https://techcrunch....",
+          "Used visitWebpage {\"url\":\"https://www.forbes.com/sites/alexkonrad/2021/08/10/how-figma-became-designs-hottest-startup-valued-at-10billion/\",\"question\":\"What funding round did Figma announce in 2021, for how much, when was it raised, and who led the round?\"}. The results are: \n \"From Forbes article “How Figma Became Design’s Hottest Startup, Valued At $10 Billion” (https://forbes.com/sites/alexkonrad/2021/08/10/how-figma-became-designs-hottest-startup-valued-at-10billion):\\n- “In June, the company raised $200 million from investors, valuing Figma at $10 billion.”\\n- “Today, with $200 million in fresh funding, Figma must decide how to prioritize international expansion ... and its latest round included global-minded strategic investors, such as Brazil’s Base Partners.”\\...",
+          "Searched Google with query \"Figma 2021 funding led by investors press release lead investors site:figma.com OR site:businesswire.com OR site:globenewswire.com OR site:techcrunch.com\". The results are: \n {\"search_results\":[{\"title\":\"Governance - Executive Management | Figma, Inc.\",\"link\":\"https://investor.figma.com/governance/executive-management/default.aspx\",\"snippet\":\"Dylan Field CEO, President & Co-founder. Dylan is also an angel investor. Shaunt Voskanian has served as our Chief Revenue Officer since joining Figma in ...\",\"position\":1},{\"title\":\"Governance - Board of Directors\",\"link\":\"https://investor.figma.com/governance/board-of-directors/default.aspx\",\"snippet\":\"Kelly Kramer has served ...",
+          "Used visitWebpage {\"url\":\"https://techcrunch.com/2025/07/01/figma-moves-closer-to-a-blockbuster-ipo-that-could-raise-1-5b/\",\"question\":\"What does this article say about Figma's most recent venture funding round, including amount, date, and lead investors if named?\"}. The results are: \n \"no relevant data\"",
+          "Searched Google with query \"Figma IPO closed August 2025 8-K public company NYSE FIG site:sec.gov OR site:investor.figma.com\". The results are: \n {\"search_results\":[{\"title\":\"Figma-S-1\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1579878/000162828025033742/figma-sx1.htm\",\"snippet\":\"This is the initial public offering of shares of Class A common stock of Figma, Inc. there has been no public market for our Class A common stock. York Stock ...\",\"position\":1},{\"title\":\"SEC Filings - Financials\",\"link\":\"https://investor.figma.com/financials/sec-filings/default.aspx\",\"snippet\":\"SEC Filings Quarterly Results. Select Year: 2026 2025 2024 … 8-...",
+          "Used visitWebpage {\"url\":\"https://www.sec.gov/Archives/edgar/data/1579878/000157987825000027/fig-20250630.htm\",\"question\":\"What does this SEC filing say about whether Figma completed its IPO, the closing date, and current listing status?\"}. The results are: \n \"- Cover page of Form 10-Q for the quarterly period ended June 30, 2025:\\n  - “Securities registered pursuant to Section 12(b) of the Act:”\\n  - “Class A common stock, par value $0.00001” — Trading Symbol: “FIG” — Exchange: “The New York Stock Exchange”\\n- Cover page also states: “As of August 29, 2025, the registrant had outstanding 410,091,963 shares of Class A common stock, 79,682,339 shares of Class B common stock, and no shares of Class C common stock...”\\n- MD&A states this 10-Q should be ..."
+        ]
+      }
+    }
+  ]
+}

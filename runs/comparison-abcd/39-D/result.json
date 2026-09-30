@@ -1,0 +1,88 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6hf3oyBNqkzUvVS5",
+  "workflow": {
+    "id": "wf_0tm6h66X7iVxzjahRjg",
+    "name": "Funding lifecycle evaluation D"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T12:59:27.998Z",
+  "duration": "2m 1s",
+  "dataCreditsUsed": 5.699999999999999,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6hf4wBHQeQSPsNsx",
+      "nodeId": "wfn_0tm6h67uBuBJhxVb2Hm",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T12:59:28.008Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "veronapharma.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Verona Pharma"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6hf4aS4k8yu2Jc7C",
+      "nodeId": "wfn_0tm6h68JRj3sTcusv7e",
+      "nodeName": "Company research D",
+      "status": "completed",
+      "startedAt": "2026-09-30T12:59:28.022Z",
+      "completedAt": "2026-09-30T13:01:29.450Z",
+      "duration": "2m 1s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "veronapharma.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Verona Pharma"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "Merck & Co., Inc. (MSD outside the United States and Canada)",
+          "evidence": "[{\"claim\":\"Verona Pharma at veronapharma.com is a biopharma company focused on respiratory disease and Ohtuvayre/ensifentrine for COPD.\",\"url\":\"https://www.veronapharma.com/investors/news-sec-filings/page/4/\",\"publication_date\":\"2025-07-09\",\"event_date\":\"2025-07-09\",\"excerpt\":\"On Verona's news page, the July 9, 2025 item is titled 'MSD to Acquire Verona Pharma, Expanding its Portfolio to Include Ohtuvayre® (ensifentrine) … a first-in-class COPD maintenance treatment for adults'.\"},{\"claim\":\"Verona Pharma announced a $200 million oversubscribed private placement and subscription on July 17, 2020.\",\"url\":\"http://www.veronapharma.com/news/verona-pharma-raises-200-million-in-oversubscribed-private-placement-and-subscription/\",\"publication_date\":\"2020-07-17\",\"event_date\":\"2020-07-17\",\"excerpt\":\"'Verona Pharma plc ... announces it has raised approximately $200 million (£159 million) in an oversubscribed private placement and subscription with new and existing institutional and accredited investors.'\"},{\"claim\":\"The 2020 private placement was led by RA Capital Management, Access Biotechnology, Perceptive Advisors, Acorn Bioventures, PBM Capital, Samsara BioCapital, Foresite Capital, Sphera, Fairmount and Soleus Capital; existing investors including OrbiMed, NEA, Vivo Capital, Abingworth, Novo Holdings, Polar Capital and Aisling Capital also participated.\",\"url\":\"http://www.veronapharma.com/news/verona-pharma-raises-200-million-in-oversubscribed-private-placement-and-subscription/\",\"publication_date\":\"2020-07-17\",\"event_date\":\"2020-07-17\",\"excerpt\":\"The release says the financing 'was led by new investors RA Capital Management, Access Biotechnology, Perceptive Advisors, Acorn Bioventures, PBM Capital, Samsara BioCapital, Foresite Capital, Sphera, Fairmount and Soleus Capital' and lists multiple participating existing investors.\"},{\"claim\":\"Verona completed an upsized public follow-on equity offering on August 15, 2022 with about $140.1 million of net proceeds, which is newer than the 2020 private placement but is public equity rather than venture equity.\",\"url\":\"https://www.veronapharma.com/wp-content/uploads/2024/05/Verona-Pharma-Q3-2022-Final-Results.pdf\",\"publication_date\":\"2022-11-03\",\"event_date\":\"2022-08-15\",\"excerpt\":\"'On August 15, 2022, we completed an upsized public offering ...' and 'The aggregate net proceeds from the offering were approximately $140.1 million'.\"},{\"claim\":\"In May 2024 Verona announced a $650 million strategic financing with Oaktree and OMERS, but it was non-dilutive financing rather than venture equity.\",\"url\":\"https://www.veronapharma.com/news/verona-pharma-announces-650-million-strategic-financing-with-oaktree-and-omers/\",\"publication_date\":\"2024-05-09\",\"event_date\":\"2024-05-09\",\"excerpt\":\"The release calls it 'Non-dilutive funding' comprised of 'up to $400 million in term loans' plus 'up to $250 million' under a revenue interest purchase and sale agreement; Oaktree led the strategic financing.\"},{\"claim\":\"MSD announced an agreement to acquire Verona Pharma in July 2025; shareholders approved the proposed acquisition in September 2025 and closing was expected on October 7, 2025.\",\"url\":\"https://www.veronapharma.com/investors/news-sec-filings/page/4/\",\"publication_date\":\"2025-09-24\",\"event_date\":\"2025-09-24\",\"excerpt\":\"Verona's news archive shows: July 9, 2025 'MSD to Acquire Verona Pharma'; September 24, 2025 'Shareholders of Verona Pharma Approve Proposed Acquisition by MSD' with 'Transaction expected to close on October 7, 2025'.\"},{\"claim\":\"Merck completed the acquisition on October 7, 2025; Verona became a wholly owned subsidiary and its ADSs ceased to be listed or traded on Nasdaq.\",\"url\":\"https://www.merck.com/news/merck-completes-acquisition-of-verona-pharma/\",\"publication_date\":\"2025-10-07\",\"event_date\":\"2025-10-07\",\"excerpt\":\"Merck stated: 'today announced the completion of the Verona Pharma plc acquisition'; 'Verona Pharma is now a wholly-owned subsidiary of Merck'; and Verona ADSs 'will no longer be listed or traded on the Nasdaq Global Market'.\"}]",
+          "latest_round": "2020 oversubscribed private placement and subscription",
+          "round_amount": "200 million",
+          "uncertainties": "The newest equity financing found before the acquisition was an August 15, 2022 upsized public follow-on offering with about $140.1 million net proceeds, but this is public equity, not venture equity, so it is excluded from latest_round. The May 9, 2024 Oaktree/OMERS financing was explicitly non-dilutive debt and revenue-interest financing, not equity. Lead-investor wording for the 2020 round names a syndicate of new investors rather than a single sole lead. Acquisition announcement dates vary in sources between July 8 and July 9, 2025 due to time zones/publication timing, but completion is evidenced on 2025-10-07.",
+          "lead_investors": "RA Capital Management, Access Biotechnology, Perceptive Advisors, Acorn Bioventures, PBM Capital, Samsara BioCapital, Foresite Capital, Sphera, Fairmount and Soleus Capital",
+          "round_currency": "USD",
+          "company_identity": "Verona Pharma is a respiratory biopharmaceutical company that developed Ohtuvayre (ensifentrine), a COPD maintenance treatment for adults.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2025-10-07",
+          "round_announcement_date": "2020-07-17"
+        },
+        "reasoning": "I used Verona Pharma and Merck primary sources plus Verona regulatory/financial materials. The strongest current lifecycle evidence is Merck's October 7, 2025 completion announcement. For financing, the newest items before acquisition were a 2024 non-dilutive debt/revenue-interest package and a 2022 public follow-on offering; because the task asks for the latest venture equity round, the latest qualifying venture-style equity financing evidenced in the retrieved sources is the July 17, 2020 private placement and subscription.",
+        "stepsTaken": [
+          "Searched Google with query \"Verona Pharma veronapharma.com investor relations financing acquisition IPO 2026\". The results are: \n {\"search_results\":[{\"title\":\"RNS Archives\",\"link\":\"http://www.veronapharma.com/sec-news-category/rns/\",\"snippet\":\"Verona Pharma will host an investment community webcast and conference call at 9:00 a.m. ET / 2:00 p.m. GMT on Monday, November 4, 2024, to discuss the third ...\",\"position\":1},{\"title\":\"RNS Archives - Page 2 of 14\",\"link\":\"http://www.veronapharma.com/sec-news-category/rns/page/2/\",\"snippet\":\"Verona Pharma Announces $650 Million Strategic Financing with Oaktree and OMERS ・ extended b...",
+          "Used visitWebpage {\"url\":\"https://www.veronapharma.com/investors/news-sec-filings/page/4/\",\"question\":\"Find evidence about Verona Pharma's proposed acquisition, whether shareholders approved it, expected close date, and any later update or completion mentioned on this page.\"}. The results are: \n \"- July 9, 2025: “MSD to Acquire Verona Pharma, Expanding its Portfolio to Include Ohtuvayre® (ensifentrine)…” — “MSD … and Verona Pharma plc … today announced that the companies have entered into a [definitive agreement].” Link: https://veronapharma.com/news/msd-to-acquire-verona-pharma-expanding-its-portfolio-to-include-ohtuvayre-ensifentrine-a-first-in-class-copd-maintenance-treatment-for-adults-and-expected-to-drive-growth-into-the-next-dec\\n- September 24, 2025: “Shareholders of Verona Phar...",
+          "Searched Google with query \"site:veronapharma.com Verona Pharma strategic financing Oaktree OMERS 2024 press release\". The results are: \n {\"search_results\":[{\"title\":\"Verona Pharma Announces $650 Million Strategic ...\",\"link\":\"https://www.veronapharma.com/news/verona-pharma-announces-650-million-strategic-financing-with-oaktree-and-omers/\",\"snippet\":\"May 9, 2024. Verona Pharma Announces $650 Million Strategic Financing with Oaktree and OMERS. Download PDF Version. Share. Non-dilutive funding ...\",\"date\":\"May 9, 2024\",\"position\":1},{\"title\":\"Verona Pharma Announces Amended Strategic Financing ...\",\"link\":\"http://www.veronapharma.co...",
+          "Used visitWebpage {\"url\":\"https://www.veronapharma.com/news/verona-pharma-announces-650-million-strategic-financing-with-oaktree-and-omers/\",\"question\":\"What financing was announced on this page, on what date, what amounts and instruments were involved, and who are Oaktree and OMERS in the transaction?\"}. The results are: \n \"Relevant page: Verona Pharma news release, “Verona Pharma Announces $650 Million Strategic Financing with Oaktree and OMERS,” dated May 9, 2024. Link: https://veronapharma.com/news/verona-pharma-announces-650-million-strategic-financing-with-oaktree-and-omers and PDF: https://veronapharma.com/news/verona-pharma-announces-650-million-strategic-financing-with-oaktree-and-omers?_wpnonce=1195d5c4b5&generate_pdf=true&post_id=116.\\n\\nKey transaction context from the page:\\n- Verona Pharma and its who...",
+          "Searched Google with query \"Verona Pharma acquisition completed October 2025 Merck official press release Verona Pharma ceased trading\". The results are: \n {\"search_results\":[{\"title\":\"Merck Completes Acquisition of Verona Pharma\",\"link\":\"https://www.merck.com/news/merck-completes-acquisition-of-verona-pharma/\",\"snippet\":\"Verona Pharma is now a wholly-owned subsidiary of Merck. Verona Pharma will no longer be listed or traded on the Nasdaq Global Market.\",\"date\":\"Oct 7, 2025\",\"position\":1},{\"title\":\"Acquisition of Verona by MSD Approved by the High Court ...\",\"link\":\"https://www.veronapharma.com/news/acquisition-of-verona-by-msd-approved-by-the-hig...",
+          "Used visitWebpage {\"url\":\"https://www.merck.com/news/merck-completes-acquisition-of-verona-pharma/\",\"question\":\"What does this page say about the completion date of Merck's acquisition of Verona Pharma, Verona's status after closing, and any delisting statement?\"}. The results are: \n \"Merck news release: “Merck Completes Acquisition of Verona Pharma” — https://merck.com/media/news\\n\\nRelevant text:\\n- “October 7, 2025 6:45 am EDT”\\n- “Merck ... today announced the completion of the Verona Pharma plc ... acquisition.”\\n- “Verona Pharma is now a wholly-owned subsidiary of Merck”\\n- “the American Depositary Shares (ADS) of Verona Pharma will no longer be listed or traded on the Nasdaq Global Market.”\"",
+          "Searched Google with query \"site:veronapharma.com Verona Pharma Series financing private placement venture round before IPO\". The results are: \n {\"search_results\":[{\"title\":\"Verona Pharma Raises $200 Million in Oversubscribed ...\",\"link\":\"http://www.veronapharma.com/news/verona-pharma-raises-200-million-in-oversubscribed-private-placement-and-subscription/\",\"snippet\":\"Verona Pharma anticipates net proceeds of the Financing will be approximately $183 million after deducting placement agent fees and estimated ...\",\"date\":\"Jul 17, 2020\",\"position\":1},{\"title\":\"Verona Pharma Announces $650 Million Strategic ...\",\"link\":\"https://www.veronapha...",
+          "Used visitWebpage {\"url\":\"http://www.veronapharma.com/news/verona-pharma-raises-200-million-in-oversubscribed-private-placement-and-subscription/\",\"question\":\"What round or financing did Verona Pharma announce on this page, on what date, what amount was raised, and who led or participated as investors?\"}. The results are: \n \"- Page title/date: “Verona Pharma Raises $200 Million in Oversubscribed Private Placement and Subscription” — July 17, 2020.\\n- Link: http://veronapharma.com/news/verona-pharma-raises-200-million-in-oversubscribed-private-placement-and-subscription?_wpnonce=1195d5c4b5&generate_pdf=true&post_id=224\\n- Relevant text: “Verona Pharma plc ... announces it has raised approximately $200 million (£159 million) in an oversubscribed private placement and subscription with new and existing institutional a...",
+          "Searched Google with query \"Verona Pharma follow-on offering private placement 2021 2022 2023 site:veronapharma.com\". The results are: \n {\"search_results\":[{\"title\":\"Verona Pharma Reports Fourth Quarter and Full Year 2020 ...\",\"link\":\"http://www.veronapharma.com/news/verona-pharma-reports-fourth-quarter-and-full-year-2020-financial-results-and-provides-corporate-update/\",\"snippet\":\"This progress was made possible by strong support from the investment community through our $200 million private placement completed in July.\",\"date\":\"Feb 25, 2021\",\"position\":1},{\"title\":\"20220930 Verona Pharma 10-Q\",\"link\":\"https://www.veronapharma.c...",
+          "Used visitWebpage {\"url\":\"https://www.veronapharma.com/wp-content/uploads/2024/05/Verona-Pharma-Q3-2022-Final-Results.pdf\",\"question\":\"Find the details and date of any follow-on equity offering mentioned in this filing, including amount raised and whether it was completed in August 2022.\"}. The results are: \n \"August 2022 follow-on equity offering:\\n- “On August 15, 2022, we completed an upsized public offering of 14,260,000 ADSs, each representing eight of our ordinary shares, nominal value £0.05 per share, at a price to the public of $10.50 per ADS, which includes the exercise in full by the underwriters of their option to purchase an additional 1,860,000 ADSs.”\\n- “The aggregate net proceeds from the offering were approximately $140.1 million after deducting underwriting discounts and offering exp..."
+        ]
+      }
+    }
+  ]
+}

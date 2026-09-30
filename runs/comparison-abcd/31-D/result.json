@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6hd6ViPyQjAN7wjy",
+  "workflow": {
+    "id": "wf_0tm6h66X7iVxzjahRjg",
+    "name": "Funding lifecycle evaluation D"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T12:58:18.445Z",
+  "duration": "1m 36s",
+  "dataCreditsUsed": 3.5,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6hd69M44hzH55pxD",
+      "nodeId": "wfn_0tm6h67uBuBJhxVb2Hm",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T12:58:18.452Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "digantara.co.in",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Digantara"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6hd6VtP8jijAJvXE",
+      "nodeId": "wfn_0tm6h68JRj3sTcusv7e",
+      "nodeName": "Company research D",
+      "status": "completed",
+      "startedAt": "2026-09-30T12:58:18.468Z",
+      "completedAt": "2026-09-30T12:59:55.378Z",
+      "duration": "1m 36s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "digantara.co.in",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Digantara"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"The exact company at digantara.co.in is Digantara, a space surveillance and intelligence company that designs end-to-end intelligence systems and offers hardware, data, analytics, and applications for orbital operations.\",\"url\":\"https://www.digantara.co.in/mission\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"The site describes Digantara as an 'Intelligence Solutions Company' securing the space domain and says it designs and develops custom, end-to-end intelligence systems. It lists products including PRISM, PULSE, SKYGATE, LOCUS, IRIS, STARS, INTELLIGENCE, and AIRA.\"},{\"claim\":\"As of December 16, 2025, Digantara announced/was reported to have raised $50 million in a financing round.\",\"url\":\"https://www.reuters.com/world/india/indias-digantara-raises-50-million-boost-space-surveillance-push-2025-12-16/\",\"publication_date\":\"2025-12-16\",\"event_date\":\"2025-12-16\",\"excerpt\":\"Reuters reported that Digantara Industries 'had raised $50 million in a funding round' to develop indigenous space surveillance capabilities.\"},{\"claim\":\"That December 2025 financing was a Series B equity round.\",\"url\":\"https://techcrunch.com/2025/12/16/indias-digantara-raises-50m-for-space-based-missile-defence-tech/\",\"publication_date\":\"2025-12-16\",\"event_date\":\"2025-12-16\",\"excerpt\":\"TechCrunch described the financing as an 'all-equity Series B round' of $50 million.\"},{\"claim\":\"Investors publicly named for the December 2025 round included 360 ONE Asset, SBI Investment/SBI Holdings Japan, Ronnie Screwvala, and existing backers Peak XV Partners and Kalaari Capital, but no lead investor was clearly identified in the reviewed sources.\",\"url\":\"https://techcrunch.com/2025/12/16/indias-digantara-raises-50m-for-space-based-missile-defence-tech/\",\"publication_date\":\"2025-12-16\",\"event_date\":\"2025-12-16\",\"excerpt\":\"TechCrunch said the round included new investors such as 360 ONE Asset and SBI Investment of Japan, plus Ronnie Screwvala, with Peak XV Partners and Kalaari Capital also participating; it did not name a lead investor.\"},{\"claim\":\"No acquisition, IPO, or shutdown was evidenced in the reviewed current materials, and Digantara's own site was live in 2026.\",\"url\":\"https://www.digantara.co.in/mission\",\"publication_date\":\"unknown\",\"event_date\":\"2026\",\"excerpt\":\"The company website was accessible and carried current corporate/product information with a footer reading '© 2026 Digantara.' A freshness web search also did not surface evidence of a completed acquisition or IPO before the 2026-09-30 cutoff.\"}]",
+          "latest_round": "Series B",
+          "round_amount": "50 million",
+          "uncertainties": "The company site's newsroom search snippet suggested a $50 million raise, but the newsroom page extraction did not surface the full press item directly. Lead investor(s) for the December 2025 round were not clearly identified in the reviewed sources, so listed investors should not be treated as leads. Lifecycle status is inferred from the live 2026 company site plus the absence of evidenced acquisition/IPO/closure in the freshness search; no corporate registry or listing database source was reviewed here. Reuters names 'SBI Holdings Japan' while TechCrunch says 'SBI Investment of Japan'; both point to the SBI group but wording differs. No separate legal closing date for the round was established beyond the announcement/report date.",
+          "lead_investors": "unknown",
+          "round_currency": "USD",
+          "company_identity": "Digantara is a space surveillance and intelligence company that sells orbital intelligence hardware, data, analytics, and software applications.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2025-12-16"
+        },
+        "reasoning": "I resolved the entity from the exact domain using the company site, then identified the most recent evidenced venture equity financing using Reuters and TechCrunch. A verification search was used to look for newer acquisition, IPO, listing, or closure evidence before the 2026-09-30 cutoff; none was found in the reviewed materials, so the company is best classified as private_independent with explicit uncertainty noted.",
+        "stepsTaken": [
+          "Searched Google with query \"Digantara digantara.co.in funding acquisition IPO latest round site:digantara.co.in OR site:techcrunch.com OR site:yourstory.com OR site:inc42.com OR site:thehindubusinessline.com\". The results are: \n {\"search_results\":[{\"title\":\"Peak XV Partners backs India's Digantara to propel space ...\",\"link\":\"https://techcrunch.com/2023/06/20/digantara-funding-peak-xv-partners/\",\"snippet\":\"Digantara, an Indian startup working on space situational awareness, has raised $10 million in a round led by Peak XV Partners. raised $12.5 ...\",\"date\":\"Jun 20, 2023\",\"position\":1},{\"title\":\"India's Digantara raises $50M for space-based missile ...\",\"link\":\"https://techcrunch.com/2025/12/16/indias-digantara-raises-50...",
+          "Used visitWebpage {\"url\":\"https://www.digantara.co.in/mission\",\"question\":\"What does the company say it is, what products or services does it provide, and are there any indications of ownership, listing, acquisition, or funding on this page?\"}. The results are: \n \"- Company description: “Intelligence Solutions Company” and “Securing the space domain for the 21st century.”\\n- What it says it does: “With democratisation of space, resilience depends on reliability. Digantara designs and develops custom, end-to-end intelligence systems that drive operational control in orbit.”\\n- Products/services listed under Solutions/Data/Analytics/Applications:\\n  - Hardware: PRISM, PULSE, SKYGATE\\n  - Data: LOCUS, IRIS\\n  - Analytics: STARS\\n  - Applications: INTELLIGEN...",
+          "Searched Google with query \"site:digantara.co.in/newsroom Digantara funding Series A1 Series B acquisition IPO\". The results are: \n {\"message\":\"No data returned from search query\"}",
+          "Used visitWebpage {\"url\":\"https://www.digantara.co.in/newsroom\",\"question\":\"Find any press releases or news items about financing rounds, acquisitions, IPOs, or corporate status, especially the most recent relevant items dated on or before 2026-09-30.\"}. The results are: \n \"Relevant source for press releases/news: Newsroom — https://www.digantara.co.in/newsroom\\nCompany social/news channels: X — https://x.com/Digantarahq ; LinkedIn — https://linkedin.com/company/digantara\\nContact for corporate/media inquiries: info@digantara.co.in ; +91 72043 88660\\nNo specific press releases or news items about financing rounds, acquisitions, IPOs, or corporate status are present in the provided webpage content.\"",
+          "Searched Google with query \"Digantara funding 2025 official press release acquisition IPO\". The results are: \n {\"search_results\":[{\"title\":\"Newsroom\",\"link\":\"https://www.digantara.co.in/newsroom\",\"snippet\":\"Digantara raises USD 50 million to advance sovereign space intelligence. Download the official Digantara logos and PR assets.\",\"position\":1},{\"title\":\"India's Digantara raises $50 million to boost space ...\",\"link\":\"https://www.reuters.com/world/india/indias-digantara-raises-50-million-boost-space-surveillance-push-2025-12-16/\",\"snippet\":\"Digantara Industries said on Tuesday it had raised $50 million ...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/world/india/indias-digantara-raises-50-million-boost-space-surveillance-push-2025-12-16/\",\"question\":\"What financing round did Digantara announce, how much was raised, on what date, who were the investors or lead investors, and does the article indicate whether the company is still private and independent?\"}. The results are: \n \"Reuters article: “India's Digantara raises $50 million to boost space surveillance push” (published/updated December 16, 2025).\\n\\nRelevant excerpts:\\n- “Indian space-tech firm Digantara Industries said on Tuesday it had raised $50 million in a funding round…”\\n- “The Bengaluru-based startup, backed by Peak XV Partners and Kalaari Capital, secured funds from large investors including SBI Holdings Japan, 360 One Asset and film producer Ronnie Screwvala…”\\n- “It did not disclose its valuation aft...",
+          "Searched Google with query \"Digantara acquisition IPO listed shutdown 2026 site:reuters.com OR site:digantara.co.in OR site:techcrunch.com OR site:inc42.com\". The results are: \n {\"search_results\":[{\"title\":\"Newsroom\",\"link\":\"https://www.digantara.co.in/newsroom\",\"snippet\":\"Digantara is a space surveillance and intelligence company delivering advanced detection, tracking, and analytics that strengthen defence capabilities, ...\",\"position\":1},{\"title\":\"Digantara | Pioneering Space Intelligence, Surveillance ...\",\"link\":\"https://www.digantara.co.in/\",\"snippet\":\"Digantara is a space surveillance and intelligence company delivering advanced detection, tracking, and analytics...",
+          "Used visitWebpage {\"url\":\"https://techcrunch.com/2025/12/16/indias-digantara-raises-50m-for-space-based-missile-defence-tech/\",\"question\":\"Identify Digantara's financing round name, amount, announcement date, lead investors if named, and whether the article mentions acquisition, IPO, or continued private independence.\"}. The results are: \n \"Source: https://techcrunch.com/2025/12/16/indias-digantara-raises-50m-for-space-based-missile-defence-tech\\n\\n- Company: Digantara\\n- Financing round name: \\\"all-equity Series B round\\\"\\n- Amount: \\\"$50 million\\\"\\n- Announcement/publication date: \\\"December 16, 2025\\\" (article timestamp: 6:44 AM PST)\\n- Investors named: \\\"included new investors such as 360 ONE Asset and SBI Investment of Japan, as well as serial entrepreneur Ronnie Screwvala, with existing backers Peak XV Partners and Kalaari C..."
+        ]
+      }
+    }
+  ]
+}

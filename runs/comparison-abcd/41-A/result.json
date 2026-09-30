@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6cracwbTPWfxm4qq",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:18:46.455Z",
+  "duration": "1m 26s",
+  "dataCreditsUsed": 3.4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6craDngYs7xoFVyp",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:18:46.474Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "cyberark.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "CyberArk"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6craSS67xd5zKrJm",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:18:46.497Z",
+      "completedAt": "2026-09-30T11:20:12.720Z",
+      "duration": "1m 26s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "cyberark.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "CyberArk"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "Palo Alto Networks",
+          "evidence": "[{\"claim\":\"cyberark.com is CyberArk, an identity/privileged access security company.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1598110/000119312515066968/d868692d20f.htm\",\"publication_date\":\"2015-03-02\",\"event_date\":\"2015-03\",\"excerpt\":\"CyberArk Software Ltd. ... develops, markets and sells software-based security solutions for the enterprise... enables organizations to safeguard and monitor their privileged accounts.\"},{\"claim\":\"CyberArk completed its IPO in September 2014.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1598110/000119312515066968/d868692d20f.htm\",\"publication_date\":\"2015-03-02\",\"event_date\":\"2014-09\",\"excerpt\":\"In September 2014, the Company completed its initial public offering (IPO).\"},{\"claim\":\"The IPO involved 5,360,000 ordinary shares sold by the company at $16.00 per share, and underwriters fully exercised an option for 804,000 additional shares at the same price.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1598110/000119312515066968/d868692d20f.htm\",\"publication_date\":\"2015-03-02\",\"event_date\":\"2014-09\",\"excerpt\":\"The Company issued and sold 5,360,000 ordinary shares at a public offering price of $16.00 per share and the underwriters exercised their option to purchase additional 804,000 ordinary shares at the same IPO price per share.\"},{\"claim\":\"CyberArk received total net proceeds of $88.468 million from the IPO after underwriting discounts and other offering expenses.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1598110/000119312515066968/d868692d20f.htm\",\"publication_date\":\"2015-03-02\",\"event_date\":\"2014-09\",\"excerpt\":\"The total net proceeds received from the IPO were $88,468 after deducting underwriting discounts of $6,904 and other offering expenses of $3,846.\"},{\"claim\":\"Palo Alto Networks completed its acquisition of CyberArk on February 11, 2026.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1327567/000119312526045600/d40626dex991.htm\",\"publication_date\":\"2026-02-11\",\"event_date\":\"2026-02-11\",\"excerpt\":\"Palo Alto Networks today announced the completion of its acquisition of CyberArk.\"},{\"claim\":\"In the completed acquisition, CyberArk shareholders were entitled to receive $45.00 in cash plus 2.2005 Palo Alto Networks shares per CyberArk ordinary share.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1327567/000119312526045600/d40626dex991.htm\",\"publication_date\":\"2026-02-11\",\"event_date\":\"2026-02-11\",\"excerpt\":\"CyberArk shareholders are entitled to receive $45.00 in cash and 2.2005 shares of Palo Alto Networks common stock for each CyberArk ordinary share.\"}]",
+          "latest_round": "IPO",
+          "round_amount": "98.624 million",
+          "uncertainties": "CyberArk became a public company in 2014 and was later acquired in 2026; no post-IPO venture equity round was established from the sources reviewed. The round amount is expressed as gross IPO proceeds calculated from 6,164,000 shares at $16.00 per share; the SEC 20-F explicitly states only net proceeds of $88.468 million. The IPO evidence establishes only month-level timing (September 2014), not a precise closing day, from the SEC 20-F used here.",
+          "lead_investors": "unknown",
+          "round_currency": "USD",
+          "company_identity": "CyberArk is an identity security software company focused on privileged access and related enterprise security solutions.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2026-02-11",
+          "round_announcement_date": "2014-09"
+        },
+        "reasoning": "I resolved cyberark.com to CyberArk Software Ltd. using an SEC annual report describing its business. For funding, I used the SEC 20-F to identify the latest evidenced equity financing event reviewed: CyberArk's September 2014 IPO, with share count, price, and net proceeds stated. I then checked for a newer lifecycle event and found a primary SEC-hosted press release stating Palo Alto Networks completed its acquisition of CyberArk on 2026-02-11, which establishes current lifecycle status as acquired rather than public or private independent. No later venture equity round was evidenced in the sources reviewed before the 2026-09-30 cutoff.",
+        "stepsTaken": [
+          "Searched Google with query \"CyberArk cyberark.com IPO funding latest round acquisition investor relations\". The results are: \n {\"search_results\":[{\"title\":\"Palo Alto Networks Investor Relations\",\"link\":\"https://investors.paloaltonetworks.com/investor-relations/\",\"snippet\":\"Palo Alto Networks Completes Acquisition of CyberArk |. TOTAL REVENUE $3,410M +34% year over year. TOTAL CASH, CASH EQUIVALENTS & INVESTMENTS $7,906M\",\"position\":1},{\"title\":\"Financial Details - CyberArk\",\"link\":\"https://www.crunchbase.com/organization/cyber-ark-software/financial_details\",\"snippet\":\"CyberArk is funded by 11 investors. Poalim Equity a...",
+          "Used visitWebpage {\"url\":\"https://www.sec.gov/Archives/edgar/data/1327567/000119312526045600/d40626dex991.htm\",\"question\":\"What company was acquired, by whom, on what date did the acquisition complete, and what consideration per share was paid?\"}. The results are: \n \"- Acquired company: CyberArk\\n- Acquirer: Palo Alto Networks\\n- Acquisition completion date: February 11, 2026\\n- Relevant text: “Palo Alto Networks® ... today announced the completion of its acquisition of CyberArk...”\\n- Consideration per share: “CyberArk shareholders are entitled to receive $45.00 in cash and 2.2005 shares of Palo Alto Networks common stock for each CyberArk ordinary share.”\\n- Contacts: nhockin@paloaltonetworks.com; hfodderwala@paloaltonetworks.com\"",
+          "Searched Google with query \"site:cyberark.com CyberArk investor relations IPO 2014 CyberArk Software Ltd identity\". The results are: \n {\"search_results\":[{\"title\":\"Palo Alto Networks Investor Relations\",\"link\":\"https://investors.cyberark.com/\",\"snippet\":\"The Investor Relations website contains information about Palo Alto Networks's business for stockholders, potential investors, and financial analysts.\",\"position\":1},{\"title\":\"CyberArk Announces Date of Third Quarter 2014 Financial ...\",\"link\":\"https://www.cyberark.com/press/cyberark-announces-date-third-quarter-2014-financial-results-release/\",\"snippet\":\"Newton, Mass. – Octobe...",
+          "Used visitWebpage {\"url\":\"https://www.cyberark.com/zh-hant/press/cyberark-announces-closing-initial-public-offering-including-full-exercise-underwriters-option-purchase-additional-shares/\",\"question\":\"What amount did CyberArk raise in its IPO, when did it close, what was the price per share, and who is the company?\"}. The results are: \n \"Relevant link: https://cyberark.com/zh-hant/press/cyberark-announces-closing-initial-public-offering-including-full-exercise-underwriters-option-purchase-additional-shares#slide-cocacola\\n\\nRelevant webpage context:\\n- “CyberArk 長期以來一直是您在保障權限存取安全及守護關鍵資產方面的值得信賴的夥伴。”\\n- “現在，我們要為您介紹 Idira—這款基於 CyberArk 的深厚底蘊打造、並由 Palo Alto Networks 提供技術支援的新世代身分安全平台。”\\n\\nThis identifies who CyberArk is in context: a long-trusted partner focused on securing privileged access and protecting critical assets.\\n\\nThe li...",
+          "Searched Google with query \"CyberArk IPO raised 2014 SEC press release 6,164,000 16.00\". The results are: \n {\"search_results\":[{\"title\":\"CyberArk Announces Closing of Initial Public Offering ...\",\"link\":\"https://www.cyberark.com/zh-hant/press/cyberark-announces-closing-initial-public-offering-including-full-exercise-underwriters-option-purchase-additional-shares/\",\"snippet\":\"... 6,164,000 ordinary shares at a price to the public of $16.00 ... MORE PRESS RELEASES. CyberArk Announces Pricing of Initial Public Offering. September 23 2014 ...\",\"position\":1},{\"title\":\"file: tm2522061d1_6k.htm\",\"link\":\"http...",
+          "Searched Google with query \"site:sec.gov CyberArk Software Ltd initial public offering September 2014 6-K press release\". The results are: \n {\"search_results\":[{\"title\":\"424B4\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1598110/000119312514350723/d692893d424b4.htm\",\"snippet\":\"This is the initial public offering of CyberArk Software Ltd. . We are selling 5,360,000 ordinary shares. The initial public offering price is $16.00 per share.\",\"position\":1},{\"title\":\"SC TO-I\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1327567/000119312526059472/d66620dsctoi.htm\",\"snippet\":\"CyberArk Software Ltd., Offer to Purchase, dated February 19...",
+          "Used visitWebpage {\"url\":\"https://www.sec.gov/Archives/edgar/data/1598110/000119312515066968/d868692d20f.htm\",\"question\":\"Find statements identifying CyberArk's business and confirm when it completed its IPO, how many shares it sold, the IPO price, and gross proceeds.\"}. The results are: \n \"- “CyberArk Software Ltd. (the “Company”) is an Israeli company that develops, markets and sells software-based security solutions for the enterprise. The Company’s platform enables organizations to safeguard and monitor their privileged accounts, which are those accounts within an organization that have access to the organization’s high value assets and are located across its IT infrastructure. The Company’s software provides customers with the ability to protect, detect, monitor and control a..."
+        ]
+      }
+    }
+  ]
+}

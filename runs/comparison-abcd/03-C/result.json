@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6d5t4yc5emJs6wJS",
+  "workflow": {
+    "id": "wf_0tm6d21AuFsz5iFGM8e",
+    "name": "Funding lifecycle evaluation C"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:27:29.473Z",
+  "duration": "1m 36s",
+  "dataCreditsUsed": 5.4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6d5tge7f4kmGq3NG",
+      "nodeId": "wfn_0tm6d21iRtaxx429Y8Q",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:27:29.481Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "aikido.dev",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Aikido Security"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6d5taFh7hefCuEY7",
+      "nodeId": "wfn_0tm6d4f6jZzvkGe2wpS",
+      "nodeName": "Company research C",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:27:29.500Z",
+      "completedAt": "2026-09-30T11:29:06.300Z",
+      "duration": "1m 36s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "aikido.dev",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Aikido Security"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Aikido Security at aikido.dev is a software security company selling a unified platform to secure code, cloud, and runtime for developers.\",\"url\":\"https://www.aikido.dev/\",\"publication_date\":\"unknown\",\"event_date\":\"2026-09-30\",\"excerpt\":\"Homepage: 'Secure everything devs build, ship and run' and 'One security system, from code to production.' It says Aikido 'builds a complete understanding of your application, then uses it to find real vulnerabilities and deliver fixes through to production.'\"},{\"claim\":\"Aikido Security announced a $60 million Series B on 2026-01-14 at a $1 billion valuation, led by DST Global with participation from PSG Equity, Singular, Notion Capital, and others.\",\"url\":\"https://www.aikido.dev/blog/aikido-funding-series-b\",\"publication_date\":\"2026-01-14\",\"event_date\":\"2026-01-14\",\"excerpt\":\"Company blog: 'Today, we’re excited to announce Aikido has raised a $60M Series B at a $1B valuation, led by Tom Stafford at DST Global, with participation from PSG Equity, Singular, Notion Capital, and others.'\"},{\"claim\":\"Reuters independently reported the same 2026 financing and described Aikido as a startup whose software helps developers detect and address risk automatically.\",\"url\":\"https://www.reuters.com/technology/belgian-cybersecurity-startup-aikido-hits-unicorn-status-with-new-funding-round-2026-01-14/\",\"publication_date\":\"2026-01-14\",\"event_date\":\"2026-01-14\",\"excerpt\":\"Reuters: 'Belgium's Aikido Security has raised $60 million from investors led by tech-focused private equity firm DST Global at a valuation of $1 billion' and 'Aikido's security software helps developers detect and address risk automatically.'\"},{\"claim\":\"As of late September 2026, Aikido was still presenting itself on its company site as an investor-backed operating business; no later funding, acquisition of Aikido itself, IPO/listing, or closure was surfaced in the freshness check through the cutoff.\",\"url\":\"https://www.aikido.dev/company/about\",\"publication_date\":\"2026-09-24\",\"event_date\":\"2026-09-24\",\"excerpt\":\"Google indexed result for the About page dated 6 days before the 2026-09-30 cutoff said: 'Backed by incredible investors.' A separate freshness search after 2026-01-14 did not surface evidence of Aikido itself being acquired, going public, shutting down, or raising a newer round by the cutoff.\"}]",
+          "latest_round": "Series B",
+          "round_amount": "60 million",
+          "uncertainties": "Lifecycle status is inferred as private_independent from the active company site, the recent investor-backed About-page snippet, and the absence of contrary evidence in a post-2026-01-14 freshness check. I did not retrieve a primary filing or explicit company statement saying 'still privately held' as of 2026-09-30. The freshness check did surface Aikido's acquisitions of other companies (for example Root), which do not change Aikido's own ownership status. The About-page publication date was observed as a search-result relative date ('6 days ago') rather than read directly on-page.",
+          "lead_investors": "DST Global",
+          "round_currency": "USD",
+          "company_identity": "Aikido Security is a Belgian developer-first software security company at aikido.dev that sells a unified platform for code, cloud, runtime, and automated security testing.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-01-14"
+        },
+        "reasoning": "I resolved the entity from the exact domain and used the company site plus Reuters to identify the business and its latest evidenced venture equity financing. The strongest round evidence is the company’s 2026-01-14 Series B announcement, corroborated by Reuters the same day. For lifecycle, I looked for newer evidence of acquisition, IPO/listing, closure, or a later round through the 2026-09-30 cutoff; the check did not reveal such an event, so the best-supported status is private_independent, with remaining uncertainty noted because no explicit 'still private' primary statement was retrieved.",
+        "stepsTaken": [
+          "Searched Google with query \"Aikido Security aikido.dev funding acquisition IPO site:aikido.dev OR TechCrunch OR Crunchbase OR PR Newswire\". The results are: \n {\"search_results\":[{\"title\":\"AIkido Pharma Inc (BP2A.SG) Stock Price, News, Quote & ...\",\"link\":\"https://finance.yahoo.com/quote/BP2A.SG/\",\"snippet\":\"Find the latest AIkido Pharma Inc (BP2A.SG) stock quote, history, news and other vital information to help you with your stock trading and investing.\",\"position\":1},{\"title\":\"INTEGRITY Global Security Launches AI Dome™, Nuclear ...\",\"link\":\"https://finance.yahoo.com/technology/ai/articles/integrity-global-security-launches-ai-213000989.html\",\"snipp...",
+          "Searched Google with query \"Aikido Security funding Aikido.dev Series seed venture acquisition\". The results are: \n {\"search_results\":[{\"title\":\"Aikido Security Raises $60M at a $1B valuation\",\"link\":\"https://www.aikido.dev/blog/aikido-funding-series-b\",\"snippet\":\"Aikido announces $60M Series B funding at a $1B valuation, accelerating its vision for self-securing software and continuous penetration ...\",\"date\":\"Jan 14, 2026\",\"position\":1},{\"title\":\"We just raised our $17 million Series A\",\"link\":\"https://www.aikido.dev/blog/we-just-raised-our-17-million-series-a\",\"snippet\":\"This new $17M Series A funding will...",
+          "Used visitWebpage {\"url\":\"https://www.aikido.dev/blog/aikido-funding-series-b\",\"question\":\"Find the Series B funding announcement date, amount raised, round name, valuation if mentioned, lead investors, and any quote identifying Aikido Security's business.\"}. The results are: \n \"Source: https://www.aikido.dev/blog/aikido-funding-series-b\\n\\nPost title: “From “No Bullsh*t Security” to $1B: We Just Raised Our $60m Series B”\\nPublished on: Jan 14, 2026\\n\\nRelevant excerpt:\\n“Today, we’re excited to announce Aikido has raised a $60M Series B at a $1B valuation, led by Tom Stafford at DST Global, with participation from PSG Equity, Singular, Notion Capital, and others.”\\n\\nBusiness-identifying quotes:\\n- “We built Aikido around a simple truth: Security begins and ends with ...",
+          "Searched Google with query \"Aikido Security acquisition IPO closed September 2026 Aikido.dev\". The results are: \n {\"search_results\":[{\"title\":\"Aikido acquires Root to secure the supply chain\",\"link\":\"https://www.aikido.dev/blog/aikido-acquires-root\",\"snippet\":\"Aikido has acquired Root to secure the software supply chain, fixing open source vulnerabilities in the version you already run, ...\",\"date\":\"Jun 30, 2026\",\"position\":1},{\"title\":\"Aikido Security Raises $60M at a $1B valuation\",\"link\":\"https://www.aikido.dev/blog/aikido-funding-series-b\",\"snippet\":\"Today, we're excited to announce Aikido has raised a ...",
+          "Searched Google with query \"Aikido Security Jan 2026 Series B DST Global PSG Equity independent private company\". The results are: \n {\"search_results\":[{\"title\":\"Aikido Security Raises $60M at a $1B valuation\",\"link\":\"https://www.aikido.dev/blog/aikido-funding-series-b\",\"snippet\":\"Aikido has raised a $60M Series B at a $1B valuation, led by Tom Stafford at DST Global, with participation from PSG Equity, Singular, Notion ...\",\"date\":\"Jan 14, 2026\",\"position\":1},{\"title\":\"Aikido Security announces $60m Series B investment ...\",\"link\":\"https://psgequity.com/news/aikido-security-announces-60m-series-b-investment-with-participatio...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/technology/belgian-cybersecurity-startup-aikido-hits-unicorn-status-with-new-funding-round-2026-01-14/\",\"question\":\"What does Reuters report about Aikido Security's Jan. 14, 2026 funding round: amount, round name, lead investor, participating investors, and description of the company?\"}. The results are: \n \"Reuters article: “Belgian cybersecurity startup Aikido hits unicorn status with new funding round” by Supantha Mukherjee, January 14, 2026.\\n\\nRelevant excerpts:\\n- “Belgium's Aikido Security has raised $60 million from investors led by tech-focused private equity firm DST Global at a valuation of $1 billion …”\\n- “Founded in 2022, Aikido's security software helps developers detect and address risk automatically.”\\n- “Aikido focuses on developers. The product is really meant for people who writ...",
+          "Used visitWebpage {\"url\":\"https://www.aikido.dev/\",\"question\":\"Identify what Aikido Security sells and how the company describes its product on its website.\"}. The results are: \n \"- Website headline: \\\"Secure everything devs build, ship and run\\\"\\n- Product description: \\\"Continuous, autonomous security that gets developers back to building.\\\"\\n- Company says: \\\"Aikido builds a complete understanding of your application, then uses it to find real vulnerabilities and deliver fixes through to production.\\\"\\n- Company says: \\\"The only security product that does the work.\\\" and \\\"Aikido’s agents reason across your application, review every change, and test in production, dis...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Find evidence after January 2026 about Aikido Security at aikido.dev that would change its status or latest financing: acquisition of Aikido Security, IPO/listing, shutdown/closure, or a newer funding round/extension. Prefer company, regulatory, or major news sources.\",\"site\":\"\",\"acquired_after\":\"2026-01-14\",\"acquired_before\":\"2026-09-30\",\"published_after\":\"2026-01-14\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":3000,\"max_results\":5,\"session_id\":\"aikido-dev-research\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Aikido Security — funding and SEC 8-K events | Fundz\\nURL: https://app.fundz.net/signals/aikido.dev\\nPublished: 2026-09-15\\nAcquired: 2026-09-15\\nSnippets:\\nSignals · aikido.dev What just happened at Aikido Security Last updated Aikido Security raised $60M Series B on 2026-01-14. It was reported by channelnewsasia.com. The evidence, dated and sourced — Funding: Aikido Security raised $60M Series B. Press / news → — Funding: Aikido Security raised $60M Se...",
+          "Searched Google with query \"site:aikido.dev Aikido Security private company investors\". The results are: \n {\"search_results\":[{\"title\":\"Aikido Security Raises $60M at a $1B valuation\",\"link\":\"https://www.aikido.dev/blog/aikido-funding-series-b\",\"snippet\":\"Aikido has raised a $60M Series B at a $1B valuation, led by Tom Stafford at DST Global, with participation from PSG Equity, Singular, Notion ...\",\"date\":\"Jan 14, 2026\",\"position\":1},{\"title\":\"We just raised our $17 million Series A\",\"link\":\"https://www.aikido.dev/blog/we-just-raised-our-17-million-series-a\",\"snippet\":\"We're happy to welcome Henri T..."
+        ]
+      }
+    }
+  ]
+}

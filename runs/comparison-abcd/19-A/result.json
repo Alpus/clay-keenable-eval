@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6brcWJKT28WJsVtk",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:57:12.333Z",
+  "duration": "1m 2s",
+  "dataCreditsUsed": 3.1,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6brcyCcMXHsfD8eF",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:57:12.339Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "rillet.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Rillet"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6brcBDy4SxQoMo5o",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:57:12.355Z",
+      "completedAt": "2026-09-30T10:58:14.835Z",
+      "duration": "1m 2s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "rillet.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Rillet"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Rillet is an AI-native ERP/accounting software company for modern finance teams; Nasdaq Private Market describes it as a modern ERP platform that automates accounting workflows for high-growth companies by integrating with payment processors and CRM systems.\",\"url\":\"https://www.nasdaqprivatemarket.com/company/rillet/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"\\\"Modern ERP platform that automates accounting workflows for high-growth companies by integrating with payment processors and CRM systems.\\\"\"},{\"claim\":\"On 2025-08-06, Rillet announced a $70 million Series B co-led by Andreessen Horowitz and ICONIQ, with participation from Sequoia, Oak HC/FT and earlier investors.\",\"url\":\"https://www.rillet.com/blog/rillet-raises-70m-series-b-from-andreessen-horowitz-and-iconiq\",\"publication_date\":\"2025-08-06\",\"event_date\":\"2025-08-06\",\"excerpt\":\"\\\"San Francisco, California - August 6, 2025\\\" ... \\\"today announced a $70 million Series B funding round co-led by Andreessen Horowitz and ICONIQ, with participation from Sequoia, Oak HC/FT and earlier investors.\\\"\"},{\"claim\":\"On 2026-08-17, Rillet announced a $100 million Series C led by ICONIQ at a $1 billion valuation; this is the latest evidenced venture equity round found before the 2026-09-30 cutoff.\",\"url\":\"https://www.rillet.com/blog/rillet-raises-100m-series-c-at-1b-valuation-to-build-accounting-superintelligence\",\"publication_date\":\"2026-08-17\",\"event_date\":\"2026-08-17\",\"excerpt\":\"\\\"SAN FRANCISCO — August 17 2026 — Rillet ... today announced a $100 million Series C led by ICONIQ at a $1 billion valuation, with participation from Sequoia, Andreessen Horowitz, Sequoia Global Equities, Bain Capital Ventures, Oak HC/FT, Battery Ventures, FirstMark, Scale Venture Partners, and Creandum.\\\"\"},{\"claim\":\"As of the consulted 2026 public-market status source, Rillet remained privately held and had not completed an IPO.\",\"url\":\"https://www.nasdaqprivatemarket.com/company/rillet/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"\\\"Rillet stock does not trade on public stock exchanges.\\\" \\\"Rillet is a private company and has not had an IPO.\\\"\"}]",
+          "latest_round": "Series C",
+          "round_amount": "100000000",
+          "uncertainties": "The latest funding evidence relies on Rillet’s own press release; no separate regulatory filing was reviewed. Nasdaq Private Market provides secondary market/company-status information but its page date was not established in the retrieved text. I found no public evidence of an acquisition, completed IPO, or closure before 2026-09-30, but absence of such evidence is not proof of impossibility.",
+          "lead_investors": "ICONIQ",
+          "round_currency": "USD",
+          "company_identity": "Rillet is a private software company that sells an AI-native ERP/accounting platform for high-growth finance teams.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-08-17"
+        },
+        "reasoning": "I resolved rillet.com to the accounting/ERP software company Rillet using company-related sources. I identified the latest evidenced venture equity financing before the cutoff as the 2026-08-17 Series C from the company’s press release, which clearly states the round type, amount, and lead investor. For lifecycle, I found secondary evidence from Nasdaq Private Market stating Rillet is private and has not had an IPO, and I found no evidence of a completed acquisition or closure before 2026-09-30.",
+        "stepsTaken": [
+          "Searched Google with query \"Rillet rillet.com funding acquisition IPO site:rillet.com OR site:techcrunch.com OR site:crunchbase.com\". The results are: \n {\"search_results\":[{\"title\":\"Rillet Raises $70M Series B from a16z and ICONIQ\",\"link\":\"https://www.rillet.com/blog/rillet-raises-70m-series-b-from-andreessen-horowitz-and-iconiq\",\"snippet\":\"Rillet raises $70M Series B led by Andreessen Horowitz and ICONIQ to build the AI-native ERP redefining accounting for hypergrowth SaaS companies.\",\"position\":1},{\"title\":\"Q3 2025 SaaS Fundraising Benchmarks\",\"link\":\"https://www.rillet.com/blog/q3-2025-fundraising-benchmarks\",\"snippet\":\"After announcing our $...",
+          "Used visitWebpage {\"url\":\"https://www.rillet.com/blog/rillet-raises-70m-series-b-from-andreessen-horowitz-and-iconiq\",\"question\":\"What are the round type, amount, announcement date, lead investors, and company description on this page?\"}. The results are: \n \"Source: https://rillet.com/blog-categories/press-release\\n\\nArticle title: “Rillet raises $70M Series B from Andreessen Horowitz and ICONIQ”\\nAnnouncement date: “San Francisco, California - August 6, 2025”\\nRound type: “Series B”\\nAmount: “$70 million” / “$70M”\\nLead investors: “co-led by Andreessen Horowitz and ICONIQ”\\nAdditional investors mentioned: “with participation from Sequoia, Oak HC/FT and earlier investors”\\nCompany description: “Rillet, the AI-native ERP (enterprise resource plannin...",
+          "Searched Google with query \"Rillet 2026 funding acquisition IPO August 2026\". The results are: \n {\"search_results\":[{\"title\":\"Rillet Raises $100M Series C at $1B Valuation\",\"link\":\"https://www.rillet.com/blog/rillet-raises-100m-series-c-at-1b-valuation-to-build-accounting-superintelligence\",\"snippet\":\"Rillet has raised a $100 million Series C at a $1 billion valuation, brings total funding past $200 million. August 17 2026 — $100 million Series C led by ...\",\"position\":1},{\"title\":\"Rillet IPO Timeline and Financing Details\",\"link\":\"https://forgeglobal.com/rillet_ipo/\",\"snippet\":\"Rillet has ...",
+          "Used visitWebpage {\"url\":\"https://www.rillet.com/blog/rillet-raises-100m-series-c-at-1b-valuation-to-build-accounting-superintelligence\",\"question\":\"What are the round type, amount, announcement date, lead investors, and any statements about company status on this page?\"}. The results are: \n \"Source: Press release — https://rillet.com/blog-categories/press-release\\n\\nTitle: “Rillet raises $100M Series C at $1B valuation to build Accounting Superintelligence”\\n\\nRelevant text:\\n- “SAN FRANCISCO — August 17 2026 — Rillet ... today announced a $100 million Series C led by ICONIQ at a $1 billion valuation, with participation from Sequoia, Andreessen Horowitz, Sequoia Global Equities, Bain Capital Ventures, Oak HC/FT, Battery Ventures, FirstMark, Scale Venture Partners, and Creandum.”\\n-...",
+          "Searched Google with query \"Rillet acquisition IPO announced filed acquired public company 2026\". The results are: \n {\"search_results\":[{\"title\":\"Invest In Rillet Stock | Buy Pre-IPO Shares\",\"link\":\"https://equityzen.com/company/rillet/\",\"snippet\":\"Accredited investors can buy pre-IPO stock in companies like Rillet through EquityZen funds. These investments are made available by existing Rillet ...\",\"position\":1},{\"title\":\"Berto Acquisition Corp. II Announces Pricing of Upsized ...\",\"link\":\"https://finance.yahoo.com/markets/stocks/articles/berto-acquisition-corp-ii-announces-030800828.html\",\"snippet\":\"The unit...",
+          "Used visitWebpage {\"url\":\"https://www.nasdaqprivatemarket.com/company/rillet/\",\"question\":\"Does this page state whether Rillet is private or has had an IPO, and what company description does it provide?\"}. The results are: \n \"- Company description:\\n  - \\\"Modern ERP platform that automates accounting workflows for high-growth companies by integrating with payment processors and CRM systems.\\\"\\n  - \\\"Rillet is the first modern ERP that automates accounting for high-growth companies. A lot of the complexity when it comes to startup accounting is on the revenue side, so Rillet integrates with your payment processor and your CRM to simplify all of this. Rillet can run all kinds of workflow automations that finance teams...",
+          "Searched Google with query \"Rillet acquired acquisition announced merger 2025 2026\". The results are: \n {\"search_results\":[{\"title\":\"Rillet Raises $70M Series B from a16z and ICONIQ\",\"link\":\"https://www.rillet.com/blog/rillet-raises-70m-series-b-from-andreessen-horowitz-and-iconiq\",\"snippet\":\"Rillet raises $70M Series B led by Andreessen Horowitz and ICONIQ to build the AI-native ERP redefining accounting for hypergrowth SaaS companies.\",\"position\":1},{\"title\":\"Rillet Raises $100M Series C at $1B Valuation\",\"link\":\"https://www.rillet.com/blog/rillet-raises-100m-series-c-at-1b-valuation-to-build-ac..."
+        ]
+      }
+    }
+  ]
+}

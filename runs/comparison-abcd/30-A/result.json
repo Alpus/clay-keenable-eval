@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6cb9xaw3ZeZSkdgf",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:09:09.604Z",
+  "duration": "1m 28s",
+  "dataCreditsUsed": 3.5,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6cb9RWkGTA9bgkwe",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:09:09.611Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "vizzia.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Vizzia"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6cb9gm7KTZthoAwZ",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:09:09.623Z",
+      "completedAt": "2026-09-30T11:10:38.294Z",
+      "duration": "1m 28s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "vizzia.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Vizzia"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"The company at vizzia.com is a French public-safety and environmental-cleanliness technology company serving local authorities/municipalities.\",\"url\":\"https://vizzia.com\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Vizzia says it is 'Le partenaire des collectivités' and describes products that help communes reduce illegal dumping and manage local safety issues with mobile, targeted devices.\"},{\"claim\":\"Vizzia's latest evidenced venture equity financing by the cutoff was a €30 million Series B.\",\"url\":\"https://kurrant.com/kurrantly-news/vizzia-closes-e30m-series-b-to-scale-municipal-video-surveillance-across-europe/\",\"publication_date\":\"2026-02-19\",\"event_date\":\"2026-02-19\",\"excerpt\":\"Kurrant reported that French public safety startup Vizzia 'has secured €30 million in a Series B funding round.'\"},{\"claim\":\"Base10 Partners led that Series B, with Headline and Sistafund participating.\",\"url\":\"https://kurrant.com/kurrantly-news/vizzia-closes-e30m-series-b-to-scale-municipal-video-surveillance-across-europe/\",\"publication_date\":\"2026-02-19\",\"event_date\":\"2026-02-19\",\"excerpt\":\"The article says the 'Series B was led by San Francisco-based Base10 Partners' and that Headline and Sistafund also participated.\"},{\"claim\":\"Independent reporting on the next day corroborated the €30 million Series B and investor syndicate.\",\"url\":\"https://www.finsmes.com/2026/02/vizzia-raises-e30m-in-series-b-funding.html\",\"publication_date\":\"2026-02-20\",\"event_date\":\"2026-02-20\",\"excerpt\":\"FinSMEs wrote that Vizzia 'raised €30M in Series B funding,' led by Base10 Partners, alongside Headline and Sistafund.\"},{\"claim\":\"A prior round referenced in the 2026 coverage was a €16 million round in September 2025, so it is older than the 2026 Series B.\",\"url\":\"https://kurrant.com/kurrantly-news/vizzia-closes-e30m-series-b-to-scale-municipal-video-surveillance-across-europe/\",\"publication_date\":\"2026-02-19\",\"event_date\":\"2025-09\",\"excerpt\":\"Kurrant states that Headline and Sistafund had previously backed Vizzia in its '€16 million round in September 2025.'\"},{\"claim\":\"As of the latest evidenced event found, Vizzia appears to be a private independent company rather than public or acquired.\",\"url\":\"https://www.finsmes.com/2026/02/vizzia-raises-e30m-in-series-b-funding.html\",\"publication_date\":\"2026-02-20\",\"event_date\":\"2026-02-20\",\"excerpt\":\"The company was reported as raising a Series B and planning to use the funds for expansion and hiring; no acquisition completion or IPO was evidenced in the reviewed sources before the cutoff.\"}]",
+          "latest_round": "Series B",
+          "round_amount": "30 million",
+          "uncertainties": "No primary company press release for the financing was located in the reviewed sources, so round details rely on secondary reporting (Kurrant and FinSMEs). The exact legal closing date of the Series B was not established; 2026-02-19 is the publication date of the strongest report and may also reflect the announcement timing. I found no public evidence before the 2026-09-30 cutoff of a later venture equity round, extension, acquisition, or IPO for this exact vizzia.com company, but absence of evidence is not proof; lifecycle status is therefore based on the latest available funding/current-site evidence.",
+          "lead_investors": "Base10 Partners",
+          "round_currency": "EUR",
+          "company_identity": "Vizzia is a French company that sells mobile video-surveillance and AI-enabled public-safety and anti-dumping solutions for municipalities and other local authorities.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-02-19"
+        },
+        "reasoning": "I resolved the exact company using vizzia.com and distinguished it from the unrelated healthcare RTLS company 'Vizzia Technologies' that appears in search results and was acquired by HID. For the vizzia.com company, the strongest current public evidence found was a February 2026 Series B report corroborated by a second outlet, plus the active company website describing the business. No credible evidence in the reviewed sources indicated a subsequent acquisition completion, IPO, closure, or a newer equity round before the cutoff.",
+        "stepsTaken": [
+          "Searched Google with query \"site:vizzia.com Vizzia funding acquisition IPO investors\". The results are: \n {\"message\":\"No data returned from search query\"}",
+          "Searched Google with query \"Vizzia vizzia.com press release funding investors\". The results are: \n {\"search_results\":[{\"title\":\"Vizzia: Funding, Team & Investors\",\"link\":\"https://startupintros.com/orgs/vizzia\",\"snippet\":\"Vizzia has raised $58.3M across 3 funding rounds. Most recently, it raised $35.3M Series B in February 2026. $19M Venture Round Headline … ...\",\"date\":\"Jul 13, 2026\",\"position\":1},{\"title\":\"How Much Has Vizzia Raised? $55M in Total Funding\",\"link\":\"https://startupfundraising.com/companies/vizzia\",\"snippet\":\"Vizzia has raised $55M in total disclosed funding. The most recent ro...",
+          "Used visitWebpage {\"url\":\"https://vizzia.com\",\"question\":\"What does the company at this domain do? Find a short description from the site and any press/news links about funding, investors, acquisition, IPO, or ownership status.\"}. The results are: \n \"Company/site description:\\n- “Vizzia conçoit des dispositifs mobiles, juridiquement solides et immédiatement efficaces, pour rendre visible votre action là où elle compte : sur le terrain, auprès des habitants.”\\n- “Le partenaire des collectivités”\\n- “Vizzia Propreté aide les communes à réduire durablement les dépôts sauvages… grâce à un dispositif léger, mobile et rapide à mettre en place.”\\n- “Vizzia Sûreté facilite la gestion des situations perturbant la vie locale… tout en respectant les l...",
+          "Searched Google with query \"Vizzia Series B official press release Base10 Headline SISTAFUND February 2026\". The results are: \n {\"search_results\":[{\"title\":\"Vizzia: €30 Million Series B Raised For Public Safety ...\",\"link\":\"https://pulse2.com/vizzia-e30-million-series-b-raised-for-public-safety-technology-platform/\",\"snippet\":\"The round was led by Base10 Partners, with continued support from Headline and SISTAFUND. The funding marks a new phase of growth for Vizzia, ...\",\"date\":\"Feb 23, 2026\",\"position\":1},{\"title\":\"Vizzia Raises €30M in Series B Funding\",\"link\":\"https://www.finsmes.com/2026/02/vizzia-raises-e30m-in-seri...",
+          "Searched Google with query \"Vizzia acquisition IPO listed acquired 2026 site:news OR site:com\". The results are: \n {\"search_results\":[{\"title\":\"HID Acquires Vizzia Technologies to Expand RTLS Offering ...\",\"link\":\"https://newsroom.hidglobal.com/hid-acquires-vizzia-technologies-expand-rtls-offering-healthcare-including-asset-management-and\",\"snippet\":\"HID Acquires Vizzia Technologies to Expand RTLS Offering for Healthcare, Including Asset Management and Tracking · AUSTIN, Texas, July 9, 2024 ...\",\"position\":1},{\"title\":\"Vizzia Technologies Case Study\",\"link\":\"https://nmangels.com/vizzia-technologies-case-stud...",
+          "Used visitWebpage {\"url\":\"https://kurrant.com/kurrantly-news/vizzia-closes-e30m-series-b-to-scale-municipal-video-surveillance-across-europe/\",\"question\":\"Find the funding details for Vizzia: round type, amount, announcement date, lead investors, and any company description or ownership statements. Quote or faithfully paraphrase the key lines.\"}. The results are: \n \"Source article: “Vizzia Closes €30M Series B To Scale Municipal Video Surveillance Across Europe” — published February 19, 2026.\\n\\nRelevant lines:\\n- “French public safety startup Vizzia has secured €30 million in a Series B funding round, raising its total capital to approximately €50 million.”\\n- “The Series B was led by San Francisco-based Base10 Partners…”\\n- “Headline… and Sistafund… also participated.”\\n- “Both Headline and Sistafund had previously backed Vizzia in its €16 million round ...",
+          "Searched Google with query \"Vizzia September 2026 funding acquisition IPO Base10\". The results are: \n {\"search_results\":[{\"title\":\"Vizzia: €30 Million Series B Raised For Public Safety ...\",\"link\":\"https://pulse2.com/vizzia-e30-million-series-b-raised-for-public-safety-technology-platform/\",\"snippet\":\"The round was led by Base10 Partners, with continued support from Headline and SISTAFUND. The funding marks a new phase of growth for Vizzia, ...\",\"date\":\"Feb 23, 2026\",\"position\":1},{\"title\":\"Vizzia Raises €30M in Series B Funding\",\"link\":\"https://www.finsmes.com/2026/02/vizzia-raises-e30m-in-seri...",
+          "Used visitWebpage {\"url\":\"https://www.finsmes.com/2026/02/vizzia-raises-e30m-in-series-b-funding.html\",\"question\":\"Extract the Vizzia funding details: round type, amount, publication date, investors, company description, and any statements indicating current private ownership rather than acquisition or IPO.\"}. The results are: \n \"Source: FinSMEs, article titled “Vizzia Raises €30M in Series B Funding” (https://finsmes.com/2026/02/vizzia-raises-e30m-in-series-b-funding.html if needed from page context)\\nPublication date: February 20, 2026\\n\\nFunding details:\\n- Round type: Series B\\n- Amount: €30M\\n- Investors: led by Base10 Partners, alongside Headline and Sistafund\\n- Total funding after round: nearly €50M\\n\\nCompany description:\\n- “Vizzia, a Paris, France-based provider of video surveillance solutions for local autho..."
+        ]
+      }
+    }
+  ]
+}

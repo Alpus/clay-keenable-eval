@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6hcg4RupuhWiysS3",
+  "workflow": {
+    "id": "wf_0tm6h66X7iVxzjahRjg",
+    "name": "Funding lifecycle evaluation D"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T12:57:52.351Z",
+  "duration": "1m 33s",
+  "dataCreditsUsed": 3.7,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6hcgUEEzoNGBYGZi",
+      "nodeId": "wfn_0tm6h67uBuBJhxVb2Hm",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T12:57:52.359Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "ramp.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Ramp"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6hcgw6nAADpQQGT4",
+      "nodeId": "wfn_0tm6h68JRj3sTcusv7e",
+      "nodeName": "Company research D",
+      "status": "completed",
+      "startedAt": "2026-09-30T12:57:52.382Z",
+      "completedAt": "2026-09-30T12:59:25.579Z",
+      "duration": "1m 33s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "ramp.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Ramp"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Ramp at ramp.com is a financial operations platform offering payments, corporate cards, vendor management, procurement, travel booking, and automated bookkeeping.\",\"url\":\"https://www.prnewswire.com/news-releases/ramp-raises-500-million-at-22-5-billion-valuation-to-accelerate-ai-and-build-the-future-of-finance-302516953.html\",\"publication_date\":\"2025-07-30\",\"event_date\":\"2025-07-30\",\"excerpt\":\"Ramp is a financial operations platform designed to save companies time and money. Our all-in-one solution combines payments, corporate cards, vendor management, procurement, travel booking, and automated bookkeeping with built-in intelligence.\"},{\"claim\":\"Ramp announced a Series E-2 financing of $500 million at a $22.5 billion valuation led by ICONIQ on 2025-07-30.\",\"url\":\"https://www.prnewswire.com/news-releases/ramp-raises-500-million-at-22-5-billion-valuation-to-accelerate-ai-and-build-the-future-of-finance-302516953.html\",\"publication_date\":\"2025-07-30\",\"event_date\":\"2025-07-30\",\"excerpt\":\"Ramp Raises $500 Million at $22.5 Billion Valuation... announced its Series E-2, raising $500 million... led by ICONIQ.\"},{\"claim\":\"Ramp later announced a Series F primary financing round of $750 million at a $44 billion valuation on 2026-06-04.\",\"url\":\"https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html\",\"publication_date\":\"2026-06-04\",\"event_date\":\"2026-06-04\",\"excerpt\":\"Today, Ramp announced a $750 million primary financing round led by ICONIQ, GIC, and Ontario Teachers' Pension Plan, valuing the company at $44 billion.\"},{\"claim\":\"The identified lead investors in Ramp's latest evidenced round were ICONIQ, GIC, and Ontario Teachers' Pension Plan.\",\"url\":\"https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html\",\"publication_date\":\"2026-06-04\",\"event_date\":\"2026-06-04\",\"excerpt\":\"...a $750 million primary financing round led by ICONIQ, GIC, and Ontario Teachers' Pension Plan...\"},{\"claim\":\"As of the latest company financing evidence found, Ramp was still raising private venture capital rather than reporting an IPO or completed acquisition.\",\"url\":\"https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html\",\"publication_date\":\"2026-06-04\",\"event_date\":\"2026-06-04\",\"excerpt\":\"Ramp announced a $750 million primary financing round... valuing the company at $44 billion.\"},{\"claim\":\"A freshness web search up to the cutoff surfaced the June 2026 Series F financing and did not surface any stronger public evidence of a completed acquisition, IPO, or closure after that event.\",\"url\":\"https://www.google.com/search?q=Ramp%20ramp.com%20acquisition%20IPO%20public%20private%20September%202026%20June%202026%20after%20Series%20F&hl=en&gl=us\",\"publication_date\":\"unknown\",\"event_date\":\"2026-09-30\",\"excerpt\":\"Search results showed private-market and funding references, including the June 2026 Series F, but no clear result for a completed acquisition, IPO, or shutdown before the cutoff.\"}]",
+          "latest_round": "Series F",
+          "round_amount": "750 million",
+          "uncertainties": "Ramp's latest financing is well evidenced by a company press release on 2026-06-04, but I did not find an explicit company statement after that date affirming ownership/listing status as of 2026-09-30. The lifecycle status is therefore inferred from the latest evidenced primary venture financing plus a freshness search that did not reveal a completed acquisition, IPO, or closure before the cutoff. No separate legal closing date for the Series F was found; the available date is the announcement date.",
+          "lead_investors": "ICONIQ, GIC, Ontario Teachers' Pension Plan",
+          "round_currency": "USD",
+          "company_identity": "Ramp is a financial operations platform that sells corporate cards, payments, expense management, procurement, travel booking, and automated bookkeeping software.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-06-04"
+        },
+        "reasoning": "I resolved the entity using Ramp's own financing materials and used the most recent company press release I found for the latest venture equity round. The strongest evidence is the 2026-06-04 PR Newswire release announcing a Series F primary financing round of $750 million led by ICONIQ, GIC, and Ontario Teachers' Pension Plan. For lifecycle, I found no stronger public evidence before the 2026-09-30 cutoff of a completed acquisition, IPO, or closure; therefore the best-supported status is private_independent, with that inference explained in uncertainties.",
+        "stepsTaken": [
+          "Searched Google with query \"Ramp ramp.com funding round acquisition IPO 2025 2026 site:ramp.com OR site:techcrunch.com OR site:newsroom.ramp.com\". The results are: \n {\"search_results\":[{\"title\":\"We raised $500 M to build the future of finance\",\"link\":\"https://ramp.com/blog/ramp-raised-500m-to-build-the-future-of-finance\",\"snippet\":\"Ramp has raised another $500 million at a $22.5 billion valuation to pick up the pace. The year is 2025: Pick your poison By 2026: Agents take ...\",\"date\":\"Jul 30, 2025\",\"position\":1},{\"title\":\"Ramp at $32 billion: Money talks. Now It thinks.\",\"link\":\"https://ramp.com/blog/ramp-november-2025-valuation\",\"snippet\":\"Ramp at $32 billi...",
+          "Used visitWebpage {\"url\":\"https://ramp.com/blog/ramp-raised-500m-to-build-the-future-of-finance\",\"question\":\"Find the financing details: amount raised, type of round, announcement date, investors/lead investors, valuation, and any description of Ramp's business.\"}. The results are: \n \"Source: Ramp blog post, “We raised $500M to build the future of finance,” Ramp news, July 30, 2025. Link: https://ramp.com/blog/ramp-raised-500m-to-build-the-future-of-finance\\n\\nRelevant excerpts:\\n- “So, why are we raising another $500 million? (just 45 days after our last round)?”\\n- “45 days ago: I said ‘Let the robots chase receipts’ And we raised $200M to do just that.”\\n- “And we’ve raised another $500M at a $22.5 billion valuation to pick up the pace.”\\n\\nBusiness description from page:...",
+          "Searched Google with query \"Ramp ramp.com June 2026 funding acquisition IPO private independent search\". The results are: \n {\"search_results\":[{\"title\":\"Ramp IPO Timeline and Financing Details\",\"link\":\"https://forgeglobal.com/ramp_ipo/\",\"snippet\":\"Ramp is privately held and not traded on public markets, so pre-IPO investments are available only to accredited investors. If you're already accredited and ...\",\"position\":1},{\"title\":\"Ramp Stock: $32B Valuation — Is It a Buy?\",\"link\":\"https://tsginvest.com/ramp/\",\"snippet\":\"As of 2026, it is unknown when Ramp will go public. The company has raised substantial private fund...",
+          "Used visitWebpage {\"url\":\"https://www.prnewswire.com/news-releases/ramp-raises-500-million-at-22-5-billion-valuation-to-accelerate-ai-and-build-the-future-of-finance-302516953.html\",\"question\":\"Find the round type, amount raised, announcement date, investor names especially lead investors, valuation, and business description for Ramp.\"}. The results are: \n \"Ramp press release: “Ramp Raises $500 Million at $22.5 Billion Valuation to Accelerate AI and Build the Future of Finance” — announced Jul 30, 2025, 08:00 ET. Link: https://prnewswire.com/news/ramp\\n\\nRelevant funding details:\\n- Round type: Series E-2\\n- Amount raised: $500 million\\n- Valuation: $22.5 billion\\n- Lead investor: ICONIQ\\n- Existing investors participating: Founders Fund, D1 Capital Partners, GIC, Coatue, Avenir Growth, Thrive Capital, Khosla Ventures, Sands Capital, 8VC, Lux Capi...",
+          "Searched Google with query \"Ramp June 2026 raised 750 million official press release iconiq gic ontario teachers site:ramp.com OR site:businesswire.com OR site:prnewswire.com OR site:techcrunch.com\". The results are: \n {\"search_results\":[{\"title\":\"Ramp Raises Series F at $44 Billion Valuation\",\"link\":\"https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html\",\"snippet\":\"Ramp announced a $750 million primary financing round led by ICONIQ, GIC, and Ontario Teachers' Pension Plan, valuing the company at $44 ...\",\"date\":\"Jun 4, 2026\",\"position\":1},{\"title\":\"Ramp raises $750M at $44B valuation as investors hunger ...\",\"link\":\"https://techcrunch.com/2026/06/04/ramp-raises-7...",
+          "Used visitWebpage {\"url\":\"https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html\",\"question\":\"Find the round type, amount raised, announcement date, lead investors, valuation, and whether this is primary financing for Ramp.\"}. The results are: \n \"- Press release: \\\"Ramp Raises Series F at $44 Billion Valuation\\\"\\n- Announcement date: Jun 04, 2026, 08:00 ET\\n- Relevant excerpt: \\\"Today, Ramp announced a $750 million primary financing round led by ICONIQ, GIC, and Ontario Teachers' Pension Plan, valuing the company at $44 billion.\\\"\\n- Round type: Series F\\n- Amount raised: $750 million\\n- Lead investors: ICONIQ, GIC, and Ontario Teachers' Pension Plan\\n- Valuation: $44 billion\\n- Primary financing: yes (described as a \\\"primary financing...",
+          "Searched Google with query \"Ramp ramp.com acquisition IPO public private September 2026 June 2026 after Series F\". The results are: \n {\"search_results\":[{\"title\":\"Ramp IPO Timeline and Financing Details\",\"link\":\"https://forgeglobal.com/ramp_ipo/\",\"snippet\":\"Ramp has not yet filed for an IPO. The Ramp IPO price does not exist at this time, as Ramp is still a private company and has not yet conducted an IPO. on June ...\",\"position\":1},{\"title\":\"Sell or Invest in Ramp Stock | 132.76$ NPM Price\",\"link\":\"http://www.nasdaqprivatemarket.com/company/ramp/\",\"snippet\":\"Nasdaq Private Market estimates that Ramp price per share was $132.4..."
+        ]
+      }
+    }
+  ]
+}

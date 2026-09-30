@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6c6xi6xj2yGCCSdM",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:06:33.222Z",
+  "duration": "1m 37s",
+  "dataCreditsUsed": 4.4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6c6xpnt6z3rwBFKw",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:06:33.233Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "biorce.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Biorce"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6c6xrd45cdiWRycx",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:06:33.247Z",
+      "completedAt": "2026-09-30T11:08:10.635Z",
+      "duration": "1m 37s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "biorce.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Biorce"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Biorce at biorce.com is a health/medtech software company building AI tools for clinical trials, offering AI-accelerated protocol creation, feasibility, and alignment.\",\"url\":\"https://www.biorce.com/about-us\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Company site says it is 'building the future of clinical trials' with 'AI-accelerated protocol creation, feasibility, and alignment.'\"},{\"claim\":\"Biorce announced/closed a $52.5 million Series A round on 2026-02-02.\",\"url\":\"https://www.clinicaltrialsarena.com/news/biorce-series-a-funding-round-ai-clinical-trials/\",\"publication_date\":\"2026-02-02\",\"event_date\":\"2026-02-02\",\"excerpt\":\"Clinical Trials Arena reported on 2026-02-02 that Biorce 'has secured $52.5m through a Series A funding round.'\"},{\"claim\":\"A syndicated press release dated 2026-02-02 says Biorce 'has closed a $52.5 million Series A round' and names DST Global Partners, Norrsken VC, YZR Capital, Mustard Seed Maze, and Endeavor Catalyst as participants.\",\"url\":\"https://www.clarionledger.com/press-release/story/108821/biorce-closes-52-5mm-series-a-to-accelerate-international-expansion-lead-transformation-of-clinical-trials-through-ai/\",\"publication_date\":\"2026-02-02\",\"event_date\":\"2026-02-02\",\"excerpt\":\"Press release: 'has closed a $52.5 million Series A round.' It adds: 'The financing includes new investment from DST Global Partners, with existing investors Norrsken VC and YZR Capital increasing their participation, alongside participation from Mustard Seed Maze and Endeavor Catalyst.'\"},{\"claim\":\"Before the Series A, Biorce had raised €3.5m in November 2024 and a €5m extension in summer 2025, for €8.5m total seed financing.\",\"url\":\"https://www.clarionledger.com/press-release/story/108821/biorce-closes-52-5mm-series-a-to-accelerate-international-expansion-lead-transformation-of-clinical-trials-through-ai/\",\"publication_date\":\"2026-02-02\",\"event_date\":\"2025-07\",\"excerpt\":\"The same press release says Biorce 'closed €8.5 million in seed investment — €3.5m in November 2024, followed by a €5 million extension from Norrsken VC in summer 2025.'\"},{\"claim\":\"As of 2026-04-07, Biorce was operating independently and expanding, opening an Austin office, expanding AI R&D, and actively hiring; no evidence of an acquisition, IPO, or closure was found in the research performed through the 2026-09-30 cutoff.\",\"url\":\"https://www.clinicalleader.com/doc/ai-healthtech-pioneer-biorce-opens-u-s-offices-in-austin-to-accelerate-global-expansion-0001\",\"publication_date\":\"2026-04-07\",\"event_date\":\"2026-04-07\",\"excerpt\":\"Clinical Leader reported Biorce was opening a second U.S. office in Austin, expanding its AI R&D team, and was 'actively hiring.'\"}]",
+          "latest_round": "Series A",
+          "round_amount": "52.5 million",
+          "uncertainties": "Lead investor for the Series A is not fully established from the strongest pages read. The 2026-02-02 press release names DST Global Partners as a new investor and other participants, but the extracted page text does not explicitly say 'led by DST Global Partners.' Search-result snippets from other outlets suggest DST led the round, but those were not relied on as primary evidence. Lifecycle status is inferred from April 2026 expansion/hiring evidence plus absence of later contrary evidence found in the searches; no separate primary source explicitly states current private ownership as of 2026-09-30.",
+          "lead_investors": "unknown",
+          "round_currency": "USD",
+          "company_identity": "Biorce is a Barcelona-based health AI company that sells software to accelerate and improve clinical trial design and execution.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-02-02"
+        },
+        "reasoning": "I resolved the entity from biorce.com using the company site, then identified the latest evidenced venture equity financing from 2026-02-02 sources. The strongest financing evidence found was a 2026-02-02 industry report and a same-date syndicated press release stating Biorce closed a $52.5 million Series A round. For lifecycle, I found 2026-04-07 evidence of U.S. expansion and active hiring, and I found no evidence before the 2026-09-30 cutoff of a completed acquisition, IPO, or closure. Because the most direct extracted text did not clearly identify a lead investor, I left that field as unknown rather than overstate it.",
+        "stepsTaken": [
+          "Searched Google with query \"Biorce biorce.com funding acquisition IPO site:biorce.com OR Crunchbase OR news\". The results are: \n {\"search_results\":[{\"title\":\"Biorce - Crunchbase Company Profile & Funding\",\"link\":\"https://www.crunchbase.com/organization/biorce\",\"snippet\":\"Biorce is a medtech startup that develops a clinical AI assistant to enhance clinical trials for both speed and cost efficiency.\",\"position\":1},{\"title\":\"Biorce secures $52.5m in Series A to expand AI clinical ...\",\"link\":\"https://www.clinicaltrialsarena.com/news/biorce-series-a-funding-round-ai-clinical-trials/\",\"snippet\":\"Biorce has secured $52.5m throu...",
+          "Used visitWebpage {\"url\":\"https://www.biorce.com/about-us\",\"question\":\"Identify what Biorce is, what it sells, and any company description text that confirms the business at biorce.com.\"}. The results are: \n \"- Website: https://biorce.com\\n- Product page: https://biorce.com/our-platform\\n- Company story: https://biorce.com/about-us#our-story\\n\\nRelevant company description text:\\n- “Every day we save in clinical trials is a day someone gets to live.”\\n- “To accelerate access to life-saving treatments by making clinical trials faster, smarter and fully transparent.”\\n- “A world where every patient can access the treatments they need, when they need them - not years too late.”\\n- “We're scientists who...",
+          "Searched Google with query \"site:biorce.com Biorce Series A funding 2026 press release\". The results are: \n {\"message\":\"No data returned from search query\"}",
+          "Searched Google with query \"Biorce acquisition IPO closure 2026 Biorce news\". The results are: \n {\"search_results\":[{\"title\":\"Biorce secures $52.5m in Series A to expand AI clinical ...\",\"link\":\"https://www.clinicaltrialsarena.com/news/biorce-series-a-funding-round-ai-clinical-trials/\",\"snippet\":\"Biorce has secured $52.5m through a Series A funding round to support the global rollout of its artificial intelligence (AI) clinical trial ...\",\"date\":\"Feb 2, 2026\",\"position\":1},{\"title\":\"Biorce closes $52.5MM Series A to accelerate international ...\",\"link\":\"https://www.capecodtimes.com/press-re...",
+          "Used visitWebpage {\"url\":\"https://www.clinicaltrialsarena.com/news/biorce-series-a-funding-round-ai-clinical-trials/\",\"question\":\"What round did Biorce announce, for how much, on what date, and who led the round? Include any investor names and brief supporting text.\"}. The results are: \n \"- Article: “Biorce secures $52.5m in Series A to expand AI clinical trial tech” (Clinical Trials Arena)\\n- Date: February 2, 2026\\n- Supporting text: “Spanish healthtech company Biorce has secured $52.5m through a Series A funding round to support the global rollout of its artificial intelligence (AI) clinical trial programme.”\\n- Investors named: “The financing round, which includes investors TZR Capital, Endeavour Catalyst, Norrsken VC and Mustard Seed Maze, as well as angel investors like Re...",
+          "Used visitWebpage {\"url\":\"https://www.clinicalleader.com/doc/ai-healthtech-pioneer-biorce-opens-u-s-offices-in-austin-to-accelerate-global-expansion-0001\",\"question\":\"What does this article say about Biorce's operations status and prior January 2026 financing? Include date and concise supporting text.\"}. The results are: \n \"- **April 7, 2026** — “Biorce expands its U.S. footprint and **AI R&D operations** by opening a new office in Austin, Texas this week.”\\n- **April 7, 2026** — “Biorce is opening a **second office in the United States** this month in Austin, Texas… The healthcare platform already has an office in New York.”\\n- **April 7, 2026** — “The new offices in Austin represent a strategic move to **expand the company’s R&D team** and build an AI healthtech hub in Texas.”\\n- **April 7, 2026** — “Biorce is *...",
+          "Searched Google with query \"Biorce Series A led by 2026 press release DST Global\". The results are: \n {\"search_results\":[{\"title\":\"Biorce closes $52.5MM Series A to accelerate international ...\",\"link\":\"https://www.clarionledger.com/press-release/story/108821/biorce-closes-52-5mm-series-a-to-accelerate-international-expansion-lead-transformation-of-clinical-trials-through-ai/\",\"snippet\":\"The financing includes new investment from DST Global Partners, with existing investors Norrsken VC and YZR Capital increasing their participation, alongside ...\",\"position\":1},{\"title\":\"Biorce Secures $52M in S...",
+          "Used visitWebpage {\"url\":\"https://www.clarionledger.com/press-release/story/108821/biorce-closes-52-5mm-series-a-to-accelerate-international-expansion-lead-transformation-of-clinical-trials-through-ai/\",\"question\":\"Extract the Series A amount, currency, date, lead investors, and any seed/extension amounts and dates mentioned for Biorce. Provide short supporting excerpts.\"}. The results are: \n \"- **Series A amount / currency / date**: “**BARCELONA, SPAIN, February 2, 2026** … Biorce … **has closed a $52.5 million Series A round**.”\\n- **Lead investors / participating investors**: “The financing includes new investment from **DST Global Partners**, with existing investors **Norrsken VC** and **YZR Capital** increasing their participation, alongside participation from **Mustard Seed Maze** and **Endeavor Catalyst**.”\\n- **Seed / extension amounts and dates**: “Over a 12 month period, th...",
+          "Searched Google with query \"Biorce acquired IPO delisted bankruptcy shutdown 2026\". The results are: \n {\"search_results\":[{\"title\":\"List of bankrupt, sold, merged, or otherwise defunct biotech ...\",\"link\":\"https://biopharmguy.com/links/company-by-name-defunct.php\",\"snippet\":\"List of defunct, bankrupt, bought, merged biotech companies. Apr 2026 - Aug 2026. Acquired by Solid Biosciences, Jan 2026 - May 2026. Sold off assets Jun 2026; ...\",\"position\":1},{\"title\":\"Biopharma Bankruptcies Still At Peak, With Little Relief in ...\",\"link\":\"https://www.biospace.com/business/biopharma-bankruptcies-still-at..."
+        ]
+      }
+    }
+  ]
+}

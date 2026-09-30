@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6d654ZqdTrTadrki",
+  "workflow": {
+    "id": "wf_0tm6d21AuFsz5iFGM8e",
+    "name": "Funding lifecycle evaluation C"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:27:41.315Z",
+  "duration": "2m 7s",
+  "dataCreditsUsed": 3.9,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6d65ChnDjtEEGUVb",
+      "nodeId": "wfn_0tm6d21iRtaxx429Y8Q",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:27:41.328Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "quince.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Quince"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6d65GKuwQNT5k86G",
+      "nodeId": "wfn_0tm6d4f6jZzvkGe2wpS",
+      "nodeName": "Company research C",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:27:41.343Z",
+      "completedAt": "2026-09-30T11:29:49.111Z",
+      "duration": "2m 7s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "quince.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Quince"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"The company at quince.com is Quince, a direct-to-consumer retailer selling apparel, accessories, jewelry, home goods, beauty/wellness products, luggage and gifts.\",\"url\":\"https://www.quince.com\",\"publication_date\":\"unknown\",\"event_date\":\"2026-09-30\",\"excerpt\":\"Quince’s homepage shows categories including women, men, baby & kids, bedding, rugs, bath, kitchen & tabletop, furniture, bags & accessories, jewelry, shoes, beauty & wellness, travel/luggage and gifts, under the tagline ‘High-quality essentials at radical prices.’\"},{\"claim\":\"Quince’s latest evidenced venture equity round by the cutoff was a Series E financing of $500 million, announced on 2026-03-11 at a $10.1 billion post-money valuation.\",\"url\":\"https://www.reuters.com/technology/quince-raises-500-million-101-billion-valuation-2026-03-11/\",\"publication_date\":\"2026-03-11\",\"event_date\":\"2026-03-11\",\"excerpt\":\"Reuters reported: ‘Online retailer Quince said on Wednesday it has raised $500 million in a Series E funding round at a post-money valuation of $10.1 billion.’\"},{\"claim\":\"ICONIQ Capital led the Series E round, with participation from Basis Set Ventures and Wellington Management among other backers.\",\"url\":\"https://www.reuters.com/technology/quince-raises-500-million-101-billion-valuation-2026-03-11/\",\"publication_date\":\"2026-03-11\",\"event_date\":\"2026-03-11\",\"excerpt\":\"Reuters reported: ‘The funding was led by ICONIQ Capital, with participation from Basis Set Ventures and Wellington Management among other backers.’\"},{\"claim\":\"As of the latest checked public evidence before 2026-09-30, Quince remained private and had not completed an IPO.\",\"url\":\"http://www.nasdaqprivatemarket.com/company/quince/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Nasdaq Private Market’s Quince page states: ‘Quince is a private company and has not had an IPO,’ and ‘Quince stock does not trade on public stock exchanges.’ A Keenable freshness search through 2026-09-30 surfaced follow-on coverage of the March 2026 Series E and private-ownership explainers, but no evidenced acquisition, IPO, or closure event.\"}]",
+          "latest_round": "Series E",
+          "round_amount": "500000000",
+          "uncertainties": "Quince does not appear to have a primary-company funding press release available in the sources read, so the round details rely mainly on Reuters. Current private status and no-IPO status are supported by a secondary-market profile (Nasdaq Private Market), not by a company or regulatory filing. Freshness was checked with Keenable search through 2026-09-30 and did not surface evidence of a newer financing, completed acquisition, IPO, or closure, but absence of such evidence is not absolute proof none exists.",
+          "lead_investors": "ICONIQ Capital",
+          "round_currency": "USD",
+          "company_identity": "Quince is a direct-to-consumer e-commerce brand selling apparel, accessories, home goods, beauty/wellness items and travel products at quince.com.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-03-11"
+        },
+        "reasoning": "I resolved the entity from quince.com itself, then identified the latest financing from Reuters as a $500 million Series E announced on 2026-03-11 and led by ICONIQ Capital. For lifecycle, I independently checked later public evidence and used a freshness search through 2026-09-30; I found no evidenced acquisition, IPO, or closure after that round. The best supported current status is therefore private_independent, with limitations noted because the private-status source is secondary rather than a company or regulatory filing.",
+        "stepsTaken": [
+          "Searched Google with query \"Quince quince.com funding acquisition IPO site:quince.com OR TechCrunch OR Crunchbase OR news\". The results are: \n {\"search_results\":[{\"title\":\"Quince, A Bright Spot In Struggling D2C Fashion Space ...\",\"link\":\"https://news.crunchbase.com/e-commerce/iconiq-investment-doubles-quince-valuation/\",\"snippet\":\"Quince's latest round alone matches the $200 million in venture funding that fashion and apparel startups overall have raised so far this year, ...\",\"date\":\"Jul 29, 2025\",\"position\":1},{\"title\":\"Quince - Crunchbase Company Profile & Funding\",\"link\":\"https://www.crunchbase.com/organization/Quince\",\"snippet\":\"...",
+          "Used visitWebpage {\"url\":\"https://www.quince.com\",\"question\":\"What does the company at this domain sell, and is there an About or press page identifying the business?\"}. The results are: \n \"Company/brand: Quince (https://quince.com)\\n\\nWhat it sells / product categories shown:\\n- Apparel: women, men, baby & kids\\n- Home goods: bedding, rugs, bath, kitchen & tabletop, furniture\\n- Accessories: bags & accessories, jewelry, shoes, sunglasses\\n- Beauty & wellness\\n- Travel / luggage\\n- Gifts / gift cards\\n\\nExample products shown:\\n- Cashmere sweaters\\n- Jewelry\\n- Bedding / bamboo sheet set / linen duvet cover set\\n- Bags\\n- Dresses, skirts, pants, jeans, outerwear\\n- Furniture\\n- Sh...",
+          "Used visitWebpage {\"url\":\"https://quince.com/in-the-press\",\"question\":\"Is there any company press item about funding, acquisitions, IPO, or ownership status, and how does Quince describe itself?\"}. The results are: \n \"Relevant page: Press — https://quince.com/in-the-press\\n\\nWhat’s on the page regarding press items:\\n- The page is labeled “IN THE PRESS” and says: “Loved by editors and featured in top publications.”\\n- It lists media coverage/articles such as:\\n  - “Modern Retail: Quince is testing physical retail with pop-ups”\\n  - “The Strategist: The 12 Very Best Hard-Side Suitcases” with snippet: “Quince, the six-year-old start-up that seems to make a little bit of everything...”\\n  - “Architectural Diges...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/technology/quince-raises-500-million-101-billion-valuation-2026-03-11/\",\"question\":\"What round did Quince announce, amount, date, valuation, lead investor, and does the article indicate current private status or no IPO/acquisition?\"}. The results are: \n \"Reuters article: “Quince raises $500 million at $10.1 billion valuation” — published/updated March 11, 2026.\\n\\nRelevant text:\\n- “Online retailer Quince said on Wednesday it has raised $500 million in a Series E funding round at a post-money valuation of $10.1 billion...”\\n- “The funding was led by ICONIQ Capital, with participation from Basis Set Ventures and Wellington Management among other backers...”\\n- No mention of IPO or acquisition; article describes Quince as an online retailer/compa...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Quince quince.com financing acquisition IPO closure private company latest 2026 after Series E March 2026\",\"site\":\"\",\"acquired_after\":\"2026-03-11\",\"acquired_before\":\"2026-09-30\",\"published_after\":\"2026-03-11\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":400,\"max_results\":5,\"session_id\":\"quince-2026-09-30\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Who Owns Quince? Founders, $10.1B Valuation (2026)\\nURL: https://whoistheownerof.com/who-owns-quince-complete-ownership-2026\\nPublished: 2026-09-16\\nAcquired: 2026-09-17\\nSnippets:\\nQuince is an American direct-to-consumer (DTC) e-commerce company headquartered in San Francisco, California, that sells high-quality apparel, accessories, jewelry, home goods, wellness, and beauty products — at prices far below traditional luxury retail. Its legal registered...",
+          "Used visitWebpage {\"url\":\"https://quince.com/about-us\",\"question\":\"How does Quince describe its business and model on the About Us page?\"}. The results are: \n {\"message\":\"No content found on the website\"}",
+          "Used visitWebpage {\"url\":\"http://www.nasdaqprivatemarket.com/company/quince/\",\"question\":\"Does this page state whether Quince is private or public and whether it has had an IPO?\"}. The results are: \n \"Relevant page statements about Quince:\\n\\n- “Buy Quince Stock — Quince stock does not trade on public stock exchanges. Quince stock is considered a private security...”\\n- “Sell Quince Stock — Quince Stock does not trade on public stock exchanges.”\\n- “Quince Stock Price — Quince does not have a publicly available stock price because it is privately held and not traded on public stock exchanges.”\\n- “Quince Stock Ticker Symbol — There is no ticker symbol for Quince stock because it is a private..."
+        ]
+      }
+    }
+  ]
+}

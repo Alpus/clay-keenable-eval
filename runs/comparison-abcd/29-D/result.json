@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6hd2YYoKs8ipe9Ds",
+  "workflow": {
+    "id": "wf_0tm6h66X7iVxzjahRjg",
+    "name": "Funding lifecycle evaluation D"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T12:58:14.376Z",
+  "duration": "1m 56s",
+  "dataCreditsUsed": 4.3,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6hd2yzq83rjk4cPs",
+      "nodeId": "wfn_0tm6h67uBuBJhxVb2Hm",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T12:58:14.384Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "mangoboost.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "MangoBoost"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6hd24ziKpjXTRj8z",
+      "nodeId": "wfn_0tm6h68JRj3sTcusv7e",
+      "nodeName": "Company research D",
+      "status": "completed",
+      "startedAt": "2026-09-30T12:58:14.402Z",
+      "completedAt": "2026-09-30T13:00:11.301Z",
+      "duration": "1m 56s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "mangoboost.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "MangoBoost"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"MangoBoost at mangoboost.io is an AI/data-center infrastructure company; in its 2023 press release it described itself as a 'leading Data Processing Unit (DPU) and AI server infrastructure company' and a provider of advanced system solutions for AI data-center efficiency.\",\"url\":\"https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward\",\"publication_date\":\"2023-11-10\",\"event_date\":\"2023-11-10\",\"excerpt\":\"MangoBoost, Inc., a leading Data Processing Unit (DPU) and AI server infrastructure company... provider of advanced system solutions maximizing AI data center efficiency.\"},{\"claim\":\"MangoBoost announced the successful closing of a Series A funding round on 2023-11-10.\",\"url\":\"https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward\",\"publication_date\":\"2023-11-10\",\"event_date\":\"2023-11-10\",\"excerpt\":\"...is excited to announce the successful closing of its Series A funding round.\"},{\"claim\":\"That Series A raised $55 million.\",\"url\":\"https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward\",\"publication_date\":\"2023-11-10\",\"event_date\":\"2023-11-10\",\"excerpt\":\"The funding round... has raised $55 million.\"},{\"claim\":\"The Series A was led by IMM Investment and Shinhan Venture Investment, with backing including Korea Development Bank, KB Investment, IM Capital, Premier Partners, and participation from seed investors DSC Investment, Stonebridge Ventures, and Must Ventures.\",\"url\":\"https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward\",\"publication_date\":\"2023-11-10\",\"event_date\":\"2023-11-10\",\"excerpt\":\"The funding round, led by IMM Investment and Shinhan Venture Investment and jointly backed by top investors including Korea Development Bank, KB Investment, IM Capital, and Premier Partners... All Seed round investors including DSC Investment, Stonebridge Ventures, and Must Ventures also participated.\"},{\"claim\":\"As of 2026-04-10, Seoul Economic Daily reported MangoBoost was only seeking / preparing a Series B, not announcing a completed close.\",\"url\":\"https://en.sedaily.com/finance/2026/04/10/pre-unicorn-mangobust-seeks-150-billion-won-series-b-funding\",\"publication_date\":\"2026-04-10\",\"event_date\":\"2026-04-10\",\"excerpt\":\"Mangobust has launched efforts to raise 150 billion won ($110 million) in Series B funding... will soon begin its Series B funding round... the Series B round is likely to close successfully.\"},{\"claim\":\"The same 2026 article reported MangoBoost had previously raised 13 billion won seed funding in May 2022 and 70 billion won in its 2023 Series A, and that it declined an acquisition proposal from Nvidia in the first half of the prior year; this is evidence of a proposal, not a completed acquisition.\",\"url\":\"https://en.sedaily.com/finance/2026/04/10/pre-unicorn-mangobust-seeks-150-billion-won-series-b-funding\",\"publication_date\":\"2026-04-10\",\"event_date\":\"2026-04-10\",\"excerpt\":\"raised 13 billion won in its seed round in May 2022... secured 70 billion won in its Series A round in 2023... received a concrete acquisition proposal from Nvidia in the first half of last year but declined.\"},{\"claim\":\"Crunchbase publicly showed MangoBoost's company status as Private and indicated it was funded by 16 investors, with KT Investment and BonAngels Venture Partners listed as the most recent investors.\",\"url\":\"https://www.crunchbase.com/organization/mangoboost/financial_details\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Company status shown: Private... MangoBoost is funded by 16 investors. KT Investment and BonAngels Venture Partners are the most recent investors.\"},{\"claim\":\"A 2026 Google result snippet from Bloomberg Law said MangoBoost was 'courting investors for a Series B funding round' as of 2026-09-08, which supports that a Series B was still being pursued rather than clearly completed by that date.\",\"url\":\"https://news.bloomberglaw.com/private-equity/samsung-backed-mangoboost-makes-profit-on-ai-data-center-demand\",\"publication_date\":\"2026-09-08\",\"event_date\":\"2026-09-08\",\"excerpt\":\"search-result snippet: 'is now courting investors for a Series B funding round.'\"}]",
+          "latest_round": "Series A",
+          "round_amount": "55 million",
+          "uncertainties": "Crunchbase's public financial-details page indicates MangoBoost's latest funding was a Series B, but the accessible page text obfuscated the announced date and amount, and no readable primary or full secondary article in this research set established a completed Series B by the 2026-09-30 cutoff. That conflicts with secondary 2026 reporting that MangoBoost was only seeking/courting Series B investors in April and September 2026. Because of that unresolved conflict, I treat the latest clearly evidenced completed venture equity round as the 2023 Series A. Also, Sedaily reports an acquisition proposal from Nvidia was declined, but this is not a signed or completed transaction. Native search was available and used for freshness checks, but some potentially relevant articles were unreadable.",
+          "lead_investors": "IMM Investment; Shinhan Venture Investment",
+          "round_currency": "USD",
+          "company_identity": "MangoBoost builds AI and data-center infrastructure, including DPU-based systems and AI server infrastructure, at mangoboost.io.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2023-11-10"
+        },
+        "reasoning": "I resolved the entity from the company domain and used the company press release as the strongest primary source for funding details. I then checked public databases and newer 2026 reporting for evidence of acquisition, IPO, closure, or a newer round. The freshest readable reporting found said MangoBoost was still seeking/courting a Series B in 2026, while Crunchbase suggested a later Series B without accessible date/amount details. Given that conflict, the latest clearly evidenced completed equity round is the 2023 Series A. No affirmative evidence of an IPO, completed acquisition, or closure was found by the cutoff; the best available status evidence indicates the company remained private.",
+        "stepsTaken": [
+          "Searched Google with query \"MangoBoost mangoboost.io funding acquisition IPO site:news OR site:crunchbase.com OR site:mangoboost.io\". The results are: \n {\"search_results\":[{\"title\":\"Announcing our closing of Series A funding round and way ...\",\"link\":\"https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward\",\"snippet\":\"MangoBoost has secured more than 60 million US dollars in funding and is rapidly expanding its presence in the United States, Canada and South ...\",\"date\":\"Nov 10, 2023\",\"position\":1},{\"title\":\"MangoBoost - Crunchbase Company Profile & Funding\",\"link\":\"https://www.crunchbase.com/o...",
+          "Used visitWebpage {\"url\":\"https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward\",\"question\":\"What round closed, on what date was it announced, how much was raised, who led or participated, and what does the company say it does?\"}. The results are: \n \"Source: MangoBoost press release, “Announcing our closing of Series A funding round and way forward” — announced November 10, 2023. Link: https://mangoboost.io/company/newsroom\\n\\nRelevant excerpts:\\n- “MangoBoost, Inc., a leading Data Processing Unit (DPU) and AI server infrastructure company, is excited to announce the successful closing of its Series A funding round.”\\n- “The funding round, led by IMM Investment and Shinhan Venture Investment and jointly backed by top investors including Kor...",
+          "Searched Google with query \"MangoBoost 2024 2025 2026 funding acquisition IPO MangoBoost Inc\". The results are: \n {\"search_results\":[{\"title\":\"Announcing our closing of Series A funding round and way ...\",\"link\":\"https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward\",\"snippet\":\"MangoBoost has secured more than 60 million US dollars in funding and is rapidly expanding its presence in the United States, Canada and South ...\",\"date\":\"Nov 10, 2023\",\"position\":1},{\"title\":\"Invest In MangoBoost Stock | Buy Pre-IPO Shares\",\"link\":\"https://equityzen.com/company/...",
+          "Used visitWebpage {\"url\":\"https://www.crunchbase.com/organization/mangoboost/financial_details\",\"question\":\"What funding rounds, dates, and investors are publicly shown for MangoBoost, and is there any indication it is still a private company rather than acquired or public?\"}. The results are: \n \"- Company status shown: **Private**\\n- Profile snippet: **“Founded obfuscated … Private … Series B … Bellevue, Washington, United States”**\\n- Financials page states:\\n  - **“MangoBoost has raised a total of obfuscated obfuscation in funding over 3 rounds.”**\\n  - **“Their latest funding was raised on obfuscated obfuscation from a Series B round.”**\\n  - **“MangoBoost is funded by 16 investors.”**\\n  - **“KT Investment and BonAngels Venture Partners are the most recent investors.”**\\n- Funding ...",
+          "Searched Google with query \"MangoBoost Series B KT Investment BonAngels 2024 2025 2026 acquisition\". The results are: \n {\"search_results\":[{\"title\":\"Announcing our closing of Series A funding round and way ...\",\"link\":\"https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward\",\"snippet\":\"MangoBoost has secured more than 60 million US dollars in funding and is rapidly expanding its presence in the United States, Canada and South ...\",\"date\":\"Nov 10, 2023\",\"position\":1},{\"title\":\"MangoBoost Rejects NVIDIA, Secures Global Tech ...\",\"link\":\"https://www.chosun.com/engl...",
+          "Used visitWebpage {\"url\":\"https://www.chosun.com/english/industry-en/2025/12/29/RM2LZRCRRJH7VFFOUZF32ADNDE/\",\"question\":\"Did MangoBoost complete a Series B financing or any acquisition offer, what amount and investors are reported, and what is the timing?\"}. The results are: \n {\"message\":\"No content found on the website\"}",
+          "Searched Google with query \"MangoBoost September 2026 Series B Bloomberg acquisition private\". The results are: \n {\"search_results\":[{\"title\":\"Bloomberg to Acquire Canoe Intelligence, Taking a ...\",\"link\":\"https://www.bloomberg.com/company/press/bloomberg-to-acquire-canoe-intelligence-taking-a-defining-step-in-its-mission-to-transform-private-markets-investing/\",\"snippet\":\"Bloomberg today announced it has entered into a definitive agreement to acquire Canoe Intelligence (“Canoe”), a leading AI-powered data ...\",\"date\":\"Jul 29, 2026\",\"position\":1},{\"title\":\"Bloomberg to acquire Canoe Intelligence, taking a d...",
+          "Searched Google with query \"MangoBoost funding 2026 site:news.mtn.co.kr OR site:sedaily.com OR site:bloomberglaw.com OR site:businesskorea.co.kr\". The results are: \n {\"search_results\":[{\"title\":\"Pre-Unicorn Mangobust Seeks 150 Billion Won Series B ...\",\"link\":\"https://en.sedaily.com/finance/2026/04/10/pre-unicorn-mangobust-seeks-150-billion-won-series-b-funding\",\"snippet\":\"Korean DPU startup Mangobust seeks 150 billion won Series B at 700 billion won valuation, with backing from Samsung, SK hynix, and interest ...\",\"date\":\"Apr 10, 2026\",\"position\":1},{\"title\":\"Samsung-Backed MangoBoost Makes Profit on AI Data ...\",\"link\":\"https://news.bloomberglaw.com/privat...",
+          "Used visitWebpage {\"url\":\"https://en.sedaily.com/finance/2026/04/10/pre-unicorn-mangobust-seeks-150-billion-won-series-b-funding\",\"question\":\"Does this article report a completed financing, or only a planned/ongoing Series B fundraising? What company details and dates does it provide?\"}. The results are: \n \"Article: “Pre-Unicorn Mangobust Seeks 150 Billion Won Series B Funding” (Seoul Economic Daily). Published 2026.04.10 17:22:00; note says first published on Signal at 1:48 p.m. on 2026.04.09. Link to Korean original: https://sedaily.com/article/20030419?ref=sedailyEng\\n\\nRelevant fundraising wording:\\n- “Mangobust has launched efforts to raise 150 billion won ($110 million) in Series B funding.”\\n- “According to investment banking sources on the 10th, Mangobust will soon begin its Series B fundi..."
+        ]
+      }
+    }
+  ]
+}

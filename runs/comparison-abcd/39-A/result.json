@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6cnqaskmu3zV3VhS",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:16:38.020Z",
+  "duration": "1m 57s",
+  "dataCreditsUsed": 4.9,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6cnqBzeemG3w6bq9",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:16:38.029Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "veronapharma.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Verona Pharma"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6cnqo3QArAAGmfBx",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:16:38.049Z",
+      "completedAt": "2026-09-30T11:18:35.280Z",
+      "duration": "1m 57s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "veronapharma.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Verona Pharma"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "Merck & Co., Inc., Rahway, NJ, USA (known as MSD outside the United States and Canada)",
+          "evidence": "[{\"claim\":\"Verona Pharma plc is a biopharmaceutical company focused on respiratory diseases and commercializes Ohtuvayre (ensifentrine).\",\"url\":\"https://veronapharma.com/sec-news-category/regulatory-news/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"The company site describes Verona Pharma as 'a biopharmaceutical company focused on developing and commercializing innovative therapies for the treatment of chronic respiratory diseases' and notes Ohtuvayre (ensifentrine) as its first commercial product.\"},{\"claim\":\"Verona Pharma was a public company with an SEC-registered IPO process for ADSs in 2017.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1657312/000104746917002313/a2231519zf-1.htm\",\"publication_date\":\"2017-04-03\",\"event_date\":\"2017-04-03\",\"excerpt\":\"The Form F-1 states: 'This is our initial public offering of our ADSs' and describes Verona Pharma plc as a clinical-stage biopharmaceutical company focused on respiratory diseases.\"},{\"claim\":\"The latest evidenced venture equity financing located was a $200 million oversubscribed private placement and subscription announced on July 17, 2020.\",\"url\":\"http://www.veronapharma.com/news/verona-pharma-raises-200-million-in-oversubscribed-private-placement-and-subscription/\",\"publication_date\":\"2020-07-17\",\"event_date\":\"2020-07-17\",\"excerpt\":\"The company announced it 'Raises $200 Million in Oversubscribed Private Placement and Subscription' with new and existing institutional and accredited investors; the release says the financing raised approximately $200 million (£159 million).\"},{\"claim\":\"Named investors in that 2020 equity financing included RA Capital Management, Access Biotechnology, Perceptive Advisors, Acorn Bioventures, PBM Capital, Samsara BioCapital, Foresite Capital, Sphera, Fairmount and Soleus Capital.\",\"url\":\"http://www.veronapharma.com/news/verona-pharma-raises-200-million-in-oversubscribed-private-placement-and-subscription/\",\"publication_date\":\"2020-07-17\",\"event_date\":\"2020-07-17\",\"excerpt\":\"The release identifies those investors as part of the private placement/subscription, but does not explicitly label any of them as 'lead investors'.\"},{\"claim\":\"A later 2025 Oaktree/OMERS financing was non-equity and therefore does not replace the 2020 private placement as the latest venture equity round.\",\"url\":\"http://www.veronapharma.com/news/verona-pharma-announces-amended-strategic-financing-with-oaktree-and-omers/\",\"publication_date\":\"2025-03-28\",\"event_date\":\"2025-03-28\",\"excerpt\":\"The company said it 'repaid the revenue interest purchase and sale agreement' and 'increas[ed] the debt facility to $450 million'; the page describes OMERS Life Sciences as providing 'royalty financings and other non-dilutive solutions', with no equity issuance described.\"},{\"claim\":\"Verona Pharma was acquired in October 2025; the company site states that effective October 7, 2025, Verona Pharma plc and its subsidiaries are subsidiaries of Merck & Co., Inc.\",\"url\":\"https://veronapharma.com/news/acquisition-of-verona-by-msd-approved-by-the-high-court-of-justice-of-england-and-wales\",\"publication_date\":\"2025-10-06\",\"event_date\":\"2025-10-07\",\"excerpt\":\"The company page says the Court sanctioned the scheme, that closing and effectiveness were expected on October 7, 2025, and a banner states: 'Effective October 7th, 2025, Verona Pharma Plc and it subsidiaries are subsidiaries of Merck & Co., Inc.' It also notes October 6, 2025 as the last day of trading of Verona ADSs on Nasdaq.\"}]",
+          "latest_round": "private placement and subscription",
+          "round_amount": "200000000",
+          "uncertainties": "The strongest post-2020 financings found (May 2024 and March 2025 with Oaktree/OMERS) were described by the company as strategic, non-dilutive debt/royalty financings, not equity rounds, so they were excluded from latest_round. The 2020 release names major participating investors but does not explicitly identify 'lead' investors. Acquisition announcement timing has date-semantics ambiguity: the company page says Verona entered the definitive agreement on 2025-07-08, while Merck's public announcement appeared on 2025-07-09; the closing/effective date evidenced on the company site is 2025-10-07.",
+          "lead_investors": "unknown",
+          "round_currency": "USD",
+          "company_identity": "Verona Pharma plc develops and commercializes respiratory disease treatments, including Ohtuvayre (ensifentrine) for COPD.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2025-10-07",
+          "round_announcement_date": "2020-07-17"
+        },
+        "reasoning": "I resolved the company at veronapharma.com using the company site and SEC materials, then checked for newer financing and lifecycle events. The latest financing located after 2020 was 2024/2025 non-dilutive debt/royalty financing with Oaktree and OMERS, so the latest evidenced venture equity round remains the July 17, 2020 private placement and subscription for approximately $200 million. For lifecycle, the company site provides direct evidence that the Merck/MSD acquisition became effective on October 7, 2025 and that Nasdaq trading ceased around that date, so current status is acquired rather than public or private independent.",
+        "stepsTaken": [
+          "Searched Google with query \"Verona Pharma veronapharma.com investor relations IPO financing press release Verona Pharma plc Nasdaq\". The results are: \n {\"search_results\":[{\"title\":\"Regulatory News Archives\",\"link\":\"http://www.veronapharma.com/sec-news-category/regulatory-news/\",\"snippet\":\"The last day of trading Verona ADSs on Nasdaq is expected to be today, October 6, 2025, with trading in Verona ADSs on Nasdaq being halted before the opening of ...\",\"position\":1},{\"title\":\"RNS Archives - Page 2 of 14\",\"link\":\"http://www.veronapharma.com/sec-news-category/rns/page/2/\",\"snippet\":\"Verona Pharma Announces $650 Million Strategic Financing with Oak...",
+          "Used visitWebpage {\"url\":\"http://www.veronapharma.com/sec-news-category/regulatory-news/\",\"question\":\"Find evidence on this page about Verona Pharma's business description, any completed acquisition or delisting event, and the dates mentioned.\"}. The results are: \n \"- **Business description**\\n  - “Verona Pharma is a biopharmaceutical company focused on developing and commercializing innovative therapies for the treatment of chronic respiratory diseases with significant unmet medical needs.”\\n  - Also described as “a biopharmaceutical company focused on respiratory diseases.”\\n  - Product detail on page: “Ohtuvayre® (ensifentrine) is the Company’s first commercial product…”\\n\\n- **Completed acquisition / delisting evidence**\\n  - “Acquisition of Verona by ...",
+          "Searched Google with query \"Verona Pharma latest financing Oaktree OMERS May 2024 strategic financing press release equity or debt\". The results are: \n {\"search_results\":[{\"title\":\"Verona Pharma Announces $650 Million Strategic ...\",\"link\":\"https://www.veronapharma.com/news/verona-pharma-announces-650-million-strategic-financing-with-oaktree-and-omers/\",\"snippet\":\"Non-dilutive funding will support planned US commercial launch and expansion of ensifentrine's clinical activities.\",\"date\":\"May 9, 2024\",\"position\":1},{\"title\":\"Verona Pharma Announces Amended Strategic Financing ...\",\"link\":\"http://www.veronapharma.com/news/verona-pharma-announces-a...",
+          "Searched Google with query \"site:veronapharma.com Verona Pharma private placement Series financing round before IPO\". The results are: \n {\"search_results\":[{\"title\":\"Verona Pharma Raises $200 Million in Oversubscribed ...\",\"link\":\"http://www.veronapharma.com/news/verona-pharma-raises-200-million-in-oversubscribed-private-placement-and-subscription/\",\"snippet\":\"Verona Pharma anticipates net proceeds of the Financing will be approximately $183 million after deducting placement agent fees and estimated ...\",\"date\":\"Jul 17, 2020\",\"position\":1},{\"title\":\"Verona Pharma Reports Financial Results for the Full Year ...\",\"link\":\"http://www...",
+          "Used visitWebpage {\"url\":\"http://www.veronapharma.com/news/verona-pharma-raises-200-million-in-oversubscribed-private-placement-and-subscription/\",\"question\":\"What specific financing round is described here, including amount, date announced, currency, investor details, and any lead investors?\"}. The results are: \n \"- Announcement title/date: “Verona Pharma Raises $200 Million in Oversubscribed Private Placement and Subscription,” announced July 17, 2020.\\n- Financing type: oversubscribed private placement and subscription with new and existing institutional and accredited investors.\\n- Amount/currency: raised approximately $200 million (£159 million).\\n- Securities/pricing: 39,090,009 ADSs at $4.50 per ADS, and 43,111,112 ordinary shares at £0.45 per ordinary share (equivalent to $0.5625).\\n- Net proceeds...",
+          "Used visitWebpage {\"url\":\"http://www.veronapharma.com/news/verona-pharma-announces-amended-strategic-financing-with-oaktree-and-omers/\",\"question\":\"Is this financing debt, royalty, or equity? Extract the structure, amount, date, and whether it is dilutive or non-dilutive.\"}. The results are: \n \"Date: March 28, 2025.\\n\\nSource: Verona Pharma press release, “Verona Pharma Announces Amended Strategic Financing with Oaktree and OMERS.” PDF: http://veronapharma.com/news/verona-pharma-announces-amended-strategic-financing-with-oaktree-and-omers?_wpnonce=14d05f0c27&generate_pdf=true&post_id=4199\\n\\nRelevant financing structure details:\\n- “amended its existing strategic financing agreements by repaying the revenue interest purchase and sale agreement (“RIPSA”) and increasing the debt facilit...",
+          "Used visitWebpage {\"url\":\"https://www.sec.gov/Archives/edgar/data/1657312/000104746917002313/a2231519zf-1.htm\",\"question\":\"What does this filing say about Verona Pharma's IPO, exchange listing, and business description?\"}. The results are: \n \"- Filing: Form F-1 registration statement filed with the SEC on April 3, 2017 for Verona Pharma plc. Link: https://sec.gov/Archives/edgar/data/1657312/000104746917002313/a2231519zf-1.htm#CA\\n- IPO / offering context:\\n  - “Approximate date of commencement of proposed sale to the public: As soon as practicable after this Registration Statement becomes effective.”\\n  - Securities registered: “Ordinary shares, nominal value £0.05 per share.”\\n  - “All ordinary shares are represented by American De..."
+        ]
+      }
+    }
+  ]
+}

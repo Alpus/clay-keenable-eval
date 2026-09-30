@@ -1,0 +1,83 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6hc2i6syknScQQtZ",
+  "workflow": {
+    "id": "wf_0tm6h66X7iVxzjahRjg",
+    "name": "Funding lifecycle evaluation D"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T12:57:38.386Z",
+  "duration": "1m 14s",
+  "dataCreditsUsed": 2.3,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6hc2kz5wuayWmdeg",
+      "nodeId": "wfn_0tm6h67uBuBJhxVb2Hm",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T12:57:38.392Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "elevenlabs.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "ElevenLabs"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6hc2KsM2voCyCp2t",
+      "nodeId": "wfn_0tm6h68JRj3sTcusv7e",
+      "nodeName": "Company research D",
+      "status": "completed",
+      "startedAt": "2026-09-30T12:57:38.405Z",
+      "completedAt": "2026-09-30T12:58:52.691Z",
+      "duration": "1m 14s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "elevenlabs.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "ElevenLabs"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"ElevenLabs at elevenlabs.io is an AI audio company founded in 2022 that started with human-like text-to-speech and has expanded into speech-to-text, sound effects, dubbing, music, conversation, and enterprise voice/conversational AI platforms.\",\"url\":\"https://elevenlabs.io/blog/series-d\",\"publication_date\":\"2026-02-04\",\"event_date\":\"2026-02-04\",\"excerpt\":\"Founded in 2022, ElevenLabs began by developing a truly human-like AI text to speech model. Since then, the company has expanded beyond voice... speech to text, sound effects, dubbing, music and conversation... to deliver production-ready platforms for businesses, creators, and developers.\"},{\"claim\":\"The latest evidenced venture equity financing is a Series D round of $500 million announced on 2026-02-04 at an $11 billion valuation.\",\"url\":\"https://elevenlabs.io/blog/series-d\",\"publication_date\":\"2026-02-04\",\"event_date\":\"2026-02-04\",\"excerpt\":\"ElevenLabs raises $500M Series D at $11B valuation\"},{\"claim\":\"Sequoia Capital led the Series D, and the company named additional new and existing investors.\",\"url\":\"https://elevenlabs.io/blog/series-d\",\"publication_date\":\"2026-02-04\",\"event_date\":\"2026-02-04\",\"excerpt\":\"The round was led by Sequoia Capital... New investors Lightspeed Venture Partners, Evantic Capital, BOND are joining the round... Existing investors - BroadLight, NFDG, Valor Capital, AMP Coalition and Smash Capital are also continuing their support. Andreessen Horowitz quadrupled down while ICONIQ tripled down.\"},{\"claim\":\"As of 2026-07-02, Reuters reported ElevenLabs was exploring a secondary employee share sale that could value the company at about $22 billion; Reuters did not report a completed IPO or acquisition.\",\"url\":\"https://www.reuters.com/technology/elevenlabs-explores-employee-stock-sale-22-billion-valuation-bloomberg-news-2026-07-02/\",\"publication_date\":\"2026-07-02\",\"event_date\":\"2026-07-02\",\"excerpt\":\"AI voice generation firm ElevenLabs is exploring a secondary share sale that would allow employees to sell stock... The proposed transaction could value the company at about $22 billion... ElevenLabs declined to comment.\"}]",
+          "latest_round": "Series D",
+          "round_amount": "500 million",
+          "uncertainties": "Reuters on 2026-07-02 described a proposed secondary share sale expected by September 2026, but the retrieved evidence does not confirm whether that secondary transaction occurred; in any case, a secondary sale is not a venture equity round. No primary or regulatory source confirming an IPO, acquisition, or closure was found in the available searches through the 2026-09-30 cutoff, so lifecycle status is based on the latest affirmative public evidence located rather than definitive proof of no later event. The Series D page provides the announcement date; no separate legal closing date was established.",
+          "lead_investors": "Sequoia Capital",
+          "round_currency": "USD",
+          "company_identity": "ElevenLabs is an AI audio software company that sells voice and conversational AI tools, including text-to-speech and related speech products for businesses, creators, and developers.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-02-04"
+        },
+        "reasoning": "I resolved the entity using the company’s own 2026 Series D announcement at elevenlabs.io, which also provides the strongest primary evidence for the latest venture equity round, amount, date, and lead investor. I then performed a freshness/lifecycle check with Reuters and an additional web search for newer IPO/acquisition/closure evidence through the 2026-09-30 cutoff. The best current public evidence located shows ElevenLabs remained a private company pursuing a secondary employee share sale as of 2026-07-02, with no evidenced completed IPO or acquisition found.",
+        "stepsTaken": [
+          "Searched Google with query \"ElevenLabs elevenlabs.io funding acquisition IPO latest round site:elevenlabs.io OR site:techcrunch.com OR site:businesswire.com OR site:reuters.com\". The results are: \n {\"search_results\":[{\"title\":\"ElevenLabs raises $500M Series D at $11B valuation\",\"link\":\"https://elevenlabs.io/blog/series-d\",\"snippet\":\"4 February 2026 – ElevenLabs has raised $500 million in a Series D funding round to transform the way we interact with technology. The round is ...\",\"date\":\"Feb 4, 2026\",\"position\":1},{\"title\":\"ElevenLabs raises $180M Series C to be the voice of ...\",\"link\":\"https://elevenlabs.io/blog/series-c\",\"snippet\":\"ElevenLabs has raised $180 million in a Series C funding...",
+          "Used visitWebpage {\"url\":\"https://elevenlabs.io/blog/series-d\",\"question\":\"Find the announced Series D amount, date, lead investors, company description, and any statement on use of funds or valuation.\"}. The results are: \n \"Source: https://elevenlabs.io/blog/series-d\\n\\n- Headline: “ElevenLabs raises $500M Series D at $11B valuation”\\n- Published: “Feb 4, 2026” / “4 February 2026”\\n- Announced Series D amount: “$500 million”\\n- Valuation: “This latest funding values ElevenLabs at $11 billion” / “This $500 million funding round values ElevenLabs at $11 billion, more than 3x its valuation one year ago.”\\n- Lead investors: “The round was led by Sequoia Capital, with Andrew Reed joining the board.”\\n- Other investor c...",
+          "Searched Google with query \"ElevenLabs acquisition IPO Reuters September 2026 elevenlabs.io\". The results are: \n {\"search_results\":[{\"title\":\"Insights: ElevenLabs Upcoming IPO & Private Stock Price\",\"link\":\"https://forgeglobal.com/insights/elevenlabs-upcoming-ipo-news/\",\"snippet\":\"In March 2026, Bloomberg reported that CEO Mati Staniszewski aims for ElevenLabs to be IPO-ready in two to three years, potentially by 2028 ...\",\"date\":\"Jun 2, 2026\",\"position\":1},{\"title\":\"ElevenLabs explores employee stock sale at $22 billion ...\",\"link\":\"https://www.reuters.com/technology/elevenlabs-explores-employee-stock-sal...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/technology/elevenlabs-explores-employee-stock-sale-22-billion-valuation-bloomberg-news-2026-07-02/\",\"question\":\"Does this Reuters page indicate whether ElevenLabs is still private, pursuing an employee stock sale, or has completed an IPO or acquisition? Extract the publication date and the relevant statements.\"}. The results are: \n \"Publication date: July 2, 2026 (Updated July 2, 2026)\\n\\nRelevant statements:\\n- Headline: “ElevenLabs explores employee stock sale at $22 billion valuation, Bloomberg News reports”\\n- “AI voice generation firm ElevenLabs is exploring a secondary share sale that would allow employees to sell stock, Bloomberg News reported on Thursday, citing people familiar with the matter.”\\n- “The proposed transaction could value the company at about $22 billion and is expected to occur by September, the repo...",
+          "Searched Google with query \"ElevenLabs September 2026 IPO acquisition closure funding Reuters Bloomberg\". The results are: \n {\"search_results\":[{\"title\":\"ElevenLabs in Talks for Tender Offer at $22 Billion Valuation\",\"link\":\"https://www.bloomberg.com/news/articles/2026-07-02/elevenlabs-in-talks-for-tender-offer-at-22-billion-valuation\",\"snippet\":\"The tender, which could double the company's valuation after a February funding round, is expected to occur by September, two of the people ...\",\"date\":\"Jul 3, 2026\",\"position\":1},{\"title\":\"ElevenLabs explores employee stock sale at $22 billion ...\",\"link\":\"https://www.reuter..."
+        ]
+      }
+    }
+  ]
+}

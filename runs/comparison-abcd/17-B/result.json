@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6boluEUavhpKKKxr",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:55:33.256Z",
+  "duration": "1m 38s",
+  "dataCreditsUsed": 4.4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6bolMSCzzxWNxdAP",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:55:33.264Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "replit.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Replit"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6boloFhg8gF8ySbd",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:55:33.279Z",
+      "completedAt": "2026-09-30T10:57:11.500Z",
+      "duration": "1m 38s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "replit.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Replit"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Replit is an AI software platform company at replit.com.\",\"url\":\"https://replit.com/blog/replit-raises-400-million-dollars\",\"publication_date\":\"2026-03-11\",\"event_date\":\"2026-03-11\",\"excerpt\":\"The post says Replit 'has raised $400 million' and the footer describes it as 'the AI platform that helps you turn your ideas into real outcomes.'\"},{\"claim\":\"Replit announced a $400 million Series D financing on 2026-03-11 at a $9 billion valuation.\",\"url\":\"https://techcrunch.com/2026/03/11/replit-snags-9b-valuation-6-months-after-hitting-3b/\",\"publication_date\":\"2026-03-11\",\"event_date\":\"2026-03-11\",\"excerpt\":\"TechCrunch reported that Replit 'raised a $400 million Series D at a $9 billion valuation.'\"},{\"claim\":\"The Series D was led by Georgian Partners.\",\"url\":\"https://techcrunch.com/2026/03/11/replit-snags-9b-valuation-6-months-after-hitting-3b/\",\"publication_date\":\"2026-03-11\",\"event_date\":\"2026-03-11\",\"excerpt\":\"TechCrunch says the round was 'led by previous investor Georgian Partners.'\"},{\"claim\":\"Replit's own announcement lists the investors in the March 2026 round, including Georgian and several strategic investors.\",\"url\":\"https://replit.com/blog/replit-raises-400-million-dollars\",\"publication_date\":\"2026-03-11\",\"event_date\":\"2026-03-11\",\"excerpt\":\"Replit wrote: 'Investors include Georgian, G Squared, Prysm Capital, 1789 Capital, YC, Coatue, a16z, Craft Ventures, and Qatar Investment Authority (QIA)... The round also included strategic investments from Accenture Ventures, Databricks Ventures, Okta Ventures, and Tether.'\"},{\"claim\":\"As of the researched public evidence, Replit remained private and had not completed an IPO.\",\"url\":\"http://www.nasdaqprivatemarket.com/company/replit/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Nasdaq Private Market states: 'Replit is a private company and has not had an IPO' and 'There is no ticker symbol for Replit stock because it is a private company.'\"},{\"claim\":\"Search results up to the cutoff surfaced Replit as an acquirer, not an acquisition target, shortly before the cutoff.\",\"url\":\"https://replit.com/blog/replit-acquires-atta\",\"publication_date\":\"2026-09-25\",\"event_date\":\"2026-09-25\",\"excerpt\":\"Google search results showed Replit's own post 'Putting business analysis in everyone's hands' with the snippet 'Today, we're announcing that Replit has acquired Atta...' This supports that Replit was operating independently near the cutoff.\"}]",
+          "latest_round": "Series D",
+          "round_amount": "400000000",
+          "uncertainties": "Lead-investor attribution comes from TechCrunch; Replit's own March 2026 announcement lists investors but does not explicitly label a lead. The Nasdaq Private Market page used for IPO/private-status evidence did not expose a clear publication date in the retrieved text. I found no public evidence before 2026-09-30 of Replit being acquired or going public, so lifecycle status is inferred as private_independent from the March 2026 venture round, the private-company/IPO-status page, and a 2026-09-25 search-result snippet showing Replit itself announcing an acquisition of Atta. I did not read the Atta post directly because of tool-call limits.",
+          "lead_investors": "Georgian Partners",
+          "round_currency": "USD",
+          "company_identity": "Replit operates replit.com, an AI software development platform that helps users turn ideas into software and outcomes.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-03-11"
+        },
+        "reasoning": "I resolved the entity via Replit's own site, then checked for the newest evidenced financing and current lifecycle status. The strongest funding evidence is Replit's 2026-03-11 announcement plus TechCrunch's same-day report identifying the round as a Series D and naming Georgian Partners as lead. For lifecycle, I found public evidence that Replit remained private and had not had an IPO, and no evidence before the 2026-09-30 cutoff of a completed acquisition of Replit. Evidence near the cutoff instead points to Replit acting as an acquirer, which supports private independent operation.",
+        "stepsTaken": [
+          "Searched Google with query \"Replit replit.com funding round latest acquisition IPO 2026 site:replit.com OR TechCrunch OR Crunchbase OR SEC\". The results are: \n {\"search_results\":[{\"title\":\"Replit Hits $9B Valuation, Bets on Microsoft Fabric [2026]\",\"link\":\"https://tech-insider.org/ie/replit-9-billion-valuation-2026/\",\"snippet\":\"Replit closed a $400 million Series D funding round on March 11, 2026, valuing the company at $9 billion, three times its $3 billion valuation ...\",\"date\":\"Aug 5, 2026\",\"position\":1},{\"title\":\"After nine years of grinding, Replit finally found its market. ...\",\"link\":\"https://techcrunch.com/2025/10/02/after-nine-years-of-grindin...",
+          "Searched Google with query \"Replit acquisition IPO announced completed SEC S-1 2026 replit.com\". The results are: \n {\"search_results\":[{\"title\":\"The Future is Actually Very Human\",\"link\":\"https://replit.com/blog/replit-raises-400-million-dollars\",\"snippet\":\"We have users from 85% of the Fortune 500 building with Replit and we are on track to hit $1 billion in run-rate revenue by the end of 2026.\",\"date\":\"Mar 11, 2026\",\"position\":1},{\"title\":\"Insights: How To Invest In Replit Stock Pre-IPO\",\"link\":\"https://forgeglobal.com/insights/how-to-invest-in-replit-stock-pre-ipo/\",\"snippet\":\"As of June 2026, Replit has n...",
+          "Used visitWebpage {\"url\":\"https://replit.com/blog/replit-raises-400-million-dollars\",\"question\":\"What amount was raised, what round name if any, what date was it announced, who led the round, and what does the post say Replit is?\"}. The results are: \n \"Source: https://replit.com/blog/replit-raises-400-million-dollars\\n\\nPost title: “Replit raises $400 million at a $9 billion valuation”\\nPublished: Mar 11, 2026\\n\\nRelevant excerpts:\\n- “Replit has raised $400 million, valuing the company at $9 billion...”\\n- “Investors include Georgian, G Squared, Prysm Capital, 1789 Capital, YC, Coatue, a16z, Craft Ventures, and Qatar Investment Authority (QIA), among others. The round also included strategic investments from Accenture Ventures, Databricks Ve...",
+          "Searched Google with query \"TechCrunch Reuters Replit March 2026 funding led by Georgian private company no IPO\". The results are: \n {\"search_results\":[{\"title\":\"Replit snags $9B valuation 6 months after hitting $3B\",\"link\":\"https://techcrunch.com/2026/03/11/replit-snags-9b-valuation-6-months-after-hitting-3b/\",\"snippet\":\"The company announced Wednesday that it raised a $400 million Series D at a $9 billion valuation, led by previous investor Georgian Partners.\",\"date\":\"Mar 11, 2026\",\"position\":1},{\"title\":\"Replit Hits $9B Valuation, Bets on Microsoft Fabric [2026]\",\"link\":\"https://tech-insider.org/ie/replit-9-billion-valuati...",
+          "Used visitWebpage {\"url\":\"https://techcrunch.com/2026/03/11/replit-snags-9b-valuation-6-months-after-hitting-3b/\",\"question\":\"What does this article say about Replit's March 2026 round amount, round type, lead investor, and whether Replit is private or pursuing an IPO/acquisition?\"}. The results are: \n \"Source: TechCrunch, “Replit snags $9B valuation 6 months after hitting $3B” (March 11, 2026) — https://techcrunch.com/2026/03/11/replit-snags-9b-valuation-6-months-after-hitting-3b\\n\\nRelevant excerpt: “The company announced Wednesday that it raised a $400 million Series D at a $9 billion valuation, led by previous investor Georgian Partners.”\\n\\nAlso relevant: the article does not mention Replit pursuing an IPO or acquisition; it describes Replit as a startup/company raising a Series D.\\n\\nUse...",
+          "Searched Google with query \"site:nasdaqprivatemarket.com Replit private company IPO replit.com\". The results are: \n {\"search_results\":[{\"title\":\"Sell or Invest in Replit Stock | $225.61 NPM Price\",\"link\":\"http://www.nasdaqprivatemarket.com/company/replit/\",\"snippet\":\"Replit is a private company and has not had an IPO. There is currently no Replit IPO price. Get started to begin exploring the Nasdaq Private Market Data and ...\",\"position\":1},{\"title\":\"Sell or Invest in Zest AI Stock Pre-IPO\",\"link\":\"https://www.nasdaqprivatemarket.com/company/zest-ai/\",\"snippet\":\"On Nasdaq Private Market, you can sell or inves...",
+          "Used visitWebpage {\"url\":\"http://www.nasdaqprivatemarket.com/company/replit/\",\"question\":\"Does this page state whether Replit is a private company and whether it has had an IPO?\"}. The results are: \n \"Relevant page text:\\n- “Buy Replit Stock — Replit stock does not trade on public stock exchanges. Replit stock is considered a private security...”\\n- “Sell Replit Stock — Replit Stock does not trade on public stock exchanges.”\\n- “Replit Stock Ticker Symbol — There is no ticker symbol for Replit stock because it is a private company.”\\n- “Replit IPO — Replit is a private company and has not had an IPO. There is currently no Replit IPO price.”\\n\\nRelevant link:\\n- replit.com\"",
+          "Searched Google with query \"Replit acquired by announced acquisition 2026 IPO filing Replit\". The results are: \n {\"search_results\":[{\"title\":\"The Future is Actually Very Human\",\"link\":\"https://replit.com/blog/replit-raises-400-million-dollars\",\"snippet\":\"Replit has raised $400 million, valuing the company at $9 billion, we are on track to hit $1 billion in run-rate revenue by the end of 2026. ...\",\"date\":\"Mar 11, 2026\",\"position\":1},{\"title\":\"Putting business analysis in everyone's hands\",\"link\":\"https://replit.com/blog/replit-acquires-atta\",\"snippet\":\"Today, we're announcing that Replit has acquired Atta,..."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6d5zZK2MuMrUgfiq",
+  "workflow": {
+    "id": "wf_0tm6d21AuFsz5iFGM8e",
+    "name": "Funding lifecycle evaluation C"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:27:35.751Z",
+  "duration": "1m 9s",
+  "dataCreditsUsed": 2.6,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6d5zNmiYDvrqwdT9",
+      "nodeId": "wfn_0tm6d21iRtaxx429Y8Q",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:27:35.760Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "helsing.ai",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Helsing"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6d5z72atrxK2Ftek",
+      "nodeId": "wfn_0tm6d4f6jZzvkGe2wpS",
+      "nodeName": "Company research C",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:27:35.778Z",
+      "completedAt": "2026-09-30T11:28:44.959Z",
+      "duration": "1m 9s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "helsing.ai",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Helsing"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Helsing at helsing.ai is a Munich-based defence AI company developing and integrating AI platforms for defence capabilities.\",\"url\":\"https://helsing.ai/newsroom/helsing-raises-1-8bn-in-series-e\",\"publication_date\":\"2026-07-13\",\"event_date\":\"2026-07-13\",\"excerpt\":\"Company press release describes Helsing as \\\"Europe's leading defence AI company\\\" and says the investment will accelerate its mission to \\\"develop and integrate entirely new AI platforms into the defence capabilities of its growing number of partner nations.\\\"\"},{\"claim\":\"Helsing announced a $1.8 billion Series E round on 2026-07-13 at an $18 billion valuation.\",\"url\":\"https://helsing.ai/newsroom/helsing-raises-1-8bn-in-series-e\",\"publication_date\":\"2026-07-13\",\"event_date\":\"2026-07-13\",\"excerpt\":\"\\\"Helsing ... today announces it has raised $1.8bn in a Series E, valuing the company at US$18bn.\\\" Dateline: \\\"Munich, July 13, 2026.\\\"\"},{\"claim\":\"Reuters independently reported the same latest round as a Series E and described Helsing as a startup, supporting that it remained privately held at that time.\",\"url\":\"https://www.reuters.com/business/aerospace-defense/europes-helsing-raises-18-billion-valuing-defence-group-18-billion-2026-07-13/\",\"publication_date\":\"2026-07-13\",\"event_date\":\"2026-07-13\",\"excerpt\":\"Reuters wrote that Helsing \\\"had raised $1.8 billion in a Series E funding round\\\" and described it as \\\"the continent's best-funded defence technology startup.\\\"\"},{\"claim\":\"Named participants in the Series E included Dragoneer, Lightspeed, General Catalyst, Iconiq, Disruptive, Goldman Sachs Alternatives, JPMorgan, CPP Investments, Plural and StepStone.\",\"url\":\"https://helsing.ai/newsroom/helsing-raises-1-8bn-in-series-e\",\"publication_date\":\"2026-07-13\",\"event_date\":\"2026-07-13\",\"excerpt\":\"The company said new and existing investors in the round included \\\"Dragoneer Investment Group, Lightspeed Venture Partners, Disruptive, Iconiq, Growth Equity at Goldman Sachs Alternatives, JPMorganChase, Canada Pension Plan Investment Board (CPP Investments), General Catalyst, Plural, and Stepstone.\\\"\"}]",
+          "latest_round": "Series E",
+          "round_amount": "1.8 billion",
+          "uncertainties": "The company press release and Reuters coverage identify Series E participants but do not clearly name a single lead investor for the 2026 round. Reuters and the company both evidence the 2026-07-13 announcement, but neither source reviewed here states a separate legal closing date, so round_announcement_date is used and any later closing date is unknown. For lifecycle status, the strongest affirmative evidence is that Helsing was still raising a venture Series E as a startup on 2026-07-13; a Keenable freshness search for public items published between 2026-07-13 and 2026-09-30 did not surface evidence of an IPO, acquisition of Helsing, or closure, but absence of surfaced results is not proof that no later event occurred.",
+          "lead_investors": "unknown",
+          "round_currency": "USD",
+          "company_identity": "Helsing (helsing.ai) is a Munich-based defence AI company that builds AI platforms for defence and partner-nation military capabilities.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-07-13"
+        },
+        "reasoning": "Resolved the exact company from its domain using Helsing's own July 2026 press release, then verified the latest financing and ownership/listing status with Reuters. The latest evidenced venture equity round before the 2026-09-30 cutoff is the Series E announced on 2026-07-13 for US$1.8 billion. No evidence found in the required freshness check indicated a later IPO, acquisition of Helsing, or closure before the cutoff, so the best-supported lifecycle status is private_independent.",
+        "stepsTaken": [
+          "Searched Google with query \"Helsing helsing.ai funding round acquisition IPO latest 2026 site:helsing.ai OR Reuters\". The results are: \n {\"search_results\":[{\"title\":\"German defence start-up Helsing raises 600 million euros ...\",\"link\":\"https://www.reuters.com/business/aerospace-defense/german-defence-start-up-helsing-raises-600-million-euros-latest-investment-round-2025-06-17/\",\"snippet\":\"German defence start-up Helsing has raised 600 million euros ($693.30 million) in its latest investment round, lead by Spotify founder ...\",\"date\":\"Jun 17, 2025\",\"position\":1},{\"title\":\"Europe's Helsing raises $1.8 billion, valuing defence group...",
+          "Used visitWebpage {\"url\":\"https://helsing.ai/newsroom/helsing-raises-1-8bn-in-series-e\",\"question\":\"What does this page say about Helsing's business, the funding round name, amount, date, and investors?\"}. The results are: \n \"Source: https://helsing.ai/newsroom\\n\\nPress Release — 13. Jul. 2026\\nHeadline: “Helsing raises US$1.8bn in Series E”\\nDateline: “Munich, July 13, 2026”\\n\\nRelevant text:\\n- “Helsing, Europe's leading defence AI company, today announces it has raised $1.8bn in a Series E, valuing the company at US$18bn.”\\n- “New and existing investors participated in the round, including Dragoneer Investment Group, Lightspeed Venture Partners, Disruptive, Iconiq, Growth Equity at Goldman Sachs Alternatives, JPM...",
+          "Searched Google with query \"Reuters Helsing IPO acquisition public listed private independent 2026\". The results are: \n {\"search_results\":[{\"title\":\"German defence start-up Helsing raises 600 million euros ...\",\"link\":\"https://www.reuters.com/business/aerospace-defense/german-defence-start-up-helsing-raises-600-million-euros-latest-investment-round-2025-06-17/\",\"snippet\":\"German defence start-up Helsing has raised 600 million euros ($693.30 million) in its latest investment round, lead by Spotify founder ...\",\"date\":\"Jun 17, 2025\",\"position\":1},{\"title\":\"Helsing IPO Timeline and Financing Details\",\"link\":\"https:/...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/business/aerospace-defense/europes-helsing-raises-18-billion-valuing-defence-group-18-billion-2026-07-13/\",\"question\":\"What does this Reuters article say about Helsing's latest funding round, lead investors, and whether the company is private, public, or acquired?\"}. The results are: \n \"Reuters article: “Europe's Helsing raises $1.8 billion, valuing defence group at $18 billion” (July 13, 2026).\\n\\nRelevant excerpts:\\n- “Helsing said on Monday it had raised $1.8 billion in a Series E funding round that values the Munich-based firm at $18 billion...”\\n- “The round included U.S. venture capital firms such as Dragoneer Investment Group, Lightspeed Venture Partners, General Catalyst, Iconiq and Disruptive, U.S. financial institutions Goldman Sachs and JPMorgan and Canadian pension...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Helsing helsing.ai acquisition completed IPO listed delisted shutdown funding round after July 2026 before 2026-09-30 Reuters company press release regulatory filing\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"2026-07-13\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":400,\"max_results\":5,\"session_id\":\"sess-helsing-20260930\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: E 767 — Unicorn Atlas #1: Helsing\\nURL: https://startuprad.io/post/e-767-unicorn-atlas-1-helsing-europe-s-18-billion-defence-ai-bet\\nPublished: 2026-07-30\\nAcquired: 2026-08-11\\nSnippets:\\nHelsing, the Munich-founded defence-AI company, closed a $1.8 billion Series E at an $18 billion post-money valuation on July 13, 2026 — the largest single defence-tech venture round in European history.\\n\\n---\\n\\nTitle: Helsing raises $1.8 billion at $18 billion valua..."
+        ]
+      }
+    }
+  ]
+}

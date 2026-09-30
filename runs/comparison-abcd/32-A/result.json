@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6ce9NqDHpwbwQzmV",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:10:57.204Z",
+  "duration": "1m 11s",
+  "dataCreditsUsed": 3.2,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6ce9zHHDkzJRoQeC",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:10:57.212Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "lessn.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Lessn"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6ce93y89Qskjw22Y",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:10:57.223Z",
+      "completedAt": "2026-09-30T11:12:08.952Z",
+      "duration": "1m 11s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "lessn.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Lessn"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Lessn at lessn.io is an Australian B2B payments platform that lets businesses pay suppliers, payroll and tax obligations by credit card and earn rewards points.\",\"url\":\"https://www.lessn.io\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Lessn describes itself as Australia's fastest rewards payment platform; it says businesses can pay suppliers, ATO obligations and payroll on any credit card, with integrations including Xero and MYOB.\"},{\"claim\":\"Lessn announced the closing of a Pre-Series-A financing round of more than $1 million.\",\"url\":\"https://www.lessn.io/blog/lessn-raises-1m-to-supercharge-growth-could-we-be-australias-next-melio\",\"publication_date\":\"2025-08-13\",\"event_date\":\"2025-08-13\",\"excerpt\":\"The company blog says 'our Pre-Series-A raise has closed' and 'We've secured over $1 million'.\"},{\"claim\":\"Named backers in that round included Michael Masterman, Dean Swan, Brendon Cook and Ian Lennie.\",\"url\":\"https://www.lessn.io/blog/lessn-raises-1m-to-supercharge-growth-could-we-be-australias-next-melio\",\"publication_date\":\"2025-08-13\",\"event_date\":\"2025-08-13\",\"excerpt\":\"The post lists 'Backing us in this round' and names Michael Masterman, Dean Swan, Brendon Cook and Ian Lennie.\"},{\"claim\":\"Lessn was still actively operating and publishing product updates in 2026.\",\"url\":\"https://www.lessn.io/blog\",\"publication_date\":\"2026-02-25\",\"event_date\":\"2026-02-25\",\"excerpt\":\"The blog index includes Feb. 25, 2026 posts about multi-client supplier payments and T+1 property management payments, and the site footer shows © 2026 Lessn.\"}]",
+          "latest_round": "Pre-Series-A",
+          "round_amount": "1000000+",
+          "uncertainties": "The funding evidence comes from a company blog post rather than a regulatory filing or independent financing database. The post says 'over $1 million' and does not provide an exact amount, legal closing date beyond the announcement/post date, security type beyond 'Pre-Series-A', or identify formal lead investors. I found no public evidence in the searched sources of an IPO, completed acquisition, pending acquisition, or shutdown by the 2026-09-30 cutoff; lifecycle status is therefore based on active company-operated web presence and recent company posts, not on a formal ownership disclosure.",
+          "lead_investors": "unknown",
+          "round_currency": "AUD",
+          "company_identity": "Lessn is an Australian B2B payments platform that enables businesses to pay suppliers, payroll, and tax obligations by credit card while earning rewards points.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2025-08-13"
+        },
+        "reasoning": "I resolved the entity from lessn.io and used the company site as primary evidence for what it sells. The clearest funding evidence is a company blog post dated 2025-08-13 stating that its Pre-Series-A raise had closed and that it had secured over $1 million, while naming several backers. I then checked the company blog/homepage for newer evidence and found active 2026 posts, supporting that the company was still operating by the cutoff. I did not find evidence of a later venture equity round, acquisition, IPO, or closure in the public sources searched, so I treated the 2025 Pre-Series-A as the latest evidenced round and classified lifecycle as private_independent with some uncertainty noted.",
+        "stepsTaken": [
+          "Searched Google with query \"lessn.io Lessn funding acquisition site:lessn.io OR Crunchbase OR LinkedIn\". The results are: \n {\"search_results\":[{\"title\":\"Lessons from a startup's funding failure: Focus on ...\",\"link\":\"https://www.linkedin.com/posts/viswanadh-akella-97812b34_startups-entrepreneurship-activity-7359124459296866306-z5Qs\",\"snippet\":\"a SaaS startup I know was offered a $100 million acquisition. They were doing $20M ARR, growing at 35% YoY, and just starting to see ...\",\"date\":\"1 year ago\",\"position\":1},{\"title\":\"Lessn introduces T+1 and T+0 payouts for fast payments\",\"link\":\"https://www.linkedin.com/posts/l...",
+          "Used visitWebpage {\"url\":\"https://www.lessn.io\",\"question\":\"What does Lessn sell and is there any mention of funding, investors, acquisition, or company status on the site?\"}. The results are: \n \"- Lessn describes itself as “Australia’s fastest rewards payment platform — that pays for itself.”\\n- Core offering: “Lessn turns every business payment into rewards points, automatically, on any credit card. Next business day settlement, every time.”\\n- Product/functionality mentioned:\\n  - “One platform for every business payment”\\n  - “Pay all business expenses with your credit card of choice, even if the supplier does not accept it.”\\n  - “Every supplier payment, ATO obligation, and payroll...",
+          "Used visitWebpage {\"url\":\"https://www.lessn.io/blog/lessn-raises-1m-to-supercharge-growth-could-we-be-australias-next-melio\",\"question\":\"What financing round or raise does this post announce, on what date, for how much, and who invested? Include supporting wording.\"}. The results are: \n \"Post: “Lessn raises $1M+ to supercharge growth — could we be Australia’s next Melio?”\\nDate on post: “Aug 13, 2025”\\n\\nRelevant wording:\\n- “It’s official — our Pre-Series-A raise has closed”\\n- “The raise”\\n- “We’ve secured over $1 million from a tight-knit crew of heavyweight investors”\\n- “Backing us in this round, just to name a few:\\n  Michael Masterman — the man behind Element Zero and Twiggy-linked ventures\\n  Dean Swan — Vice President & GM APJ at monday.com\\n  Brendon Cook — founder of...",
+          "Searched Google with query \"Lessn payments acquisition IPO Lessn funding 2026 lessn.io\". The results are: \n {\"search_results\":[{\"title\":\"Lessn Surpasses $100M in First Year, Eyes New Investment\",\"link\":\"https://www.linkedin.com/posts/financialitnet_lessn-exceeds-100-million-turnover-on-its-activity-7434652559379812353-pC1z\",\"snippet\":\"Lessn has exceeded $100 million transacted on its platform in February 2026, within its first year of operations. The platform integrates with ...\",\"date\":\"7 months ago\",\"position\":1},{\"title\":\"could we be Australia's next Melio?\",\"link\":\"https://www.lessn.io/blog/lessn-...",
+          "Used visitWebpage {\"url\":\"https://www.barchart.com/press-releases/519965/lessn-exceeds-100-million-turnover-on-its-payments-orchestration-platform\",\"question\":\"What does this March 2026 press release say about Lessn's business, management, ownership status, and any funding or acquisition/IPO information?\"}. The results are: \n \"no relevant data\"",
+          "Searched Google with query \"site:lessn.io/blog Lessn March 2026 press release turnover investors private company\". The results are: \n {\"search_results\":[{\"title\":\"Payment Solutions, ATO Bill Management and Rewards\",\"link\":\"https://www.lessn.io/blog\",\"snippet\":\"Learn how to simplify payments, pay ATO bills with ease, earn credit card rewards. In 2026, the way small businesses manage and move money has evolved far ...\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3Alessn.io%2Fblog%20Lessn%20March%202026%20press%20release%20turnover%20investors%2...",
+          "Used visitWebpage {\"url\":\"https://www.lessn.io/blog\",\"question\":\"List recent blog posts or updates in 2025-2026 that indicate Lessn's operating status, partnerships, product launches, or any acquisition/IPO/funding developments.\"}. The results are: \n \"Recent 2025–2026 Lessn blog posts/updates relevant to operating status, partnerships, product launches, funding:\\n\\n- Aug 13, 2025 — “Lessn raises $1M+ to supercharge growth — could we be Australia’s next Melio?” — states: “our Pre-Series-A raise has closed” and indicates media coverage. Link: https://lessn.io/blog/lessn-raises-1m-to-supercharge-growth-could-we-be-australias-next-melio\\n- May 29, 2025 — “Smarter Payments, Simpler FX: What's New in Lessn for 2025” — states: “New features, deeper..."
+        ]
+      }
+    }
+  ]
+}

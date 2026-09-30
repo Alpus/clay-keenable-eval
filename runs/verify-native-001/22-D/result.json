@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6hcog5WqkPh7TRjR",
+  "workflow": {
+    "id": "wf_0tm6h66X7iVxzjahRjg",
+    "name": "Funding lifecycle evaluation D"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T12:58:00.555Z",
+  "duration": "1m 37s",
+  "dataCreditsUsed": 4.3,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6hcobM4wASJh7FYX",
+      "nodeId": "wfn_0tm6h67uBuBJhxVb2Hm",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T12:58:00.563Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "alan.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Alan"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6hcoN7ZBD5TR2gvc",
+      "nodeId": "wfn_0tm6h68JRj3sTcusv7e",
+      "nodeName": "Company research D",
+      "status": "completed",
+      "startedAt": "2026-09-30T12:58:00.577Z",
+      "completedAt": "2026-09-30T12:59:38.177Z",
+      "duration": "1m 37s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "alan.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Alan"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"alan.com is Alan, a health partner/insurtech offering insurance, prevention, and daily care.\",\"url\":\"https://alan.com/en/press-room\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Founded in 2016... Alan has quickly become a key health partner, providing insurance, prevention, and daily care.\"},{\"claim\":\"Alan says it has raised more than €480M since inception from investors including Index Ventures, Temasek, Coatue, and Ontario Teachers' Pension Plan.\",\"url\":\"https://alan.com/en/financial-solidity\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Since our creation, we have raised more than €480M from leading investors such as Index Ventures, Temasek, Coatue, and Ontario Teachers’ Pension Plan.\"},{\"claim\":\"The latest evidenced venture equity financing found by the cutoff is a €480 million round announced on 2026-06-24.\",\"url\":\"https://www.prosus.com/news-insights/2026/prosus-leads-euros-480-million-funding-round-in-alan-to-shape-the-future-of-ai-powered-healthcare\",\"publication_date\":\"2026-06-24\",\"event_date\":\"2026-06-24\",\"excerpt\":\"Prosus leads €480 million funding round in Alan...\"},{\"claim\":\"Prosus said it was investing €400 million in the round, and that existing investors Teachers' Venture Growth and Index Ventures plus new investor Dara Holdings also joined.\",\"url\":\"https://www.prosus.com/news-insights/2026/prosus-leads-euros-480-million-funding-round-in-alan-to-shape-the-future-of-ai-powered-healthcare\",\"publication_date\":\"2026-06-24\",\"event_date\":\"2026-06-24\",\"excerpt\":\"Prosus today announces a €400 million investment... Prosus is joined in this round by existing investors Teachers' Venture Growth (TVG) and Index Ventures, and new investor Dara Holdings.\"},{\"claim\":\"As announced, the 2026 financing had not yet closed because it remained subject to regulatory approvals.\",\"url\":\"https://www.prosus.com/news-insights/2026/prosus-leads-euros-480-million-funding-round-in-alan-to-shape-the-future-of-ai-powered-healthcare\",\"publication_date\":\"2026-06-24\",\"event_date\":\"2026-06-24\",\"excerpt\":\"The closing of this financing round is subject to applicable regulatory approvals, including from the relevant French financial authorities.\"},{\"claim\":\"Alan appears to remain privately held and independent as of the dated evidence: its own site describes a private-company legal form and its June 2026 financing is a venture equity round rather than an IPO or acquisition.\",\"url\":\"https://alan.com/en/press-room\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Alan is a French public limited company (société anonyme) with fully paid-up share capital...\"}]",
+          "latest_round": "2026 venture equity financing round",
+          "round_amount": "480000000",
+          "uncertainties": "The strongest latest-round evidence is a Prosus press release dated 2026-06-24. It clearly announces a €480M round, but also says closing was still subject to regulatory approvals; I did not find a later public source within the research budget confirming legal closing before 2026-09-30. Lead-investor identification relies primarily on Prosus's release; Alan pages reviewed did not directly restate the round details. Alan's press room mentions a €5.0B valuation, while the Prosus release cites €5.5B; these appear to be different dated valuations, not necessarily a contradiction about the round amount. I found no public evidence in the allotted searches of an IPO, completed acquisition, or shutdown by the cutoff, but absence of such evidence is not proof.",
+          "lead_investors": "Prosus",
+          "round_currency": "EUR",
+          "company_identity": "Alan is a France-based digital health insurance and healthcare platform offering insurance, prevention, and care services.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-06-24"
+        },
+        "reasoning": "I resolved alan.com to the French health insurance/healthcare company Alan using the company site. For funding, the freshest strong public evidence located was Prosus's 2026-06-24 press release announcing a €480M equity round led by Prosus, with other named participants, and explicitly noting regulatory approvals were still required for closing. Company-site pages supported identity and historical funding context, but did not provide a newer completed financing, IPO, or acquisition. Based on the dated evidence reviewed, Alan appears to remain privately held and independent by the cutoff, with the main open question being whether the June 2026 round had legally closed by 2026-09-30.",
+        "stepsTaken": [
+          "Searched Google with query \"Alan alan.com funding acquisition IPO latest round site:alan.com OR site:newsroom.alan.com\". The results are: \n {\"message\":\"No data returned from search query\"}",
+          "Searched Google with query \"Alan health insurance France funding round 2024 2025 alan.com\". The results are: \n {\"search_results\":[{\"title\":\"Your health partner: prevention, insurance and daily support\",\"link\":\"https://alan.com/en\",\"snippet\":\"Alan empowers everyone to take action on their physical and mental health, combining top-notch prevention and insurance for a truly unique experience.\",\"position\":1},{\"title\":\"Alan's Press room\",\"link\":\"https://alan.com/en/press-room\",\"snippet\":\"Founded in 2016 and first new health insurance player licensed since 1986 in France, Alan has quickly become a key health p...",
+          "Used visitWebpage {\"url\":\"https://alan.com/en/press-room\",\"question\":\"What financing rounds, dates, amounts, lead investors, company description, and any IPO/acquisition/public listing status are stated on this press room page?\"}. The results are: \n \"Company description stated on press room page:\\n- “Founded in 2016 and first new health insurance player licensed since 1986 in France, Alan has quickly become a key health partner, providing insurance, prevention, and daily care.”\\n- “Offering a unique service focused on physical and mental well-being, Alan leverages technology to simplify access to care...”\\n- “With 790+ employees, Alan operates in France, Spain, Belgium and Canada, serving 1M+ members and 37,000 businesses.”\\n- “In addition ...",
+          "Used visitWebpage {\"url\":\"https://alan.com/en/tags/finance\",\"question\":\"What finance-related posts are listed here, especially any financing round announcements or shareholder letters in 2025-2026 with dates and amounts?\"}. The results are: \n \"Finance-related page/tag:\\n- Letter to shareholders — https://alan.com/en/tags/finance\\n\\nFinance-related posts listed on the page:\\n- Alan - 2026 Q1 Letter to shareholders — “Celebrating Alan's 2026 first quarter” — https://alan.com/en/blog/discover-alan/a/alan-2026-q1-letter-to-shareholders\\n- Alan - 2025 Q3 Letter to Shareholders — “Celebrating Alan's 2025 third quarter” — https://alan.com/en/blog/discover-alan/a/alan-2025-q3-letter-to-shareholders\\n- Alan - 2025 Q2 Letter to Shareholders — ...",
+          "Used visitWebpage {\"url\":\"https://alan.com/en/financial-solidity\",\"question\":\"What does this page say about Alan's fundraising history, investors, dates, and whether it remains privately funded or publicly listed?\"}. The results are: \n \"Source: https://alan.com/en/financial-solidity\\n\\nRelevant page text:\\n- “In 2016, we became the first company in 30 years to receive authorization from the French Prudential Supervision and Resolution Authority (ACPR) to operate as an insurer.”\\n- “Since our creation, we have raised more than €480M from leading investors such as Index Ventures, Temasek, Coatue, and Ontario Teachers’ Pension Plan.”\\n- “They helped us lay Alan’s foundations: our technology, our teams, and our presence in France,...",
+          "Searched Google with query \"Alan Prosus 2026 financing round press release June 2026 site:prosus.com OR site:alan.com\". The results are: \n {\"search_results\":[{\"title\":\"Prosus leads €480 million funding round in Alan, to shape ...\",\"link\":\"https://www.prosus.com/news-insights/2026/prosus-leads-euros-480-million-funding-round-in-alan-to-shape-the-future-of-ai-powered-healthcare\",\"snippet\":\"Prosus today announces a €400 million (US$460 million) investment into the European health and insurance tech leader, Alan, valuing it at €5.5 ...\",\"date\":\"Jun 24, 2026\",\"position\":1},{\"title\":\"OFFER MEMORANDUM\",\"link\":\"https://www.prosus.com/~/med...",
+          "Used visitWebpage {\"url\":\"https://www.prosus.com/news-insights/2026/prosus-leads-euros-480-million-funding-round-in-alan-to-shape-the-future-of-ai-powered-healthcare\",\"question\":\"What does this press release say about Alan's financing round amount, date, lead investor(s), Alan's valuation, and whether the investment has closed?\"}. The results are: \n \"Press release date: 24 Jun 2026.\\n\\nTitle: “Prosus leads €480 million funding round in Alan, to shape the future of AI-powered healthcare.”\\n\\nRelevant text:\\n- “Prosus today announces a €400 million (US$460 million) investment into the European health and insurance tech leader, Alan, valuing it at €5.5 billion (US$6.3 billion).”\\n- “The investment will consist of both primary and secondary equity.”\\n- “Prosus is joined in this round by existing investors Teachers' Venture Growth (TVG) and Inde...",
+          "Searched Google with query \"Alan alan.com IPO acquisition public listing 2026 September\". The results are: \n {\"search_results\":[{\"title\":\"Alan Stock | Valuation, Funding, Investors\",\"link\":\"https://notice.co/c/alan\",\"snippet\":\"Alan stock does not trade publicly on Nasdaq or NYSE because it is still a private company. Since it is not publicly listed, there is no Alan stock symbol or ...\",\"position\":1},{\"title\":\"Product news\",\"link\":\"https://alan.com/en/tags/product-news\",\"snippet\":\"Alan's Q2 2026 update: €480m in new funding, 1.14 million members, and continued progress in AI-powered care, prevention an..."
+        ]
+      }
+    }
+  ]
+}

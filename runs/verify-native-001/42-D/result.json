@@ -1,0 +1,84 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6hgariNuhvntQznm",
+  "workflow": {
+    "id": "wf_0tm6h66X7iVxzjahRjg",
+    "name": "Funding lifecycle evaluation D"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T13:00:10.910Z",
+  "duration": "1m 35s",
+  "dataCreditsUsed": 2.6,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6hgavqFcjvAHYU88",
+      "nodeId": "wfn_0tm6h67uBuBJhxVb2Hm",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T13:00:10.918Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "armis.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Armis"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6hgasd7GHVHXZhjD",
+      "nodeId": "wfn_0tm6h68JRj3sTcusv7e",
+      "nodeName": "Company research D",
+      "status": "completed",
+      "startedAt": "2026-09-30T13:00:10.933Z",
+      "completedAt": "2026-09-30T13:01:46.250Z",
+      "duration": "1m 35s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "armis.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Armis"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "ServiceNow",
+          "evidence": "[{\"claim\":\"Armis at armis.com is a cyber exposure management and security company.\",\"url\":\"https://www.armis.com/newsroom/press/cybersecurity-leader-armis-closes-435-million-round-at-6-1-billion-valuation/\",\"publication_date\":\"2025-11-05\",\"event_date\":\"2025-11-05\",\"excerpt\":\"Armis described itself in its press release as 'the cyber exposure management and security company'.\"},{\"claim\":\"Armis announced/closed a $435 million pre-IPO funding round, which is the latest evidenced venture equity round found before the cutoff.\",\"url\":\"https://www.armis.com/newsroom/press/cybersecurity-leader-armis-closes-435-million-round-at-6-1-billion-valuation/\",\"publication_date\":\"2025-11-05\",\"event_date\":\"2025-11-05\",\"excerpt\":\"Press release title: 'Cybersecurity Leader Armis Closes $435 Million Round at $6.1 Billion Valuation'; text says Armis 'announced a pre-IPO funding round of $435 million'.\"},{\"claim\":\"The named lead investor for that round was Growth Equity at Goldman Sachs Alternatives, with significant participation from CapitalG; Evolution Equity Partners also joined as a new investor.\",\"url\":\"https://www.armis.com/newsroom/press/cybersecurity-leader-armis-closes-435-million-round-at-6-1-billion-valuation/\",\"publication_date\":\"2025-11-05\",\"event_date\":\"2025-11-05\",\"excerpt\":\"The round was 'led by Growth Equity at Goldman Sachs Alternatives with major participation from CapitalG, and was joined by new investor Evolution Equity Partners'.\"},{\"claim\":\"ServiceNow completed its acquisition of Armis on 2026-04-20 for approximately $7.75 billion in cash.\",\"url\":\"https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-completes-Armis-acquisition-closing-the-gap-between-asset-visibility-and-cyber-risk/default.aspx\",\"publication_date\":\"2026-04-20\",\"event_date\":\"2026-04-20\",\"excerpt\":\"ServiceNow press release dated 04/20/2026 states: 'today completed its acquisition of Armis' and 'completed the acquisition of Armis for approximately $7.75 billion in cash'.\"},{\"claim\":\"As of the cutoff, Armis is no longer private independent or IPO-bound; it is an acquired business within ServiceNow.\",\"url\":\"https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-completes-Armis-acquisition-closing-the-gap-between-asset-visibility-and-cyber-risk/default.aspx\",\"publication_date\":\"2026-04-20\",\"event_date\":\"2026-04-20\",\"excerpt\":\"Because ServiceNow says it 'completed its acquisition of Armis' on 2026-04-20, Armis' lifecycle status by 2026-09-30 is acquired.\"}]",
+          "latest_round": "pre-IPO funding round",
+          "round_amount": "435 million",
+          "uncertainties": "The 2025 company release says the round was 'led by' Growth Equity at Goldman Sachs Alternatives and had 'major participation' from CapitalG; if a stricter definition of 'lead investors' requires only formal lead(s), Goldman Sachs Alternatives is explicit while CapitalG is significant participant. Verification search did not surface a newer equity round after 2025-11-05 or any IPO filing before the 2026-09-30 cutoff, but absence of a search hit is not conclusive proof beyond the completed acquisition evidence. Announcement date for the acquisition was not separately sourced here; only the completion date is firmly evidenced.",
+          "lead_investors": "Growth Equity at Goldman Sachs Alternatives; CapitalG",
+          "round_currency": "USD",
+          "company_identity": "Armis is a cyber exposure management and security company that helps organizations see, protect, and manage cyber risk across connected assets.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2026-04-20",
+          "round_announcement_date": "2025-11-05"
+        },
+        "reasoning": "I identified Armis from armis.com using the company's own press release, then found its latest financing on Armis' newsroom and current ownership status on ServiceNow's completion announcement. The strongest dated evidence before the cutoff shows a $435 million pre-IPO equity round announced on 2025-11-05, followed by ServiceNow's completed acquisition on 2026-04-20. No stronger sourced evidence found in the freshness check indicated a newer equity round, IPO, closure, or different ownership status before 2026-09-30.",
+        "stepsTaken": [
+          "Searched Google with query \"Armis armis.com funding acquisition IPO latest round 2026\". The results are: \n {\"search_results\":[{\"title\":\"Cybersecurity Leader Armis Closes $435 Million Round at ...\",\"link\":\"https://www.armis.com/newsroom/press/cybersecurity-leader-armis-closes-435-million-round-at-6-1-billion-valuation/\",\"snippet\":\"Armis, the cyber exposure management and security company, today announced a pre-IPO funding round of $435 million, bringing the company's ...\",\"date\":\"Nov 5, 2025\",\"position\":1},{\"title\":\"Armis IPO Timeline and Financing Details\",\"link\":\"https://forgeglobal.com/armis_ipo/\",...",
+          "Used visitWebpage {\"url\":\"https://www.armis.com/newsroom/press/cybersecurity-leader-armis-closes-435-million-round-at-6-1-billion-valuation/\",\"question\":\"Find the announcement date, the financing type, amount raised, named lead investors, and whether it says pre-IPO or latest funding round.\"}. The results are: \n \"Announcement date: November 5, 2025\\n\\nPress release title: “Cybersecurity Leader Armis Closes $435 Million Round at $6.1 Billion Valuation”\\n\\nRelevant text:\\n- “In a pre-IPO round led by Growth Equity at Goldman Sachs Alternatives and with significant participation from CapitalG...”\\n- “Armis... today announced a pre-IPO funding round of $435 million...”\\n- “The round was led by Growth Equity at Goldman Sachs Alternatives with major participation from CapitalG, and was joined by new investor ...",
+          "Searched Google with query \"Armis acquisition completed IPO filed 2026 site:armis.com OR site:sec.gov OR site:newsroom.armis.com\". The results are: \n {\"search_results\":[{\"title\":\"htgc-20251231\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1280784/000128078426000009/htgc-20251231.htm\",\"snippet\":\"On February 5, 2026, there were 183,695,437 shares outstanding of the registrant's common stock, $0.001 par value. DOCUMENTS INCORPORATED BY REFERENCE. Portions ...\",\"position\":1},{\"title\":\"Proxy Statement Pursuant to Section 14(a) of the\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1787740/000168316826003334/valion_def14a.htm\",\"snippet\":\"In Aug...",
+          "Searched Google with query \"Armis ServiceNow acquisition 2026 IPO 2026 cybersecurity company\". The results are: \n {\"search_results\":[{\"title\":\"ServiceNow completes Armis acquisition, closing the gap ...\",\"link\":\"https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-completes-Armis-acquisition-closing-the-gap-between-asset-visibility-and-cyber-risk/default.aspx\",\"snippet\":\"\\\"ServiceNow's acquisition of Armis enables a powerful three-way partnership with Fortinet, advancing cybersecurity into an AI-driven, autonomous ...\",\"date\":\"Apr 20, 2026\",\"position\":1},{\"title\":\"ServiceNow Acquires Armis...",
+          "Used visitWebpage {\"url\":\"https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-completes-Armis-acquisition-closing-the-gap-between-asset-visibility-and-cyber-risk/default.aspx\",\"question\":\"Find whether the acquisition of Armis was completed, the completion date, transaction value if stated, and a description of Armis.\"}. The results are: \n \"- Press release: “ServiceNow completes Armis acquisition, closing the gap between asset visibility and cyber risk”\\n- Date shown on webpage: 04/20/2026\\n- Completion status: “ServiceNow ... today completed its acquisition of Armis.”\\n- Transaction value: “ServiceNow completed the acquisition of Armis for approximately $7.75 billion in cash, funded through a combination of cash on hand and debt.”\\n- Description of Armis:\\n  - “Armis, a leading cyber exposure management and security company, deli...",
+          "Searched Google with query \"Armis 2026 IPO filed acquisition completed latest funding after April 2026\". The results are: \n {\"search_results\":[{\"title\":\"Cybersecurity Leader Armis Closes $435 Million Round at ...\",\"link\":\"https://www.armis.com/newsroom/press/cybersecurity-leader-armis-closes-435-million-round-at-6-1-billion-valuation/\",\"snippet\":\"Armis, the cyber exposure management and security company, today announced a pre-IPO funding round of $435 million, bringing the company's ...\",\"date\":\"Nov 5, 2025\",\"position\":1},{\"title\":\"Armis is hoping to launch its IPO in late 2026 or early 2027, ...\",\"link\":\"https://www..."
+        ]
+      }
+    }
+  ]
+}

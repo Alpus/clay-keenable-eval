@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6b7iteBcQfgAfV7f",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:45:18.108Z",
+  "duration": "2m 18s",
+  "dataCreditsUsed": 5.4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6b7itRxMa69o2yV4",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:45:18.118Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "materialdepot.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Material Depot"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6b7iR9Gw3emsUFYF",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:45:18.132Z",
+      "completedAt": "2026-09-30T10:47:36.526Z",
+      "duration": "2m 18s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "materialdepot.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Material Depot"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"materialdepot.com is Material Depot, a curated home-interiors materials platform selling items such as tiles, laminates, wallpapers, wooden flooring, quartz, panels, wall cladding, cabinetry, bathroom and outdoor materials, with designer consultation, live visualization, installation support and doorstep delivery.\",\"url\":\"https://materialdepot.com\",\"publication_date\":\"unknown\",\"event_date\":\"2026-09-30\",\"excerpt\":\"Homepage/about text includes: 'Why MaterialDepot?', '10k+ Happy Homes', 'Designer Consultation', 'Live Visualization', 'Installation Support', 'Doorstep Delivery', and product categories including Tiles, Laminates, Wallpapers, Wooden Flooring, Quartz, Panels, Wall Cladding and Cabinetry.\"},{\"claim\":\"Stellaris Venture Partners identifies Material Depot as a portfolio company, describing it as 'A curated home interiors materials platform'; it says Stellaris partnered in 2025 at the Series A stage with co-investor Accel.\",\"url\":\"https://www.stellarisvp.com/portfolio/material-depot\",\"publication_date\":\"unknown\",\"event_date\":\"2025\",\"excerpt\":\"Portfolio page states: 'A curated home interiors materials platform'; 'Partnered 2025'; 'Entry stage Series A'; 'Co-investor Accel'.\"},{\"claim\":\"Economic Times reported on 2026-02-05 that Material Depot raised $10 million in a funding round co-led by Accel and Stellaris Venture Partners, with participation from Whiteboard Capital, DeVC, Soma Capital, MyAsiaVC, and several angels.\",\"url\":\"https://m.economictimes.com/tech/funding/interior-decor-startup-material-depot-raises-10-million-from-accel-stellaris-venture-partners/articleshow/127915373.cms\",\"publication_date\":\"2026-02-05\",\"event_date\":\"2026-02-05\",\"excerpt\":\"Article says Material Depot 'has raised $10 million' 'in a funding round co-led by Accel and Stellaris Venture Partners'; participants named include Whiteboard Capital, DeVC, Soma Capital and MyAsiaVC plus angels such as Ramakant Sharma, Ankit Nagori, Shashvat Nakrani, Niraj Singh and Abhishek Goyal.\"},{\"claim\":\"Crunchbase lists Material Depot's last funding round as a Series A and names Accel and Stellaris Venture Partners as lead investors.\",\"url\":\"https://www.crunchbase.com/organization/material-depot\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Crunchbase page text says: 'Material Depot closed its last funding round ... from a Series A round' and in the funding table shows 'Series A - Material Depot' with lead investors 'Accel, Stellaris Venture Partners'.\"},{\"claim\":\"As of the cutoff, Material Depot appears to still be operating under its own brand/site; no public evidence was found in the research of a completed acquisition, IPO or shutdown before 2026-09-30.\",\"url\":\"https://materialdepot.com\",\"publication_date\":\"unknown\",\"event_date\":\"2026-09-30\",\"excerpt\":\"The company website was live at the cutoff and displayed current shopping categories, experience centres and contact details. Separate searches for acquisition/IPO/shutdown did not surface affirmative evidence of such an event before the cutoff.\"}]",
+          "latest_round": "Series A",
+          "round_amount": "10 million",
+          "uncertainties": "The Series A label is directly supported by Stellaris's portfolio page and Crunchbase; the Economic Times article confirms the $10 million financing and investors but the extracted text does not itself state 'Series A'. Crunchbase's extracted text obfuscated the exact close date for the Series A, so 2026-02-05 is treated as the announcement/report date from Economic Times, not necessarily the legal closing date. No affirmative public evidence of a later round, acquisition, IPO or closure was found in the limited public sources reviewed through 2026-09-30; absence of evidence is not conclusive proof of independence.",
+          "lead_investors": "Accel, Stellaris Venture Partners",
+          "round_currency": "USD",
+          "company_identity": "Material Depot is an Indian home-interiors materials platform and marketplace selling curated finishing products such as tiles, laminates, wallpapers, flooring, quartz and related design-support services.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-02-05"
+        },
+        "reasoning": "I resolved the entity from materialdepot.com, then used public sources to identify the latest evidenced venture round and to check for lifecycle events through the cutoff. The company site established identity and ongoing operation. Stellaris and Crunchbase support that the latest round was Series A with Accel and Stellaris as leads, while Economic Times provides the clearest public reporting date and amount ($10 million on 2026-02-05). I found no affirmative evidence of a completed acquisition, IPO or closure before 2026-09-30, so the best-supported status is private_independent, with uncertainties noted.",
+        "stepsTaken": [
+          "Searched Google with query \"Material Depot materialdepot.com funding acquisition investors site:materialdepot.com OR Crunchbase OR PitchBook OR news\". The results are: \n {\"search_results\":[{\"title\":\"Material Depot - Valuation, Funding & Investors\",\"link\":\"https://pitchbook.com/profiles/company/494864-92\",\"snippet\":\"Information on valuation, funding, cap tables, investors, and executives for Material Depot. Use the PitchBook Platform to explore the full profile.\",\"position\":1},{\"title\":\"Financial Details - Material Depot\",\"link\":\"https://www.crunchbase.com/organization/material-depot/financial_details\",\"snippet\":\"Material Depot is funded by 22 investors. Stellari...",
+          "Searched Google with query \"materialdepot.com Material Depot Series A Accel Stellaris official announcement\". The results are: \n {\"search_results\":[{\"title\":\"Material Depot Raises $10M from Accel and Stellaris ...\",\"link\":\"https://www.linkedin.com/posts/deccan-founders_materialdepot-funding-homedecor-activity-7425183938975035392-p1oW\",\"snippet\":\"Material Depot, a home interiors materials platform, has raised $10 million in a Series A funding round co-led by Accel and Stellaris Venture ...\",\"date\":\"7 months ago\",\"position\":1},{\"title\":\"Material Depot\",\"link\":\"https://www.stellarisvp.com/portfolio/material-depot\",\"snippet\":...",
+          "Used visitWebpage {\"url\":\"https://materialdepot.com\",\"question\":\"What does this company say it is and what products or services does it sell on the website homepage or about sections?\"}. The results are: \n \"Company/site name: Material Depot (https://materialdepot.com)\\n\\nWhat it says it is / does:\\n- “Why MaterialDepot?”\\n- “10k+ Happy Homes”\\n- “Pinteresty Materials”\\n- “Installation Support”\\n- “Doorstep Delivery”\\n- “Designer Consultation”\\n- “Live Visualization”\\n- Has “Experience Centres” / stores in Bengaluru and Hyderabad\\n- About page: https://materialdepot.com/about\\n\\nProducts/services shown on homepage / shop sections:\\n- Tiles: https://materialdepot.com/tiles\\n- Laminates: https://mate...",
+          "Searched Google with query \"Material Depot acquisition IPO shutdown 2026 materialdepot.com\". The results are: \n {\"search_results\":[{\"title\":\"Material Depot - Valuation, Funding & Investors\",\"link\":\"https://pitchbook.com/profiles/company/494864-92\",\"snippet\":\"Information on valuation, funding, cap tables, investors, and executives for Material Depot. Use the PitchBook Platform to explore the full profile.\",\"position\":1},{\"title\":\"Sarthak A. - Co-Founder at Material Depot | IIT-Bombay\",\"subtitle\":\"Bengaluru, Karnataka, India · Co-Founder · Material Depot\",\"link\":\"https://in.linkedin.com/in/sarthak-a-7488965...",
+          "Used visitWebpage {\"url\":\"https://www.stellarisvp.com/portfolio/material-depot\",\"question\":\"Find the investment stage, date, co-investors, and any news or announcement details for Stellaris Venture Partners' investment in Material Depot.\"}. The results are: \n \"Material Depot — Stellaris Venture Partners portfolio page: https://stellarisvp.com/portfolio\\nCompany: Material Depot (https://materialdepot.com)\\nDescription: “A curated home interiors materials platform”\\nFounders: Manish Reddy; Sarthak Agrawal\\nPartnered: 2025\\nEntry stage: Series A\\nCo-investor: Accel\\nStellaris team: Rahul Chowdhri\\nNews/announcement details on page: no specific announcement/news details shown; “why we invested” has a “READ MORE” link but no article content is provided in...",
+          "Searched Google with query \"Material Depot raises $10 million Series A Feb 2026 Accel Stellaris article\". The results are: \n {\"search_results\":[{\"title\":\"Material Depot Raises $10 Million to Expand Home ...\",\"link\":\"https://www.rprealtyplus.com/news-views/material-depot-raises-10-million-to-expand-home-interiors-platform-123994.html\",\"snippet\":\"Material Depot raised $10 million in a Series A round led by Accel and Stellaris to strengthen supply chain technology and expand curated home ...\",\"date\":\"Feb 6, 2026\",\"position\":1},{\"title\":\"Material Depot raises $10 mn led by Accel and Stellaris ...\",\"link\":\"https://b2b.econ...",
+          "Used visitWebpage {\"url\":\"https://m.economictimes.com/tech/funding/interior-decor-startup-material-depot-raises-10-million-from-accel-stellaris-venture-partners/articleshow/127915373.cms\",\"question\":\"What round did Material Depot raise, how much, on what date was it reported, and who led or participated in the round?\"}. The results are: \n \"- Article: “Interior decor startup Material Depot raises $10 million from Accel, Stellaris Venture Partners”\\n- Link: https://m.economictimes.com/tech/funding/interior-decor-startup-material-depot-raises-10-million-from-accel-stellaris-venture-partners/comment/127915373.cms\\n- Reported date: “Last Updated: Feb 05, 2026, 11:02:49 AM IST”\\n- Funding amount: “Material Depot has raised $10 million”\\n- Round description on page: “in a funding round co-led by Accel and Stellaris Venture Partners”\\n- ...",
+          "Searched Google with query \"Material Depot 2026 funding acquisition September 2026 materialdepot.com\". The results are: \n {\"search_results\":[{\"title\":\"Material Depot - 2026 Company Profile & Team\",\"link\":\"https://tracxn.com/d/companies/material-depot/__h6JPSGPb338kmAQ7cRuYPp2g-pMC-mesb5Sg20N8KTc\",\"snippet\":\"Material Depot has raised a total funding of $14.1M over 4 rounds. Its first funding round was on Feb 16, 2022. Its latest funding round was a ...\",\"date\":\"Sep 18, 2026\",\"position\":1},{\"title\":\"Material Depot - Valuation, Funding & Investors\",\"link\":\"https://pitchbook.com/profiles/company/494864-92\",\"snippet\":\"I...",
+          "Used visitWebpage {\"url\":\"https://www.crunchbase.com/organization/material-depot\",\"question\":\"What does the page say about Material Depot's latest funding round, date, and investors?\"}. The results are: \n \"Material Depot’s latest/last funding round is listed as a Series A round.\\n\\nRelevant page text:\\n- “When was the last funding round for Material Depot? Material Depot closed its last funding round on obfuscated obfuscation from a Series A round.”\\n- In Funding Rounds / Company Funding table: “Series A - Material Depot” with lead investors “Accel, Stellaris Venture Partners.”\\n- FAQ: “Who invested in Material Depot? Material Depot has 22 investors including Stellaris Venture Partners and Ankit ..."
+        ]
+      }
+    }
+  ]
+}

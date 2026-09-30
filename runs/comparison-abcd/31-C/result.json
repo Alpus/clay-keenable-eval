@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6d7lnr952cPVj8zw",
+  "workflow": {
+    "id": "wf_0tm6d21AuFsz5iFGM8e",
+    "name": "Funding lifecycle evaluation C"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:28:33.318Z",
+  "duration": "1m 50s",
+  "dataCreditsUsed": 4.4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6d7lqHJrTj56uaMa",
+      "nodeId": "wfn_0tm6d21iRtaxx429Y8Q",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:28:33.326Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "digantara.co.in",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Digantara"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6d7lTCfqefK2Jyp3",
+      "nodeId": "wfn_0tm6d4f6jZzvkGe2wpS",
+      "nodeName": "Company research C",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:28:33.341Z",
+      "completedAt": "2026-09-30T11:30:23.651Z",
+      "duration": "1m 50s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "digantara.co.in",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Digantara"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"The company at digantara.co.in is Digantara, a space intelligence / space situational awareness company offering hardware, data, analytics and applications products.\",\"url\":\"https://www.digantara.co.in\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"The site identifies Digantara as an \\\"Intelligence Solutions Company\\\" and lists offerings under Hardware (PRISM, PULSE, SKYGATE), Data (LOCUS, IRIS), Analytics (STARSMAP), and Applications (INTELLIGENCE, AIRA).\"},{\"claim\":\"Digantara announced a $10 million Series A1 equity round on 2023-06-20 led by Peak XV Partners, with participation from Kalaari Capital.\",\"url\":\"https://techcrunch.com/2023/06/20/digantara-funding-peak-xv-partners/\",\"publication_date\":\"2023-06-20\",\"event_date\":\"2023-06-20\",\"excerpt\":\"TechCrunch reported that Digantara \\\"has raised $10 million\\\" in an \\\"all-equity Series A1 funding round\\\" led by Peak XV Partners, with participation from existing investor Kalaari Capital.\"},{\"claim\":\"By 2025-12-16, Digantara had raised a $50 million Series B round, which is later than the 2023 Series A1 and therefore the latest evidenced venture equity round found before the cutoff.\",\"url\":\"https://inc42.com/buzz/spacetech-startup-digantara-raises-50-mn-for-global-expansion/\",\"publication_date\":\"2025-12-16\",\"event_date\":\"2025-12-16\",\"excerpt\":\"Inc42 reported Digantara \\\"has raised $50 Mn ... in its Series B round\\\" and listed SBI Investments Co Japan, 360 One Asset, Ronnie Screwvala, Peak XV Partners and Kalaari Capital as participants.\"},{\"claim\":\"Later filing-based reporting said Reliance led that same $50 million Series B round and cited a Registrar of Companies filing.\",\"url\":\"https://india.entrepreneur.com/news-and-trends/reliance-leads-usd-50-mn-investment-in-spacetech-firm/502349\",\"publication_date\":\"2026-02-02\",\"event_date\":\"unknown\",\"excerpt\":\"Entrepreneur India reported that Digantara \\\"has raised USD 50 million ... in a funding round led by Reliance Industries, according to a recent filing with the Registrar of Companies\\\" and identified the round as Series B.\"},{\"claim\":\"As of mid-2026, Digantara was still being described as a startup/company raising venture funding, supporting a current status of private independent rather than acquired or public.\",\"url\":\"https://forbes.com/sites/meghamandavia/2026/07/09/meet-the-small-indian-firm-building-a-missile-tracking-system-for-space\",\"publication_date\":\"2026-07-10\",\"event_date\":\"2026-07-10\",\"excerpt\":\"Forbes wrote that in December Digantara's venture arm of Reliance \\\"led a $50 million series B funding round\\\" valuing Digantara at $200 million, describing Digantara as an operating firm rather than a public company or acquired subsidiary.\"}]",
+          "latest_round": "Series B",
+          "round_amount": "50 million",
+          "uncertainties": "Digantara's own newsroom did not yield a readable official funding announcement in this research. Initial 2025 reporting (Inc42) named participating investors but did not clearly identify a lead investor or closing date; later 2026 reporting based on ROC filings said Reliance Industries / Reliance Business Ventures led the round. I therefore treat 2025-12-16 as the announcement date of the latest evidenced round, but the legal closing date remains unknown. No public evidence was found in this search set of an acquisition, IPO, or shutdown before 2026-09-30; that absence is not proof, but 2026 reporting still describes Digantara as a startup/private company.",
+          "lead_investors": "Reliance Industries (later filing-based reporting); earlier announcement coverage did not clearly identify a lead",
+          "round_currency": "USD",
+          "company_identity": "Digantara is a space intelligence and space situational awareness company that sells hardware, data, analytics, and application products for space operations.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2025-12-16"
+        },
+        "reasoning": "I resolved the entity from the company website, identified the latest evidenced venture equity financing as the $50 million Series B announced on 2025-12-16, and then used a Keenable freshness check to look for newer funding or lifecycle changes through 2026-09-30. The check surfaced later filing-based reporting that Reliance led the same Series B, but no stronger evidence of a later round, completed acquisition, IPO, or closure before the cutoff. Therefore the best-supported status is private_independent and the latest round remains Series B.",
+        "stepsTaken": [
+          "Searched Google with query \"Digantara digantara.co.in funding acquisition IPO site:digantara.co.in OR site:techcrunch.com OR site:yourstory.com OR site:inc42.com\". The results are: \n {\"search_results\":[{\"title\":\"Peak XV Partners backs India's Digantara to propel space ...\",\"link\":\"https://techcrunch.com/2023/06/20/digantara-funding-peak-xv-partners/\",\"snippet\":\"Digantara, an Indian startup working on space situational awareness, has raised $10 million in a round led by Peak XV Partners.\",\"date\":\"Jun 20, 2023\",\"position\":1},{\"title\":\"Spacetech Startup Digantara Raises $50 Mn For Global ...\",\"link\":\"https://inc42.com/buzz/spacetech-startup-digantara-raises-50-mn-for-global-exp...",
+          "Used visitWebpage {\"url\":\"https://www.digantara.co.in\",\"question\":\"What does this company do, and are there any news or press links on the site describing recent funding, ownership, or company milestones?\"}. The results are: \n \"Company/site context:\\n- Company name: Digantara\\n- Main navigation indicates what it does: “Intelligence Solutions Company” with offerings under:\\n  - Hardware: PRISM, PULSE, SKYGATE\\n  - Data: LOCUS, IRIS\\n  - Analytics: STARSMAP\\n  - Applications: INTELLIGENCE, AIRA\\n- Other company pages: Mission, Newsroom, Innovation Hub, Careers\\n\\nRelevant links for answering company activity/news questions:\\n- Newsroom: https://www.digantara.co.in/newsroom\\n- Mission: https://www.digantara.co.in/mission...",
+          "Used visitWebpage {\"url\":\"https://www.digantara.co.in/newsroom\",\"question\":\"Find any official announcements about funding rounds, investors, acquisition, IPO, or other corporate lifecycle events, with dates and amounts.\"}. The results are: \n \"no relevant data\"",
+          "Used visitWebpage {\"url\":\"https://techcrunch.com/2023/06/20/digantara-funding-peak-xv-partners/\",\"question\":\"What round did Digantara raise, how much, who led it, what date was it announced, and what does the article say about the company?\"}. The results are: \n \"Source: https://techcrunch.com/2023/06/20/digantara-funding-peak-xv-partners\\nArticle: “Peak XV Partners backs India’s Digantara to propel space situational awareness”\\nAuthor/date: Jagmeet Singh — 3:30 AM PDT · June 20, 2023\\nContact: mail@journalistjagmeet.com\\n\\nRelevant excerpts:\\n- “Digantara, an Indian space tech startup that is working on space situational awareness, has raised $10 million in a funding round led by Peak XV Partners...”\\n- “The all-equity Series A1 funding round saw parti...",
+          "Used visitWebpage {\"url\":\"https://inc42.com/buzz/spacetech-startup-digantara-raises-50-mn-for-global-expansion/\",\"question\":\"What round did Digantara raise, how much, who led it, what date was it announced, and does the article indicate this round closed or was final?\"}. The results are: \n \"Article: “Spacetech Startup Digantara Raises $50 Mn For Global Expansion” — https://inc42.com/buzz/spacetech-startup-digantara-raises-50-mn-for-global-expansion#inc-search-popup\\n\\nRelevant data:\\n- Announced date: 16 Dec'25\\n- Round: “Series B round”\\n- Amount: “$50 Mn (about INR 454.4 Cr)”\\n- Investors mentioned: “The round saw participation from SBI Investments Co Japan, 360 One Asset and entrepreneur Ronnie Screwvala. Existing backers Peak XV Partners and Kalaari Capital also participated i...",
+          "Searched Google with query \"Digantara acquisition IPO listed shutdown Series B 2026 site:digantara.co.in OR site:inc42.com OR site:techcrunch.com OR site:yourstory.com OR site:linkedin.com\". The results are: \n {\"search_results\":[{\"title\":\"Digantara Raises $50M in Series B Funding\",\"link\":\"https://www.linkedin.com/posts/globalindianalpha_digantara-raises-50m-in-series-b-funding-activity-7407323324424347649-2IL0\",\"snippet\":\"Bengaluru-based SpaceTech pioneer Digantara, founded by Anirudh Sharma and Rahul Rawat, has successfully raised $50 million in its Series B funding round.\",\"position\":1},{\"title\":\"Digantara Raises $50M in Funding Led by Reliance ...\",\"link\":\"https://www.linkedin.com/posts/entrepreneu...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Digantara company latest funding round acquisition IPO listed shutdown ownership status after December 2025 through September 2026, preferably reporting on Series B investors and whether the company remains private and independent\",\"site\":\"\",\"acquired_after\":\"2025-12-01\",\"acquired_before\":\"2026-09-30\",\"published_after\":\"2025-12-01\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":400,\"max_results\":5,\"session_id\":\"digantara-2026-09-30\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Digantara — profile, milestones and news\\nURL: https://spaceexploration.in/companies/digantara\\nPublished: 2026-08-19\\nAcquired: 2026-09-12\\nSnippets:\\n2023 led by Peak XV Partners, then by a $50 million Series B announced on 16 December 2025, which TechCrunch and Payload Space reported with 360 ONE Asset, SBI Investment of Japan, Peak XV, Kalaari Capital and Ronnie Screwvala as backers. Filings reported by Entrackr in January 2026 put the round’s post-m...",
+          "Used keenable-public-evaluation-fetch_page_content {\"url\":\"https://india.entrepreneur.com/news-and-trends/reliance-leads-usd-50-mn-investment-in-spacetech-firm/502349\",\"max_chars\":6000,\"live\":false,\"prompt\":\"Extract the article publication date and the specific claims about Digantara's $50 million funding round: round name, amount, lead investor(s), whether it references a regulatory filing, valuation, and any wording indicating current private ownership or acquisition/IPO status.\",\"session_id\":\"digantara-2026-09-30\",\"output_format\":\"text\"}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Reliance Leads USD 50 Mn Investment in Spacetech Firm Digantara\\nURL: https://india.entrepreneur.com/news-and-trends/reliance-leads-usd-50-mn-investment-in-spacetech-firm/502349\\n\\n- **Article Publication Date:** The provided content does not contain an article publication date.\\n- **Round Name:** Series B\\n- **Amount:** USD 50 million (around INR 435 crore)\\n- **Lead Investor(s):** Reliance Industries\\n- **Regulatory Filing Reference:** Yes (according t..."
+        ]
+      }
+    }
+  ]
+}

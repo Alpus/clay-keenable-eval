@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6hcuz4z8q4e5omKd",
+  "workflow": {
+    "id": "wf_0tm6h66X7iVxzjahRjg",
+    "name": "Funding lifecycle evaluation D"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T12:58:06.438Z",
+  "duration": "2m 5s",
+  "dataCreditsUsed": 5,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6hcuBXXj7i5Q6zRN",
+      "nodeId": "wfn_0tm6h67uBuBJhxVb2Hm",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T12:58:06.445Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "airwallex.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Airwallex"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6hcuEV2obpDij4ce",
+      "nodeId": "wfn_0tm6h68JRj3sTcusv7e",
+      "nodeName": "Company research D",
+      "status": "completed",
+      "startedAt": "2026-09-30T12:58:06.459Z",
+      "completedAt": "2026-09-30T13:00:12.214Z",
+      "duration": "2m 5s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "airwallex.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Airwallex"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Airwallex is the business at airwallex.com and describes itself as a global payments and financial platform / AI-native financial operating system for modern businesses offering payment acceptance, billing, global accounts, corporate cards, and spend management.\",\"url\":\"https://www.airwallex.com/global/newsroom/airwallex-secures-320-million-in-series-h-funding-valuation-hits-11-billion\",\"publication_date\":\"2026-06-25\",\"event_date\":\"2026-06-25\",\"excerpt\":\"Airwallex, a leading global payments and financial platform for modern businesses... About Airwallex: Airwallex is an AI native financial operating system for modern businesses... including payment acceptance, billing, global accounts, corporate cards, and spend management.\"},{\"claim\":\"Airwallex announced a $320 million Series H funding round on 2026-06-25 at an $11 billion valuation.\",\"url\":\"https://www.airwallex.com/global/newsroom/airwallex-secures-320-million-in-series-h-funding-valuation-hits-11-billion\",\"publication_date\":\"2026-06-25\",\"event_date\":\"2026-06-25\",\"excerpt\":\"Airwallex... today announced it has raised $320 million in Series H funding... valuation hits $11 billion.\"},{\"claim\":\"The company source names Addition as lead investor in the Series H round, with participation from Baillie Gifford, Hummingbird, QED Investors, T. Rowe Price, Hedosophia, Haun Ventures, Washington University in St. Louis and Amex Ventures.\",\"url\":\"https://www.airwallex.com/global/newsroom/airwallex-secures-320-million-in-series-h-funding-valuation-hits-11-billion\",\"publication_date\":\"2026-06-25\",\"event_date\":\"2026-06-25\",\"excerpt\":\"The round was led by returning investor Addition, with participation from Baillie Gifford, Hummingbird, QED Investors, T. Rowe Price, Hedosophia, Haun Ventures, Washington University in St. Louis and Amex Ventures.\"},{\"claim\":\"Reuters independently reported the same financing as Airwallex's latest round and said the funding was anchored by Addition, T. Rowe Price and Hummingbird, among others.\",\"url\":\"https://www.reuters.com/world/asia-pacific/fintech-airwallex-secures-320-million-new-funding-round-11-billion-valuation-2026-06-26/\",\"publication_date\":\"2026-06-26\",\"event_date\":\"2026-06-25\",\"excerpt\":\"Payments firm Airwallex said on Friday it raised $320 million at a valuation of $11 billion... The latest round of funding was anchored by New York-based venture capital firms Addition, T. Rowe Price, and Hummingbird, among others.\"},{\"claim\":\"Before Series H, Airwallex had announced a $330 million Series G round on 2025-12-08, so Series H is newer than the prior known round.\",\"url\":\"https://www.airwallex.com/global/newsroom/awx-raises-usd330m-series-g-at-usd8b-valuation-establishes-sf-as-dual-global-hq\",\"publication_date\":\"2025-12-08\",\"event_date\":\"2025-12-08\",\"excerpt\":\"Airwallex raises $330M Series G at $8B valuation...\"},{\"claim\":\"As of August 2026, Airwallex was still not public and was only aiming to be 'IPO-ready' by year-end, with no firm listing date due to market conditions.\",\"url\":\"https://fortune.com/article/airwallex-fundraise-lucy-liu-ai-fintech-ipo-08-20-2026/\",\"publication_date\":\"2026-08-20\",\"event_date\":\"2026-08-20\",\"excerpt\":\"Liu confirms that Airwallex is still planning to be 'IPO-ready' by the end of this year, but that a firm date will depend on market conditions. 'It's just not the best time...'\"}]",
+          "latest_round": "Series H",
+          "round_amount": "320 million",
+          "uncertainties": "The company press release clearly says the Series H round was led by Addition, while Reuters says it was 'anchored by' Addition, T. Rowe Price, and Hummingbird; I treat Addition as the lead investor from the company source and note the broader anchor group from Reuters. I found no primary evidence of an IPO filing, acquisition of Airwallex, or closure before the 2026-09-30 cutoff; the current private_independent status relies on the absence of any evidenced completed transaction plus Fortune's 2026-08-20 reporting that the company was only working toward being IPO-ready and had no firm listing date. I did not find a separate legal closing date for the Series H financing, so the announcement date is used as the evidenced event date.",
+          "lead_investors": "Addition",
+          "round_currency": "USD",
+          "company_identity": "Airwallex is a fintech company that provides a global payments and financial operating platform for businesses, including accounts, payment acceptance, billing, cards, and spend management.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-06-25"
+        },
+        "reasoning": "Using Airwallex's own newsroom plus independent reporting, the latest evidenced venture equity financing before the 2026-09-30 cutoff is the $320 million Series H announced on 2026-06-25. A verification search found no newer funding, completed acquisition, IPO, or closure before the cutoff. Fortune's 2026-08-20 interview indicates Airwallex remained private and was only aiming to be IPO-ready, supporting private_independent status.",
+        "stepsTaken": [
+          "Searched Google with query \"Airwallex airwallex.com latest funding round acquisition IPO site:airwallex.com OR site:news.airwallex.com\". The results are: \n {\"search_results\":[{\"title\":\"Airwallex raises $300 million at a $6.2 billion valuation to ...\",\"link\":\"https://www.airwallex.com/global/newsroom/airwallex-raises-usd300-million-at-a-usd6-2-billion-valuation-to-build-the-future-of-global-banking\",\"snippet\":\"The new investment, which brings Airwallex's total funding to more than $1.2 billion, includes Square Peg, DST Global, Lone Pine Capital, ...\",\"date\":\"May 21, 2025\",\"position\":1},{\"title\":\"From seed to Series E: Understanding funding rounds\",\"...",
+          "Used visitWebpage {\"url\":\"https://www.airwallex.com/global/newsroom/airwallex-raises-usd300-million-at-a-usd6-2-billion-valuation-to-build-the-future-of-global-banking\",\"question\":\"Find the announcement date, round type, amount raised, investors or lead investors, and any statement identifying Airwallex and what it does.\"}. The results are: \n \"Announcement: “Airwallex raises $300 million at a $6.2 billion valuation to build the future of global banking” — 21 May 2025. Source: Airwallex Newsroom (https://airwallex.com/global/newsroom)\\n\\nRound/amount: “Airwallex ... has completed a $300 million Series F funding round at a $6.2 billion valuation. The round includes $150 million in secondary share transfers.”\\n\\nInvestors: “Series F investors include: Square Peg, DST Global, Lone Pine Capital, Blackbird, Airtree, Salesforce Ventures, an...",
+          "Searched Google with query \"Airwallex IPO acquisition latest 2026 Airwallex public private independent\". The results are: \n {\"search_results\":[{\"title\":\"Airwallex IPO Timeline and Financing Details - Forge\",\"link\":\"https://forgeglobal.com/airwallex_ipo/\",\"snippet\":\"Airwallex was founded in 2015 by Jack Zhang, Jacob Dai, Lucy Yueting Liu, and Max Li. According to CNBC in August of 2024, Airwallex announced its estimated IPO date of 2026. However, no official public filings have been made as of June 2025. Airwallex is a fintech company focused on providing payments and business banking solutions on a global ...\",\"posit...",
+          "Searched Google with query \"Airwallex 2026 private company independent no IPO acquisition site:airwallex.com OR site:startupdaily.net OR site:fortune.com\". The results are: \n {\"search_results\":[{\"title\":\"Airwallex expands to autonomous finance—though still 'not ...\",\"link\":\"https://fortune.com/article/airwallex-fundraise-lucy-liu-ai-fintech-ipo-08-20-2026/\",\"snippet\":\"Liu confirms that Airwallex is still planning to be “IPO-ready” by the end of this year, but that a firm date will depend on market conditions.\",\"date\":\"Aug 20, 2026\",\"position\":1},{\"title\":\"The AI Era Has No Home Market. Build Accordingly.\",\"link\":\"https://www.airwallex.com/global/blog/the-ai-era-has-n...",
+          "Used visitWebpage {\"url\":\"https://www.airwallex.com/global/newsroom/airwallex-secures-320-million-in-series-h-funding-valuation-hits-11-billion\",\"question\":\"Find the announcement date, round type, amount raised, whether secondary is included, investors or lead investors, and any statement identifying the company and what it sells.\"}. The results are: \n \"Source: https://airwallex.com/global/newsroom\\n\\nAnnouncement: \\\"Airwallex Secures $320 Million in Series H Funding, Valuation Hits $11 Billion\\\"\\nDate: \\\"25 June 2026\\\"\\n\\nRelevant excerpts:\\n- \\\"SAN FRANCISCO — Airwallex, a leading global payments and financial platform for modern businesses, today announced it has raised $320 million in Series H funding...\\\"\\n- \\\"The round was led by returning investor Addition, with participation from Baillie Gifford, Hummingbird, QED Investors, T. Rowe Pri...",
+          "Searched Google with query \"Airwallex September 2026 IPO filed acquisition public private funding round\". The results are: \n {\"search_results\":[{\"title\":\"Airwallex IPO Timeline and Financing Details\",\"link\":\"https://forgeglobal.com/airwallex_ipo/\",\"snippet\":\"Per Forge data, Airwallex has raised a total of $1.2 billion in funding over 14 rounds. Their latest funding was raised on May 21, 2025, from a Series F round.\",\"position\":1},{\"title\":\"Airwallex secures $320 million in Series H funding, ...\",\"link\":\"https://www.airwallex.com/global/newsroom/airwallex-secures-320-million-in-series-h-funding-valuation-hits-11-billio...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/world/asia-pacific/fintech-airwallex-secures-320-million-new-funding-round-11-billion-valuation-2026-06-26/\",\"question\":\"Find statements about the Series H round date, amount, lead investor, and whether Airwallex is private or plans an IPO.\"}. The results are: \n \"- Reuters, June 26, 2026: “Payments firm Airwallex (IPO-AWX.AX) said on Friday it raised $320 million at a valuation of $11 billion…”\\n- Reuters, June 26, 2026: “The latest round of funding was anchored by New York-based venture capital firms Addition, T. Rowe Price, and Hummingbird, among others.”\\n- Useful link text: “statement” → https://airwallex.com/global/newsroom/airwallex-secures-320-million-in-series-h-funding-valuation-hits-11-billion\\n- Useful link text indicates the round type: “Air...",
+          "Searched Google with query \"Airwallex August 2026 private company IPO-ready not public acquisition Fortune Reuters\". The results are: \n {\"search_results\":[{\"title\":\"Airwallex Pre-IPO Shares: What Accredited Investors ...\",\"link\":\"https://www.hustlefund.vc/post/angel-squad-airwallex-pre-ipo-shares-what-accredited-investors-should-know-in-2026\",\"snippet\":\"Airwallex has not announced a firm IPO timeline, Airwallex is a private company and does not trade on any public exchange. Airwallex was valued at roughly $8 ...\",\"position\":1},{\"title\":\"Airwallex IPO Timeline and Financing Details\",\"link\":\"https://forgeglobal.com/airwallex_ipo/\"...",
+          "Used visitWebpage {\"url\":\"https://fortune.com/article/airwallex-fundraise-lucy-liu-ai-fintech-ipo-08-20-2026/\",\"question\":\"Find statements about whether Airwallex is public or private, its IPO timing, and any mention of the latest funding round.\"}. The results are: \n \"- “Others are staying private for even longer. Data processing startup Databricks, for example, is pulling together investors for an unprecedented Series M funding round that values the firm at $188 billion.”\\n- “Larger companies are still able to raise money without going public,” Liu noted. “Most people are still a little bit on the fence about going public.”\\n- “Liu confirms that Airwallex is still planning to be ‘IPO-ready’ by the end of this year, but that a firm date will depend on market..."
+        ]
+      }
+    }
+  ]
+}

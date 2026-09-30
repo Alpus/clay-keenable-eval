@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6cwzHfurAWbpB3QB",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:22:11.843Z",
+  "duration": "1m 55s",
+  "dataCreditsUsed": 4.699999999999999,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6cwzEZfsswvuqSeh",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:22:11.883Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "chime.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Chime"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6cwzDxQMJWaKhbfC",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:22:11.937Z",
+      "completedAt": "2026-09-30T11:24:07.280Z",
+      "duration": "1m 55s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "chime.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Chime"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"chime.com is Chime Financial, a consumer financial technology company offering banking services through partner banks, including checking, savings, debit, credit-building, early pay access, ATMs, and investing.\",\"url\":\"https://www.chime.com/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Chime says on its site that it is a financial technology company, not a bank, and offers banking services through The Bancorp Bank, N.A. or Stride Bank, N.A.; the site promotes checking, high-yield savings, debit, credit builder, early pay, fee-free ATMs, and investing.\"},{\"claim\":\"Chime announced the pricing of its IPO on June 11, 2025 at $27.00 per share; 25,900,765 shares were sold by Chime and 6,099,235 by selling stockholders, implying gross proceeds to Chime of about $699.3 million before underwriting discounts and expenses.\",\"url\":\"https://investors.chime.com/news-releases/news-release-details/chime-announces-pricing-initial-public-offering\",\"publication_date\":\"2025-06-11\",\"event_date\":\"2025-06-11\",\"excerpt\":\"The press release states that Chime priced 32,000,000 Class A shares at $27.00 each, with 25,900,765 shares sold by Chime and 6,099,235 by existing stockholders; Chime will not receive proceeds from the selling stockholders' shares.\"},{\"claim\":\"The IPO shares were expected to begin trading on Nasdaq on June 12, 2025 under ticker CHYM, with closing expected on June 13, 2025.\",\"url\":\"https://investors.chime.com/news-releases/news-release-details/chime-announces-pricing-initial-public-offering\",\"publication_date\":\"2025-06-11\",\"event_date\":\"2025-06-12\",\"excerpt\":\"The press release says the shares are expected to begin trading on the Nasdaq Global Select Market on June 12, 2025 under the ticker symbol CHYM, and that the offering is expected to close on June 13, 2025 subject to customary conditions.\"},{\"claim\":\"Nasdaq hosts a market-activity page for Chime Financial, Inc. Class A Common Stock under ticker CHYM, supporting that the company is publicly listed.\",\"url\":\"https://www.nasdaq.com/market-activity/stocks/chym\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"The Nasdaq page title is 'Chime Financial, Inc. Class A Common Stock (CHYM)' and shows market-data sections for the symbol.\"},{\"claim\":\"Reuters reported that Chime's latest private funding round raised $750 million and was led by Sequoia Capital Global Equities, valuing the startup at $25 billion.\",\"url\":\"https://www.reuters.com/technology/fintech-firm-chime-valued-25-bln-after-750-mln-funding-2021-08-13/\",\"publication_date\":\"2021-08-13\",\"event_date\":\"2021-08-13\",\"excerpt\":\"Reuters wrote that Chime Financial had raised $750 million in its latest funding round led by Sequoia Capital Global Equities, valuing the company at $25 billion.\"},{\"claim\":\"Chime's SEC IPO filing identifies the issuer as Chime Financial, Inc., a consumer financial technology company, and says it had applied to list Class A common stock on Nasdaq under CHYM.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1795586/000162828025025059/chimefinancialinc-sx1wq1da.htm\",\"publication_date\":\"2025-06-02\",\"event_date\":\"2025-06-02\",\"excerpt\":\"The S-1/A describes Chime Financial, Inc. as a consumer financial technology company and states that it had applied to list its Class A common stock on the Nasdaq Global Select Market under the symbol CHYM.\"}]",
+          "latest_round": "2021 venture equity funding round (private round; specific series not established from retrieved sources)",
+          "round_amount": "750 million",
+          "uncertainties": "The latest evidenced venture equity round found before the 2026-09-30 cutoff is Reuters' 2021 report of a $750 million private funding round. I did not retrieve an original company press release for that round, so investor detail rests on Reuters. Retrieved search results suggested some third-party databases list later dates or different classifications, but I did not rely on them because they were not verified from stronger public sources. For lifecycle timing, June 11, 2025 is the IPO pricing announcement date, June 12, 2025 is the expected start of trading, and June 13, 2025 was the expected closing date per the company press release; the Nasdaq page confirms public trading presence but does not itself show the initial listing date.",
+          "lead_investors": "Sequoia Capital Global Equities",
+          "round_currency": "USD",
+          "company_identity": "Chime Financial, Inc. is a consumer financial technology company at chime.com that offers app-based banking-related services through partner banks.",
+          "lifecycle_status": "public",
+          "lifecycle_event_date": "2025-06-12",
+          "round_announcement_date": "2021-08-13"
+        },
+        "reasoning": "I resolved chime.com to Chime Financial, Inc. from the company site and corroborated its business description with its SEC filing. For lifecycle, I used Chime's IPO pricing press release plus Nasdaq's CHYM listing page to conclude the company is public by the cutoff. For latest venture equity financing, I excluded the 2025 IPO because the task asks for the latest venture equity round, and the strongest retrieved evidence for that is Reuters' report of a $750 million private funding round on 2021-08-13 led by Sequoia Capital Global Equities. I noted date semantics around IPO pricing, trading, and closing.",
+        "stepsTaken": [
+          "Searched Google with query \"Chime chime.com latest funding round IPO status site:chime.com OR Reuters OR SEC\". The results are: \n {\"search_results\":[{\"title\":\"Chime prices IPO at $27 per share to raise $864 million\",\"link\":\"https://www.reuters.com/business/finance/chime-prices-us-ipo-27-per-share-raise-864-million-2025-06-11/\",\"snippet\":\"IPO values Chime at roughly $11.6 billion on fully diluted basis; Chime was valued at $25 billion during last major funding round; Chine ...\",\"date\":\"Jun 12, 2025\",\"position\":1},{\"title\":\"Digital banking startup Chime targets $11.2 billion ...\",\"link\":\"https://www.reuters.com/business/fina...",
+          "Used visitWebpage {\"url\":\"https://www.chime.com/\",\"question\":\"What company is this at chime.com and what does it sell or offer? Find a short description from the site.\"}. The results are: \n \"- Company: **Chime** / **Chime Financial, Inc.**\\n- Short description from site: **“Chime is a financial technology company, not a bank.”** / **“Banking services provided by The Bancorp Bank, N.A. or Stride Bank, N.A., Members FDIC.”**\\n- Mission: **“Our mission is to unite everyday people to unlock their financial progress.”**\\n- What it offers:\\n  - **“Fee-free banking”**\\n  - **Checking Account**\\n  - **High Yield Savings Account**\\n  - **Chime Debit Card**\\n  - **Build Credit” / “No credit ...",
+          "Used visitWebpage {\"url\":\"https://investors.chime.com/news-releases/news-release-details/chime-announces-pricing-initial-public-offering\",\"question\":\"What does this press release say about Chime's IPO pricing, gross proceeds, listing exchange/ticker, and pricing date?\"}. The results are: \n \"Press release: “Chime Announces Pricing of Initial Public Offering” — June 11, 2025. Source: https://www.businesswire.com/news/home/20250611283865/en/ ; PDF: https://investors.chime.com/node/6821/pdf\\n\\nRelevant text:\\n- “Chime®, a leading consumer financial technology company, today announced the pricing of its initial public offering of 32,000,000 shares of its Class A common stock at a public offering price of $27.00 per share.”\\n- “The offering consists of 25,900,765 shares of Class A commo...",
+          "Searched Google with query \"Chime latest funding round 2023 2024 Reuters\". The results are: \n {\"search_results\":[{\"title\":\"Fintech firm Chime valued at $25 bln after $750 mln funding\",\"link\":\"https://www.reuters.com/technology/fintech-firm-chime-valued-25-bln-after-750-mln-funding-2021-08-13/\",\"snippet\":\"Aug 13 (Reuters) - Chime Financial said on Friday it had raised $750 million in its latest funding round led by Sequoia Capital Global ...\",\"date\":\"Aug 13, 2021\",\"position\":1},{\"title\":\"Digital banking startup Chime reveals rise in revenue as it ...\",\"link\":\"https://www.reuters.com/busin...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/technology/fintech-firm-chime-valued-25-bln-after-750-mln-funding-2021-08-13/\",\"question\":\"What round amount did Chime raise in 2021, what valuation, and who led the round?\"}. The results are: \n \"Reuters, Aug. 13, 2021: “Chime Financial said on Friday it had raised $750 million in its latest funding round led by Sequoia Capital Global Equities, valuing the financial services startup at $25 billion.” Article: https://reuters.com/technology/fintech-firm-chime-valued-25-bln-after-750-mln-funding-2021-08-13\"",
+          "Searched Google with query \"SEC Chime IPO closing June 2025 8-K Nasdaq CHYM\". The results are: \n {\"search_results\":[{\"title\":\"Chime Financial S-1/A Filing\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1795586/000162828025025059/chimefinancialinc-sx1wq1da.htm\",\"snippet\":\"We have applied to list our Class A common stock on the Nasdaq Global Select Market under the symbol “CHYM”. See “Risk Factors” beginning on page 21 to read ...\",\"position\":1},{\"title\":\"Chime Announces Pricing of Initial Public Offering\",\"link\":\"https://investors.chime.com/news-releases/news-release-details/chime-announce...",
+          "Used visitWebpage {\"url\":\"https://www.sec.gov/Archives/edgar/data/1795586/000162828025025059/chimefinancialinc-sx1wq1da.htm\",\"question\":\"What does the SEC filing identify this company as, and what does it say about the planned Nasdaq listing symbol and business?\"}. The results are: \n \"- SEC filing / prospectus context: Chime Financial, Inc. is described as a financial technology company / consumer financial technology company.\\n- Planned listing context: the prospectus states that the company has applied to list its Class A common stock on the Nasdaq Global Select Market under the symbol “CHYM.”\\n- Business context from the filing: the company says it is building a consumer financial technology company / platform focused on helping everyday people make progress financially, ...",
+          "Searched Google with query \"Nasdaq CHYM Chime June 2025 listed public\". The results are: \n {\"search_results\":[{\"title\":\"Chime Financial, Inc. Class A Common Stock (CHYM)\",\"link\":\"https://www.nasdaq.com/market-activity/stocks/chym\",\"snippet\":\"... Chime Financial (NASDAQGS:CHYM) has been revised to $38.71 / share. This is an increase of 10.98% from the prior estimate of $34.88 dated August 25, 2026.\",\"position\":1},{\"title\":\"Chime pops 37% in Nasdaq debut after pricing IPO above ...\",\"link\":\"https://www.cnbc.com/2025/06/12/chime-opens-at-43-in-nasdaq-debut-after-pricing-ipo-above-range.h...",
+          "Used visitWebpage {\"url\":\"https://www.nasdaq.com/market-activity/stocks/chym\",\"question\":\"Does this Nasdaq page show Chime Financial, Inc. Class A Common Stock trading under ticker CHYM, confirming public listing?\"}. The results are: \n \"- Nasdaq page title/content: \\\"Chime Financial, Inc. Class A Common Stock (CHYM)\\\"\\n- Section shown under Market Activity > Stock: \\\"CHYMSummary...\\\"\\n- Relevant link: https://nasdaq.com/market-activity/stocks/chym\\n- The page includes trading/market data sections for the symbol, though values shown are unavailable: \\\"Key Data\\\", \\\"Bid Price and Ask Price\\\", \\\"Real-time Data is provided using Nasdaq Last Sale Data\\\", \\\"Powered by Nasdaq Basic\\\"\\n- Multiple places state: \\\"Data is currently not ..."
+        ]
+      }
+    }
+  ]
+}

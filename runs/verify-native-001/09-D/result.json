@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6hbyMTuwgznvES3V",
+  "workflow": {
+    "id": "wf_0tm6h66X7iVxzjahRjg",
+    "name": "Funding lifecycle evaluation D"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T12:57:34.349Z",
+  "duration": "1m 34s",
+  "dataCreditsUsed": 3.6,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6hbyygQzUJcb5SE3",
+      "nodeId": "wfn_0tm6h67uBuBJhxVb2Hm",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T12:57:34.358Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "lovable.dev",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Lovable"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6hbyashYh4T7V7GQ",
+      "nodeId": "wfn_0tm6h68JRj3sTcusv7e",
+      "nodeName": "Company research D",
+      "status": "completed",
+      "startedAt": "2026-09-30T12:57:34.375Z",
+      "completedAt": "2026-09-30T12:59:09.004Z",
+      "duration": "1m 34s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "lovable.dev",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Lovable"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Lovable at lovable.dev is an AI software/app-building platform.\",\"url\":\"https://lovable.dev/blog/lovable-acquires-sutro-to-make-software-easier-to-explain-and-easier-to-trust\",\"publication_date\":\"2026-09-18\",\"event_date\":\"2026-09-18\",\"excerpt\":\"On its site, Lovable describes itself with product language including 'Build apps by chatting with an AI' and 'Idea to app in seconds.' The post says Lovable wants people to trust the software they build to run their businesses.\"},{\"claim\":\"Lovable announced a $400 million Series C financing at a $13.3 billion valuation.\",\"url\":\"https://lovable.dev/blog/series-c\",\"publication_date\":\"2026-08-12\",\"event_date\":\"2026-08-12\",\"excerpt\":\"Lovable states: 'Lovable has raised $400 million in Series C funding' and says the round was at a '$13.3 billion valuation.'\"},{\"claim\":\"The Series C was led by Menlo Ventures and co-led by the Scaleup Europe Fund managed by EQT.\",\"url\":\"https://lovable.dev/blog/series-c\",\"publication_date\":\"2026-08-12\",\"event_date\":\"2026-08-12\",\"excerpt\":\"The company says the Series C was 'led by Menlo Ventures and co-led by the Scaleup Europe Fund, managed by EQT.'\"},{\"claim\":\"Independent reporting corroborated the August 2026 Series C details.\",\"url\":\"https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m/\",\"publication_date\":\"2026-08-12\",\"event_date\":\"2026-08-12\",\"excerpt\":\"TechCrunch reported Lovable 'raised $400 million in a Series C round at a $13.3 billion valuation' and that the round was led by Menlo Ventures and the Scaleup Europe Fund.\"},{\"claim\":\"As of 2026-09-18, Lovable was operating independently enough to acquire another startup, Sutro.\",\"url\":\"https://lovable.dev/blog/lovable-acquires-sutro-to-make-software-easier-to-explain-and-easier-to-trust\",\"publication_date\":\"2026-09-18\",\"event_date\":\"2026-09-18\",\"excerpt\":\"Lovable announced: 'Lovable has acquired Sutro.' The post says Sutro's founder and three engineers are joining Lovable.\"},{\"claim\":\"A freshness search up to the 2026-09-30 cutoff did not surface public evidence that Lovable itself had been acquired, had gone public, or had closed after the Series C.\",\"url\":\"https://www.google.com/search?q=Lovable%20lovable.dev%20IPO%20acquired%20by%202026%20September%202026\",\"publication_date\":\"unknown\",\"event_date\":\"2026-09-30\",\"excerpt\":\"Search results surfaced funding coverage and Lovable's acquisition of Sutro, but no clear public evidence of Lovable's own IPO, sale, or shutdown before the cutoff.\"}]",
+          "latest_round": "Series C",
+          "round_amount": "400000000",
+          "uncertainties": "Current lifecycle status is based on the latest public evidence reviewed: Lovable announced its own acquisition of Sutro on 2026-09-18, and verification searches up to the 2026-09-30 cutoff did not reveal a later IPO, acquisition of Lovable, or closure. However, I did not review corporate registry filings or paid databases directly, and one search result snippet referenced Lovable's acquisition of Sutro via PitchBook rather than an official filing. No separate legal closing date for the Series C or any acquisition involving Lovable itself was established.",
+          "lead_investors": "Menlo Ventures; Scaleup Europe Fund (managed by EQT)",
+          "round_currency": "USD",
+          "company_identity": "Lovable is an AI platform at lovable.dev that lets users build apps/software by chatting with an AI.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-08-12"
+        },
+        "reasoning": "I identified the exact company from its domain and company-site posts, then established the latest evidenced venture equity round from Lovable's August 12, 2026 Series C announcement, corroborated by TechCrunch. I separately checked lifecycle status and found newer evidence that on September 18, 2026 Lovable announced acquiring Sutro, which supports that Lovable remained an operating independent private company. Verification searches up to the 2026-09-30 cutoff did not surface evidence of Lovable itself being acquired, going public, or shutting down.",
+        "stepsTaken": [
+          "Searched Google with query \"Lovable lovable.dev funding round acquisition IPO site:lovable.dev OR site:techcrunch.com OR site:eu-startups.com OR site:crunchbase.com\". The results are: \n {\"search_results\":[{\"title\":\"Lovable raises $330M to power the age of the builder\",\"link\":\"https://lovable.dev/blog/series-b\",\"snippet\":\"Lovable has raised $330 million in Series B funding at a $6.6 billion valuation, led by CapitalG and Menlo Ventures' Anthology fund.\",\"date\":\"Dec 18, 2025\",\"position\":1},{\"title\":\"We just raised $400M in Series C funding to help people ...\",\"link\":\"https://lovable.dev/blog/series-c\",\"snippet\":\"Lovable has raised $400 million in Series C funding at a $13.3 billi...",
+          "Used visitWebpage {\"url\":\"https://lovable.dev/blog/series-c\",\"question\":\"What round, amount, date, lead investors, and company description are stated on this page?\"}. The results are: \n \"Source: We just raised $400M in Series C funding to help people run their businesses (https://lovable.dev/blog/series-c#top)\\nPublished: August 12, 2026\\nRound/amount: “Lovable has raised $400 million in Series C funding”\\nLead investors: “led by Menlo Ventures and co-led by the Scaleup Europe Fund, managed by EQT”\\nOther investors mentioned: Balderton Capital, Carmignac, Kaszek Ventures, LTS Growth, Tencent, World Innovation Lab, Regent; returning investors include Accel, Antler, CapitalG, DST...",
+          "Searched Google with query \"Lovable lovable.dev acquisition IPO closure 2026 funding latest\". The results are: \n {\"search_results\":[{\"title\":\"Lovable raises $330M to power the age of the builder\",\"link\":\"https://lovable.dev/blog/series-b\",\"snippet\":\"Lovable has raised $330 million in Series B funding at a $6.6 billion valuation, led by CapitalG and Menlo Ventures' Anthology fund.\",\"date\":\"Dec 18, 2025\",\"position\":1},{\"title\":\"Lovable Pre-IPO Shares: What Accredited Investors Should ...\",\"link\":\"https://www.hustlefund.vc/post/angel-squad-lovable-pre-ipo-shares-what-accredited-investors-should-know-in-2026\",...",
+          "Searched Google with query \"Lovable Sutro acquisition September 2026 source\". The results are: \n {\"search_results\":[{\"title\":\"Lovable acquires Sutro to make software easier to explain ...\",\"link\":\"https://lovable.dev/blog/lovable-acquires-sutro-to-make-software-easier-to-explain-and-easier-to-trust\",\"snippet\":\"Lovable has acquired Sutro. Founder Tomas Halgas and three Sutro engineers join Lovable to make how software works understandable to the ...\",\"position\":1},{\"title\":\"Lovable acquires Sutro, handing Slovak founder Halgaš a ...\",\"link\":\"https://dealroom.co/news/152768-lovable-acquires-s...",
+          "Used visitWebpage {\"url\":\"https://lovable.dev/blog/lovable-acquires-sutro-to-make-software-easier-to-explain-and-easier-to-trust\",\"question\":\"What does this page say about Lovable acquiring Sutro and what it indicates about Lovable's business?\"}. The results are: \n \"Source: “Lovable acquires Sutro to make software easier to explain and easier to trust” — https://lovable.dev/blog/lovable-acquires-sutro-to-make-software-easier-to-explain-and-easier-to-trust#top\\n\\nRelevant page content:\\n- Published September 18, 2026 in Announcements.\\n- Lovable says: “As more people build and ship software, understanding it has to be as effortless as building it... When anyone can put that software into production, that reliability and trust have to be as solid as the expe...",
+          "Searched Google with query \"Lovable lovable.dev IPO acquired by 2026 September 2026\". The results are: \n {\"search_results\":[{\"title\":\"Lovable Raises $400M at $13.3B Valuation\",\"link\":\"https://www.linkedin.com/posts/kennielsend_from-66b-to-133b-in-months-thats-not-activity-7493337616356999168-EUvL\",\"snippet\":\"Lovable confirmed a $400M Series C at a $13.3B valuation. The round was led by Menlo Ventures and the Scaleup Europe Fund. This follows a June ...\",\"date\":\"1 month ago\",\"position\":1},{\"title\":\"Swedish AI Coding Startup Lovable in Talks to Raise at ...\",\"link\":\"https://www.programming-helper.com...",
+          "Used visitWebpage {\"url\":\"https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m/\",\"question\":\"What does this article report about Lovable's August 2026 financing and company status?\"}. The results are: \n \"Article: “Lovable confirms new $13.3B valuation, raises another $400M” — TechCrunch, August 12, 2026. Link: https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m\\n\\nRelevant details:\\n- Lovable confirmed it raised $400 million in a Series C round at a $13.3 billion valuation.\\n- The round was led by Menlo Ventures and the Scaleup Europe Fund, with more than a dozen other investors participating.\\n- TechCrunch says this confirmed earlier reports that Lovable ..."
+        ]
+      }
+    }
+  ]
+}

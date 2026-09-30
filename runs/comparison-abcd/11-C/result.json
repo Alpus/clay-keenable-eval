@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6dhhzxJeVaBPTRi9",
+  "workflow": {
+    "id": "wf_0tm6d21AuFsz5iFGM8e",
+    "name": "Funding lifecycle evaluation C"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:34:29.544Z",
+  "duration": "1m 38s",
+  "dataCreditsUsed": 4.8,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6dhhsCn5yfJnY7z5",
+      "nodeId": "wfn_0tm6d21iRtaxx429Y8Q",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:34:29.549Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "elevenlabs.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "ElevenLabs"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6dhhPk52yfSiVhow",
+      "nodeId": "wfn_0tm6d4f6jZzvkGe2wpS",
+      "nodeName": "Company research C",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:34:29.566Z",
+      "completedAt": "2026-09-30T11:36:08.469Z",
+      "duration": "1m 38s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "elevenlabs.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "ElevenLabs"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"ElevenLabs is an AI audio company that builds voice, speech-to-text, dubbing, sound, music and conversational agent products for businesses, creators and developers.\",\"url\":\"https://elevenlabs.io/blog/series-d\",\"publication_date\":\"2026-02-04\",\"event_date\":\"2026-02-04\",\"excerpt\":\"Founded in 2022, ElevenLabs began with a human-like AI text-to-speech model and expanded into speech-to-text, sound effects, dubbing, music, and conversation, offering production-ready platforms for businesses, creators, and developers.\"},{\"claim\":\"ElevenLabs announced a $500 million Series D round on 2026-02-04 at an $11 billion valuation.\",\"url\":\"https://elevenlabs.io/blog/series-d\",\"publication_date\":\"2026-02-04\",\"event_date\":\"2026-02-04\",\"excerpt\":\"ElevenLabs has raised $500 million in a Series D funding round...\"},{\"claim\":\"Reuters independently reported that ElevenLabs raised $500 million in a latest funding round at an $11 billion valuation and identified it as a Series D led by Sequoia, with Lightspeed Venture Partners, Evantic Capital, Andreessen Horowitz and ICONIQ participating.\",\"url\":\"https://www.reuters.com/technology/elevenlabs-raises-500-million-11-billion-valuation-wsj-reports-2026-02-04/\",\"publication_date\":\"2026-02-04\",\"event_date\":\"2026-02-04\",\"excerpt\":\"ElevenLabs secured an $11 billion valuation after raising $500 million... The Series D funding drew new investors, including Lightspeed Venture Partners and Evantic Capital, along with existing backers Andreessen Horowitz and ICONIQ. The latest round was led by Sequoia Capital.\"},{\"claim\":\"A later company post did not announce a new round; it said new investors joined in the third close of the existing Series D and separately that a $100 million tender offer had closed.\",\"url\":\"https://elevenlabs.io/blog/500m-arr-and-new-investors\",\"publication_date\":\"2026-05-05\",\"event_date\":\"2026-05-05\",\"excerpt\":\"The investment represents the third close in our Series D fundraise... Alongside our Series D, we have also successfully closed a $100 million tender offer.\"},{\"claim\":\"As of July 2026, Reuters reported ElevenLabs was exploring a secondary share sale that would allow employees to sell stock at a proposed $22 billion valuation; this was a secondary transaction, not a new primary financing round or IPO.\",\"url\":\"https://www.reuters.com/technology/elevenlabs-explores-employee-stock-sale-22-billion-valuation-bloomberg-news-2026-07-02/\",\"publication_date\":\"2026-07-02\",\"event_date\":\"2026-07-02\",\"excerpt\":\"AI voice generation firm ElevenLabs is exploring a secondary share sale that would allow employees to sell stock. The proposed transaction could value the company at about $22 billion...\"}]",
+          "latest_round": "Series D",
+          "round_amount": "500 million",
+          "uncertainties": "The 2026-05-05 company post describes a 'third close' of the Series D and names new investors, but it does not disclose the amount of that close, so the latest evidenced venture equity round remains the Series D announced on 2026-02-04 rather than a separately quantified extension. Reuters on 2026-07-02 described only exploratory talks for a secondary share sale/tender at about a $22 billion valuation; that is not a venture equity round and completion by the 2026-09-30 cutoff is unverified from the sources reviewed. Lifecycle status is based on continued private fundraising/secondary-sale reporting and absence of evidenced acquisition, IPO, or closure in the sources reviewed, rather than on an explicit 'still private' statement from the company as of the cutoff.",
+          "lead_investors": "Sequoia Capital",
+          "round_currency": "USD",
+          "company_identity": "ElevenLabs is a private AI audio software company at elevenlabs.io that sells voice generation, dubbing, speech, and conversational AI tools via consumer, enterprise, and developer products.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-02-04"
+        },
+        "reasoning": "I resolved the entity at elevenlabs.io using the company’s own Series D announcement and checked independent reporting from Reuters. The strongest evidenced latest venture equity financing by the 2026-09-30 cutoff is the $500 million Series D announced 2026-02-04, led by Sequoia. A later company post on 2026-05-05 explicitly frames new investors as the third close of that same Series D and separately mentions a $100 million tender offer, so it does not supersede the Series D as a distinct latest round with a disclosed amount. For lifecycle, I found no evidence of a completed acquisition, IPO, or closure before the cutoff; later Reuters reporting concerns a proposed secondary employee share sale, supporting that the company remained privately held/independent rather than publicly listed or acquired.",
+        "stepsTaken": [
+          "Searched Google with query \"ElevenLabs elevenlabs.io funding acquisition IPO latest round site:elevenlabs.io OR site:techcrunch.com OR site:reuters.com\". The results are: \n {\"search_results\":[{\"title\":\"ElevenLabs raises $180M Series C to be the voice of ...\",\"link\":\"https://elevenlabs.io/blog/series-c\",\"snippet\":\"ElevenLabs has raised $180 million in a Series C funding round. This latest funding values ElevenLabs at $3.3 billion, brings total funding to ...\",\"date\":\"Jan 30, 2025\",\"position\":1},{\"title\":\"ElevenLabs raises $500M Series D at $11B valuation\",\"link\":\"https://elevenlabs.io/blog/series-d\",\"snippet\":\"4 February 2026 – ElevenLabs has raised $500 million in ...",
+          "Used visitWebpage {\"url\":\"https://elevenlabs.io/blog/series-d\",\"question\":\"Find the announced funding round name, amount raised, announcement date, lead investors, valuation, and any description of ElevenLabs business on this page.\"}. The results are: \n \"- Article: “ElevenLabs raises $500M Series D at $11B valuation”\\n- Published/announcement date: Feb 4, 2026 / 4 February 2026\\n- Funding round: Series D\\n- Amount raised: $500 million\\n- Valuation: $11 billion\\n- Lead investors: Sequoia Capital (led the round; Andrew Reed joining the board)\\n- Other investor context on page: Andreessen Horowitz (A16Z) “quadrupled down”, ICONIQ “tripled down”; new investors Lightspeed Venture Partners, Evantic Capital, BOND; existing investors BroadLight, NFDG, ...",
+          "Used visitWebpage {\"url\":\"https://elevenlabs.io/blog/500m-arr-and-new-investors\",\"question\":\"Does this page describe a new funding round, extension, tender offer, or just new investors? Extract date, amount if any, investor names, and whether it changes the latest venture equity round.\"}. The results are: \n \"Date: May 5, 2026 (last updated Sep 20, 2026)\\n\\nRelevant transaction details:\\n- “Welcoming new investors” to ElevenLabs.\\n- Described as “the third close in our Series D fundraise.”\\n- Also states: “Alongside our Series D, we have also successfully closed a $100 million tender offer – the second in less than a year.”\\n- No amount disclosed for the new investment / third close itself.\\n\\nNew investor names mentioned:\\n- BlackRock\\n- Wellington\\n- D.E. Shaw\\n- Schroders\\n- NVIDIA (via NVentures...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"ElevenLabs latest financing acquisition IPO closure ownership status after February 2026 through September 30 2026 independent reporting or company source\",\"site\":\"\",\"acquired_after\":\"2026-02-01\",\"acquired_before\":\"2026-09-30\",\"published_after\":\"2026-02-01\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":1200,\"max_results\":5,\"session_id\":\"elevenlabs-funding-lifecycle\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Is ElevenLabs a good company to work for in 2026? A verified read\\nURL: https://telosi.io/vr/elevenlabs\\nPublished: 2026-09-14\\nAcquired: 2026-09-19\\nSnippets:\\n(ElevenLabs), and closed a $500 million Series D at $11 billion in February (ElevenLabs).\\n[...]\\nElevenLabs 2026-02-04A $500 million Series D led by Sequoia Capital at an $11 billion valuation Sequoia’s Andrew Reed joined the board, Andreessen Horowitz and ICONIQ increased their stakes, Lightspe...",
+          "Searched Google with query \"Reuters ElevenLabs February 2026 Series D private company acquisition IPO\". The results are: \n {\"search_results\":[{\"title\":\"Insights: ElevenLabs Upcoming IPO & Private Stock Price\",\"link\":\"https://forgeglobal.com/insights/elevenlabs-upcoming-ipo-news/\",\"snippet\":\"In February 2026, ElevenLabs raised $500 million for its Series D. This more than tripled ElevenLabs' valuation to $11 billion, with the round ...\",\"date\":\"Jun 2, 2026\",\"position\":1},{\"title\":\"ElevenLabs secures $11 billion valuation in latest funding ...\",\"link\":\"https://www.reuters.com/technology/elevenlabs-raises-500-million-1...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/technology/elevenlabs-raises-500-million-11-billion-valuation-wsj-reports-2026-02-04/\",\"question\":\"Extract the funding round details, investor names, amount, valuation, and any statement about whether ElevenLabs is private or planning an IPO from this Reuters article.\"}. The results are: \n \"- Reuters article: “ElevenLabs secures $11 billion valuation in latest funding round” (Feb. 4, 2026).\\n- ElevenLabs “secured an $11 billion valuation after raising $500 million in its latest funding round.”\\n- “The latest round, led by Sequoia Capital, more than triples the company's $3.3 billion valuation from January 2025, when ElevenLabs raised $180 million.”\\n- “The Series D funding drew new investors, including Lightspeed Venture Partners and Evantic Capital, along with existing backers An...",
+          "Searched Google with query \"ElevenLabs July 2026 tender offer private secondary valuation Bloomberg no IPO\". The results are: \n {\"search_results\":[{\"title\":\"ElevenLabs in Talks for Tender Offer at $22 Billion Valuation\",\"link\":\"https://www.bloomberg.com/news/articles/2026-07-02/elevenlabs-in-talks-for-tender-offer-at-22-billion-valuation\",\"snippet\":\"The tender, which could double the company's valuation after a February funding round, is expected to occur by September, two of the people ...\",\"date\":\"Jul 3, 2026\",\"position\":1},{\"title\":\"ElevenLabs in Talks for Tender Offer at $22 Billion Valuation\",\"link\":\"https://www.lin...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/technology/elevenlabs-explores-employee-stock-sale-22-billion-valuation-bloomberg-news-2026-07-02/\",\"question\":\"Extract what Reuters says about the proposed July 2026 transaction, whether it is a secondary/tender offer, whether new capital goes to the company, and what this implies about ElevenLabs' public/private status.\"}. The results are: \n \"Reuters states: “AI voice generation firm ElevenLabs is exploring a secondary share sale that would allow employees to sell stock.” It adds: “The proposed transaction could value the company at about $22 billion and is expected to occur by September.” Reuters also says ElevenLabs “raised $500 million in a Series D round in February that valued the company at $11 billion.” Reuters describes ElevenLabs as a company that “raised” Series D funding and says it “declined to comment on the Bloomberg r..."
+        ]
+      }
+    }
+  ]
+}

@@ -135,6 +135,21 @@ After both studies finish, combine them offline:
 
 Comparison checks the input identities, cutoff, model, schema and original prompt. It copies the saved outputs into a portable snapshot, records source hashes and provenance, and calculates A/B, A/C and B/C paired outcomes when judgments exist. It makes no provider calls. Cost accounting separates reused A/B charges from new C charges. Use an empty comparison directory; subsequent `reproduce` calls recalculate that snapshot.
 
+## Native verification control D
+
+D repeats C's verification strategy using only native search and page reading. It uses the same companies, cutoff, GPT-5.4, schema and eight-call instruction. Its isolated state is `.local/verify-native/`.
+
+1. Run `./eval setup --strategy verify-native`.
+2. Open **Funding lifecycle evaluation D** in Builder. Verify Web search is on and Keenable, other connectors and private context are off. No Keenable connection is required.
+3. Run `./eval run --strategy verify-native --output runs/my-d --timeout 1200 --allow-credit-use`. Repeat the same command to resume.
+4. Review the saved answers with the existing scoring rules, then combine them offline:
+
+   ```sh
+   ./eval compare --baseline runs/my-ab --variant runs/my-c --control runs/my-d --output runs/my-abcd
+   ```
+
+Existing A/B/C answers are reused. The new D research consumes Clay credits; comparison and replay do not.
+
 ## Reproduce and grade
 
 ```sh

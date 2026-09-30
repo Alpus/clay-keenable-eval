@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6hdyMH3gDCnsiGEG",
+  "workflow": {
+    "id": "wf_0tm6h66X7iVxzjahRjg",
+    "name": "Funding lifecycle evaluation D"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T12:58:46.682Z",
+  "duration": "1m 41s",
+  "dataCreditsUsed": 11.2,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6hdyNZWMcYa4RkPx",
+      "nodeId": "wfn_0tm6h67uBuBJhxVb2Hm",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T12:58:46.694Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "lessn.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Lessn"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6hdyao6U5SwPDkVE",
+      "nodeId": "wfn_0tm6h68JRj3sTcusv7e",
+      "nodeName": "Company research D",
+      "status": "completed",
+      "startedAt": "2026-09-30T12:58:46.711Z",
+      "completedAt": "2026-09-30T13:00:27.708Z",
+      "duration": "1m 40s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "lessn.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Lessn"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"lessn.io is the website of Lessn, a business expense and payment management / rewards payments platform for businesses.\",\"url\":\"https://www.lessn.io/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"The site says Lessn is a business expense and payment management platform and also says it turns every business payment into rewards points automatically, including supplier payments, ATO obligations and payroll, with Xero and MYOB integrations.\"},{\"claim\":\"HospoPay Pty Limited rebranded in July 2023 and now trades as Lessn.\",\"url\":\"https://www.listcorp.com/asx/spx/spenda-limited/news/limepay-agreement-with-lessn-to-process-all-payments-volume-3070446.html\",\"publication_date\":\"2024-08-19\",\"event_date\":\"2023-07\",\"excerpt\":\"Listcorp-hosted announcement snippet states: 'HospoPay Pty Limited rebranded in July 2023 and now trades as Lessn.' This helps link the former legal/company name HospoPay with the current Lessn brand and domain.\"},{\"claim\":\"A venture investment in HospoPay was reported in 2024, with Ace Ventures described as making a seed investment.\",\"url\":\"https://www.afr.com/technology/frazis-unveils-venture-capital-fund-makes-first-investments-20240624-p5jo6r\",\"publication_date\":\"2024-07-01\",\"event_date\":\"2024-07-01\",\"excerpt\":\"Google search result snippet for the AFR article says Ace Ventures made a seed investment in start-up HospoPay and references HospoPay among the fund's first investments. The amount was not established from accessible source text.\"},{\"claim\":\"HospoPay Pty Limited entered external administration in December 2024.\",\"url\":\"https://www.insolvencynotices.com.au/notices/hospopay-pty-limited\",\"publication_date\":\"2024-12-09\",\"event_date\":\"2024-12-09\",\"excerpt\":\"Insolvency Notices archive lists 'HOSPOPAY PTY LIMITED — COMBINED NOTICE OF APPOINTMENT AND FIRST MEETING OF CREDITORS OF COMPANY UNDER ADMINISTRATION — 09 Dec 2024.'\"},{\"claim\":\"Creditors were later notified of a deemed special resolution to wind up HospoPay Pty Limited in January 2025.\",\"url\":\"https://www.insolvencynotices.com.au/notices/hospopay-pty-limited-2\",\"publication_date\":\"2025-01-22\",\"event_date\":\"2025-01-22\",\"excerpt\":\"Insolvency Notices archive lists 'HOSPOPAY PTY LIMITED — NOTICE OF DEEMED SPECIAL RESOLUTION TO WIND UP A COMPANY — 22 Jan 2025.'\"}]",
+          "latest_round": "seed",
+          "round_amount": "unknown",
+          "uncertainties": "Funding evidence is incomplete. The accessible evidence for the latest round comes from a Google-result snippet pointing to an AFR article describing an Ace Ventures seed investment in HospoPay; I could not read the full article text or confirm the amount, closing date, or whether there were any later equity rounds. A search result also showed a PitchBook snippet saying 'Last funded Apr 2022', but that conflicts with the 2024 seed-investment snippet and was not independently verified, so I did not rely on it. The rebrand linkage between HospoPay and Lessn is supported by a 2024 partnership announcement snippet, not by a corporate registry filing in the retrieved set. Lifecycle status is best read as closed based on administration followed by a deemed special resolution to wind up, but I did not retrieve a later deregistration record or liquidation completion notice.",
+          "lead_investors": "Ace Ventures",
+          "round_currency": "unknown",
+          "company_identity": "Lessn at lessn.io is an Australian business payments and expense-management platform that lets businesses pay suppliers, payroll and tax obligations by card while earning rewards points.",
+          "lifecycle_status": "closed",
+          "lifecycle_event_date": "2025-01-22",
+          "round_announcement_date": "2024-07-01"
+        },
+        "reasoning": "I resolved the domain via the company website, linked the Lessn brand to HospoPay using a dated third-party announcement snippet, found accessible public insolvency notices showing administration and a subsequent resolution to wind up, and found the strongest accessible public funding indication via a dated AFR search-result snippet describing an Ace Ventures seed investment in HospoPay. Because the funding source text was not fully accessible and amount/date details remain incomplete, I preserved those uncertainties rather than guessing.",
+        "stepsTaken": [
+          "Searched Google with query \"lessn.io funding Lessn company site acquisition IPO\". The results are: \n {\"message\":\"No data returned from search query\"}",
+          "Searched Google with query \"\"lessn.io\"\". The results are: \n {\"search_results\":[{\"title\":\"Lessn: Business Expense and Payment Management Platform\",\"link\":\"https://www.lessn.io/\",\"snippet\":\"Lessn is a business expense and payment management platform that helps companies control spending, manage payments, integrate accounting tools and earn ...\",\"position\":1},{\"title\":\"lessn.io\",\"link\":\"https://www.instagram.com/lessn.io/\",\"snippet\":\"lessn.io's profile picture. lessn.io. Lessn. 96 followers. 181 following. Lessn is an innovative payment automation platform ...",
+          "Used visitWebpage {\"url\":\"https://www.lessn.io/\",\"question\":\"What does Lessn say on its website about what the company does, and is there any mention of funding, acquisition, or public listing status?\"}. The results are: \n \"- Website: https://lessn.io\\n- Core description:\\n  - “Lessn turns every business payment into rewards points, automatically, on any credit card. Next business day settlement, every time.”\\n  - “Australia’s fastest rewards payment platform — that pays for itself”\\n  - “One platform for every business payment”\\n  - “Pay all business expenses with your credit card of choice, even if the supplier does not accept it.”\\n  - “Every supplier payment, ATO obligation, and payroll run earns you points — ...",
+          "Searched Google with query \"Lessn funding HospoPay Apr 2022\". The results are: \n {\"search_results\":[{\"title\":\"Limepay agreement with Lessn to process all Payments ...\",\"link\":\"https://www.listcorp.com/asx/spx/spenda-limited/news/limepay-agreement-with-lessn-to-process-all-payments-volume-3070446.html\",\"snippet\":\"Limepay Pty Ltd rebranded in 2022 and trades as April Solutions. ... HospoPay Pty Limited rebranded in July 2023 and now trades as Lessn.\",\"date\":\"Aug 19, 2024\",\"position\":1},{\"title\":\"Spenda and Limepay partners with Lessn to scale payment ...\",\"link\":\"https://www.f...",
+          "Searched Google with query \"site:startupdaily.net Lessn funding OR HospoPay funding\". The results are: \n {\"message\":\"No data returned from search query\"}",
+          "Searched Google with query \"\"HospoPay\" seed funding\". The results are: \n {\"search_results\":[{\"title\":\"Nine Aussie startups that raised $66.4 million this week\",\"link\":\"https://www.smartcompany.com.au/startupsmart/nine-aussie-startups-raised-66-4-million-this-week/\",\"snippet\":\"... HospoPay. According to AFR, the funding comes from Ace Ventures, a venture capital fund run by Michael Frazis. The tech investor also runs ...\",\"date\":\"Jul 5, 2024\",\"position\":1},{\"title\":\"Frazis unveils venture capital fund, makes first investments\",\"link\":\"https://www.afr.com/technology/fr...",
+          "Used visitWebpage {\"url\":\"https://www.smartcompany.com.au/startupsmart/nine-aussie-startups-raised-66-4-million-this-week/\",\"question\":\"Find the section about HospoPay or Lessn: what funding round or investment did it raise, amount, date, investors, and any mention of valuation or timing?\"}. The results are: \n \"Relevant mention only:\\n\\n- “Caresquare: $300,000” section: “The startup was founded in February by Joshua Suntup, who was previously studying law at the University of Sydney and later worked at software startup HospoPay.”\\n\\nNo funding round, investment amount, date, investors, valuation, or timing details for HospoPay or Lessn are provided on this page. Lessn is not mentioned.\"",
+          "Searched Google with query \"\"HospoPay Pty Limited\" administration funding Lessn\". The results are: \n {\"search_results\":[{\"title\":\"Business Started on Friday, 1 May 2020 - Bizly\",\"link\":\"https://bizly.com.au/every-business/2020/5/1\",\"snippet\":\"HOSPOPAY PTY LIMITED · HP TRANSPORT (VIC) PTY LTD · HUANG, RENEE · HUBBLE ... FORMATIVE FINANCIAL MANAGEMENT PTY. LIMITED. Closed 2020-05-01.\",\"date\":\"May 1, 2020\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=%22HospoPay%20Pty%20Limited%22%20administration%20funding%20Lessn&hl=...",
+          "Used visitWebpage {\"url\":\"https://www.insolvencynotices.com.au/notice_archive/notice_archive_8.html\",\"question\":\"Find whether there is a notice for HOSPOPAY PTY LIMITED, and if so what type of notice it is and the date.\"}. The results are: \n \"HOSPOPAY PTY LIMITED — COMBINED NOTICE OF APPOINTMENT AND FIRST MEETING OF CREDITORS OF COMPANY UNDER ADMINISTRATION — 09 Dec 2024 — https://www.insolvencynotices.com.au/notices/hospopay-pty-limited\\nHOSPOPAY PTY LIMITED — NOTICE OF SECOND MEETING OF CREDITORS OF COMPANY UNDER ADMINISTRATION — 15 Jan 2025 — https://www.insolvencynotices.com.au/notices/hospopay-pty-limited-1\\nHOSPOPAY PTY LIMITED — NOTICE OF DEEMED SPECIAL RESOLUTION TO WIND UP A COMPANY — 22 Jan 2025 — https://www.insolvencynot..."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6c5i8bngp8zUkgyi",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:05:42.663Z",
+  "duration": "2m 9s",
+  "dataCreditsUsed": 3.9,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6c5ibtmk7gRWykjd",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:05:42.720Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "cusp.ai",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "CuspAI"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6c5i3Pf64azfaUqy",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:05:42.771Z",
+      "completedAt": "2026-09-30T11:07:51.668Z",
+      "duration": "2m 8s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "cusp.ai",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "CuspAI"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"cusp.ai is CuspAI, a company building AI for materials discovery across semiconductors, energy, and climate.\",\"url\":\"https://cusp.ai/\",\"publication_date\":\"2026-06-15\",\"event_date\":\"2026-06-15\",\"excerpt\":\"CuspAI's mission is to unlock breakthrough materials needed for human progress, across semiconductors, energy and climate... founded in 2024... to build the AI system for materials discovery.\"},{\"claim\":\"CuspAI announced/was reported to have raised a $450 million Series B round on 2026-07-20.\",\"url\":\"https://www.reuters.com/business/uk-government-bezos-back-cuspais-450-million-round-startup-seeks-discover-new-2026-07-20/\",\"publication_date\":\"2026-07-20\",\"event_date\":\"2026-07-20\",\"excerpt\":\"Britain's CuspAI said on Monday it has raised $450 million... The Series B round was led by Kleiner Perkins and NEA.\"},{\"claim\":\"The Series B valued CuspAI at $2.6 billion and included additional investors such as the UK's Sovereign AI Venture Fund and Bezos Expeditions.\",\"url\":\"https://www.reuters.com/business/uk-government-bezos-back-cuspais-450-million-round-startup-seeks-discover-new-2026-07-20/\",\"publication_date\":\"2026-07-20\",\"event_date\":\"2026-07-20\",\"excerpt\":\"The Series B round was led by Kleiner Perkins and NEA and valued CuspAI at $2.6 billion... Joining the UK's Sovereign AI Venture Fund and Bezos Expeditions as new investors are Glade Brook Capital Partners, Lux Capital, AMD Ventures and the Netherlands' Invest-NL.\"},{\"claim\":\"As of the company website in 2026, CuspAI says it has raised over $650M and identifies itself as a private company incorporated in England and Wales.\",\"url\":\"https://cusp.ai/\",\"publication_date\":\"2026-06-15\",\"event_date\":\"2026-06-15\",\"excerpt\":\"CuspAI has raised over $650M from investors including Kleiner Perkins, NEA, Temasek, NVentures, Bezos Expeditions, Samsung, and Hyundai Motor Group... We are a private company incorporated in England and Wales under company number 15549537.\"}]",
+          "latest_round": "Series B",
+          "round_amount": "450 million",
+          "uncertainties": "The strongest detailed round evidence located within the call budget is Reuters on 2026-07-20; I did not independently retrieve the underlying company press release because a Business Wire page-read failed. The company site states only that it has raised 'over $650M' and lists investors, but does not itself specify round dates or lead investors in the retrieved text. No public evidence was found in the searches of an acquisition, completed sale, IPO, or closure before the 2026-09-30 cutoff, but absence of such evidence is not the same as a formal negative filing search.",
+          "lead_investors": "Kleiner Perkins; NEA",
+          "round_currency": "USD",
+          "company_identity": "CuspAI at cusp.ai is a UK AI materials-discovery company that uses AI to design and discover new materials for semiconductors, energy, and climate applications.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-07-20"
+        },
+        "reasoning": "I resolved the entity from cusp.ai, then checked recent financing and lifecycle. The company site identifies CuspAI and describes its business, while Reuters provides the clearest dated public evidence of the latest financing before the 2026-09-30 cutoff: a $450 million Series B announced on 2026-07-20, led by Kleiner Perkins and NEA. The company site also supports current private-company status by stating it is a private company incorporated in England and Wales and that it has raised over $650M. I found no evidenced acquisition, IPO, or closure before the cutoff, so the best-supported lifecycle status is private_independent.",
+        "stepsTaken": [
+          "Searched Google with query \"CuspAI cusp.ai funding acquisition IPO site:cusp.ai OR site:techcrunch.com OR site:businesswire.com\". The results are: \n {\"search_results\":[{\"title\":\"CuspAI raises $30M to create a GenAI-driven search ...\",\"link\":\"https://techcrunch.com/2024/06/18/cuspai-raises-30m-to-create-a-gen-ai-driven-search-engine-for-new-materials/\",\"snippet\":\"CuspAI, which has now secured $30 million in a seed round led by Hoxton Ventures, with significant participation from Basis Set Ventures and ...\",\"date\":\"Jun 18, 2024\",\"position\":1},{\"title\":\"CuspAI | AI-powered materials discovery\",\"link\":\"https://cusp.ai/\",\"snippet\":\"CuspAI's missi...",
+          "Searched Google with query \"CuspAI Series B 2026 site:cusp.ai OR site:businesswire.com OR site:globenewswire.com OR site:techcrunch.com\". The results are: \n {\"search_results\":[{\"title\":\"CuspAI | AI-powered materials discovery\",\"link\":\"https://cusp.ai/\",\"snippet\":\"CuspAI's mission is to unlock breakthrough materials needed for human progress, across semiconductors, energy and climate. Our AI powers the ...\",\"date\":\"Jun 15, 2026\",\"position\":1},{\"title\":\"CuspAI raises $30M to create a GenAI-driven search ...\",\"link\":\"https://techcrunch.com/2024/06/18/cuspai-raises-30m-to-create-a-gen-ai-driven-search-engine-for-new-materials/\",\"snippet\":\"CuspAI raises ...",
+          "Searched Google with query \"CuspAI acquisition IPO 2025 2026 site:news.google.com OR site:techcrunch.com OR site:businesswire.com OR site:reuters.com OR site:cusp.ai\". The results are: \n {\"search_results\":[{\"title\":\"European AI Startups Grab Record 55% of VC Capital as ...\",\"link\":\"https://www.businesswire.com/news/home/20260804090835/en/European-AI-Startups-Grab-Record-55-of-VC-Capital-as-H1-Funding-Reaches-%2423B\",\"snippet\":\"European AI startups raised a record-breaking $23 billion in the first half of 2026, a 130% year-over-year surge that captured 55% of all ...\",\"date\":\"Aug 4, 2026\",\"position\":1},{\"title\":\"NEA Names Philip Chopin Managing Director, Head ...\",\"link\":\"https:/...",
+          "Used visitWebpage {\"url\":\"https://cusp.ai/\",\"question\":\"What does CuspAI say on its website about what the company does, and are there any news or press release links mentioning funding, investors, acquisition, IPO, or ownership status?\"}. The results are: \n \"- Website says: “CuspAI was founded in 2024 by Dr. Chad Edwards and Prof. Max Welling to build the AI system for materials discovery.”\\n- Website says: “Through its AI Materials Foundry - a global network of over 45 partners, including NVIDIA and Meta - the company is accelerating breakthrough discoveries in semiconductors, energy, and climate.”\\n- Website says: “The next generation of semiconductors, energy storage and climate technologies are all being designed here.”\\n- Website describes its...",
+          "Used visitWebpage {\"url\":\"https://www.businesswire.com/news/home/20260716196996/en/CuspAI-Launches-AI-Materials-Foundry-a-Global-Network-to-Accelerate-Breakthrough-Discoveries\",\"question\":\"Does this CuspAI press release mention a funding round, amount raised, investors, valuation, or ownership status? Quote the relevant lines and any dates.\"}. The results are: \n {\"status\":\"ERROR\",\"message\":\"Error using the website scrape tool. The tool returned an error.\",\"errorDetails\":\"Unknown error in tool execution\",\"errorType\":\"ToolExecutionResponseError\"}",
+          "Searched Google with query \"CuspAI funding round investors Kleiner Perkins NEA Temasek NVentures Bezos Expeditions Samsung Hyundai 2026\". The results are: \n {\"search_results\":[{\"title\":\"Jeff Bezos and UK Government Invest $450 Million in CuspAI\",\"link\":\"https://www.nowosci.ai/en/article/jeff-bezos-uk-government-invest-cuspai\",\"snippet\":\"The round was co-led by Kleiner Perkins and NEA, with participation from Bezos Expeditions and the UK's Sovereign AI Venture Fund. CuspAI was founded in ...\",\"position\":1},{\"title\":\"Labour's AI fund to back £1.9bn start-up\",\"link\":\"https://www.aol.com/articles/labour-ai-fund-back-1-112722000.html\",\"snippet\":\"Its late...",
+          "Searched Google with query \"CuspAI Financial Times July 2026 funding round Kleiner Perkins NEA Bezos Expeditions\". The results are: \n {\"search_results\":[{\"title\":\"CuspAI Raises $450M Series B Led by Kleiner Perkins\",\"link\":\"https://quasa.io/media/cuspai-raises-450m-series-b-led-by-kleiner-perkins\",\"snippet\":\"CuspAI has raised $450 million in Series B funding, with Kleiner Perkins and NEA leading the round. The financing values the Cambridge-based AI startup at $2.6 billion, according to Reuters’ report on the financing.\",\"date\":\"Jul 24, 2026\",\"position\":1},{\"title\":\"$450M at $2.6B — CuspAI Materials Discovery\",\"link\":\"https://...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/business/uk-government-bezos-back-cuspais-450-million-round-startup-seeks-discover-new-2026-07-20/\",\"question\":\"What does this Reuters article say about CuspAI's latest funding round, including the round name, amount, announcement date, lead investors, other participants, valuation if mentioned, and whether the company remains independent?\"}. The results are: \n \"Reuters article: “UK government, Bezos back CuspAI's $450 million round as startup seeks to discover new materials” (announced/published July 20, 2026; article timestamp: July 20, 2026 6:03 AM CDT, updated July 20, 2026).\\n\\nRelevant funding details from the article:\\n- CuspAI “has raised $450 million”.\\n- “The Series B round was led by Kleiner Perkins and NEA and valued CuspAI at $2.6 billion.”\\n- Investors mentioned: “the UK government and Amazon founder Jeff Bezos' investment fund” and “Join..."
+        ]
+      }
+    }
+  ]
+}

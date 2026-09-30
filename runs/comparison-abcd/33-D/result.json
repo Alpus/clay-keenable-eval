@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6he6qc2vDox4vUV6",
+  "workflow": {
+    "id": "wf_0tm6h66X7iVxzjahRjg",
+    "name": "Funding lifecycle evaluation D"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T12:58:54.123Z",
+  "duration": "1m 57s",
+  "dataCreditsUsed": 4.4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6he6XTrMcd3YcjXQ",
+      "nodeId": "wfn_0tm6h67uBuBJhxVb2Hm",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T12:58:54.131Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "informatica.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Informatica"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6he66H6c9xadBKwx",
+      "nodeId": "wfn_0tm6h68JRj3sTcusv7e",
+      "nodeName": "Company research D",
+      "status": "completed",
+      "startedAt": "2026-09-30T12:58:54.147Z",
+      "completedAt": "2026-09-30T13:00:52.075Z",
+      "duration": "1m 57s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "informatica.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Informatica"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "Salesforce",
+          "evidence": "[{\"claim\":\"Informatica at informatica.com is an enterprise AI-powered cloud data management company offering an AI-ready data platform including data integration, governance, MDM, data quality, and catalog products.\",\"url\":\"https://www.informatica.com/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Homepage describes Informatica as 'Your one-stop, AI-powered data platform' / 'Intelligent Data Management Cloud' and lists Data Integration, AI & Data Governance, Master Data Management, Data Quality & Observability, and Enterprise Catalog.\"},{\"claim\":\"Informatica returned to the public markets in an IPO in October 2021 under ticker INFA.\",\"url\":\"https://www.prnewswire.com/news-releases/informatica-announces-pricing-of-initial-public-offering-301409412.html\",\"publication_date\":\"2021-10-26\",\"event_date\":\"2021-10-26\",\"excerpt\":\"Informatica announced pricing of 29,000,000 shares of Class A common stock at $29.00 per share; shares were expected to begin trading on the NYSE on October 27, 2021 under ticker INFA.\"},{\"claim\":\"The IPO's gross proceeds were $841,000,000.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1868778/000119312521309474/d169828d424b4.htm\",\"publication_date\":\"2021-10-26\",\"event_date\":\"2021-10-26\",\"excerpt\":\"SEC prospectus states: 'This is an initial public offering of shares of Class A common stock of Informatica Inc.' and shows 'Initial public offering price ... Total $841,000,000.'\"},{\"claim\":\"Salesforce announced a definitive agreement to acquire Informatica for approximately $8 billion in equity value, with $25 per share cash consideration, but the deal had not yet closed on May 27, 2025.\",\"url\":\"https://www.informatica.com/about-us/news/news-releases/2025/05/20250527-salesforce-signs-definitive-agreement-to-acquire-informatica.html\",\"publication_date\":\"2025-05-27\",\"event_date\":\"2025-05-27\",\"excerpt\":\"Press release says Salesforce and Informatica 'have entered into an agreement' for Salesforce to acquire Informatica for approximately $8 billion in equity value; holders would receive $25 in cash per share; transaction was 'expected to close early in Salesforce's fiscal year 2027' subject to conditions.\"},{\"claim\":\"Salesforce completed the acquisition of Informatica on November 18, 2025, making Informatica acquired rather than still public or merely pending acquisition.\",\"url\":\"https://www.informatica.com/about-us/news/news-releases/2025/11/20251118-salesforce-completes-acquisition-of-informatica.html\",\"publication_date\":\"2025-11-18\",\"event_date\":\"2025-11-18\",\"excerpt\":\"Press release headline and body state: 'Salesforce Completes Acquisition of Informatica' and 'today announced it has completed its acquisition of Informatica.'\"}]",
+          "latest_round": "unknown",
+          "round_amount": "unknown",
+          "uncertainties": "No publicly retrieved source in this search set established a latest venture equity round or extension for Informatica. The October 2021 IPO is evidenced, but IPOs are not venture equity rounds and therefore were not substituted for the requested field. Earlier private-equity ownership/buyout history may exist, but no primary public source establishing a qualifying latest venture equity round was retrieved within the call budget. Announcement date and closing date differ for the Salesforce transaction: announced 2025-05-27, completed 2025-11-18.",
+          "lead_investors": "unknown",
+          "round_currency": "unknown",
+          "company_identity": "Informatica is an enterprise AI-powered cloud data management software company that sells its Intelligent Data Management Cloud platform for data integration, governance, quality, catalog, and master data management.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2025-11-18",
+          "round_announcement_date": "unknown"
+        },
+        "reasoning": "Using the company site and transaction/IPO sources, Informatica is clearly identified at informatica.com as a data management software provider. Freshness check found that Salesforce first announced a definitive acquisition agreement on 2025-05-27 and then completed the acquisition on 2025-11-18, so as of 2026-09-30 Informatica should be classified as acquired, not public or pending acquisition. The latest evidenced financing event found is the 2021 IPO, but because the task specifically asks for the latest venture equity round or extension, and no qualifying venture equity round was verified from public primary sources retrieved here, the round fields are left unknown rather than incorrectly using the IPO or acquisition.",
+        "stepsTaken": [
+          "Searched Google with query \"Informatica informatica.com funding acquisition IPO latest round ownership status 2026\". The results are: \n {\"search_results\":[{\"title\":\"Salesforce Signs Definitive Agreement to Acquire Informatica\",\"link\":\"https://www.informatica.com/about-us/news/news-releases/2025/05/20250527-salesforce-signs-definitive-agreement-to-acquire-informatica.html\",\"snippet\":\"Under the terms of the agreement, holders of Informatica's Class A and Class B-1 common stock will receive $25 in cash per share. The planned ...\",\"date\":\"May 27, 2025\",\"position\":1},{\"title\":\"Informatica 2026 Company Profile: Valuation, Investors, ....",
+          "Searched Google with query \"site:investors.informatica.com Informatica IPO 2021 press release\". The results are: \n {\"message\":\"No data returned from search query\"}",
+          "Searched Google with query \"Informatica October 2021 IPO press release\". The results are: \n {\"search_results\":[{\"title\":\"Informatica Announces Pricing of Initial Public Offering\",\"link\":\"https://www.prnewswire.com/news-releases/informatica-announces-pricing-of-initial-public-offering-301409412.html\",\"snippet\":\"The shares are expected to begin trading on the New York Stock Exchange on October 27, 2021, under the ticker symbol \\\"INFA\\\" and the offering is ...\",\"date\":\"Oct 26, 2021\",\"position\":1},{\"title\":\"424B4\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1868778/000119312521309474/d...",
+          "Used visitWebpage {\"url\":\"https://www.informatica.com/\",\"question\":\"What does Informatica say it sells or provides on its homepage? Identify the business in one sentence.\"}. The results are: \n \"Homepage context indicating what Informatica sells/provides: “Power every agent with AI-ready data” and “The next era of data goes beyond management... Informatica grounds AI agents in trusted, governed data from across your enterprise.” It describes its offering as “Your one-stop, AI-powered data platform” / “Intelligent Data Management Cloud” / “AI-ready data platform.” Key products/services listed: Data Integration (“Connect and move data across every cloud, app, and database”), AI & Data Go...",
+          "Used visitWebpage {\"url\":\"https://www.informatica.com/about-us/news/news-releases/2025/11/20251118-salesforce-completes-acquisition-of-informatica.html\",\"question\":\"What does this press release say about Salesforce completing the acquisition of Informatica, and on what date?\"}. The results are: \n \"Press release title: “Salesforce Completes Acquisition of Informatica”\\n\\nRelevant text:\\n“SAN FRANCISCO, CA — November 18, 2025 — Salesforce (NYSE: CRM), the world’s #1 AI CRM, today announced it has completed its acquisition of Informatica, a leader in enterprise AI-powered cloud data management.”\\n\\nRelevant link:\\nInformatica from Salesforce: https://informatica.com/salesforce.html\"",
+          "Used visitWebpage {\"url\":\"https://www.informatica.com/about-us/news/news-releases/2025/05/20250527-salesforce-signs-definitive-agreement-to-acquire-informatica.html\",\"question\":\"What are the terms and date of the announced Salesforce acquisition of Informatica, and was it only a definitive agreement at that time?\"}. The results are: \n \"Source: “Salesforce Signs Definitive Agreement to Acquire Informatica” — https://informatica.com/about-us/news/news-releases.html\\n\\nRelevant text:\\n- “SAN FRANCISCO/REDWOOD CITY, CA — May 27, 2025 – Salesforce ... and Informatica ... have entered into an agreement for Salesforce to acquire Informatica for approximately $8 billion in equity value, net of Salesforce’s current investment in Informatica.”\\n- “Under the terms of the agreement, holders of Informatica’s Class A and Class B-1 common s...",
+          "Used visitWebpage {\"url\":\"https://www.sec.gov/Archives/edgar/data/1868778/000119312521309474/d169828d424b4.htm\",\"question\":\"What does the SEC prospectus say about Informatica's initial public offering price, expected trading date, and gross proceeds? Also identify the company.\"}. The results are: \n \"Company: Informatica Inc.\\n\\nRelevant prospectus data:\\n- “This is an initial public offering of shares of Class A common stock of Informatica Inc.”\\n- “The initial public offering price per share is $29.00.”\\n- Offering table: “Initial public offering price … Total $841,000,000” and “Proceeds, before expenses … Total $794,745,000.”\\n- “We estimate that the net proceeds to us from the sale of shares of our Class A common stock in this offering will be approximately $784.7 million … based upon t...",
+          "Searched Google with query \"Informatica 2026 acquired by Salesforce delisted status 2026\". The results are: \n {\"search_results\":[{\"title\":\"Salesforce Signs Definitive Agreement to Acquire Informatica\",\"link\":\"https://www.salesforce.com/news/press-releases/2025/05/27/salesforce-signs-definitive-agreement-to-acquire-informatica/\",\"snippet\":\"Salesforce to acquire Informatica for approximately $8 billion in equity value, net of Salesforce's current investment in Informatica.\",\"date\":\"May 27, 2025\",\"position\":1},{\"title\":\"Salesforce Completes Acquisition of Informatica\",\"link\":\"https://www.informatica.com/ab...",
+          "Used visitWebpage {\"url\":\"https://www.prnewswire.com/news-releases/informatica-announces-pricing-of-initial-public-offering-301409412.html\",\"question\":\"What date did Informatica announce pricing of its IPO, what was the amount raised, and when were shares expected to begin trading?\"}. The results are: \n \"PR Newswire release: “Informatica Announces Pricing of Initial Public Offering” (https://prnewswire.com/news/informatica), published Oct 26, 2021, 23:11 ET.\\n\\nRelevant excerpt: “Informatica ... today announced the pricing of its initial public offering of 29,000,000 shares of its Class A common stock at a public offering price of $29.00 per share. The shares are expected to begin trading on the New York Stock Exchange on October 27, 2021, under the ticker symbol ‘INFA’ ...”\""
+        ]
+      }
+    }
+  ]
+}

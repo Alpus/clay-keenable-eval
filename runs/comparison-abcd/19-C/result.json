@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6d63KoSxEizYFjpp",
+  "workflow": {
+    "id": "wf_0tm6d21AuFsz5iFGM8e",
+    "name": "Funding lifecycle evaluation C"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:27:39.198Z",
+  "duration": "1m 29s",
+  "dataCreditsUsed": 4.6,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6d63qRzjDVBG44UV",
+      "nodeId": "wfn_0tm6d21iRtaxx429Y8Q",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:27:39.206Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "rillet.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Rillet"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6d63S5XDuHm8fRVn",
+      "nodeId": "wfn_0tm6d4f6jZzvkGe2wpS",
+      "nodeName": "Company research C",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:27:39.223Z",
+      "completedAt": "2026-09-30T11:29:08.709Z",
+      "duration": "1m 29s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "rillet.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Rillet"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Rillet at rillet.com is an AI-native ERP/accounting platform for modern finance teams.\",\"url\":\"https://www.rillet.com/blog/rillet-raises-70m-series-b-from-andreessen-horowitz-and-iconiq\",\"publication_date\":\"2025-08-06\",\"event_date\":\"2025-08-06\",\"excerpt\":\"Rillet describes itself as the AI-native ERP platform built for modern finance teams, with products such as automated general ledger, accounts receivable, accounts payable, bank reconciliation and reporting.\"},{\"claim\":\"Rillet announced a $70 million Series B co-led by Andreessen Horowitz and ICONIQ on 2025-08-06.\",\"url\":\"https://www.rillet.com/blog/rillet-raises-70m-series-b-from-andreessen-horowitz-and-iconiq\",\"publication_date\":\"2025-08-06\",\"event_date\":\"2025-08-06\",\"excerpt\":\"The company page says: San Francisco, California - August 6, 2025, and announces a $70 million Series B co-led by Andreessen Horowitz and ICONIQ.\"},{\"claim\":\"By August 2026, Rillet had a newer round: a $100 million Series C led by ICONIQ at a $1 billion valuation.\",\"url\":\"https://finance.yahoo.com/technology/ai/articles/rillet-raises-100m-series-c-120000458.html\",\"publication_date\":\"2026-08-19\",\"event_date\":\"2026-08-19\",\"excerpt\":\"The article states that Rillet, the AI-native ERP platform for modern finance teams, today announced a $100 million Series C led by ICONIQ at a $1 billion valuation, with participation from Sequoia and Andreessen Horowitz among others.\"},{\"claim\":\"Independent reporting also described the latest round as a Series C and identified it as Rillet's announced $100 million raise in August 2026.\",\"url\":\"https://techcrunch.com/2026/08/21/how-ai-accounting-startup-rillet-raised-100m-and-became-a-unicorn-in-48-hours/\",\"publication_date\":\"2026-08-21\",\"event_date\":\"2026-08-20\",\"excerpt\":\"TechCrunch says that a day after Rillet announced a $100 million raise at a $1 billion valuation, ICONIQ's partner said leading the Series C was an easy call; the article describes Rillet as an AI-native accounting startup.\"},{\"claim\":\"As of the 2026 cutoff, recent evidence shows Rillet operating as a venture-backed startup/company rather than an acquired or public company, and a freshness check did not surface a completed acquisition, IPO, or closure before 2026-09-30.\",\"url\":\"https://techcrunch.com/2026/08/21/how-ai-accounting-startup-rillet-raised-100m-and-became-a-unicorn-in-48-hours/\",\"publication_date\":\"2026-08-21\",\"event_date\":\"2026-08-21\",\"excerpt\":\"TechCrunch repeatedly refers to Rillet as a startup/company raising a Series C; no acquisition or IPO is mentioned. A separate 2026-09-30 web search check surfaced funding summaries but no evidenced acquisition, IPO, or shutdown event before the cutoff.\"}]",
+          "latest_round": "Series C",
+          "round_amount": "100000000",
+          "uncertainties": "The strongest directly read primary-style source available in this run was a Yahoo Finance page syndicating a Business Wire announcement, which says 'today announced' on 2026-08-19. Google search results for Rillet's own blog show a Series C post dated 2026-08-17, while a later TechCrunch feature published 2026-08-21 says the company announced the raise the prior day. Because the underlying company post itself was not directly read here, the exact announcement date has minor source conflict; 2026-08-19 is used from the directly read syndication source, and the discrepancy is noted. Lifecycle status is inferred from the recent venture financing plus the absence of any evidenced acquisition, IPO, or closure in the freshness check; no separate regulatory filing or explicit 'still independent' statement was found in the collected sources.",
+          "lead_investors": "ICONIQ",
+          "round_currency": "USD",
+          "company_identity": "Rillet (rillet.com) sells an AI-native ERP and accounting platform for modern finance teams.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-08-19"
+        },
+        "reasoning": "I identified the company from its own site, confirmed an older 2025 Series B on the company blog, then found newer 2026 financing from independent coverage and a syndication of the announcement. The newest evidenced venture equity round before the 2026-09-30 cutoff is a $100M Series C led by ICONIQ. Recent sources describe Rillet as an operating startup/company raising private venture capital, and the required freshness check did not reveal a completed acquisition, IPO, or closure before the cutoff.",
+        "stepsTaken": [
+          "Searched Google with query \"Rillet rillet.com funding acquisition IPO site:rillet.com OR TechCrunch OR Crunchbase OR PitchBook\". The results are: \n {\"search_results\":[{\"title\":\"Rillet 2026 Company Profile: Valuation, Funding & Investors\",\"link\":\"https://pitchbook.com/profiles/company/503679-61\",\"snippet\":\"Information on valuation, funding, cap tables, investors, and executives for Rillet. an acquisition, IPO, or no exit event. Rillet has raised $208M.\",\"position\":1},{\"title\":\"Rillet Raises $70M Series B from a16z and ICONIQ\",\"link\":\"https://www.rillet.com/blog/rillet-raises-70m-series-b-from-andreessen-horowitz-and-iconiq\",\"snippet\":\"Rillet...",
+          "Used visitWebpage {\"url\":\"https://www.rillet.com/blog/rillet-raises-70m-series-b-from-andreessen-horowitz-and-iconiq\",\"question\":\"What company is Rillet, what does it sell, and what financing round, amount, date, and lead investors are announced on this page?\"}. The results are: \n \"Page: “Rillet raises $70M Series B from Andreessen Horowitz and ICONIQ” (press release) — https://rillet.com/blog-categories/press-release\\n\\nRelevant company/product context:\\n- “Rillet, the AI-native ERP (enterprise resource planning) platform built for modern finance teams”\\n- “Rillet raises $70M to replace 20th-century accounting software with AI-native ERP built by accountants”\\n- Product/site context lists what it sells: “Automated general ledger,” “Accounts receivable,” “Accounts payable...",
+          "Used visitWebpage {\"url\":\"https://techcrunch.com/2026/08/21/how-ai-accounting-startup-rillet-raised-100m-and-became-a-unicorn-in-48-hours/\",\"question\":\"What financing round did Rillet announce, for how much, on what date, and what company description and investor details are stated? Note whether it says current status such as private or IPO/acquisition.\"}. The results are: \n \"Source: https://techcrunch.com/2026/08/21/how-ai-accounting-startup-rillet-raised-100m-and-became-a-unicorn-in-48-hours\\n\\nRelevant context:\\n- Article date: August 21, 2026.\\n- “a day after his company announced a $100 million raise at a $1 billion valuation.”\\n- “A year of watching the team deliver on that made doubling down and leading the Series C an easy call.”\\n- Round: Series C.\\n- Amount: $100 million.\\n- Investors named for this round/article: Iconiq led the round; Sequoia’s lead inves...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Rillet rillet acquisition IPO closure latest funding independent company site news 2026\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":500,\"max_results\":5,\"session_id\":\"sess-rillet-20260930\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: What Funding Has Rillet Raised? Full Round History & Key Investors\\nURL: https://toflow.ai/spotlight/rillet\\nPublished: 2026-08-19\\nAcquired: 2026-09-10\\nSnippets:\\nTry for free How Much Funding Has Rillet Raised? Rillet has successfully raised funds through 4 rounds, with the latest being a Series C led by ICONIQ. With a total of $208.5M raised, the company continues to expand its operations. Series C$100MAugust 17, 2026 Lead InvestorsICONIQ Valuation a...",
+          "Searched Google with query \"site:rillet.com Rillet Series C 100M August 2026\". The results are: \n {\"search_results\":[{\"title\":\"Rillet Raises $100M Series C at $1B Valuation\",\"link\":\"https://www.rillet.com/blog/rillet-raises-100m-series-c-at-1b-valuation-to-build-accounting-superintelligence\",\"snippet\":\"Rillet has raised a $100 million Series C at a $1 billion valuation, led by ICONIQ with participation from Sequoia and Andreessen Horowitz.\",\"date\":\"Aug 17, 2026\",\"position\":1},{\"title\":\"Rillet Raises $100M Series C at $1B Valuation (2026)\",\"link\":\"https://www.rillet.com/blog/100m-series-c\",\"s...",
+          "Searched Google with query \"Rillet raises 100M Series C August 2026 ICONIQ announcement\". The results are: \n {\"search_results\":[{\"title\":\"Rillet Raises $100M Series C at $1B Valuation\",\"link\":\"https://www.rillet.com/blog/rillet-raises-100m-series-c-at-1b-valuation-to-build-accounting-superintelligence\",\"snippet\":\"Rillet has raised a $100 million Series C at a $1 billion valuation, led by ICONIQ with participation from Sequoia and Andreessen Horowitz.\",\"date\":\"Aug 17, 2026\",\"position\":1},{\"title\":\"Rillet raises $100M Series C at $1B valuation\",\"link\":\"https://techcrunch.com/2026/08/19/rillet-raises-100m...",
+          "Used visitWebpage {\"url\":\"https://finance.yahoo.com/technology/ai/articles/rillet-raises-100m-series-c-120000458.html\",\"question\":\"What financing round, amount, announcement date, lead investors, and company description are stated for Rillet? Does this page indicate any acquisition, IPO, or current ownership status?\"}. The results are: \n \"- Company: Rillet\\n- Announcement/article date: August 19, 2026\\n- Financing round: Series C\\n- Amount: $100 million\\n- Valuation stated: $1 billion\\n- Lead investor: ICONIQ\\n- Other participating investors: Sequoia, Andreessen Horowitz, Sequoia Global Equities, Bain Capital Ventures, Oak HC/FT, Battery Ventures, FirstMark, Scale Venture Partners, and Creandum\\n- Key financing sentence: “Rillet, the AI-native ERP (enterprise resource planning) platform for modern finance teams, today announced ...",
+          "Used keenable-public-evaluation-fetch_page_content {\"url\":\"https://www.businesswire.com/news/home/20260819978953/en/\",\"max_chars\":4000,\"live\":false,\"prompt\":\"Extract the announcement date, financing round, amount, lead investors, company description, and any statement indicating whether Rillet is private, public, or acquired.\",\"session_id\":\"sess-rillet-20260930\",\"output_format\":\"text\"}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Untitled\\nURL: https://www.businesswire.com/news/home/20260819978953/en/\\n\\nThe provided page content does not contain the announcement date, financing round, amount, lead investors, company description, or status (private, public, or acquired) for Rillet.\"}]}"
+        ]
+      }
+    }
+  ]
+}

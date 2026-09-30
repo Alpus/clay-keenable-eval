@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6d81Zd47WE8mZQEX",
+  "workflow": {
+    "id": "wf_0tm6d21AuFsz5iFGM8e",
+    "name": "Funding lifecycle evaluation C"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:28:49.755Z",
+  "duration": "2m 0s",
+  "dataCreditsUsed": 4.6,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6d81ASqUDK6DUcuS",
+      "nodeId": "wfn_0tm6d21iRtaxx429Y8Q",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:28:49.761Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "hashicorp.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "HashiCorp"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6d81ZmmRDr5eKDAF",
+      "nodeId": "wfn_0tm6d4f6jZzvkGe2wpS",
+      "nodeName": "Company research C",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:28:49.778Z",
+      "completedAt": "2026-09-30T11:30:50.697Z",
+      "duration": "2m 0s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "hashicorp.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "HashiCorp"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "IBM",
+          "evidence": "[{\"claim\":\"HashiCorp at hashicorp.com is a company focused on infrastructure and security lifecycle management / automation for hybrid and multi-cloud environments.\",\"url\":\"https://www.hashicorp.com/en/about/origin-story\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"HashiCorp describes 'Infrastructure Lifecycle Management' and 'Security Lifecycle Management' and says organizations need automation tools to deploy and connect applications across multiple cloud and on-premises environments.\"},{\"claim\":\"IBM completed its acquisition of HashiCorp on 2025-02-27, so by the cutoff the company was acquired rather than independent or merely under a pending deal.\",\"url\":\"https://newsroom.ibm.com/2025-02-27-ibm-completes-acquisition-of-hashicorp,-creates-comprehensive,-end-to-end-hybrid-cloud-platform\",\"publication_date\":\"2025-02-27\",\"event_date\":\"2025-02-27\",\"excerpt\":\"IBM today announced it has completed its acquisition of HashiCorp... The closing of IBM's acquisition of HashiCorp includes all of the issued and outstanding common shares of HashiCorp.\"},{\"claim\":\"The IBM-HashiCorp transaction was announced earlier on 2024-04-24 as a merger agreement, so the 2024 event was an announcement/agreement rather than completion.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1720671/000119312524114310/d804229d8k.htm\",\"publication_date\":\"2024-04-25\",\"event_date\":\"2024-04-24\",\"excerpt\":\"On April 24, 2024, HashiCorp entered into an Agreement and Plan of Merger with IBM... The Merger is expected to be completed by the end of 2024, subject to closing conditions.\"},{\"claim\":\"The latest evidenced venture equity round located before the cutoff is HashiCorp's Series E financing announced on 2020-03-16 for $175 million, led by Franklin Templeton.\",\"url\":\"https://www.globenewswire.com/news-release/2020/03/16/2001541/0/en/hashicorp-raises-175-million-in-series-e-funding-to-support-multi-cloud-transformation-for-global-enterprises.html\",\"publication_date\":\"2020-03-16\",\"event_date\":\"2020-03-16\",\"excerpt\":\"HashiCorp Raises $175 Million in Series E Funding... The round was led by Franklin Templeton and included participation from funds and accounts advised by T. Rowe Price Associates, Geodesic Capital, and existing investors.\"}]",
+          "latest_round": "Series E",
+          "round_amount": "175 million",
+          "uncertainties": "HashiCorp later became a public company before being acquired, but an IPO is not treated here as a venture equity round. Acquisition timing differs by announcement versus closing: the merger agreement was announced on 2024-04-24, while IBM said it completed the acquisition on 2025-02-27. In the required freshness check, Keenable surfaced tertiary pages summarizing HashiCorp as an IBM subsidiary and one page claiming a $180.0M Series E; that conflicts with the company-distributed 2020 press release stating $175 million, so the official press release was preferred. No stronger pre-cutoff evidence of a newer venture equity round than the 2020 Series E was found in the research performed.",
+          "lead_investors": "Franklin Templeton",
+          "round_currency": "USD",
+          "company_identity": "HashiCorp is a software company that sells infrastructure and security automation products for hybrid and multi-cloud environments.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2025-02-27",
+          "round_announcement_date": "2020-03-16"
+        },
+        "reasoning": "I resolved the entity from hashicorp.com, identified its product area from the company site, confirmed the IBM acquisition completion from IBM's official newsroom, distinguished that from the earlier 2024 merger announcement using HashiCorp's SEC filing, and identified the latest evidenced venture equity round from the 2020 financing press release. I also performed the required freshness check with the available Keenable search tool for newer ownership/funding developments before the 2026-09-30 cutoff.",
+        "stepsTaken": [
+          "Searched Google with query \"HashiCorp hashicorp.com IBM acquisition completed latest funding round Series E official press release\". The results are: \n {\"search_results\":[{\"title\":\"IBM Completes Acquisition of HashiCorp, Creates ...\",\"link\":\"https://newsroom.ibm.com/2025-02-27-ibm-completes-acquisition-of-hashicorp,-creates-comprehensive,-end-to-end-hybrid-cloud-platform\",\"snippet\":\"IBM announced it has completed its acquisition of HashiCorp, Comprehensive, End-to-End Hybrid Cloud Platform\",\"date\":\"Feb 27, 2025\",\"position\":1},{\"title\":\"HashiCorp officially joins the IBM family\",\"link\":\"https://www.hashicorp.com/en/blog/hashicorp-officially-join...",
+          "Searched Google with query \"HashiCorp Series E official press release financing 2020 HashiCorp\". The results are: \n {\"search_results\":[{\"title\":\"HashiCorp IPO Timeline and Financing Details\",\"link\":\"https://forgeglobal.com/hashicorp_ipo/\",\"snippet\":\"Per company press releases, HashiCorp last raised $175 million in March 2020 at a post-money valuation of $5.1 billion. HashiCorp has raised $349.76M to date.\",\"position\":1},{\"title\":\"HashiCorp Raises $175 Million in Series E Funding to\",\"link\":\"https://www.globenewswire.com/news-release/2020/03/16/2001541/0/en/hashicorp-raises-175-million-in-series-e-funding-to-s...",
+          "Used visitWebpage {\"url\":\"https://www.hashicorp.com/en/about/origin-story\",\"question\":\"Find what HashiCorp does and whether this page mentions its 2020 Series E funding, including amount and any date.\"}. The results are: \n \"Relevant page context:\\n- “The Infrastructure Cloud — Streamline infrastructure and security workflows into a unified operating model”\\n- “Accelerate delivery and innovation — Go to market faster with developer self-service, built-in guardrails, and automated workflows”\\n- “Optimize cloud operations and ROI — Improve cloud efficiency and reduce overhead with automated cost controls and real-time visibility”\\n- “Strengthen security and governance — Reduce risk with secure automation, governance,...",
+          "Used visitWebpage {\"url\":\"https://newsroom.ibm.com/2025-02-27-ibm-completes-acquisition-of-hashicorp,-creates-comprehensive,-end-to-end-hybrid-cloud-platform\",\"question\":\"Find the date IBM completed its acquisition of HashiCorp, what HashiCorp does, and whether the acquisition was completed or only announced.\"}. The results are: \n \"Source: IBM Newsroom press release, “IBM Completes Acquisition of HashiCorp, Creates Comprehensive, End-to-End Hybrid Cloud Platform” (Feb 27, 2025): https://newsroom.ibm.com/2025-02-27-ibm-completes-acquisition-of-hashicorp,-creates-comprehensive,-end-to-end-hybrid-cloud-platform#print\\n\\nRelevant text:\\n- “IBM today announced it has completed its acquisition of HashiCorp, whose products automate and secure the infrastructure that underpins hybrid cloud applications and generative AI.”\\n- Head...",
+          "Used visitWebpage {\"url\":\"https://www.globenewswire.com/news-release/2020/03/16/2001541/0/en/hashicorp-raises-175-million-in-series-e-funding-to-support-multi-cloud-transformation-for-global-enterprises.html\",\"question\":\"Find the amount, round type, announcement date, and lead investors in HashiCorp's financing described on this page.\"}. The results are: \n \"- Announcement date: March 16, 2020\\n- Amount: “raised $175 million”\\n- Round type: “Series E funding”\\n- Lead investors: “The round was led by Franklin Templeton”\\n- Additional investor context: “included participation from funds and accounts advised by T. Rowe Price Associates, Inc., Geodesic Capital, as well as existing HashiCorp investors GGV Capital, IVP, Mayfield, Redpoint Ventures, and True Ventures.”\\n- Source/title context: “HashiCorp Raises $175 Million in Series E Funding to Support ...",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"HashiCorp recent ownership status after IBM acquisition and any financing round after Series E, official or reputable sources before 2026-09-30\",\"site\":\"\",\"acquired_after\":\"\",\"acquired_before\":\"\",\"published_after\":\"2025-01-01\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":400,\"max_results\":5,\"session_id\":\"sess-hashicorp-20260930\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: HashiCorp\\nURL: https://grokipedia.com/page/HashiCorp\\nPublished: 2026-03-26\\nAcquired: 2026-09-10\\nSnippets:\\nproximity.[9][10] Current status as IBM subsidiary On February 27, 2025, IBM completed its acquisition of HashiCorp for $6.4 billion, establishing HashiCorp as a wholly-owned subsidiary within the company.[6][11][12] This transaction positioned HashiCorp to leverage IBM’s resources while maintaining its focus on infrastructure automation and sec...",
+          "Searched Google with query \"HashiCorp IBM acquisition announced April 24 2024 SEC 8-K HashiCorp\". The results are: \n {\"search_results\":[{\"title\":\"8-K\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1720671/000119312524114310/d804229d8k.htm\",\"snippet\":\"On April 24, 2024, IBM and HashiCorp issued a joint press release announcing their entry into the Merger Agreement. A copy of the press release is attached ...\",\"position\":1},{\"title\":\"IBM to Acquire HashiCorp, Inc. Creating a Comprehensive ...\",\"link\":\"https://newsroom.ibm.com/2024-04-24-IBM-to-Acquire-HashiCorp-Inc-Creating-a-Comprehensive-End-to-End-Hybrid-Cl...",
+          "Used visitWebpage {\"url\":\"https://www.sec.gov/Archives/edgar/data/1720671/000119312524114310/d804229d8k.htm\",\"question\":\"Find whether this filing states the acquisition was announced on April 24 2024 and whether it was only an agreement at that time.\"}. The results are: \n \"- Form 8-K filing date: April 25, 2024; Date of Report (Date of earliest event reported): April 24, 2024.\\n- Item 1.01: “On April 24, 2024, HashiCorp, Inc. (“HashiCorp”) entered into an Agreement and Plan of Merger (the “Merger Agreement”) with International Business Machines Corporation (“IBM”) and McCloud Merger Sub, Inc.... The Merger Agreement provides that, subject to the terms and conditions of the Merger Agreement, Merger Sub will merge with and into HashiCorp...”\\n- Item 1.01: “The Merg..."
+        ]
+      }
+    }
+  ]
+}

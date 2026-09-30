@@ -66,19 +66,19 @@ def cli(*args, payload=None, archive=None):
 def config():
     cfg = {'prompt': (ROOT / 'prompt.txt').read_text(), 'model': MODEL,
            'schema': read(ROOT / 'output-schema.json')}
-    if STRATEGY == 'verify':
-        cfg.update(strategy='verify', verification_prompt=(ROOT / 'prompt-verify.txt').read_text())
+    if STRATEGY in ('verify', 'verify-native'):
+        cfg.update(strategy=STRATEGY, verification_prompt=(ROOT / ('prompt-verify-native.txt' if STRATEGY == 'verify-native' else 'prompt-verify.txt')).read_text())
         if not cfg['verification_prompt'].startswith(cfg['prompt']):
             raise RuntimeError('Verification prompt must preserve the original prompt as its exact prefix.')
     return cfg
 
 
 def configured_arms(cfg):
-    return ('C',) if cfg.get('strategy') == 'verify' else ('A', 'B')
+    return {'verify': ('C',), 'verify-native': ('D',)}.get(cfg.get('strategy'), ('A', 'B'))
 
 
 def prompt_for(cfg, arm):
-    return cfg['verification_prompt'] if arm == 'C' else cfg['prompt']
+    return cfg['verification_prompt'] if arm in ('C', 'D') else cfg['prompt']
 
 
 def schema_clean(schema):
@@ -171,7 +171,7 @@ def refresh():
     state, cfg = state_read(), config()
     if state['configuration_hash'] != digest(cfg):
         raise RuntimeError('Setup files changed. Review the configuration before refreshing the binding.')
-    arm = 'C' if cfg.get('strategy') == 'verify' else 'B'
+    arm = {'verify': 'C', 'verify-native': 'D'}.get(cfg.get('strategy'), 'B')
     expected_prompt = prompt_for(cfg, arm)
     entry = state['arms'][arm]
     workflow = entry['workflow_id']
@@ -390,6 +390,7 @@ def write_results_table(output, manifest, summary):
     columns += [arm + ' Keenable calls' for arm in arms if arm != 'A']
     lines = ['# Per-company results', '',
              'A: native Clay search. B: native search plus optional Keenable. C: native search plus required Keenable verification. '
+             'D: native search plus required native verification. '
              'Scores count correct, supported target fields. A tie can include shared errors. '
              'Correlated fields are not independent errors. The entity probe is excluded from the main aggregate.', '',
              '| ' + ' | '.join(columns) + ' |', '| ' + ' | '.join(['---'] * len(columns)) + ' |']
@@ -409,7 +410,7 @@ def write_results_table(output, manifest, summary):
                 cells.append(str(calls) if calls is not None else 'unknown')
         lines.append('| ' + ' | '.join(cells) + ' |')
     if manifest.get('provenance'):
-        lines += ['', 'A/B answers and costs are reused from the baseline. Only C incurred new variant costs. '
+        lines += ['', 'A/B answers and costs are reused from the baseline. C and, when included, D have separately recorded study costs. '
                   'See [provenance and source hashes](manifest.json).']
     lines += ['', '[Judgments and source checks](judgments.json) · [Full summary](summary.json)', '']
     (output / 'results.md').write_text('\n'.join(lines))
@@ -503,10 +504,11 @@ def reproduce(output):
         summary['comparison_costs'] = {label: {metric: sum(
             summary['execution_by_arm'][arm][metric] for arm in arms)
             for metric in ('data_credits_observed', 'action_credits_observed')}
-            for label, arms in (('reused_baseline', ('A', 'B')), ('new_variant', ('C',)))}
+            for label, arms in (('reused_baseline', ('A', 'B')), ('new_variant', ('C',)), ('native_control', ('D',)))
+            if all(arm in summary['execution_by_arm'] for arm in arms)}
         summary['new_provider_calls_in_comparison'] = 0
-        summary['cost_scope'] = ('Top-level observed credits include historical A/B plus C exactly once. '
-                                 'Only comparison_costs.new_variant is additional C study spend; '
+        summary['cost_scope'] = ('Top-level observed credits include all included studies exactly once. '
+                                 'comparison_costs separates baseline, C and any D study spend; '
                                  'offline compare itself consumes no credits.')
     save(output / 'summary.json', summary)
     write_results_table(output, manifest, summary)
@@ -628,12 +630,17 @@ def run(args):
         print(f'Stopped after {stop_after_pairs} cases across configured arms. Resume the same output without --stop-after-pairs.')
 
 
-def compare(baseline, variant, output):
+def compare(baseline, variant, output, control=None):
     """Snapshot saved A/B and C results. This path never invokes Clay."""
     baseline, variant, output = (path.resolve() for path in (baseline, variant, output))
     if baseline == variant or output in (baseline, variant):
         raise RuntimeError('Comparison requires distinct baseline, variant and output directories.')
     sources = [(baseline, ('A', 'B')), (variant, ('C',))]
+    if control is not None:
+        control = control.resolve()
+        if control in (baseline, variant, output):
+            raise RuntimeError('Control directory must be distinct.')
+        sources.append((control, ('D',)))
     loaded = []
     for directory, arms in sources:
         manifest = read(directory / 'manifest.json')
@@ -664,7 +671,7 @@ def compare(baseline, variant, output):
         judge_summary(directory / 'judgments.json', manifest, rows)
         judgments = read(directory / 'judgments.json') if (directory / 'judgments.json').exists() else None
         loaded.append((manifest, payloads, judgments))
-    left, right = (item[0]['frozen'] for item in loaded)
+    left, right = (item[0]['frozen'] for item in loaded[:2])
     if left['cases'] != right['cases'] or left['limit'] != right['limit']:
         raise RuntimeError('Comparison rejected: different inputs or case limit.')
     a, c = left['config'], right['config']
@@ -673,12 +680,20 @@ def compare(baseline, variant, output):
         raise RuntimeError('Comparison rejected: different model, schema or original prompt.')
     if not c['verification_prompt'].startswith(a['prompt']):
         raise RuntimeError('Comparison rejected: C must preserve the original prompt prefix.')
+    if control is not None:
+        d = loaded[2][0]['frozen']
+        if (d['cases'] != left['cases'] or d['limit'] != left['limit'] or
+                d['config']['model'] != a['model'] or d['config']['prompt'] != a['prompt'] or
+                schema_clean(d['config']['schema']) != schema_clean(a['schema'])):
+            raise RuntimeError('Control inputs, model, schema or base prompt differ.')
+        if not d['config']['verification_prompt'].startswith(a['prompt']):
+            raise RuntimeError('Control must preserve the base prompt.')
     if output.exists() and any(output.iterdir()):
         raise RuntimeError('Comparison output must be empty; use reproduce to refresh an existing snapshot.')
     provenance = {}
     records, judgments, payloads = [], [], {}
     for (directory, arms), (manifest, results, grades) in zip(sources, loaded):
-        label = 'baseline' if arms == ('A', 'B') else 'variant'
+        label = {('A', 'B'): 'baseline', ('C',): 'variant', ('D',): 'control'}[arms]
         provenance[label] = {'directory': os.path.relpath(directory, output),
                              'manifest': os.path.relpath(directory / 'manifest.json', output),
                              'manifest_sha256': digest(manifest), 'frozen_hash': manifest['frozen_hash'],
@@ -699,6 +714,8 @@ def compare(baseline, variant, output):
     frozen = {'comparison': True, 'sources': {label: data['frozen_hash'] for label, data in provenance.items()},
               'cases': left['cases'], 'limit': left['limit'], 'model': a['model'],
               'schema': a['schema'], 'base_prompt': a['prompt'], 'verification_prompt': c['verification_prompt']}
+    if control is not None:
+        frozen['native_verification_prompt'] = loaded[2][0]['frozen']['config']['verification_prompt']
     manifest = {'created_at': now(), 'frozen': frozen, 'frozen_hash': digest(frozen),
                 'runs': records, 'provenance': provenance}
     save(output / 'manifest.json', manifest)
@@ -716,10 +733,10 @@ def main():
     for command in ('doctor', 'setup', 'bind-refresh'):
         command_parser = sub.add_parser(command)
         if command != 'doctor':
-            command_parser.add_argument('--strategy', choices=('optional', 'verify'), default='optional')
+            command_parser.add_argument('--strategy', choices=('optional', 'verify', 'verify-native'), default='optional')
     live = sub.add_parser('run', help='Run or resume the same --output directory; alternating paired submission order.')
-    live.add_argument('--strategy', choices=('optional', 'verify'), default='optional',
-                      help='optional runs A/B; verify runs only C in isolated setup state.')
+    live.add_argument('--strategy', choices=('optional', 'verify', 'verify-native'), default='optional',
+                      help='optional runs A/B; verify runs C; verify-native runs D. Each uses isolated setup state.')
     live.add_argument('--limit', type=int, default=None, help='Cases in the frozen plan; default all cases. A/B has two runs per case; C has one.')
     live.add_argument('--stop-after-pairs', type=int, help='Stop after the first N cases across configured arms; omit on resume to finish the same plan.')
     live.add_argument('--concurrency', type=int, default=30, help='Maximum in-flight runs, 1..30; recorded per invocation (default 30).')
@@ -734,6 +751,7 @@ def main():
     comparison = sub.add_parser('compare', help='Offline snapshot of original A/B and verification C results, with provenance.')
     for name in ('baseline', 'variant', 'output'):
         comparison.add_argument('--' + name, type=Path, required=True)
+    comparison.add_argument('--control', type=Path, help='Optional completed native verification D study.')
     args = parser.parse_args()
     if args.command == 'run' and args.timeout < 1:
         parser.error('--timeout must be positive.')
@@ -741,11 +759,11 @@ def main():
         reproduce(args.output)
         return
     if args.command == 'compare':
-        compare(args.baseline, args.variant, args.output)
+        compare(args.baseline, args.variant, args.output, args.control)
         return
     STRATEGY = getattr(args, 'strategy', 'optional')
-    if STRATEGY == 'verify':
-        LOCAL = LOCAL / 'verify'
+    if STRATEGY in ('verify', 'verify-native'):
+        LOCAL = LOCAL / STRATEGY
         STATE = LOCAL / 'state.json'
     LOCAL.mkdir(parents=True, exist_ok=True)
     with (LOCAL / 'runner.lock').open('w') as lock:

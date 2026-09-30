@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6ceanEZDCtYC3TuA",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:10:58.090Z",
+  "duration": "1m 46s",
+  "dataCreditsUsed": 4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6ceaB5ZjaVvYU2eV",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:10:58.096Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "informatica.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Informatica"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6ceaW9cvrpMFC4be",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:10:58.111Z",
+      "completedAt": "2026-09-30T11:12:44.383Z",
+      "duration": "1m 46s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "informatica.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Informatica"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "Salesforce",
+          "evidence": "[{\"claim\":\"Informatica at informatica.com sells enterprise AI-ready cloud data management software, including data integration, governance, MDM, data quality, catalog, and API/app integration.\",\"url\":\"https://www.informatica.com/\",\"publication_date\":\"unknown\",\"event_date\":\"2026-09-30\",\"excerpt\":\"The homepage says, 'Power every agent with AI-ready data' and describes 'comprehensive data management' with products including 'Data Integration,' 'AI & Data Governance,' 'Master Data Management (MDM),' 'Data Quality & Observability,' 'Enterprise Catalog,' and 'API & App Integration.'\"},{\"claim\":\"On 2025-05-27, Salesforce and Informatica announced a definitive agreement for Salesforce to acquire Informatica; this was an announcement, not yet a completed acquisition.\",\"url\":\"https://www.informatica.com/about-us/news/news-releases/2025/05/20250527-salesforce-signs-definitive-agreement-to-acquire-informatica.html\",\"publication_date\":\"2025-05-27\",\"event_date\":\"2025-05-27\",\"excerpt\":\"The release states Salesforce and Informatica 'have entered into an agreement for Salesforce to acquire Informatica' and that holders of Informatica common stock 'will receive $25 in cash per share.'\"},{\"claim\":\"Salesforce completed its acquisition of Informatica on 2025-11-18, so Informatica was acquired before the 2026-09-30 cutoff.\",\"url\":\"https://www.salesforce.com/news/press-releases/2025/11/18/salesforce-completes-acquisition-of-informatica/\",\"publication_date\":\"2025-11-18\",\"event_date\":\"2025-11-18\",\"excerpt\":\"Salesforce said it 'today announced it has completed its acquisition of Informatica.' The release adds, 'As part of Salesforce, Informatica will continue its mission...'\"},{\"claim\":\"Before its 2021 IPO, Informatica's ownership described in the S-1 centered on private-equity sponsors Permira and CPP Investments rather than a disclosed venture equity round.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1868778/000119312521289749/d169828ds1.htm\",\"publication_date\":\"2021-09-20\",\"event_date\":\"2021-09-20\",\"excerpt\":\"The S-1 defines the 'Sponsors' as 'Permira and CPP Investments' and explains the pre-IPO company structure around those sponsor owners, indicating sponsor/private-equity ownership rather than a clearly identified venture financing round in the retrieved evidence.\"}]",
+          "latest_round": "unknown",
+          "round_amount": "unknown",
+          "uncertainties": "I found strong primary evidence for Informatica's business identity and for the announced and completed Salesforce acquisition. I did not find primary evidence of a post-IPO or pre-acquisition venture equity round/extension for Informatica in the retrieved sources. Informatica's 2021 S-1 points to private-equity sponsor ownership (Permira and CPP Investments), but a take-private transaction or sponsor ownership is not the same as a venture equity round, and the IPO itself should not be substituted for a venture round. Therefore latest_round, round_amount, currency, lead investors, and round announcement date are left as unknown rather than guessed. The extracted acquisition-announcement text did not clearly provide the expected closing timing, so I do not state it as established here.",
+          "lead_investors": "unknown",
+          "round_currency": "unknown",
+          "company_identity": "Informatica provides AI-ready enterprise cloud data management software for integrating, governing, mastering, cataloging, and improving data.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2025-11-18",
+          "round_announcement_date": "unknown"
+        },
+        "reasoning": "Primary-source evidence shows the exact domain is Informatica's enterprise data management business. A company press release shows Salesforce and Informatica signed a definitive acquisition agreement on 2025-05-27, and a Salesforce press release shows the acquisition was completed on 2025-11-18. As of the 2026-09-30 cutoff, the company was therefore acquired by Salesforce. For funding, the retrieved public evidence did not establish a latest venture equity round or extension; the available primary filing instead points to private-equity sponsor ownership before the 2021 IPO, which is not interchangeable with a venture round.",
+        "stepsTaken": [
+          "Searched Google with query \"Informatica informatica.com investor relations acquisition 2025 2026 funding public company latest round\". The results are: \n {\"search_results\":[{\"title\":\"Informatica Reports Third Quarter 2025 Financial Results\",\"link\":\"https://www.informatica.com/about-us/news/news-releases/2025/11/20251105-informatica-reports-third-quarter-2025-financial-results.html\",\"snippet\":\"In a separate press release issued on May 27, 2025, Informatica announced that it had entered into a definitive agreement, or the Merger ...\",\"position\":1},{\"title\":\"Informatica from Salesforce\",\"link\":\"https://www.informatica.com/\",\"snippet\":\"Power every ag...",
+          "Used visitWebpage {\"url\":\"https://www.informatica.com/\",\"question\":\"Identify the business at this domain in one short sentence and quote text showing what products or services it sells.\"}. The results are: \n \"Business: Informatica from Salesforce — an AI-ready enterprise data management platform.\\n\\nQuoted product/service text:\\n- “Power every agent with AI-ready data”\\n- “Informatica grounds AI agents in trusted, governed data from across your enterprise”\\n- “Turn complex data into business value with comprehensive data management.”\\n- “Explore Informatica's AI-ready data platform”\\n- “Data Integration — Connect and move data across every cloud, app, and database — 300+ connectors, one pipeline.”\\n...",
+          "Used visitWebpage {\"url\":\"https://www.informatica.com/about-us/news/news-releases/2025/05/20250527-salesforce-signs-definitive-agreement-to-acquire-informatica.html\",\"question\":\"What does this press release say about the acquisition announcement date, whether it is only a definitive agreement or completed, the per-share price, and expected closing timing?\"}. The results are: \n \"no relevant data\"",
+          "Searched Google with query \"site:informatica.com 20250527 salesforce signs definitive agreement to acquire Informatica press release\". The results are: \n {\"search_results\":[{\"title\":\"Salesforce Signs Definitive Agreement to Acquire Informatica\",\"link\":\"https://www.informatica.com/about-us/news/news-releases/2025/05/20250527-salesforce-signs-definitive-agreement-to-acquire-informatica.html\",\"snippet\":\"Under the terms of the agreement, Salesforce will acquire all outstanding shares of common stock of Informatica that it does not already own.\",\"date\":\"May 27, 2025\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_s...",
+          "Used visitWebpage {\"url\":\"https://www.informatica.com/about-us/news/news-releases/2025/05/20250527-salesforce-signs-definitive-agreement-to-acquire-informatica.html\",\"question\":\"Find the key acquisition terms: is this an announced definitive agreement, what cash per share will stockholders receive, and when is the transaction expected to close?\"}. The results are: \n \"“Salesforce Signs Definitive Agreement to Acquire Informatica”\\n\\n“SAN FRANCISCO/REDWOOD CITY, CA — May 27, 2025 – Salesforce (NYSE: CRM), the world’s #1 AI CRM, and Informatica (NYSE: INFA), a leader in enterprise AI-powered cloud data management, have entered into an agreement for Salesforce to acquire Informatica for approximately $8 billion in equity value, net of Salesforce’s current investment in Informatica. Under the terms of the agreement, holders of Informatica’s Class A and Class B-1...",
+          "Searched Google with query \"Informatica S-1 2021 private equity investors Permira CPPIB latest funding round\". The results are: \n {\"search_results\":[{\"title\":\"S-1\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1868778/000119312521289749/d169828ds1.htm\",\"snippet\":\"Informatica Inc. The Permira Funds have made over 250 private equity investments in four key sectors: Technology, Consumer, Services and Healthcare.\",\"position\":1},{\"title\":\"CPP Investments to Exit Investment in Informatica through ...\",\"link\":\"https://www.cppinvestments.com/newsroom/cpp-investments-to-exit-investment-in-informatica-through-salesforce-transactio...",
+          "Used visitWebpage {\"url\":\"https://www.sec.gov/Archives/edgar/data/1868778/000119312521289749/d169828ds1.htm\",\"question\":\"What does this S-1 say about Informatica's ownership before the IPO and any recent private financing or sponsor ownership? Find wording that shows whether there was a venture equity round or mainly private equity ownership.\"}. The results are: \n \"Relevant context from the S-1:\\n\\n- Prospectus Summary: “Unless the context otherwise requires, the terms ‘Informatica,’ ‘the company,’ ‘we,’ ‘us’ and ‘our’ in this prospectus refer to (i) Ithacalux Topco S.C.A. and its consolidated subsidiaries for the periods prior to the completion of the Restructuring Transactions described in the section titled ‘Restructuring Transactions’ and (ii) Informatica Inc. and its consolidated subsidiaries for the periods subsequent to the completion of the Restru...",
+          "Searched Google with query \"Salesforce completes acquisition of Informatica Nov 2025 press release closing date\". The results are: \n {\"search_results\":[{\"title\":\"Salesforce Completes Acquisition of Informatica\",\"link\":\"https://www.salesforce.com/news/press-releases/2025/11/18/salesforce-completes-acquisition-of-informatica/\",\"snippet\":\"The company will host its Third Quarter Fiscal 2026 Results Conference Call on December 3, 2025 after market close, during which management will ...\",\"date\":\"Nov 18, 2025\",\"position\":1},{\"title\":\"Salesforce Signs Definitive Agreement to Acquire Informatica\",\"link\":\"https://www.informatica.com/a...",
+          "Used visitWebpage {\"url\":\"https://www.salesforce.com/news/press-releases/2025/11/18/salesforce-completes-acquisition-of-informatica/\",\"question\":\"What does this press release say about the completion date of Salesforce's acquisition of Informatica and Informatica's status after closing?\"}. The results are: \n \"- Press release title/date: **“Salesforce Completes Acquisition of Informatica” — November 18, 2025**\\n- Relevant text on completion date: **“Salesforce ... today announced it has completed its acquisition of Informatica...”**\\n- Relevant text on Informatica’s status after closing: **“As part of Salesforce, Informatica will continue its mission to help organizations connect, manage, and unify their AI-ready data. Informatica will also continue to support and integrate its AI-powered data manage..."
+        ]
+      }
+    }
+  ]
+}

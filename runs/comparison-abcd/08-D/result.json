@@ -1,0 +1,81 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6hbxGgr4CbXFiPrt",
+  "workflow": {
+    "id": "wf_0tm6h66X7iVxzjahRjg",
+    "name": "Funding lifecycle evaluation D"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T12:57:33.308Z",
+  "duration": "47s",
+  "dataCreditsUsed": 1.4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6hbxJQ2gF3tedKwe",
+      "nodeId": "wfn_0tm6h67uBuBJhxVb2Hm",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T12:57:33.314Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "freemanseattle.com",
+        "task_type": "entity_resolution",
+        "company_name": "Freeman Seattle"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6hbxu4pey5rFE4gU",
+      "nodeId": "wfn_0tm6h68JRj3sTcusv7e",
+      "nodeName": "Company research D",
+      "status": "completed",
+      "startedAt": "2026-09-30T12:57:33.329Z",
+      "completedAt": "2026-09-30T12:58:20.653Z",
+      "duration": "47s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "freemanseattle.com",
+        "task_type": "entity_resolution",
+        "company_name": "Freeman Seattle"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"freemanseattle.com is the website of Freeman, a Seattle-based apparel brand.\",\"url\":\"https://www.freemanseattle.com/pages/about\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"About Us says the company was founded in Seattle and lists its address as 85 S Atlantic St. #202, Seattle, WA 98134.\"},{\"claim\":\"Freeman was founded in 2011 by Scott and Brittany Freeman.\",\"url\":\"https://www.freemanseattle.com/pages/about\",\"publication_date\":\"unknown\",\"event_date\":\"2011\",\"excerpt\":\"The About Us page says Freeman was founded in 2011 in a small apartment in Seattle by Scott and Brittany Freeman.\"},{\"claim\":\"The company makes and sells raincoats and other clothing staples, including tops, bottoms, outerwear and accessories.\",\"url\":\"https://www.freemanseattle.com/pages/about\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"The About Us page says they started by creating their ideal raincoat and expanded into other wardrobe staples.\"},{\"claim\":\"The homepage shows current product categories including raincoats, tops, bottoms, accessories, outerwear, button downs, tees, sweaters and hoodies, pants, shorts, socks, hats, bags and gifts.\",\"url\":\"https://www.freemanseattle.com/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Homepage/navigation categories include Raincoats, Tops, Bottoms, Accessories, Outerwear, Button Downs, Tees, Sweaters & Hoodies, Pants, Shorts, Socks, Hats, Bags, Gifts.\"},{\"claim\":\"Freeman describes its products as handcrafted in Seattle.\",\"url\":\"https://www.freemanseattle.com/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"The homepage footer says: Handcrafted with love in Seattle, WA.\"}]",
+          "latest_round": "not_applicable",
+          "round_amount": "not_applicable",
+          "uncertainties": "Entity resolution is clear from the company website. Per task instructions, funding and lifecycle research are not applicable here, so those fields are marked not_applicable or unknown rather than inferred.",
+          "lead_investors": "not_applicable",
+          "round_currency": "not_applicable",
+          "company_identity": "Freeman is a Seattle apparel brand that sells handcrafted raincoats and other clothing staples such as shirts, pants, outerwear and accessories.",
+          "lifecycle_status": "unknown",
+          "lifecycle_event_date": "not_applicable",
+          "round_announcement_date": "not_applicable"
+        },
+        "reasoning": "I resolved the entity directly from the company’s own website. The About page identifies Freeman as a Seattle company founded by Scott and Brittany Freeman and describes its initial raincoat product and broader clothing line. The homepage corroborates the active product categories sold at the domain. Because this is an entity-resolution task, funding and lifecycle fields are not applicable and were not researched further.",
+        "stepsTaken": [
+          "Searched Google with query \"freemanseattle.com Freeman Seattle company site\". The results are: \n {\"search_results\":[{\"title\":\"Freeman Seattle | Hand-Made Raincoats, Shirts, and More\",\"link\":\"https://www.freemanseattle.com/?srsltid=AU7gw4VUbfcnDheNyuJSSabAkFU_id-ekd_VhAMGp_olKiCi2IT56haL\",\"snippet\":\"Freeman Seattle is a brand that creates handcrafted raincoats, shirts, and other staple items. 85 S Atlantic St. #202 Seattle, WA 98134 Phone: (206) 291-4820\",\"position\":1},{\"title\":\"Factory Showroom\",\"link\":\"https://www.freemanseattle.com/pages/showroom?srsltid=AU7gw4XiSNnZf6p6OlyaB96X22L3Twoi3q...",
+          "Used visitWebpage {\"url\":\"https://www.freemanseattle.com/pages/about\",\"question\":\"What does this company say it is, what products does it make or sell, and any identifying details like founders or location?\"}. The results are: \n \"Freeman Seattle / Freeman — https://freemanseattle.com\\n\\nAbout Us: https://freemanseattle.com/pages/about\\n- Founded in 2011 in a small apartment in Seattle by Scott and Brittany Freeman.\\n- They turned their kitchen table into a sewing station to create their ideal raincoat; the first product was the Freeman Raincoat.\\n- Says it began by creating high-quality goods in Seattle, focused on fabrics that perform with aesthetics that last.\\n- Expanded from the original raincoat into other wardrobe...",
+          "Used visitWebpage {\"url\":\"https://www.freemanseattle.com/\",\"question\":\"What does the homepage say the brand sells and how does it describe itself?\"}. The results are: \n \"Homepage context relevant to what the brand sells and how it describes itself:\\n- Brand/site: Freeman — https://freemanseattle.com\\n- Product categories shown on homepage/navigation: Raincoats, Tops, Bottoms, Accessories, Outerwear, Button Downs, Tees, Sweaters & Hoodies, Pants, Shorts, Socks, Hats, Bags, Gifts.\\n- Homepage featured products/collections: “The Cascadia Flannel,” “THE F.C. COAT,” “Raincoats,” “Studio Pants,” “Hoodies,” “A Utility Jacket For All Seasons,” “SASHIKO STUDIO COAT.”\\n-..."
+        ]
+      }
+    }
+  ]
+}

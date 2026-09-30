@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6hcw9CaGJRn9XxPw",
+  "workflow": {
+    "id": "wf_0tm6h66X7iVxzjahRjg",
+    "name": "Funding lifecycle evaluation D"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T12:58:08.377Z",
+  "duration": "2m 22s",
+  "dataCreditsUsed": 4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6hcwgrzArmhwt7qc",
+      "nodeId": "wfn_0tm6h67uBuBJhxVb2Hm",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T12:58:08.389Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "abridge.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Abridge"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6hcwMtFNvf6jPdiB",
+      "nodeId": "wfn_0tm6h68JRj3sTcusv7e",
+      "nodeName": "Company research D",
+      "status": "completed",
+      "startedAt": "2026-09-30T12:58:08.404Z",
+      "completedAt": "2026-09-30T13:00:30.807Z",
+      "duration": "2m 22s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "abridge.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Abridge"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Abridge at abridge.com is a healthcare AI company focused on clinical documentation and related care-intelligence workflows.\",\"url\":\"https://www.abridge.com/blog/series-e\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Abridge describes itself as 'Powering deeper understanding in healthcare' and lists AI-powered clinical documentation, revenue cycle, nursing documentation, clinical decision support, and care signals products.\"},{\"claim\":\"Abridge announced a $300 million Series E round led by Andreessen Horowitz (a16z).\",\"url\":\"https://www.abridge.com/blog/series-e\",\"publication_date\":\"2025-06-23\",\"event_date\":\"2025-06-23\",\"excerpt\":\"Google search result for the company post states: 'Abridge announces $300M series E investment led by a16z to pioneer a new paradigm of care intelligence at the point of conversation.'\"},{\"claim\":\"Reuters reported that Abridge raised $300 million at a $5.3 billion valuation in its latest funding round, led by Andreessen Horowitz with participation from Khosla Ventures.\",\"url\":\"https://www.reuters.com/business/healthcare-pharmaceuticals/healthcare-startup-abridge-raises-300-million-led-by-vc-firm-andreessen-horowitz-2025-06-24/\",\"publication_date\":\"2025-06-24\",\"event_date\":\"2025-06-24\",\"excerpt\":\"Reuters says Abridge 'has raised $300 million at a $5.3 billion valuation' and that the round 'was led by venture capital firm Andreessen Horowitz - also known as A16z - with participation from Khosla Ventures.'\"},{\"claim\":\"As of June 2026, publicly retrieved reporting showed a later Eli Lilly strategic investment, but not a new disclosed priced funding round.\",\"url\":\"https://www.fiercehealthcare.com/health-tech/abridge-expands-payment-research-workflows-build-out-full-scale-ai-clinical-assistant\",\"publication_date\":\"2026-06-11\",\"event_date\":\"2026-06-11\",\"excerpt\":\"Fierce Healthcare reports Eli Lilly made a 'strategic investment' in Abridge and says 'financial details of the investment were not disclosed'; the article does not present it as a new named financing round.\"},{\"claim\":\"As of September 11, 2026, Abridge remained private and had not completed an IPO.\",\"url\":\"http://www.nasdaqprivatemarket.com/company/abridge/\",\"publication_date\":\"2026-09-11\",\"event_date\":\"2026-09-11\",\"excerpt\":\"Nasdaq Private Market states: 'Abridge is a private company and has not had an IPO' and 'Abridge stock does not trade on public stock exchanges.'\"}]",
+          "latest_round": "Series E",
+          "round_amount": "300000000",
+          "uncertainties": "The company blog page was identified in search results as a June 23, 2025 Series E announcement, but the page-reader did not surface the financing details directly; the amount/lead are therefore corroborated by Reuters and the search snippet. Reuters' article was published June 24, 2025, so announcement and press-report dates differ by one day. A June 2026 Eli Lilly strategic investment was publicly reported without disclosed amount and was not clearly described as a new priced venture round; I therefore did not replace the Series E as the latest evidenced venture equity round. I did not find affirmative public evidence of an acquisition, IPO, or closure before the 2026-09-30 cutoff, but lack of such evidence is not proof none exists.",
+          "lead_investors": "Andreessen Horowitz (a16z)",
+          "round_currency": "USD",
+          "company_identity": "Abridge is a healthcare AI company that sells software for ambient clinical documentation and related care-intelligence workflows based on medical conversations.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2025-06-23"
+        },
+        "reasoning": "I resolved the company from abridge.com, identified the latest clearly evidenced venture equity round as the $300M Series E announced in June 2025, checked for newer lifecycle-changing events, and found only a later undisclosed strategic investment from Eli Lilly plus evidence that Abridge remained private with no IPO as of September 2026.",
+        "stepsTaken": [
+          "Searched Google with query \"Abridge abridge.com funding acquisition IPO latest round site:news OR site:abridge.com\". The results are: \n {\"search_results\":[{\"title\":\"Abridge Series E Announcement and More\",\"link\":\"https://www.abridge.com/blog/series-e\",\"snippet\":\"Abridge announces $300M series E investment led by a16z to pioneer a new paradigm of care intelligence at the point of conversation.\",\"date\":\"Jun 23, 2025\",\"position\":1},{\"title\":\"Eli Lilly invests in startup Abridge for clinical trial recruitment\",\"link\":\"https://endpoints.news/eli-lilly-invests-in-startup-abridge-for-clinical-trial-recruitment/\",\"snippet\":\"The startup,...",
+          "Used visitWebpage {\"url\":\"https://www.abridge.com/blog/series-e\",\"question\":\"What company is this at abridge.com, what does it do, what financing round and amount are announced, who led it, and on what date?\"}. The results are: \n \"Company: Abridge (abridge.com)\\n\\nWhat it does:\\n- “Powering deeper understanding in healthcare”\\n- “We believe we can help fix the system by anchoring on the conversation, the most human signal in healthcare.”\\n- Products/capabilities described on the page:\\n  - “Clinicians — AI-powered clinical documentation, built for accuracy”\\n  - “Revenue Cycle — Billable documentation, automated from the start”\\n  - “Nursing — Natural conversations, turned into draft documentation”\\n  - “Clinical Decisio...",
+          "Searched Google with query \"Abridge Series E 2025 led by a16z Reuters June 2025\". The results are: \n {\"search_results\":[{\"title\":\"Healthcare startup Abridge tops $5 billion valuation in ...\",\"link\":\"https://www.reuters.com/business/healthcare-pharmaceuticals/healthcare-startup-abridge-raises-300-million-led-by-vc-firm-andreessen-horowitz-2025-06-24/\",\"snippet\":\"Abridge, which uses artificial intelligence to build medical documents, has raised $300 million at a $5.3 billion valuation, it said on Tuesday.\",\"date\":\"Jun 24, 2025\",\"position\":1},{\"title\":\"Abridge Series E Announcement and More\",\"link...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/business/healthcare-pharmaceuticals/healthcare-startup-abridge-raises-300-million-led-by-vc-firm-andreessen-horowitz-2025-06-24/\",\"question\":\"What financing round did Abridge raise, how much, who led it, and what does Reuters say about the company and date?\"}. The results are: \n \"Reuters article dated June 24, 2025 says: Abridge “has raised $300 million at a $5.3 billion valuation.” It describes this as “the latest funding round” / “financing round,” and says it “was led by venture capital firm Andreessen Horowitz - also known as A16z - with participation from Khosla Ventures.” Reuters says Abridge is a “healthcare firm” / “healthcare startup” that “uses artificial intelligence to build medical documents,” and that it was “Founded in 2018, Pittsburgh-based Abridge autom...",
+          "Searched Google with query \"Abridge abridge.com acquisition IPO announced acquired public private 2026\". The results are: \n {\"search_results\":[{\"title\":\"Invest In Abridge Stock | Buy Pre-IPO Shares\",\"link\":\"https://equityzen.com/company/abridged1a4/\",\"snippet\":\"Accredited investors can buy pre-IPO stock in companies like Abridge through EquityZen funds. These investments are made available by existing Abridge ...\",\"position\":1},{\"title\":\"Sell or Invest in Abridge Stock | 182.91$ NPM Price\",\"link\":\"http://www.nasdaqprivatemarket.com/company/abridge/\",\"snippet\":\"Abridge is a private company and has not had an IPO. Ther...",
+          "Used visitWebpage {\"url\":\"http://www.nasdaqprivatemarket.com/company/abridge/\",\"question\":\"Does this page state whether Abridge is a private company or has had an IPO, and what date context is shown?\"}. The results are: \n \"- “Abridge IPO: Abridge is a private company and has not had an IPO. There is currently no Abridge IPO price.”\\n- “Abridge stock does not trade on public stock exchanges. Abridge stock is considered a private security...”\\n- “Abridge Stock Ticker Symbol: There is no ticker symbol for Abridge stock because it is a private company.”\\n- Date context shown on page:\\n  - “Updated Sep 11, 2026”\\n  - “Nasdaq Private Market estimates that Abridge price per share was $179.88 as of September 11, 2026.”\\n...",
+          "Searched Google with query \"Abridge 2026 acquisition IPO Reuters September 2026 healthcare AI\". The results are: \n {\"search_results\":[{\"title\":\"Healthcare startup Abridge raises $150 mln for AI model ...\",\"link\":\"https://www.reuters.com/markets/deals/healthcare-startup-abridge-raises-150-mln-ai-model-clinicians-2024-02-23/\",\"snippet\":\"Abridge, a startup building artificial intelligence-powered clinical documentation tools, has raised $150 million in a Series C round, ...\",\"date\":\"Feb 22, 2024\",\"position\":1},{\"title\":\"Buy And Sell Abridge Stock\",\"link\":\"https://forgeglobal.com/abridge_stock/\",\"snippet\":\"Howev...",
+          "Used visitWebpage {\"url\":\"https://www.fiercehealthcare.com/health-tech/abridge-expands-payment-research-workflows-build-out-full-scale-ai-clinical-assistant\",\"question\":\"Does this June 2026 article report a new financing round or only a strategic investment/partnership, and what does it say about Abridge's status and prior funding?\"}. The results are: \n \"- Article: “Abridge picks up strategic investment from Eli Lilly, expands payer, research workflows” (Fierce Healthcare, Heather Landi, Jun. 11, 2026).\\n- The article says: “pharma giant Eli Lilly and Company made a strategic investment in the company to ‘support evidence-based care and research.’ The financial details of the investment were not disclosed.”\\n- The article frames the announcement as a “strategic investment” and platform/partnership expansion; it does not state a new priced fundi..."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6hc0dgMdANgEWMoy",
+  "workflow": {
+    "id": "wf_0tm6h66X7iVxzjahRjg",
+    "name": "Funding lifecycle evaluation D"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T12:57:36.319Z",
+  "duration": "55s",
+  "dataCreditsUsed": 2.4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6hc0Me2mPMcJENbM",
+      "nodeId": "wfn_0tm6h67uBuBJhxVb2Hm",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T12:57:36.327Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "supabase.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Supabase"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6hc0esJEnFCFJbVy",
+      "nodeId": "wfn_0tm6h68JRj3sTcusv7e",
+      "nodeName": "Company research D",
+      "status": "completed",
+      "startedAt": "2026-09-30T12:57:36.341Z",
+      "completedAt": "2026-09-30T12:58:31.663Z",
+      "duration": "55s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "supabase.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Supabase"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Supabase at supabase.com is the company behind an open-source Firebase alternative built on Postgres.\",\"url\":\"https://www.google.com/search?q=site%3Asupabase.com%2Fcompany%20Supabase%20company%20open%20source%20Firebase%20alternative%20postgres&hl=en&gl=us\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Google result for Supabase's company page says: 'Supabase raises $80M Series B for its open source Firebase alternative' and references Postgres, identifying the business at the supplied domain.\"},{\"claim\":\"Supabase announced a $500M Series F financing led by GIC on 2026-06-04.\",\"url\":\"https://supabase.com/blog/supabase-series-f\",\"publication_date\":\"2026-06-04\",\"event_date\":\"2026-06-04\",\"excerpt\":\"Supabase blog: 'Supabase has raised a $500M Series F at a $10B pre-money valuation, led by GIC.'\"},{\"claim\":\"The same Series F included participation from existing investors, with Georgian and Salesforce Ventures joining as new investors.\",\"url\":\"https://supabase.com/blog/supabase-series-f\",\"publication_date\":\"2026-06-04\",\"event_date\":\"2026-06-04\",\"excerpt\":\"Company post says all existing investors joined the round; Stripe made a second investment, and Georgian and Salesforce Ventures joined as new investors.\"},{\"claim\":\"Independent reporting on 2026-06-05 described Supabase as a startup and reported no acquisition or IPO in connection with the Series F.\",\"url\":\"https://techcrunch.com/2026/06/05/supabase-doubles-valuation-to-10b-in-8-months/\",\"publication_date\":\"2026-06-05\",\"event_date\":\"2026-06-05\",\"excerpt\":\"TechCrunch wrote that 'Supabase ... has raised a $500 million Series F' and referred to it as 'The startup' and a 'newly minted decacorn'; the article mentions no acquisition or IPO.\"},{\"claim\":\"A freshness check search up to the 2026-09-30 cutoff did not surface a newer financing, acquisition completion, or IPO ahead of the June 2026 Series F evidence.\",\"url\":\"https://www.google.com/search?q=Supabase%202026%20acquisition%20IPO%20September%202026%20Series%20F%20GIC%20public%20site%3Anews.crunchbase.com%20OR%20site%3Atechcrunch.com%20OR%20site%3Asec.gov%20OR%20site%3Areuters.com&hl=en&gl=us\",\"publication_date\":\"2026-09-30\",\"event_date\":\"2026-09-30\",\"excerpt\":\"Verification search returned the June 2026 Series F coverage and no surfaced result indicating a later acquisition, IPO, closure, or newer round before the cutoff.\"}]",
+          "latest_round": "Series F",
+          "round_amount": "500000000",
+          "uncertainties": "Lifecycle status is inferred from the June 2026 Series F and the verification search rather than from a direct primary statement explicitly saying 'private and independent' as of 2026-09-30. The company-identity evidence comes from a Google snippet for the company page because the site itself was not revisited after reading another supabase.com page. No separate legal-closing date for the Series F was found; the company post supports the announcement date.",
+          "lead_investors": "GIC",
+          "round_currency": "USD",
+          "company_identity": "Supabase is a software company that sells an open-source Firebase alternative built on Postgres.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-06-04"
+        },
+        "reasoning": "I identified the business at supabase.com, found a primary company announcement for its latest financing, corroborated it with independent reporting, and performed a verification search for any newer acquisition, IPO, closure, or financing event before the 2026-09-30 cutoff. The strongest evidenced latest venture equity round is the 2026-06-04 Series F led by GIC for $500M. No contrary evidence of an exit or closure was found, so the company is best classified as private_independent with the noted uncertainty that this status is inferred from the latest financing plus freshness check rather than an explicit company statement.",
+        "stepsTaken": [
+          "Searched Google with query \"Supabase supabase.com funding acquisition IPO latest round site:techcrunch.com OR site:supabase.com OR site:crunchbase.com OR site:sec.gov\". The results are: \n {\"search_results\":[{\"title\":\"Supabase Series F\",\"link\":\"https://supabase.com/blog/supabase-series-f\",\"snippet\":\"Supabase has raised a $500M Series F at a $10B pre-money valuation, led by GIC. All existing investors joined the round, Salesforce Ventures ...\",\"date\":\"Jun 4, 2026\",\"position\":1},{\"title\":\"Supabase Series E\",\"link\":\"https://supabase.com/blog/supabase-series-e\",\"snippet\":\"Supabase has raised a Series E from insiders, led by Accel and Peak XV. We raised $100M at a $5B pre-money valuati...",
+          "Used visitWebpage {\"url\":\"https://supabase.com/blog/supabase-series-f\",\"question\":\"Find the announcement date, round type, amount raised, valuation if stated, and lead investors for this financing announcement.\"}. The results are: \n \"Announcement date: 4 Jun 2026\\nRound type: Series F\\nAmount raised: $500M\\nValuation: $10B pre-money valuation\\nLead investors: led by GIC\\nOther investor context: All existing investors joined the round, Stripe made a second investment, Georgian and Salesforce Ventures joined as new investors.\\nSource: https://supabase.com/blog/supabase-series-f\"",
+          "Searched Google with query \"Supabase acquisition IPO public private independent 2026 site:supabase.com OR site:techcrunch.com OR site:sec.gov OR site:news.crunchbase.com\". The results are: \n {\"search_results\":[{\"title\":\"Destiny Tech100 Inc.\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1843974/000157587226000354/dxyz101_n2.htm\",\"snippet\":\"We may purchase units or shares of Private Funds or acquire shares in SPVs to gain economic exposure to private companies in the technology sector.\",\"position\":1},{\"title\":\"Delhivery hits all-time low, market cap falls below 2021 ...\",\"link\":\"https://techcrunch.com/2022/11/23/delhivery-hits-all-time-low-market-cap-falls-below-2021-private-valuat...",
+          "Used visitWebpage {\"url\":\"https://techcrunch.com/2026/06/05/supabase-doubles-valuation-to-10b-in-8-months/\",\"question\":\"What does this article say about Supabase's June 2026 financing, prior rounds, and whether the company is a startup/private company or involved in any acquisition/IPO?\"}. The results are: \n \"Source: https://techcrunch.com/2026/06/05/supabase-doubles-valuation-to-10b-in-8-months\\n\\nRelevant article data:\\n- “Supabase ... has raised a $500 million Series F at a $10 billion pre-money valuation ... That’s about $10.5 billion after the investment.”\\n- Date: June 5, 2026.\\n- “This new influx of cash follows a $100 million round at a $5 billion valuation in October.”\\n- “And that raise came just months after closing $200 million at $2 billion.”\\n- The article explicitly refers to Supabase...",
+          "Searched Google with query \"Supabase 2026 acquisition IPO September 2026 Series F GIC public site:news.crunchbase.com OR site:techcrunch.com OR site:sec.gov OR site:reuters.com\". The results are: \n {\"search_results\":[{\"title\":\"Supabase doubles valuation to $10B in 8 months\",\"link\":\"https://techcrunch.com/2026/06/05/supabase-doubles-valuation-to-10b-in-8-months/\",\"snippet\":\"Supabase, the open source database of choice for the vibe-coding world, has raised a $500 million Series F at a $10 billion pre-money valuation ...\",\"date\":\"Jun 5, 2026\",\"position\":1},{\"title\":\"Crunchbase Unicorn Company List\",\"link\":\"https://news.crunchbase.com/unicorn-company-list/\",\"snippet\":\"The Exited Unicorn List i...",
+          "Searched Google with query \"site:supabase.com/company Supabase company open source Firebase alternative postgres\". The results are: \n {\"search_results\":[{\"title\":\"One of the world's fastest-growing open source communities\",\"link\":\"https://supabase.com/company\",\"snippet\":\"Supabase raises $80M Series B for its open source Firebase alternative. Supabase is all in on Postgres PODCAST … is fully remote, with a strong affinity for ...\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3Asupabase.com%2Fcompany%20Supabase%20company%20open%20source%20Fireba..."
+        ]
+      }
+    }
+  ]
+}

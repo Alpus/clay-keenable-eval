@@ -1,0 +1,84 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6bgtZA4G3G7fgZwp",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:50:53.872Z",
+  "duration": "1m 22s",
+  "dataCreditsUsed": 2.7,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6bgtVWEw4d8T7RNx",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:50:53.880Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "elevenlabs.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "ElevenLabs"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6bgtCnatb2r33naz",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:50:53.897Z",
+      "completedAt": "2026-09-30T10:52:16.642Z",
+      "duration": "1m 22s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "elevenlabs.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "ElevenLabs"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"ElevenLabs at elevenlabs.io is an AI research and product company offering three platforms: ElevenAgents for voice/chat agents, ElevenCreative for generating and editing speech, music, image and video, and ElevenAPI for developer access to AI audio models.\",\"url\":\"https://elevenlabs.io/about\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"The About page says ElevenLabs is 'an AI research and product company' and 'We build three platforms' including ElevenAgents, ElevenCreative, and ElevenAPI.\"},{\"claim\":\"On 2025-01-30, ElevenLabs announced a $180 million Series C co-led by a16z and ICONIQ Growth, valuing the company at $3.3 billion.\",\"url\":\"https://elevenlabs.io/blog/series-c\",\"publication_date\":\"2025-01-30\",\"event_date\":\"2025-01-30\",\"excerpt\":\"The company blog states: 'ElevenLabs has raised $180 million in a Series C funding round.' It says the round was 'co-led by a16z and ICONIQ Growth' and that 'This latest funding values ElevenLabs at $3.3 billion.'\"},{\"claim\":\"Reuters reported on 2026-02-04 that ElevenLabs raised $500 million in a Series D round led by Sequoia Capital, at an $11 billion valuation. This is the latest evidenced venture equity round found by the cutoff.\",\"url\":\"https://www.reuters.com/technology/elevenlabs-raises-500-million-11-billion-valuation-wsj-reports-2026-02-04/\",\"publication_date\":\"2026-02-04\",\"event_date\":\"2026-02-04\",\"excerpt\":\"Reuters says ElevenLabs 'had secured an $11 billion valuation after raising $500 million in its latest funding round.' It identifies 'The Series D funding' as 'led by Sequoia Capital' and says new investors included Lightspeed Venture Partners and Evantic Capital, with existing backers Andreessen Horowitz and ICONIQ.\"},{\"claim\":\"As of the latest evidenced event on 2026-02-04, ElevenLabs was still operating as a privately funded independent company rather than a public company or completed acquisition target.\",\"url\":\"https://www.reuters.com/technology/elevenlabs-raises-500-million-11-billion-valuation-wsj-reports-2026-02-04/\",\"publication_date\":\"2026-02-04\",\"event_date\":\"2026-02-04\",\"excerpt\":\"Reuters describes ElevenLabs as raising a 'Series D' funding round. A Series D venture financing indicates private ownership; the retrieved evidence did not show an IPO, completed acquisition, or closure by the cutoff.\"}]",
+          "latest_round": "Series D",
+          "round_amount": "500 million",
+          "uncertainties": "The latest-round evidence comes from Reuters rather than a primary ElevenLabs announcement in the retrieved sources. Reuters states the amount, round type, and investors, but the legal closing date is not established; 2026-02-04 is treated as the announcement/report date. No post-2026-02-04 primary source was retrieved to independently confirm whether a later financing, IPO filing, acquisition announcement, or closing occurred before 2026-09-30, so lifecycle status is based on the latest evidenced financing and absence of contrary evidence in the retrieved sources.",
+          "lead_investors": "Sequoia Capital",
+          "round_currency": "USD",
+          "company_identity": "ElevenLabs is an AI research and product company that sells voice and chat agents, creator tools for generating/editing multimedia, and APIs for AI audio models.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-02-04"
+        },
+        "reasoning": "I resolved the company using the exact domain elevenlabs.io via its About page, then checked official funding evidence and searched for newer events. The official company blog establishes the 2025 Series C, while a newer Reuters report dated 2026-02-04 provides evidence of a subsequent Series D round, which is therefore the latest evidenced venture equity financing before the 2026-09-30 cutoff. The retrieved evidence does not show an IPO, completed acquisition, or closure; the latest evidenced event is still a private venture round, so private_independent is the best-supported lifecycle status.",
+        "stepsTaken": [
+          "Searched Google with query \"site:elevenlabs.io ElevenLabs funding series C acquisition IPO 2024 2025\". The results are: \n {\"search_results\":[{\"title\":\"ElevenLabs raises $180M Series C to be the voice of ...\",\"link\":\"https://elevenlabs.io/blog/series-c\",\"snippet\":\"30 January 2025, Global – ElevenLabs has raised $180 million in a Series C funding round to make speech the new standard for digital interaction ...\",\"date\":\"Jan 30, 2025\",\"position\":1},{\"title\":\"Announcing an Employee Tender Offer at $6.6B valuation\",\"link\":\"https://elevenlabs.io/blog/announcing-an-employee-tender\",\"snippet\":\"ElevenLabs raises $180M Serie...",
+          "Used visitWebpage {\"url\":\"https://elevenlabs.io/blog/series-c\",\"question\":\"What does this page say about the Series C announcement date, amount raised, lead investors, company description, and any status indicating ElevenLabs remains independent?\"}. The results are: \n \"Page title: “ElevenLabs raises $180M Series C to be the voice of the digital world”\\nAuthor/date: Written by Mati Staniszewski; Published Jan 30, 2025.\\n\\nRelevant excerpts:\\n- “30 January 2025, Global – ElevenLabs has raised $180 million in a Series C funding round...”\\n- “The round was co-led by a16z and ICONIQ Growth, with additional new investors NEA, World Innovation Lab (WiL), Valor, Endeavor Catalyst Fund and Lunate.”\\n- “Existing investors Sequoia Capital, Salesforce Ventures, Smash Cap...",
+          "Searched Google with query \"ElevenLabs acquisition IPO Reuters 2025 2026 site:reuters.com OR site:elevenlabs.io\". The results are: \n {\"search_results\":[{\"title\":\"ElevenLabs secures $11 billion valuation in latest funding ...\",\"link\":\"https://www.reuters.com/technology/elevenlabs-raises-500-million-11-billion-valuation-wsj-reports-2026-02-04/\",\"snippet\":\"The latest round, led by Sequoia Capital, more than triples the company's $3.3 billion valuation from January 2025, when ElevenLabs raised $180 ...\",\"date\":\"Feb 4, 2026\",\"position\":1},{\"title\":\"ElevenLabs staff to sell shares at $6.6 billion valuation ...\",\"link\":\"https://www....",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/technology/elevenlabs-raises-500-million-11-billion-valuation-wsj-reports-2026-02-04/\",\"question\":\"What does Reuters report about ElevenLabs' latest funding round announced on Feb. 4, 2026, including amount raised, round type if stated, lead investors, and any indication of ownership/lifecycle status?\"}. The results are: \n \"Reuters, Feb. 4, 2026: ElevenLabs “had secured an $11 billion valuation after raising $500 million in its latest funding round.” “The Series D funding” was “led by Sequoia Capital” and “drew new investors, including Lightspeed Venture Partners and Evantic Capital, along with existing backers Andreessen Horowitz and ICONIQ.” Reuters describes ElevenLabs as a London-based AI voice generation firm founded in 2022. No ownership stake percentages or IPO/acquisition status are stated; only that it “s...",
+          "Searched Google with query \"site:elevenlabs.io about ElevenLabs AI audio platform company\". The results are: \n {\"search_results\":[{\"title\":\"AI research and products that transform how we interact ...\",\"link\":\"https://elevenlabs.io/about\",\"snippet\":\"ElevenLabs is an AI research and product company transforming how we interact with technology. Our vision is to make communication and creation with ...\",\"rating\":4.8,\"ratingCount\":21178,\"position\":1},{\"title\":\"ElevenLabs: Free AI Voice Generator & Voice Agents Platform\",\"link\":\"https://elevenlabs.io/\",\"snippet\":\"Create lifelike speech with our AI voice genera...",
+          "Used visitWebpage {\"url\":\"https://elevenlabs.io/about\",\"question\":\"How does ElevenLabs describe its business on the About page, including what it sells or provides and any indication it is a standalone company?\"}. The results are: \n \"About page: https://elevenlabs.io/about\\n\\nRelevant text:\\n- “ElevenLabs is an AI research and product company transforming how we interact with technology.”\\n- “Our vision is to make communication and creation with technology seamless. We started by building with the first human-like voice model. Now we’ve expanded well beyond voice.”\\n- “We build three platforms:”\\n  - “ElevenAgents enables businesses to deliver seamless and intelligent customer experiences, with the integrations, testing, mo..."
+        ]
+      }
+    }
+  ]
+}

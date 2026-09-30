@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6d62PVgHfApn6ieN",
+  "workflow": {
+    "id": "wf_0tm6d21AuFsz5iFGM8e",
+    "name": "Funding lifecycle evaluation C"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:27:38.231Z",
+  "duration": "1m 8s",
+  "dataCreditsUsed": 3.4,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6d62eugh9RNHQ2tG",
+      "nodeId": "wfn_0tm6d21iRtaxx429Y8Q",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:27:38.239Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "replit.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Replit"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6d62JB9DEToa8sa9",
+      "nodeId": "wfn_0tm6d4f6jZzvkGe2wpS",
+      "nodeName": "Company research C",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:27:38.254Z",
+      "completedAt": "2026-09-30T11:28:46.549Z",
+      "duration": "1m 8s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "replit.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Replit"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Replit is the company at replit.com and sells an AI app and website building platform with full-stack infrastructure and deployment tools.\",\"url\":\"https://replit.com/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Replit writes production-ready code, evolves it, and allows users to describe and publish projects. Replit provides full-stack infrastructure, built-in services (Authentication, Database, Hosting, Monitoring), and integrations to build and scale apps.\"},{\"claim\":\"Replit announced a $400 million financing round that valued the company at $9 billion and named Georgian as the lead investor, with participation from Andreessen Horowitz, Coatue, 1789, Shaquille O’Neal, Jared Leto, and QIA.\",\"url\":\"https://replit.com/news/funding-announcement\",\"publication_date\":\"unknown\",\"event_date\":\"2026-03-11\",\"excerpt\":\"Amount raised: a new fundraising round of $400 million. Lead investors: led by VC firm Georgian, with participation from Andreessen Horowitz, Coatue, Donald Trump Jr’s 1789, celebrities Shaquille O’Neal and Jared Leto, and sovereign wealth funds including Qatar’s QIA. Valuation: The round vaults Replit’s valuation to $9 billion.\"},{\"claim\":\"Independent later reporting characterized that March 11, 2026 financing as Replit’s Series D round.\",\"url\":\"https://tech-insider.org/ie/replit-9-billion-valuation-2026/\",\"publication_date\":\"2026-08-05\",\"event_date\":\"2026-03-11\",\"excerpt\":\"Replit closed a $400 million Series D funding round on March 11, 2026, valuing the company at $9 billion, three times its $3 billion valuation from September 2025.\"},{\"claim\":\"As of the cutoff, Replit was still operating as a standalone platform with active product and subscription offerings; no acquisition completion, IPO, or closure was found in the freshness check through 2026-09-30.\",\"url\":\"https://replit.com/\",\"publication_date\":\"unknown\",\"event_date\":\"2026-09-30\",\"excerpt\":\"Replit operates as a product platform offering tiered subscription plans (Starter, Replit Core, Replit Pro, and Enterprise) with signup options.\"},{\"claim\":\"A separate freshness-check source also described Replit as a private software-development and application platform in late August 2026.\",\"url\":\"https://aistackcurrent.com/companies/replit\",\"publication_date\":\"2026-08-30\",\"event_date\":\"2026-08-30\",\"excerpt\":\"Replit is a private software-development and application platform operated by Replit, Inc.\"}]",
+          "latest_round": "Series D",
+          "round_amount": "400000000",
+          "uncertainties": "The official Replit funding page, as retrieved, confirmed the $400M round, valuation, and investor list but did not expose a machine-readable publication date in the tool output; the 2026-03-11 announcement date and Series D label were corroborated by later secondary reporting. Current lifecycle status is supported by Replit’s still-active standalone commercial site and a Keenable freshness check that did not surface any completed acquisition, IPO, or closure before 2026-09-30, but I did not review a corporate registry or SEC filing explicitly stating private status as of the cutoff.",
+          "lead_investors": "Georgian",
+          "round_currency": "USD",
+          "company_identity": "Replit is an AI app and website builder that lets users create, deploy, and scale software with natural-language prompting and built-in hosting/infrastructure.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-03-11"
+        },
+        "reasoning": "I resolved the entity from replit.com, used Replit’s own site for identity and the funding announcement, and then performed the required freshness check with the Keenable search tool for newer funding or lifecycle changes through 2026-09-30. The strongest evidenced latest venture equity event is the $400M March 11, 2026 Series D led by Georgian. I found no public evidence before the cutoff of an acquisition completion, IPO, or shutdown, so the best-supported current status is private_independent.",
+        "stepsTaken": [
+          "Searched Google with query \"Replit replit.com funding latest round acquisition IPO 2026 site:replit.com OR TechCrunch OR SEC\". The results are: \n {\"search_results\":[{\"title\":\"Replit Hits $9B Valuation, Bets on Microsoft Fabric [2026]\",\"link\":\"https://tech-insider.org/ie/replit-9-billion-valuation-2026/\",\"snippet\":\"Replit closed a $400 million funding round on March 11, 2026, pushing its valuation to $9 billion. TechCrunch's coverage of the deal\",\"date\":\"Aug 5, 2026\",\"position\":1},{\"title\":\"After nine years of grinding, Replit finally found its market. ...\",\"link\":\"https://techcrunch.com/2025/10/02/after-nine-years-of-grinding-replit-final...",
+          "Searched Google with query \"site:replit.com Replit about company mission investors funding blog Series D March 2026\". The results are: \n {\"message\":\"No data returned from search query\"}",
+          "Searched Google with query \"replit.com about Replit company platform developers AI coding official\". The results are: \n {\"search_results\":[{\"title\":\"Replit: AI App and Website Builder\",\"link\":\"https://replit.com/\",\"snippet\":\"Describe what you want. Replit builds it. Get a working app or website in minutes. No coding required.\",\"position\":1},{\"title\":\"AI Coding Agent: Build Apps Through Chat\",\"link\":\"https://replit.com/products/agent\",\"snippet\":\"Replit is the AI platform that helps you turn your ideas into real outcomes. Describe what you want in natural language, then create, launch, and grow apps, ...\",\"position...",
+          "Used visitWebpage {\"url\":\"https://replit.com/news/funding-announcement\",\"question\":\"Find the date of the funding announcement, amount raised, round type, lead investors, valuation, and a short description of what Replit does.\"}. The results are: \n \"- Funding announcement timing: “on Wednesday announced a new fundraising round” / “On Wednesday, the startup announced its new agent...”\\n- Amount raised: “a new fundraising round of $400 million”\\n- Round type: “new fundraising round”\\n- Lead investors: “led by VC firm Georgian, with participation from Andreessen Horowitz, Coatue, Donald Trump Jr’s 1789, celebrities Shaquille O’Neal and Jared Leto, and sovereign wealth funds including Qatar’s QIA.”\\n- Valuation: “The round vaults Replit’s valu...",
+          "Used visitWebpage {\"url\":\"https://techcrunch.com/2026/03/11/replit-raises-400m-at-a-9b-valuation-to-ride-the-ai-coding-wave/\",\"question\":\"What is the publication date, the amount raised, round type, valuation, lead investor, and any details on Replit's current ownership or IPO status?\"}. The results are: \n \"no relevant data\"",
+          "Used keenable-public-evaluation-search_web_pages {\"query\":\"Recent public evidence about Replit after its March 2026 funding round, specifically whether it remained private independent or was acquired, went public, closed, or raised a newer equity round before 2026-09-30\",\"site\":\"\",\"acquired_after\":\"2026-03-11\",\"acquired_before\":\"2026-09-30\",\"published_after\":\"2026-03-11\",\"published_before\":\"2026-09-30\",\"query_time\":\"2026-09-30\",\"snippet_max_length\":400,\"max_results\":5,\"session_id\":\"replit-2026-09-30\",\"output_format\":\"text\",\"mode\":\"pro\",\"enableWizards\":false}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Replit\\nURL: https://aistackcurrent.com/companies/replit\\nPublished: 2026-08-30\\nAcquired: 2026-09-05\\nSnippets:\\nStatusactive Published Verified Replit is a private software-development and application platform operated by Replit, Inc. Its current product boundary spans AI-assisted software creation, autonomous and parallel agent execution, visual design, hosted development environments, application deployment, databases and storage, integrations, enter...",
+          "Used keenable-public-evaluation-fetch_page_content {\"url\":\"https://replit.com/\",\"max_chars\":4000,\"live\":false,\"prompt\":\"Extract concise lines that describe what Replit does and any indication it is currently operating as a standalone company or product platform.\",\"session_id\":\"replit-2026-09-30\",\"output_format\":\"text\"}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: AI App and Website Builder\\nURL: https://replit.com/\\n\\n- Replit writes production-ready code, evolves it, and allows users to describe and publish projects.\\n- Replit provides full-stack infrastructure, built-in services (Authentication, Database, Hosting, Monitoring), and integrations to build and scale apps.\\n- Replit operates as a product platform offering tiered subscription plans (Starter, Replit Core, Replit Pro, and Enterprise) with signup option..."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6bxa89gKyjcPSpu5",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:00:46.576Z",
+  "duration": "1m 51s",
+  "dataCreditsUsed": 2.9,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6bxapGkZkja5iaxJ",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:00:46.584Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "alan.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Alan"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6bxaKfzKfDfgEfaC",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:00:46.603Z",
+      "completedAt": "2026-09-30T11:02:37.748Z",
+      "duration": "1m 51s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "alan.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Alan"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"alan.com is Alan, a health/insurance technology company that combines insurance, prevention and care.\",\"url\":\"https://alan.com/en/blog/discover-alan/a/alan-2026-q2-letter-to-shareholders\",\"publication_date\":\"2026-08-31\",\"event_date\":\"2026-08-31\",\"excerpt\":\"Alan says its ambition is to be \\\"the new standard in prevention insurance\\\" and \\\"the first company to integrate insurance, prevention and care into one experience.\\\"\"},{\"claim\":\"Alan's latest evidenced venture equity round before the 2026-09-30 cutoff is a Series G announced in June 2026 for €480 million.\",\"url\":\"https://alan.com/en/blog/discover-alan/a/alan-2026-q2-letter-to-shareholders\",\"publication_date\":\"2026-08-31\",\"event_date\":\"2026-06\",\"excerpt\":\"Alan states: \\\"In June, Prosus led our €480 million Series G funding round, valuing Alan at €5.5 billion.\\\"\"},{\"claim\":\"The Series G was publicly announced on 2026-06-24, with Prosus leading and a €400 million investment from Prosus within the €480 million total round.\",\"url\":\"https://www.prosus.com/news-insights/2026/prosus-leads-euros-480-million-funding-round-in-alan-to-shape-the-future-of-ai-powered-healthcare\",\"publication_date\":\"2026-06-24\",\"event_date\":\"2026-06-24\",\"excerpt\":\"Prosus announced it \\\"leads €480 million funding round in Alan\\\" and said it was making a \\\"€400 million\\\" investment.\"},{\"claim\":\"Other investors named in the 2026 Series G were Teachers' Venture Growth (TVG), Index Ventures, and new investor Dara Holdings.\",\"url\":\"https://www.prosus.com/news-insights/2026/prosus-leads-euros-480-million-funding-round-in-alan-to-shape-the-future-of-ai-powered-healthcare\",\"publication_date\":\"2026-06-24\",\"event_date\":\"2026-06-24\",\"excerpt\":\"Prosus said it was \\\"joined in this round by existing investors Teachers' Venture Growth (TVG) and Index Ventures, and new investor Dara Holdings.\\\"\"},{\"claim\":\"As of September 2026, Alan was still private and not publicly traded.\",\"url\":\"https://www.upmarket.co/private-markets/pre-ipo/alan/\",\"publication_date\":\"2026-09\",\"event_date\":\"2026-09\",\"excerpt\":\"UpMarket's page, last updated September 2026, says: \\\"Is Alan publicly traded? No. As of March 2026, Alan is a private company and does not trade on any public stock exchange.\\\"\"}]",
+          "latest_round": "Series G",
+          "round_amount": "480000000",
+          "uncertainties": "Lifecycle status is evidenced indirectly: I found no public evidence in the reviewed sources of an IPO, sale of Alan, or closure before 2026-09-30, and a September 2026 secondary-market page says Alan is still private. However, that private-status evidence is from a secondary market platform rather than Alan or a regulator. Alan's own 2026 shareholder letter was published 2026-08-31 and refers back to a June 2026 round; I use 2026-06-24 as the announcement date from Prosus, while the exact legal closing date of the financing was not established. Alan's French legal form is a société anonyme, which is not the same as being publicly listed.",
+          "lead_investors": "Prosus",
+          "round_currency": "EUR",
+          "company_identity": "Alan at alan.com is a French health and insurance technology company offering integrated health insurance, prevention, and care services.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-06-24"
+        },
+        "reasoning": "I identified the company from Alan's own site, then used Alan's 2026 shareholder letter and Prosus's announcement to establish the latest pre-cutoff venture equity round: a €480 million Series G in June 2026 led by Prosus, with other participating investors named by Prosus. I separately checked current ownership/listing status and found a September 2026 secondary-market source stating Alan remained private and not publicly traded. I found no evidence in the reviewed sources of a completed acquisition, IPO, or closure before 2026-09-30.",
+        "stepsTaken": [
+          "Searched Google with query \"Alan alan.com funding acquisition IPO site:alan.com OR site:newsroom.alan.com\". The results are: \n {\"message\":\"No data returned from search query\"}",
+          "Searched Google with query \"Alan health insurance startup funding 2024 2025 2026 alan.com\". The results are: \n {\"search_results\":[{\"title\":\"Health insurance startup Alan reaches €5B valuation\",\"link\":\"https://techcrunch.com/2026/03/11/health-insurance-startup-alan-reaches-e5b-valuation/\",\"snippet\":\"The French health insurance startup is now valued at €5 billion (approximately $5.83 billion), up from $4.5 billion in 2024.\",\"date\":\"Mar 11, 2026\",\"position\":1},{\"title\":\"Your health partner: prevention, insurance and daily support\",\"link\":\"https://alan.com/en\",\"snippet\":\"Alan empowers everyone to take action...",
+          "Used visitWebpage {\"url\":\"https://alan.com/en/tags/product-news\",\"question\":\"Find the latest funding update before 2026-09-30, including round amount, announcement date, investors, and any company description.\"}. The results are: \n \"Latest funding-related webpage context before 2026-09-30:\\n- Article: “Alan - 2026 Q2 Letter to Shareholders”\\n  Link: https://alan.com/en/blog/discover-alan/a/alan-2026-q2-letter-to-shareholders\\n  Snippet on page: “Alan’s Q2 2026 update: €480m in new funding, 1.14 million members, and continued progress in AI-powered care, prevention and global growth.”\\n\\nRelevant company description/context from the page:\\n- “Over 1 million members signed globally”\\n- “Representing €800m+ in ARR”\\n- “Alan i...",
+          "Used visitWebpage {\"url\":\"https://alan.com/en/blog/discover-alan/a/alan-2026-q2-letter-to-shareholders\",\"question\":\"What funding round was announced, on what date, how much was raised, at what valuation if stated, and who invested or led it? Also note what Alan says it does.\"}. The results are: \n \"Source: Alan - 2026 Q2 Letter to Shareholders (https://alan.com/en/blog/discover-alan/a/alan-2026-q2-letter-to-shareholders), published/updated 31 August 2026.\\n\\nRelevant funding context:\\n- “In June, Prosus led our €480 million Series G funding round, valuing Alan at €5.5 billion.”\\n- “It was our largest funding round to date...”\\n- Investor/lead named: Prosus.\\n\\nWhat Alan says it does:\\n- “Our ambition is to make Alan the new standard in prevention insurance: the first company to integrate ...",
+          "Searched Google with query \"Alan alan.com IPO acquisition public company 2026\". The results are: \n {\"search_results\":[{\"title\":\"Alan Stock for Accredited Investors | Pre-IPO Shares\",\"link\":\"https://www.upmarket.co/private-markets/pre-ipo/alan/\",\"snippet\":\"No. As of March 2026, Alan is a private company and does not trade on any public stock exchange. Accredited investors can access Alan shares through UpMarket,\",\"position\":1},{\"title\":\"Invest In Alan Stock | Buy Pre-IPO Shares\",\"link\":\"https://equityzen.com/company/alan3/\",\"snippet\":\"Accredited investors can buy pre-IPO stock in companies lik...",
+          "Used visitWebpage {\"url\":\"https://www.prosus.com/news-insights/2026/prosus-leads-euros-480-million-funding-round-in-alan-to-shape-the-future-of-ai-powered-healthcare\",\"question\":\"What amount did Prosus invest in Alan, what round was it, what was the total round size and date, and who else invested if named?\"}. The results are: \n \"24 Jun 2026 — “Prosus leads €480 million funding round in Alan, to shape the future of AI-powered healthcare.”\\n\\nRelevant details from the page:\\n- “Prosus today announces a €400 million (US$460 million) investment into ... Alan...”\\n- “Prosus leads €480 million funding round in Alan...”\\n- “Prosus is joined in this round by existing investors Teachers' Venture Growth (TVG) and Index Ventures, and new investor Dara Holdings.”\\n\\nSource page title/date: Prosus leads €480 million funding round i...",
+          "Used visitWebpage {\"url\":\"https://www.upmarket.co/private-markets/pre-ipo/alan/\",\"question\":\"Does this page state whether Alan is publicly traded or still private, and as of what date?\"}. The results are: \n \"FAQ (https://upmarket.co/private-markets/pre-ipo/alan#faq): “Is Alan publicly traded? No. As of March 2026, Alan is a private company and does not trade on any public stock exchange.”\\n\\nHow to Invest section (https://upmarket.co/private-markets/pre-ipo/alan#how-to-invest): “Alan shares are not on public exchanges. UpMarket provides accredited investors access through secondary market transactions.”\\n\\nPage header: “Alan Stock for Accredited Investors” and “Last updated: September 2026.”\""
+        ]
+      }
+    }
+  ]
+}

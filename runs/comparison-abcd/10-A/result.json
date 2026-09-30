@@ -1,0 +1,86 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6bgsJcr24tmcMZCR",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:50:52.942Z",
+  "duration": "1m 36s",
+  "dataCreditsUsed": 3.3,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6bgsgRpyV5RM2wHs",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:50:52.951Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "supabase.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Supabase"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6bgscTGF5JPvznnM",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:50:52.965Z",
+      "completedAt": "2026-09-30T10:52:29.610Z",
+      "duration": "1m 36s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "supabase.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Supabase"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Supabase is an open-source/Postgres developer platform and backend tools startup.\",\"url\":\"https://supabase.com/blog/supabase-series-f\",\"publication_date\":\"2026-06-04\",\"event_date\":\"2026-06-04\",\"excerpt\":\"Supabase has raised a $500M Series F... Nearly 10 million developers use Supabase to build startups, apps, and AI products...\"},{\"claim\":\"Supabase announced a $500 million Series F on 2026-06-04, led by GIC.\",\"url\":\"https://supabase.com/blog/supabase-series-f\",\"publication_date\":\"2026-06-04\",\"event_date\":\"2026-06-04\",\"excerpt\":\"Supabase has raised a $500M Series F at a $10B pre-money valuation. It's led by GIC.\"},{\"claim\":\"Existing investors joined the Series F, and Georgian and Salesforce Ventures joined as new investors; Stripe made a second investment.\",\"url\":\"https://supabase.com/blog/supabase-series-f\",\"publication_date\":\"2026-06-04\",\"event_date\":\"2026-06-04\",\"excerpt\":\"All existing investors joined the round, Stripe made a second investment. Georgian and Salesforce Ventures joined as new investors.\"},{\"claim\":\"CNBC reported Supabase's June 2026 round valued the company at $10.5 billion post-money and described it as a startup providing backend tools for AI apps.\",\"url\":\"https://www.cnbc.com/2026/06/04/database-startup-supabase-raises-500-million-10point5-billion-valuation.html\",\"publication_date\":\"2026-06-04\",\"event_date\":\"2026-06-04\",\"excerpt\":\"Supabase announced a $500 million funding round that values the company at $10.5 billion, including the fresh capital... the startup, which makes back-end tools for building artificial intelligence apps...\"},{\"claim\":\"As of the June 2026 reporting, Supabase was still being described as a startup raising venture financing, supporting private independent status at that time.\",\"url\":\"https://www.cnbc.com/2026/06/04/database-startup-supabase-raises-500-million-10point5-billion-valuation.html\",\"publication_date\":\"2026-06-04\",\"event_date\":\"2026-06-04\",\"excerpt\":\"The article repeatedly describes Supabase as a startup and reports a venture funding round led by GIC, with investors including Accel, Y Combinator, Craft, Felicis, Coatue and Stripe.\"}]",
+          "latest_round": "Series F",
+          "round_amount": "500000000",
+          "uncertainties": "The Supabase blog gives a $10B pre-money valuation, while CNBC states the round valued the company at $10.5B including fresh capital; these are consistent pre- vs post-money figures, not necessarily a contradiction. I found no public evidence in the consulted sources of an IPO, acquisition, or closure before the 2026-09-30 cutoff, but I did not find a dedicated primary source explicitly stating 'still private' after 2026-06-04. Legal closing date for the Series F was not established; 2026-06-04 is the announcement/publication date.",
+          "lead_investors": "GIC",
+          "round_currency": "USD",
+          "company_identity": "Supabase is a venture-backed company that sells an open-source Postgres developer platform and backend tools for building and scaling applications, including AI apps.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-06-04"
+        },
+        "reasoning": "I identified Supabase at supabase.com using the company’s own funding blog and corroborated the latest financing with CNBC. The strongest and most current primary evidence before the 2026-09-30 cutoff is Supabase’s 2026-06-04 Series F announcement. I found no consulted evidence of a subsequent acquisition, IPO, or closure before the cutoff, so the best-supported status is private_independent.",
+        "stepsTaken": [
+          "Searched Google with query \"Supabase latest funding round 2024 2025 acquisition IPO site:supabase.com OR TechCrunch OR Crunchbase\". The results are: \n {\"search_results\":[{\"title\":\"9 Supabase Statistics (2025): Valuation, Revenue, Funding ...\",\"link\":\"https://taptwicedigital.com/stats/supabase\",\"snippet\":\"Supabase has raised a total of $396.1 million across six funding rounds, with the $200 million Series D accounting for over 50% of total ...\",\"date\":\"Apr 29, 2025\",\"position\":1},{\"title\":\"Supabase Execs Were So Impressed With Dreambase ...\",\"link\":\"https://news.crunchbase.com/venture/supabase-startup-investment-dreambase-ai-felicis/\",\"snippet\"...",
+          "Searched Google with query \"site:supabase.com/blog Supabase Series D 2025 funding announcement\". The results are: \n {\"search_results\":[{\"title\":\"Supabase Series E\",\"link\":\"https://supabase.com/blog/supabase-series-e\",\"snippet\":\"We raised $100M at a $5B pre-money valuation. One of the ways we will use the money is for employee secondaries: every single round we have ...\",\"date\":\"Oct 3, 2025\",\"position\":1},{\"title\":\"1000 Y Combinator Founders Choose Supabase\",\"link\":\"https://supabase.com/blog/1000-yc-companies\",\"snippet\":\"Today we're excited to share that more than 1,000 Y Combinator companies have chosen Supab...",
+          "Searched Google with query \"Supabase acquisition IPO 2026 site:techcrunch.com OR site:news.crunchbase.com OR site:supabase.com\". The results are: \n {\"search_results\":[{\"title\":\"Supabase Execs Were So Impressed With Dreambase ...\",\"link\":\"https://news.crunchbase.com/venture/supabase-startup-investment-dreambase-ai-felicis/\",\"snippet\":\"Exclusive: Supabase Execs Were So Impressed With Dreambase, They Became Investors In Its $3.7M Round. Mary Ann Azevedo. April 29, 2026.\",\"date\":\"Apr 29, 2026\",\"position\":1},{\"title\":\"The Week's 10 Biggest Funding Rounds\",\"link\":\"https://news.crunchbase.com/venture/biggest-funding-rounds-june-5-2026/\",\"snippet\":...",
+          "Used visitWebpage {\"url\":\"https://supabase.com/blog/supabase-series-e\",\"question\":\"What are the key facts on this page about Supabase's latest funding round, including round name, amount, announcement date, valuation, and lead investors?\"}. The results are: \n \"Source: https://supabase.com/blog/supabase-series-e\\n\\nRelevant page data:\\n- Title: “Supabase Series E”\\n- Announcement date: “3 Oct 2025”\\n- Round name: “Series E”\\n- Funding amount: “We raised $100M”\\n- Valuation: “at a $5B pre-money valuation”\\n- Lead investors: “led by Accel and Peak XV”\\n- Other investors mentioned in the round: “Figma has joined the round with all of existing investors: YC, Coatue, Felicis, Craft, and Square Peg.”\"",
+          "Searched Google with query \"site:supabase.com/blog Supabase Series F 2026\". The results are: \n {\"search_results\":[{\"title\":\"Supabase Series F\",\"link\":\"https://supabase.com/blog/supabase-series-f\",\"snippet\":\"Supabase has raised a $500M Series F at a $10B pre-money valuation. It's led by GIC. All existing investors joined the round, Stripe made a ...\",\"position\":1},{\"title\":\"Supabase Blog\",\"link\":\"https://supabase.com/blog\",\"snippet\":\"Published 9 Jul 2026. Agentic Coding on Supabase with OpenCode. Eric Kharitonashvili. product. Published 30 Jun 2026. Supabase Series F. Paul Copplestone.\",\"p...",
+          "Used visitWebpage {\"url\":\"https://supabase.com/blog/supabase-series-f\",\"question\":\"What are the key facts on this page about Supabase's funding round, including round name, amount, announcement date, valuation, and lead investors?\"}. The results are: \n \"Source: https://supabase.com/blog/supabase-series-f\\n\\nPage title: “Supabase Series F”\\nAnnouncement date on page: 4 Jun 2026\\nAuthor: Paul Copplestone, CEO and Co-Founder\\n\\nRelevant funding details from page:\\n- “Supabase has raised a $500M Series F at a $10B pre-money valuation.”\\n- “It’s led by GIC.”\\n- “All existing investors joined the round, Stripe made a second investment. Georgian and Salesforce Ventures joined as new investors.”\"",
+          "Searched Google with query \"Supabase IPO acquisition announced 2026 after June\". The results are: \n {\"search_results\":[{\"title\":\"Supabase Series F\",\"link\":\"https://supabase.com/blog/supabase-series-f\",\"snippet\":\"Supabase has raised a $500M Series F. Supabase Series F 4 Jun 2026. Georgian and Salesforce Ventures joined as new investors. Nearly 10 million ...\",\"date\":\"Jun 4, 2026\",\"position\":1},{\"title\":\"Supabase IPO Timeline and Financing Details\",\"link\":\"https://forgeglobal.com/supabase_ipo/\",\"snippet\":\"Five months after Databricks Inc. acquired one of its main rivals for $1 billion, Supabase ...",
+          "Used visitWebpage {\"url\":\"https://www.cnbc.com/2026/06/04/database-startup-supabase-raises-500-million-10point5-billion-valuation.html\",\"question\":\"What does this article say about Supabase's June 2026 funding, company description, valuation, and whether it is a startup/private company?\"}. The results are: \n \"- Article: CNBC, published Thu, Jun 4, 2026: “Vibe-coding phenomenon lifts AI startup Supabase to $10.5 billion valuation”\\n- June 2026 funding: “Supabase announced a $500 million funding round” / “it raised $500 million” on Thursday.\\n- Valuation: “valued the company at $10.5 billion, including the fresh capital” / “raised $500 million at a valuation of $10.5 billion.”\\n- Company description: Supabase is described as a “database startup,” “the startup, which makes back-end tools for building a..."
+        ]
+      }
+    }
+  ]
+}

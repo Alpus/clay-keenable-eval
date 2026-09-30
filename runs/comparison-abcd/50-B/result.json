@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6cx4NjMEnnUzP6QZ",
+  "workflow": {
+    "id": "wf_0tm6ahobSnKQGfMMhvx",
+    "name": "Funding lifecycle evaluation B"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:22:16.715Z",
+  "duration": "2m 2s",
+  "dataCreditsUsed": 3.9,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6cx4SrjDigAZGqWe",
+      "nodeId": "wfn_0tm6ahoYwwjhDde6H4B",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:22:16.759Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "mountain.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "MNTN"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6cx4VnUPnViKkMZe",
+      "nodeId": "wfn_0tm6aqxTUurHH8wQhv5",
+      "nodeName": "Company research B",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:22:16.836Z",
+      "completedAt": "2026-09-30T11:24:19.473Z",
+      "duration": "2m 2s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "mountain.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "MNTN"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"The exact domain mountain.com belongs to MNTN, which describes itself as a Connected TV advertising software platform.\",\"url\":\"https://mountain.com/about/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"\\\"MNTN is the Hardest Working Software in Television™, bringing unrivaled performance and simplicity to Connected TV advertising.\\\" and \\\"Our self-serve technology makes running TV ads as easy as search and social and helps brands drive measurable conversions, revenue, site visits, and more.\\\"\"},{\"claim\":\"MNTN announced a $119 million Series D financing, which is the latest evidenced venture equity round found before the cutoff.\",\"url\":\"https://www.businesswire.com/news/home/20220201005547/en/MNTN-Raises-%24119-Million-With-BlackRock-and-Fidelity\",\"publication_date\":\"2022-02-01\",\"event_date\":\"2021-Q4\",\"excerpt\":\"The press release states MNTN \\\"has raised $119 million in Series D financing\\\" and that \\\"The round, which closed in the 4th quarter of 2021, was co-led by funds and accounts managed by BlackRock and Fidelity Management and Research Company.\\\"\"},{\"claim\":\"The named lead investors in the Series D were BlackRock and Fidelity Management and Research Company.\",\"url\":\"https://www.businesswire.com/news/home/20220201005547/en/MNTN-Raises-%24119-Million-With-BlackRock-and-Fidelity\",\"publication_date\":\"2022-02-01\",\"event_date\":\"2021-Q4\",\"excerpt\":\"\\\"The round, which closed in the 4th quarter of 2021, was co-led by funds and accounts managed by BlackRock and Fidelity Management and Research Company, which collectively invested approximately $110 million.\\\"\"},{\"claim\":\"MNTN completed its IPO and began trading on the New York Stock Exchange on May 22, 2025 under ticker MNTN.\",\"url\":\"https://ir.mountain.com/news/news-details/2025/MNTN-Reports-Strong-Second-Quarter-2025-Results/default.aspx\",\"publication_date\":\"2025-08-05\",\"event_date\":\"2025-05-22\",\"excerpt\":\"The company said it \\\"Completed IPO and began trading as a public company on the New York Stock Exchange on May 22, 2025, under the ticker symbol ‘MNTN.’\\\"\"},{\"claim\":\"As of August 4, 2026, MNTN was still a public company trading on the NYSE as MNTN.\",\"url\":\"https://www.sec.gov/Archives/edgar/data/1891027/000189102726000070/mntnearningsrelease2026-q2.htm\",\"publication_date\":\"2026-08-04\",\"event_date\":\"2026-08-04\",\"excerpt\":\"The SEC-filed earnings release begins: \\\"MNTN (NYSE: MNTN), a technology platform that brings performance marketing to Connected TV...\\\"\"}]",
+          "latest_round": "Series D",
+          "round_amount": "119000000",
+          "uncertainties": "The Business Wire source clearly states the round amount, round name, and lead investors, but the extracted page text did not explicitly print the announcement date; I used the dated press-release URL/search result date of 2022-02-01 as the announcement date. The same source says the round closed in Q4 2021, so announcement and closing are different. I did not find a later private venture equity round before the 2025 IPO within the research-call limit; available evidence instead supports that MNTN became public in May 2025 and remained listed in August 2026.",
+          "lead_investors": "BlackRock; Fidelity Management and Research Company",
+          "round_currency": "USD",
+          "company_identity": "MNTN at mountain.com sells self-serve software for Connected TV advertising that helps brands run and measure TV ads.",
+          "lifecycle_status": "public",
+          "lifecycle_event_date": "2025-05-22",
+          "round_announcement_date": "2022-02-01"
+        },
+        "reasoning": "I resolved the entity from the exact domain mountain.com using the company’s own About page, then identified the latest evidenced venture equity round from a dated MNTN financing press release. I separately established lifecycle status from later public-company evidence: an investor-relations release stating the IPO date and a 2026 SEC-filed earnings release confirming continued NYSE listing. No acquisition or closure evidence was found; the company is public by the cutoff.",
+        "stepsTaken": [
+          "Searched Google with query \"site:mountain.com MNTN company funding IPO acquisition investors mountain.com\". The results are: \n {\"search_results\":[{\"title\":\"About Us\",\"link\":\"https://mountain.com/about/\",\"snippet\":\"Our Investors BlackRock Fidelity Investments Mercato Partners SV Angel Baroda Ventures Lighthouse Capital Partners Greycroft Rincon Venture Partners Daher ...\",\"position\":1},{\"title\":\"Financials - Quarterly Results\",\"link\":\"https://ir.mountain.com/financials/quarterly-results/default.aspx\",\"snippet\":\"Full year net loss was $6.4 million, including a one-time charge of $23.0 million related to the Company's IPO,...",
+          "Searched Google with query \"MNTN mountain.com funding round Series investor press release\". The results are: \n {\"search_results\":[{\"title\":\"MNTN To Announce Second Quarter 2026 Financial ...\",\"link\":\"https://ir.mountain.com/news/news-details/2026/MNTN-To-Announce-Second-Quarter-2026-Financial-Results-on-August-4-2026/default.aspx\",\"snippet\":\"MNTN management will host a live webcast to discuss the results and provide a business update on Tuesday, August 4, 2026 at 4:30 p.m. Eastern ...\",\"date\":\"Jul 14, 2026\",\"position\":1},{\"title\":\"Financials - Quarterly Results\",\"link\":\"https://ir.mountain.com/financials...",
+          "Searched Google with query \"MNTN Series D press release MNTN funding Business Wire 2022\". The results are: \n {\"search_results\":[{\"title\":\"MNTN Raises $119 Million With BlackRock and Fidelity\",\"link\":\"https://www.businesswire.com/news/home/20220201005547/en/MNTN-Raises-%24119-Million-With-BlackRock-and-Fidelity\",\"snippet\":\"MNTN, the leading marketing software platform for Connected TV advertising, today announced that it has raised $119 million in Series D ...\",\"date\":\"Feb 1, 2022\",\"position\":1},{\"title\":\"MNTN Reports Record Fourth Quarter and Full Year 2025 ...\",\"link\":\"https://www.businesswire.com/new...",
+          "Used visitWebpage {\"url\":\"https://mountain.com/about/\",\"question\":\"What does MNTN say it is and what does it sell or enable? Also list any investor names shown on the page.\"}. The results are: \n \"- “MNTN is the Hardest Working Software in Television™, bringing unrivaled performance and simplicity to Connected TV advertising.”\\n- “Our self-serve technology makes running TV ads as easy as search and social and helps brands drive measurable conversions, revenue, site visits, and more.”\\n- “Top agencies use MNTN”\\n- “Performance TV”\\n- “MNTN for B2C” — “See how B2C advertisers utilize the MNTN platform to drive performance”\\n- “MNTN for B2B” — “See how B2B advertisers utilize the MNTN platf...",
+          "Used visitWebpage {\"url\":\"https://www.businesswire.com/news/home/20220201005547/en/MNTN-Raises-%24119-Million-With-BlackRock-and-Fidelity\",\"question\":\"What round did MNTN announce, for how much, on what date, and who were the lead or named investors?\"}. The results are: \n {\"status\":\"ERROR\",\"message\":\"Error using the website scrape tool. The tool returned an error.\",\"errorDetails\":\"Unknown error in tool execution\",\"errorType\":\"ToolExecutionResponseError\"}",
+          "Used keenable-public-evaluation-fetch_page_content {\"url\":\"https://www.businesswire.com/news/home/20220201005547/en/MNTN-Raises-%24119-Million-With-BlackRock-and-Fidelity\",\"max_chars\":12000,\"live\":false,\"prompt\":\"Extract the financing round name, amount raised, announcement date, and the named investors or lead investors for MNTN from this press release. Quote the relevant lines.\",\"session_id\":\"mntn-mountain-com\",\"output_format\":\"text\"}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: MNTN Raises $119 Million With BlackRock and Fidelity\\nURL: https://businesswire.com/news/home/20220201005547/en/MNTN-Raises-%24119-Million-With-BlackRock-and-Fidelity\\n\\nFinancing Round Name:\\n- \\\"Series D financing\\\"\\n- Quote: \\\"MNTN, the leading marketing software platform for Connected TV advertising, today announced that it has raised $119 million in Series D financing.\\\"\\n\\nAmount Raised:\\n- \\\"$119 million\\\"\\n- Quote: \\\"MNTN, the leading marketing s...",
+          "Used keenable-public-evaluation-fetch_page_content {\"url\":\"https://ir.mountain.com/news/news-details/2025/MNTN-Reports-Strong-Second-Quarter-2025-Results/default.aspx\",\"max_chars\":12000,\"live\":false,\"prompt\":\"Extract statements showing whether MNTN is public, when it completed its IPO and began trading, and any mention of the exchange or ticker. Quote the relevant lines.\",\"session_id\":\"mntn-mountain-com\",\"output_format\":\"text\"}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: MNTN Reports Strong Second Quarter 2025 Results\\nURL: https://ir.mountain.com/news/news-details/2025/MNTN-Reports-Strong-Second-Quarter-2025-Results/\\n\\n- \\\"Completed the company's first quarter as a publicly traded company on the New York Stock Exchange\\\"\\n- \\\"MNTN (NYSE: MNTN), a technology platform that brings performance marketing to Connected TV...\\\"\\n- \\\"Completed IPO and began trading as a public company on the New York Stock Exchange on May 22, 2...",
+          "Searched Google with query \"site:sec.gov MNTN 2026 10-Q NYSE MNTN mountain.com\". The results are: \n {\"search_results\":[{\"title\":\"Second quarter revenue grew 21% year-over-year to $82.5 ...\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1891027/000189102726000070/mntnearningsrelease2026-q2.htm\",\"snippet\":\"The Company ended the quarter with $237.3 million in cash and cash equivalents, and no borrowings outstanding. Stock Repurchase Program: On August 3, 2026, the ...\",\"position\":1},{\"title\":\"Press release dated February 10, 2026\",\"link\":\"https://www.sec.gov/Archives/edgar/data/1891027/00018910...",
+          "Used keenable-public-evaluation-fetch_page_content {\"url\":\"https://www.sec.gov/Archives/edgar/data/1891027/000189102726000070/mntnearningsrelease2026-q2.htm\",\"max_chars\":12000,\"live\":false,\"prompt\":\"Extract statements identifying MNTN's current public listing status, exchange, and ticker from this 2026 filing or exhibit. Quote the relevant lines.\",\"session_id\":\"mntn-mountain-com\",\"output_format\":\"text\"}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Document\\nURL: https://www.sec.gov/Archives/edgar/data/1891027/000189102726000070/mntnearningsrelease2026-q2.htm\\n\\nNEW YORK, New York – August 4, 2026 – MNTN (NYSE: MNTN), a technology platform that brings performance marketing to Connected TV, today announced its operational and financial results for the second quarter ended June 30, 2026.\\n\\nMNTN (NYSE: MNTN) is the Hardest Working Software in Television™, bringing unrivaled performance and simplicity..."
+        ]
+      }
+    }
+  ]
+}

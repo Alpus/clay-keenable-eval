@@ -16,6 +16,18 @@ loader.exec_module(runner)
 
 
 class RunnerTests(unittest.TestCase):
+    def test_native_verification_is_isolated_and_prompt_matched(self):
+        with patch.object(runner, 'STRATEGY', 'verify-native'):
+            cfg = runner.config()
+        self.assertEqual(runner.configured_arms(cfg), ('D',))
+        prompt = runner.prompt_for(cfg, 'D')
+        self.assertTrue(prompt.startswith(cfg['prompt']))
+        self.assertNotIn('Keenable', prompt)
+        self.assertIn('up to two of the same eight total calls', prompt)
+        self.assertIn('you must use your native web-search tool', prompt)
+        self.assertEqual(runner.configured_arms({'strategy': 'verify'}), ('C',))
+        self.assertEqual(runner.configured_arms({}), ('A', 'B'))
+
     def test_tool_trace_not_self_report(self):
         record = {'case_id': 'x', 'arm': 'B', 'node_id': 'n'}
         result = {'nodes': [{'nodeId': 'n', 'outputs': {
@@ -390,6 +402,7 @@ class RunnerTests(unittest.TestCase):
             runner.save(root / 'output-schema.json', {})
             (root / 'prompt.txt').write_text('Original prompt.\n')
             (root / 'prompt-verify.txt').write_text('Original prompt.\nVerify latest facts using Keenable.')
+            (root / 'prompt-verify-native.txt').write_text('Original prompt.\nVerify latest facts using native search.')
             state = {'workspace_id': 'test', 'arms': {arm: {'workflow_id': arm, 'node_id': arm} for arm in 'AB'}}
             submissions = []
             def fake_cli(*args, **kwargs):
@@ -451,6 +464,26 @@ class RunnerTests(unittest.TestCase):
                     before = (root / 'comparison' / 'summary.json').read_bytes()
                     runner.reproduce(root / 'comparison')
                     self.assertEqual(before, (root / 'comparison' / 'summary.json').read_bytes())
+                    runner.STRATEGY = 'verify-native'
+                    state['arms'] = {'D': {'workflow_id': 'D', 'node_id': 'D'}}
+                    args.output = root / 'control'
+                    with patch.object(runner, 'cli', side_effect=fake_cli):
+                        runner.run(args)
+                        runner.run(args)
+                    self.assertEqual(submissions[-2:], ['D', 'D'])
+                    self.assertEqual(len(submissions), 8)
+                    runner.save(args.output / 'judgments.json', {'cases': [
+                        {'case_id': case['id'], 'arm': 'D', 'scored_task': 'funding_and_lifecycle',
+                         'fields': {'stage': True}, 'supported_answer': True} for case in cases]})
+                    runner.compare(root / 'baseline', root / 'variant', root / 'four', root / 'control')
+                    four = runner.read(root / 'four' / 'summary.json')
+                    self.assertEqual(set(four['execution_by_arm']), set('ABCD'))
+                    self.assertEqual(four['accuracy']['paired_comparisons']['CD']['ties'], 2)
+                    self.assertEqual(four['comparison_costs']['native_control']['data_credits_observed'], 2)
+                    self.assertEqual(four['data_credits_observed'], 8)
+                    before_four = (root / 'four' / 'summary.json').read_bytes()
+                    runner.reproduce(root / 'four')
+                    self.assertEqual(before_four, (root / 'four' / 'summary.json').read_bytes())
                     # Deliberately mismatched but internally consistent source input.
                     changed = runner.read(root / 'variant' / 'manifest.json')
                     changed['frozen']['cases'][0]['domain'] = 'changed.test'

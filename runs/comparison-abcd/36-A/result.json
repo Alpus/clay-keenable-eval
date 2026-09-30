@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6ckfqRmAmAJQ3sx9",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:14:39.237Z",
+  "duration": "2m 18s",
+  "dataCreditsUsed": 3.5,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6ckfdSV756BEdWcX",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:14:39.246Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "protectai.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Protect AI"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6ckfbUe6D8hYPD8k",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:14:39.259Z",
+      "completedAt": "2026-09-30T11:16:57.982Z",
+      "duration": "2m 18s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "protectai.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Protect AI"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "Palo Alto Networks",
+          "evidence": "[{\"claim\":\"Protect AI is an AI security company whose website says it offers a unified platform to discover, assess, and protect an organization's AI ecosystem.\",\"url\":\"https://protectai.com/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Protect AI homepage: 'Prisma AIRS — Discover, assess and protect your entire AI ecosystem from one, unified platform.'\"},{\"claim\":\"Protect AI's latest evidenced venture equity financing found in public sources was a Series B round of $60 million announced on 2024-08-01.\",\"url\":\"https://evolutionequity.com/protect-ai-raises-60-million-in-series-b-funding-round\",\"publication_date\":\"2024-08-01\",\"event_date\":\"2024-08-01\",\"excerpt\":\"Evolution Equity Partners post title: '[Funding News] Protect AI Raises $60 Million in Series B Funding Round.' The post says Protect AI 'has raised $60 million from investors.'\"},{\"claim\":\"Evolution Equity Partners led Protect AI's Series B round.\",\"url\":\"https://evolutionequity.com/protect-ai-raises-60-million-in-series-b-funding-round\",\"publication_date\":\"2024-08-01\",\"event_date\":\"2024-08-01\",\"excerpt\":\"The funding round was 'led by Evolution Equity Partners.'\"},{\"claim\":\"Evolution Equity's portfolio news index lists the Protect AI Series B item as posted on 2024-08-01, supporting the announcement date.\",\"url\":\"https://evolutionequity.com/category/portfolio-news/\",\"publication_date\":\"unknown\",\"event_date\":\"2024-08-01\",\"excerpt\":\"Portfolio News entry: 'Protect AI Raises $60 Million in Series B Funding Round — Posted on August 1, 2024.'\"},{\"claim\":\"Palo Alto Networks completed its acquisition of Protect AI on 2025-07-22.\",\"url\":\"https://www.paloaltonetworks.com/company/press/2025/palo-alto-networks-completes-acquisition-of-protect-ai\",\"publication_date\":\"2025-07-22\",\"event_date\":\"2025-07-22\",\"excerpt\":\"Palo Alto Networks press release: 'today announced it has completed its acquisition of Protect AI.'\"},{\"claim\":\"Palo Alto Networks had previously announced only an intent to acquire Protect AI on 2025-04-28, so the completed status should be tied to the later closing date.\",\"url\":\"https://www.paloaltonetworks.com/company/press/2025/palo-alto-networks-completes-acquisition-of-protect-ai\",\"publication_date\":\"2025-07-22\",\"event_date\":\"2025-04-28\",\"excerpt\":\"The completion press release links to an earlier page titled 'Palo Alto Networks Announces Intent to Acquire Protect AI,' indicating announcement and closing were separate events.\"}]",
+          "latest_round": "Series B",
+          "round_amount": "60 million",
+          "uncertainties": "A Business Wire primary press release for the Series B appeared in search results, but the page scrape failed, so the funding details here rely primarily on Evolution Equity Partners' 2024-08-01 post and its portfolio index entry. I did not find public evidence of a later venture equity round before the 2025 acquisition, but absence of evidence is noted explicitly. The completion source references an earlier 2025-04-28 intent-to-acquire announcement; lifecycle_event_date here uses the completed-acquisition date 2025-07-22.",
+          "lead_investors": "Evolution Equity Partners",
+          "round_currency": "USD",
+          "company_identity": "Protect AI (protectai.com) sells AI security software, including the Prisma AIRS platform to discover, assess, and protect AI ecosystems.",
+          "lifecycle_status": "acquired",
+          "lifecycle_event_date": "2025-07-22",
+          "round_announcement_date": "2024-08-01"
+        },
+        "reasoning": "I resolved the company from protectai.com, identified its product description from the company website, found its latest evidenced venture equity round from an investor source dated 2024-08-01, and established current lifecycle status from Palo Alto Networks' acquisition completion press release dated 2025-07-22. No stronger public evidence of a later equity round was found in the searched sources before the acquisition.",
+        "stepsTaken": [
+          "Searched Google with query \"Protect AI protectai.com funding acquisition IPO latest round site:protectai.com OR site:news.protectai.com OR site:techcrunch.com OR site:businesswire.com\". The results are: \n {\"search_results\":[{\"title\":\"Protect AI Raises $60M in Series B Financing to Secure ...\",\"link\":\"https://www.businesswire.com/news/home/20240801066345/en/Protect-AI-Raises-%2460M-in-Series-B-Financing-to-Secure-Artificial-Intelligence-and-Machine-Learning-from-Unique-Security-Risks\",\"snippet\":\"$60M Series B round of funding led by Evolution Equity Partners … the company has raised a total of $108.5M. Protect AI acquired SydeLabs prior ...\",\"date\":\"Aug 1, 2024\",\"position\":1},{\"title\":\"Protect AI ...",
+          "Searched Google with query \"Protect AI Palo Alto Networks acquires completes acquisition Protect AI 2025 2026\". The results are: \n {\"search_results\":[{\"title\":\"Palo Alto Networks Completes Acquisition of Protect AI\",\"link\":\"https://www.paloaltonetworks.com/company/press/2025/palo-alto-networks-completes-acquisition-of-protect-ai\",\"snippet\":\"Extends AI security leadership with comprehensive protection for the entire AI lifecycle. SANTA CLARA, Calif., July 22, 2025 /PRNewswire/ ...\",\"position\":1},{\"title\":\"Palo Alto Networks Announces Intent to Acquire Protect AI ...\",\"link\":\"https://www.paloaltonetworks.com/company/press/202...",
+          "Used visitWebpage {\"url\":\"https://protectai.com/\",\"question\":\"What does Protect AI say on its website about what the company does or sells?\"}. The results are: \n \"Relevant webpage text from https://protectai.com:\\n- \\\"Prisma AIRS — Discover, assess and protect your entire AI ecosystem from one, unified platform.\\\"\\n- \\\"Introducing: Managed AI Runtime Security — Deploy enterprise-grade AI security instantly. Get a fully managed, next gen firewall that blocks prompt injections and data leaks—with zero friction to your containers, applications, and cloud infrastructure.\\\"\\n- Navigation/product context: \\\"Products\\\", \\\"Solutions\\\", \\\"Resources\\\", \\\"Get Start...",
+          "Used visitWebpage {\"url\":\"https://www.paloaltonetworks.com/company/press/2025/palo-alto-networks-completes-acquisition-of-protect-ai\",\"question\":\"Did Palo Alto Networks complete its acquisition of Protect AI, and on what date according to this press release?\"}. The results are: \n \"Press release: “Palo Alto Networks Completes Acquisition of Protect AI” — dated “Jul 22, 2025.”\\n\\nRelevant text: “SANTA CLARA, Calif., July 22, 2025 /PRNewswire/ -- Palo Alto Networks® ... today announced it has completed its acquisition of Protect AI ...”\\n\\nUseful link: https://paloaltonetworks.com/company/press/2025/palo-alto-networks-announces-intent-to-acquire-protect-ai--a-game-changing-security-for-ai-company\"",
+          "Used visitWebpage {\"url\":\"https://www.businesswire.com/news/home/20240801066345/en/Protect-AI-Raises-%2460M-in-Series-B-Financing-to-Secure-Artificial-Intelligence-and-Machine-Learning-from-Unique-Security-Risks\",\"question\":\"What round did Protect AI announce, how much was raised, when was it announced, and who led the round?\"}. The results are: \n {\"status\":\"ERROR\",\"message\":\"Error using the website scrape tool. The tool returned an error.\",\"errorDetails\":\"Unknown error in tool execution\",\"errorType\":\"ToolExecutionResponseError\"}",
+          "Searched Google with query \"Protect AI Series B August 2024 led by Evolution Equity Partners press release\". The results are: \n {\"search_results\":[{\"title\":\"News & Insights – Evolution\",\"link\":\"https://evolutionequity.com/news-insights/\",\"snippet\":\"Protect AI Raises $60 Million in Series B Funding Round. arrows link. Cytactic Raised $16M Seed Led by Evolution Equity Partners. Portfolio News Jul 10, 2024.\",\"position\":1},{\"title\":\"Category: Portfolio News\",\"link\":\"https://evolutionequity.com/category/portfolio-news/\",\"snippet\":\"Protect AI Raises $60 Million in Series B Funding Round Posted on August 1, 2024. Seed Led by Ev...",
+          "Used visitWebpage {\"url\":\"https://evolutionequity.com/category/portfolio-news/\",\"question\":\"Find the Protect AI August 1, 2024 portfolio news item and extract the announced round, amount, and lead investor details.\"}. The results are: \n \"Protect AI Raises $60 Million in Series B Funding Round — Posted on August 1, 2024. Link: https://evolutionequity.com/protect-ai-raises-60-million-in-series-b-funding-round\"",
+          "Used visitWebpage {\"url\":\"https://evolutionequity.com/protect-ai-raises-60-million-in-series-b-funding-round\",\"question\":\"What round did Protect AI raise, how much, and who led the round according to this August 1, 2024 post?\"}. The results are: \n \"Aug 1, 2024 post title: “[Funding News] Protect AI Raises $60 Million in Series B Funding Round.”\\n\\nRelevant text from the post:\\n- “Protect AI ... has raised $60 million from investors...”\\n- “The funding round, led by Evolution Equity Partners, values the startup at $400 million.”\\n\\nUseful link:\\n- https://startuprise.io/protect-ai-raises-60-million-series-b-funding\\n\\nRelated link shown on page:\\n- https://evolutionequity.com/protect-ai-raises-60-million-in-series-b-funding-round#mobileMen...",
+          "Searched Google with query \"Protect AI funding 2025 Series C acquisition after Series B\". The results are: \n {\"search_results\":[{\"title\":\"Protect AI Stock & Acquisition Data\",\"link\":\"https://www.upmarket.co/private-markets/pre-ipo/protect-ai/\",\"snippet\":\"Protect AI was acquired by Palo Alto Networks in July 2025. closed a $60M Series B from major investors ・ raised $108.5M total to protect ML systems and AI ...\",\"position\":1},{\"title\":\"analysis of $3.6 billion in agentic AI security funding\",\"link\":\"https://softwarestrategiesblog.com/2026/03/28/agentic-ai-security-startups-funding-mna-rsac-2026/\",\"snip..."
+        ]
+      }
+    }
+  ]
+}

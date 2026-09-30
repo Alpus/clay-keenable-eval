@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6c86vBonzRRKJqBu",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T11:07:18.749Z",
+  "duration": "1m 35s",
+  "dataCreditsUsed": 3.5,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6c86jGZcUnyoNAdY",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T11:07:18.760Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "mangoboost.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "MangoBoost"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6c86P2HBpmkezNbP",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T11:07:18.783Z",
+      "completedAt": "2026-09-30T11:08:54.352Z",
+      "duration": "1m 35s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "mangoboost.io",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "MangoBoost"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"MangoBoost at mangoboost.io is a company building AI data-center infrastructure centered on DPUs.\",\"url\":\"https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward\",\"publication_date\":\"2023-11-10\",\"event_date\":\"2023-11-10\",\"excerpt\":\"MangoBoost, Inc., a leading Data Processing Unit (DPU) and AI server infrastructure company... MangoBoost is a provider of advanced system solutions maximizing AI data center efficiency.\"},{\"claim\":\"MangoBoost announced the closing of a Series A round for $55 million led by IMM Investment and Shinhan Venture Investment, with Korea Development Bank, KB Investment, IM Capital, and Premier Partners also backing the round.\",\"url\":\"https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward\",\"publication_date\":\"2023-11-10\",\"event_date\":\"2023-11-10\",\"excerpt\":\"The funding round, led by IMM Investment and Shinhan Venture Investment and jointly backed by top investors including Korea Development Bank, KB Investment, IM Capital, and Premier Partners, has raised $55 million.\"},{\"claim\":\"As of September 2026, MangoBoost was described by Bloomberg Law as Samsung-backed, profitable, and courting investors for a Series B funding round; the CEO said the company had raised cumulative investments of more than $100 million.\",\"url\":\"https://news.bloomberglaw.com/private-equity/samsung-backed-mangoboost-makes-profit-on-ai-data-center-demand\",\"publication_date\":\"2026-09-09\",\"event_date\":\"2026-09-09\",\"excerpt\":\"MangoBoost is now profitable... is now courting investors for a Series B funding round... The company has raised cumulative investments of more than $100 million.\"},{\"claim\":\"A secondary Dealroom news item reported in December 2025 that MangoBoost had raised a Series B from AMD, Samsung Electronics, Kakao and Aion Asset Management, and had rejected an earlier acquisition offer from Nvidia.\",\"url\":\"https://app.dealroom.co/news/feed/mangoboost-rejects-nvidia-acquisition-raises-series-b-from-amd-samsung-and-kakao\",\"publication_date\":\"2025-12\",\"event_date\":\"2025-12\",\"excerpt\":\"MangoBoost... has secured Series B funding from AMD, Samsung Electronics, Kakao and Aion Asset Management, which invested $6.8 million. It also states the company rejected an acquisition offer from Nvidia earlier this year.\"}]",
+          "latest_round": "Series B",
+          "round_amount": "unknown",
+          "uncertainties": "The strongest primary funding evidence is the company's 2023 Series A press release. A secondary Dealroom item reports a December 2025 Series B, but the snippet/accessible text is ambiguous on amount: it says Aion Asset Management invested $6.8 million, without clearly stating the total round size. Bloomberg Law on 2026-09-09 says MangoBoost was 'courting investors for a Series B funding round,' which conflicts with the reported Dec. 2025 Series B and leaves the latest-round chronology unresolved; this could reflect an error, an unclosed/extended round, or a mislabeled financing stage. No primary company or investor announcement for the purported 2025 Series B was verified in the retrieved sources. Acquisition status is also based only on secondary reporting that Nvidia made an offer and MangoBoost rejected it; no completed acquisition evidence was found.",
+          "lead_investors": "unknown",
+          "round_currency": "unknown",
+          "company_identity": "MangoBoost is an AI infrastructure company that develops DPUs and related system solutions for efficient AI data centers.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2025-12"
+        },
+        "reasoning": "I resolved the company using the exact domain and prioritized public evidence from the company site plus recent independent reporting. The company press release clearly establishes MangoBoost's identity and its closed $55 million Series A in 2023. For current lifecycle, Bloomberg Law in September 2026 indicates MangoBoost is still operating independently, profitable, Samsung-backed, and fundraising, with no evidence of IPO, closure, or completed acquisition. A secondary Dealroom report indicates a December 2025 Series B and rejected Nvidia offer, but because no primary announcement was verified and Bloomberg's 2026 wording conflicts with that stage/timing, I marked the latest round as Series B but left amount, lead investors, and chronology uncertainties explicit.",
+        "stepsTaken": [
+          "Searched Google with query \"MangoBoost mangoboost.io funding acquisition investor site:news OR site:crunchbase.com OR site:linkedin.com OR site:mangoboost.io\". The results are: \n {\"search_results\":[{\"title\":\"Announcing our closing of Series A funding round and way ...\",\"link\":\"https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward\",\"snippet\":\"The funding round, led by IMM Investment and Shinhan Venture Investment and jointly backed by top investors … has raised $55 million\",\"date\":\"Nov 10, 2023\",\"position\":1},{\"title\":\"Financial Details - MangoBoost\",\"link\":\"https://www.crunchbase.com/organization/mangoboost/financial_...",
+          "Used visitWebpage {\"url\":\"https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward\",\"question\":\"What does this page say about MangoBoost's Series A funding amount, date, lead investors, and company business?\"}. The results are: \n \"Press release: “Announcing our closing of Series A funding round and way forward” — dated November 10, 2023.\\n\\nRelevant excerpts:\\n- “MangoBoost, Inc., a leading Data Processing Unit (DPU) and AI server infrastructure company, is excited to announce the successful closing of its Series A funding round.”\\n- “The funding round, led by IMM Investment and Shinhan Venture Investment and jointly backed by top investors including Korea Development Bank, KB Investment, IM Capital, and Premier Partners...",
+          "Searched Google with query \"MangoBoost mangoboost acquisition IPO shutdown funding 2024 2025 2026\". The results are: \n {\"search_results\":[{\"title\":\"Announcing our closing of Series A funding round and way ...\",\"link\":\"https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward\",\"snippet\":\"MangoBoost has secured more than 60 million US dollars in funding and is rapidly expanding its presence in the United States, Canada and South ...\",\"date\":\"Nov 10, 2023\",\"position\":1},{\"title\":\"About MangoBoost | Agentic AI Full-Stack Infrastructure\",\"link\":\"https://www.mangoboost...",
+          "Used visitWebpage {\"url\":\"https://www.chosun.com/english/industry-en/2025/12/29/RM2LZRCRRJH7VFFOUZF32ADNDE/\",\"question\":\"What does this article report about MangoBoost's 2025 funding round, amount, investors, and whether any acquisition offer was accepted or declined?\"}. The results are: \n {\"message\":\"No content found on the website\"}",
+          "Searched Google with query \"MangoBoost Series B December 2025 investors acquisition declined\". The results are: \n {\"search_results\":[{\"title\":\"MangoBoost Rejects NVIDIA, Secures Global Tech ...\",\"link\":\"https://www.chosun.com/english/industry-en/2025/12/29/RM2LZRCRRJH7VFFOUZF32ADNDE/\",\"snippet\":\"NVIDIA made a concrete acquisition offer, but MangoBoost declined it, citing the timing ahead of full-scale mass production.\",\"date\":\"Dec 29, 2025\",\"position\":1},{\"title\":\"Announcing our closing of Series A funding round and way ...\",\"link\":\"https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series...",
+          "Used visitWebpage {\"url\":\"https://news.bloomberglaw.com/private-equity/samsung-backed-mangoboost-makes-profit-on-ai-data-center-demand\",\"question\":\"What does this article say about MangoBoost's current status, profitability, ownership, and fundraising as of September 2026?\"}. The results are: \n \"Article: “Samsung-Backed MangoBoost Makes Profit on AI Data Center Demand,” Bloomberg Law, Sept. 9, 2026, 6:34 AM UTC. Link: https://news.bloomberglaw.com/private-equity/samsung-backed-mangoboost-makes-profit-on-ai-data-center-demand\\n\\nRelevant facts from the page:\\n- MangoBoost is described as “Samsung Electronics Co.-backed.”\\n- “MangoBoost is now profitable,” according to co-founder and CEO Jangwoo Kim.\\n- The profitability was “helped by roaring demand for cost-effective AI data centers.”\\...",
+          "Searched Google with query \"site:dealroom.co MangoBoost rejects Nvidia acquisition raises Series B AMD Samsung Kakao\". The results are: \n {\"search_results\":[{\"title\":\"MangoBoost rejects Nvidia acquisition, raises Series B ...\",\"link\":\"https://app.dealroom.co/news/feed/mangoboost-rejects-nvidia-acquisition-raises-series-b-from-amd-samsung-and-kakao\",\"snippet\":\"The Washington State-based startup rejected an acquisition offer from Nvidia earlier this year, citing timing ahead of mass production. DPUs address data ...\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/s...",
+          "Used visitWebpage {\"url\":\"https://app.dealroom.co/news/feed/mangoboost-rejects-nvidia-acquisition-raises-series-b-from-amd-samsung-and-kakao\",\"question\":\"What does this page report about MangoBoost's Series B round amount, date, investors, and acquisition status?\"}. The results are: \n \"From Dealroom.co: News item title: “MangoBoost rejects Nvidia acquisition, raises Series B from AMD, Samsung and Kakao.” Date shown: Dec 2025. Body text states MangoBoost “has secured Series B funding from AMD, Samsung Electronics, Kakao and Aion Asset Management, which invested $6.8 million.” It also states the company “rejected an acquisition offer from Nvidia earlier this year.” Useful link: https://app.dealroom.co/companies/mangoboost\"",
+          "Searched Google with query \"MangoBoost AMD Samsung Kakao Aion Asset Management Series B Dec 2025\". The results are: \n {\"search_results\":[{\"title\":\"MangoBoost rejects Nvidia acquisition, raises Series B from ...\",\"link\":\"https://app.dealroom.co/news/feed/mangoboost-rejects-nvidia-acquisition-raises-series-b-from-amd-samsung-and-kakao\",\"snippet\":\"MangoBoost, a data processing unit (DPU) company founded by Seoul National University Professor Kim Jang-woo, has secured Series B funding from AMD, Samsung Electronics, Kakao and Aion Asset Management, which invested $6.8 million.\",\"position\":1},{\"title\":\"MangoBoost Rej..."
+        ]
+      }
+    }
+  ]
+}

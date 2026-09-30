@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6hggS2nWXwA2BtFs",
+  "workflow": {
+    "id": "wf_0tm6h66X7iVxzjahRjg",
+    "name": "Funding lifecycle evaluation D"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T13:00:16.931Z",
+  "duration": "1m 59s",
+  "dataCreditsUsed": 3.9,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6hggpqaaG2bUNhxg",
+      "nodeId": "wfn_0tm6h67uBuBJhxVb2Hm",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T13:00:16.939Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "circle.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Circle"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6hgg2s9qeGqAj2jy",
+      "nodeId": "wfn_0tm6h68JRj3sTcusv7e",
+      "nodeName": "Company research D",
+      "status": "completed",
+      "startedAt": "2026-09-30T13:00:16.958Z",
+      "completedAt": "2026-09-30T13:02:16.229Z",
+      "duration": "1m 59s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "circle.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Circle"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"circle.com is Circle, a global financial technology company focused on stablecoins, payments, commerce, and blockchain-based financial applications.\",\"url\":\"https://investor.circle.com/overview/default.aspx\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Circle is a global financial technology firm that enables businesses of all sizes to harness the power of digital currencies and public blockchains for payments, commerce, and financial applications worldwide... and issues, through its regulated affiliates, USDC and EURC stablecoins.\"},{\"claim\":\"Circle announced a $400 million funding round on April 12, 2022.\",\"url\":\"https://www.circle.com/pressroom/circle-announces-400m-funding-round\",\"publication_date\":\"2022-04-12\",\"event_date\":\"2022-Q2 expected close\",\"excerpt\":\"Circle Internet Financial... announced it has entered into an agreement for a $400M funding round... The funding round is expected to close in the second quarter.\"},{\"claim\":\"The named investors in that 2022 round were BlackRock, Fidelity Management and Research, Marshall Wace LLP, and Fin Capital; the company press release does not explicitly identify lead investors.\",\"url\":\"https://www.circle.com/pressroom/circle-announces-400m-funding-round\",\"publication_date\":\"2022-04-12\",\"event_date\":\"2022-04-12\",\"excerpt\":\"...a $400M funding round with investments from BlackRock, Inc., Fidelity Management and Research, Marshall Wace LLP and Fin Capital.\"},{\"claim\":\"Circle was publicly listed by June 11, 2025 as Circle Internet Group, Inc. on the NYSE under ticker CRCL, and the IPO plus full greenshoe brought gross proceeds to about $1.2 billion.\",\"url\":\"https://www.circle.com/pressroom/circle-announces-closing-of-the-full-exercise-of-greenshoe-option-granted-in-the-initial-public-offering-rfe6r\",\"publication_date\":\"2025-06-11\",\"event_date\":\"2025-06-11\",\"excerpt\":\"Circle Internet Group, Inc. (\\\"Circle\\\") (NYSE: CRCL)... The issuance of the additional shares closed on June 11, 2025, bringing the gross proceeds from the initial public offering to Circle and the selling stockholders to approximately $1.2 billion.\"},{\"claim\":\"As of August 5, 2026, Circle was still operating as a public company named Circle Internet Group, Inc. on NYSE: CRCL.\",\"url\":\"https://www.circle.com/pressroom/circle-reports-second-quarter-2026-results\",\"publication_date\":\"2026-08-05\",\"event_date\":\"2026-08-05\",\"excerpt\":\"Circle Internet Group, Inc. (NYSE: CRCL) today announced results for the second quarter of fiscal year 2026.\"}]",
+          "latest_round": "2022 funding round",
+          "round_amount": "400000000",
+          "uncertainties": "The strongest primary funding evidence found is Circle's April 12, 2022 announcement of a $400 million round; I did not find a later primary-source venture equity round within the research budget. The press release says the round was expected to close in Q2 2022, but I did not verify a separate closing date. The company source names participants but does not explicitly designate lead investors. Circle became public in 2025, so later equity financings would not be venture rounds; however, I did not independently read every possible post-IPO capital markets filing. For lifecycle timing, the visited primary source proves Circle was public on NYSE: CRCL by 2025-06-11; it does not by itself establish the exact first trading date, which may have been earlier.",
+          "lead_investors": "unknown",
+          "round_currency": "USD",
+          "company_identity": "Circle Internet Group is a financial technology company that issues USDC/EURC and provides stablecoin, payments, and blockchain infrastructure services.",
+          "lifecycle_status": "public",
+          "lifecycle_event_date": "2025-06-11",
+          "round_announcement_date": "2022-04-12"
+        },
+        "reasoning": "I resolved circle.com to Circle Internet Group using the company and investor-relations sites, identified the latest evidenced venture equity round from Circle's own 2022 funding announcement, and verified current lifecycle status with primary company press releases showing Circle as NYSE: CRCL in 2025 and still public in August 2026. No stronger primary evidence for a later venture equity round was found within the allowed search budget.",
+        "stepsTaken": [
+          "Searched Google with query \"Circle circle.com latest funding round IPO public company site press release 2025 2026\". The results are: \n {\"search_results\":[{\"title\":\"Circle Reports Second Quarter 2026 Results\",\"link\":\"https://www.circle.com/pressroom/circle-reports-second-quarter-2026-results\",\"snippet\":\"NEW YORK — AUGUST 5, 2026 — Circle Internet Group, Inc. (NYSE: CRCL) today announced results for the second quarter of fiscal year 2026.\",\"date\":\"Aug 5, 2026\",\"position\":1},{\"title\":\"Circle Internet Group, Inc. - Investor Relations\",\"link\":\"https://investor.circle.com/overview/default.aspx\",\"snippet\":\"Circle is a global financial...",
+          "Used visitWebpage {\"url\":\"https://www.circle.com/\",\"question\":\"What company operates this domain and how does it describe what it sells or offers?\"}. The results are: \n \"Relevant webpage context:\\n- About page: https://circle.com/about-circle\\n- Home page: https://circle.com/?r=0\\n- Tagline/title: \\\"Navigate what’s next in the new internet financial system\\\" (https://circle.com/current)\\n- Offerings/pages:\\n  - Payments: https://circle.com/use-case/payments\\n  - Currency access: https://circle.com/#w-tabs-0-data-w-pane-1\\n  - Trading services: https://circle.com/#w-tabs-0-data-w-pane-2\\n  - Digital Asset Accounts: https://circle.com/digital-asset-accounts\\n  - ...",
+          "Used visitWebpage {\"url\":\"https://investor.circle.com/overview/default.aspx\",\"question\":\"Does this page identify Circle as a public company, including exchange and ticker, and what does it say Circle does?\"}. The results are: \n \"Relevant page text:\\n- “Circle Investor Relations”\\n- “Circle is a global financial technology firm that enables businesses of all sizes to harness the power of digital currencies and public blockchains for payments, commerce, and financial applications worldwide.”\\n- “Circle is building the world’s largest, most-widely used, stablecoin network, and issues, through its regulated affiliates, USDC and EURC stablecoins.”\\n- “Circle provides a comprehensive suite of financial and technology service...",
+          "Searched Google with query \"site:circle.com pressroom Circle financing round BlackRock Fidelity Marshall Wace 2022 Series F\". The results are: \n {\"search_results\":[{\"title\":\"Circle Announces $400M Funding Round\",\"link\":\"https://www.circle.com/pressroom/circle-announces-400m-funding-round\",\"snippet\":\"a $400M funding round with investments from BlackRock, Inc., Fidelity Management and Research, Marshall Wace LLP and Fin Capital. ... 2022.\",\"date\":\"Apr 12, 2022\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3Acircle.com%20pressroom%20Circle%20financing%20rou...",
+          "Used visitWebpage {\"url\":\"https://www.circle.com/pressroom/circle-announces-400m-funding-round\",\"question\":\"What was the amount, date, and named investors in this funding round, and does the page identify any lead investors?\"}. The results are: \n \"Source: https://circle.com/pressroom\\n\\nPage: “Circle Announces $400M Funding Round”\\nDate: April 12, 2022\\n\\nRelevant text:\\n- “Circle Internet Financial... today announced it has entered into an agreement for a $400M funding round with investments from BlackRock, Inc., Fidelity Management and Research, Marshall Wace LLP and Fin Capital.”\\n- “The funding round is expected to close in the second quarter.”\\n- Subheadline: “BlackRock, Fidelity, Marshall Wace and Fin Capital Participate”\\n- “In ad...",
+          "Searched Google with query \"site:circle.com pressroom Circle initial public offering June 2025 NYSE CRCL\". The results are: \n {\"search_results\":[{\"title\":\"Circle Announces Closing of Greenshoe Option Granted in IPO\",\"link\":\"https://www.circle.com/pressroom/circle-announces-closing-of-the-full-exercise-of-greenshoe-option-granted-in-the-initial-public-offering-rfe6r\",\"snippet\":\"The issuance of the additional shares closed on June 11, 2025, bringing the gross proceeds from the initial public offering to Circle and the ...\",\"date\":\"Jun 11, 2025\",\"position\":1},{\"title\":\"Circle Reports Second Quarter 2025 Results\",\"link\":\"h...",
+          "Used visitWebpage {\"url\":\"https://www.circle.com/pressroom/circle-announces-closing-of-the-full-exercise-of-greenshoe-option-granted-in-the-initial-public-offering-rfe6r\",\"question\":\"What does this page say about Circle's IPO closing date, exchange ticker, and gross proceeds?\"}. The results are: \n \"From the Circle press release titled “Circle Announces Closing of the Full Exercise of Greenshoe Option Granted in the Initial Public Offering” dated June 11, 2025:\\n\\n- “Circle Internet Group, Inc. (“Circle”) (NYSE: CRCL)”\\n- “The issuance of the additional shares closed on June 11, 2025”\\n- “…bringing the gross proceeds from the initial public offering to Circle and the selling stockholders to approximately $1.2 billion.”\"",
+          "Searched Google with query \"Circle Internet Group acquisition completed 2026 funding round post-IPO 2026 NYSE CRCL\". The results are: \n {\"search_results\":[{\"title\":\"Circle Reports Second Quarter 2026 Results\",\"link\":\"https://www.circle.com/pressroom/circle-reports-second-quarter-2026-results\",\"snippet\":\"NEW YORK — AUGUST 5, 2026 — Circle Internet Group, Inc. (NYSE: CRCL) today announced results for the second quarter of fiscal year 2026.\",\"date\":\"Aug 5, 2026\",\"position\":1},{\"title\":\"Circle IPO Timeline and Financing Details\",\"link\":\"https://forgeglobal.com/circle-internet-financial_ipo/\",\"snippet\":\"Circle completed their IPO on ...",
+          "Used visitWebpage {\"url\":\"https://www.circle.com/pressroom/circle-reports-second-quarter-2026-results\",\"question\":\"Does this August 2026 press release identify Circle as a public company, and what name/exchange/ticker does it use?\"}. The results are: \n \"Press release: “Circle Reports Second Quarter 2026 Results”\\nDate: August 5, 2026\\nLink context: /Pressroom/Circle Reports Second Quarter 2026 Results\\n\\nRelevant text from the page:\\n“NEW YORK — AUGUST 5, 2026 — Circle Internet Group, Inc. (NYSE: CRCL) today announced results for the second quarter of fiscal year 2026.”\\n\\nRelated links shown on the page:\\n- Pressroom: https://circle.com/pressroom\\n- Investor Relations: https://investor.circle.com/overview/default.aspx\\n- https://investor.circ..."
+        ]
+      }
+    }
+  ]
+}

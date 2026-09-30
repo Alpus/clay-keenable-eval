@@ -8,3 +8,5 @@
 !output-schema.json
 !cases.json
 !prompt-verify.txt
+
+!prompt-verify-native.txt

@@ -1,0 +1,85 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6b4zi4go7TVQJyHB",
+  "workflow": {
+    "id": "wf_0tm6ahjpWsfUiW3qCZX",
+    "name": "Funding lifecycle evaluation A"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:43:47.423Z",
+  "duration": "1m 21s",
+  "dataCreditsUsed": 3,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6b4zYbDQ3fwRbNFn",
+      "nodeId": "wfn_0tm6ahkjZYnQsZjsCf2",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:43:47.431Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "wayve.ai",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Wayve"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6b4zGJq24hHiwmWS",
+      "nodeId": "wfn_0tm6ahlZtpShRpbH9ko",
+      "nodeName": "Company research A",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:43:47.446Z",
+      "completedAt": "2026-09-30T10:45:08.706Z",
+      "duration": "1m 21s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "wayve.ai",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Wayve"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Wayve at wayve.ai is an autonomous-driving AI company; its homepage says it is building a general-purpose driving intelligence and provides the Wayve AI Driver software for driving automation.\",\"url\":\"https://wayve.ai/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Homepage: 'Autonomy for any vehicle, anywhere.' 'Wayve is building a general-purpose driving intelligence that learns from data and scales across vehicles, geographies, and applications.' It offers 'Wayve AI Driver' mapless, vehicle-agnostic software to unlock driving automation.\"},{\"claim\":\"Wayve announced a Series D financing of $1.2 billion on 2026-02-25 at an $8.6 billion post-money valuation.\",\"url\":\"https://wayve.ai/press/series-d/\",\"publication_date\":\"2026-02-25\",\"event_date\":\"2026-02-25\",\"excerpt\":\"'25 February 2026' ... 'today announced it has raised $1.2 billion in a Series D investment round, bringing its post-money valuation to $8.6 billion.'\"},{\"claim\":\"The Series D was led by Eclipse, Balderton and SoftBank Vision Fund 2, with participation from Microsoft, NVIDIA, Uber, Mercedes-Benz, Nissan and Stellantis.\",\"url\":\"https://wayve.ai/press/series-d/\",\"publication_date\":\"2026-02-25\",\"event_date\":\"2026-02-25\",\"excerpt\":\"The round was 'led by Eclipse, Balderton and SoftBank Vision Fund 2' and included 'Microsoft, NVIDIA and Uber' plus automakers 'Mercedes-Benz, Nissan and Stellantis.'\"},{\"claim\":\"Wayve said it had secured $1.5 billion in total capital in 2026, but the press release distinguishes this from the closed $1.2 billion Series D by noting Uber would invest additional milestone-based capital.\",\"url\":\"https://wayve.ai/press/series-d/\",\"publication_date\":\"2026-02-25\",\"event_date\":\"2026-02-25\",\"excerpt\":\"Page headline says 'secures $1.5B'; body says 'Closed a $1.2B Series D' and 'Uber will invest additional milestone-based capital ... within the broader $1.5B of capital secured.'\"},{\"claim\":\"Wayve Technologies Ltd is an active private limited company in the UK.\",\"url\":\"https://find-and-update.company-information.service.gov.uk/company/10924127\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Companies House overview for WAYVE TECHNOLOGIES LTD shows 'Company status: Active' and 'Company type: Private limited Company.'\"},{\"claim\":\"As of 2026-09-02 Reuters still described Wayve as a self-driving start-up and did not indicate it had been acquired or had gone public.\",\"url\":\"https://www.reuters.com/business/uber-ai-firm-wayve-launch-londons-first-robotaxis-2026-09-02/\",\"publication_date\":\"2026-09-02\",\"event_date\":\"2026-09-02\",\"excerpt\":\"Reuters article on Uber and Wayve launching robotaxis in London refers to Wayve as a 'self-driving start-up' and contains no mention of an IPO or acquisition.\"}]",
+          "latest_round": "Series D",
+          "round_amount": "1.2 billion",
+          "uncertainties": "Wayve's own 2026 press materials/search snippets reference '$1.5B' or '$1.5 billion secured' in 2026, but the underlying press release specifies that the closed venture equity round was a $1.2 billion Series D; the larger figure includes additional milestone-based capital from Uber and should not be treated as the round size. I found affirmative evidence that the UK legal entity remains an active private limited company and no evidence of a completed acquisition or IPO before the 2026-09-30 cutoff, but absence of such a transaction is inherently harder to prove exhaustively.",
+          "lead_investors": "Eclipse, Balderton, SoftBank Vision Fund 2",
+          "round_currency": "USD",
+          "company_identity": "Wayve is a UK autonomous-driving software company building and licensing the Wayve AI Driver, a mapless general-purpose driving intelligence for automakers and mobility platforms.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-02-25"
+        },
+        "reasoning": "I identified the company from its exact domain and relied primarily on Wayve's own website for business description and the 2026 funding announcement, then checked Companies House for legal status and Reuters for a current independent description with no indication of an acquisition or IPO. The latest evidenced venture equity round before the 2026-09-30 cutoff is the $1.2B Series D announced on 2026-02-25; the larger $1.5B figure is explicitly broader than the closed round because it includes additional milestone-based capital from Uber.",
+        "stepsTaken": [
+          "Searched Google with query \"Wayve wayve.ai funding 2024 2025 acquisition IPO site:wayve.ai OR site:newsroom.wayve.ai\". The results are: \n {\"search_results\":[{\"title\":\"Investors | Backed by the world's leading mobility innovators\",\"link\":\"https://wayve.ai/company/investors/\",\"snippet\":\"In 2026, Wayve secured $1.5 billion to accelerate commercial deployment of its global autonomy platform. The investment brought together leaders across AI ...\",\"position\":1},{\"title\":\"Wayve secures $1.5B to deploy its global autonomy platform\",\"link\":\"https://wayve.ai/press/series-d/\",\"snippet\":\"Wayve, the leader in embodied AI for autonomous driving...",
+          "Used visitWebpage {\"url\":\"https://wayve.ai/press/series-d/\",\"question\":\"What round type, amount, currency, announcement date, lead investors, valuation, and business description are stated on this page?\"}. The results are: \n \"25 February 2026 | Investors — “Wayve secures $1.5B to deploy its global autonomy platform”\\n\\nRelevant stated details:\\n- “Closed a $1.2B Series D led by financial investors, with participation from Microsoft, NVIDIA and Uber, alongside investment from global automakers Mercedes-Benz, Nissan and Stellantis.”\\n- “Uber will invest additional milestone-based capital to scale Wayve-powered robotaxi deployments globally, within the broader $1.5B of capital secured to support commercial rollout.”\\n-...",
+          "Searched Google with query \"Wayve IPO acquisition 2026 site:wayve.ai OR site:reuters.com\". The results are: \n {\"search_results\":[{\"title\":\"Investors | Backed by the world's leading mobility innovators\",\"link\":\"https://wayve.ai/company/investors/\",\"snippet\":\"In 2026, Wayve secured $1.5 billion to accelerate commercial deployment of its global autonomy platform. The investment brought together leaders across AI ...\",\"position\":1},{\"title\":\"Wayve secures $1.5B to deploy its global autonomy platform\",\"link\":\"https://wayve.ai/press/series-d/\",\"snippet\":\"London, UK, 25 Feb 2026 – Wayve, the leader in embodied...",
+          "Used visitWebpage {\"url\":\"https://www.reuters.com/business/uber-ai-firm-wayve-launch-londons-first-robotaxis-2026-09-02/\",\"question\":\"Does this Reuters article describe Wayve as private, startup, acquired, or public, and does it mention any IPO or acquisition status?\"}. The results are: \n \"- Headline/byline: “Uber and AI-firm Wayve launch London's first robotaxis” (Reuters, Sept. 2/3, 2026)\\n- Photo caption: “A Wayve autonomous car drives through a residential street during a technology demonstration as the self-driving start-up prepares to announce plans to launch autonomous rides on Uber...”\\n- Article text: “Uber (UBER.N) launched autonomous rides in London on Thursday using AI technology developed by Britain's Wayve...”\\n- Article text: “Uber partnered with Wayve in 2024, inc...",
+          "Searched Google with query \"Wayve Technologies Ltd private limited company active Companies House\". The results are: \n {\"search_results\":[{\"title\":\"WAYVE TECHNOLOGIES LTD overview - Companies House\",\"link\":\"https://find-and-update.company-information.service.gov.uk/company/10924127\",\"snippet\":\"Registered office address: 230 York Way, London, England, N7 9AG. Company status: Active. Company type: Private limited Company. Incorporated on: 21 August 2017 ...\",\"position\":1},{\"title\":\"Wayve: funding, investors & company record | UKCI\",\"link\":\"https://ukcapitalintelligence.co.uk/companies/wayve/\",\"snippet\":\"Companies ...",
+          "Used visitWebpage {\"url\":\"https://find-and-update.company-information.service.gov.uk/company/10924127\",\"question\":\"What are the company status and company type for Wayve Technologies Ltd, and what exact legal name appears on this page?\"}. The results are: \n \"WAYVE TECHNOLOGIES LTD\\nCompany Overview for WAYVE TECHNOLOGIES LTD (10924127)\\nhttps://find-and-update.company-information.service.gov.uk/company/10924127\\n\\nCompany status: Active\\nCompany type: Private limited Company\"",
+          "Used visitWebpage {\"url\":\"https://wayve.ai/\",\"question\":\"How does the company describe itself and what does it sell or provide on its homepage?\"}. The results are: \n \"- Homepage description: “Autonomy for any vehicle, anywhere.”\\n- Homepage self-description: “Wayve is building a general-purpose driving intelligence that learns from data and scales across vehicles, geographies, and applications.”\\n- What it provides/sells on homepage:\\n  - “Wayve AI Driver” — “our mapless, vehicle agnostic software to unlock all levels of driving automation.”\\n  - “Uber rides powered by Wayve are now available in London.” / “Wayve supervised autonomous rides. Now on Uber.”\\n ..."
+        ]
+      }
+    }
+  ]
+}

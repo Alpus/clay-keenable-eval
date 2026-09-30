@@ -1,0 +1,87 @@
+{
+  "workspace": {
+    "id": "1403344",
+    "name": "Aleksandr's Workspace"
+  },
+  "runId": "wfr_0tm6hd0c2UXYJtdadcT",
+  "workflow": {
+    "id": "wf_0tm6h66X7iVxzjahRjg",
+    "name": "Funding lifecycle evaluation D"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T12:58:12.416Z",
+  "duration": "1m 40s",
+  "dataCreditsUsed": 3.9,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6hd0nytjjnfnVYQo",
+      "nodeId": "wfn_0tm6h67uBuBJhxVb2Hm",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T12:58:12.424Z",
+      "inputs": {},
+      "outputs": {
+        "as_of": "2026-09-30",
+        "domain": "biorce.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Biorce"
+      }
+    },
+    {
+      "stepId": "wfrs_0tm6hd04UrvzEtCQxpU",
+      "nodeId": "wfn_0tm6h68JRj3sTcusv7e",
+      "nodeName": "Company research D",
+      "status": "completed",
+      "startedAt": "2026-09-30T12:58:12.439Z",
+      "completedAt": "2026-09-30T12:59:53.084Z",
+      "duration": "1m 40s",
+      "inputs": {
+        "as_of": "2026-09-30",
+        "domain": "biorce.com",
+        "task_type": "funding_and_lifecycle",
+        "company_name": "Biorce"
+      },
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "acquirer": "not_applicable",
+          "evidence": "[{\"claim\":\"Biorce is a company building AI software/infrastructure for clinical trials, centered on its Aika platform.\",\"url\":\"https://www.biorce.com/\",\"publication_date\":\"unknown\",\"event_date\":\"unknown\",\"excerpt\":\"Biorce is building Aika, the first unified clinical trial infrastructure for agile clinical teams... The first operating system for clinical development.\"},{\"claim\":\"Biorce announced/secured a $52.5 million Series A financing.\",\"url\":\"https://www.clinicaltrialsarena.com/news/biorce-series-a-funding-round-ai-clinical-trials/\",\"publication_date\":\"2026-02-02\",\"event_date\":\"2026-02-02\",\"excerpt\":\"Spanish healthtech company Biorce has secured $52.5m through a Series A funding round.\"},{\"claim\":\"The Series A article names investors including TZR Capital, Endeavour Catalyst, Norrsken VC and Mustard Seed Maze, plus angel investors such as Nik Storonsky and Paulo Rosado, but does not clearly identify a lead investor in the page text reviewed.\",\"url\":\"https://www.clinicaltrialsarena.com/news/biorce-series-a-funding-round-ai-clinical-trials/\",\"publication_date\":\"2026-02-02\",\"event_date\":\"2026-02-02\",\"excerpt\":\"The financing round, which includes investors TZR Capital, Endeavour Catalyst, Norrsken VC and Mustard Seed Maze, as well as angel investors like Revolut CEO Nik Storonsky and Mistral AI co-founder and CEO Paulo Rosado...\"},{\"claim\":\"Before the Series A, Biorce had raised an additional €8.5m across a €3.5m raise in November 2024 and a €5m extension from Norrsken VC.\",\"url\":\"https://www.clinicaltrialsarena.com/news/biorce-series-a-funding-round-ai-clinical-trials/\",\"publication_date\":\"2026-02-02\",\"event_date\":\"2024-11\",\"excerpt\":\"On top of Biorce’s Series A financing, the company raised a further €8.5m ($10m), consisting of a €3.5m raise in November 2024, as well as a €5m extension from Norrsken VC.\"},{\"claim\":\"Another public report describes the $52.5 million financing as a round Biorce had 'closed,' supporting that the financing was completed rather than merely planned.\",\"url\":\"https://biotech-spain.com/en/articles/biorce-closes-a-52-5-million-funding-round-to-accelerate-the-development-of-its-artificial-intelligence-software-for-clinical-trials/\",\"publication_date\":\"2026-02-02\",\"event_date\":\"2026-02-02\",\"excerpt\":\"Title/slug indicates: Biorce closes a 52.5 million funding round... wording says 'closes,' which suggests the round is described as closed.\"},{\"claim\":\"A freshness search through 2026-09-30 found recent funding-profile and funding-round references for Biorce but no surfaced evidence of an acquisition, IPO, or shutdown in the search results reviewed.\",\"url\":\"https://www.google.com/search?q=Biorce%20September%202026%20acquisition%20IPO%20funding&hl=en&gl=us\",\"publication_date\":\"2026-09-30\",\"event_date\":\"2026-09-30\",\"excerpt\":\"Search results reviewed showed funding/profile pages (e.g., PitchBook, Tracxn, biotech-spain, Clinical Trials Arena) and no surfaced acquisition, IPO, or closure result for Biorce in the results inspected.\"}]",
+          "latest_round": "Series A",
+          "round_amount": "52.5 million",
+          "uncertainties": "Lead investor for the Series A is unresolved from the strongest pages reviewed: the Clinical Trials Arena page lists investors but does not explicitly identify a lead, while a later search-result snippet from Vestbee suggested DST Global Partners led the round; because that claim was not verified by a visited source, lead investor is left unknown. Lifecycle status is best read as private_independent based on the 2026 Series A financing and absence of later surfaced acquisition/IPO/closure evidence in freshness searches, but I did not find a direct company or regulatory statement explicitly saying it remained privately held as of 2026-09-30. Biotech-Spain supported that the round was 'closed,' but the page extract available did not expose full body text or visible publication metadata beyond the search-result date.",
+          "lead_investors": "unknown",
+          "round_currency": "USD",
+          "company_identity": "Biorce is a Barcelona-based health/medtech company that sells the Aika AI operating system and related software modules for designing and running clinical trials.",
+          "lifecycle_status": "private_independent",
+          "lifecycle_event_date": "unknown",
+          "round_announcement_date": "2026-02-02"
+        },
+        "reasoning": "I resolved the entity from biorce.com, then identified the strongest public funding evidence from Clinical Trials Arena and corroborating coverage from Biotech-Spain. I also performed a freshness search for newer funding, acquisition, IPO, or closure signals through the 2026-09-30 cutoff. The latest evidenced venture equity round I found was the $52.5 million Series A announced on 2026-02-02. No stronger public evidence surfaced for a later round or a change in ownership/listing status before the cutoff.",
+        "stepsTaken": [
+          "Searched Google with query \"Biorce biorce.com funding acquisition IPO site:news OR site:techcrunch OR site:biorce.com\". The results are: \n {\"message\":\"No data returned from search query\"}",
+          "Searched Google with query \"biorce.com Biorce company funding round\". The results are: \n {\"search_results\":[{\"title\":\"Biorce secures $52.5m in Series A to expand AI clinical ...\",\"link\":\"https://www.clinicaltrialsarena.com/news/biorce-series-a-funding-round-ai-clinical-trials/\",\"snippet\":\"On top of Biorce's Series A financing, the company raised a further €8.5m ($10m), consisting of a €3.5m raise in November 2024, as well as a €5m ...\",\"date\":\"Feb 2, 2026\",\"position\":1},{\"title\":\"Biorce closes a $52.5 million funding round to accelerate ...\",\"link\":\"https://biotech-spain.com/en/arti...",
+          "Searched Google with query \"site:biorce.com Biorce funding Series A press release\". The results are: \n {\"message\":\"No data returned from search query\"}",
+          "Searched Google with query \"biorce.com company about AI clinical trials\". The results are: \n {\"search_results\":[{\"title\":\"Biorce\",\"link\":\"https://www.biorce.com/\",\"snippet\":\"We are developing tech for clinical trials and AI is a big part of it. Those who own a clinically specific data flywheel within a single integrated ...\",\"position\":1},{\"title\":\"Biorce\",\"link\":\"https://uk.linkedin.com/company/biorce\",\"snippet\":\"Our mission is to dramatically reduce the time and cost of clinical trials. Aika, our AI platform, supports the various stages of the clinical trial ...\",\"position\":2},{\"title...",
+          "Used visitWebpage {\"url\":\"https://www.biorce.com/\",\"question\":\"What does Biorce say it is and what products or services does it provide?\"}. The results are: \n \"- “Biorce is building Aika, the first unified clinical trial infrastructure for agile clinical teams.”\\n- “The first operating system for clinical development.”\\n- “Aika is the operating system that orchestrates clinical development from end-to-end. Combining domain-specific AI and clinical intelligence across every stage of trial development.”\\n- “We’ve built the first clinical-native operating system that helps teams to accelerate timelines and improve efficiency, and enhance quality across t...",
+          "Used visitWebpage {\"url\":\"https://www.clinicaltrialsarena.com/news/biorce-series-a-funding-round-ai-clinical-trials/\",\"question\":\"What funding round did Biorce announce, for how much, on what date, and who led it? Does the article mention prior rounds?\"}. The results are: \n \"Article: “Biorce secures $52.5m in Series A to expand AI clinical trial tech” — Clinical Trials Arena. Date: February 2, 2026. Link: https://clinicaltrialsarena.com/news/biorce-series-a-funding-round-ai-clinical-trials\\n\\nRelevant excerpts:\\n- “Spanish healthtech company Biorce has secured $52.5m through a Series A funding round...”\\n- “The financing round, which includes investors TZR Capital, Endeavour Catalyst, Norrsken VC and Mustard Seed Maze, as well as angel investors like Revolut CEO Ni...",
+          "Searched Google with query \"Biorce acquisition IPO shutdown 2026\". The results are: \n {\"search_results\":[{\"title\":\"Biorce closes a $52.5 million funding round to accelerate ...\",\"link\":\"https://biotech-spain.com/en/articles/biorce-closes-a-52-5-million-funding-round-to-accelerate-the-development-of-its-artificial-intelligence-software-for-clinical-trials/\",\"snippet\":\"Biorce has closed a $52.5 million investment round (approximately €44.3 million) with the aim of accelerating the development of its artificial ...\",\"position\":1},{\"title\":\"Biorce closes $52.5MM Series A to accelerat...",
+          "Used visitWebpage {\"url\":\"https://biotech-spain.com/en/articles/biorce-closes-a-52-5-million-funding-round-to-accelerate-the-development-of-its-artificial-intelligence-software-for-clinical-trials/\",\"question\":\"What round or funding event did Biorce announce, on what date, for how much, and who were the investors or lead investors? Does it mention whether the round closed?\"}. The results are: \n \"Relevant webpage context:\\n- Article slug/title: \\\"Biorce closes a 52.5 million funding round to accelerate the development of its artificial intelligence software for clinical trials\\\"\\n- URL path shown: /articles/by-Biorce-closes-a-52-5-million-funding-round-to-accelerate-the-development-of-its-artificial-intelligence-software-for-clinical-trials\\n- This indicates: company = Biorce; funding event = funding round; amount = 52.5 million; wording says \\\"closes,\\\" which suggests the round is desc...",
+          "Searched Google with query \"Biorce September 2026 acquisition IPO funding\". The results are: \n {\"search_results\":[{\"title\":\"Biorce secures $52.5m in Series A to expand AI clinical ...\",\"link\":\"https://www.clinicaltrialsarena.com/news/biorce-series-a-funding-round-ai-clinical-trials/\",\"snippet\":\"On top of Biorce's Series A financing, the company raised a further €8.5m ($10m), consisting of a €3.5m raise in November 2024, as well as a €5m ...\",\"date\":\"Feb 2, 2026\",\"position\":1},{\"title\":\"Global Healthcare and Life Sciences - Q1 2026 Review\",\"link\":\"https://dealforma.com/global-healthcare-an..."
+        ]
+      }
+    }
+  ]
+}

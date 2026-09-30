@@ -13,6 +13,7 @@ The business outcome is avoiding incorrect prospect qualification caused by stal
 | A | Identical fixed configuration | Native Clay web search and page access |
 | B | Same configuration as A | Native Clay tools plus Keenable search and fetch |
 | C | Same model/schema and original prompt prefix, plus verification instructions | Native first, then Keenable for gaps, conflicts and freshness |
+| D | Same verification prompt as C, changing provider references only | Native search and page reading for both research and verification |
 
 A remains a full research agent. Both A and B explicitly check for newer acquisition, IPO and closure evidence. B is an augmentation test. It does not test replacement of Clay's search. Saved tool-step summaries distinguish availability from actual use.
 
@@ -21,6 +22,8 @@ The original prompt does not force B to use Keenable. Both agents may choose the
 After observing B's optional tool use, the user requested a separate C condition. All original A/B runs finished before C began. C uses every original company and preserves A/B unchanged. It reserves up to two of the same eight requested research calls for Keenable. A latest/current claim explicitly triggers verification. C is a post hoc strategy experiment with a changed prompt, not a held-out or isolated search-engine comparison.
 
 If a tool needs a short explanation of its name, put an equivalent tool-use instruction in both prompts. Do not add special research hints or target URLs only to B.
+
+D was requested after C to control for the added verification instructions. It preserves the same 50 inputs, cutoff, model, schema and eight-call instruction, without Keenable or other custom tools. C/D isolates the intended provider difference more closely, but the sequential single runs remain exploratory.
 
 ## Cases and evidence
 
@@ -106,3 +109,16 @@ Lifecycle cases have preselected lifecycle targets; historical funding is not fu
 **Where Keenable helped:** C used Keenable search and fetch to find a [company-issued Lessn disclosure](https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/sydney-au-mar-3-2026-acn-newswire-accounts-payable-automation/68628893) reporting a $300,000 investment in November 2025. A/B stopped at the earlier August round. The saved trace supports this retrieval attribution. C also found Wayve's later extension, but native tools established the final precise facts, so that improvement cannot be attributed solely to Keenable.
 
 **Where it did not solve the problem:** all conditions missed later extensions for ElevenLabs and Harvey. All got the 21 lifecycle statuses right. C still made additional errors outside those targets, including a wrong historical funding claim for Circle. All four B field-score wins over A occurred without calling Keenable, so those gains do not establish a Keenable contribution. Merely enabling Keenable had little aggregate effect; the prompted strategy did better in this exploratory run, with higher credit use and a changed prompt.
+
+## Native verification control results
+
+D completed all 50 companies using GPT-5.4, the same inputs, cutoff, output schema and verification instructions as C. Only the provider references changed to native search and page reading; Keenable was disabled, with zero observed Keenable calls. D cost 204.3 data credits and 50 actions.
+
+- **Complete supported answers:** C 42/47, D 38/47. C passed four cases D failed: Alan, Lessn, CyberArk and Chime.
+- **Field differences:** C also scored one additional ElevenLabs target, although both failed that company overall. D had no target-field wins over C.
+- **Why:** D omitted Alan’s round stage, missed Lessn’s later financing, confused CyberArk’s announcement page date with acquisition completion, and cited Chime’s expected trading date without proving actual first trading. These differences include retrieval, extraction and citation errors, not only search coverage.
+- **Unscored claims:** D corrected C’s Circle funding claim but introduced errors such as Protect AI’s amount units and Red Canary’s completion date. Scores cover only the preselected targets.
+
+This control was added after inspecting C, with visible condition labels during source adjudication. It tests the same verification strategy with native tools in one later run; it does not establish a repeatable causal effect. Replit’s later Visa investment has undisclosed terms, so existing positive-anchor targets remain consistent across arms rather than claiming exhaustive latest-event verification.
+
+The eight-call limit remained a prompt instruction: 22/50 D traces exceeded it. Actual tool counts are preserved in the [combined report](../runs/comparison-abcd/report.md). Twelve offline runner tests passed, including D isolation, resume, four-condition comparison and replay.
