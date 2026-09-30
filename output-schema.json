@@ -1,0 +1,46 @@
+{
+  "company_identity": {
+    "type": "string",
+    "description": "Identify the business at the supplied domain in one short sentence."
+  },
+  "latest_round": {
+    "type": "string",
+    "description": "Most recent evidenced venture equity round or extension by the cutoff; unknown if unverified. Do not replace a round with total funding, debt, an acquisition or an IPO."
+  },
+  "round_announcement_date": {
+    "type": "string",
+    "description": "YYYY-MM-DD when established, otherwise YYYY-MM or unknown. Explain different announcement and closing dates in uncertainties."
+  },
+  "round_amount": {
+    "type": "string",
+    "description": "Amount raised in that specific round or extension as a number written in text. Use unknown when not established."
+  },
+  "round_currency": {
+    "type": "string",
+    "description": "Original currency ISO code when established; unknown otherwise. Do not convert."
+  },
+  "lead_investors": {
+    "type": "string",
+    "description": "Names of lead investors for that round, or unknown."
+  },
+  "lifecycle_status": {
+    "type": "string",
+    "description": "One of acquired, public, private_independent, closed, pending_acquisition, unknown. Require affirmative evidence and distinguish announced from completed transactions."
+  },
+  "lifecycle_event_date": {
+    "type": "string",
+    "description": "Date of the relevant lifecycle event when established, or unknown."
+  },
+  "acquirer": {
+    "type": "string",
+    "description": "Acquirer name for completed or pending acquisitions, otherwise not_applicable or unknown."
+  },
+  "evidence": {
+    "type": "string",
+    "description": "A JSON array encoded as text. Each item has claim, url, publication_date, event_date, and a short supporting excerpt or faithful paraphrase. Tie each substantive claim to evidence; do not invent a URL or date."
+  },
+  "uncertainties": {
+    "type": "string",
+    "description": "Conflicting sources, absent evidence, date semantics, and unresolved latest/current claims. Use none only when no relevant uncertainty remains."
+  }
+}

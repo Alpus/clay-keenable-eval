@@ -1,0 +1,508 @@
+#!/usr/bin/env python3
+"""Bounded Clay A/B runner. Python standard library; never reads reference answers."""
+import argparse
+import datetime as dt
+import fcntl
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import shutil
+import subprocess
+import sys
+import time
+
+ROOT = Path(__file__).resolve().parent
+LOCAL = ROOT / '.local'
+STATE = LOCAL / 'state.json'
+FIELDS = ('company_name', 'domain', 'as_of', 'task_type')
+MODEL = 'gpt-5.4'
+TERMINAL = {'completed', 'failed', 'cancelled'}
+
+
+def now():
+    return dt.datetime.now(dt.timezone.utc).isoformat()
+
+
+def read(path):
+    return json.loads(Path(path).read_text())
+
+
+def save(path, value):
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_name(path.name + '.tmp')
+    with temporary.open('w') as stream:
+        json.dump(value, stream, indent=2, ensure_ascii=False)
+        stream.write('\n')
+        stream.flush()
+        os.fsync(stream.fileno())
+    temporary.replace(path)
+
+
+def digest(value):
+    return hashlib.sha256(json.dumps(value, sort_keys=True).encode()).hexdigest()
+
+
+def cli(*args, payload=None, archive=None):
+    executable = os.environ.get('CLAY_BIN') or shutil.which('clay')
+    if not executable:
+        raise RuntimeError('Clay CLI missing. Install it and run clay login first.')
+    command = [executable, *args]
+    result = subprocess.run(command, input=json.dumps(payload) if payload is not None else None,
+                            text=True, capture_output=True, timeout=120)
+    if archive:
+        save(archive, {'command': command[1:], 'exit_code': result.returncode,
+                       'stdout': result.stdout, 'stderr': result.stderr, 'observed_at': now()})
+    if result.returncode:
+        raise RuntimeError(f'Clay exited {result.returncode}: {result.stderr.strip()}')
+    return json.loads(result.stdout)
+
+
+def config():
+    return {'prompt': (ROOT / 'prompt.txt').read_text(), 'model': MODEL,
+            'schema': read(ROOT / 'output-schema.json')}
+
+
+def schema_clean(schema):
+    # Clay adds field IDs and an empty options value to ordinary string fields.
+    return {key: {k: v for k, v in field.items()
+                  if k != 'id' and not (k == 'options' and v in ('', None))}
+            for key, field in schema.items()}
+
+
+def node_spec(arm, trigger_node, cfg, claygent_id=None):
+    node = {'nodeType': 'agent', 'name': f'Company research {arm}',
+            'inputSchema': {'type': 'object', 'properties': {
+                field: {'type': 'string', 'sourceNodeId': trigger_node, 'sourcePath': '$.' + field}
+                for field in FIELDS}}}
+    if claygent_id:
+        node['agentClaygentId'] = claygent_id
+    else:
+        node.update(agentName=f'Funding lifecycle evaluation {arm}', agentPrompt=cfg['prompt'],
+                    agentModel=cfg['model'], outputSchema=cfg['schema'])
+    return node
+
+
+def mutation(state, label, args, payload=None):
+    if state.get('pending_mutation'):
+        raise RuntimeError('Unresolved setup mutation. Inspect .local journal before recovery; no automatic retry.')
+    log = LOCAL / f'mutation-{time.time_ns()}.json'
+    state['pending_mutation'] = {'label': label, 'archive': str(log), 'started_at': now()}
+    save(STATE, state)
+    result = cli(*args, payload=payload, archive=log)
+    state.pop('pending_mutation')
+    # Caller checkpoints returned IDs immediately, without another network call.
+    return result
+
+
+def state_read():
+    if not STATE.exists():
+        raise RuntimeError('Run setup first.')
+    return read(STATE)
+
+
+def validate(workflow):
+    result = cli('workflows', 'graph', 'validate', workflow)
+    if not result.get('valid') or result.get('errors') or result.get('warnings'):
+        raise RuntimeError('Graph requires attention: ' + json.dumps(result))
+    return result
+
+
+def setup():
+    cfg = config()
+    who = cli('whoami')
+    state = read(STATE) if STATE.exists() else {'created_at': now(), 'arms': {},
+        'workspace_id': who['workspace']['id'], 'configuration_hash': digest(cfg)}
+    if state['workspace_id'] != who['workspace']['id'] or state['configuration_hash'] != digest(cfg):
+        raise RuntimeError('Workspace/configuration differs from existing setup. Preserve state; review explicitly.')
+    for arm in ('A', 'B'):
+        entry = state['arms'].setdefault(arm, {})
+        if not entry.get('workflow_id'):
+            made = mutation(state, f'create {arm} workflow', ['workflows', 'create', '--name',
+                            f'Funding lifecycle evaluation {arm}'])
+            entry.update(workflow_id=made['id'], url=made['url'])
+            save(STATE, state)
+            print(f"{arm}: {entry['url']}", flush=True)
+        workflow = entry['workflow_id']
+        if not entry.get('trigger_id'):
+            made = mutation(state, f'create {arm} trigger', ['workflows', 'triggers', 'create', workflow,
+                '--input', '-'], {'triggerType': 'manual', 'inputSchema': {'type': 'object',
+                'properties': {field: {'type': 'string'} for field in FIELDS}, 'required': list(FIELDS)}})
+            entry['trigger_id'] = made['resourceId']
+            save(STATE, state)
+        trigger = cli('workflows', 'triggers', 'get', entry['trigger_id'])
+        entry['trigger_node_id'] = trigger['workflowNodeId']
+        save(STATE, state)
+        if not entry.get('node_id'):
+            spec = node_spec(arm, entry['trigger_node_id'], cfg)
+            spec['incomingEdges'] = [{'sourceNode': entry['trigger_node_id']}]
+            made = mutation(state, f'create {arm} agent', ['workflows', 'nodes', 'create', workflow,
+                            '--input', '-'], spec)
+            entry['node_id'] = made['nodeId']
+            save(STATE, state)
+        node = cli('workflows', 'nodes', 'get', workflow, entry['node_id'])['node']
+        entry['claygent_id'] = node['agentClaygentId']
+        entry['validation'] = validate(workflow)
+        save(STATE, state)
+    preflight(state, cfg)
+    print('Setup validated. Verify native tools on both agents and enable Keenable only on B in the UI.')
+    print(json.dumps(state['arms'], indent=2))
+
+
+def refresh():
+    state, cfg = state_read(), config()
+    if state['configuration_hash'] != digest(cfg):
+        raise RuntimeError('Setup files changed. Review the configuration before refreshing the binding.')
+    entry = state['arms']['B']
+    workflow = entry['workflow_id']
+    graph = cli('workflows', 'graph', 'get', workflow, '--mode', 'full')
+    expected_ids = {entry['trigger_node_id'], entry['node_id']}
+    if entry.get('replacement_node_id'):
+        expected_ids.add(entry['replacement_node_id'])
+    if {n['id'] for n in graph['nodes']} != expected_ids:
+        raise RuntimeError('Owned B graph has unexpected nodes; refusing to rewire or delete.')
+    if not entry.get('replacement_node_id'):
+        old = cli('workflows', 'nodes', 'get', workflow, entry['node_id'])['node']
+        spec = node_spec('B', entry['trigger_node_id'], cfg, old['agentClaygentId'])
+        made = mutation(state, 'create B replacement', ['workflows', 'nodes', 'create', workflow,
+                        '--input', '-'], spec)
+        entry['replacement_node_id'] = made['nodeId']
+        save(STATE, state)
+    replacement = cli('workflows', 'nodes', 'get', workflow, entry['replacement_node_id'])['node']
+    if replacement['agentPrompt'] != cfg['prompt']:
+        if replacement['agentPrompt'].split() != cfg['prompt'].split():
+            raise RuntimeError('B prompt has substantive changes. Review them before refreshing the binding.')
+        # Builder reformats Markdown when saving tool settings. Restore the
+        # checked-in bytes with a prompt-only update that preserves tool settings.
+        mutation(state, 'restore B prompt formatting', ['workflows', 'nodes', 'update', workflow,
+                 entry['replacement_node_id'], '--input', '-'], {'agentPrompt': cfg['prompt']})
+        save(STATE, state)
+    mutation(state, 'disconnect old B node', ['workflows', 'nodes', 'update', workflow,
+             entry['node_id'], '--input', '-'], {'incomingEdges': []})
+    save(STATE, state)
+    mutation(state, 'connect replacement B node', ['workflows', 'nodes', 'update', workflow,
+             entry['replacement_node_id'], '--input', '-'],
+             {'incomingEdges': [{'sourceNode': entry['trigger_node_id']}]})
+    save(STATE, state)
+    rewired = cli('workflows', 'graph', 'get', workflow)['summary']['edges']
+    if len(rewired) != 1 or rewired[0]['sourceNodeId'] != entry['trigger_node_id'] or rewired[0]['targetNodeId'] != entry['replacement_node_id']:
+        raise RuntimeError('B replacement edge did not persist. Old node retained for inspection.')
+    mutation(state, 'delete owned old B node', ['workflows', 'nodes', 'delete', workflow, entry['node_id']])
+    entry['retired_node_ids'] = entry.get('retired_node_ids', []) + [entry['node_id']]
+    entry['node_id'] = entry.pop('replacement_node_id')
+    save(STATE, state)
+    preflight(state, cfg)
+    print('B binding refreshed and both graphs validated. No model run was started.')
+
+
+def preflight(state, cfg):
+    who = cli('whoami')
+    if state['workspace_id'] != who['workspace']['id']:
+        raise RuntimeError('Wrong Clay workspace.')
+    snapshots = {}
+    for arm, entry in state['arms'].items():
+        workflow = entry['workflow_id']
+        validation = validate(workflow)
+        graph = cli('workflows', 'graph', 'get', workflow, '--mode', 'full')
+        nodes = {node['id']: node for node in graph['nodes']}
+        if set(nodes) != {entry['trigger_node_id'], entry['node_id']}:
+            raise RuntimeError(f'{arm}: expected exactly the owned trigger and agent.')
+        node = nodes[entry['node_id']]
+        if node['agentPrompt'] != cfg['prompt'] or node['agentModel'] != cfg['model']:
+            raise RuntimeError(f'{arm}: actual prompt/model differs from frozen files.')
+        if schema_clean(node['outputSchema']) != schema_clean(cfg['schema']):
+            raise RuntimeError(f'{arm}: actual output schema differs from frozen file.')
+        properties = node['inputSchema'].get('properties', node['inputSchema'])
+        for field in FIELDS:
+            if properties[field].get('sourceNodeId') != entry['trigger_node_id'] or properties[field].get('sourcePath') != '$.' + field:
+                raise RuntimeError(f'{arm}: incorrect pinned input {field}.')
+        edges = graph['summary']['edges']
+        if len(edges) != 1 or edges[0]['sourceNodeId'] != entry['trigger_node_id'] or edges[0]['targetNodeId'] != entry['node_id']:
+            raise RuntimeError(f'{arm}: unexpected execution edges.')
+        trigger = cli('workflows', 'triggers', 'get', entry['trigger_id'])
+        snapshots[arm] = {'node': {k: v for k, v in node.items() if k != 'recentOutputPaths'},
+                          'trigger': trigger, 'validation': validation}
+        snapshots[arm]['node']['outputSchema'] = schema_clean(node['outputSchema'])
+    if set(snapshots) != {'A', 'B'}:
+        raise RuntimeError('Both A and B are required.')
+    return snapshots
+
+
+def summarize(result, record):
+    agents = [n for n in result.get('nodes', []) if n.get('nodeId') == record['node_id']]
+    outputs = agents[0].get('outputs', {}) if agents else {}
+    steps = outputs.get('stepsTaken', [])
+    trace_available = isinstance(outputs.get('stepsTaken'), list)
+    names = []
+    for step in steps:
+        if isinstance(step, str):
+            if step.startswith('Searched Google with query "'):
+                names.append('searchGoogle')
+            else:
+                match = re.match(r'^Used\s+(\S+)\s', step)
+                if match:
+                    names.append(match.group(1))
+    keenable_calls = sum('search_web_pages' in name or 'fetch_page_content' in name for name in names)
+    research_calls = names.count('searchGoogle') + names.count('visitWebpage') + keenable_calls
+    latency = None
+    if record.get('submitted_at') and record.get('terminal_observed_at'):
+        latency = (dt.datetime.fromisoformat(record['terminal_observed_at']) -
+                   dt.datetime.fromisoformat(record['submitted_at'])).total_seconds()
+    return {'case_id': record['case_id'], 'arm': record['arm'], 'run_id': result.get('runId'),
+            'status': result.get('status'), 'data_credits': result.get('dataCreditsUsed'),
+            'action_credits': result.get('actionCreditsUsed'), 'provider_duration': result.get('duration'),
+            'submitted_at': record.get('submitted_at'), 'terminal_observed_at': record.get('terminal_observed_at'),
+            'submission_to_terminal_observed_seconds': latency,
+            'structured_outputs': outputs.get('structuredOutputs'), 'steps_taken': steps,
+            'observed_tool_names': names,
+            'research_tool_call_count': research_calls if trace_available else None,
+            'native_search_calls': names.count('searchGoogle') if trace_available else None,
+            'native_fetch_calls': names.count('visitWebpage') if trace_available else None,
+            'keenable_calls': keenable_calls if trace_available else None,
+            'trace_available': trace_available,
+            'keenable_tool_used': bool(keenable_calls) if trace_available else None,
+            'tool_attribution_note': 'Capability names are interpreted only from stepsTaken. Confirm their configured provider in UI; self-report is not used.',
+            'error': result.get('error')}
+
+
+def aggregate_judgments(items, planned):
+    groups = {arm: {'fields': {}, 'supported_answer': {'correct': 0, 'total': 0},
+                   'all_target_fields_correct': {'correct': 0, 'total': 0}} for arm in ('A', 'B')}
+    for key, item in items.items():
+        group = groups[key[1]]
+        scored = {field: value for field, value in item['fields'].items() if value is not None}
+        for field, value in scored.items():
+            counter = group['fields'].setdefault(field, {'correct': 0, 'total': 0})
+            counter['correct'] += int(value)
+            counter['total'] += 1
+        if scored:
+            group['all_target_fields_correct']['correct'] += int(all(scored.values()))
+            group['all_target_fields_correct']['total'] += 1
+        if item['supported_answer'] is not None:
+            group['supported_answer']['correct'] += int(item['supported_answer'])
+            group['supported_answer']['total'] += 1
+    paired = {'A_wins': 0, 'B_wins': 0, 'ties': 0, 'incomparable': 0, 'cases': []}
+    for case_id in sorted({case_id for case_id, _ in planned}):
+        pair = [items.get((case_id, arm)) for arm in ('A', 'B')]
+        row = {'case_id': case_id}
+        if any(item is None for item in pair):
+            row.update(outcome='incomparable', reason='missing_judgment')
+        else:
+            fields = [{k: v for k, v in item['fields'].items() if v is not None} for item in pair]
+            if not fields[0] or set(fields[0]) != set(fields[1]):
+                row.update(outcome='incomparable', reason='no_matching_nonnull_field_set',
+                           A_fields=sorted(fields[0]), B_fields=sorted(fields[1]))
+            else:
+                left, right = sum(fields[0].values()), sum(fields[1].values())
+                row.update(outcome='A_wins' if left > right else 'B_wins' if right > left else 'ties',
+                           A_correct=left, B_correct=right, total=len(fields[0]), scored_fields=sorted(fields[0]))
+        paired[row['outcome']] += 1
+        paired['cases'].append(row)
+    complete = set(items) == planned
+    return {'by_arm': groups, 'paired_cases': paired, 'complete_judgment_coverage': complete,
+            'accuracy_status': 'complete' if complete else 'partial',
+            'judged_case_arms': len(items), 'planned_case_arms': len(planned)}
+
+
+def judge_summary(path, manifest, rows):
+    planned = {(record['case_id'], record['arm']): record for record in manifest['runs']}
+    if not path.exists():
+        return {'calculated': False, 'complete_judgment_coverage': False, 'accuracy_status': 'not_calculated',
+                'planned_case_arms': len(planned), 'judged_case_arms': 0,
+                'reason': 'No judgments.json. No accuracy calculated.'}
+    judgments = read(path)
+    known = {(row['case_id'], row['arm']) for row in rows}
+    items = {}
+    tasks = ('funding_and_lifecycle', 'entity_resolution')
+    for item in judgments['cases']:
+        key = (item['case_id'], item['arm'])
+        if key not in known or key not in planned or key in items:
+            raise RuntimeError('Judgments contain an unknown or duplicate case/arm.')
+        if item['scored_task'] not in tasks:
+            raise RuntimeError('Unknown scored_task in judgments.')
+        expected_task = planned[key].get('inputs', {}).get('task_type')
+        if expected_task and expected_task != item['scored_task']:
+            raise RuntimeError('Judgment task does not match the frozen case task.')
+        if any(value is not None and not isinstance(value, bool)
+               for value in [*item['fields'].values(), item['supported_answer']]):
+            raise RuntimeError('Judgments must use true, false or null for unscored fields.')
+        items[key] = item
+    def subset(task, exclude_keenable=False):
+        relevant = {key for key, record in planned.items()
+                    if record.get('inputs', {}).get('task_type') == task
+                    and (not exclude_keenable or key[0] != 'keenable')}
+        selected = {key: item for key, item in items.items() if key in relevant}
+        return aggregate_judgments(selected, relevant)
+    main = subset('funding_and_lifecycle')
+    return {'calculated': True, 'source': path.name, 'main_task_only': True,
+            'by_arm': main['by_arm'], 'paired_cases': main['paired_cases'],
+            'complete_judgment_coverage': set(items) == set(planned),
+            'accuracy_status': 'complete' if set(items) == set(planned) else 'partial',
+            'judged_case_arms': len(items), 'planned_case_arms': len(planned), 'observed_case_arms': len(rows),
+            'main': main, 'excluding_keenable': subset('funding_and_lifecycle', True),
+            'entity_resolution': subset('entity_resolution'),
+            'scoring_policy': 'Pair outcomes compare correct field counts only when both non-null field sets match. '
+                'Null fields are unscored. All-target correctness requires at least one non-null field and all such fields true. '
+                'supported_answer covers target facts only. Additional claim arrays are not counted again.'}
+
+
+def reproduce(output):
+    manifest = read(output / 'manifest.json')
+    rows = []
+    for record in manifest['runs']:
+        path = output / record['key'] / 'result.json'
+        if path.exists():
+            rows.append(summarize(read(path), record))
+    summary = {'configuration_hash': manifest['frozen_hash'], 'runs': rows,
+               'planned_runs': len(manifest['runs']), 'observed_runs': len(rows),
+               'completed_runs': sum(row['status'] == 'completed' for row in rows),
+               'data_credits_observed': sum(row['data_credits'] or 0 for row in rows),
+               'action_credits_observed': sum(row['action_credits'] or 0 for row in rows),
+               'missing_cost_observations': sum(row['data_credits'] is None or row['action_credits'] is None for row in rows)}
+    summary['accuracy'] = judge_summary(output / 'judgments.json', manifest, rows)
+    save(output / 'summary.json', summary)
+    print(json.dumps({k: v for k, v in summary.items() if k != 'runs'}, indent=2))
+
+
+def run(args):
+    if not args.allow_credit_use:
+        raise RuntimeError('Live submissions require --allow-credit-use; existing Clay credits may be consumed.')
+    cases = read(ROOT / 'cases.json')
+    limit = len(cases) if args.limit is None else args.limit
+    if not 1 <= limit <= len(cases):
+        raise RuntimeError('--limit must be positive and no larger than the case count.')
+    stop_after_pairs = args.stop_after_pairs
+    if stop_after_pairs is not None and not 1 <= stop_after_pairs <= limit:
+        raise RuntimeError('--stop-after-pairs must be positive and no larger than --limit.')
+    if not 1 <= args.concurrency <= 4:
+        raise RuntimeError('--concurrency must be 1..4.')
+    if len({case['id'] for case in cases}) != len(cases):
+        raise RuntimeError('Duplicate case IDs.')
+    for case in cases:
+        if set(case) != {'id', *FIELDS} or not all(isinstance(v, str) and v for v in case.values()):
+            raise RuntimeError('Case fields must be exactly id/company_name/domain/as_of/task_type strings.')
+    state, cfg = state_read(), config()
+    actual = preflight(state, cfg)
+    frozen = {'config': cfg, 'cases': cases, 'limit': limit, 'actual': actual,
+              'workspace_id': state['workspace_id']}
+    output = args.output.resolve()
+    output.mkdir(parents=True, exist_ok=True)
+    manifest_path = output / 'manifest.json'
+    if manifest_path.exists():
+        manifest = read(manifest_path)
+        # Earlier manifests included concurrency. Preserve their exact snapshot
+        # and hash, excluding only that operational field from semantic equality.
+        saved_semantic = {k: v for k, v in manifest['frozen'].items() if k != 'concurrency'}
+        if manifest['frozen_hash'] != digest(manifest['frozen']):
+            raise RuntimeError('Resume rejected: stored frozen snapshot does not match its hash.')
+        if saved_semantic != frozen:
+            raise RuntimeError('Resume rejected: input/configuration/actual bindings changed.')
+    else:
+        if any(output.iterdir()):
+            raise RuntimeError('New run output directory must be empty.')
+        planned = []
+        for index, case in enumerate(cases[:limit]):
+            for arm in ('A', 'B') if index % 2 == 0 else ('B', 'A'):
+                entry = state['arms'][arm]
+                planned.append({'key': f'{index+1:02d}-{arm}', 'case_id': case['id'], 'arm': arm,
+                    'inputs': {field: case[field] for field in FIELDS}, 'workflow_id': entry['workflow_id'],
+                    'node_id': entry['node_id'], 'status': 'not_started'})
+        manifest = {'created_at': now(), 'frozen_hash': digest(frozen), 'frozen': frozen, 'runs': planned}
+        save(manifest_path, manifest)
+    manifest.setdefault('execution_history', []).append({
+        'invoked_at': now(), 'concurrency': args.concurrency, 'polling_timeout_seconds': args.timeout,
+        'stop_after_pairs': stop_after_pairs})
+    save(manifest_path, manifest)
+    # Checkpoints do not change the frozen plan. All mutations happen in this one
+    # scheduler under the process lock, including concurrent in-flight jobs.
+    selected = manifest['runs'][:stop_after_pairs * 2] if stop_after_pairs else manifest['runs']
+    waiting, active = [], []
+    deadlines = {}
+    for record in selected:
+        folder = output / record['key']
+        if record['status'] in TERMINAL:
+            continue
+        if not record.get('run_id') and (folder / 'start.json').exists():
+            record['run_id'] = read(folder / 'start.json')['runId']
+            save(manifest_path, manifest)
+        if record.get('run_id'):
+            active.append(record)
+            deadlines[record['key']] = time.monotonic() + args.timeout
+        elif record['status'] != 'not_started':
+            raise RuntimeError(f"Ambiguous submission for {record['key']}. Inspect start-call.json; never retry automatically.")
+        else:
+            waiting.append(record)
+    while waiting or active:
+        while waiting and len(active) < args.concurrency:
+            record = waiting.pop(0)
+            folder = output / record['key']
+            record.update(status='submitting', submitted_at=now())
+            save(manifest_path, manifest)
+            started = cli('workflows', 'runs', 'test', record['workflow_id'], '--inputs', '-',
+                          payload=record['inputs'], archive=folder / 'start-call.json')
+            save(folder / 'start.json', started)
+            record.update(run_id=started['runId'], status=started['status'])
+            save(manifest_path, manifest)
+            active.append(record)
+            deadlines[record['key']] = time.monotonic() + args.timeout
+            print(f"{record['key']} {record['case_id']}: {record['run_id']}", flush=True)
+        record = active.pop(0)
+        result = cli('workflows', 'runs', 'get', record['workflow_id'], record['run_id'], '--wait', '30', '--verbose')
+        save(output / record['key'] / 'result.json', result)
+        record['status'] = result['status']
+        if result['status'] in TERMINAL:
+            record['terminal_observed_at'] = now()
+        save(manifest_path, manifest)
+        if result['status'] == 'paused' or any(n.get('waitingReason') == 'agent_step_limit_reached' for n in result.get('nodes', [])):
+            raise RuntimeError('Run needs human continuation. Resume this directory later; other recorded runs may still be active.')
+        if result['status'] not in TERMINAL:
+            if time.monotonic() >= deadlines[record['key']]:
+                raise RuntimeError('Polling budget exhausted. Resume the same command/output directory; recorded runs may still be active.')
+            active.append(record)
+        reproduce(output)
+    if stop_after_pairs:
+        print(f'Stopped after {stop_after_pairs} pairs. Resume the same output without --stop-after-pairs.')
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    sub = parser.add_subparsers(dest='command', required=True)
+    for command in ('doctor', 'setup', 'bind-refresh'):
+        sub.add_parser(command)
+    live = sub.add_parser('run', help='Run or resume the same --output directory; alternating paired submission order.')
+    live.add_argument('--limit', type=int, default=None, help='Cases in the frozen plan; default all cases. Two runs per case.')
+    live.add_argument('--stop-after-pairs', type=int, help='Stop after the first N terminal pairs; omit on resume to finish the same plan.')
+    live.add_argument('--concurrency', type=int, default=2, help='Maximum in-flight runs, 1..4; recorded per invocation (default 2).')
+    live.add_argument('--output', type=Path, required=True)
+    live.add_argument('--allow-credit-use', action='store_true')
+    live.add_argument('--timeout', type=int, default=600, help='Polling seconds per run; expiry never resubmits.')
+    offline = sub.add_parser('reproduce', help='Regenerate summary from saved files without network or reference answers.')
+    offline.add_argument('--output', type=Path, required=True)
+    args = parser.parse_args()
+    if args.command == 'run' and args.timeout < 1:
+        parser.error('--timeout must be positive.')
+    if args.command == 'reproduce':
+        reproduce(args.output)
+        return
+    LOCAL.mkdir(parents=True, exist_ok=True)
+    with (LOCAL / 'runner.lock').open('w') as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        if args.command == 'doctor':
+            who = cli('whoami')
+            print(json.dumps({'workspace': who['workspace'], 'authenticated': True}, indent=2))
+        elif args.command == 'setup':
+            setup()
+        elif args.command == 'bind-refresh':
+            refresh()
+        else:
+            run(args)
+
+
+if __name__ == '__main__':
+    try:
+        main()
+    except (RuntimeError, OSError, ValueError, KeyError, subprocess.TimeoutExpired) as error:
+        print(f'Error: {error}', file=sys.stderr)
+        sys.exit(1)

@@ -1,0 +1,22 @@
+{
+  "dataset_id": "clay-company-funding-lifecycle-exploratory-2026-09-30",
+  "frozen_before_company_research_runs": true,
+  "as_of": "2026-09-30",
+  "files": {
+    "cases.json": "4838a4db24605ed728c9873da4c4c5a99fff1f2067a9f2c0d05136fcbeb39b3a",
+    "prompt.txt": "01e5b742b40c2213f8f49326571955605a04c8876c02c796caa89606e1c38c70",
+    "output-schema.json": "fd4acdf1ca0b045c587b29eb503610741a66c2eba0475943ffabae009e8a08c3"
+  },
+  "source_discovery": "Primary sources independently collected before evaluation, using ordinary web search rather than Keenable.",
+  "warning": "Exploratory purposive sample. The reference answers are not a claim of exhaustive absence of later events.",
+  "frozen_at": "2026-09-30T10:40:13.955214+00:00",
+  "case_count": 50,
+  "reference_freeze_note": "All 50 identities and shared configuration fixed before any company answer. Initial eight reference cases already verified. Expansion reference research is independent and blind to evaluation outputs; full reference hashes will be recorded before running expansion cases.",
+  "reference_frozen_at": "2026-09-30T10:41:19.330331+00:00",
+  "reference_sha256": "ec230990755ea4b06f09a86bfa4bcd98119846e3e8cb7fe512f52caa3ee004f9",
+  "reference_status": "All 50 references finalized before expansion runs and before viewing first-pair answers.",
+  "reference_amendment": {
+    "at": "2026-09-30T10:42:59.486099+00:00",
+    "reason": "Pre-expansion contract review separated Nscale debt from latest equity, and allowed equivalent original-round-plus-extension field representation. No expansion answers observed."
+  }
+}

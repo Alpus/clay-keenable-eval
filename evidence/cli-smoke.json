@@ -1,0 +1,53 @@
+{
+  "runId": "wfr_0tm6a5wnmwnbvXb7Xs3",
+  "workflow": {
+    "id": "wf_0tm69nsEjhsQek3B5aq",
+    "name": "Keenable evaluation smoke test"
+  },
+  "status": "failed",
+  "startedAt": "2026-09-30T10:22:44.590Z",
+  "duration": "6s",
+  "error": "Claygent failed: I inspected the available tools in this session. The exact connected service tool name `custom-fetch_page_content` requested by the user is not defined, and I must use tool names exactly as provided. Because I cannot invent or substitute tools, I could not perform the smoke test or capture an actual fetch error from that tool.",
+  "dataCreditsUsed": 0.1999999999999997,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 1,
+    "active": 0,
+    "waiting": 0,
+    "failed": 1,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 50
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6a5wEv7dSqqf4x73",
+      "nodeId": "wfn_0tm6a26o8QYBVfa3Bo5",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:22:44.605Z",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "stepId": "wfrs_0tm6a5w442xyvjYacX5",
+      "nodeId": "wfn_0tm6a4kBD7Bo9UQQvwu",
+      "nodeName": "Keenable smoke (verified prompt)",
+      "status": "failed",
+      "startedAt": "2026-09-30T10:22:44.625Z",
+      "completedAt": "2026-09-30T10:22:50.950Z",
+      "duration": "6s",
+      "errors": [
+        "Claygent failed: I inspected the available tools in this session. The exact connected service tool name `custom-fetch_page_content` requested by the user is not defined, and I must use tool names exactly as provided. Because I cannot invent or substitute tools, I could not perform the smoke test or capture an actual fetch error from that tool."
+      ],
+      "inputs": {},
+      "outputs": {
+        "error": "Claygent failed: I inspected the available tools in this session. The exact connected service tool name `custom-fetch_page_content` requested by the user is not defined, and I must use tool names exactly as provided. Because I cannot invent or substitute tools, I could not perform the smoke test or capture an actual fetch error from that tool.",
+        "executedAt": "2026-09-30T10:22:50.930Z"
+      }
+    }
+  ]
+}

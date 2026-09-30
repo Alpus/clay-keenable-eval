@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-09-30T10:21:06.247Z",
+  "surface": "Claygent Builder free test",
+  "model": "gpt-5.4",
+  "prompt": "Connection smoke test. Call custom-fetch_page_content exactly once with url=https://example.com, live=true and max_chars=2000. This custom tool is the connected Keenable tool even if its name does not contain Keenable or MCP. Return the fetched page title and URL. If the call fails, return the actual error. Do not substitute searchGoogle or visitWebpage.",
+  "native_web_search_enabled": true,
+  "keenable_mcp_url": "https://api.keenable.ai/mcp",
+  "events": [
+    {
+      "type": "tool-input-available",
+      "toolCallId": "call_T1SE0S0ZLjNED39hu02hZBk2",
+      "toolName": "custom-fetch_page_content",
+      "input": {
+        "url": "https://example.com",
+        "max_chars": 2000,
+        "live": true,
+        "prompt": "Return the page title and canonical or fetched URL only.",
+        "session_id": "smoke-test-1",
+        "output_format": "json"
+      }
+    },
+    {
+      "type": "tool-output-available",
+      "toolCallId": "call_T1SE0S0ZLjNED39hu02hZBk2",
+      "output": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"url\":\"https://example.com/\",\"title\":\"Example Domain\",\"content\":\"Title: None provided in content\\nURL: None provided in content\",\"description\":\"\"}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tool-input-available",
+      "toolName": "returnData",
+      "result": "{\"title\":\"Example Domain\",\"url\":\"https://example.com/\"}"
+    },
+    {
+      "type": "finish",
+      "finishReason": "tool-calls",
+      "actual_model": "gpt-5.4"
+    }
+  ]
+}

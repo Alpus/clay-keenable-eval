@@ -1,0 +1,2541 @@
+{
+  "dataset_id": "clay-company-funding-lifecycle-exploratory-2026-09-30",
+  "as_of": "2026-09-30",
+  "status": "reference_frozen_before_expansion_runs",
+  "model_runs_performed": true,
+  "selection_method": "Fifty identities were selected before any company answer was inspected. Eight initial cases were expanded by 24 funding and 18 lifecycle cases following the user request for sample size and prospective difficulty. Reference collection used ordinary web search and primary sources, independently of Keenable and blind to evaluated outputs. This is a purposive, technology-heavy exploratory sample, not a representative benchmark.",
+  "evaluation_contract": {
+    "model_inputs": "Provide only company_name, input_domain, as_of and the shared task instructions. Keep expected facts and source URLs out of both arms' prompts.",
+    "arms": [
+      "Claygent native",
+      "same Claygent configuration with Keenable retrieval available"
+    ],
+    "latest_event_caveat": "The supplied events are verified positive facts. Absence of a later event from this bounded review does not prove that none exists. Accept a later, correctly dated event supported by a primary source published on or before the cutoff and adjudicate it before scoring.",
+    "unknown_policy": "Do not replace missing amounts, closing dates or ownership evidence with guesses. An undated page has publication_date null and a separate accessed_at date.",
+    "funding_score_scope": "Score disclosed positive funding facts for 28 funding cases; current lifecycle facts for 21 acquired/public cases. Freeman is a separate entity-resolution probe. Unknown reference values are not negative facts and are not scored as required abstentions.",
+    "icp_rule": "For a hypothetical independent privately held VC-backed ICP, completed acquisition and public listing are exclusions. A proposed or terminated transaction alone does not establish acquired status.",
+    "claim_limit": "No claim of Keenable benefit or persistent Clay failure follows from this dataset. Such claims require actual paired runs and source adjudication."
+  },
+  "companies": [
+    {
+      "id": "keenable",
+      "company_name": "Keenable",
+      "input_domain": "keenable.ai",
+      "stratum": "recent_vc_round_user_requested",
+      "industry": "Search infrastructure for AI agents",
+      "geography": null,
+      "expected": {
+        "verified_funding_stage": "Seed",
+        "verified_funding_announcement_date": "2026-08-25",
+        "amount_usd": null,
+        "lead_investors": [
+          "Accel"
+        ],
+        "other_named_investors": [
+          "Conviction"
+        ],
+        "current_lifecycle": "unknown",
+        "answer": "Accel announced that it led Keenable's seed round on August 25, 2026. The cited announcement does not disclose a round amount."
+      },
+      "sources": [
+        {
+          "url": "https://www.accel.com/news/our-seed-investment-in-keenable-search-infrastructure-for-better-ai-agents",
+          "publisher": "Accel",
+          "publication_date": "2026-08-25",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Seed round",
+            "Accel lead",
+            "Conviction participation",
+            "announcement date"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "Round amount is not disclosed by the cited source.",
+        "This announcement alone does not prove current independent ownership or absence of a later round.",
+        "The reference set is incomplete for the round amount. Do not penalize a supported amount from another reliable source. Amount is not a scored field for this case until adjudicated."
+      ],
+      "score_dimensions": [
+        "funding_stage",
+        "announcement_date",
+        "lead_investor",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "wayve",
+      "company_name": "Wayve",
+      "input_domain": "wayve.ai",
+      "stratum": "recent_vc_round",
+      "industry": "Autonomous driving",
+      "geography": "United Kingdom",
+      "expected": {
+        "verified_funding_stage": "Series D extension",
+        "verified_funding_announcement_date": "2026-04-15",
+        "amount_usd": 60000000,
+        "named_investors": [
+          "AMD",
+          "Arm",
+          "Qualcomm Ventures"
+        ],
+        "previous_round": {
+          "stage": "Series D",
+          "announcement_date": "2026-02-25",
+          "amount_usd": 1200000000
+        },
+        "current_lifecycle": "unknown",
+        "answer": "Wayve announced a $60 million Series D extension on April 15, 2026, from AMD, Arm and Qualcomm Ventures. It followed the $1.2 billion Series D announced on February 25."
+      },
+      "sources": [
+        {
+          "url": "https://wayve.ai/press/series-d-extension/",
+          "publisher": "Wayve",
+          "publication_date": "2026-04-15",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Series D extension",
+            "$60 million",
+            "investors",
+            "UK headquarters"
+          ]
+        },
+        {
+          "url": "https://wayve.ai/press/series-d/",
+          "publisher": "Wayve",
+          "publication_date": "2026-02-25",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Original $1.2 billion Series D"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "Do not conflate the original release's $1.5 billion headline, which includes conditional capital, with the $1.2 billion Series D or the later $60 million extension.",
+        "Independent ownership and the absence of later fundraising remain unproven by this bounded evidence set."
+      ],
+      "score_dimensions": [
+        "funding_stage",
+        "extension_recognition",
+        "announcement_date",
+        "event_amount",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "aikido_security",
+      "company_name": "Aikido Security",
+      "input_domain": "aikido.dev",
+      "stratum": "recent_vc_round",
+      "industry": "Cybersecurity",
+      "geography": "Belgium",
+      "expected": {
+        "verified_funding_stage": "Series B",
+        "verified_funding_announcement_date": "2026-01-14",
+        "amount_usd": 60000000,
+        "lead_investors": [
+          "DST Global"
+        ],
+        "current_lifecycle": "unknown",
+        "answer": "Aikido announced a $60 million Series B led by DST Global on January 14, 2026, at a $1 billion valuation."
+      },
+      "sources": [
+        {
+          "url": "https://www.aikido.dev/blog/aikido-funding-series-b",
+          "publisher": "Aikido Security",
+          "publication_date": "2026-01-14",
+          "updated_date": "2026-08-12",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Series B",
+            "$60 million",
+            "DST Global lead",
+            "announcement date"
+          ]
+        },
+        {
+          "url": "https://www.aikido.dev/company/press-kit",
+          "publisher": "Aikido Security",
+          "publication_date": null,
+          "updated_date": "2026-06-26",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Founded in Ghent, Belgium"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "The August 12 page update is not a new round announcement.",
+        "This round announcement does not prove absence of later fundraising or a subsequent ownership change."
+      ],
+      "score_dimensions": [
+        "funding_stage",
+        "announcement_date",
+        "event_amount",
+        "lead_investor",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "material_depot",
+      "company_name": "Material Depot",
+      "input_domain": "materialdepot.com",
+      "domain_aliases": [
+        "materialdepot.in"
+      ],
+      "stratum": "recent_vc_round",
+      "industry": "Home interior materials retail",
+      "geography": "India",
+      "expected": {
+        "verified_funding_stage": "Series A",
+        "verified_funding_announcement_date": "2026-02-06",
+        "announcement_date_semantics": "Date of the company's own LinkedIn announcement, not an asserted legal closing date or earliest public report.",
+        "amount_usd": 10000000,
+        "lead_investors": [
+          "Accel",
+          "Stellaris Venture Partners"
+        ],
+        "current_lifecycle": "unknown",
+        "answer": "Material Depot's own February 6, 2026 announcement reports a $10 million Series A co-led by Accel and Stellaris Venture Partners. Accel published its investment note on February 4."
+      },
+      "sources": [
+        {
+          "url": "https://www.linkedin.com/posts/materialdepot_were-happy-to-share-a-major-milestone-for-activity-7425536192487702529-G_lO",
+          "publisher": "Material Depot",
+          "publication_date": "2026-02-06",
+          "publication_timestamp": "2026-02-06T13:49:48.056Z",
+          "date_evidence": "SocialMediaPosting.datePublished in the public page's JSON-LD",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Series A",
+            "$10 million",
+            "Accel and Stellaris co-lead"
+          ]
+        },
+        {
+          "url": "https://www.accel.com/news/partnering-with-material-depot-building-design-first-indian-homes",
+          "publisher": "Accel",
+          "publication_date": "2026-02-04",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Investment relationship",
+            "Indian home interiors business"
+          ]
+        },
+        {
+          "url": "https://materialdepot.in/",
+          "final_url": "https://materialdepot.com/",
+          "publisher": "Material Depot",
+          "publication_date": null,
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Domain alias redirects to current company website",
+            "Interior materials retail and Indian stores"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "Do not require February 6 as the only valid funding date: February 4 is the investor note date, and other primary evidence may establish another announcement or closing date.",
+        "No exact closing date is established. Current independence and absence of a later round are not proved."
+      ],
+      "score_dimensions": [
+        "funding_stage",
+        "announcement_month",
+        "event_amount",
+        "lead_investors",
+        "entity_resolution",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "wiz",
+      "company_name": "Wiz",
+      "input_domain": "wiz.io",
+      "stratum": "completed_acquisition",
+      "industry": "Cloud security",
+      "geography": "United States",
+      "expected": {
+        "current_lifecycle": "acquired",
+        "acquirer": "Google",
+        "completed_acquisition_date": "2026-03-11",
+        "independent_private_vc_icp_eligible": false,
+        "historical_funding": {
+          "announcement_date": "2024-05-07",
+          "amount_usd": 1000000000,
+          "round_label": null
+        },
+        "answer": "Google completed its acquisition of Wiz on March 11, 2026. Wiz's earlier $1 billion funding round is historical and must not override acquired status."
+      },
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/wiz-acquisition/",
+          "publisher": "Google",
+          "publication_date": "2026-03-11",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Completed acquisition",
+            "Wiz joins Google Cloud",
+            "Completion date"
+          ]
+        },
+        {
+          "url": "https://www.wiz.io/blog/celebrating-our-1-billion-funding-round-and-12-billion-valuation",
+          "publisher": "Wiz",
+          "publication_date": "2024-05-07",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Historical $1 billion VC round",
+            "$12 billion valuation"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "The cited funding post does not establish a lettered round label. Do not guess one.",
+        "The lifecycle label follows an explicit completed transaction. A model may supply a later contradictory primary event for adjudication."
+      ],
+      "score_dimensions": [
+        "current_lifecycle",
+        "acquirer",
+        "completion_date",
+        "icp_exclusion",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "moveworks",
+      "company_name": "Moveworks",
+      "input_domain": "moveworks.com",
+      "stratum": "completed_acquisition",
+      "industry": "Enterprise AI assistants",
+      "geography": "United States",
+      "expected": {
+        "current_lifecycle": "acquired",
+        "acquirer": "ServiceNow",
+        "completed_acquisition_date": "2025-12-15",
+        "independent_private_vc_icp_eligible": false,
+        "historical_funding": {
+          "stage": "Series C",
+          "announcement_date": "2021-06-30",
+          "amount_usd": 200000000
+        },
+        "answer": "ServiceNow completed its acquisition of Moveworks on December 15, 2025. Moveworks' historical $200 million Series C does not make it an independent VC-backed prospect at the cutoff."
+      },
+      "sources": [
+        {
+          "url": "https://investor.servicenow.com/news/news-details/2025/ServiceNow-completes-acquisition-of-Moveworks/default.aspx",
+          "publisher": "ServiceNow",
+          "publication_date": "2025-12-15",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Completed acquisition",
+            "Completion date"
+          ]
+        },
+        {
+          "url": "https://www.moveworks.com/us/en/company/news/press-releases/moveworks-raises-200-million-series-c-funding",
+          "publisher": "Moveworks",
+          "publication_date": "2021-06-30",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Historical Series C",
+            "$200 million",
+            "Closed round"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "The historic VC round is included to reproduce the stale-stage trap, not as a claim that it was the last financing of any kind.",
+        "A later contradictory primary lifecycle event must be adjudicated."
+      ],
+      "score_dimensions": [
+        "current_lifecycle",
+        "acquirer",
+        "completion_date",
+        "icp_exclusion",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "figma",
+      "company_name": "Figma",
+      "input_domain": "figma.com",
+      "stratum": "terminated_acquisition_and_public_listing_control",
+      "industry": "Design software",
+      "geography": "United States",
+      "expected": {
+        "current_lifecycle": "public",
+        "exchange": "NYSE",
+        "ticker": "FIG",
+        "proposed_acquirer": "Adobe",
+        "acquisition_terminated_date": "2023-12-18",
+        "independent_private_vc_icp_eligible": false,
+        "answer": "Adobe and Figma terminated their proposed merger on December 18, 2023. Figma is identified as NYSE:FIG in its August 5, 2026 company results. It should be classified as public, not acquired by Adobe or still private."
+      },
+      "sources": [
+        {
+          "url": "https://news.adobe.com/news/news-details/2023/adobe-and-figma-mutually-agree-to-terminate-merger-agreement",
+          "publisher": "Adobe",
+          "publication_date": "2023-12-18",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Merger agreement terminated"
+          ]
+        },
+        {
+          "url": "https://investor.figma.com/news-events/news/news-details/2026/Figma-Announces-Second-Quarter-2026-Financial-Results/default.aspx",
+          "publisher": "Figma",
+          "publication_date": "2026-08-05",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Public company NYSE:FIG"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "This evidence establishes public status by August 5, 2026. It is not being used to score the exact IPO closing date or most recent financing.",
+        "The Adobe termination payment is not a VC round."
+      ],
+      "score_dimensions": [
+        "current_lifecycle",
+        "terminated_vs_completed_transaction",
+        "icp_exclusion",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "freeman_seattle",
+      "company_name": "Freeman Seattle",
+      "input_domain": "freemanseattle.com",
+      "stratum": "complaint_entity_resolution_probe_only",
+      "industry": "Clothing and raincoats",
+      "geography": "United States",
+      "expected": {
+        "entity": "Seattle clothing and raincoat company founded by Scott and Brittany Freeman",
+        "funding_status": "unknown",
+        "current_lifecycle": "not_scored",
+        "answer": "The supplied domain belongs to Freeman Seattle, a clothing business that began with raincoats in 2011. It is not the unrelated Freeman event-services company. No funding claim is required."
+      },
+      "sources": [
+        {
+          "url": "https://www.freemanseattle.com/pages/about",
+          "publisher": "Freeman Seattle",
+          "publication_date": null,
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Founders",
+            "Seattle",
+            "Raincoats and wardrobe staples",
+            "Founded in 2011"
+          ]
+        },
+        {
+          "url": "https://www.freemanseattle.com/",
+          "publisher": "Freeman Seattle",
+          "publication_date": null,
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Current domain content sells raincoats and clothing"
+          ]
+        }
+      ],
+      "complaint_source": {
+        "url": "https://community.clay.com/x/general/msg_mMzImdsDSRLS/improving-claygents-company-summary-accuracy-for-e",
+        "author": "Amir M.",
+        "publication_date": "2025-01-17",
+        "reported_failure": "Claygent described the unrelated event company for the input freemanseattle.com.",
+        "limitation": "A historical user report is not proof of a current native Claygent failure."
+      },
+      "uncertainties": [
+        "The official About page is undated. Its access date must not be presented as its publication date.",
+        "No funding, ownership or corporate lifecycle classification is scored for this probe."
+      ],
+      "score_dimensions": [
+        "entity_resolution",
+        "citation_support"
+      ],
+      "exclude_from_funding_and_lifecycle_aggregate": true
+    },
+    {
+      "id": "lovable",
+      "company_name": "Lovable",
+      "input_domain": "lovable.dev",
+      "stratum": "recent_vc_round",
+      "industry": "Software creation",
+      "geography": "Sweden",
+      "challenge_reason": "Routine recent round control. Separate the $400M raise from $13.3B valuation.",
+      "expected": {
+        "verified_funding_stage": "Series C",
+        "verified_funding_announcement_date": "2026-08-12",
+        "amount": 400000000,
+        "currency": "USD",
+        "lead_investors": [
+          "Menlo Ventures",
+          "Scaleup Europe Fund (EQT)"
+        ],
+        "current_lifecycle": "unknown",
+        "amount_usd": 400000000,
+        "answer": "Series C; 2026-08-12; 400000000 USD. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://lovable.dev/blog/series-c",
+          "publisher": "Lovable",
+          "publication_date": "2026-08-12",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "funding_stage",
+            "announcement_date",
+            "event_amount",
+            "lead_investors"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "funding_stage",
+        "announcement_date",
+        "event_amount",
+        "lead_investors"
+      ]
+    },
+    {
+      "id": "supabase",
+      "company_name": "Supabase",
+      "input_domain": "supabase.com",
+      "stratum": "recent_vc_round",
+      "industry": "Database infrastructure",
+      "geography": "Global remote",
+      "challenge_reason": "The $10B valuation is explicitly pre-money, and employee liquidity is also discussed.",
+      "expected": {
+        "verified_funding_stage": "Series F",
+        "verified_funding_announcement_date": "2026-06-04",
+        "amount": 500000000,
+        "currency": "USD",
+        "lead_investors": [
+          "GIC"
+        ],
+        "current_lifecycle": "unknown",
+        "amount_usd": 500000000,
+        "answer": "Series F; 2026-06-04; 500000000 USD. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://supabase.com/blog/series-f",
+          "publisher": "Supabase",
+          "publication_date": "2026-06-04",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "funding_stage",
+            "announcement_date",
+            "event_amount",
+            "lead_investors"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication.",
+        "The cited $500M is the announced round. Do not invent a primary/secondary allocation."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "funding_stage",
+        "announcement_date",
+        "event_amount",
+        "lead_investors"
+      ]
+    },
+    {
+      "id": "elevenlabs",
+      "company_name": "ElevenLabs",
+      "input_domain": "elevenlabs.io",
+      "stratum": "recent_vc_round_extension",
+      "industry": "Voice AI",
+      "geography": "United Kingdom / United States",
+      "challenge_reason": "Later third close after the February round; $500M ARR and $100M tender offer are not a new $500M equity raise.",
+      "expected": {
+        "verified_funding_stage": "Series D third close",
+        "verified_funding_announcement_date": "2026-05-05",
+        "amount": null,
+        "currency": null,
+        "lead_investors": [],
+        "current_lifecycle": "unknown",
+        "previous_round": {
+          "stage": "Series D",
+          "announcement_date": "2026-02-04",
+          "amount_usd": 500000000,
+          "lead_investors": [
+            "Sequoia Capital"
+          ]
+        },
+        "answer": "Series D third close; 2026-05-05. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://elevenlabs.io/blog/500m-arr-and-new-investors",
+          "publisher": "ElevenLabs",
+          "publication_date": "2026-05-05",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "funding_stage",
+            "announcement_date"
+          ],
+          "content_inspected": true,
+          "updated_date": "2026-09-20"
+        },
+        {
+          "url": "https://elevenlabs.io/blog/series-d",
+          "publisher": "ElevenLabs",
+          "publication_date": "2026-02-04",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Original Series D amount, stage and lead"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication.",
+        "Third-close amount and a separate lead are not disclosed in this source, so these fields are unscored.",
+        "September 20 is the page update, not the announcement date."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "funding_stage",
+        "announcement_date",
+        "extension_recognition"
+      ],
+      "scoring_rules": {
+        "funding_stage": "Accept Series D with third-close/extension recognized elsewhere; do not require exact literal string Series D third close.",
+        "amount": "No amount score for third close. A $500M value correctly attached to original February round is valid, as is unknown extension amount.",
+        "date": "May5 is later third-close announcement. A February4 date in main field is acceptable only when that field clearly refers to original Series D and the May5 third-close event is separately recognized. Do not penalize correct event attribution."
+      }
+    },
+    {
+      "id": "helsing",
+      "company_name": "Helsing",
+      "input_domain": "helsing.ai",
+      "stratum": "recent_vc_round",
+      "industry": "Defence technology",
+      "geography": "Germany",
+      "challenge_reason": "Routine clear round with a long investor list but no explicit lead.",
+      "expected": {
+        "verified_funding_stage": "Series E",
+        "verified_funding_announcement_date": "2026-07-13",
+        "amount": 1800000000,
+        "currency": "USD",
+        "lead_investors": [],
+        "current_lifecycle": "unknown",
+        "amount_usd": 1800000000,
+        "answer": "Series E; 2026-07-13; 1800000000 USD. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://helsing.ai/newsroom/helsing-raises-1-8bn-in-series-e",
+          "publisher": "Helsing",
+          "publication_date": "2026-07-13",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "funding_stage",
+            "announcement_date",
+            "event_amount"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication.",
+        "Do not infer a lead from list ordering."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "funding_stage",
+        "announcement_date",
+        "event_amount"
+      ]
+    },
+    {
+      "id": "mistral_ai",
+      "company_name": "Mistral AI",
+      "input_domain": "mistral.ai",
+      "stratum": "recent_vc_round",
+      "industry": "Foundation AI models",
+      "geography": "France",
+      "challenge_reason": "Very recent EUR equity round must replace old Series C; financing and valuation use different numbers.",
+      "expected": {
+        "verified_funding_stage": "Series D",
+        "verified_funding_announcement_date": "2026-09-08",
+        "amount": 3000000000,
+        "currency": "EUR",
+        "lead_investors": [
+          "Samsung Electronics",
+          "Scaleup Europe Fund (EQT)",
+          "PSG Equity"
+        ],
+        "current_lifecycle": "unknown",
+        "answer": "Series D; 2026-09-08; 3000000000 EUR. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+          "publisher": "Mistral AI",
+          "publication_date": null,
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "funding_stage",
+            "announcement_date",
+            "event_amount",
+            "lead_investors"
+          ],
+          "content_inspected": true
+        },
+        {
+          "url": "https://news.samsungsemiconductor.com/global/samsung-and-mistral-ai-announce-strategic-partnership-for-intelligence-driven-semiconductor-infrastructure/",
+          "publisher": "Samsung",
+          "publication_date": "2026-09-09",
+          "event_date": "2026-09-08",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Series D investment",
+            "Samsung lead",
+            "September 8 dateline"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication.",
+        "Mistral article has no visible date. September 8 is the investor release dateline; Samsung page publication is September 9. Accept a supported September 8 or 9 publication date."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "funding_stage",
+        "event_amount",
+        "lead_investors",
+        "announcement_month"
+      ]
+    },
+    {
+      "id": "nscale",
+      "company_name": "Nscale",
+      "input_domain": "nscale.com",
+      "stratum": "recent_financing_debt_and_commitment",
+      "industry": "AI computing infrastructure",
+      "geography": "United Kingdom",
+      "challenge_reason": "Convertible debt headline includes $1B commitment expected after cutoff. Do not call this a new equity Series D or an IPO.",
+      "expected": {
+        "verified_funding_stage": "Series C",
+        "verified_funding_announcement_date": "2026-03-09",
+        "amount": 2000000000,
+        "currency": "USD",
+        "lead_investors": [
+          "Aker ASA",
+          "8090 Industries"
+        ],
+        "current_lifecycle": "unknown",
+        "amount_usd": 2000000000,
+        "answer": "The latest verified venture equity round is the $2B Series C announced March 9, 2026, led by Aker ASA and 8090 Industries. The later September 25 convertible loan notes are separate debt financing, not a new venture equity round.",
+        "later_non_equity_financing": {
+          "type": "Pre-IPO convertible loan notes",
+          "announcement_date": "2026-09-25",
+          "headline_amount_usd": 3360000000,
+          "lead_investors": [
+            "Third Point"
+          ],
+          "initial_tranche_usd": 2360000000,
+          "future_commitment_usd": 1000000000,
+          "future_commitment_expected": "2026-11"
+        }
+      },
+      "sources": [
+        {
+          "url": "https://www.nscale.com/press-releases/nscale-series-c",
+          "publisher": "Nscale",
+          "publication_date": "2026-03-09",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Latest verified venture equity round: Series C, USD 2B, March 9, Aker ASA and 8090 Industries"
+          ],
+          "content_inspected": true
+        },
+        {
+          "url": "https://www.nscale.com/press-releases/pre-ipo-convertible-financing",
+          "publisher": "Nscale",
+          "publication_date": "2026-09-25",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Separate September convertible debt",
+            "Conditional NVIDIA commitment"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "Verified positive facts do not prove exhaustive latest-event history. Accept a later pre-cutoff venture equity event after adjudication.",
+        "The $2B Series C source says it includes the Pre-Series C SAFE; do not add that SAFE again.",
+        "September convertible headline comprises an initial $2.36B tranche and a $1B NVIDIA commitment expected mid-November. These are not the required venture equity round amount."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "funding_stage",
+        "announcement_date",
+        "event_amount",
+        "lead_investors",
+        "debt_distinction"
+      ],
+      "scoring_rules": {
+        "funding_fields": "Score Series C / 2026-03-09 / USD 2B / Aker ASA and 8090 Industries. Do not require September debt facts in latest_round, round_amount or lead_investors.",
+        "debt_distinction": "Pass when later convertible notes are recognized as separate from latest venture equity, or debt is otherwise explicitly excluded with supported evidence. September headline amount and commitment allocation are contextual, not mandatory latest-round fields.",
+        "accept_new_evidence": "Later pre-cutoff venture equity evidence overrides this bounded reference after adjudication."
+      }
+    },
+    {
+      "id": "isomorphic_labs",
+      "company_name": "Isomorphic Labs",
+      "input_domain": "isomorphiclabs.com",
+      "stratum": "recent_vc_round",
+      "industry": "AI drug discovery",
+      "geography": "United Kingdom",
+      "challenge_reason": "Routine clear round. Historical Alphabet relationship is not by itself a fresh acquisition.",
+      "expected": {
+        "verified_funding_stage": "Series B",
+        "verified_funding_announcement_date": "2026-05-12",
+        "amount": 2100000000,
+        "currency": "USD",
+        "lead_investors": [
+          "Thrive Capital"
+        ],
+        "current_lifecycle": "unknown",
+        "amount_usd": 2100000000,
+        "answer": "Series B; 2026-05-12; 2100000000 USD. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://www.isomorphiclabs.com/press/isomorphic-labs-funding",
+          "publisher": "Isomorphic Labs",
+          "publication_date": "2026-05-12",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "funding_stage",
+            "announcement_date",
+            "event_amount",
+            "lead_investors"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "funding_stage",
+        "announcement_date",
+        "event_amount",
+        "lead_investors"
+      ]
+    },
+    {
+      "id": "harvey",
+      "company_name": "Harvey",
+      "input_domain": "harvey.ai",
+      "stratum": "recent_vc_round_extension",
+      "industry": "Legal AI software",
+      "geography": "United States",
+      "challenge_reason": "Late $50M extension brings September round to $600M; original headline was $550M.",
+      "expected": {
+        "verified_funding_stage": "Funding round extension",
+        "verified_funding_announcement_date": "2026-09-24",
+        "amount": 50000000,
+        "currency": "USD",
+        "lead_investors": [],
+        "current_lifecycle": "unknown",
+        "amount_usd": 50000000,
+        "extension_investor": "Teachers' Venture Growth (Ontario Teachers' Pension Plan)",
+        "combined_round_amount_usd": 600000000,
+        "previous_round": {
+          "announcement_date": "2026-09-09",
+          "amount_usd": 550000000,
+          "lead_investors": [
+            "Diffusion",
+            "Lightspeed Venture Partners"
+          ]
+        },
+        "answer": "Funding round extension; 2026-09-24; 50000000 USD. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://www.harvey.ai/blog/harvey-announces-investment-from-ontario-teachers-pension-plan-and-deepens-its-commitment-to-canada",
+          "publisher": "Harvey",
+          "publication_date": "2026-09-24",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "funding_stage",
+            "announcement_date",
+            "event_amount"
+          ],
+          "content_inspected": true
+        },
+        {
+          "url": "https://www.harvey.ai/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence",
+          "publisher": "Harvey",
+          "publication_date": "2026-09-09",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Original round amount and co-leads"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication.",
+        "The extension source does not label the lettered series. A supported lettered label from another reliable source may be accepted.",
+        "Accept $600M as combined round amount if the $50M extension and September 24 event are clear."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "funding_stage",
+        "announcement_date",
+        "event_amount",
+        "extension_recognition"
+      ],
+      "scoring_rules": {
+        "funding_stage": "Accept any supported lettered series label with extension recognized. Generic funding extension is sufficient. Do not require absence of a lettered label.",
+        "event_amount": "Accept $50M incremental extension or $600M combined round if clearly described. Original $550M alone misses extension unless supplemented.",
+        "date": "September24 extension, or September9 original-round date accompanied by explicit September24 extension recognition, is acceptable."
+      }
+    },
+    {
+      "id": "replit",
+      "company_name": "Replit",
+      "input_domain": "replit.com",
+      "stratum": "recent_vc_round",
+      "industry": "Software creation",
+      "geography": "United States",
+      "challenge_reason": "Routine amount/date control. Primary founder post does not label the stage or a lead.",
+      "expected": {
+        "verified_funding_stage": null,
+        "verified_funding_announcement_date": "2026-03-11",
+        "amount": 400000000,
+        "currency": "USD",
+        "lead_investors": [],
+        "current_lifecycle": "unknown",
+        "amount_usd": 400000000,
+        "answer": "2026-03-11; 400000000 USD. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://replit.com/blog/replit-raises-400-million-dollars",
+          "publisher": "Replit",
+          "publication_date": "2026-03-11",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "announcement_date",
+            "event_amount"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication.",
+        "Stage and lead are unscored here, not asserted unknowable. Accept supported Series D/Georgian from another reliable source."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "announcement_date",
+        "event_amount"
+      ]
+    },
+    {
+      "id": "ramp",
+      "company_name": "Ramp",
+      "input_domain": "ramp.com",
+      "stratum": "recent_vc_round",
+      "industry": "Business finance",
+      "geography": "United States",
+      "challenge_reason": "Primary financing must be distinguished from valuation and earlier secondary tenders.",
+      "expected": {
+        "verified_funding_stage": "Series F",
+        "verified_funding_announcement_date": "2026-06-04",
+        "amount": 750000000,
+        "currency": "USD",
+        "lead_investors": [
+          "ICONIQ",
+          "GIC",
+          "Ontario Teachers' Pension Plan"
+        ],
+        "current_lifecycle": "unknown",
+        "amount_usd": 750000000,
+        "answer": "Series F; 2026-06-04; 750000000 USD. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://www.gic.com.sg/newsroom/all/ramp-raises-series-f-at-44-billion-valuation/",
+          "publisher": "GIC",
+          "publication_date": "2026-06-04",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "funding_stage",
+            "announcement_date",
+            "event_amount",
+            "lead_investors"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "funding_stage",
+        "announcement_date",
+        "event_amount",
+        "lead_investors"
+      ]
+    },
+    {
+      "id": "rillet",
+      "company_name": "Rillet",
+      "input_domain": "rillet.com",
+      "stratum": "recent_vc_round",
+      "industry": "Accounting software",
+      "geography": "United States",
+      "challenge_reason": "Company page metadata now says September 28, while dated investor announcement establishes August round.",
+      "expected": {
+        "verified_funding_stage": "Series C",
+        "verified_funding_announcement_date": "2026-08-18",
+        "amount": 100000000,
+        "currency": "USD",
+        "lead_investors": [
+          "ICONIQ"
+        ],
+        "current_lifecycle": "unknown",
+        "amount_usd": 100000000,
+        "answer": "Series C; 2026-08-18; 100000000 USD. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://www.iconiq.com/growth/insights/iconiq-leading-rillets-100m-series-c",
+          "publisher": "ICONIQ",
+          "publication_date": "2026-08-18",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "funding_stage",
+            "announcement_date",
+            "event_amount",
+            "lead_investors"
+          ],
+          "content_inspected": true
+        },
+        {
+          "url": "https://www.rillet.com/blog/100m-series-c",
+          "publisher": "Rillet",
+          "publication_date": null,
+          "metadata_datePublished": "2026-09-28T21:34:14.753Z",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Series C amount and lead",
+            "Metadata date is not funding event date"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication.",
+        "Investor post August 18 is not necessarily earliest announcement. Other evidence reports August 17; score month, not exact day."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "funding_stage",
+        "event_amount",
+        "lead_investors",
+        "announcement_month"
+      ]
+    },
+    {
+      "id": "pennylane",
+      "company_name": "Pennylane",
+      "input_domain": "pennylane.com",
+      "stratum": "recent_vc_round",
+      "industry": "Accounting software",
+      "geography": "France",
+      "challenge_reason": "French company ledger gives month and amount without lettered label. Series labels conflict across other sources.",
+      "expected": {
+        "verified_funding_stage": null,
+        "verified_funding_announcement_date": "2026-01",
+        "amount": 175000000,
+        "currency": "EUR",
+        "lead_investors": [],
+        "current_lifecycle": "unknown",
+        "ownership_evidence": "Founders retain majority voting control; nine VC funds and employees hold shares.",
+        "answer": "2026-01; 175000000 EUR. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://www.pennylane.com/fr/investisseurs",
+          "publisher": "Pennylane",
+          "publication_date": null,
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "announcement_month",
+            "event_amount"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication.",
+        "Lettered stage, exact date and lead are unscored in this bounded primary reference. Supported extra detail is allowed.",
+        "Do not confuse the founders previous company PriceMatch acquisition by Booking.com with Pennylane ownership."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "announcement_month",
+        "event_amount"
+      ]
+    },
+    {
+      "id": "n8n",
+      "company_name": "n8n",
+      "input_domain": "n8n.io",
+      "stratum": "recent_strategic_investment",
+      "industry": "Workflow orchestration",
+      "geography": "Germany",
+      "challenge_reason": "Later SAP investment has a $5.2B valuation, not a $5.2B investment amount.",
+      "expected": {
+        "verified_funding_stage": "Strategic investment",
+        "verified_funding_announcement_date": "2026-05-12",
+        "amount": null,
+        "currency": null,
+        "lead_investors": [],
+        "current_lifecycle": "unknown",
+        "named_investor": "SAP",
+        "previous_round": {
+          "stage": "Series C",
+          "amount_usd": 180000000,
+          "announcement_date": "2025-10-09",
+          "lead_investors": [
+            "Accel"
+          ]
+        },
+        "answer": "Strategic investment; 2026-05-12. See qualifications and sources.",
+        "accepted_latest_round_interpretations": [
+          {
+            "latest_round": "Strategic investment by SAP",
+            "announcement_date": "2026-05-12",
+            "amount": "unknown in cited primary source",
+            "qualification": "No lettered round or security structure stated; valuation is $5.2B, not investment size."
+          },
+          {
+            "latest_round": "Series C",
+            "announcement_date": "2025-10-09",
+            "amount_usd": 180000000,
+            "lead_investors": [
+              "Accel"
+            ],
+            "qualification": "Accept when the later May 12 SAP investment is explicitly disclosed separately and the distinction is explained."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://blog.n8n.io/n8n-sap/",
+          "publisher": "n8n",
+          "publication_date": "2026-05-12",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "funding_stage",
+            "announcement_date"
+          ],
+          "content_inspected": true
+        },
+        {
+          "url": "https://blog.n8n.io/series-c/",
+          "publisher": "n8n",
+          "publication_date": "2025-10-09",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Previous Series C amount and lead"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication.",
+        "Amount and lettered series absent in latest source; unscored. The previous Series C remains the latest named series if the subsequent investment is disclosed."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "latest_financing_recognition",
+        "valuation_vs_amount"
+      ],
+      "scoring_rules": {
+        "latest_financing_recognition": "Both an unlabeled latest SAP strategic investment and latest named venture round Series C are acceptable, provided the May 12 SAP investment is recognized without conflating its valuation with amount. Do not enforce one stage/date/amount tuple across these two reasonable interpretations.",
+        "valuation_vs_amount": "The $5.2B number must be treated as valuation, not amount raised. A supported $180M amount attached specifically to the earlier Series C is valid."
+      }
+    },
+    {
+      "id": "alan",
+      "company_name": "Alan",
+      "input_domain": "alan.com",
+      "stratum": "recent_vc_round",
+      "industry": "Health insurance",
+      "geography": "France",
+      "challenge_reason": "Announcement says closing is subject to regulatory approval. August shareholder letter recaps June raise.",
+      "expected": {
+        "verified_funding_stage": "Series G",
+        "verified_funding_announcement_date": "2026-06-25",
+        "amount": 480000000,
+        "currency": "EUR",
+        "lead_investors": [
+          "Prosus"
+        ],
+        "current_lifecycle": "unknown",
+        "closing_qualification": "Announcement subject to applicable regulatory approvals.",
+        "answer": "Series G; 2026-06-25; 480000000 EUR. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://alan.com/fr-fr/blog/tout-alan/a/alan-leve-480-millions-deuros-pour-faire-de-la-prevention-le-nouveau-standard-mondial-de-la-sante",
+          "publisher": "Alan",
+          "publication_date": "2026-06-25",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "funding_stage",
+            "announcement_date",
+            "event_amount",
+            "lead_investors"
+          ],
+          "content_inspected": true,
+          "updated_date": "2026-06-26"
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication.",
+        "Do not treat June 26 update or August 31 recap as new rounds. Exact legal closing date is unscored."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "funding_stage",
+        "announcement_date",
+        "event_amount",
+        "lead_investors"
+      ]
+    },
+    {
+      "id": "quince",
+      "company_name": "Quince",
+      "input_domain": "quince.com",
+      "stratum": "recent_vc_round",
+      "industry": "Consumer retail",
+      "geography": "United States",
+      "challenge_reason": "Routine non-AI company. Resolve retail domain, not listed Quince Therapeutics.",
+      "expected": {
+        "verified_funding_stage": "Series E",
+        "verified_funding_announcement_date": "2026-03-11",
+        "amount": 500000000,
+        "currency": "USD",
+        "lead_investors": [
+          "ICONIQ"
+        ],
+        "current_lifecycle": "unknown",
+        "amount_usd": 500000000,
+        "answer": "Series E; 2026-03-11; 500000000 USD. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://www.prnewswire.com/news-releases/quince-raises-500m-series-e-resulting-in-10-1b-valuation-to-accelerate-the-manufacturer-to-consumer-platform-302710298.html",
+          "publisher": "Quince press release via PR Newswire",
+          "publication_date": "2026-03-11",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "funding_stage",
+            "announcement_date",
+            "event_amount",
+            "lead_investors"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication.",
+        "Use corrected company release rather than an earlier $10B rounded headline. Valuation is not round amount."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "funding_stage",
+        "announcement_date",
+        "event_amount",
+        "lead_investors"
+      ]
+    },
+    {
+      "id": "cyera",
+      "company_name": "Cyera",
+      "input_domain": "cyera.com",
+      "stratum": "recent_vc_round",
+      "industry": "Data security",
+      "geography": "United States / Israel",
+      "challenge_reason": "June round supersedes January Series F. Both have prominent recent press coverage.",
+      "expected": {
+        "verified_funding_stage": "Series G",
+        "verified_funding_announcement_date": "2026-06-10",
+        "amount": 600000000,
+        "currency": "USD",
+        "lead_investors": [
+          "Evolution Equity Partners"
+        ],
+        "current_lifecycle": "unknown",
+        "amount_usd": 600000000,
+        "answer": "Series G; 2026-06-10; 600000000 USD. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://www.cyera.com/blog/building-the-trust-layer-for-enterprise-ai",
+          "publisher": "Cyera",
+          "publication_date": "2026-06-10",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "funding_stage",
+            "announcement_date",
+            "event_amount",
+            "lead_investors"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "funding_stage",
+        "announcement_date",
+        "event_amount",
+        "lead_investors"
+      ]
+    },
+    {
+      "id": "airwallex",
+      "company_name": "Airwallex",
+      "input_domain": "airwallex.com",
+      "stratum": "recent_vc_round",
+      "industry": "Payments",
+      "geography": "Australia-founded / global",
+      "challenge_reason": "Official June Series H replaces December Series G. Old URL on careers site has been updated to new facts.",
+      "expected": {
+        "verified_funding_stage": "Series H",
+        "verified_funding_announcement_date": "2026-06-25",
+        "amount": 320000000,
+        "currency": "USD",
+        "lead_investors": [
+          "Addition"
+        ],
+        "current_lifecycle": "unknown",
+        "amount_usd": 320000000,
+        "answer": "Series H; 2026-06-25; 320000000 USD. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://www.airwallex.com/global/newsroom/airwallex-secures-320-million-in-series-h-funding-valuation-hits-11-billion",
+          "publisher": "Airwallex",
+          "publication_date": "2026-06-25",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "funding_stage",
+            "announcement_date",
+            "event_amount",
+            "lead_investors"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication.",
+        "Use announced $11B valuation rather than an earlier reported $12B negotiation valuation."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "funding_stage",
+        "announcement_date",
+        "event_amount",
+        "lead_investors"
+      ]
+    },
+    {
+      "id": "abridge",
+      "company_name": "Abridge",
+      "input_domain": "abridge.com",
+      "stratum": "recent_vc_round",
+      "industry": "Clinical documentation",
+      "geography": "United States",
+      "challenge_reason": "Routine dated company announcement with a previous Series D earlier in 2025.",
+      "expected": {
+        "verified_funding_stage": "Series E",
+        "verified_funding_announcement_date": "2025-06-23",
+        "amount": 300000000,
+        "currency": "USD",
+        "lead_investors": [
+          "Andreessen Horowitz"
+        ],
+        "current_lifecycle": "unknown",
+        "amount_usd": 300000000,
+        "answer": "Series E; 2025-06-23; 300000000 USD. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://www.abridge.com/blog/series-e",
+          "publisher": "Abridge",
+          "publication_date": "2025-06-23",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "funding_stage",
+            "announcement_date",
+            "event_amount",
+            "lead_investors"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication.",
+        "This is an older control, not a claim of a 2026 raise."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "funding_stage",
+        "announcement_date",
+        "event_amount",
+        "lead_investors"
+      ]
+    },
+    {
+      "id": "cuspai",
+      "company_name": "CuspAI",
+      "input_domain": "cusp.ai",
+      "stratum": "recent_vc_round",
+      "industry": "Materials discovery",
+      "geography": "United Kingdom",
+      "challenge_reason": "Company founder social announcement resolves conflicting June/July dates in databases.",
+      "expected": {
+        "verified_funding_stage": "Series B",
+        "verified_funding_announcement_date": "2026-07-20",
+        "amount": 450000000,
+        "currency": "USD",
+        "lead_investors": [],
+        "current_lifecycle": "unknown",
+        "amount_usd": 450000000,
+        "named_investors": [
+          "Kleiner Perkins",
+          "NEA",
+          "Temasek",
+          "Jeff Bezos",
+          "John Doerr"
+        ],
+        "answer": "Series B; 2026-07-20; 450000000 USD. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://www.linkedin.com/posts/edwardschad_a-big-day-for-cuspai-as-we-announce-our-450-activity-7484853244259713024-GH6n",
+          "publisher": "Chad Edwards, CuspAI co-founder and CEO",
+          "publication_date": "2026-07-20",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "funding_stage",
+            "announcement_date",
+            "event_amount"
+          ],
+          "content_inspected": true,
+          "publication_timestamp": "2026-07-20T06:14:35.254Z",
+          "date_evidence": "SocialMediaPosting.datePublished in public page JSON-LD"
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication.",
+        "Source gives named investors, not complete co-lead designations. Lead field unscored.",
+        "A reliable earlier close date may differ from July 20 announcement; score announcement semantics."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "funding_stage",
+        "announcement_date",
+        "event_amount"
+      ]
+    },
+    {
+      "id": "biorce",
+      "company_name": "Biorce",
+      "input_domain": "biorce.com",
+      "stratum": "recent_vc_round",
+      "industry": "Clinical trial software",
+      "geography": "Spain",
+      "challenge_reason": "Smaller Spanish startup with seed extension and Series A in different currencies.",
+      "expected": {
+        "verified_funding_stage": "Series A",
+        "verified_funding_announcement_date": "2026-02-02",
+        "amount": 52500000,
+        "currency": "USD",
+        "lead_investors": [
+          "DST Global Partners"
+        ],
+        "current_lifecycle": "unknown",
+        "amount_usd": 52500000,
+        "answer": "Series A; 2026-02-02; 52500000 USD. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://www.einnews.com/pr_news/888335966/biorce-closes-52-5mm-series-a-to-accelerate-international-expansion-lead-transformation-of-clinical-trials-through-ai",
+          "publisher": "Biorce press release via Coldharbour Communications / EIN Presswire",
+          "publication_date": "2026-02-02",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "funding_stage",
+            "announcement_date",
+            "event_amount"
+          ],
+          "content_inspected": true
+        },
+        {
+          "url": "https://www.linkedin.com/posts/biorce_announcement-biorce-raised-52m-led-by-activity-7424016314391863296-O0Ix",
+          "publisher": "Biorce",
+          "publication_date": null,
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "DST Global Partners lead",
+            "Round amount"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication.",
+        "Total financing over $60M is not this round."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "funding_stage",
+        "announcement_date",
+        "event_amount",
+        "lead_investors"
+      ]
+    },
+    {
+      "id": "mangoboost",
+      "company_name": "MangoBoost",
+      "input_domain": "mangoboost.io",
+      "stratum": "older_closed_round_control",
+      "industry": "Data centre infrastructure",
+      "geography": "South Korea / United States",
+      "challenge_reason": "Old closed round control. Newer fundraising-in-progress reporting must not be promoted into a closed Series B.",
+      "expected": {
+        "verified_funding_stage": "Series A",
+        "verified_funding_announcement_date": "2023-11-10",
+        "amount": 55000000,
+        "currency": "USD",
+        "lead_investors": [
+          "IMM Investment",
+          "Shinhan Venture Investment"
+        ],
+        "current_lifecycle": "unknown",
+        "amount_usd": 55000000,
+        "answer": "Series A; 2023-11-10; 55000000 USD. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://www.mangoboost.io/company/newsroom/announcing-our-closing-of-series-a-funding-round-and-way-forward",
+          "publisher": "MangoBoost",
+          "publication_date": "2023-11-10",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "funding_stage",
+            "announcement_date",
+            "event_amount",
+            "lead_investors"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication.",
+        "This selected company did not satisfy the preference for a recent verified close. Retained transparently as an old-round / unclosed-funding control.",
+        "The source states announcement of a successful close, not necessarily the legal closing date. Any later primary funding source overrides after adjudication."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "funding_stage",
+        "announcement_date",
+        "event_amount",
+        "lead_investors"
+      ]
+    },
+    {
+      "id": "vizzia",
+      "company_name": "Vizzia",
+      "input_domain": "vizzia.com",
+      "stratum": "recent_vc_round",
+      "industry": "Urban safety and waste detection",
+      "geography": "France",
+      "challenge_reason": "French primary social post with rhetorical headline. Resolve municipal video business, not similarly named hospital RTLS company.",
+      "expected": {
+        "verified_funding_stage": null,
+        "verified_funding_announcement_date": "2026-02-19",
+        "amount": 30000000,
+        "currency": "EUR",
+        "lead_investors": [],
+        "current_lifecycle": "unknown",
+        "answer": "2026-02-19; 30000000 EUR. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://fr.linkedin.com/posts/vizziafr_30m-ceci-nest-pas-une-lev%C3%A9e-de-fonds-activity-7430159501669871616-m-b9",
+          "publisher": "Vizzia",
+          "publication_date": "2026-02-19",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "announcement_date",
+            "event_amount"
+          ],
+          "content_inspected": true,
+          "publication_timestamp": "2026-02-19T08:01:10.868Z",
+          "date_evidence": "SocialMediaPosting.datePublished in public page JSON-LD"
+        },
+        {
+          "url": "https://headline.com/portfolio/vizzia/",
+          "publisher": "Headline",
+          "publication_date": null,
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Paris municipal video protection company identity"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication.",
+        "Company post verifies amount and date but not lettered stage or lead. These are unscored; supported Series B details may be accepted."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "announcement_date",
+        "event_amount",
+        "entity_resolution"
+      ]
+    },
+    {
+      "id": "digantara",
+      "company_name": "Digantara",
+      "input_domain": "digantara.co.in",
+      "stratum": "recent_vc_round",
+      "industry": "Space surveillance",
+      "geography": "India",
+      "challenge_reason": "Primary announcement is a PDF; newer reporting date is not necessarily another round.",
+      "expected": {
+        "verified_funding_stage": "Series B",
+        "verified_funding_announcement_date": "2025-12-16",
+        "amount": 50000000,
+        "currency": "USD",
+        "lead_investors": [],
+        "current_lifecycle": "unknown",
+        "amount_usd": 50000000,
+        "named_investors": [
+          "360 ONE Asset",
+          "SBI Investments Co Japan",
+          "Ronnie Screwvala",
+          "Peak XV Partners",
+          "Kalaari Capital"
+        ],
+        "answer": "Series B; 2025-12-16; 50000000 USD. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://d19ys3z2o27xup.cloudfront.net/Digantara_Series_B_Press_Release_9e1dde469d.pdf",
+          "publisher": "Digantara company press release",
+          "publication_date": "2025-12-16",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "funding_stage",
+            "announcement_date",
+            "event_amount"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication.",
+        "No explicit lead in company PDF, so lead field unscored. Source names 360 ONE, SBI Japan, Ronnie Screwvala, Peak XV and Kalaari.",
+        "January filing coverage may add Reliance investor detail to same round; do not reject supported additional investors."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "funding_stage",
+        "announcement_date",
+        "event_amount"
+      ]
+    },
+    {
+      "id": "lessn",
+      "company_name": "Lessn",
+      "input_domain": "lessn.io",
+      "stratum": "recent_vc_round",
+      "industry": "Business payments",
+      "geography": "Australia",
+      "challenge_reason": "Smaller startup post discusses another company acquisition and says over $1M without explicit currency.",
+      "expected": {
+        "verified_funding_stage": "Pre-Series A",
+        "verified_funding_announcement_date": "2025-08-13",
+        "amount": null,
+        "currency": null,
+        "lead_investors": [],
+        "current_lifecycle": "unknown",
+        "announced_amount_text": "Over $1 million",
+        "answer": "Pre-Series A; 2025-08-13. See qualifications and sources."
+      },
+      "sources": [
+        {
+          "url": "https://www.lessn.io/blog/lessn-raises-1m-to-supercharge-growth-could-we-be-australias-next-melio",
+          "publisher": "Lessn",
+          "publication_date": "2025-08-13",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "funding_stage",
+            "announcement_date"
+          ],
+          "content_inspected": true
+        }
+      ],
+      "uncertainties": [
+        "These are verified positive facts, not proof that no later financing or ownership event occurred. Accept later pre-cutoff primary evidence after adjudication.",
+        "Do not ascribe the Xero/Melio acquisition described in this post to Lessn.",
+        "Exact amount, currency and lead are unscored. Company source reports over $1 million; Australian context does not prove currency."
+      ],
+      "score_dimensions": [
+        "citation_support",
+        "funding_stage",
+        "announcement_date",
+        "entity_resolution"
+      ]
+    },
+    {
+      "id": "informatica",
+      "company_name": "Informatica",
+      "input_domain": "informatica.com",
+      "stratum": "completed_acquisition",
+      "industry": "Enterprise data management",
+      "geography": "United States",
+      "geography_scored": false,
+      "challenge_reason": "Former public-company status and a proposed acquisition must be superseded by the completed transaction.",
+      "expected": {
+        "current_lifecycle": "acquired",
+        "acquirer": "Salesforce",
+        "completed_acquisition_date": "2025-11-18",
+        "independent_private_vc_icp_eligible": false,
+        "answer": "Salesforce completed its acquisition of Informatica on 2025-11-18."
+      },
+      "sources": [
+        {
+          "url": "https://www.salesforce.com/uk/news/press-releases/2025/11/18/salesforce-completes-acquisition-of-informatica/",
+          "publisher": "Salesforce",
+          "publication_date": "2025-11-18",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Completed acquisition",
+            "Acquirer identity",
+            "Completion date"
+          ],
+          "verification": "Opened the primary page and inspected the relevant full-page text, not only the search result snippet.",
+          "evidence_excerpt": "today announced it has completed its acquisition of Informatica"
+        }
+      ],
+      "uncertainties": [
+        "The reference records a positive completed transaction. Adjudicate any later contradictory primary event dated on or before the cutoff. Historical funding is not scored for this case.",
+        "Geography is descriptive context, not a scored field or a claim about current legal domicile."
+      ],
+      "score_dimensions": [
+        "current_lifecycle",
+        "acquirer",
+        "completion_date",
+        "icp_exclusion",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "hashicorp",
+      "company_name": "HashiCorp",
+      "input_domain": "hashicorp.com",
+      "stratum": "completed_acquisition",
+      "industry": "Infrastructure automation",
+      "geography": "United States",
+      "geography_scored": false,
+      "challenge_reason": "Distinguish the 2024 agreement from the February 2025 completion; a former public company is now acquired.",
+      "expected": {
+        "current_lifecycle": "acquired",
+        "acquirer": "IBM",
+        "completed_acquisition_date": "2025-02-27",
+        "independent_private_vc_icp_eligible": false,
+        "answer": "IBM completed its acquisition of HashiCorp on 2025-02-27."
+      },
+      "sources": [
+        {
+          "url": "https://newsroom.ibm.com/2025-02-27-ibm-completes-acquisition-of-hashicorp,-creates-comprehensive,-end-to-end-hybrid-cloud-platform?linkId=13174207",
+          "publisher": "IBM",
+          "publication_date": "2025-02-27",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Completed acquisition",
+            "Acquirer identity",
+            "Completion date"
+          ],
+          "verification": "Opened the primary page and inspected the relevant full-page text, not only the search result snippet.",
+          "evidence_excerpt": "today announced it has completed its acquisition of HashiCorp"
+        }
+      ],
+      "uncertainties": [
+        "The reference records a positive completed transaction. Adjudicate any later contradictory primary event dated on or before the cutoff. Historical funding is not scored for this case.",
+        "Geography is descriptive context, not a scored field or a claim about current legal domicile."
+      ],
+      "score_dimensions": [
+        "current_lifecycle",
+        "acquirer",
+        "completion_date",
+        "icp_exclusion",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "walkme",
+      "company_name": "WalkMe",
+      "input_domain": "walkme.com",
+      "stratum": "completed_acquisition",
+      "industry": "Digital adoption software",
+      "geography": "Israel / United States",
+      "geography_scored": false,
+      "challenge_reason": "Older positive control: the same closing release still describes the historical Nasdaq listing, but also says acquisition completed and trading will suspend.",
+      "expected": {
+        "current_lifecycle": "acquired",
+        "acquirer": "SAP",
+        "completed_acquisition_date": "2024-09-12",
+        "independent_private_vc_icp_eligible": false,
+        "answer": "SAP completed its acquisition of WalkMe on 2024-09-12."
+      },
+      "sources": [
+        {
+          "url": "https://news.sap.com/2024/09/sap-completes-walkme-acquisition/",
+          "publisher": "SAP",
+          "publication_date": "2024-09-12",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Completed acquisition",
+            "Acquirer identity",
+            "Completion date"
+          ],
+          "verification": "Opened the primary page and inspected the relevant full-page text, not only the search result snippet.",
+          "evidence_excerpt": "today announced it has successfully completed its acquisition of WalkMe Ltd."
+        }
+      ],
+      "uncertainties": [
+        "The reference records a positive completed transaction. Adjudicate any later contradictory primary event dated on or before the cutoff. Historical funding is not scored for this case.",
+        "Geography is descriptive context, not a scored field or a claim about current legal domicile."
+      ],
+      "score_dimensions": [
+        "current_lifecycle",
+        "acquirer",
+        "completion_date",
+        "icp_exclusion",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "protect_ai",
+      "company_name": "Protect AI",
+      "input_domain": "protectai.com",
+      "stratum": "completed_acquisition",
+      "industry": "AI security",
+      "geography": "United States",
+      "geography_scored": false,
+      "challenge_reason": "The completed acquisition must supersede historical startup fundraising; an intent announcement alone is insufficient.",
+      "expected": {
+        "current_lifecycle": "acquired",
+        "acquirer": "Palo Alto Networks",
+        "completed_acquisition_date": "2025-07-22",
+        "independent_private_vc_icp_eligible": false,
+        "answer": "Palo Alto Networks completed its acquisition of Protect AI on 2025-07-22."
+      },
+      "sources": [
+        {
+          "url": "https://investors.paloaltonetworks.com/news-releases/news-release-details/palo-alto-networks-completes-acquisition-protect-ai",
+          "publisher": "Palo Alto Networks",
+          "publication_date": "2025-07-22",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Completed acquisition",
+            "Acquirer identity",
+            "Completion date"
+          ],
+          "verification": "Opened the primary page and inspected the relevant full-page text, not only the search result snippet.",
+          "evidence_excerpt": "today announced it has completed its acquisition of Protect AI"
+        }
+      ],
+      "uncertainties": [
+        "The reference records a positive completed transaction. Adjudicate any later contradictory primary event dated on or before the cutoff. Historical funding is not scored for this case.",
+        "Geography is descriptive context, not a scored field or a claim about current legal domicile."
+      ],
+      "score_dimensions": [
+        "current_lifecycle",
+        "acquirer",
+        "completion_date",
+        "icp_exclusion",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "cognigy",
+      "company_name": "Cognigy",
+      "input_domain": "cognigy.com",
+      "stratum": "completed_acquisition",
+      "industry": "Conversational AI customer service",
+      "geography": "Germany / United States",
+      "geography_scored": false,
+      "challenge_reason": "July agreement and September close are different events; the retained Cognigy brand must not imply independent ownership.",
+      "expected": {
+        "current_lifecycle": "acquired",
+        "acquirer": "NiCE",
+        "completed_acquisition_date": "2025-09-08",
+        "independent_private_vc_icp_eligible": false,
+        "answer": "NiCE completed its acquisition of Cognigy on 2025-09-08."
+      },
+      "sources": [
+        {
+          "url": "https://www.nice.com/press-releases/nice-closes-acquisition-of-cognigy-transforming-customer-experience-with-best-in-class-data-driven-cx-ai-platform",
+          "publisher": "NiCE",
+          "publication_date": "2025-09-08",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Completed acquisition",
+            "Acquirer identity",
+            "Completion date"
+          ],
+          "verification": "Opened the primary page and inspected the relevant full-page text, not only the search result snippet.",
+          "evidence_excerpt": "today announced the successful closing of its acquisition of Cognigy"
+        }
+      ],
+      "uncertainties": [
+        "The reference records a positive completed transaction. Adjudicate any later contradictory primary event dated on or before the cutoff. Historical funding is not scored for this case.",
+        "Geography is descriptive context, not a scored field or a claim about current legal domicile."
+      ],
+      "score_dimensions": [
+        "current_lifecycle",
+        "acquirer",
+        "completion_date",
+        "icp_exclusion",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "red_canary",
+      "company_name": "Red Canary",
+      "input_domain": "redcanary.com",
+      "stratum": "completed_acquisition",
+      "industry": "Managed detection and response",
+      "geography": "United States",
+      "geography_scored": false,
+      "challenge_reason": "The release says Red Canary will initially operate as a separate business unit. That does not mean it is an independent company.",
+      "expected": {
+        "current_lifecycle": "acquired",
+        "acquirer": "Zscaler",
+        "completed_acquisition_date": "2025-08-01",
+        "independent_private_vc_icp_eligible": false,
+        "answer": "Zscaler completed its acquisition of Red Canary on 2025-08-01."
+      },
+      "sources": [
+        {
+          "url": "https://ir.zscaler.com/node/15086",
+          "publisher": "Zscaler",
+          "publication_date": "2025-08-01",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Completed acquisition",
+            "Acquirer identity",
+            "Completion date"
+          ],
+          "verification": "Opened the primary page and inspected the relevant full-page text, not only the search result snippet.",
+          "evidence_excerpt": "today announced it has completed its acquisition of Red Canary."
+        }
+      ],
+      "uncertainties": [
+        "The reference records a positive completed transaction. Adjudicate any later contradictory primary event dated on or before the cutoff. Historical funding is not scored for this case.",
+        "Geography is descriptive context, not a scored field or a claim about current legal domicile."
+      ],
+      "score_dimensions": [
+        "current_lifecycle",
+        "acquirer",
+        "completion_date",
+        "icp_exclusion",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "verona_pharma",
+      "company_name": "Verona Pharma",
+      "input_domain": "veronapharma.com",
+      "stratum": "completed_acquisition",
+      "industry": "Respiratory therapeutics",
+      "geography": "United Kingdom",
+      "geography_scored": false,
+      "challenge_reason": "Distinguish proposed acquisition and shareholder or court approvals from completed acquisition; former Nasdaq trading status is obsolete.",
+      "expected": {
+        "current_lifecycle": "acquired",
+        "acquirer": "Merck",
+        "completed_acquisition_date": "2025-10-07",
+        "independent_private_vc_icp_eligible": false,
+        "answer": "Merck completed its acquisition of Verona Pharma on 2025-10-07."
+      },
+      "sources": [
+        {
+          "url": "https://www.merck.com/news/merck-completes-acquisition-of-verona-pharma/",
+          "publisher": "Merck",
+          "publication_date": "2025-10-07",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Completed acquisition",
+            "Acquirer identity",
+            "Completion date"
+          ],
+          "verification": "Opened the primary page and inspected the relevant full-page text, not only the search result snippet.",
+          "evidence_excerpt": "Verona Pharma is now a wholly-owned subsidiary of Merck"
+        }
+      ],
+      "uncertainties": [
+        "The reference records a positive completed transaction. Adjudicate any later contradictory primary event dated on or before the cutoff. Historical funding is not scored for this case.",
+        "Geography is descriptive context, not a scored field or a claim about current legal domicile."
+      ],
+      "score_dimensions": [
+        "current_lifecycle",
+        "acquirer",
+        "completion_date",
+        "icp_exclusion",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "chronosphere",
+      "company_name": "Chronosphere",
+      "input_domain": "chronosphere.io",
+      "stratum": "completed_acquisition",
+      "industry": "Cloud observability",
+      "geography": "United States",
+      "geography_scored": false,
+      "challenge_reason": "A recent completed acquisition can be missed when a source still foregrounds the company as a venture-backed observability startup.",
+      "expected": {
+        "current_lifecycle": "acquired",
+        "acquirer": "Palo Alto Networks",
+        "completed_acquisition_date": "2026-01-29",
+        "independent_private_vc_icp_eligible": false,
+        "answer": "Palo Alto Networks completed its acquisition of Chronosphere on 2026-01-29."
+      },
+      "sources": [
+        {
+          "url": "https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-chronosphere-acquisition--unifying-observability-and-security-for-the-ai-era",
+          "publisher": "Palo Alto Networks",
+          "publication_date": "2026-01-29",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Completed acquisition",
+            "Acquirer identity",
+            "Completion date"
+          ],
+          "verification": "Opened the primary page and inspected the relevant full-page text, not only the search result snippet.",
+          "evidence_excerpt": "today announced it has completed its acquisition of Chronosphere"
+        }
+      ],
+      "uncertainties": [
+        "The reference records a positive completed transaction. Adjudicate any later contradictory primary event dated on or before the cutoff. Historical funding is not scored for this case.",
+        "Geography is descriptive context, not a scored field or a claim about current legal domicile."
+      ],
+      "score_dimensions": [
+        "current_lifecycle",
+        "acquirer",
+        "completion_date",
+        "icp_exclusion",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "cyberark",
+      "company_name": "CyberArk",
+      "input_domain": "cyberark.com",
+      "stratum": "completed_acquisition",
+      "industry": "Identity security",
+      "geography": "Israel / United States",
+      "geography_scored": false,
+      "challenge_reason": "Recent acquisition of a formerly public company; do not treat the old ticker or earlier deal announcement as current lifecycle.",
+      "expected": {
+        "current_lifecycle": "acquired",
+        "acquirer": "Palo Alto Networks",
+        "completed_acquisition_date": "2026-02-11",
+        "independent_private_vc_icp_eligible": false,
+        "answer": "Palo Alto Networks completed its acquisition of CyberArk on 2026-02-11."
+      },
+      "sources": [
+        {
+          "url": "https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-cyberark-to-secure-the-ai-era?trk=article-ssr-frontend-pulse_little-text-block",
+          "publisher": "Palo Alto Networks",
+          "publication_date": "2026-02-11",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Completed acquisition",
+            "Acquirer identity",
+            "Completion date"
+          ],
+          "verification": "Opened the primary page and inspected the relevant full-page text, not only the search result snippet.",
+          "evidence_excerpt": "today announced the completion of its acquisition of CyberArk"
+        }
+      ],
+      "uncertainties": [
+        "The reference records a positive completed transaction. Adjudicate any later contradictory primary event dated on or before the cutoff. Historical funding is not scored for this case.",
+        "Geography is descriptive context, not a scored field or a claim about current legal domicile."
+      ],
+      "score_dimensions": [
+        "current_lifecycle",
+        "acquirer",
+        "completion_date",
+        "icp_exclusion",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "armis",
+      "company_name": "Armis",
+      "input_domain": "armis.com",
+      "stratum": "completed_acquisition",
+      "industry": "Cyber exposure management",
+      "geography": "United States / Israel",
+      "geography_scored": false,
+      "challenge_reason": "Recent startup exit: identify completed ownership change rather than stopping at a historical VC round.",
+      "expected": {
+        "current_lifecycle": "acquired",
+        "acquirer": "ServiceNow",
+        "completed_acquisition_date": "2026-04-20",
+        "independent_private_vc_icp_eligible": false,
+        "answer": "ServiceNow completed its acquisition of Armis on 2026-04-20."
+      },
+      "sources": [
+        {
+          "url": "https://www.armis.com/blog/welcoming-the-next-chapter-servicenow-completes-armis-acquisition/",
+          "publisher": "Armis",
+          "publication_date": "2026-04-20",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Completed acquisition",
+            "Acquirer identity",
+            "Completion date"
+          ],
+          "verification": "Opened the primary page and inspected the relevant full-page text, not only the search result snippet.",
+          "evidence_excerpt": "ServiceNow has just completed its acquisition of Armis."
+        }
+      ],
+      "uncertainties": [
+        "The reference records a positive completed transaction. Adjudicate any later contradictory primary event dated on or before the cutoff. Historical funding is not scored for this case.",
+        "Geography is descriptive context, not a scored field or a claim about current legal domicile."
+      ],
+      "score_dimensions": [
+        "current_lifecycle",
+        "acquirer",
+        "completion_date",
+        "icp_exclusion",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "ansys",
+      "company_name": "Ansys",
+      "input_domain": "ansys.com",
+      "stratum": "completed_acquisition",
+      "industry": "Engineering simulation",
+      "geography": "United States",
+      "geography_scored": false,
+      "challenge_reason": "The deal was announced in January 2024 but completed in July 2025; agreement date must not be returned as completion date.",
+      "expected": {
+        "current_lifecycle": "acquired",
+        "acquirer": "Synopsys",
+        "completed_acquisition_date": "2025-07-17",
+        "independent_private_vc_icp_eligible": false,
+        "answer": "Synopsys completed its acquisition of Ansys on 2025-07-17."
+      },
+      "sources": [
+        {
+          "url": "https://investor.synopsys.com/news/news-details/2025/Synopsys-Completes-Acquisition-of-Ansys/default.aspx",
+          "publisher": "Synopsys",
+          "publication_date": "2025-07-17",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Completed acquisition",
+            "Acquirer identity",
+            "Completion date"
+          ],
+          "verification": "Opened the primary page and inspected the relevant full-page text, not only the search result snippet.",
+          "evidence_excerpt": "today announced the completion of its acquisition of Ansys."
+        }
+      ],
+      "uncertainties": [
+        "The reference records a positive completed transaction. Adjudicate any later contradictory primary event dated on or before the cutoff. Historical funding is not scored for this case.",
+        "Geography is descriptive context, not a scored field or a claim about current legal domicile."
+      ],
+      "score_dimensions": [
+        "current_lifecycle",
+        "acquirer",
+        "completion_date",
+        "icp_exclusion",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "juniper_networks",
+      "company_name": "Juniper Networks",
+      "input_domain": "juniper.net",
+      "stratum": "completed_acquisition",
+      "industry": "Networking infrastructure",
+      "geography": "United States",
+      "geography_scored": false,
+      "challenge_reason": "Regulatory settlement and completed acquisition occurred on separate days. Status and completion date need the close announcement.",
+      "expected": {
+        "current_lifecycle": "acquired",
+        "acquirer": "Hewlett Packard Enterprise",
+        "completed_acquisition_date": "2025-07-02",
+        "independent_private_vc_icp_eligible": false,
+        "answer": "Hewlett Packard Enterprise completed its acquisition of Juniper Networks on 2025-07-02."
+      },
+      "sources": [
+        {
+          "url": "https://www.hpe.com/us/en/newsroom/press-release/2025/07/hewlett-packard-enterprise-closes-acquisition-of-juniper-networks-to-offer-industry-leading-comprehensive-cloud-native-ai-driven-portfolio.html",
+          "publisher": "Hewlett Packard Enterprise",
+          "publication_date": "2025-07-02",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Completed acquisition",
+            "Acquirer identity",
+            "Completion date"
+          ],
+          "verification": "Opened the primary page and inspected the relevant full-page text, not only the search result snippet.",
+          "evidence_excerpt": "today announced the successful completion of its previously announced acquisition of Juniper Networks, Inc."
+        }
+      ],
+      "uncertainties": [
+        "The reference records a positive completed transaction. Adjudicate any later contradictory primary event dated on or before the cutoff. Historical funding is not scored for this case.",
+        "Geography is descriptive context, not a scored field or a claim about current legal domicile."
+      ],
+      "score_dimensions": [
+        "current_lifecycle",
+        "acquirer",
+        "completion_date",
+        "icp_exclusion",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "circle",
+      "company_name": "Circle",
+      "input_domain": "circle.com",
+      "stratum": "public_listing_control",
+      "industry": "Stablecoins and payments",
+      "geography": "United States",
+      "geography_scored": false,
+      "challenge_reason": "Ordinary public-company control with a recent positive listing-status source. Historical VC rounds must not determine current ownership.",
+      "expected": {
+        "current_lifecycle": "public",
+        "exchange": "NYSE",
+        "ticker": "CRCL",
+        "independent_private_vc_icp_eligible": false,
+        "answer": "Circle is identified as NYSE:CRCL in its official issuer materials available before the cutoff."
+      },
+      "sources": [
+        {
+          "url": "https://www.circle.com/pressroom/circle-reports-second-quarter-2026-results",
+          "publisher": "Circle",
+          "publication_date": "2026-08-05",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Public listing status",
+            "NYSE:CRCL"
+          ],
+          "verification": "Opened the primary page and inspected the relevant full-page text, not only the search result snippet.",
+          "evidence_excerpt": "Circle Internet Group, Inc. (NYSE: CRCL)"
+        }
+      ],
+      "uncertainties": [
+        "Current status follows positive primary evidence. Adjudicate any later contradictory primary event dated on or before the cutoff.",
+        "No historical funding round or exact IPO settlement date is scored. A first trading date is distinct from offering pricing or settlement.",
+        "Geography is descriptive context, not a scored field or a claim about current legal domicile."
+      ],
+      "score_dimensions": [
+        "current_lifecycle",
+        "icp_exclusion",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "chime",
+      "company_name": "Chime",
+      "input_domain": "chime.com",
+      "stratum": "public_listing_control",
+      "industry": "Consumer financial technology",
+      "geography": "United States",
+      "geography_scored": false,
+      "challenge_reason": "Separate IPO pricing, first trading day, and offering settlement. The current company is public, even though older funding pages remain available.",
+      "expected": {
+        "current_lifecycle": "public",
+        "exchange": "Nasdaq",
+        "ticker": "CHYM",
+        "independent_private_vc_icp_eligible": false,
+        "answer": "Chime is identified as Nasdaq:CHYM in its official issuer materials available before the cutoff.",
+        "first_trading_date": "2025-06-12"
+      },
+      "sources": [
+        {
+          "url": "https://investors.chime.com/news-releases/news-release-details/chime-reports-second-quarter-2026-financial-results",
+          "publisher": "Chime",
+          "publication_date": "2026-08-05",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Public listing status",
+            "Nasdaq:CHYM"
+          ],
+          "verification": "Opened the primary page and inspected the relevant full-page text, not only the search result snippet.",
+          "evidence_excerpt": "Chime® (Nasdaq: CHYM)"
+        },
+        {
+          "url": "https://investors.chime.com/shareholder-services/investor-faqs",
+          "publisher": "Chime",
+          "publication_date": null,
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "First trading date June 12, 2025",
+            "Nasdaq:CHYM"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "Current status follows positive primary evidence. Adjudicate any later contradictory primary event dated on or before the cutoff.",
+        "No historical funding round or exact IPO settlement date is scored. A first trading date is distinct from offering pricing or settlement.",
+        "Geography is descriptive context, not a scored field or a claim about current legal domicile."
+      ],
+      "score_dimensions": [
+        "current_lifecycle",
+        "icp_exclusion",
+        "citation_support",
+        "first_trading_date"
+      ]
+    },
+    {
+      "id": "hinge_health",
+      "company_name": "Hinge Health",
+      "input_domain": "hingehealth.com",
+      "stratum": "public_listing_control",
+      "industry": "Digital physical therapy",
+      "geography": "United States",
+      "geography_scored": false,
+      "challenge_reason": "The SEC annual report explicitly states the first trading date. A late-stage private funding label must not override the subsequent listing.",
+      "expected": {
+        "current_lifecycle": "public",
+        "exchange": "NYSE",
+        "ticker": "HNGE",
+        "independent_private_vc_icp_eligible": false,
+        "answer": "Hinge Health is identified as NYSE:HNGE in its official issuer materials available before the cutoff.",
+        "first_trading_date": "2025-05-22"
+      },
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1673743/000162828026013808/hnge-20251231.htm",
+          "publisher": "Hinge Health via SEC EDGAR",
+          "publication_date": null,
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Public listing status",
+            "NYSE:HNGE",
+            "NYSE listing since May 22, 2025"
+          ],
+          "document_period_end": "2025-12-31",
+          "date_note": "2026 Form 10-K; exact filing day not extracted. Do not treat the reporting-period end as publication date.",
+          "verification": "Opened the primary page and inspected the relevant full-page text, not only the search result snippet.",
+          "evidence_excerpt": "Our Class A common stock has been listed on the NYSE under the symbol “HNGE” since May 22, 2025."
+        }
+      ],
+      "uncertainties": [
+        "Current status follows positive primary evidence. Adjudicate any later contradictory primary event dated on or before the cutoff.",
+        "No historical funding round or exact IPO settlement date is scored. A first trading date is distinct from offering pricing or settlement.",
+        "Geography is descriptive context, not a scored field or a claim about current legal domicile."
+      ],
+      "score_dimensions": [
+        "current_lifecycle",
+        "icp_exclusion",
+        "citation_support",
+        "first_trading_date"
+      ]
+    },
+    {
+      "id": "klarna",
+      "company_name": "Klarna",
+      "input_domain": "klarna.com",
+      "stratum": "public_listing_control",
+      "industry": "Consumer payments",
+      "geography": "Sweden / United Kingdom",
+      "geography_scored": false,
+      "challenge_reason": "Current public status must replace a historical private-company funding label. Use the issuer identity rather than an old subsidiary funding profile.",
+      "expected": {
+        "current_lifecycle": "public",
+        "exchange": "NYSE",
+        "ticker": "KLAR",
+        "independent_private_vc_icp_eligible": false,
+        "answer": "Klarna is identified as NYSE:KLAR in its official issuer materials available before the cutoff."
+      },
+      "sources": [
+        {
+          "url": "https://investors.klarna.com/News--Events/news/news-details/2026/Klarna-Reports-Second-Quarter-2026-Results/default.aspx",
+          "publisher": "Klarna",
+          "publication_date": "2026-08-18",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Public listing status",
+            "NYSE:KLAR"
+          ],
+          "verification": "Opened the primary page and inspected the relevant full-page text, not only the search result snippet.",
+          "evidence_excerpt": "Klarna Group plc [NYSE: KLAR]"
+        }
+      ],
+      "uncertainties": [
+        "Current status follows positive primary evidence. Adjudicate any later contradictory primary event dated on or before the cutoff.",
+        "No historical funding round or exact IPO settlement date is scored. A first trading date is distinct from offering pricing or settlement.",
+        "Geography is descriptive context, not a scored field or a claim about current legal domicile."
+      ],
+      "score_dimensions": [
+        "current_lifecycle",
+        "icp_exclusion",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "coreweave",
+      "company_name": "CoreWeave",
+      "input_domain": "coreweave.com",
+      "stratum": "public_listing_control",
+      "industry": "AI cloud infrastructure",
+      "geography": "United States",
+      "geography_scored": false,
+      "challenge_reason": "The company has public equity and extensive financing activity. Loans and public share offerings must not be mislabeled as a new private VC round.",
+      "expected": {
+        "current_lifecycle": "public",
+        "exchange": "Nasdaq",
+        "ticker": "CRWV",
+        "independent_private_vc_icp_eligible": false,
+        "answer": "CoreWeave is identified as Nasdaq:CRWV in its official issuer materials available before the cutoff."
+      },
+      "sources": [
+        {
+          "url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/default.aspx",
+          "publisher": "CoreWeave",
+          "publication_date": "2026-08-11",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Public listing status",
+            "Nasdaq:CRWV"
+          ],
+          "verification": "Opened the primary page and inspected the relevant full-page text, not only the search result snippet.",
+          "evidence_excerpt": "CoreWeave, Inc. (Nasdaq: CRWV)"
+        }
+      ],
+      "uncertainties": [
+        "Current status follows positive primary evidence. Adjudicate any later contradictory primary event dated on or before the cutoff.",
+        "No historical funding round or exact IPO settlement date is scored. A first trading date is distinct from offering pricing or settlement.",
+        "Geography is descriptive context, not a scored field or a claim about current legal domicile."
+      ],
+      "score_dimensions": [
+        "current_lifecycle",
+        "icp_exclusion",
+        "citation_support"
+      ]
+    },
+    {
+      "id": "mntn",
+      "company_name": "MNTN",
+      "input_domain": "mountain.com",
+      "stratum": "public_listing_control",
+      "industry": "Connected television advertising",
+      "geography": "United States",
+      "geography_scored": false,
+      "challenge_reason": "Domain spelling differs from the MNTN company name. Resolve the advertising platform and establish current public status from its issuer materials.",
+      "expected": {
+        "current_lifecycle": "public",
+        "exchange": "NYSE",
+        "ticker": "MNTN",
+        "independent_private_vc_icp_eligible": false,
+        "answer": "MNTN is identified as NYSE:MNTN in its official issuer materials available before the cutoff."
+      },
+      "sources": [
+        {
+          "url": "https://ir.mountain.com/news/news-details/2026/MNTN-Reports-Second-Quarter-2026-Results/default.aspx",
+          "publisher": "MNTN",
+          "publication_date": "2026-08-04",
+          "accessed_at": "2026-09-30",
+          "supports": [
+            "Public listing status",
+            "NYSE:MNTN"
+          ],
+          "verification": "Opened the primary page and inspected the relevant full-page text, not only the search result snippet.",
+          "evidence_excerpt": "MNTN (NYSE: MNTN)"
+        }
+      ],
+      "uncertainties": [
+        "Current status follows positive primary evidence. Adjudicate any later contradictory primary event dated on or before the cutoff.",
+        "No historical funding round or exact IPO settlement date is scored. A first trading date is distinct from offering pricing or settlement.",
+        "Geography is descriptive context, not a scored field or a claim about current legal domicile."
+      ],
+      "score_dimensions": [
+        "current_lifecycle",
+        "icp_exclusion",
+        "citation_support"
+      ]
+    }
+  ],
+  "reference_timing_note": "The first Keenable A/B pair was launched using its already-verified reference while the independent researcher finalized the additional 24 funding references. No company answers were inspected before this full reference freeze.",
+  "selection_amendments": [
+    {
+      "reason": "Before viewing any evaluation answers, parent requested more smaller-company, geography and industry diversity. Replaced six famous AI/ecommerce firms with smaller firms. This amendment used coverage needs, not observed arm performance.",
+      "removed": [
+        "Glean",
+        "Reflection AI",
+        "Mercor",
+        "Cursor",
+        "Synthesia",
+        "Zepto"
+      ],
+      "added": [
+        "CuspAI",
+        "Biorce",
+        "MangoBoost",
+        "Vizzia",
+        "Digantara",
+        "Lessn"
+      ]
+    }
+  ],
+  "schema_alignment_review": {
+    "date": "2026-09-30",
+    "model_outputs_viewed": false,
+    "trigger": "Parent found mismatch with shared prompt asking latest VENTURE EQUITY, not latest financing of any kind.",
+    "corrected_cases": [
+      "nscale",
+      "n8n"
+    ],
+    "other_cases_reviewed": {
+      "elevenlabs": "Third close is still part of Series D. Accept initial $500M amount if clearly attributed to original February round; do not require unknown extension amount. $100M tender is separate.",
+      "harvey": "Explicit equity round extension. Accept incremental $50M or combined $600M with correct semantics and Sep24 extension recognition; neither must be mistaken for total historical company funding.",
+      "alan": "Funding announcement subject to approvals is acceptable for announcement fields. Do not demand a legal closing date.",
+      "supabase": "Company explicitly labels $500M Series F, with separate discussion of employee liquidity. Do not invent allocation.",
+      "pennylane_replit_vizzia": "Missing lettered stage or lead remains unscored. Supported additional detail is allowed."
+    }
+  }
+}

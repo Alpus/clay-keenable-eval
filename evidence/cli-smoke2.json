@@ -1,0 +1,54 @@
+{
+  "runId": "wfr_0tm6a98uVjSgTPQQk9z",
+  "workflow": {
+    "id": "wf_0tm69nsEjhsQek3B5aq",
+    "name": "Keenable evaluation smoke test"
+  },
+  "status": "completed",
+  "startedAt": "2026-09-30T10:24:44.194Z",
+  "duration": "9s",
+  "dataCreditsUsed": 0.3999999999999999,
+  "actionCreditsUsed": 1,
+  "progress": {
+    "completed": 2,
+    "active": 0,
+    "waiting": 0,
+    "failed": 0,
+    "pending": 0,
+    "paused": 0,
+    "total": 2,
+    "percentage": 100
+  },
+  "totalEntrySteps": 0,
+  "nodes": [
+    {
+      "stepId": "wfrs_0tm6a98i4C9VPFDdmNg",
+      "nodeId": "wfn_0tm6a26o8QYBVfa3Bo5",
+      "nodeName": "Manual",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": "2026-09-30T10:24:44.203Z",
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "stepId": "wfrs_0tm6a98gBNNVPe7k5Hb",
+      "nodeId": "wfn_0tm6a4kBD7Bo9UQQvwu",
+      "nodeName": "Keenable smoke (verified prompt)",
+      "status": "completed",
+      "startedAt": "2026-09-30T10:24:44.227Z",
+      "completedAt": "2026-09-30T10:24:53.938Z",
+      "duration": "9s",
+      "inputs": {},
+      "outputs": {
+        "isTerminal": true,
+        "structuredOutputs": {
+          "response": "{\"search_tools\":[\"searchGoogle\",\"keenable-public-evaluation-search_web_pages\"],\"page_fetch_tools\":[\"visitWebpage\",\"keenable-public-evaluation-fetch_page_content\"],\"used_fetch_tool\":\"keenable-public-evaluation-fetch_page_content\",\"fetch_result\":\"Title: Example Domain\\nURL: https://example.com/\\n\\nThis domain is for use in documentation examples without needing permission. This is not a service, avoid relying on it for testing and monitoring purposes.\"}"
+        },
+        "stepsTaken": [
+          "Used keenable-public-evaluation-fetch_page_content {\"url\":\"https://example.com\",\"max_chars\":4000,\"live\":false,\"prompt\":\"\",\"session_id\":\"diag-tool-wiring\",\"output_format\":\"text\"}. The results are: \n {\"content\":[{\"type\":\"text\",\"text\":\"Title: Example Domain\\nURL: https://example.com/\\n\\nThis domain is for use in documentation examples without needing permission. This is not a service, avoid relying on it for testing and monitoring purposes.\"}]}"
+        ]
+      }
+    }
+  ]
+}

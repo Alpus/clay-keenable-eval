@@ -1,0 +1,352 @@
+[
+  {
+    "id": "keenable",
+    "company_name": "Keenable",
+    "domain": "keenable.ai",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "wayve",
+    "company_name": "Wayve",
+    "domain": "wayve.ai",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "aikido_security",
+    "company_name": "Aikido Security",
+    "domain": "aikido.dev",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "material_depot",
+    "company_name": "Material Depot",
+    "domain": "materialdepot.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "wiz",
+    "company_name": "Wiz",
+    "domain": "wiz.io",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "moveworks",
+    "company_name": "Moveworks",
+    "domain": "moveworks.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "figma",
+    "company_name": "Figma",
+    "domain": "figma.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "freeman_seattle",
+    "company_name": "Freeman Seattle",
+    "domain": "freemanseattle.com",
+    "as_of": "2026-09-30",
+    "task_type": "entity_resolution"
+  },
+  {
+    "id": "lovable",
+    "company_name": "Lovable",
+    "domain": "lovable.dev",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "supabase",
+    "company_name": "Supabase",
+    "domain": "supabase.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "elevenlabs",
+    "company_name": "ElevenLabs",
+    "domain": "elevenlabs.io",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "helsing",
+    "company_name": "Helsing",
+    "domain": "helsing.ai",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "mistral_ai",
+    "company_name": "Mistral AI",
+    "domain": "mistral.ai",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "nscale",
+    "company_name": "Nscale",
+    "domain": "nscale.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "isomorphic_labs",
+    "company_name": "Isomorphic Labs",
+    "domain": "isomorphiclabs.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "harvey",
+    "company_name": "Harvey",
+    "domain": "harvey.ai",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "replit",
+    "company_name": "Replit",
+    "domain": "replit.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "ramp",
+    "company_name": "Ramp",
+    "domain": "ramp.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "rillet",
+    "company_name": "Rillet",
+    "domain": "rillet.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "pennylane",
+    "company_name": "Pennylane",
+    "domain": "pennylane.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "n8n",
+    "company_name": "n8n",
+    "domain": "n8n.io",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "alan",
+    "company_name": "Alan",
+    "domain": "alan.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "quince",
+    "company_name": "Quince",
+    "domain": "quince.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "cyera",
+    "company_name": "Cyera",
+    "domain": "cyera.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "airwallex",
+    "company_name": "Airwallex",
+    "domain": "airwallex.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "abridge",
+    "company_name": "Abridge",
+    "domain": "abridge.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "cuspai",
+    "company_name": "CuspAI",
+    "domain": "cusp.ai",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "biorce",
+    "company_name": "Biorce",
+    "domain": "biorce.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "mangoboost",
+    "company_name": "MangoBoost",
+    "domain": "mangoboost.io",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "vizzia",
+    "company_name": "Vizzia",
+    "domain": "vizzia.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "digantara",
+    "company_name": "Digantara",
+    "domain": "digantara.co.in",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "lessn",
+    "company_name": "Lessn",
+    "domain": "lessn.io",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "informatica",
+    "company_name": "Informatica",
+    "domain": "informatica.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "hashicorp",
+    "company_name": "HashiCorp",
+    "domain": "hashicorp.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "walkme",
+    "company_name": "WalkMe",
+    "domain": "walkme.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "protect_ai",
+    "company_name": "Protect AI",
+    "domain": "protectai.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "cognigy",
+    "company_name": "Cognigy",
+    "domain": "cognigy.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "red_canary",
+    "company_name": "Red Canary",
+    "domain": "redcanary.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "verona_pharma",
+    "company_name": "Verona Pharma",
+    "domain": "veronapharma.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "chronosphere",
+    "company_name": "Chronosphere",
+    "domain": "chronosphere.io",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "cyberark",
+    "company_name": "CyberArk",
+    "domain": "cyberark.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "armis",
+    "company_name": "Armis",
+    "domain": "armis.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "ansys",
+    "company_name": "Ansys",
+    "domain": "ansys.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "juniper_networks",
+    "company_name": "Juniper Networks",
+    "domain": "juniper.net",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "circle",
+    "company_name": "Circle",
+    "domain": "circle.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "chime",
+    "company_name": "Chime",
+    "domain": "chime.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "hinge_health",
+    "company_name": "Hinge Health",
+    "domain": "hingehealth.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "klarna",
+    "company_name": "Klarna",
+    "domain": "klarna.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "coreweave",
+    "company_name": "CoreWeave",
+    "domain": "coreweave.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  },
+  {
+    "id": "mntn",
+    "company_name": "MNTN",
+    "domain": "mountain.com",
+    "as_of": "2026-09-30",
+    "task_type": "funding_and_lifecycle"
+  }
+]
