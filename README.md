@@ -2,6 +2,10 @@
 
 [Clay](https://www.clay.com/) enriches customer data. [Claygent](https://university.clay.com/docs/claygent-builder) researches companies using web search.
 
+<img src="evidence/claygent-column-setup.png" alt="Clay column setup with the funding research Claygent selected, showing its model, web search and prompt" width="572">
+
+*Adding the experiment’s saved Claygent as a Clay column. Shown before saving or running.*
+
 This experiment tests whether [Keenable](https://keenable.ai/) improves answers about the latest funding and current ownership status.
 
 50 companies, three conditions, GPT-5.4. The task comes from [dated user reports](docs/evidence.md).
