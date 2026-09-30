@@ -2,9 +2,9 @@
 
 [Clay](https://www.clay.com/) enriches customer data. [Claygent](https://university.clay.com/docs/claygent-builder) researches companies using web search.
 
-<img src="evidence/claygent-column-setup.png" alt="Clay column setup with the funding research Claygent selected, showing its model, web search and prompt" width="572">
+![Clay table with company domains, an enriched company column and extracted URLs](evidence/clay-table.png)
 
-*Adding the experiment’s saved Claygent as a Clay column. Shown before saving or running.*
+*Clay works like a spreadsheet with enrichment columns. This example shows company enrichment; Claygent adds AI research columns.*
 
 This experiment tests whether [Keenable](https://keenable.ai/) improves answers about the latest funding and current ownership status.
 
