@@ -12,7 +12,9 @@ This experiment tests whether [Keenable](https://keenable.ai/) improves answers 
 
 ## Results
 
-**Prompted verification improved target scores in this run. Simply enabling Keenable showed no clear benefit.** All 150 answers completed and were reviewed against sources on September 30, 2026.
+**Simply adding Keenable showed no clear benefit; explicitly prompting Keenable verification improved results in this run.**
+
+All 150 answers completed and were reviewed against sources on September 30, 2026.
 
 | | A: native | B: optional Keenable | C: prompted verification |
 | --- | ---: | ---: | ---: |
