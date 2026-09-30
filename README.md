@@ -12,7 +12,7 @@ The hypothesis comes from [user reports available online](docs/evidence.md).
 
 ## Results
 
-**Keenable with explicit verification prompting improved results.**
+**Keenable with explicit verification prompting may improve results.**
 
 All 200 answers completed and were reviewed against sources on September 30, 2026.
 
