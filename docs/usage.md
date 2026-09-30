@@ -2,6 +2,36 @@
 
 The runner uses Python 3 and the official Clay CLI on macOS or Linux. No Python packages, OpenAI API key, browser cookie export or Codex installation are required. Fresh runs need a Clay account with Builder and workflow access and enough existing credits. This experiment used Clay CLI `1.4.0+de2a0396a538`.
 
+## Fresh comparison with Docker
+
+Clone the repository, enter its directory and run `docker compose build` first.
+
+1. Authorize Clay and create the three agents:
+
+   ```sh
+   docker compose run --rm --entrypoint clay eval login --device
+   docker compose run --rm eval setup
+   docker compose run --rm eval setup --strategy verify
+   ```
+
+2. [Enable Keenable in B and C once in Builder](#connect-keenable-once), then bind their saved versions:
+
+   ```sh
+   docker compose run --rm eval bind-refresh
+   docker compose run --rm eval bind-refresh --strategy verify
+   ```
+
+3. Run the comparison:
+
+   ```sh
+   docker compose run --rm eval run --output /results/my-ab --timeout 1200 --allow-credit-use
+   docker compose run --rm eval run --strategy verify --output /results/my-c --timeout 1200 --allow-credit-use
+   docker compose run --rm eval compare --baseline /results/my-ab --variant /results/my-c --output /results/my-comparison
+   ```
+
+The default is 30 in-flight runs, with starts spaced by two seconds to reduce request bursts. The second run submits only C; it does not repeat A/B. Repeat a run command to resume. Results appear under `runs/`. Fresh runs consume existing Clay credits. New factual scores require [source review](#reproduce-and-grade).
+
+
 ## Docker setup
 
 Use Docker Engine or Docker Desktop with Compose. Run `docker compose build`, then:

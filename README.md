@@ -10,7 +10,7 @@
 
 ## Results
 
-All 150 answers completed and were reviewed against sources on September 30, 2026.
+**Prompted verification improved target scores in this run. Simply enabling Keenable showed no clear benefit.** All 150 answers completed and were reviewed against sources on September 30, 2026.
 
 | | A: native | B: optional Keenable | C: prompted verification |
 | --- | ---: | ---: | ---: |
@@ -21,9 +21,9 @@ All 150 answers completed and were reviewed against sources on September 30, 202
 
 Two companies (MangoBoost and Abridge) have unresolved latest-funding evidence and remain unscored. The separate Freeman entity probe passed in all three conditions. Excluding Keenable itself gives 37/46, 38/46 and 41/46. Scores cover preselected target facts, not every claim in an answer.
 
-**Where Keenable helped:** C used Keenable search and fetch to find a [company-issued Lessn disclosure](https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/sydney-au-mar-3-2026-acn-newswire-accounts-payable-automation/68628893) reporting a $300,000 investment in November 2025. A/B stopped at the earlier August round. The saved trace supports this retrieval attribution. C also found Wayve's later extension, but native tools established the final precise facts, so that improvement cannot be attributed solely to Keenable.
+**Concrete benefit:** C used Keenable to retrieve a [Lessn disclosure](https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/sydney-au-mar-3-2026-acn-newswire-accounts-payable-automation/68628893) of a $300,000 investment in November 2025. A/B stopped at the earlier August round.
 
-**Where it did not solve the problem:** all conditions missed later extensions for ElevenLabs and Harvey. All got the 21 lifecycle statuses right. C still made additional errors outside those targets, including a wrong historical funding claim for Circle. All four B field-score wins over A occurred without calling Keenable, so those gains do not establish a Keenable contribution. Merely enabling Keenable had little aggregate effect; the prompted strategy did better in this exploratory run, with higher credit use and a changed prompt.
+**Limits:** all conditions missed later extensions for ElevenLabs and Harvey. All four B field-score wins occurred without using Keenable. C changed the prompt, so its overall improvement is not an isolated search-provider effect. [Case findings and remaining errors](docs/methodology.md#result-interpretation).
 
 [All company results](runs/comparison/results.md) · [Scores and sources](runs/comparison/judgments.json) · [Retrieval audit](evidence/retrieval-audit.json)
 
@@ -46,30 +46,9 @@ After the image is built, this runs without network access, credentials or credi
 
 ### Run a fresh comparison
 
-1. Authorize Clay and create the three agents:
+Follow the [three setup and run steps](docs/usage.md#fresh-comparison-with-docker). Clay authorization and a one-time Builder connection are required; the script creates the agents and runs A/B, then C. Fresh runs spend existing Clay credits. New factual scores require source review.
 
-   ```sh
-   docker compose run --rm --entrypoint clay eval login --device
-   docker compose run --rm eval setup
-   docker compose run --rm eval setup --strategy verify
-   ```
-
-2. [Enable Keenable in B and C once in Builder](docs/usage.md#connect-keenable-once), then bind their saved versions:
-
-   ```sh
-   docker compose run --rm eval bind-refresh
-   docker compose run --rm eval bind-refresh --strategy verify
-   ```
-
-3. Run the comparison:
-
-   ```sh
-   docker compose run --rm eval run --output /results/my-ab --timeout 1200 --allow-credit-use
-   docker compose run --rm eval run --strategy verify --output /results/my-c --timeout 1200 --allow-credit-use
-   docker compose run --rm eval compare --baseline /results/my-ab --variant /results/my-c --output /results/my-comparison
-   ```
-
-The default is 30 in-flight runs, with starts spaced by two seconds to reduce request bursts. The second run submits only C; it does not repeat A/B. Repeat a run command to resume. Results appear under `runs/`. Fresh runs consume existing Clay credits. New factual scores require [source review](docs/usage.md#reproduce-and-grade).
+The default is **30 concurrent runs**, with starts spaced by two seconds. Repeat a run command to resume without repeating completed answers.
 
 ## Details
 
