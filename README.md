@@ -17,11 +17,10 @@ The hypothesis comes from [user reports available online](docs/evidence.md).
 | | A: native | B: optional Keenable | C: Keenable verification | D: native verification |
 | --- | ---: | ---: | ---: | ---: |
 | Companies with all target facts correct and supported | **38/47** | **39/47** | **42/47** | **38/47** |
-| Runs that used Keenable | 0/50 | 10/50 | 49/50 | 0/50 |
-| Clay data credits | 176.5 | 206.2 | 207.3 | 204.3 |
-| Clay action credits | 50 | 50 | 50 | 50 |
+| Clay data credits (all runs) | 176.5 | 206.2 | 207.3 | 204.3 |
+| Clay action credits (all runs) | 50 | 50 | 50 | 50 |
 
-Two companies (MangoBoost and Abridge) have unresolved latest-funding evidence and remain unscored. The separate Freeman entity probe passed in all four conditions. Excluding Keenable itself gives 37/46, 38/46, 41/46 and 37/46. Scores cover preselected target facts, not every claim in an answer.
+Scores cover preselected target facts, not every claim in an answer.
 
 **Concrete benefit:** C used Keenable to retrieve a [Lessn disclosure](https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/sydney-au-mar-3-2026-acn-newswire-accounts-payable-automation/68628893) of a $300,000 investment in November 2025. A/B stopped at the earlier August round.
 
