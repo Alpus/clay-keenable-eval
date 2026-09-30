@@ -8,11 +8,7 @@
 
 This experiment tests whether [Keenable](https://keenable.ai/) improves answers about the latest funding and current ownership status.
 
-50 companies, three conditions, GPT-5.4. The task comes from [dated user reports](docs/evidence.md).
-
-- **A:** native Clay search.
-- **B:** the same prompt, with Keenable available.
-- **C:** native research followed by an explicit Keenable verification step.
+The hypothesis comes from [user reports available online](docs/evidence.md).
 
 ## Results
 
